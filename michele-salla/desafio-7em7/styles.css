@@ -71,10 +71,12 @@ s{text-decoration-thickness:2px}
 .check svg{width:14px;height:14px}
 
 /* ---------- 03 · 1ª dobra ---------- */
+.hero-fig{position:relative;margin:0}
+.hero-fig .ilustrativa{position:absolute;right:14px;top:10px;font:500 11px Raleway;color:rgba(255,255,255,.75)}
 .dobra{padding:28px 16px 80px;overflow:hidden}
 .dobra::before{content:"";position:absolute;width:420px;height:420px;border-radius:50%;background:radial-gradient(closest-side,rgba(255,157,244,.45),transparent);top:-160px;left:-160px}
 .dobra::after{content:"";position:absolute;width:520px;height:520px;border-radius:50%;background:radial-gradient(closest-side,rgba(212,72,194,.5),transparent);bottom:120px;right:-260px}
-.logo{height:40px;width:auto;margin:0 auto 22px}
+.logo{height:64px;width:auto;margin:0 auto 22px}
 .dobra .etiqueta{margin-bottom:18px}
 .promessa{font-weight:800;font-size:29px;line-height:1.16;letter-spacing:-.5px;color:#fff}
 .promessa .marca{color:var(--amarelo)}
@@ -253,7 +255,8 @@ s{text-decoration-thickness:2px}
 
 /* ---------- 18 · Rodapé ---------- */
 .rodape{background:var(--preto);color:#ddd;text-align:center;padding:44px 16px 30px;font-size:13.5px}
-.rodape .logo{height:44px;margin-bottom:18px}
+.rodape .logo-rodape{height:150px;width:auto;margin:0 auto 14px}
+.rodape .logo-autora{height:30px;width:auto;margin:0 auto 22px;opacity:.85}
 .rodape .copy{font-size:15px;color:#fff;margin-bottom:12px}
 .rodape .aviso{max-width:var(--largura);margin:0 auto;line-height:1.55;color:#bbb}
 .rodape-final{background:#1a1a1a;padding:18px 16px}

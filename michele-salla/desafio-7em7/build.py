@@ -1,5 +1,6 @@
-"""Gera pagina-A.html e pagina-B.html a partir de _modelo.html.
-As duas são idênticas, exceto pela promessa da 1ª dobra (uma promessa por página).
+"""Gera pagina-A, B, C e D a partir de _modelo.html.
+A e C: promessa "Perca até 7cm"; B e D: promessa "Chega de se sentir mal".
+A e B usam antes e depois real de aluna; C e D usam avatar (imagem ilustrativa).
 Uso: python3 build.py
 """
 from pathlib import Path
@@ -45,9 +46,20 @@ def oferta(n: str) -> str:
 </section>'''
 
 
+HERO_REAL = ('<img class="hero-img" src="assets/img/hero-antes-depois.webp" '
+             'alt="Antes e depois de aluna do Desafio 7 em 7, com fita métrica na cintura" width="1080" height="1200">')
+HERO_AVATAR = ('<figure class="hero-img hero-fig"><img src="assets/img/hero-antes-depois-avatar.webp" '
+               'alt="Ilustração de antes e depois com fita métrica na cintura" width="1080" height="1200">'
+               '<span class="ilustrativa">Imagem ilustrativa</span></figure>')
+
+# A e B: antes e depois real de aluna · C e D: mesmas promessas com avatar
+VERSOES = {"A": ("A", HERO_REAL), "B": ("B", HERO_REAL), "C": ("A", HERO_AVATAR), "D": ("B", HERO_AVATAR)}
+
 modelo = (AQUI / "_modelo.html").read_text(encoding="utf-8")
-for v, promessa in PROMESSAS.items():
+for v, (prom, hero) in VERSOES.items():
+    promessa = PROMESSAS[prom]
     html = (modelo.replace("{{PROMESSA}}", promessa)
+                  .replace("{{HERO}}", hero)
                   .replace("{{VERSAO}}", f"Versão {v} · gerada por build.py a partir de _modelo.html")
                   .replace("{{OFERTA:13}}", oferta("13"))
                   .replace("{{OFERTA:16}}", oferta("16")))
