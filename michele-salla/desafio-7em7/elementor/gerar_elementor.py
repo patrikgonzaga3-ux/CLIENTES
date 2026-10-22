@@ -10,11 +10,12 @@ baixa cada imagem para a Multimídia do WordPress.
 Uso: python3 gerar_elementor.py   (gera desafio-7em7-A.json ... D.json nesta pasta)
 """
 import json
+import os
 import random
 from pathlib import Path
 
 AQUI = Path(__file__).parent
-BASE = "https://clientes-phi-six.vercel.app/michele-salla/desafio-7em7/assets/img/"
+BASE = os.environ.get("IMG_BASE", "https://clientes-phi-six.vercel.app/michele-salla/desafio-7em7/assets/img/")
 LINK_COMPRA = "#LINK-DE-COMPRA"
 
 ROXO, VIOLETA, ROSA, ROSA_CLARO = "#9E047C", "#8D29F2", "#D448C2", "#FF9DF4"
@@ -78,6 +79,18 @@ def container(filhos, titulo=None, interno=True, **s):
     if titulo:
         base["_title"] = titulo
     base.update(s)
+    if base.get("flex_direction") == "row" and "flex_wrap" not in base:
+        # linha ícone + texto: não quebrar; o ícone não encolhe e o texto ocupa o resto
+        base["flex_wrap"] = "nowrap"
+        for f in filhos:
+            if f["elType"] != "widget":
+                continue
+            fs = f["settings"]
+            if f["widgetType"] in ("icon", "image"):
+                fs.setdefault("_flex_size", "none")      # tamanho fixo, não encolhe
+            elif f["widgetType"] in ("text-editor", "heading"):
+                if "_flex_size" not in fs:              # ocupa o que sobra e pode encolher
+                    fs.update({"_flex_size": "custom", "_flex_grow": 1, "_flex_shrink": 1})
     return {"id": uid(), "elType": "container", "isInner": interno, "settings": base, "elements": filhos}
 
 
@@ -295,15 +308,16 @@ def balao(frase):
     return container([texto(frase, tam=14, cor=BRANCO, peso=700, familia="Sora", lh=1.3, _margin=caixa(0))],
                      background_background="classic", background_image=img_url("balao-pensamento.png"),
                      background_size="contain", background_position="center center", background_repeat="no-repeat",
-                     width=px(48, "%"), width_mobile=px(48, "%"), min_height=px(104), padding=caixa(18, 22, 30, 18),
+                     width=px(230), width_mobile=px(48, "%"), min_height=px(163), min_height_mobile=px(122),
+                     padding=caixa(18, 22, 30, 18),
                      flex_justify_content="center")
 
 
 def b06():
     topo = container([balao("Nenhuma calça fecha mais em mim"), balao("Todo mundo vai notar minha barriga")],
-                     flex_direction="row", flex_justify_content="space-between", _margin=caixa(0, 0, -16, 0), z_index=2)
+                     flex_direction="row", flex_justify_content="space-between", flex_wrap="nowrap", _margin=caixa(0, 0, -16, 0), z_index=2)
     base = container([balao("Já tentei de tudo e nada funciona"), balao("Não me reconheço mais no espelho")],
-                     flex_direction="row", flex_justify_content="space-between", _margin=caixa(-10, 0, 0, 0), z_index=2)
+                     flex_direction="row", flex_justify_content="space-between", flex_wrap="nowrap", _margin=caixa(-10, 0, 0, 0), z_index=2)
     foto = imagem("foto-espelho.webp", "Mulher na frente do espelho olhando a barriga", raio=28,
                   image_border_border="solid", image_border_width=caixa(5), image_border_color=BRANCO,
                   **sombra("image_box_shadow", 22, 50, SOMBRA_FORTE))
@@ -439,7 +453,7 @@ def b12():
               ("Bônus 2: Cardápio de Emergência Diva", 37), ("Bônus 3: Cintura Ativa: Rotina Express", 37)]
     rows = [container([icone("fas fa-check-circle", cor=ROXO, tam=20),
                        texto(n, tam=14.5, cor=PRETO, peso=600, lh=1.35, alinhar="left", _flex_grow=1, _margin=caixa(0)),
-                       texto(f'<s>R$ {v}</s>', tam=14, cor=FRAMB, peso=800, familia="Sora", alinhar="right", _margin=caixa(0))],
+                       texto(f'<s>R$&nbsp;{v}</s>', tam=14, cor=FRAMB, peso=800, familia="Sora", alinhar="right", _margin=caixa(0), _flex_size="none")],
                       flex_direction="row", flex_align_items="center", flex_gap=gap(12), padding=caixa(12, 0),
                       border_border="dashed", border_width=caixa(0, 0, 1.5, 0), border_color="#E8CFE4")
             for n, v in linhas]
@@ -458,7 +472,7 @@ def oferta(n):
                   _background_background="classic", _background_color=AMARELO, _padding=caixa(7, 0),
                   _element_width="initial", _element_custom_width=px(180), _position="absolute",
                   _offset_orientation_h="start", _offset_x=px(-46), _offset_y=px(22),
-                  _transform_rotateZ_effect=px(-45, "deg"), _z_index=3)
+                  _transform_rotate_popover="transform", _transform_rotateZ_effect=px(-45, "deg"), _z_index=3)
     selos = container([
         container([icone(ic, cor=BRANCO, tam=24),
                    texto(f'{a}<br><strong>{b}</strong>', tam=12, cor=BRANCO, peso=600, lh=1.2, alinhar="left", _margin=caixa(0))],
@@ -588,6 +602,6 @@ def montar(v):
 if __name__ == "__main__":
     for v in VERSOES:
         _rnd.seed(f"desafio-{v}")
-        saida = AQUI / f"desafio-7em7-{v}.json"
+        saida = Path(os.environ.get("SAIDA", AQUI)) / f"desafio-7em7-{v}.json"
         saida.write_text(json.dumps(montar(v), ensure_ascii=False, indent=1), encoding="utf-8")
         print(saida.name, round(saida.stat().st_size / 1024), "KB")

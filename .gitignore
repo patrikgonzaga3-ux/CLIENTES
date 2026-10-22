@@ -1,0 +1,6 @@
+# Senhas e acessos ficam só no PC
+.env
+*.env.local
+# Mapa das imagens já enviadas para o WordPress da Michele (é gerado no PC)
+michele-salla/desafio-7em7/elementor/midia-michele.json
+__pycache__/
