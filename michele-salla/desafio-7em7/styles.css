@@ -257,7 +257,7 @@ s{text-decoration-thickness:2px}
 .rodape .copy{font-size:15px;color:#fff;margin-bottom:12px}
 .rodape .aviso{max-width:var(--largura);margin:0 auto;line-height:1.55;color:#bbb}
 .rodape-final{background:#1a1a1a;padding:18px 16px}
-.rodape-final .escrever{max-width:var(--largura);margin:0 auto}
+.rodape-final .cnpj{max-width:var(--largura);margin:0 auto;text-align:center;color:#fff;font-size:14px}
 
 /* ---------- telas maiores ---------- */
 @media (min-width:768px){
