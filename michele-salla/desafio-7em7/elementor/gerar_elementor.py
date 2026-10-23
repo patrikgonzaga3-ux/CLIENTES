@@ -234,15 +234,26 @@ def marca(t, fundo=AMARELO, cor=PRETO):
 PROMESSAS = {
     "A": (f'Perca {destaque("até 7cm de barriga em 7 dias", AMARELO)} e volte a vestir as roupas que você ama',
           "no Desafio 7 em 7"),
+    "E": (f'Reduza {destaque("até 7 cm de barriga", AMARELO)} sem gastar R$3.000 em medicação',
+          "no Desafio 7 em 7"),
     "B": (f'Chega de se sentir mal {destaque("diante do espelho", AMARELO)}',
           "Comece o Desafio 7 em 7 e veja sua barriga mudar"),
 }
 
 
-def b03(promessa, avatar):
+RUMINACOES = {
+    "padrao": ["A calça que um dia serviu agora nem fecha", "Você abre o guarda-roupa e nada te veste bem",
+               "Só compra roupa larga para esconder a barriga", "Evita foto, espelho e roupa colada por causa da barriga"],
+    # Versão E: da página Desafio Efeito Mounjaro da Michele
+    "mounjaro": ["Sua barriga simplesmente não vai embora", "Você emagrece, mas a barriga continua",
+                 "Depois dos 40 parece muito mais difícil", "Já tentou dieta, treino e nada resolve",
+                 "Se sente frustrada com o próprio corpo", "Come por ansiedade ou impulso"],
+}
+
+
+def b03(promessa, avatar, rum="padrao"):
     titulo_p, depois = PROMESSAS[promessa]
-    ruminacoes = ["A calça que um dia serviu agora nem fecha", "Você abre o guarda-roupa e nada te veste bem",
-                  "Só compra roupa larga para esconder a barriga", "Evita foto, espelho e roupa colada por causa da barriga"]
+    ruminacoes = RUMINACOES[rum]
     cards = [cartao([icone("fas fa-times", tam=12, fundo="rgba(255,255,255,0.2)"),
                      texto(r, tam=14, cor=BRANCO, peso=700, familia="Sora", lh=1.35, alinhar="left", _margin=caixa(0))],
                     fundo=FRAMB, raio=22, pad=(18, 14), forte=True, flex_align_items="flex-start") for r in ruminacoes]
@@ -583,12 +594,14 @@ def b18():
     return bloco("18 · Rodapé", [topo, final], fundo=PRETO, ancora="b18")
 
 
-VERSOES = {"A": ("A", False), "B": ("B", False), "C": ("A", True), "D": ("B", True)}
+# versão: (promessa, avatar?, ruminações)
+VERSOES = {"A": ("A", False, "padrao"), "B": ("B", False, "padrao"), "C": ("A", True, "padrao"),
+           "D": ("B", True, "padrao"), "E": ("E", True, "mounjaro")}
 
 
 def montar(v):
-    promessa, avatar = VERSOES[v]
-    conteudo = [b03(promessa, avatar), b04(), b05(), b06(), b07(), b08(), b09(), b10(), b11(), b12(),
+    promessa, avatar, rum = VERSOES[v]
+    conteudo = [b03(promessa, avatar, rum), b04(), b05(), b06(), b07(), b08(), b09(), b10(), b11(), b12(),
                 oferta("13"), b14(), b15(), oferta("16"), b17(), b18()]
     return {
         "version": "0.4",

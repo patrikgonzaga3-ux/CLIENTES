@@ -1,4 +1,5 @@
-"""Gera pagina-A, B, C e D a partir de _modelo.html.
+"""Gera pagina-A, B, C, D e E a partir de _modelo.html.
+E = C (avatar) com a promessa e as ruminações da página Desafio Efeito Mounjaro.
 A e C: promessa "Perca até 7cm"; B e D: promessa "Chega de se sentir mal".
 A e B usam antes e depois real de aluna; C e D usam avatar.
 Uso: python3 build.py
@@ -9,6 +10,8 @@ AQUI = Path(__file__).parent
 
 PROMESSAS = {
     "A": '<h1 class="promessa">Perca <span class="marca">até 7cm de barriga em 7 dias</span> e volte a vestir as roupas que você ama'
+         '<span class="depois">no Desafio 7 em 7</span></h1>',
+    "E": '<h1 class="promessa">Reduza <span class="marca">até 7 cm de barriga</span> sem gastar R$3.000 em medicação'
          '<span class="depois">no Desafio 7 em 7</span></h1>',
     "B": '<h1 class="promessa">Chega de se sentir mal <span class="marca">diante do espelho</span>'
          '<span class="depois">Comece o Desafio 7 em 7 e veja sua barriga mudar</span></h1>',
@@ -46,19 +49,40 @@ def oferta(n: str) -> str:
 </section>'''
 
 
+X = ('<span class="x"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.5" stroke-linecap="round">'
+     '<path d="M6 6l12 12M18 6L6 18"/></svg></span>')
+RUMINACOES = {
+    "padrao": ["A calça que um dia serviu agora nem fecha", "Você abre o guarda-roupa e nada te veste bem",
+               "Só compra roupa larga para esconder a barriga", "Evita foto, espelho e roupa colada por causa da barriga"],
+    # Versão E: promessa e ruminações da página Desafio Efeito Mounjaro da Michele (/desafio-efeito-mounjaro/)
+    "mounjaro": ["Sua barriga simplesmente não vai embora", "Você emagrece, mas a barriga continua",
+                 "Depois dos 40 parece muito mais difícil", "Já tentou dieta, treino e nada resolve",
+                 "Se sente frustrada com o próprio corpo", "Come por ansiedade ou impulso"],
+}
+
+
+def ruminacoes(chave):
+    cards = "\n".join(f'      <div class="rumina">{X}{r}</div>' for r in RUMINACOES[chave])
+    return f'<div class="ruminacoes">\n{cards}\n    '
+
+
 HERO_REAL = ('<img class="hero-img" src="assets/img/hero-antes-depois.webp" '
              'alt="Antes e depois de aluna do Desafio 7 em 7, com fita métrica na cintura" width="1080" height="1200">')
 HERO_AVATAR = ('<figure class="hero-img hero-fig"><img src="assets/img/hero-antes-depois-avatar.webp" '
                'alt="Antes e depois com fita métrica na cintura" width="1080" height="1200"></figure>')
 
 # A e B: antes e depois real de aluna · C e D: mesmas promessas com avatar
-VERSOES = {"A": ("A", HERO_REAL), "B": ("B", HERO_REAL), "C": ("A", HERO_AVATAR), "D": ("B", HERO_AVATAR)}
+# versão: (promessa, imagem do topo, ruminações)
+VERSOES = {"A": ("A", HERO_REAL, "padrao"), "B": ("B", HERO_REAL, "padrao"),
+           "C": ("A", HERO_AVATAR, "padrao"), "D": ("B", HERO_AVATAR, "padrao"),
+           "E": ("E", HERO_AVATAR, "mounjaro")}
 
 modelo = (AQUI / "_modelo.html").read_text(encoding="utf-8")
-for v, (prom, hero) in VERSOES.items():
+for v, (prom, hero, rum) in VERSOES.items():
     promessa = PROMESSAS[prom]
     html = (modelo.replace("{{PROMESSA}}", promessa)
                   .replace("{{HERO}}", hero)
+                  .replace("{{RUMINACOES}}", ruminacoes(rum))
                   .replace("{{VERSAO}}", f"Versão {v} · gerada por build.py a partir de _modelo.html")
                   .replace("{{OFERTA:13}}", oferta("13"))
                   .replace("{{OFERTA:16}}", oferta("16")))
