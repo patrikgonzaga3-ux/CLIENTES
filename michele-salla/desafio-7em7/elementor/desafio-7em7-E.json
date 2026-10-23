@@ -162,7 +162,7 @@
        "elType": "widget",
        "widgetType": "heading",
        "settings": {
-        "title": "Reduza <span style=\"color:#FFFC00\">até 7 cm de barriga</span> sem gastar R$3.000 em medicação",
+        "title": "Reduza <span style=\"color:#FFFC00\">até 7 cm de barriga</span> sem gastar R$3.000 com canetinhas",
         "header_size": "h1",
         "align": "center",
         "title_color": "#FFFFFF",
@@ -1048,7 +1048,7 @@
            "elType": "widget",
            "widgetType": "text-editor",
            "settings": {
-            "editor": "Come por ansiedade ou impulso",
+            "editor": "Sente que a mente sabota seus resultados",
             "align": "left",
             "text_color": "#FFFFFF",
             "typography_typography": "custom",

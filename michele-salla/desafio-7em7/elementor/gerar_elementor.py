@@ -234,7 +234,7 @@ def marca(t, fundo=AMARELO, cor=PRETO):
 PROMESSAS = {
     "A": (f'Perca {destaque("até 7cm de barriga em 7 dias", AMARELO)} e volte a vestir as roupas que você ama',
           "no Desafio 7 em 7"),
-    "E": (f'Reduza {destaque("até 7 cm de barriga", AMARELO)} sem gastar R$3.000 em medicação',
+    "E": (f'Reduza {destaque("até 7 cm de barriga", AMARELO)} sem gastar R$3.000 com canetinhas',
           "no Desafio 7 em 7"),
     "B": (f'Chega de se sentir mal {destaque("diante do espelho", AMARELO)}',
           "Comece o Desafio 7 em 7 e veja sua barriga mudar"),
@@ -247,7 +247,7 @@ RUMINACOES = {
     # Versão E: da página Desafio Efeito Mounjaro da Michele
     "mounjaro": ["Sua barriga simplesmente não vai embora", "Você emagrece, mas a barriga continua",
                  "Depois dos 40 parece muito mais difícil", "Já tentou dieta, treino e nada resolve",
-                 "Se sente frustrada com o próprio corpo", "Come por ansiedade ou impulso"],
+                 "Se sente frustrada com o próprio corpo", "Sente que a mente sabota seus resultados"],
 }
 
 
