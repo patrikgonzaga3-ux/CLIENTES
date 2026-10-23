@@ -52,8 +52,11 @@ O domínio da Michele está na TurboCloud. A página do Desafio fica dentro do s
 
 ## Campanhas no Meta (padrão do Patrik, 23/10)
 - **Nomes:** campanha `PTK - <data de início dd/mm> - <nome da campanha>`; conjunto `CONJ - <público> - <nome do criativo>`;
-  anúncio `<nome do criativo>`. Ex.: `PTK - 26/10 - CBO TESTE DE CRIATIVO` · `CONJ - ABERTO - CRIATIVO 1` · `CRIATIVO 1`.
-- **"CBO testadora de criativos"** = 1 campanha CBO; 1 conjunto por criativo (nº de conjuntos = nº de criativos), cada conjunto
-  com 1 anúncio só; verba de **45% do preço do produto por conjunto** (Desafio R$ 67 → R$ 30,15 por conjunto/dia).
+  anúncio `<nome do criativo>`. Ex.: `PTK - 26/10 - ABO TESTE DE CRIATIVO` · `CONJ - ABERTO - CRIATIVO 1` · `CRIATIVO 1`.
+- **"ABO testadora de criativos" (estrutura 1-1-1):** 1 campanha (objetivo Vendas, orçamento no conjunto/ABO);
+  1 conjunto por criativo, cada um com 1 anúncio só (nº de conjuntos = nº de criativos).
+  - Conjunto: orçamento de **45% do valor da oferta** (Desafio R$ 67 → R$ 30,15/dia); público Advantage+, aberto ou
+    seguidores do Instagram; idade e gênero da persona; posicionamentos Advantage+.
+  - Criativo: imagem ou vídeo; **sem texto** (o Patrik nunca usa texto principal/título); link = página de vendas.
 - **Parâmetros de URL** em todo anúncio: `utm_source=FB&utm_medium={{placement}}&utm_campaign={{campaign.name}}&utm_content={{ad.name}}&utm_term={{adset.id}}`
 - Nada é criado ou ligado na conta de anúncio sem o OK do Patrik para a estrutura mostrada (nomes, verba, público, criativos).
