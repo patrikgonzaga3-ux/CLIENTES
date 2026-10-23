@@ -161,15 +161,38 @@ def layout_com_midia(versao):
     return dados
 
 
+def conteudo_texto(conteudo):
+    """Versão em texto da página (títulos, textos e botões), para o conteúdo "por baixo" do WordPress.
+    O que a visitante vê vem do Elementor; este texto serve para busca, SEO e para não sobrar versão antiga."""
+    partes = []
+
+    def andar(e):
+        s, w = e["settings"], e.get("widgetType")
+        if w == "heading" and s.get("title"):
+            tag = s.get("header_size", "h2")
+            tag = tag if tag in ("h1", "h2", "h3") else "p"
+            partes.append(f"<{tag}>{s['title']}</{tag}>")
+        elif w == "text-editor" and s.get("editor"):
+            partes.append(f"<p>{s['editor']}</p>")
+        elif w == "button" and s.get("text"):
+            partes.append(f'<p><a href="{s.get("link", {}).get("url", "")}">{s["text"]}</a></p>')
+        for f in e["elements"]:
+            andar(f)
+    for e in conteudo:
+        andar(e)
+    return "\n".join(partes)
+
+
 def gravar_layout(pid, versao):
     dados = layout_com_midia(versao)
     r = api("POST", f"/claude/v1/elementor/{pid}",
             {"data": json.dumps(dados["content"], ensure_ascii=False), "page_settings": dados.get("page_settings", {})})
     print("Layout gravado. Editar no Elementor:", r.get("editar"))
     print("Ver prévia (logado):", r.get("previa"))
-    # Salva a página de novo para o WP Rocket limpar o cache (senão o site segue mostrando a versão antiga).
-    api("POST", f"/wp/v2/pages/{pid}", {})
-    print("Cache da página limpo.")
+    # Grava também o conteúdo "por baixo" (texto da mesma versão) e, ao salvar a página de novo,
+    # o WP Rocket limpa o cache (senão o site segue mostrando a versão antiga).
+    api("POST", f"/wp/v2/pages/{pid}", {"content": conteudo_texto(dados["content"])})
+    print("Conteúdo por baixo atualizado e cache da página limpo.")
 
 
 def cmd_criar_pagina(a):
