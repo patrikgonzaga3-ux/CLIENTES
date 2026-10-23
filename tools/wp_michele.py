@@ -23,7 +23,10 @@ Comandos:
     python tools/wp_michele.py atualizar-pagina --id 123 --versao C [--titulo "..."] [--slug desafio7em7-c]
         regrava o layout do Elementor numa página que já existe (e, se pedir, troca título e endereço)
 
-Nada é publicado: as páginas são criadas como rascunho. Publicar é com o Patrik.
+    python tools/wp_michele.py publicar --id 123
+        publica a página (SÓ com o OK do Patrik)
+
+As páginas são criadas como rascunho. Publicar só com o OK do Patrik.
 Só usa a biblioteca padrão do Python (não precisa instalar nada).
 """
 import argparse
@@ -182,6 +185,15 @@ def cmd_atualizar_pagina(a):
     gravar_layout(a.id, a.versao)
 
 
+def cmd_publicar(a):
+    p = api("GET", f"/wp/v2/pages/{a.id}?context=edit&_fields=id,status,slug,link,content")
+    if "#LINK-DE-COMPRA" in p.get("content", {}).get("raw", "") or "#LINK-DE-COMPRA" in json.dumps(
+            api("GET", f"/wp/v2/pages/{a.id}?context=edit&_fields=meta"), ensure_ascii=False):
+        print("ATENÇÃO: a página ainda tem botões com #LINK-DE-COMPRA (sem link de pagamento).")
+    r = api("POST", f"/wp/v2/pages/{a.id}", {"status": "publish"})
+    print(f'Publicada: id {r["id"]} · {r["link"]}')
+
+
 def main():
     global ENV
     # O terminal do Windows nem sempre aceita acentos: força UTF-8 para não travar no meio.
@@ -204,10 +216,12 @@ def main():
     u.add_argument("--versao", choices="ABCDE", required=True)
     u.add_argument("--titulo")
     u.add_argument("--slug")
+    pb = sub.add_parser("publicar")
+    pb.add_argument("--id", type=int, required=True)
     a = ap.parse_args()
     ENV = ler_env()
     {"teste": cmd_teste, "paginas": cmd_paginas, "subir-imagens": cmd_subir_imagens,
-     "criar-pagina": cmd_criar_pagina, "atualizar-pagina": cmd_atualizar_pagina}[a.cmd](a)
+     "criar-pagina": cmd_criar_pagina, "atualizar-pagina": cmd_atualizar_pagina, "publicar": cmd_publicar}[a.cmd](a)
 
 
 if __name__ == "__main__":
