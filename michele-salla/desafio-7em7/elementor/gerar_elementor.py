@@ -667,8 +667,12 @@ def b18():
         texto("O Desafio 7 em 7 não é tratamento médico. Este site não é afiliado ao Facebook ou a qualquer entidade do Facebook. Os resultados variam de pessoa para pessoa e a compra deste material não garante nenhum resultado específico. Usamos resultados reais de alunas.",
               tam=13.5, cor="#BBBBBB"),
     ], pad=(44, 16, 30, 16), flex_gap=gap(12))
-    rastreio = widget("html", {"html": "<script>\n" + (AQUI.parent / "rastreio" / "initiate-checkout.js").read_text(encoding="utf-8") + "</script>",
-                               "_title": "Rastreio · InitiateCheckout (pixel Meta)"})
+    # Rastreio do painel (tempo por bloco, rolagem, cliques). data-checkout="sim": leva UTMs, fbclid e sck ao link
+    # da Greenn no clique (aprovado pelo Patrik em 23/10).
+    painel = ('<script async src="https://painel.michelesalla.com.br/rastreio.js" '
+              'data-slug="desafio7em7-a" data-checkout="sim"></script>')
+    rastreio = widget("html", {"html": "<script>\n" + (AQUI.parent / "rastreio" / "initiate-checkout.js").read_text(encoding="utf-8") + "</script>\n" + painel,
+                               "_title": "Rastreio · CliqueComprar (pixel Meta) + painel"})
     final = container([texto("Veranópolis/RS · CNPJ 32.983.139/0001-99", tam=14, cor=BRANCO, _margin=caixa(0)), rastreio],
                       background_background="classic", background_color="#1A1A1A", padding=caixa(18, 16))
     return bloco("18 · Rodapé", [topo, final], fundo=PRETO, ancora="b18")

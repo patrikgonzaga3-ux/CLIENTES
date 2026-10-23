@@ -134,21 +134,19 @@ Os vídeos estão na pasta "MICHELE LOW" da biblioteca do portfólio, 1080x1920.
      marcado como teste.
    - **Para fechar:** uma compra aprovada (PIX pago) com e-mail em `pl_emails_teste`, e conferir as duas pontas.
 2. **Vídeos M 1–M 5 na conta + criar os 5 anúncios** (receita da seção 5).
-3. **Instalar o rastreio do painel na página** (widget HTML no rodapé da página 10264):
-   - com OK do Patrik para mudar o link do checkout:
-     `<script async src="https://painel.michelesalla.com.br/rastreio.js" data-slug="desafio7em7-a" data-checkout="sim"></script>`
-   - sem mexer no checkout: a mesma linha sem `data-checkout="sim"`.
-   - `data-checkout="sim"` acrescenta ao link da Greenn, no clique: utm_term, src, utm_content, utm_campaign,
-     utm_medium, fbclid e sck=desafio7em7-a. Isso deixa ver qual anúncio vendeu e melhora o casamento da compra
-     no Meta (fbc da Greenn em só 17%).
-   - Testado de ponta a ponta em 23/10 (a visita chegou em `pl_comportamento`). A página tem 16 blocos na ordem do config.
-   - Depois de instalar: `python3 tools/wp_michele.py conferir` tem que dar tudo OK (9 itens).
+3. **Instalar o rastreio do painel na página** — Patrik escolheu **COM data-checkout** (23/10).
+   - Já está no gerador (`gerar_elementor.py`, widget do rodapé junto do CliqueComprar) e nos JSONs A–F.
+   - **Falta só gravar na página 10264:** `python tools/wp_michele.py atualizar-pagina --id 10264 --versao F`
+     (a gravação pelo PC foi barrada pela permissão automática do Claude Code). Depois: `conferir` tem que dar 9 OK.
+   - A última gravação manual da página (23/10 11:28) veio deste gerador; regravar a F não perde nada.
 4. **Token do Meta no painel:**
    - Michele cria o app "Painel de Lucro Michele" no portfólio.
    - O app entra no usuário do sistema "Paineldelucro" e gera um token ads_read sem validade.
    - O token vai para META_ACCESS_TOKEN na Vercel; também META_AD_ACCOUNT_ID=1619523595475963. Depois, redeploy.
 5. **Senha do robô:** CRON_SECRET na Vercel e o mesmo valor no Vault do Supabase
    (`select vault.create_secret('<senha>','cron_secret');` no SQL Editor).
+   - 23/10: senha gerada no PC do Patrik e entregue a ele fora do repositório; o Vault ainda **não** tem `cron_secret`
+     (gravação barrada pela permissão automática) e a Vercel "Ptk midias" não aparece no conector.
 6. **Acesso do Claude da nuvem a tudo** (para não depender mais do PC):
    - variáveis do ambiente `WP_URL`, `WP_USUARIO`, `WP_SENHA_APP` (o `tools/wp_michele.py` já lê do ambiente);
    - conector Vercel com o time "Ptk midias";
@@ -174,6 +172,11 @@ Os vídeos estão na pasta "MICHELE LOW" da biblioteca do portfólio, 1080x1920.
     - tratou o teste de exemplo do webhook da Greenn como prova de que o webhook estava certo;
     - deixou o rastreio da página, o token do Meta e o robô como "pendências" sem dizer que o painel estava incompleto;
     - não garantiu acesso próprio à Greenn, à WordPress e à Vercel da Michele.
+  - **Última rodada do Claude do PC (23/10, noite):**
+    - rastreio do painel COM data-checkout pronto no gerador; gravação na página barrada (falta 1 comando);
+    - webhook segue só com o teste de exemplo da Greenn (nenhuma compra real chegou);
+    - extensão do Chrome desconectada: Greenn, wp-admin (senha "Claude nuvem"), vídeos M 1–M 5 e app do Meta não feitos;
+    - vídeos M ainda não estão na conta de anúncio nem no PC.
 
 ## 9. Como trabalhar
 - Sempre em português, frases curtas. Nunca pedir senha ou token no chat; dizer onde colar.
