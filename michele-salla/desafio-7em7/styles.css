@@ -83,6 +83,8 @@ s{text-decoration-thickness:2px}
 .promessa .depois{display:block;margin-top:10px;font-size:22px;color:var(--rosa-claro)}
 .pilula{display:inline-flex;align-items:center;gap:10px;margin-top:22px;background:rgba(255,255,255,.14);border:1.5px solid rgba(255,255,255,.35);color:#fff;font:700 15px Sora;padding:10px 20px 10px 10px;border-radius:40px;backdrop-filter:blur(4px)}
 .pilula .check{background:var(--amarelo)}
+.pilulas{display:flex;flex-direction:column;align-items:center;gap:8px;margin-top:22px}
+.pilulas .pilula{margin-top:0;font-size:14px;line-height:1.3;text-align:left;width:100%;max-width:370px}
 .hero-img{margin:22px -16px 0;width:calc(100% + 32px);max-width:none}
 .ruminacoes{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:6px}
 .rumina{background:var(--framboesa);color:#fff;border-radius:22px;padding:18px 14px 16px;font:700 14px/1.35 Sora;box-shadow:0 12px 26px rgba(70,0,60,.35);display:flex;flex-direction:column;gap:10px}

@@ -112,6 +112,18 @@ def cartoes(v):
     return f'    <div class="cartoes">\n{itens}\n    </div>'
 
 
+# 1ª dobra: pílula(s) com check abaixo da promessa. As versões C e E têm 3 (aprovadas pelo Patrik).
+PILULA = '    <div class="pilula"><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>Só seguir o passo a passo</div>'
+PILULAS_3 = ['Sem agulha, sem remédio e sem gastar R$3.000', 'Só 15 minutos por dia, no seu ritmo', 'Acompanhando suas medidas dia a dia']
+
+
+def pilulas(v):
+    if v not in ("C", "E"):
+        return PILULA
+    itens = "\n".join("  " + PILULA.replace("Só seguir o passo a passo", t) for t in PILULAS_3)
+    return '    <div class="pilulas">\n' + itens + '\n    </div>'
+
+
 modelo = (AQUI / "_modelo.html").read_text(encoding="utf-8")
 for v, (prom, hero, rum) in VERSOES.items():
     promessa = PROMESSAS[prom]
@@ -122,6 +134,7 @@ for v, (prom, hero, rum) in VERSOES.items():
                   .replace("{{OFERTA:13}}", oferta("13"))
                   .replace("{{OFERTA:16}}", oferta("16"))
                   .replace("{{CARTOES}}", cartoes(v))
+                  .replace("{{PILULAS}}", pilulas(v))
                   .replace("{{ESPELHO}}", "foto-espelho-pensamentos-e.webp" if v == "E" else "foto-espelho-pensamentos.webp")
                   .replace("{{ESPELHO_ALT}}", " · ".join(PENSAMENTOS_E if v == "E" else PENSAMENTOS)))
     if v == "E":

@@ -309,7 +309,7 @@
          "widgetType": "text-editor",
          "settings": {
           "editor": "Só seguir o passo a passo",
-          "align": "center",
+          "align": "left",
           "text_color": "#FFFFFF",
           "typography_typography": "custom",
           "typography_font_family": "Sora",
@@ -321,7 +321,7 @@
           },
           "typography_line_height": {
            "unit": "em",
-           "size": 1.55,
+           "size": 1.3,
            "sizes": []
           },
           "_margin": {

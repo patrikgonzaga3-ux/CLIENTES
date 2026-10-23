@@ -251,7 +251,28 @@ RUMINACOES = {
 }
 
 
-def b03(promessa, avatar, rum="padrao"):
+PILULAS_3 = ['Sem agulha, sem remédio e sem gastar R$3.000', 'Só 15 minutos por dia, no seu ritmo', 'Acompanhando suas medidas dia a dia']
+
+
+def pilula_topo(txt, largura=300, largura_mob=280):
+    return container([icone("fas fa-check-circle", cor=AMARELO, tam=24),
+                      texto(txt, tam=15, cor=BRANCO, peso=700, familia="Sora", alinhar="left", lh=1.3, _margin=caixa(0))],
+                     flex_direction="row", flex_align_items="center", flex_gap=gap(10), _flex_align_self="center",
+                     width=px(largura), width_mobile=px(largura_mob),
+                     background_background="classic", background_color="rgba(255,255,255,0.14)",
+                     border_border="solid", border_width=caixa(1), border_color="rgba(255,255,255,0.35)",
+                     border_radius=caixa(40), padding=caixa(10, 20, 10, 12), flex_justify_content="flex-start")
+
+
+def pilulas_topo(v):
+    if v in ("C", "E"):  # versões C e E: 3 pílulas
+        return [pilula_topo(t, 400, 340) for t in PILULAS_3]
+    p = pilula_topo("Só seguir o passo a passo")
+    p["settings"]["flex_justify_content"] = "center"
+    return [p]
+
+
+def b03(promessa, avatar, rum="padrao", v="A"):
     titulo_p, depois = PROMESSAS[promessa]
     ruminacoes = RUMINACOES[rum]
     cards = [cartao([icone("fas fa-times", tam=12, fundo="rgba(255,255,255,0.2)"),
@@ -265,13 +286,7 @@ def b03(promessa, avatar, rum="padrao"):
         etiqueta("Barriga que não cabe mais na calça?"),
         titulo(titulo_p, "h1", 36, 29, BRANCO, 800, lh=1.16),
         titulo(depois, "p", 22, 21, ROSA_CLARO, 800, lh=1.25, _margin=caixa(-6, 0, 0, 0)),
-        container([icone("fas fa-check-circle", cor=AMARELO, tam=24),
-                   texto("Só seguir o passo a passo", tam=15, cor=BRANCO, peso=700, familia="Sora", _margin=caixa(0))],
-                  flex_direction="row", flex_align_items="center", flex_gap=gap(10), _flex_align_self="center",
-                  width=px(300), width_mobile=px(280),
-                  background_background="classic", background_color="rgba(255,255,255,0.14)",
-                  border_border="solid", border_width=caixa(1), border_color="rgba(255,255,255,0.35)",
-                  border_radius=caixa(40), padding=caixa(10, 20, 10, 12), flex_justify_content="center"),
+        *pilulas_topo(v),
         *hero,
         grade(cards),
     ]
@@ -644,7 +659,7 @@ VERSOES = {"A": ("A", False, "padrao"), "B": ("B", False, "padrao"), "C": ("A", 
 
 def montar(v):
     promessa, avatar, rum = VERSOES[v]
-    conteudo = [b03(promessa, avatar, rum), b04(), b05(), b06(v), b07(), b08(), b09(), b10(), b11(v), b12(),
+    conteudo = [b03(promessa, avatar, rum, v), b04(), b05(), b06(v), b07(), b08(), b09(), b10(), b11(v), b12(),
                 oferta("13"), b14(), b15(), oferta("16"), b17(), b18()]
     if v == "E":
         trocar_copy(conteudo, COPY_E)

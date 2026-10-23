@@ -9,7 +9,7 @@
  },
  "content": [
   {
-   "id": "8df9445",
+   "id": "c94a058",
    "elType": "container",
    "isInner": false,
    "settings": {
@@ -49,7 +49,7 @@
    },
    "elements": [
     {
-     "id": "16a573b",
+     "id": "d0c0db3",
      "elType": "container",
      "isInner": true,
      "settings": {
@@ -243,12 +243,12 @@
         "_flex_align_self": "center",
         "width": {
          "unit": "px",
-         "size": 300,
+         "size": 400,
          "sizes": []
         },
         "width_mobile": {
          "unit": "px",
-         "size": 280,
+         "size": 340,
          "sizes": []
         },
         "background_background": "classic",
@@ -279,7 +279,7 @@
          "left": "12",
          "isLinked": false
         },
-        "flex_justify_content": "center",
+        "flex_justify_content": "flex-start",
         "flex_wrap": "nowrap"
        },
        "elements": [
@@ -308,8 +308,8 @@
          "elType": "widget",
          "widgetType": "text-editor",
          "settings": {
-          "editor": "Só seguir o passo a passo",
-          "align": "center",
+          "editor": "Sem agulha, sem remédio e sem gastar R$3.000",
+          "align": "left",
           "text_color": "#FFFFFF",
           "typography_typography": "custom",
           "typography_font_family": "Sora",
@@ -321,7 +321,237 @@
           },
           "typography_line_height": {
            "unit": "em",
-           "size": 1.55,
+           "size": 1.3,
+           "sizes": []
+          },
+          "_margin": {
+           "unit": "px",
+           "top": "0",
+           "right": "0",
+           "bottom": "0",
+           "left": "0",
+           "isLinked": true
+          },
+          "_flex_size": "custom",
+          "_flex_grow": 1,
+          "_flex_shrink": 1
+         },
+         "elements": []
+        }
+       ]
+      },
+      {
+       "id": "8df9445",
+       "elType": "container",
+       "isInner": true,
+       "settings": {
+        "content_width": "full",
+        "flex_direction": "row",
+        "flex_align_items": "center",
+        "flex_gap": {
+         "column": "10",
+         "row": "10",
+         "isLinked": true,
+         "unit": "px",
+         "size": 10
+        },
+        "_flex_align_self": "center",
+        "width": {
+         "unit": "px",
+         "size": 400,
+         "sizes": []
+        },
+        "width_mobile": {
+         "unit": "px",
+         "size": 340,
+         "sizes": []
+        },
+        "background_background": "classic",
+        "background_color": "rgba(255,255,255,0.14)",
+        "border_border": "solid",
+        "border_width": {
+         "unit": "px",
+         "top": "1",
+         "right": "1",
+         "bottom": "1",
+         "left": "1",
+         "isLinked": true
+        },
+        "border_color": "rgba(255,255,255,0.35)",
+        "border_radius": {
+         "unit": "px",
+         "top": "40",
+         "right": "40",
+         "bottom": "40",
+         "left": "40",
+         "isLinked": true
+        },
+        "padding": {
+         "unit": "px",
+         "top": "10",
+         "right": "20",
+         "bottom": "10",
+         "left": "12",
+         "isLinked": false
+        },
+        "flex_justify_content": "flex-start",
+        "flex_wrap": "nowrap"
+       },
+       "elements": [
+        {
+         "id": "30804d9",
+         "elType": "widget",
+         "widgetType": "icon",
+         "settings": {
+          "selected_icon": {
+           "value": "fas fa-check-circle",
+           "library": "fa-solid"
+          },
+          "align": "center",
+          "size": {
+           "unit": "px",
+           "size": 24,
+           "sizes": []
+          },
+          "primary_color": "#FFFC00",
+          "_flex_size": "none"
+         },
+         "elements": []
+        },
+        {
+         "id": "16a573b",
+         "elType": "widget",
+         "widgetType": "text-editor",
+         "settings": {
+          "editor": "Só 15 minutos por dia, no seu ritmo",
+          "align": "left",
+          "text_color": "#FFFFFF",
+          "typography_typography": "custom",
+          "typography_font_family": "Sora",
+          "typography_font_weight": "700",
+          "typography_font_size": {
+           "unit": "px",
+           "size": 15,
+           "sizes": []
+          },
+          "typography_line_height": {
+           "unit": "em",
+           "size": 1.3,
+           "sizes": []
+          },
+          "_margin": {
+           "unit": "px",
+           "top": "0",
+           "right": "0",
+           "bottom": "0",
+           "left": "0",
+           "isLinked": true
+          },
+          "_flex_size": "custom",
+          "_flex_grow": 1,
+          "_flex_shrink": 1
+         },
+         "elements": []
+        }
+       ]
+      },
+      {
+       "id": "5630d18",
+       "elType": "container",
+       "isInner": true,
+       "settings": {
+        "content_width": "full",
+        "flex_direction": "row",
+        "flex_align_items": "center",
+        "flex_gap": {
+         "column": "10",
+         "row": "10",
+         "isLinked": true,
+         "unit": "px",
+         "size": 10
+        },
+        "_flex_align_self": "center",
+        "width": {
+         "unit": "px",
+         "size": 400,
+         "sizes": []
+        },
+        "width_mobile": {
+         "unit": "px",
+         "size": 340,
+         "sizes": []
+        },
+        "background_background": "classic",
+        "background_color": "rgba(255,255,255,0.14)",
+        "border_border": "solid",
+        "border_width": {
+         "unit": "px",
+         "top": "1",
+         "right": "1",
+         "bottom": "1",
+         "left": "1",
+         "isLinked": true
+        },
+        "border_color": "rgba(255,255,255,0.35)",
+        "border_radius": {
+         "unit": "px",
+         "top": "40",
+         "right": "40",
+         "bottom": "40",
+         "left": "40",
+         "isLinked": true
+        },
+        "padding": {
+         "unit": "px",
+         "top": "10",
+         "right": "20",
+         "bottom": "10",
+         "left": "12",
+         "isLinked": false
+        },
+        "flex_justify_content": "flex-start",
+        "flex_wrap": "nowrap"
+       },
+       "elements": [
+        {
+         "id": "3eef7d5",
+         "elType": "widget",
+         "widgetType": "icon",
+         "settings": {
+          "selected_icon": {
+           "value": "fas fa-check-circle",
+           "library": "fa-solid"
+          },
+          "align": "center",
+          "size": {
+           "unit": "px",
+           "size": 24,
+           "sizes": []
+          },
+          "primary_color": "#FFFC00",
+          "_flex_size": "none"
+         },
+         "elements": []
+        },
+        {
+         "id": "75bf5c3",
+         "elType": "widget",
+         "widgetType": "text-editor",
+         "settings": {
+          "editor": "Acompanhando suas medidas dia a dia",
+          "align": "left",
+          "text_color": "#FFFFFF",
+          "typography_typography": "custom",
+          "typography_font_family": "Sora",
+          "typography_font_weight": "700",
+          "typography_font_size": {
+           "unit": "px",
+           "size": 15,
+           "sizes": []
+          },
+          "typography_line_height": {
+           "unit": "em",
+           "size": 1.3,
            "sizes": []
           },
           "_margin": {
@@ -376,7 +606,7 @@
        "elements": []
       },
       {
-       "id": "30804d9",
+       "id": "1881e06",
        "elType": "container",
        "isInner": true,
        "settings": {
@@ -856,7 +1086,7 @@
    ]
   },
   {
-   "id": "fa58bdc",
+   "id": "d5df105",
    "elType": "container",
    "isInner": false,
    "settings": {
@@ -889,7 +1119,7 @@
    },
    "elements": [
     {
-     "id": "c64943b",
+     "id": "6f6496f",
      "elType": "container",
      "isInner": true,
      "settings": {
@@ -918,7 +1148,7 @@
      },
      "elements": [
       {
-       "id": "3eef7d5",
+       "id": "dbdfe6c",
        "elType": "widget",
        "widgetType": "heading",
        "settings": {
@@ -971,7 +1201,7 @@
        "elements": []
       },
       {
-       "id": "75bf5c3",
+       "id": "f822d36",
        "elType": "widget",
        "widgetType": "heading",
        "settings": {
@@ -1001,7 +1231,7 @@
        "elements": []
       },
       {
-       "id": "5630d18",
+       "id": "d5996d6",
        "elType": "widget",
        "widgetType": "heading",
        "settings": {
@@ -1037,208 +1267,6 @@
         }
        },
        "elements": []
-      },
-      {
-       "id": "c94a058",
-       "elType": "container",
-       "isInner": true,
-       "settings": {
-        "content_width": "full",
-        "flex_direction": "row",
-        "background_background": "classic",
-        "background_color": "#FFFFFF",
-        "border_radius": {
-         "unit": "px",
-         "top": "18",
-         "right": "18",
-         "bottom": "18",
-         "left": "18",
-         "isLinked": true
-        },
-        "padding": {
-         "unit": "px",
-         "top": "13",
-         "right": "16",
-         "bottom": "13",
-         "left": "16",
-         "isLinked": false
-        },
-        "flex_gap": {
-         "column": "12",
-         "row": "12",
-         "isLinked": true,
-         "unit": "px",
-         "size": 12
-        },
-        "box_shadow_box_shadow_type": "yes",
-        "box_shadow_box_shadow": {
-         "horizontal": 0,
-         "vertical": 14,
-         "blur": 34,
-         "spread": 0,
-         "color": "rgba(94,8,92,0.14)"
-        },
-        "flex_align_items": "center",
-        "flex_wrap": "nowrap"
-       },
-       "elements": [
-        {
-         "id": "1881e06",
-         "elType": "widget",
-         "widgetType": "icon",
-         "settings": {
-          "selected_icon": {
-           "value": "fas fa-check-circle",
-           "library": "fa-solid"
-          },
-          "align": "center",
-          "size": {
-           "unit": "px",
-           "size": 24,
-           "sizes": []
-          },
-          "primary_color": "#9E047C",
-          "_flex_size": "none"
-         },
-         "elements": []
-        },
-        {
-         "id": "d0c0db3",
-         "elType": "widget",
-         "widgetType": "text-editor",
-         "settings": {
-          "editor": "Sente a barriga marcando nas roupas e quer mudar isso",
-          "align": "left",
-          "text_color": "#252525",
-          "typography_typography": "custom",
-          "typography_font_family": "Raleway",
-          "typography_font_weight": "600",
-          "typography_font_size": {
-           "unit": "px",
-           "size": 15,
-           "sizes": []
-          },
-          "typography_line_height": {
-           "unit": "em",
-           "size": 1.35,
-           "sizes": []
-          },
-          "_flex_grow": 1,
-          "_margin": {
-           "unit": "px",
-           "top": "0",
-           "right": "0",
-           "bottom": "0",
-           "left": "0",
-           "isLinked": true
-          },
-          "_flex_size": "custom",
-          "_flex_shrink": 1
-         },
-         "elements": []
-        }
-       ]
-      },
-      {
-       "id": "d5996d6",
-       "elType": "container",
-       "isInner": true,
-       "settings": {
-        "content_width": "full",
-        "flex_direction": "row",
-        "background_background": "classic",
-        "background_color": "#FFFFFF",
-        "border_radius": {
-         "unit": "px",
-         "top": "18",
-         "right": "18",
-         "bottom": "18",
-         "left": "18",
-         "isLinked": true
-        },
-        "padding": {
-         "unit": "px",
-         "top": "13",
-         "right": "16",
-         "bottom": "13",
-         "left": "16",
-         "isLinked": false
-        },
-        "flex_gap": {
-         "column": "12",
-         "row": "12",
-         "isLinked": true,
-         "unit": "px",
-         "size": 12
-        },
-        "box_shadow_box_shadow_type": "yes",
-        "box_shadow_box_shadow": {
-         "horizontal": 0,
-         "vertical": 14,
-         "blur": 34,
-         "spread": 0,
-         "color": "rgba(94,8,92,0.14)"
-        },
-        "flex_align_items": "center",
-        "flex_wrap": "nowrap"
-       },
-       "elements": [
-        {
-         "id": "dbdfe6c",
-         "elType": "widget",
-         "widgetType": "icon",
-         "settings": {
-          "selected_icon": {
-           "value": "fas fa-check-circle",
-           "library": "fa-solid"
-          },
-          "align": "center",
-          "size": {
-           "unit": "px",
-           "size": 24,
-           "sizes": []
-          },
-          "primary_color": "#9E047C",
-          "_flex_size": "none"
-         },
-         "elements": []
-        },
-        {
-         "id": "f822d36",
-         "elType": "widget",
-         "widgetType": "text-editor",
-         "settings": {
-          "editor": "Tem uma calça favorita que não fecha mais",
-          "align": "left",
-          "text_color": "#252525",
-          "typography_typography": "custom",
-          "typography_font_family": "Raleway",
-          "typography_font_weight": "600",
-          "typography_font_size": {
-           "unit": "px",
-           "size": 15,
-           "sizes": []
-          },
-          "typography_line_height": {
-           "unit": "em",
-           "size": 1.35,
-           "sizes": []
-          },
-          "_flex_grow": 1,
-          "_margin": {
-           "unit": "px",
-           "top": "0",
-           "right": "0",
-           "bottom": "0",
-           "left": "0",
-           "isLinked": true
-          },
-          "_flex_size": "custom",
-          "_flex_shrink": 1
-         },
-         "elements": []
-        }
-       ]
       },
       {
        "id": "a1931bf",
@@ -1309,6 +1337,208 @@
          "elType": "widget",
          "widgetType": "text-editor",
          "settings": {
+          "editor": "Sente a barriga marcando nas roupas e quer mudar isso",
+          "align": "left",
+          "text_color": "#252525",
+          "typography_typography": "custom",
+          "typography_font_family": "Raleway",
+          "typography_font_weight": "600",
+          "typography_font_size": {
+           "unit": "px",
+           "size": 15,
+           "sizes": []
+          },
+          "typography_line_height": {
+           "unit": "em",
+           "size": 1.35,
+           "sizes": []
+          },
+          "_flex_grow": 1,
+          "_margin": {
+           "unit": "px",
+           "top": "0",
+           "right": "0",
+           "bottom": "0",
+           "left": "0",
+           "isLinked": true
+          },
+          "_flex_size": "custom",
+          "_flex_shrink": 1
+         },
+         "elements": []
+        }
+       ]
+      },
+      {
+       "id": "c64943b",
+       "elType": "container",
+       "isInner": true,
+       "settings": {
+        "content_width": "full",
+        "flex_direction": "row",
+        "background_background": "classic",
+        "background_color": "#FFFFFF",
+        "border_radius": {
+         "unit": "px",
+         "top": "18",
+         "right": "18",
+         "bottom": "18",
+         "left": "18",
+         "isLinked": true
+        },
+        "padding": {
+         "unit": "px",
+         "top": "13",
+         "right": "16",
+         "bottom": "13",
+         "left": "16",
+         "isLinked": false
+        },
+        "flex_gap": {
+         "column": "12",
+         "row": "12",
+         "isLinked": true,
+         "unit": "px",
+         "size": 12
+        },
+        "box_shadow_box_shadow_type": "yes",
+        "box_shadow_box_shadow": {
+         "horizontal": 0,
+         "vertical": 14,
+         "blur": 34,
+         "spread": 0,
+         "color": "rgba(94,8,92,0.14)"
+        },
+        "flex_align_items": "center",
+        "flex_wrap": "nowrap"
+       },
+       "elements": [
+        {
+         "id": "d0c4cf8",
+         "elType": "widget",
+         "widgetType": "icon",
+         "settings": {
+          "selected_icon": {
+           "value": "fas fa-check-circle",
+           "library": "fa-solid"
+          },
+          "align": "center",
+          "size": {
+           "unit": "px",
+           "size": 24,
+           "sizes": []
+          },
+          "primary_color": "#9E047C",
+          "_flex_size": "none"
+         },
+         "elements": []
+        },
+        {
+         "id": "81f0515",
+         "elType": "widget",
+         "widgetType": "text-editor",
+         "settings": {
+          "editor": "Tem uma calça favorita que não fecha mais",
+          "align": "left",
+          "text_color": "#252525",
+          "typography_typography": "custom",
+          "typography_font_family": "Raleway",
+          "typography_font_weight": "600",
+          "typography_font_size": {
+           "unit": "px",
+           "size": 15,
+           "sizes": []
+          },
+          "typography_line_height": {
+           "unit": "em",
+           "size": 1.35,
+           "sizes": []
+          },
+          "_flex_grow": 1,
+          "_margin": {
+           "unit": "px",
+           "top": "0",
+           "right": "0",
+           "bottom": "0",
+           "left": "0",
+           "isLinked": true
+          },
+          "_flex_size": "custom",
+          "_flex_shrink": 1
+         },
+         "elements": []
+        }
+       ]
+      },
+      {
+       "id": "a8280db",
+       "elType": "container",
+       "isInner": true,
+       "settings": {
+        "content_width": "full",
+        "flex_direction": "row",
+        "background_background": "classic",
+        "background_color": "#FFFFFF",
+        "border_radius": {
+         "unit": "px",
+         "top": "18",
+         "right": "18",
+         "bottom": "18",
+         "left": "18",
+         "isLinked": true
+        },
+        "padding": {
+         "unit": "px",
+         "top": "13",
+         "right": "16",
+         "bottom": "13",
+         "left": "16",
+         "isLinked": false
+        },
+        "flex_gap": {
+         "column": "12",
+         "row": "12",
+         "isLinked": true,
+         "unit": "px",
+         "size": 12
+        },
+        "box_shadow_box_shadow_type": "yes",
+        "box_shadow_box_shadow": {
+         "horizontal": 0,
+         "vertical": 14,
+         "blur": 34,
+         "spread": 0,
+         "color": "rgba(94,8,92,0.14)"
+        },
+        "flex_align_items": "center",
+        "flex_wrap": "nowrap"
+       },
+       "elements": [
+        {
+         "id": "fa58bdc",
+         "elType": "widget",
+         "widgetType": "icon",
+         "settings": {
+          "selected_icon": {
+           "value": "fas fa-check-circle",
+           "library": "fa-solid"
+          },
+          "align": "center",
+          "size": {
+           "unit": "px",
+           "size": 24,
+           "sizes": []
+          },
+          "primary_color": "#9E047C",
+          "_flex_size": "none"
+         },
+         "elements": []
+        },
+        {
+         "id": "2c7b60a",
+         "elType": "widget",
+         "widgetType": "text-editor",
+         "settings": {
           "editor": "Quer um plano simples, de poucos minutos por dia, para fazer em casa",
           "align": "left",
           "text_color": "#252525",
@@ -1342,7 +1572,7 @@
        ]
       },
       {
-       "id": "81f0515",
+       "id": "0789a81",
        "elType": "container",
        "isInner": true,
        "settings": {
@@ -1391,7 +1621,7 @@
        },
        "elements": [
         {
-         "id": "d0c4cf8",
+         "id": "067276b",
          "elType": "widget",
          "widgetType": "image",
          "settings": {
@@ -1419,7 +1649,7 @@
    ]
   },
   {
-   "id": "8ba25af",
+   "id": "ccf8ec8",
    "elType": "container",
    "isInner": false,
    "settings": {
@@ -1452,7 +1682,7 @@
    },
    "elements": [
     {
-     "id": "1d7db42",
+     "id": "e01fac1",
      "elType": "container",
      "isInner": true,
      "settings": {
@@ -1481,7 +1711,7 @@
      },
      "elements": [
       {
-       "id": "aec1ee9",
+       "id": "3a6c9e6",
        "elType": "widget",
        "widgetType": "heading",
        "settings": {
@@ -1511,7 +1741,7 @@
        "elements": []
       },
       {
-       "id": "3a8040a",
+       "id": "58d6f4c",
        "elType": "container",
        "isInner": true,
        "settings": {
@@ -1546,7 +1776,7 @@
        },
        "elements": [
         {
-         "id": "ac67a3f",
+         "id": "544ae2f",
          "elType": "container",
          "isInner": true,
          "settings": {
@@ -1563,214 +1793,6 @@
           "flex_justify_content": "space-between"
          },
          "elements": [
-          {
-           "id": "067276b",
-           "elType": "container",
-           "isInner": true,
-           "settings": {
-            "content_width": "full",
-            "flex_direction": "column",
-            "background_background": "classic",
-            "background_color": "#FFFFFF",
-            "border_radius": {
-             "unit": "px",
-             "top": "18",
-             "right": "18",
-             "bottom": "18",
-             "left": "18",
-             "isLinked": true
-            },
-            "overflow": "hidden",
-            "flex_gap": {
-             "column": "0",
-             "row": "0",
-             "isLinked": true,
-             "unit": "px",
-             "size": 0
-            },
-            "width": {
-             "unit": "%",
-             "size": 47.6,
-             "sizes": []
-            },
-            "width_mobile": {
-             "unit": "%",
-             "size": 47.6,
-             "sizes": []
-            }
-           },
-           "elements": [
-            {
-             "id": "2c7b60a",
-             "elType": "widget",
-             "widgetType": "image",
-             "settings": {
-              "image": {
-               "url": "https://clientes-phi-six.vercel.app/michele-salla/desafio-7em7/assets/img/resultado-1.webp",
-               "id": "",
-               "alt": "Antes e depois de aluna",
-               "source": "library",
-               "size": ""
-              },
-              "image_size": "full",
-              "width": {
-               "unit": "%",
-               "size": 100,
-               "sizes": []
-              },
-              "align": "center"
-             },
-             "elements": []
-            },
-            {
-             "id": "a8280db",
-             "elType": "widget",
-             "widgetType": "heading",
-             "settings": {
-              "title": "Resultado em 7 dias",
-              "header_size": "p",
-              "align": "center",
-              "title_color": "#FFFFFF",
-              "typography_typography": "custom",
-              "typography_font_family": "Sora",
-              "typography_font_weight": "800",
-              "typography_font_size": {
-               "unit": "px",
-               "size": 11.5,
-               "sizes": []
-              },
-              "typography_font_size_mobile": {
-               "unit": "px",
-               "size": 11.5,
-               "sizes": []
-              },
-              "typography_line_height": {
-               "unit": "em",
-               "size": 1.2,
-               "sizes": []
-              },
-              "ls": 0.3,
-              "_background_background": "gradient",
-              "_background_color": "#9E047C",
-              "_background_color_b": "#8D29F2",
-              "_padding": {
-               "unit": "px",
-               "top": "9",
-               "right": "4",
-               "bottom": "9",
-               "left": "4",
-               "isLinked": false
-              },
-              "typography_text_transform": "uppercase"
-             },
-             "elements": []
-            }
-           ]
-          },
-          {
-           "id": "d5df105",
-           "elType": "container",
-           "isInner": true,
-           "settings": {
-            "content_width": "full",
-            "flex_direction": "column",
-            "background_background": "classic",
-            "background_color": "#FFFFFF",
-            "border_radius": {
-             "unit": "px",
-             "top": "18",
-             "right": "18",
-             "bottom": "18",
-             "left": "18",
-             "isLinked": true
-            },
-            "overflow": "hidden",
-            "flex_gap": {
-             "column": "0",
-             "row": "0",
-             "isLinked": true,
-             "unit": "px",
-             "size": 0
-            },
-            "width": {
-             "unit": "%",
-             "size": 47.6,
-             "sizes": []
-            },
-            "width_mobile": {
-             "unit": "%",
-             "size": 47.6,
-             "sizes": []
-            }
-           },
-           "elements": [
-            {
-             "id": "0789a81",
-             "elType": "widget",
-             "widgetType": "image",
-             "settings": {
-              "image": {
-               "url": "https://clientes-phi-six.vercel.app/michele-salla/desafio-7em7/assets/img/resultado-2.webp",
-               "id": "",
-               "alt": "Antes e depois de aluna",
-               "source": "library",
-               "size": ""
-              },
-              "image_size": "full",
-              "width": {
-               "unit": "%",
-               "size": 100,
-               "sizes": []
-              },
-              "align": "center"
-             },
-             "elements": []
-            },
-            {
-             "id": "6f6496f",
-             "elType": "widget",
-             "widgetType": "heading",
-             "settings": {
-              "title": "Resultado em 7 dias",
-              "header_size": "p",
-              "align": "center",
-              "title_color": "#FFFFFF",
-              "typography_typography": "custom",
-              "typography_font_family": "Sora",
-              "typography_font_weight": "800",
-              "typography_font_size": {
-               "unit": "px",
-               "size": 11.5,
-               "sizes": []
-              },
-              "typography_font_size_mobile": {
-               "unit": "px",
-               "size": 11.5,
-               "sizes": []
-              },
-              "typography_line_height": {
-               "unit": "em",
-               "size": 1.2,
-               "sizes": []
-              },
-              "ls": 0.3,
-              "_background_background": "gradient",
-              "_background_color": "#9E047C",
-              "_background_color_b": "#8D29F2",
-              "_padding": {
-               "unit": "px",
-               "top": "9",
-               "right": "4",
-               "bottom": "9",
-               "left": "4",
-               "isLinked": false
-              },
-              "typography_text_transform": "uppercase"
-             },
-             "elements": []
-            }
-           ]
-          },
           {
            "id": "8f8eefe",
            "elType": "container",
@@ -1814,7 +1836,7 @@
              "widgetType": "image",
              "settings": {
               "image": {
-               "url": "https://clientes-phi-six.vercel.app/michele-salla/desafio-7em7/assets/img/resultado-3.webp",
+               "url": "https://clientes-phi-six.vercel.app/michele-salla/desafio-7em7/assets/img/resultado-1.webp",
                "id": "",
                "alt": "Antes e depois de aluna",
                "source": "library",
@@ -1918,7 +1940,7 @@
              "widgetType": "image",
              "settings": {
               "image": {
-               "url": "https://clientes-phi-six.vercel.app/michele-salla/desafio-7em7/assets/img/resultado-4.webp",
+               "url": "https://clientes-phi-six.vercel.app/michele-salla/desafio-7em7/assets/img/resultado-2.webp",
                "id": "",
                "alt": "Antes e depois de aluna",
                "source": "library",
@@ -2022,7 +2044,7 @@
              "widgetType": "image",
              "settings": {
               "image": {
-               "url": "https://clientes-phi-six.vercel.app/michele-salla/desafio-7em7/assets/img/resultado-5.webp",
+               "url": "https://clientes-phi-six.vercel.app/michele-salla/desafio-7em7/assets/img/resultado-3.webp",
                "id": "",
                "alt": "Antes e depois de aluna",
                "source": "library",
@@ -2126,7 +2148,7 @@
              "widgetType": "image",
              "settings": {
               "image": {
-               "url": "https://clientes-phi-six.vercel.app/michele-salla/desafio-7em7/assets/img/resultado-6.webp",
+               "url": "https://clientes-phi-six.vercel.app/michele-salla/desafio-7em7/assets/img/resultado-4.webp",
                "id": "",
                "alt": "Antes e depois de aluna",
                "source": "library",
@@ -2186,13 +2208,221 @@
              "elements": []
             }
            ]
+          },
+          {
+           "id": "aec1ee9",
+           "elType": "container",
+           "isInner": true,
+           "settings": {
+            "content_width": "full",
+            "flex_direction": "column",
+            "background_background": "classic",
+            "background_color": "#FFFFFF",
+            "border_radius": {
+             "unit": "px",
+             "top": "18",
+             "right": "18",
+             "bottom": "18",
+             "left": "18",
+             "isLinked": true
+            },
+            "overflow": "hidden",
+            "flex_gap": {
+             "column": "0",
+             "row": "0",
+             "isLinked": true,
+             "unit": "px",
+             "size": 0
+            },
+            "width": {
+             "unit": "%",
+             "size": 47.6,
+             "sizes": []
+            },
+            "width_mobile": {
+             "unit": "%",
+             "size": 47.6,
+             "sizes": []
+            }
+           },
+           "elements": [
+            {
+             "id": "ac67a3f",
+             "elType": "widget",
+             "widgetType": "image",
+             "settings": {
+              "image": {
+               "url": "https://clientes-phi-six.vercel.app/michele-salla/desafio-7em7/assets/img/resultado-5.webp",
+               "id": "",
+               "alt": "Antes e depois de aluna",
+               "source": "library",
+               "size": ""
+              },
+              "image_size": "full",
+              "width": {
+               "unit": "%",
+               "size": 100,
+               "sizes": []
+              },
+              "align": "center"
+             },
+             "elements": []
+            },
+            {
+             "id": "3a8040a",
+             "elType": "widget",
+             "widgetType": "heading",
+             "settings": {
+              "title": "Resultado em 7 dias",
+              "header_size": "p",
+              "align": "center",
+              "title_color": "#FFFFFF",
+              "typography_typography": "custom",
+              "typography_font_family": "Sora",
+              "typography_font_weight": "800",
+              "typography_font_size": {
+               "unit": "px",
+               "size": 11.5,
+               "sizes": []
+              },
+              "typography_font_size_mobile": {
+               "unit": "px",
+               "size": 11.5,
+               "sizes": []
+              },
+              "typography_line_height": {
+               "unit": "em",
+               "size": 1.2,
+               "sizes": []
+              },
+              "ls": 0.3,
+              "_background_background": "gradient",
+              "_background_color": "#9E047C",
+              "_background_color_b": "#8D29F2",
+              "_padding": {
+               "unit": "px",
+               "top": "9",
+               "right": "4",
+               "bottom": "9",
+               "left": "4",
+               "isLinked": false
+              },
+              "typography_text_transform": "uppercase"
+             },
+             "elements": []
+            }
+           ]
+          },
+          {
+           "id": "8ba25af",
+           "elType": "container",
+           "isInner": true,
+           "settings": {
+            "content_width": "full",
+            "flex_direction": "column",
+            "background_background": "classic",
+            "background_color": "#FFFFFF",
+            "border_radius": {
+             "unit": "px",
+             "top": "18",
+             "right": "18",
+             "bottom": "18",
+             "left": "18",
+             "isLinked": true
+            },
+            "overflow": "hidden",
+            "flex_gap": {
+             "column": "0",
+             "row": "0",
+             "isLinked": true,
+             "unit": "px",
+             "size": 0
+            },
+            "width": {
+             "unit": "%",
+             "size": 47.6,
+             "sizes": []
+            },
+            "width_mobile": {
+             "unit": "%",
+             "size": 47.6,
+             "sizes": []
+            }
+           },
+           "elements": [
+            {
+             "id": "711e06f",
+             "elType": "widget",
+             "widgetType": "image",
+             "settings": {
+              "image": {
+               "url": "https://clientes-phi-six.vercel.app/michele-salla/desafio-7em7/assets/img/resultado-6.webp",
+               "id": "",
+               "alt": "Antes e depois de aluna",
+               "source": "library",
+               "size": ""
+              },
+              "image_size": "full",
+              "width": {
+               "unit": "%",
+               "size": 100,
+               "sizes": []
+              },
+              "align": "center"
+             },
+             "elements": []
+            },
+            {
+             "id": "1d7db42",
+             "elType": "widget",
+             "widgetType": "heading",
+             "settings": {
+              "title": "Resultado em 7 dias",
+              "header_size": "p",
+              "align": "center",
+              "title_color": "#FFFFFF",
+              "typography_typography": "custom",
+              "typography_font_family": "Sora",
+              "typography_font_weight": "800",
+              "typography_font_size": {
+               "unit": "px",
+               "size": 11.5,
+               "sizes": []
+              },
+              "typography_font_size_mobile": {
+               "unit": "px",
+               "size": 11.5,
+               "sizes": []
+              },
+              "typography_line_height": {
+               "unit": "em",
+               "size": 1.2,
+               "sizes": []
+              },
+              "ls": 0.3,
+              "_background_background": "gradient",
+              "_background_color": "#9E047C",
+              "_background_color_b": "#8D29F2",
+              "_padding": {
+               "unit": "px",
+               "top": "9",
+               "right": "4",
+               "bottom": "9",
+               "left": "4",
+               "isLinked": false
+              },
+              "typography_text_transform": "uppercase"
+             },
+             "elements": []
+            }
+           ]
           }
          ]
         }
        ]
       },
       {
-       "id": "711e06f",
+       "id": "301b076",
        "elType": "widget",
        "widgetType": "text-editor",
        "settings": {
@@ -2220,7 +2450,7 @@
    ]
   },
   {
-   "id": "e01fac1",
+   "id": "5024950",
    "elType": "container",
    "isInner": false,
    "settings": {
@@ -2260,7 +2490,7 @@
    },
    "elements": [
     {
-     "id": "301b076",
+     "id": "1756742",
      "elType": "container",
      "isInner": true,
      "settings": {
@@ -2289,7 +2519,7 @@
      },
      "elements": [
       {
-       "id": "58d6f4c",
+       "id": "d1171ea",
        "elType": "widget",
        "widgetType": "heading",
        "settings": {
@@ -2319,7 +2549,7 @@
        "elements": []
       },
       {
-       "id": "3a6c9e6",
+       "id": "2869106",
        "elType": "widget",
        "widgetType": "text-editor",
        "settings": {
@@ -2343,7 +2573,7 @@
        "elements": []
       },
       {
-       "id": "544ae2f",
+       "id": "4025f6e",
        "elType": "widget",
        "widgetType": "image",
        "settings": {
@@ -2403,7 +2633,7 @@
    ]
   },
   {
-   "id": "c575055",
+   "id": "306a6ef",
    "elType": "container",
    "isInner": false,
    "settings": {
@@ -2424,7 +2654,7 @@
    },
    "elements": [
     {
-     "id": "a42da76",
+     "id": "20cefa4",
      "elType": "container",
      "isInner": true,
      "settings": {
@@ -2453,7 +2683,7 @@
      },
      "elements": [
       {
-       "id": "5024950",
+       "id": "d5f3a14",
        "elType": "widget",
        "widgetType": "heading",
        "settings": {
@@ -2483,7 +2713,7 @@
        "elements": []
       },
       {
-       "id": "1756742",
+       "id": "3e975e0",
        "elType": "container",
        "isInner": true,
        "settings": {
@@ -2531,7 +2761,7 @@
        },
        "elements": [
         {
-         "id": "ccf8ec8",
+         "id": "b215058",
          "elType": "widget",
          "widgetType": "icon",
          "settings": {
@@ -2550,7 +2780,7 @@
          "elements": []
         },
         {
-         "id": "4025f6e",
+         "id": "a42da76",
          "elType": "widget",
          "widgetType": "heading",
          "settings": {
@@ -2580,7 +2810,7 @@
          "elements": []
         },
         {
-         "id": "d1171ea",
+         "id": "c575055",
          "elType": "widget",
          "widgetType": "text-editor",
          "settings": {
@@ -2604,7 +2834,7 @@
          "elements": []
         },
         {
-         "id": "2869106",
+         "id": "94706c1",
          "elType": "widget",
          "widgetType": "heading",
          "settings": {
@@ -2636,7 +2866,7 @@
        ]
       },
       {
-       "id": "b215058",
+       "id": "f47de68",
        "elType": "widget",
        "widgetType": "icon",
        "settings": {
@@ -2672,7 +2902,7 @@
    ]
   },
   {
-   "id": "5a7e380",
+   "id": "fb810eb",
    "elType": "container",
    "isInner": false,
    "settings": {
@@ -2705,7 +2935,7 @@
    },
    "elements": [
     {
-     "id": "af2a369",
+     "id": "bed8fb7",
      "elType": "container",
      "isInner": true,
      "settings": {
@@ -2730,7 +2960,7 @@
      },
      "elements": [
       {
-       "id": "c5e601e",
+       "id": "904a1a3",
        "elType": "widget",
        "widgetType": "heading",
        "settings": {
@@ -2762,7 +2992,7 @@
      ]
     },
     {
-     "id": "41158f8",
+     "id": "f0c56ab",
      "elType": "container",
      "isInner": true,
      "settings": {
@@ -2791,7 +3021,7 @@
      },
      "elements": [
       {
-       "id": "035bbe1",
+       "id": "397e663",
        "elType": "widget",
        "widgetType": "heading",
        "settings": {
@@ -2821,7 +3051,7 @@
        "elements": []
       },
       {
-       "id": "220f217",
+       "id": "040368f",
        "elType": "container",
        "isInner": true,
        "settings": {
@@ -2838,286 +3068,6 @@
         "flex_justify_content": "space-between"
        },
        "elements": [
-        {
-         "id": "d5f3a14",
-         "elType": "container",
-         "isInner": true,
-         "settings": {
-          "content_width": "full",
-          "flex_direction": "column",
-          "background_background": "classic",
-          "background_color": "#FFFFFF",
-          "border_radius": {
-           "unit": "px",
-           "top": "24",
-           "right": "24",
-           "bottom": "24",
-           "left": "24",
-           "isLinked": true
-          },
-          "padding": {
-           "unit": "px",
-           "top": "18",
-           "right": "12",
-           "bottom": "18",
-           "left": "12",
-           "isLinked": false
-          },
-          "flex_gap": {
-           "column": "10",
-           "row": "10",
-           "isLinked": true,
-           "unit": "px",
-           "size": 10
-          },
-          "box_shadow_box_shadow_type": "yes",
-          "box_shadow_box_shadow": {
-           "horizontal": 0,
-           "vertical": 14,
-           "blur": 34,
-           "spread": 0,
-           "color": "rgba(94,8,92,0.14)"
-          },
-          "border_border": "solid",
-          "border_width": {
-           "unit": "px",
-           "top": "0",
-           "right": "0",
-           "bottom": "4",
-           "left": "0",
-           "isLinked": false
-          },
-          "border_color": "#FF9DF4",
-          "flex_align_items": "center",
-          "width": {
-           "unit": "%",
-           "size": 47.6,
-           "sizes": []
-          },
-          "width_mobile": {
-           "unit": "%",
-           "size": 47.6,
-           "sizes": []
-          }
-         },
-         "elements": [
-          {
-           "id": "94706c1",
-           "elType": "widget",
-           "widgetType": "image",
-           "settings": {
-            "image": {
-             "url": "https://clientes-phi-six.vercel.app/michele-salla/desafio-7em7/assets/img/icone-roupas-marcando.png",
-             "id": "",
-             "alt": "",
-             "source": "library",
-             "size": ""
-            },
-            "image_size": "full",
-            "width": {
-             "unit": "%",
-             "size": 40,
-             "sizes": []
-            },
-            "align": "center",
-            "width_mobile": {
-             "unit": "%",
-             "size": 52,
-             "sizes": []
-            },
-            "_box_shadow_box_shadow_type": "yes",
-            "_box_shadow_box_shadow": {
-             "horizontal": 0,
-             "vertical": 8,
-             "blur": 18,
-             "spread": 0,
-             "color": "rgba(158,4,124,0.2)"
-            },
-            "_border_radius": {
-             "unit": "px",
-             "top": "200",
-             "right": "200",
-             "bottom": "200",
-             "left": "200",
-             "isLinked": true
-            }
-           },
-           "elements": []
-          },
-          {
-           "id": "3e975e0",
-           "elType": "widget",
-           "widgetType": "text-editor",
-           "settings": {
-            "editor": "Começar a diminuir a barriga que fica marcando suas roupas.",
-            "align": "center",
-            "text_color": "#252525",
-            "typography_typography": "custom",
-            "typography_font_family": "Raleway",
-            "typography_font_weight": "600",
-            "typography_font_size": {
-             "unit": "px",
-             "size": 14,
-             "sizes": []
-            },
-            "typography_line_height": {
-             "unit": "em",
-             "size": 1.4,
-             "sizes": []
-            },
-            "_margin": {
-             "unit": "px",
-             "top": "0",
-             "right": "0",
-             "bottom": "0",
-             "left": "0",
-             "isLinked": true
-            }
-           },
-           "elements": []
-          }
-         ]
-        },
-        {
-         "id": "306a6ef",
-         "elType": "container",
-         "isInner": true,
-         "settings": {
-          "content_width": "full",
-          "flex_direction": "column",
-          "background_background": "classic",
-          "background_color": "#FFFFFF",
-          "border_radius": {
-           "unit": "px",
-           "top": "24",
-           "right": "24",
-           "bottom": "24",
-           "left": "24",
-           "isLinked": true
-          },
-          "padding": {
-           "unit": "px",
-           "top": "18",
-           "right": "12",
-           "bottom": "18",
-           "left": "12",
-           "isLinked": false
-          },
-          "flex_gap": {
-           "column": "10",
-           "row": "10",
-           "isLinked": true,
-           "unit": "px",
-           "size": 10
-          },
-          "box_shadow_box_shadow_type": "yes",
-          "box_shadow_box_shadow": {
-           "horizontal": 0,
-           "vertical": 14,
-           "blur": 34,
-           "spread": 0,
-           "color": "rgba(94,8,92,0.14)"
-          },
-          "border_border": "solid",
-          "border_width": {
-           "unit": "px",
-           "top": "0",
-           "right": "0",
-           "bottom": "4",
-           "left": "0",
-           "isLinked": false
-          },
-          "border_color": "#FF9DF4",
-          "flex_align_items": "center",
-          "width": {
-           "unit": "%",
-           "size": 47.6,
-           "sizes": []
-          },
-          "width_mobile": {
-           "unit": "%",
-           "size": 47.6,
-           "sizes": []
-          }
-         },
-         "elements": [
-          {
-           "id": "f47de68",
-           "elType": "widget",
-           "widgetType": "image",
-           "settings": {
-            "image": {
-             "url": "https://clientes-phi-six.vercel.app/michele-salla/desafio-7em7/assets/img/icone-pochete.png",
-             "id": "",
-             "alt": "",
-             "source": "library",
-             "size": ""
-            },
-            "image_size": "full",
-            "width": {
-             "unit": "%",
-             "size": 40,
-             "sizes": []
-            },
-            "align": "center",
-            "width_mobile": {
-             "unit": "%",
-             "size": 52,
-             "sizes": []
-            },
-            "_box_shadow_box_shadow_type": "yes",
-            "_box_shadow_box_shadow": {
-             "horizontal": 0,
-             "vertical": 8,
-             "blur": 18,
-             "spread": 0,
-             "color": "rgba(158,4,124,0.2)"
-            },
-            "_border_radius": {
-             "unit": "px",
-             "top": "200",
-             "right": "200",
-             "bottom": "200",
-             "left": "200",
-             "isLinked": true
-            }
-           },
-           "elements": []
-          },
-          {
-           "id": "20cefa4",
-           "elType": "widget",
-           "widgetType": "text-editor",
-           "settings": {
-            "editor": "Trabalhar aquela pochete insistente que tanto te incomoda.",
-            "align": "center",
-            "text_color": "#252525",
-            "typography_typography": "custom",
-            "typography_font_family": "Raleway",
-            "typography_font_weight": "600",
-            "typography_font_size": {
-             "unit": "px",
-             "size": 14,
-             "sizes": []
-            },
-            "typography_line_height": {
-             "unit": "em",
-             "size": 1.4,
-             "sizes": []
-            },
-            "_margin": {
-             "unit": "px",
-             "top": "0",
-             "right": "0",
-             "bottom": "0",
-             "left": "0",
-             "isLinked": true
-            }
-           },
-           "elements": []
-          }
-         ]
-        },
         {
          "id": "04a08e9",
          "elType": "container",
@@ -3187,7 +3137,7 @@
            "widgetType": "image",
            "settings": {
             "image": {
-             "url": "https://clientes-phi-six.vercel.app/michele-salla/desafio-7em7/assets/img/icone-calca.png",
+             "url": "https://clientes-phi-six.vercel.app/michele-salla/desafio-7em7/assets/img/icone-roupas-marcando.png",
              "id": "",
              "alt": "",
              "source": "library",
@@ -3229,7 +3179,7 @@
            "elType": "widget",
            "widgetType": "text-editor",
            "settings": {
-            "editor": "Dar os primeiros passos para voltar a vestir aquela calça que não fecha.",
+            "editor": "Começar a diminuir a barriga que fica marcando suas roupas.",
             "align": "center",
             "text_color": "#252525",
             "typography_typography": "custom",
@@ -3327,7 +3277,7 @@
            "widgetType": "image",
            "settings": {
             "image": {
-             "url": "https://clientes-phi-six.vercel.app/michele-salla/desafio-7em7/assets/img/icone-cintura.png",
+             "url": "https://clientes-phi-six.vercel.app/michele-salla/desafio-7em7/assets/img/icone-pochete.png",
              "id": "",
              "alt": "",
              "source": "library",
@@ -3369,7 +3319,7 @@
            "elType": "widget",
            "widgetType": "text-editor",
            "settings": {
-            "editor": "Trabalhar sua cintura para conquistar uma silhueta mais definida.",
+            "editor": "Trabalhar aquela pochete insistente que tanto te incomoda.",
             "align": "center",
             "text_color": "#252525",
             "typography_typography": "custom",
@@ -3467,7 +3417,7 @@
            "widgetType": "image",
            "settings": {
             "image": {
-             "url": "https://clientes-phi-six.vercel.app/michele-salla/desafio-7em7/assets/img/icone-cabide.png",
+             "url": "https://clientes-phi-six.vercel.app/michele-salla/desafio-7em7/assets/img/icone-calca.png",
              "id": "",
              "alt": "",
              "source": "library",
@@ -3509,7 +3459,7 @@
            "elType": "widget",
            "widgetType": "text-editor",
            "settings": {
-            "editor": "Voltar a escolher as roupas que ama, e não apenas as que servem.",
+            "editor": "Dar os primeiros passos para voltar a vestir aquela calça que não fecha.",
             "align": "center",
             "text_color": "#252525",
             "typography_typography": "custom",
@@ -3607,7 +3557,7 @@
            "widgetType": "image",
            "settings": {
             "image": {
-             "url": "https://clientes-phi-six.vercel.app/michele-salla/desafio-7em7/assets/img/icone-plano-7-dias.png",
+             "url": "https://clientes-phi-six.vercel.app/michele-salla/desafio-7em7/assets/img/icone-cintura.png",
              "id": "",
              "alt": "",
              "source": "library",
@@ -3649,6 +3599,286 @@
            "elType": "widget",
            "widgetType": "text-editor",
            "settings": {
+            "editor": "Trabalhar sua cintura para conquistar uma silhueta mais definida.",
+            "align": "center",
+            "text_color": "#252525",
+            "typography_typography": "custom",
+            "typography_font_family": "Raleway",
+            "typography_font_weight": "600",
+            "typography_font_size": {
+             "unit": "px",
+             "size": 14,
+             "sizes": []
+            },
+            "typography_line_height": {
+             "unit": "em",
+             "size": 1.4,
+             "sizes": []
+            },
+            "_margin": {
+             "unit": "px",
+             "top": "0",
+             "right": "0",
+             "bottom": "0",
+             "left": "0",
+             "isLinked": true
+            }
+           },
+           "elements": []
+          }
+         ]
+        },
+        {
+         "id": "c5e601e",
+         "elType": "container",
+         "isInner": true,
+         "settings": {
+          "content_width": "full",
+          "flex_direction": "column",
+          "background_background": "classic",
+          "background_color": "#FFFFFF",
+          "border_radius": {
+           "unit": "px",
+           "top": "24",
+           "right": "24",
+           "bottom": "24",
+           "left": "24",
+           "isLinked": true
+          },
+          "padding": {
+           "unit": "px",
+           "top": "18",
+           "right": "12",
+           "bottom": "18",
+           "left": "12",
+           "isLinked": false
+          },
+          "flex_gap": {
+           "column": "10",
+           "row": "10",
+           "isLinked": true,
+           "unit": "px",
+           "size": 10
+          },
+          "box_shadow_box_shadow_type": "yes",
+          "box_shadow_box_shadow": {
+           "horizontal": 0,
+           "vertical": 14,
+           "blur": 34,
+           "spread": 0,
+           "color": "rgba(94,8,92,0.14)"
+          },
+          "border_border": "solid",
+          "border_width": {
+           "unit": "px",
+           "top": "0",
+           "right": "0",
+           "bottom": "4",
+           "left": "0",
+           "isLinked": false
+          },
+          "border_color": "#FF9DF4",
+          "flex_align_items": "center",
+          "width": {
+           "unit": "%",
+           "size": 47.6,
+           "sizes": []
+          },
+          "width_mobile": {
+           "unit": "%",
+           "size": 47.6,
+           "sizes": []
+          }
+         },
+         "elements": [
+          {
+           "id": "035bbe1",
+           "elType": "widget",
+           "widgetType": "image",
+           "settings": {
+            "image": {
+             "url": "https://clientes-phi-six.vercel.app/michele-salla/desafio-7em7/assets/img/icone-cabide.png",
+             "id": "",
+             "alt": "",
+             "source": "library",
+             "size": ""
+            },
+            "image_size": "full",
+            "width": {
+             "unit": "%",
+             "size": 40,
+             "sizes": []
+            },
+            "align": "center",
+            "width_mobile": {
+             "unit": "%",
+             "size": 52,
+             "sizes": []
+            },
+            "_box_shadow_box_shadow_type": "yes",
+            "_box_shadow_box_shadow": {
+             "horizontal": 0,
+             "vertical": 8,
+             "blur": 18,
+             "spread": 0,
+             "color": "rgba(158,4,124,0.2)"
+            },
+            "_border_radius": {
+             "unit": "px",
+             "top": "200",
+             "right": "200",
+             "bottom": "200",
+             "left": "200",
+             "isLinked": true
+            }
+           },
+           "elements": []
+          },
+          {
+           "id": "220f217",
+           "elType": "widget",
+           "widgetType": "text-editor",
+           "settings": {
+            "editor": "Voltar a escolher as roupas que ama, e não apenas as que servem.",
+            "align": "center",
+            "text_color": "#252525",
+            "typography_typography": "custom",
+            "typography_font_family": "Raleway",
+            "typography_font_weight": "600",
+            "typography_font_size": {
+             "unit": "px",
+             "size": 14,
+             "sizes": []
+            },
+            "typography_line_height": {
+             "unit": "em",
+             "size": 1.4,
+             "sizes": []
+            },
+            "_margin": {
+             "unit": "px",
+             "top": "0",
+             "right": "0",
+             "bottom": "0",
+             "left": "0",
+             "isLinked": true
+            }
+           },
+           "elements": []
+          }
+         ]
+        },
+        {
+         "id": "5a7e380",
+         "elType": "container",
+         "isInner": true,
+         "settings": {
+          "content_width": "full",
+          "flex_direction": "column",
+          "background_background": "classic",
+          "background_color": "#FFFFFF",
+          "border_radius": {
+           "unit": "px",
+           "top": "24",
+           "right": "24",
+           "bottom": "24",
+           "left": "24",
+           "isLinked": true
+          },
+          "padding": {
+           "unit": "px",
+           "top": "18",
+           "right": "12",
+           "bottom": "18",
+           "left": "12",
+           "isLinked": false
+          },
+          "flex_gap": {
+           "column": "10",
+           "row": "10",
+           "isLinked": true,
+           "unit": "px",
+           "size": 10
+          },
+          "box_shadow_box_shadow_type": "yes",
+          "box_shadow_box_shadow": {
+           "horizontal": 0,
+           "vertical": 14,
+           "blur": 34,
+           "spread": 0,
+           "color": "rgba(94,8,92,0.14)"
+          },
+          "border_border": "solid",
+          "border_width": {
+           "unit": "px",
+           "top": "0",
+           "right": "0",
+           "bottom": "4",
+           "left": "0",
+           "isLinked": false
+          },
+          "border_color": "#FF9DF4",
+          "flex_align_items": "center",
+          "width": {
+           "unit": "%",
+           "size": 47.6,
+           "sizes": []
+          },
+          "width_mobile": {
+           "unit": "%",
+           "size": 47.6,
+           "sizes": []
+          }
+         },
+         "elements": [
+          {
+           "id": "af2a369",
+           "elType": "widget",
+           "widgetType": "image",
+           "settings": {
+            "image": {
+             "url": "https://clientes-phi-six.vercel.app/michele-salla/desafio-7em7/assets/img/icone-plano-7-dias.png",
+             "id": "",
+             "alt": "",
+             "source": "library",
+             "size": ""
+            },
+            "image_size": "full",
+            "width": {
+             "unit": "%",
+             "size": 40,
+             "sizes": []
+            },
+            "align": "center",
+            "width_mobile": {
+             "unit": "%",
+             "size": 52,
+             "sizes": []
+            },
+            "_box_shadow_box_shadow_type": "yes",
+            "_box_shadow_box_shadow": {
+             "horizontal": 0,
+             "vertical": 8,
+             "blur": 18,
+             "spread": 0,
+             "color": "rgba(158,4,124,0.2)"
+            },
+            "_border_radius": {
+             "unit": "px",
+             "top": "200",
+             "right": "200",
+             "bottom": "200",
+             "left": "200",
+             "isLinked": true
+            }
+           },
+           "elements": []
+          },
+          {
+           "id": "41158f8",
+           "elType": "widget",
+           "widgetType": "text-editor",
+           "settings": {
             "editor": "Seguir um plano prático de 7 dias, com exercícios e hábitos para fazer em casa.",
             "align": "center",
             "text_color": "#252525",
@@ -3685,7 +3915,7 @@
    ]
   },
   {
-   "id": "29c1472",
+   "id": "0b92cc3",
    "elType": "container",
    "isInner": false,
    "settings": {
@@ -3706,7 +3936,7 @@
    },
    "elements": [
     {
-     "id": "cdaacc9",
+     "id": "9e7668a",
      "elType": "container",
      "isInner": true,
      "settings": {
@@ -3735,7 +3965,7 @@
      },
      "elements": [
       {
-       "id": "30f159f",
+       "id": "8985fca",
        "elType": "widget",
        "widgetType": "heading",
        "settings": {
@@ -3765,7 +3995,7 @@
        "elements": []
       },
       {
-       "id": "00c8182",
+       "id": "f719707",
        "elType": "widget",
        "widgetType": "text-editor",
        "settings": {
@@ -3789,7 +4019,7 @@
        "elements": []
       },
       {
-       "id": "b7f4184",
+       "id": "4d207af",
        "elType": "container",
        "isInner": true,
        "settings": {
@@ -3812,184 +4042,6 @@
         }
        },
        "elements": [
-        {
-         "id": "fb810eb",
-         "elType": "container",
-         "isInner": true,
-         "settings": {
-          "content_width": "full",
-          "flex_direction": "column",
-          "background_background": "classic",
-          "background_color": "#FFFFFF",
-          "border_radius": {
-           "unit": "px",
-           "top": "28",
-           "right": "28",
-           "bottom": "28",
-           "left": "28",
-           "isLinked": true
-          },
-          "overflow": "hidden",
-          "flex_gap": {
-           "column": "0",
-           "row": "0",
-           "isLinked": true,
-           "unit": "px",
-           "size": 0
-          },
-          "box_shadow_box_shadow_type": "yes",
-          "box_shadow_box_shadow": {
-           "horizontal": 0,
-           "vertical": 14,
-           "blur": 34,
-           "spread": 0,
-           "color": "rgba(94,8,92,0.14)"
-          }
-         },
-         "elements": [
-          {
-           "id": "040368f",
-           "elType": "container",
-           "isInner": true,
-           "settings": {
-            "content_width": "full",
-            "flex_direction": "column",
-            "background_background": "gradient",
-            "background_color": "#9E047C",
-            "background_color_b": "#8D29F2",
-            "background_gradient_angle": {
-             "unit": "deg",
-             "size": 170,
-             "sizes": []
-            },
-            "padding": {
-             "unit": "px",
-             "top": "20",
-             "right": "24",
-             "bottom": "10",
-             "left": "24",
-             "isLinked": false
-            },
-            "flex_gap": {
-             "column": "6",
-             "row": "6",
-             "isLinked": true,
-             "unit": "px",
-             "size": 6
-            }
-           },
-           "elements": [
-            {
-             "id": "397e663",
-             "elType": "widget",
-             "widgetType": "image",
-             "settings": {
-              "image": {
-               "url": "https://clientes-phi-six.vercel.app/michele-salla/desafio-7em7/assets/img/mockup-comece-aqui.webp",
-               "id": "",
-               "alt": "Capa Comece Aqui",
-               "source": "library",
-               "size": ""
-              },
-              "image_size": "full",
-              "width": {
-               "unit": "%",
-               "size": 82,
-               "sizes": []
-              },
-              "align": "center",
-              "width_mobile": {
-               "unit": "%",
-               "size": 82,
-               "sizes": []
-              }
-             },
-             "elements": []
-            }
-           ]
-          },
-          {
-           "id": "f0c56ab",
-           "elType": "container",
-           "isInner": true,
-           "settings": {
-            "content_width": "full",
-            "flex_direction": "column",
-            "padding": {
-             "unit": "px",
-             "top": "20",
-             "right": "20",
-             "bottom": "24",
-             "left": "20",
-             "isLinked": false
-            },
-            "flex_gap": {
-             "column": "10",
-             "row": "10",
-             "isLinked": true,
-             "unit": "px",
-             "size": 10
-            }
-           },
-           "elements": [
-            {
-             "id": "904a1a3",
-             "elType": "widget",
-             "widgetType": "heading",
-             "settings": {
-              "title": "<span style=\"color:#9E047C\">Comece Aqui:</span> Sua Jornada Começa Agora",
-              "header_size": "h3",
-              "align": "center",
-              "title_color": "#252525",
-              "typography_typography": "custom",
-              "typography_font_family": "Sora",
-              "typography_font_weight": "800",
-              "typography_font_size": {
-               "unit": "px",
-               "size": 20,
-               "sizes": []
-              },
-              "typography_font_size_mobile": {
-               "unit": "px",
-               "size": 20,
-               "sizes": []
-              },
-              "typography_line_height": {
-               "unit": "em",
-               "size": 1.25,
-               "sizes": []
-              }
-             },
-             "elements": []
-            },
-            {
-             "id": "bed8fb7",
-             "elType": "widget",
-             "widgetType": "text-editor",
-             "settings": {
-              "editor": "Descubra como funciona o Desafio 7 em 7, como acessar suas aulas e o que fazer em cada dia para aproveitar ao máximo o método. <strong style=\"color:#252525\">Você vai começar sabendo exatamente o que fazer, sem ficar perdida!</strong>",
-              "align": "center",
-              "text_color": "#4A4150",
-              "typography_typography": "custom",
-              "typography_font_family": "Raleway",
-              "typography_font_weight": "400",
-              "typography_font_size": {
-               "unit": "px",
-               "size": 15.5,
-               "sizes": []
-              },
-              "typography_line_height": {
-               "unit": "em",
-               "size": 1.55,
-               "sizes": []
-              }
-             },
-             "elements": []
-            }
-           ]
-          }
-         ]
-        },
         {
          "id": "abdeb5d",
          "elType": "container",
@@ -4063,9 +4115,9 @@
              "widgetType": "image",
              "settings": {
               "image": {
-               "url": "https://clientes-phi-six.vercel.app/michele-salla/desafio-7em7/assets/img/mockup-avaliacao-inicial.webp",
+               "url": "https://clientes-phi-six.vercel.app/michele-salla/desafio-7em7/assets/img/mockup-comece-aqui.webp",
                "id": "",
-               "alt": "Capa Conheça Sua Barriga",
+               "alt": "Capa Comece Aqui",
                "source": "library",
                "size": ""
               },
@@ -4115,7 +4167,7 @@
              "elType": "widget",
              "widgetType": "heading",
              "settings": {
-              "title": "<span style=\"color:#9E047C\">Conheça Sua Barriga:</span> Avaliação Inicial",
+              "title": "<span style=\"color:#9E047C\">Comece Aqui:</span> Sua Jornada Começa Agora",
               "header_size": "h3",
               "align": "center",
               "title_color": "#252525",
@@ -4145,7 +4197,7 @@
              "elType": "widget",
              "widgetType": "text-editor",
              "settings": {
-              "editor": "Aprenda a observar seu abdômen, conhecer sinais que podem indicar alterações como a diástase e entender quando é importante buscar uma avaliação profissional. Você também vai aprender a registrar suas fotos e medidas para acompanhar sua evolução. <strong style=\"color:#252525\">Assim, você começa sua jornada com um ponto de partida claro e consegue acompanhar suas mudanças.</strong>",
+              "editor": "Descubra como funciona o Desafio 7 em 7, como acessar suas aulas e o que fazer em cada dia para aproveitar ao máximo o método. <strong style=\"color:#252525\">Você vai começar sabendo exatamente o que fazer, sem ficar perdida!</strong>",
               "align": "center",
               "text_color": "#4A4150",
               "typography_typography": "custom",
@@ -4241,9 +4293,9 @@
              "widgetType": "image",
              "settings": {
               "image": {
-               "url": "https://clientes-phi-six.vercel.app/michele-salla/desafio-7em7/assets/img/mockup-15-minutos-por-dia.webp",
+               "url": "https://clientes-phi-six.vercel.app/michele-salla/desafio-7em7/assets/img/mockup-avaliacao-inicial.webp",
                "id": "",
-               "alt": "Aulas 15 Minutos por Dia",
+               "alt": "Capa Conheça Sua Barriga",
                "source": "library",
                "size": ""
               },
@@ -4293,7 +4345,7 @@
              "elType": "widget",
              "widgetType": "heading",
              "settings": {
-              "title": "<span style=\"color:#9E047C\">15 Minutos por Dia:</span> Barriga e Cintura em Ação",
+              "title": "<span style=\"color:#9E047C\">Conheça Sua Barriga:</span> Avaliação Inicial",
               "header_size": "h3",
               "align": "center",
               "title_color": "#252525",
@@ -4323,7 +4375,7 @@
              "elType": "widget",
              "widgetType": "text-editor",
              "settings": {
-              "editor": "Aulas práticas de 15 minutos combinando exercícios funcionais, respiração e hipopressivos para trabalhar o abdômen, fortalecer a musculatura e melhorar a postura. <strong style=\"color:#252525\">Uma rotina para fazer em casa, mesmo com o dia corrido!</strong>",
+              "editor": "Aprenda a observar seu abdômen, conhecer sinais que podem indicar alterações como a diástase e entender quando é importante buscar uma avaliação profissional. Você também vai aprender a registrar suas fotos e medidas para acompanhar sua evolução. <strong style=\"color:#252525\">Assim, você começa sua jornada com um ponto de partida claro e consegue acompanhar suas mudanças.</strong>",
               "align": "center",
               "text_color": "#4A4150",
               "typography_typography": "custom",
@@ -4419,9 +4471,9 @@
              "widgetType": "image",
              "settings": {
               "image": {
-               "url": "https://clientes-phi-six.vercel.app/michele-salla/desafio-7em7/assets/img/mockup-mente-magra-diva.webp",
+               "url": "https://clientes-phi-six.vercel.app/michele-salla/desafio-7em7/assets/img/mockup-15-minutos-por-dia.webp",
                "id": "",
-               "alt": "Áudio Mente Magra e Diva",
+               "alt": "Aulas 15 Minutos por Dia",
                "source": "library",
                "size": ""
               },
@@ -4471,7 +4523,7 @@
              "elType": "widget",
              "widgetType": "heading",
              "settings": {
-              "title": "<span style=\"color:#9E047C\">Ative Sua Mente</span> Magra e Diva",
+              "title": "<span style=\"color:#9E047C\">15 Minutos por Dia:</span> Barriga e Cintura em Ação",
               "header_size": "h3",
               "align": "center",
               "title_color": "#252525",
@@ -4501,7 +4553,7 @@
              "elType": "widget",
              "widgetType": "text-editor",
              "settings": {
-              "editor": "Um áudio exclusivo de motivação e visualização para reforçar o compromisso com sua rotina e incentivar atitudes alinhadas aos seus objetivos. <strong style=\"color:#252525\">Um momento diário para se conectar com a mulher que você deseja se tornar.</strong>",
+              "editor": "Aulas práticas de 15 minutos combinando exercícios funcionais, respiração e hipopressivos para trabalhar o abdômen, fortalecer a musculatura e melhorar a postura. <strong style=\"color:#252525\">Uma rotina para fazer em casa, mesmo com o dia corrido!</strong>",
               "align": "center",
               "text_color": "#4A4150",
               "typography_typography": "custom",
@@ -4597,9 +4649,9 @@
              "widgetType": "image",
              "settings": {
               "image": {
-               "url": "https://clientes-phi-six.vercel.app/michele-salla/desafio-7em7/assets/img/mockup-planner-diva.webp",
+               "url": "https://clientes-phi-six.vercel.app/michele-salla/desafio-7em7/assets/img/mockup-mente-magra-diva.webp",
                "id": "",
-               "alt": "Planner Diva aberto",
+               "alt": "Áudio Mente Magra e Diva",
                "source": "library",
                "size": ""
               },
@@ -4649,7 +4701,7 @@
              "elType": "widget",
              "widgetType": "heading",
              "settings": {
-              "title": "<span style=\"color:#9E047C\">Planner Diva:</span> Seus 7 Dias de Transformação",
+              "title": "<span style=\"color:#9E047C\">Ative Sua Mente</span> Magra e Diva",
               "header_size": "h3",
               "align": "center",
               "title_color": "#252525",
@@ -4679,6 +4731,184 @@
              "elType": "widget",
              "widgetType": "text-editor",
              "settings": {
+              "editor": "Um áudio exclusivo de motivação e visualização para reforçar o compromisso com sua rotina e incentivar atitudes alinhadas aos seus objetivos. <strong style=\"color:#252525\">Um momento diário para se conectar com a mulher que você deseja se tornar.</strong>",
+              "align": "center",
+              "text_color": "#4A4150",
+              "typography_typography": "custom",
+              "typography_font_family": "Raleway",
+              "typography_font_weight": "400",
+              "typography_font_size": {
+               "unit": "px",
+               "size": 15.5,
+               "sizes": []
+              },
+              "typography_line_height": {
+               "unit": "em",
+               "size": 1.55,
+               "sizes": []
+              }
+             },
+             "elements": []
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "id": "29c1472",
+         "elType": "container",
+         "isInner": true,
+         "settings": {
+          "content_width": "full",
+          "flex_direction": "column",
+          "background_background": "classic",
+          "background_color": "#FFFFFF",
+          "border_radius": {
+           "unit": "px",
+           "top": "28",
+           "right": "28",
+           "bottom": "28",
+           "left": "28",
+           "isLinked": true
+          },
+          "overflow": "hidden",
+          "flex_gap": {
+           "column": "0",
+           "row": "0",
+           "isLinked": true,
+           "unit": "px",
+           "size": 0
+          },
+          "box_shadow_box_shadow_type": "yes",
+          "box_shadow_box_shadow": {
+           "horizontal": 0,
+           "vertical": 14,
+           "blur": 34,
+           "spread": 0,
+           "color": "rgba(94,8,92,0.14)"
+          }
+         },
+         "elements": [
+          {
+           "id": "00c8182",
+           "elType": "container",
+           "isInner": true,
+           "settings": {
+            "content_width": "full",
+            "flex_direction": "column",
+            "background_background": "gradient",
+            "background_color": "#9E047C",
+            "background_color_b": "#8D29F2",
+            "background_gradient_angle": {
+             "unit": "deg",
+             "size": 170,
+             "sizes": []
+            },
+            "padding": {
+             "unit": "px",
+             "top": "20",
+             "right": "24",
+             "bottom": "10",
+             "left": "24",
+             "isLinked": false
+            },
+            "flex_gap": {
+             "column": "6",
+             "row": "6",
+             "isLinked": true,
+             "unit": "px",
+             "size": 6
+            }
+           },
+           "elements": [
+            {
+             "id": "30f159f",
+             "elType": "widget",
+             "widgetType": "image",
+             "settings": {
+              "image": {
+               "url": "https://clientes-phi-six.vercel.app/michele-salla/desafio-7em7/assets/img/mockup-planner-diva.webp",
+               "id": "",
+               "alt": "Planner Diva aberto",
+               "source": "library",
+               "size": ""
+              },
+              "image_size": "full",
+              "width": {
+               "unit": "%",
+               "size": 82,
+               "sizes": []
+              },
+              "align": "center",
+              "width_mobile": {
+               "unit": "%",
+               "size": 82,
+               "sizes": []
+              }
+             },
+             "elements": []
+            }
+           ]
+          },
+          {
+           "id": "cdaacc9",
+           "elType": "container",
+           "isInner": true,
+           "settings": {
+            "content_width": "full",
+            "flex_direction": "column",
+            "padding": {
+             "unit": "px",
+             "top": "20",
+             "right": "20",
+             "bottom": "24",
+             "left": "20",
+             "isLinked": false
+            },
+            "flex_gap": {
+             "column": "10",
+             "row": "10",
+             "isLinked": true,
+             "unit": "px",
+             "size": 10
+            }
+           },
+           "elements": [
+            {
+             "id": "b7f4184",
+             "elType": "widget",
+             "widgetType": "heading",
+             "settings": {
+              "title": "<span style=\"color:#9E047C\">Planner Diva:</span> Seus 7 Dias de Transformação",
+              "header_size": "h3",
+              "align": "center",
+              "title_color": "#252525",
+              "typography_typography": "custom",
+              "typography_font_family": "Sora",
+              "typography_font_weight": "800",
+              "typography_font_size": {
+               "unit": "px",
+               "size": 20,
+               "sizes": []
+              },
+              "typography_font_size_mobile": {
+               "unit": "px",
+               "size": 20,
+               "sizes": []
+              },
+              "typography_line_height": {
+               "unit": "em",
+               "size": 1.25,
+               "sizes": []
+              }
+             },
+             "elements": []
+            },
+            {
+             "id": "a8c15b0",
+             "elType": "widget",
+             "widgetType": "text-editor",
+             "settings": {
               "editor": "Um planner prático para organizar sua jornada, acompanhar seus exercícios e colocar em ação os 5 Pilares da Mulher Diva. <strong style=\"color:#252525\">Você terá um roteiro diário para saber o que fazer e acompanhar seu progresso durante os sete dias.</strong>",
               "align": "center",
               "text_color": "#4A4150",
@@ -4705,7 +4935,7 @@
        ]
       },
       {
-       "id": "a8c15b0",
+       "id": "8e93fc1",
        "elType": "widget",
        "widgetType": "icon",
        "settings": {
@@ -4741,7 +4971,7 @@
    ]
   },
   {
-   "id": "2feaadf",
+   "id": "c86bbfb",
    "elType": "container",
    "isInner": false,
    "settings": {
@@ -4774,7 +5004,7 @@
    },
    "elements": [
     {
-     "id": "e809373",
+     "id": "ba46e69",
      "elType": "container",
      "isInner": true,
      "settings": {
@@ -4799,7 +5029,7 @@
      },
      "elements": [
       {
-       "id": "e131820",
+       "id": "bb0e2ae",
        "elType": "widget",
        "widgetType": "heading",
        "settings": {
@@ -4831,7 +5061,7 @@
      ]
     },
     {
-     "id": "b09a010",
+     "id": "3c0d346",
      "elType": "container",
      "isInner": true,
      "settings": {
@@ -4860,7 +5090,7 @@
      },
      "elements": [
       {
-       "id": "316044e",
+       "id": "79bef1a",
        "elType": "container",
        "isInner": true,
        "settings": {
@@ -4876,7 +5106,7 @@
        },
        "elements": [
         {
-         "id": "21b77bc",
+         "id": "8229979",
          "elType": "container",
          "isInner": true,
          "settings": {
@@ -4911,7 +5141,7 @@
          },
          "elements": [
           {
-           "id": "4d207af",
+           "id": "9b5ec7b",
            "elType": "container",
            "isInner": true,
            "settings": {
@@ -4943,7 +5173,7 @@
            },
            "elements": [
             {
-             "id": "8985fca",
+             "id": "21b77bc",
              "elType": "widget",
              "widgetType": "heading",
              "settings": {
@@ -4996,7 +5226,7 @@
              "elements": []
             },
             {
-             "id": "f719707",
+             "id": "cf8c816",
              "elType": "widget",
              "widgetType": "image",
              "settings": {
@@ -5025,7 +5255,7 @@
            ]
           },
           {
-           "id": "0b92cc3",
+           "id": "bd46ffe",
            "elType": "container",
            "isInner": true,
            "settings": {
@@ -5049,7 +5279,7 @@
            },
            "elements": [
             {
-             "id": "8e93fc1",
+             "id": "2796b43",
              "elType": "widget",
              "widgetType": "heading",
              "settings": {
@@ -5079,7 +5309,7 @@
              "elements": []
             },
             {
-             "id": "9e7668a",
+             "id": "fcf6fc7",
              "elType": "widget",
              "widgetType": "text-editor",
              "settings": {
@@ -5107,7 +5337,7 @@
          ]
         },
         {
-         "id": "1c4f05f",
+         "id": "e5b3db1",
          "elType": "container",
          "isInner": true,
          "settings": {
@@ -5142,7 +5372,7 @@
          },
          "elements": [
           {
-           "id": "2796b43",
+           "id": "0b5575f",
            "elType": "container",
            "isInner": true,
            "settings": {
@@ -5174,7 +5404,7 @@
            },
            "elements": [
             {
-             "id": "cf8c816",
+             "id": "1c4f05f",
              "elType": "widget",
              "widgetType": "heading",
              "settings": {
@@ -5227,7 +5457,7 @@
              "elements": []
             },
             {
-             "id": "9b5ec7b",
+             "id": "a2b355b",
              "elType": "widget",
              "widgetType": "image",
              "settings": {
@@ -5256,7 +5486,7 @@
            ]
           },
           {
-           "id": "8229979",
+           "id": "19f1e93",
            "elType": "container",
            "isInner": true,
            "settings": {
@@ -5280,7 +5510,7 @@
            },
            "elements": [
             {
-             "id": "fcf6fc7",
+             "id": "d6f4413",
              "elType": "widget",
              "widgetType": "heading",
              "settings": {
@@ -5310,7 +5540,7 @@
              "elements": []
             },
             {
-             "id": "bd46ffe",
+             "id": "ec9b818",
              "elType": "widget",
              "widgetType": "text-editor",
              "settings": {
@@ -5338,7 +5568,7 @@
          ]
         },
         {
-         "id": "25830ef",
+         "id": "2feaadf",
          "elType": "container",
          "isInner": true,
          "settings": {
@@ -5373,7 +5603,7 @@
          },
          "elements": [
           {
-           "id": "d6f4413",
+           "id": "5e94fbc",
            "elType": "container",
            "isInner": true,
            "settings": {
@@ -5405,7 +5635,7 @@
            },
            "elements": [
             {
-             "id": "a2b355b",
+             "id": "25830ef",
              "elType": "widget",
              "widgetType": "heading",
              "settings": {
@@ -5458,7 +5688,7 @@
              "elements": []
             },
             {
-             "id": "0b5575f",
+             "id": "316044e",
              "elType": "widget",
              "widgetType": "image",
              "settings": {
@@ -5487,7 +5717,7 @@
            ]
           },
           {
-           "id": "e5b3db1",
+           "id": "b09a010",
            "elType": "container",
            "isInner": true,
            "settings": {
@@ -5511,7 +5741,7 @@
            },
            "elements": [
             {
-             "id": "ec9b818",
+             "id": "e131820",
              "elType": "widget",
              "widgetType": "heading",
              "settings": {
@@ -5541,7 +5771,7 @@
              "elements": []
             },
             {
-             "id": "19f1e93",
+             "id": "e809373",
              "elType": "widget",
              "widgetType": "text-editor",
              "settings": {
@@ -5571,7 +5801,7 @@
        ]
       },
       {
-       "id": "5e94fbc",
+       "id": "8b9cd65",
        "elType": "widget",
        "widgetType": "heading",
        "settings": {
@@ -5613,7 +5843,7 @@
    ]
   },
   {
-   "id": "1496333",
+   "id": "264d437",
    "elType": "container",
    "isInner": false,
    "settings": {
@@ -5646,7 +5876,7 @@
    },
    "elements": [
     {
-     "id": "da3e670",
+     "id": "35fa32e",
      "elType": "container",
      "isInner": true,
      "settings": {
@@ -5675,7 +5905,7 @@
      },
      "elements": [
       {
-       "id": "1db72a1",
+       "id": "1820c2c",
        "elType": "widget",
        "widgetType": "heading",
        "settings": {
@@ -5705,7 +5935,7 @@
        "elements": []
       },
       {
-       "id": "1b45a02",
+       "id": "8536f41",
        "elType": "container",
        "isInner": true,
        "settings": {
@@ -5722,224 +5952,6 @@
         "flex_justify_content": "center"
        },
        "elements": [
-        {
-         "id": "bb0e2ae",
-         "elType": "container",
-         "isInner": true,
-         "settings": {
-          "content_width": "full",
-          "flex_direction": "column",
-          "background_background": "classic",
-          "background_color": "#252525",
-          "border_radius": {
-           "unit": "px",
-           "top": "20",
-           "right": "20",
-           "bottom": "20",
-           "left": "20",
-           "isLinked": true
-          },
-          "overflow": "hidden",
-          "flex_gap": {
-           "column": "0",
-           "row": "0",
-           "isLinked": true,
-           "unit": "px",
-           "size": 0
-          },
-          "box_shadow_box_shadow_type": "yes",
-          "box_shadow_box_shadow": {
-           "horizontal": 0,
-           "vertical": 14,
-           "blur": 34,
-           "spread": 0,
-           "color": "rgba(94,8,92,0.14)"
-          },
-          "width": {
-           "unit": "%",
-           "size": 47.6,
-           "sizes": []
-          },
-          "width_mobile": {
-           "unit": "%",
-           "size": 47.6,
-           "sizes": []
-          }
-         },
-         "elements": [
-          {
-           "id": "79bef1a",
-           "elType": "widget",
-           "widgetType": "image",
-           "settings": {
-            "image": {
-             "url": "https://clientes-phi-six.vercel.app/michele-salla/desafio-7em7/assets/img/cartao-c1-roupa-marcando.webp",
-             "id": "",
-             "alt": "Sente a barriga marcando nas roupas e quer mudar isso",
-             "source": "library",
-             "size": ""
-            },
-            "image_size": "full",
-            "width": {
-             "unit": "%",
-             "size": 100,
-             "sizes": []
-            },
-            "align": "center"
-           },
-           "elements": []
-          },
-          {
-           "id": "8b9cd65",
-           "elType": "widget",
-           "widgetType": "text-editor",
-           "settings": {
-            "editor": "Sente a barriga marcando nas roupas e quer mudar isso",
-            "align": "left",
-            "text_color": "#FFFFFF",
-            "typography_typography": "custom",
-            "typography_font_family": "Raleway",
-            "typography_font_weight": "600",
-            "typography_font_size": {
-             "unit": "px",
-             "size": 13.5,
-             "sizes": []
-            },
-            "typography_line_height": {
-             "unit": "em",
-             "size": 1.35,
-             "sizes": []
-            },
-            "_padding": {
-             "unit": "px",
-             "top": "12",
-             "right": "12",
-             "bottom": "14",
-             "left": "12",
-             "isLinked": false
-            },
-            "_margin": {
-             "unit": "px",
-             "top": "0",
-             "right": "0",
-             "bottom": "0",
-             "left": "0",
-             "isLinked": true
-            }
-           },
-           "elements": []
-          }
-         ]
-        },
-        {
-         "id": "c86bbfb",
-         "elType": "container",
-         "isInner": true,
-         "settings": {
-          "content_width": "full",
-          "flex_direction": "column",
-          "background_background": "classic",
-          "background_color": "#252525",
-          "border_radius": {
-           "unit": "px",
-           "top": "20",
-           "right": "20",
-           "bottom": "20",
-           "left": "20",
-           "isLinked": true
-          },
-          "overflow": "hidden",
-          "flex_gap": {
-           "column": "0",
-           "row": "0",
-           "isLinked": true,
-           "unit": "px",
-           "size": 0
-          },
-          "box_shadow_box_shadow_type": "yes",
-          "box_shadow_box_shadow": {
-           "horizontal": 0,
-           "vertical": 14,
-           "blur": 34,
-           "spread": 0,
-           "color": "rgba(94,8,92,0.14)"
-          },
-          "width": {
-           "unit": "%",
-           "size": 47.6,
-           "sizes": []
-          },
-          "width_mobile": {
-           "unit": "%",
-           "size": 47.6,
-           "sizes": []
-          }
-         },
-         "elements": [
-          {
-           "id": "ba46e69",
-           "elType": "widget",
-           "widgetType": "image",
-           "settings": {
-            "image": {
-             "url": "https://clientes-phi-six.vercel.app/michele-salla/desafio-7em7/assets/img/cartao-c2-calca-nao-fecha.webp",
-             "id": "",
-             "alt": "Tem uma calça que não fecha mais e quer voltar a vesti-la",
-             "source": "library",
-             "size": ""
-            },
-            "image_size": "full",
-            "width": {
-             "unit": "%",
-             "size": 100,
-             "sizes": []
-            },
-            "align": "center"
-           },
-           "elements": []
-          },
-          {
-           "id": "3c0d346",
-           "elType": "widget",
-           "widgetType": "text-editor",
-           "settings": {
-            "editor": "Tem uma calça que não fecha mais e quer voltar a vesti-la",
-            "align": "left",
-            "text_color": "#FFFFFF",
-            "typography_typography": "custom",
-            "typography_font_family": "Raleway",
-            "typography_font_weight": "600",
-            "typography_font_size": {
-             "unit": "px",
-             "size": 13.5,
-             "sizes": []
-            },
-            "typography_line_height": {
-             "unit": "em",
-             "size": 1.35,
-             "sizes": []
-            },
-            "_padding": {
-             "unit": "px",
-             "top": "12",
-             "right": "12",
-             "bottom": "14",
-             "left": "12",
-             "isLinked": false
-            },
-            "_margin": {
-             "unit": "px",
-             "top": "0",
-             "right": "0",
-             "bottom": "0",
-             "left": "0",
-             "isLinked": true
-            }
-           },
-           "elements": []
-          }
-         ]
-        },
         {
          "id": "a9f2e1e",
          "elType": "container",
@@ -5991,9 +6003,9 @@
            "widgetType": "image",
            "settings": {
             "image": {
-             "url": "https://clientes-phi-six.vercel.app/michele-salla/desafio-7em7/assets/img/cartao-c3-barriga-nao-sai.webp",
+             "url": "https://clientes-phi-six.vercel.app/michele-salla/desafio-7em7/assets/img/cartao-c1-roupa-marcando.webp",
              "id": "",
-             "alt": "Já tentou de tudo e sente que a barriga não sai do lugar",
+             "alt": "Sente a barriga marcando nas roupas e quer mudar isso",
              "source": "library",
              "size": ""
             },
@@ -6012,7 +6024,7 @@
            "elType": "widget",
            "widgetType": "text-editor",
            "settings": {
-            "editor": "Já tentou de tudo e sente que a barriga não sai do lugar",
+            "editor": "Sente a barriga marcando nas roupas e quer mudar isso",
             "align": "left",
             "text_color": "#FFFFFF",
             "typography_typography": "custom",
@@ -6100,9 +6112,9 @@
            "widgetType": "image",
            "settings": {
             "image": {
-             "url": "https://clientes-phi-six.vercel.app/michele-salla/desafio-7em7/assets/img/cartao-c4-pouco-tempo.webp",
+             "url": "https://clientes-phi-six.vercel.app/michele-salla/desafio-7em7/assets/img/cartao-c2-calca-nao-fecha.webp",
              "id": "",
-             "alt": "Tem pouco tempo e precisa de algo prático, para fazer em casa",
+             "alt": "Tem uma calça que não fecha mais e quer voltar a vesti-la",
              "source": "library",
              "size": ""
             },
@@ -6121,7 +6133,7 @@
            "elType": "widget",
            "widgetType": "text-editor",
            "settings": {
-            "editor": "Tem pouco tempo e precisa de algo prático, para fazer em casa",
+            "editor": "Tem uma calça que não fecha mais e quer voltar a vesti-la",
             "align": "left",
             "text_color": "#FFFFFF",
             "typography_typography": "custom",
@@ -6209,9 +6221,9 @@
            "widgetType": "image",
            "settings": {
             "image": {
-             "url": "https://clientes-phi-six.vercel.app/michele-salla/desafio-7em7/assets/img/cartao-c5-sem-dieta-radical.webp",
+             "url": "https://clientes-phi-six.vercel.app/michele-salla/desafio-7em7/assets/img/cartao-c3-barriga-nao-sai.webp",
              "id": "",
-             "alt": "Quer trabalhar barriga e cintura sem depender de dietas radicais",
+             "alt": "Já tentou de tudo e sente que a barriga não sai do lugar",
              "source": "library",
              "size": ""
             },
@@ -6230,7 +6242,7 @@
            "elType": "widget",
            "widgetType": "text-editor",
            "settings": {
-            "editor": "Quer trabalhar barriga e cintura sem depender de dietas radicais",
+            "editor": "Já tentou de tudo e sente que a barriga não sai do lugar",
             "align": "left",
             "text_color": "#FFFFFF",
             "typography_typography": "custom",
@@ -6318,9 +6330,9 @@
            "widgetType": "image",
            "settings": {
             "image": {
-             "url": "https://clientes-phi-six.vercel.app/michele-salla/desafio-7em7/assets/img/cartao-c6-mente-sabota.webp",
+             "url": "https://clientes-phi-six.vercel.app/michele-salla/desafio-7em7/assets/img/cartao-c4-pouco-tempo.webp",
              "id": "",
-             "alt": "Sente que a mente sabota seus resultados e quer mudar isso",
+             "alt": "Tem pouco tempo e precisa de algo prático, para fazer em casa",
              "source": "library",
              "size": ""
             },
@@ -6339,7 +6351,7 @@
            "elType": "widget",
            "widgetType": "text-editor",
            "settings": {
-            "editor": "Sente que a mente sabota seus resultados e quer mudar isso",
+            "editor": "Tem pouco tempo e precisa de algo prático, para fazer em casa",
             "align": "left",
             "text_color": "#FFFFFF",
             "typography_typography": "custom",
@@ -6427,6 +6439,224 @@
            "widgetType": "image",
            "settings": {
             "image": {
+             "url": "https://clientes-phi-six.vercel.app/michele-salla/desafio-7em7/assets/img/cartao-c5-sem-dieta-radical.webp",
+             "id": "",
+             "alt": "Quer trabalhar barriga e cintura sem depender de dietas radicais",
+             "source": "library",
+             "size": ""
+            },
+            "image_size": "full",
+            "width": {
+             "unit": "%",
+             "size": 100,
+             "sizes": []
+            },
+            "align": "center"
+           },
+           "elements": []
+          },
+          {
+           "id": "3069328",
+           "elType": "widget",
+           "widgetType": "text-editor",
+           "settings": {
+            "editor": "Quer trabalhar barriga e cintura sem depender de dietas radicais",
+            "align": "left",
+            "text_color": "#FFFFFF",
+            "typography_typography": "custom",
+            "typography_font_family": "Raleway",
+            "typography_font_weight": "600",
+            "typography_font_size": {
+             "unit": "px",
+             "size": 13.5,
+             "sizes": []
+            },
+            "typography_line_height": {
+             "unit": "em",
+             "size": 1.35,
+             "sizes": []
+            },
+            "_padding": {
+             "unit": "px",
+             "top": "12",
+             "right": "12",
+             "bottom": "14",
+             "left": "12",
+             "isLinked": false
+            },
+            "_margin": {
+             "unit": "px",
+             "top": "0",
+             "right": "0",
+             "bottom": "0",
+             "left": "0",
+             "isLinked": true
+            }
+           },
+           "elements": []
+          }
+         ]
+        },
+        {
+         "id": "c4506a9",
+         "elType": "container",
+         "isInner": true,
+         "settings": {
+          "content_width": "full",
+          "flex_direction": "column",
+          "background_background": "classic",
+          "background_color": "#252525",
+          "border_radius": {
+           "unit": "px",
+           "top": "20",
+           "right": "20",
+           "bottom": "20",
+           "left": "20",
+           "isLinked": true
+          },
+          "overflow": "hidden",
+          "flex_gap": {
+           "column": "0",
+           "row": "0",
+           "isLinked": true,
+           "unit": "px",
+           "size": 0
+          },
+          "box_shadow_box_shadow_type": "yes",
+          "box_shadow_box_shadow": {
+           "horizontal": 0,
+           "vertical": 14,
+           "blur": 34,
+           "spread": 0,
+           "color": "rgba(94,8,92,0.14)"
+          },
+          "width": {
+           "unit": "%",
+           "size": 47.6,
+           "sizes": []
+          },
+          "width_mobile": {
+           "unit": "%",
+           "size": 47.6,
+           "sizes": []
+          }
+         },
+         "elements": [
+          {
+           "id": "1b45a02",
+           "elType": "widget",
+           "widgetType": "image",
+           "settings": {
+            "image": {
+             "url": "https://clientes-phi-six.vercel.app/michele-salla/desafio-7em7/assets/img/cartao-c6-mente-sabota.webp",
+             "id": "",
+             "alt": "Sente que a mente sabota seus resultados e quer mudar isso",
+             "source": "library",
+             "size": ""
+            },
+            "image_size": "full",
+            "width": {
+             "unit": "%",
+             "size": 100,
+             "sizes": []
+            },
+            "align": "center"
+           },
+           "elements": []
+          },
+          {
+           "id": "b6054c6",
+           "elType": "widget",
+           "widgetType": "text-editor",
+           "settings": {
+            "editor": "Sente que a mente sabota seus resultados e quer mudar isso",
+            "align": "left",
+            "text_color": "#FFFFFF",
+            "typography_typography": "custom",
+            "typography_font_family": "Raleway",
+            "typography_font_weight": "600",
+            "typography_font_size": {
+             "unit": "px",
+             "size": 13.5,
+             "sizes": []
+            },
+            "typography_line_height": {
+             "unit": "em",
+             "size": 1.35,
+             "sizes": []
+            },
+            "_padding": {
+             "unit": "px",
+             "top": "12",
+             "right": "12",
+             "bottom": "14",
+             "left": "12",
+             "isLinked": false
+            },
+            "_margin": {
+             "unit": "px",
+             "top": "0",
+             "right": "0",
+             "bottom": "0",
+             "left": "0",
+             "isLinked": true
+            }
+           },
+           "elements": []
+          }
+         ]
+        },
+        {
+         "id": "1db72a1",
+         "elType": "container",
+         "isInner": true,
+         "settings": {
+          "content_width": "full",
+          "flex_direction": "column",
+          "background_background": "classic",
+          "background_color": "#252525",
+          "border_radius": {
+           "unit": "px",
+           "top": "20",
+           "right": "20",
+           "bottom": "20",
+           "left": "20",
+           "isLinked": true
+          },
+          "overflow": "hidden",
+          "flex_gap": {
+           "column": "0",
+           "row": "0",
+           "isLinked": true,
+           "unit": "px",
+           "size": 0
+          },
+          "box_shadow_box_shadow_type": "yes",
+          "box_shadow_box_shadow": {
+           "horizontal": 0,
+           "vertical": 14,
+           "blur": 34,
+           "spread": 0,
+           "color": "rgba(94,8,92,0.14)"
+          },
+          "width": {
+           "unit": "%",
+           "size": 47.6,
+           "sizes": []
+          },
+          "width_mobile": {
+           "unit": "%",
+           "size": 47.6,
+           "sizes": []
+          }
+         },
+         "elements": [
+          {
+           "id": "da841c0",
+           "elType": "widget",
+           "widgetType": "image",
+           "settings": {
+            "image": {
              "url": "https://clientes-phi-six.vercel.app/michele-salla/desafio-7em7/assets/img/cartao-c7-passo-a-passo.webp",
              "id": "",
              "alt": "Quer um passo a passo claro para saber o que fazer a cada dia",
@@ -6444,7 +6674,7 @@
            "elements": []
           },
           {
-           "id": "3069328",
+           "id": "7c4b911",
            "elType": "widget",
            "widgetType": "text-editor",
            "settings": {
@@ -6488,7 +6718,7 @@
        ]
       },
       {
-       "id": "c4506a9",
+       "id": "da3e670",
        "elType": "container",
        "isInner": true,
        "settings": {
@@ -6531,7 +6761,7 @@
        },
        "elements": [
         {
-         "id": "b6054c6",
+         "id": "ececeeb",
          "elType": "widget",
          "widgetType": "heading",
          "settings": {
@@ -6563,7 +6793,7 @@
        ]
       },
       {
-       "id": "7c4b911",
+       "id": "94a09e9",
        "elType": "container",
        "isInner": true,
        "settings": {
@@ -6600,7 +6830,7 @@
        },
        "elements": [
         {
-         "id": "da841c0",
+         "id": "1496333",
          "elType": "widget",
          "widgetType": "heading",
          "settings": {
@@ -6632,7 +6862,7 @@
        ]
       },
       {
-       "id": "8536f41",
+       "id": "420c406",
        "elType": "widget",
        "widgetType": "text-editor",
        "settings": {
@@ -6656,7 +6886,7 @@
        "elements": []
       },
       {
-       "id": "ececeeb",
+       "id": "de25237",
        "elType": "widget",
        "widgetType": "icon",
        "settings": {
@@ -6692,7 +6922,7 @@
    ]
   },
   {
-   "id": "2011514",
+   "id": "c973a88",
    "elType": "container",
    "isInner": false,
    "settings": {
@@ -6713,7 +6943,7 @@
    },
    "elements": [
     {
-     "id": "c8c2ca9",
+     "id": "fd4c9aa",
      "elType": "container",
      "isInner": true,
      "settings": {
@@ -6742,7 +6972,7 @@
      },
      "elements": [
       {
-       "id": "284a268",
+       "id": "ed7b6d9",
        "elType": "widget",
        "widgetType": "heading",
        "settings": {
@@ -6772,7 +7002,7 @@
        "elements": []
       },
       {
-       "id": "9c491c3",
+       "id": "2011514",
        "elType": "container",
        "isInner": true,
        "settings": {
@@ -6814,7 +7044,7 @@
        },
        "elements": [
         {
-         "id": "de25237",
+         "id": "41ad814",
          "elType": "container",
          "isInner": true,
          "settings": {
@@ -6850,7 +7080,7 @@
          },
          "elements": [
           {
-           "id": "94a09e9",
+           "id": "5a6efd9",
            "elType": "widget",
            "widgetType": "icon",
            "settings": {
@@ -6870,7 +7100,7 @@
            "elements": []
           },
           {
-           "id": "1820c2c",
+           "id": "72a42dd",
            "elType": "widget",
            "widgetType": "text-editor",
            "settings": {
@@ -6905,7 +7135,7 @@
            "elements": []
           },
           {
-           "id": "420c406",
+           "id": "3a995a2",
            "elType": "widget",
            "widgetType": "text-editor",
            "settings": {
@@ -6940,7 +7170,7 @@
          ]
         },
         {
-         "id": "72a42dd",
+         "id": "b24652b",
          "elType": "container",
          "isInner": true,
          "settings": {
@@ -6976,7 +7206,7 @@
          },
          "elements": [
           {
-           "id": "35fa32e",
+           "id": "5fc70f7",
            "elType": "widget",
            "widgetType": "icon",
            "settings": {
@@ -6996,7 +7226,7 @@
            "elements": []
           },
           {
-           "id": "264d437",
+           "id": "ea1260b",
            "elType": "widget",
            "widgetType": "text-editor",
            "settings": {
@@ -7031,7 +7261,7 @@
            "elements": []
           },
           {
-           "id": "5a6efd9",
+           "id": "cb53a24",
            "elType": "widget",
            "widgetType": "text-editor",
            "settings": {
@@ -7066,7 +7296,7 @@
          ]
         },
         {
-         "id": "ea1260b",
+         "id": "9e261e7",
          "elType": "container",
          "isInner": true,
          "settings": {
@@ -7102,7 +7332,7 @@
          },
          "elements": [
           {
-           "id": "3a995a2",
+           "id": "c966c83",
            "elType": "widget",
            "widgetType": "icon",
            "settings": {
@@ -7122,7 +7352,7 @@
            "elements": []
           },
           {
-           "id": "41ad814",
+           "id": "a449b78",
            "elType": "widget",
            "widgetType": "text-editor",
            "settings": {
@@ -7157,7 +7387,7 @@
            "elements": []
           },
           {
-           "id": "5fc70f7",
+           "id": "8d44cf7",
            "elType": "widget",
            "widgetType": "text-editor",
            "settings": {
@@ -7192,7 +7422,7 @@
          ]
         },
         {
-         "id": "a449b78",
+         "id": "631fe0e",
          "elType": "container",
          "isInner": true,
          "settings": {
@@ -7228,7 +7458,7 @@
          },
          "elements": [
           {
-           "id": "cb53a24",
+           "id": "bfc5ca1",
            "elType": "widget",
            "widgetType": "icon",
            "settings": {
@@ -7248,7 +7478,7 @@
            "elements": []
           },
           {
-           "id": "b24652b",
+           "id": "62f4804",
            "elType": "widget",
            "widgetType": "text-editor",
            "settings": {
@@ -7283,7 +7513,7 @@
            "elements": []
           },
           {
-           "id": "c966c83",
+           "id": "5dac253",
            "elType": "widget",
            "widgetType": "text-editor",
            "settings": {
@@ -7318,7 +7548,7 @@
          ]
         },
         {
-         "id": "62f4804",
+         "id": "bc35da4",
          "elType": "container",
          "isInner": true,
          "settings": {
@@ -7354,7 +7584,7 @@
          },
          "elements": [
           {
-           "id": "8d44cf7",
+           "id": "876ed0d",
            "elType": "widget",
            "widgetType": "icon",
            "settings": {
@@ -7374,7 +7604,7 @@
            "elements": []
           },
           {
-           "id": "9e261e7",
+           "id": "3831cb3",
            "elType": "widget",
            "widgetType": "text-editor",
            "settings": {
@@ -7409,7 +7639,7 @@
            "elements": []
           },
           {
-           "id": "bfc5ca1",
+           "id": "7432671",
            "elType": "widget",
            "widgetType": "text-editor",
            "settings": {
@@ -7444,7 +7674,7 @@
          ]
         },
         {
-         "id": "3831cb3",
+         "id": "a455e95",
          "elType": "container",
          "isInner": true,
          "settings": {
@@ -7480,7 +7710,7 @@
          },
          "elements": [
           {
-           "id": "5dac253",
+           "id": "ae26fed",
            "elType": "widget",
            "widgetType": "icon",
            "settings": {
@@ -7500,7 +7730,7 @@
            "elements": []
           },
           {
-           "id": "631fe0e",
+           "id": "5b23b0b",
            "elType": "widget",
            "widgetType": "text-editor",
            "settings": {
@@ -7535,7 +7765,7 @@
            "elements": []
           },
           {
-           "id": "876ed0d",
+           "id": "5e8002f",
            "elType": "widget",
            "widgetType": "text-editor",
            "settings": {
@@ -7570,7 +7800,7 @@
          ]
         },
         {
-         "id": "5b23b0b",
+         "id": "9c491c3",
          "elType": "container",
          "isInner": true,
          "settings": {
@@ -7606,7 +7836,7 @@
          },
          "elements": [
           {
-           "id": "7432671",
+           "id": "791b520",
            "elType": "widget",
            "widgetType": "icon",
            "settings": {
@@ -7626,7 +7856,7 @@
            "elements": []
           },
           {
-           "id": "bc35da4",
+           "id": "76e8efc",
            "elType": "widget",
            "widgetType": "text-editor",
            "settings": {
@@ -7661,7 +7891,7 @@
            "elements": []
           },
           {
-           "id": "ae26fed",
+           "id": "6799590",
            "elType": "widget",
            "widgetType": "text-editor",
            "settings": {
@@ -7696,7 +7926,7 @@
          ]
         },
         {
-         "id": "76e8efc",
+         "id": "390fc7a",
          "elType": "container",
          "isInner": true,
          "settings": {
@@ -7732,7 +7962,7 @@
          },
          "elements": [
           {
-           "id": "5e8002f",
+           "id": "284a268",
            "elType": "widget",
            "widgetType": "icon",
            "settings": {
@@ -7752,7 +7982,7 @@
            "elements": []
           },
           {
-           "id": "a455e95",
+           "id": "551edac",
            "elType": "widget",
            "widgetType": "text-editor",
            "settings": {
@@ -7787,7 +8017,7 @@
            "elements": []
           },
           {
-           "id": "791b520",
+           "id": "cdafe01",
            "elType": "widget",
            "widgetType": "text-editor",
            "settings": {
@@ -7822,7 +8052,7 @@
          ]
         },
         {
-         "id": "6799590",
+         "id": "c8c2ca9",
          "elType": "widget",
          "widgetType": "heading",
          "settings": {
@@ -7864,7 +8094,7 @@
      ]
     },
     {
-     "id": "cdafe01",
+     "id": "d3d6346",
      "elType": "container",
      "isInner": true,
      "settings": {
@@ -7896,7 +8126,7 @@
      },
      "elements": [
       {
-       "id": "551edac",
+       "id": "27c9124",
        "elType": "widget",
        "widgetType": "heading",
        "settings": {
@@ -7926,7 +8156,7 @@
        "elements": []
       },
       {
-       "id": "390fc7a",
+       "id": "cd59005",
        "elType": "widget",
        "widgetType": "icon",
        "settings": {
@@ -7962,7 +8192,7 @@
    ]
   },
   {
-   "id": "424e854",
+   "id": "b5817f9",
    "elType": "container",
    "isInner": false,
    "settings": {
@@ -7995,7 +8225,7 @@
    },
    "elements": [
     {
-     "id": "7817aa3",
+     "id": "33c5694",
      "elType": "container",
      "isInner": true,
      "settings": {
@@ -8024,7 +8254,7 @@
      },
      "elements": [
       {
-       "id": "40ae941",
+       "id": "f508929",
        "elType": "container",
        "isInner": true,
        "settings": {
@@ -8065,7 +8295,7 @@
        },
        "elements": [
         {
-         "id": "ed7b6d9",
+         "id": "aeb9b43",
          "elType": "widget",
          "widgetType": "heading",
          "settings": {
@@ -8131,7 +8361,7 @@
          "elements": []
         },
         {
-         "id": "b96e063",
+         "id": "bb92484",
          "elType": "container",
          "isInner": true,
          "settings": {
@@ -8156,7 +8386,7 @@
          },
          "elements": [
           {
-           "id": "9171919",
+           "id": "449afc6",
            "elType": "widget",
            "widgetType": "image",
            "settings": {
@@ -8180,7 +8410,7 @@
          ]
         },
         {
-         "id": "49091e3",
+         "id": "424e854",
          "elType": "container",
          "isInner": true,
          "settings": {
@@ -8204,7 +8434,7 @@
          },
          "elements": [
           {
-           "id": "7d5aab7",
+           "id": "13a78b8",
            "elType": "widget",
            "widgetType": "heading",
            "settings": {
@@ -8234,7 +8464,7 @@
            "elements": []
           },
           {
-           "id": "c443a82",
+           "id": "49091e3",
            "elType": "widget",
            "widgetType": "text-editor",
            "settings": {
@@ -8266,7 +8496,7 @@
            "elements": []
           },
           {
-           "id": "33f5940",
+           "id": "40ae941",
            "elType": "widget",
            "widgetType": "heading",
            "settings": {
@@ -8304,7 +8534,7 @@
            "elements": []
           },
           {
-           "id": "34c65b2",
+           "id": "3878c6e",
            "elType": "widget",
            "widgetType": "heading",
            "settings": {
@@ -8335,7 +8565,7 @@
            "elements": []
           },
           {
-           "id": "449afc6",
+           "id": "c96823d",
            "elType": "widget",
            "widgetType": "text-editor",
            "settings": {
@@ -8367,7 +8597,7 @@
            "elements": []
           },
           {
-           "id": "bb92484",
+           "id": "415ed42",
            "elType": "widget",
            "widgetType": "heading",
            "settings": {
@@ -8405,7 +8635,7 @@
            "elements": []
           },
           {
-           "id": "13a78b8",
+           "id": "7817aa3",
            "elType": "widget",
            "widgetType": "button",
            "settings": {
@@ -8495,7 +8725,7 @@
            "elements": []
           },
           {
-           "id": "6ba666b",
+           "id": "34c65b2",
            "elType": "container",
            "isInner": true,
            "settings": {
@@ -8521,7 +8751,7 @@
            },
            "elements": [
             {
-             "id": "cd59005",
+             "id": "13b2475",
              "elType": "container",
              "isInner": true,
              "settings": {
@@ -8549,7 +8779,7 @@
              },
              "elements": [
               {
-               "id": "27c9124",
+               "id": "206665b",
                "elType": "widget",
                "widgetType": "icon",
                "settings": {
@@ -8569,7 +8799,7 @@
                "elements": []
               },
               {
-               "id": "d3d6346",
+               "id": "eedd4f7",
                "elType": "widget",
                "widgetType": "text-editor",
                "settings": {
@@ -8606,7 +8836,7 @@
              ]
             },
             {
-             "id": "aeb9b43",
+             "id": "b96e063",
              "elType": "container",
              "isInner": true,
              "settings": {
@@ -8634,7 +8864,7 @@
              },
              "elements": [
               {
-               "id": "fd4c9aa",
+               "id": "6ba666b",
                "elType": "widget",
                "widgetType": "icon",
                "settings": {
@@ -8654,7 +8884,7 @@
                "elements": []
               },
               {
-               "id": "c973a88",
+               "id": "9171919",
                "elType": "widget",
                "widgetType": "text-editor",
                "settings": {
@@ -8691,7 +8921,7 @@
              ]
             },
             {
-             "id": "13b2475",
+             "id": "33f5940",
              "elType": "container",
              "isInner": true,
              "settings": {
@@ -8719,7 +8949,7 @@
              },
              "elements": [
               {
-               "id": "206665b",
+               "id": "7d5aab7",
                "elType": "widget",
                "widgetType": "icon",
                "settings": {
@@ -8739,7 +8969,7 @@
                "elements": []
               },
               {
-               "id": "eedd4f7",
+               "id": "c443a82",
                "elType": "widget",
                "widgetType": "text-editor",
                "settings": {
@@ -8782,7 +9012,7 @@
        ]
       },
       {
-       "id": "415ed42",
+       "id": "9770955",
        "elType": "container",
        "isInner": true,
        "settings": {
@@ -8826,7 +9056,7 @@
        },
        "elements": [
         {
-         "id": "3878c6e",
+         "id": "087d1fc",
          "elType": "widget",
          "widgetType": "image",
          "settings": {
@@ -8856,7 +9086,7 @@
          "elements": []
         },
         {
-         "id": "c96823d",
+         "id": "8be843b",
          "elType": "widget",
          "widgetType": "text-editor",
          "settings": {
@@ -8897,7 +9127,7 @@
    ]
   },
   {
-   "id": "3ac6ae8",
+   "id": "93e7452",
    "elType": "container",
    "isInner": false,
    "settings": {
@@ -8930,7 +9160,7 @@
    },
    "elements": [
     {
-     "id": "ee3f812",
+     "id": "1c566df",
      "elType": "container",
      "isInner": true,
      "settings": {
@@ -8959,7 +9189,7 @@
      },
      "elements": [
       {
-       "id": "f508929",
+       "id": "234f9f3",
        "elType": "widget",
        "widgetType": "heading",
        "settings": {
@@ -8989,7 +9219,7 @@
        "elements": []
       },
       {
-       "id": "b5817f9",
+       "id": "cabd073",
        "elType": "container",
        "isInner": true,
        "settings": {
@@ -9041,7 +9271,7 @@
        },
        "elements": [
         {
-         "id": "9770955",
+         "id": "b0c1d3e",
          "elType": "container",
          "isInner": true,
          "settings": {
@@ -9059,7 +9289,7 @@
          },
          "elements": [
           {
-           "id": "087d1fc",
+           "id": "a449d68",
            "elType": "widget",
            "widgetType": "icon",
            "settings": {
@@ -9087,7 +9317,7 @@
            "elements": []
           },
           {
-           "id": "8be843b",
+           "id": "7c704f7",
            "elType": "widget",
            "widgetType": "heading",
            "settings": {
@@ -9130,7 +9360,7 @@
          ]
         },
         {
-         "id": "33c5694",
+         "id": "e14e9e4",
          "elType": "widget",
          "widgetType": "text-editor",
          "settings": {
@@ -9164,7 +9394,7 @@
        ]
       },
       {
-       "id": "e14e9e4",
+       "id": "8a4332c",
        "elType": "container",
        "isInner": true,
        "settings": {
@@ -9216,7 +9446,7 @@
        },
        "elements": [
         {
-         "id": "7c704f7",
+         "id": "ee3f812",
          "elType": "container",
          "isInner": true,
          "settings": {
@@ -9234,7 +9464,7 @@
          },
          "elements": [
           {
-           "id": "234f9f3",
+           "id": "21953b1",
            "elType": "widget",
            "widgetType": "icon",
            "settings": {
@@ -9262,7 +9492,7 @@
            "elements": []
           },
           {
-           "id": "a449d68",
+           "id": "90ae9b7",
            "elType": "widget",
            "widgetType": "heading",
            "settings": {
@@ -9305,7 +9535,7 @@
          ]
         },
         {
-         "id": "b0c1d3e",
+         "id": "3ac6ae8",
          "elType": "widget",
          "widgetType": "text-editor",
          "settings": {
@@ -9339,7 +9569,7 @@
        ]
       },
       {
-       "id": "cabd073",
+       "id": "4c1ef31",
        "elType": "widget",
        "widgetType": "heading",
        "settings": {
@@ -9369,7 +9599,7 @@
        "elements": []
       },
       {
-       "id": "21953b1",
+       "id": "97b7612",
        "elType": "widget",
        "widgetType": "heading",
        "settings": {
@@ -9399,7 +9629,7 @@
        "elements": []
       },
       {
-       "id": "90ae9b7",
+       "id": "80b5fef",
        "elType": "widget",
        "widgetType": "button",
        "settings": {
@@ -9493,7 +9723,7 @@
    ]
   },
   {
-   "id": "bae1b29",
+   "id": "18e0603",
    "elType": "container",
    "isInner": false,
    "settings": {
@@ -9526,7 +9756,7 @@
    },
    "elements": [
     {
-     "id": "cbf2f3d",
+     "id": "01116d4",
      "elType": "container",
      "isInner": true,
      "settings": {
@@ -9555,7 +9785,7 @@
      },
      "elements": [
       {
-       "id": "7237524",
+       "id": "cbf2f3d",
        "elType": "container",
        "isInner": true,
        "settings": {
@@ -9615,7 +9845,7 @@
        },
        "elements": [
         {
-         "id": "882f2ca",
+         "id": "26d09dd",
          "elType": "widget",
          "widgetType": "image",
          "settings": {
@@ -9647,7 +9877,7 @@
        ]
       },
       {
-       "id": "5ca285d",
+       "id": "688bb12",
        "elType": "widget",
        "widgetType": "heading",
        "settings": {
@@ -9685,7 +9915,7 @@
        "elements": []
       },
       {
-       "id": "ddf86d7",
+       "id": "b6d16ad",
        "elType": "widget",
        "widgetType": "heading",
        "settings": {
@@ -9715,7 +9945,7 @@
        "elements": []
       },
       {
-       "id": "26d09dd",
+       "id": "c9a29fa",
        "elType": "widget",
        "widgetType": "text-editor",
        "settings": {
@@ -9737,208 +9967,6 @@
         }
        },
        "elements": []
-      },
-      {
-       "id": "97b7612",
-       "elType": "container",
-       "isInner": true,
-       "settings": {
-        "content_width": "full",
-        "flex_direction": "row",
-        "background_background": "classic",
-        "background_color": "rgba(255,255,255,0.06)",
-        "border_radius": {
-         "unit": "px",
-         "top": "16",
-         "right": "16",
-         "bottom": "16",
-         "left": "16",
-         "isLinked": true
-        },
-        "padding": {
-         "unit": "px",
-         "top": "12",
-         "right": "14",
-         "bottom": "12",
-         "left": "14",
-         "isLinked": false
-        },
-        "flex_gap": {
-         "column": "12",
-         "row": "12",
-         "isLinked": true,
-         "unit": "px",
-         "size": 12
-        },
-        "box_shadow_box_shadow_type": "",
-        "box_shadow_box_shadow": {
-         "horizontal": 0,
-         "vertical": 14,
-         "blur": 34,
-         "spread": 0,
-         "color": "rgba(94,8,92,0.14)"
-        },
-        "flex_align_items": "center",
-        "flex_wrap": "nowrap"
-       },
-       "elements": [
-        {
-         "id": "8a4332c",
-         "elType": "widget",
-         "widgetType": "icon",
-         "settings": {
-          "selected_icon": {
-           "value": "fas fa-circle",
-           "library": "fa-solid"
-          },
-          "align": "center",
-          "size": {
-           "unit": "px",
-           "size": 10,
-           "sizes": []
-          },
-          "primary_color": "#FF9DF4",
-          "_flex_size": "none"
-         },
-         "elements": []
-        },
-        {
-         "id": "4c1ef31",
-         "elType": "widget",
-         "widgetType": "text-editor",
-         "settings": {
-          "editor": "Educadora Física desde 2005",
-          "align": "left",
-          "text_color": "#FFFFFF",
-          "typography_typography": "custom",
-          "typography_font_family": "Raleway",
-          "typography_font_weight": "600",
-          "typography_font_size": {
-           "unit": "px",
-           "size": 15,
-           "sizes": []
-          },
-          "typography_line_height": {
-           "unit": "em",
-           "size": 1.35,
-           "sizes": []
-          },
-          "_margin": {
-           "unit": "px",
-           "top": "0",
-           "right": "0",
-           "bottom": "0",
-           "left": "0",
-           "isLinked": true
-          },
-          "_flex_size": "custom",
-          "_flex_grow": 1,
-          "_flex_shrink": 1
-         },
-         "elements": []
-        }
-       ]
-      },
-      {
-       "id": "93e7452",
-       "elType": "container",
-       "isInner": true,
-       "settings": {
-        "content_width": "full",
-        "flex_direction": "row",
-        "background_background": "classic",
-        "background_color": "rgba(255,255,255,0.06)",
-        "border_radius": {
-         "unit": "px",
-         "top": "16",
-         "right": "16",
-         "bottom": "16",
-         "left": "16",
-         "isLinked": true
-        },
-        "padding": {
-         "unit": "px",
-         "top": "12",
-         "right": "14",
-         "bottom": "12",
-         "left": "14",
-         "isLinked": false
-        },
-        "flex_gap": {
-         "column": "12",
-         "row": "12",
-         "isLinked": true,
-         "unit": "px",
-         "size": 12
-        },
-        "box_shadow_box_shadow_type": "",
-        "box_shadow_box_shadow": {
-         "horizontal": 0,
-         "vertical": 14,
-         "blur": 34,
-         "spread": 0,
-         "color": "rgba(94,8,92,0.14)"
-        },
-        "flex_align_items": "center",
-        "flex_wrap": "nowrap"
-       },
-       "elements": [
-        {
-         "id": "80b5fef",
-         "elType": "widget",
-         "widgetType": "icon",
-         "settings": {
-          "selected_icon": {
-           "value": "fas fa-circle",
-           "library": "fa-solid"
-          },
-          "align": "center",
-          "size": {
-           "unit": "px",
-           "size": 10,
-           "sizes": []
-          },
-          "primary_color": "#FF9DF4",
-          "_flex_size": "none"
-         },
-         "elements": []
-        },
-        {
-         "id": "1c566df",
-         "elType": "widget",
-         "widgetType": "text-editor",
-         "settings": {
-          "editor": "Mais de 10 especializações",
-          "align": "left",
-          "text_color": "#FFFFFF",
-          "typography_typography": "custom",
-          "typography_font_family": "Raleway",
-          "typography_font_weight": "600",
-          "typography_font_size": {
-           "unit": "px",
-           "size": 15,
-           "sizes": []
-          },
-          "typography_line_height": {
-           "unit": "em",
-           "size": 1.35,
-           "sizes": []
-          },
-          "_margin": {
-           "unit": "px",
-           "top": "0",
-           "right": "0",
-           "bottom": "0",
-           "left": "0",
-           "isLinked": true
-          },
-          "_flex_size": "custom",
-          "_flex_grow": 1,
-          "_flex_shrink": 1
-         },
-         "elements": []
-        }
-       ]
       },
       {
        "id": "835cd9f",
@@ -10009,7 +10037,7 @@
          "elType": "widget",
          "widgetType": "text-editor",
          "settings": {
-          "editor": "Especialista e licenciada na técnica da Barriga Negativa",
+          "editor": "Educadora Física desde 2005",
           "align": "left",
           "text_color": "#FFFFFF",
           "typography_typography": "custom",
@@ -10110,6 +10138,208 @@
          "elType": "widget",
          "widgetType": "text-editor",
          "settings": {
+          "editor": "Mais de 10 especializações",
+          "align": "left",
+          "text_color": "#FFFFFF",
+          "typography_typography": "custom",
+          "typography_font_family": "Raleway",
+          "typography_font_weight": "600",
+          "typography_font_size": {
+           "unit": "px",
+           "size": 15,
+           "sizes": []
+          },
+          "typography_line_height": {
+           "unit": "em",
+           "size": 1.35,
+           "sizes": []
+          },
+          "_margin": {
+           "unit": "px",
+           "top": "0",
+           "right": "0",
+           "bottom": "0",
+           "left": "0",
+           "isLinked": true
+          },
+          "_flex_size": "custom",
+          "_flex_grow": 1,
+          "_flex_shrink": 1
+         },
+         "elements": []
+        }
+       ]
+      },
+      {
+       "id": "b41049e",
+       "elType": "container",
+       "isInner": true,
+       "settings": {
+        "content_width": "full",
+        "flex_direction": "row",
+        "background_background": "classic",
+        "background_color": "rgba(255,255,255,0.06)",
+        "border_radius": {
+         "unit": "px",
+         "top": "16",
+         "right": "16",
+         "bottom": "16",
+         "left": "16",
+         "isLinked": true
+        },
+        "padding": {
+         "unit": "px",
+         "top": "12",
+         "right": "14",
+         "bottom": "12",
+         "left": "14",
+         "isLinked": false
+        },
+        "flex_gap": {
+         "column": "12",
+         "row": "12",
+         "isLinked": true,
+         "unit": "px",
+         "size": 12
+        },
+        "box_shadow_box_shadow_type": "",
+        "box_shadow_box_shadow": {
+         "horizontal": 0,
+         "vertical": 14,
+         "blur": 34,
+         "spread": 0,
+         "color": "rgba(94,8,92,0.14)"
+        },
+        "flex_align_items": "center",
+        "flex_wrap": "nowrap"
+       },
+       "elements": [
+        {
+         "id": "882f2ca",
+         "elType": "widget",
+         "widgetType": "icon",
+         "settings": {
+          "selected_icon": {
+           "value": "fas fa-circle",
+           "library": "fa-solid"
+          },
+          "align": "center",
+          "size": {
+           "unit": "px",
+           "size": 10,
+           "sizes": []
+          },
+          "primary_color": "#FF9DF4",
+          "_flex_size": "none"
+         },
+         "elements": []
+        },
+        {
+         "id": "7237524",
+         "elType": "widget",
+         "widgetType": "text-editor",
+         "settings": {
+          "editor": "Especialista e licenciada na técnica da Barriga Negativa",
+          "align": "left",
+          "text_color": "#FFFFFF",
+          "typography_typography": "custom",
+          "typography_font_family": "Raleway",
+          "typography_font_weight": "600",
+          "typography_font_size": {
+           "unit": "px",
+           "size": 15,
+           "sizes": []
+          },
+          "typography_line_height": {
+           "unit": "em",
+           "size": 1.35,
+           "sizes": []
+          },
+          "_margin": {
+           "unit": "px",
+           "top": "0",
+           "right": "0",
+           "bottom": "0",
+           "left": "0",
+           "isLinked": true
+          },
+          "_flex_size": "custom",
+          "_flex_grow": 1,
+          "_flex_shrink": 1
+         },
+         "elements": []
+        }
+       ]
+      },
+      {
+       "id": "ddf86d7",
+       "elType": "container",
+       "isInner": true,
+       "settings": {
+        "content_width": "full",
+        "flex_direction": "row",
+        "background_background": "classic",
+        "background_color": "rgba(255,255,255,0.06)",
+        "border_radius": {
+         "unit": "px",
+         "top": "16",
+         "right": "16",
+         "bottom": "16",
+         "left": "16",
+         "isLinked": true
+        },
+        "padding": {
+         "unit": "px",
+         "top": "12",
+         "right": "14",
+         "bottom": "12",
+         "left": "14",
+         "isLinked": false
+        },
+        "flex_gap": {
+         "column": "12",
+         "row": "12",
+         "isLinked": true,
+         "unit": "px",
+         "size": 12
+        },
+        "box_shadow_box_shadow_type": "",
+        "box_shadow_box_shadow": {
+         "horizontal": 0,
+         "vertical": 14,
+         "blur": 34,
+         "spread": 0,
+         "color": "rgba(94,8,92,0.14)"
+        },
+        "flex_align_items": "center",
+        "flex_wrap": "nowrap"
+       },
+       "elements": [
+        {
+         "id": "78aa862",
+         "elType": "widget",
+         "widgetType": "icon",
+         "settings": {
+          "selected_icon": {
+           "value": "fas fa-circle",
+           "library": "fa-solid"
+          },
+          "align": "center",
+          "size": {
+           "unit": "px",
+           "size": 10,
+           "sizes": []
+          },
+          "primary_color": "#FF9DF4",
+          "_flex_size": "none"
+         },
+         "elements": []
+        },
+        {
+         "id": "5ca285d",
+         "elType": "widget",
+         "widgetType": "text-editor",
+         "settings": {
           "editor": "Autora do livro Vida Diva (2025)",
           "align": "left",
           "text_color": "#FFFFFF",
@@ -10143,7 +10373,7 @@
        ]
       },
       {
-       "id": "78aa862",
+       "id": "b8ed7d3",
        "elType": "container",
        "isInner": true,
        "settings": {
@@ -10184,7 +10414,7 @@
        },
        "elements": [
         {
-         "id": "b41049e",
+         "id": "bae1b29",
          "elType": "widget",
          "widgetType": "heading",
          "settings": {
@@ -10220,7 +10450,7 @@
    ]
   },
   {
-   "id": "1ac2b12",
+   "id": "12f3778",
    "elType": "container",
    "isInner": false,
    "settings": {
@@ -10253,7 +10483,7 @@
    },
    "elements": [
     {
-     "id": "89db2fe",
+     "id": "7546602",
      "elType": "container",
      "isInner": true,
      "settings": {
@@ -10282,7 +10512,7 @@
      },
      "elements": [
       {
-       "id": "d14a0dd",
+       "id": "ee81eb6",
        "elType": "container",
        "isInner": true,
        "settings": {
@@ -10323,7 +10553,7 @@
        },
        "elements": [
         {
-         "id": "b8ed7d3",
+         "id": "f9c52a7",
          "elType": "widget",
          "widgetType": "heading",
          "settings": {
@@ -10389,7 +10619,7 @@
          "elements": []
         },
         {
-         "id": "401e0a4",
+         "id": "988eece",
          "elType": "container",
          "isInner": true,
          "settings": {
@@ -10414,7 +10644,7 @@
          },
          "elements": [
           {
-           "id": "58d2742",
+           "id": "238dfa7",
            "elType": "widget",
            "widgetType": "image",
            "settings": {
@@ -10438,7 +10668,7 @@
          ]
         },
         {
-         "id": "a656727",
+         "id": "1ac2b12",
          "elType": "container",
          "isInner": true,
          "settings": {
@@ -10462,7 +10692,7 @@
          },
          "elements": [
           {
-           "id": "1b115a4",
+           "id": "f486f87",
            "elType": "widget",
            "widgetType": "heading",
            "settings": {
@@ -10492,7 +10722,7 @@
            "elements": []
           },
           {
-           "id": "6024498",
+           "id": "a656727",
            "elType": "widget",
            "widgetType": "text-editor",
            "settings": {
@@ -10524,7 +10754,7 @@
            "elements": []
           },
           {
-           "id": "41a2772",
+           "id": "d14a0dd",
            "elType": "widget",
            "widgetType": "heading",
            "settings": {
@@ -10562,7 +10792,7 @@
            "elements": []
           },
           {
-           "id": "e842691",
+           "id": "4eec060",
            "elType": "widget",
            "widgetType": "heading",
            "settings": {
@@ -10593,7 +10823,7 @@
            "elements": []
           },
           {
-           "id": "238dfa7",
+           "id": "292ad72",
            "elType": "widget",
            "widgetType": "text-editor",
            "settings": {
@@ -10625,7 +10855,7 @@
            "elements": []
           },
           {
-           "id": "988eece",
+           "id": "25aec20",
            "elType": "widget",
            "widgetType": "heading",
            "settings": {
@@ -10663,7 +10893,7 @@
            "elements": []
           },
           {
-           "id": "f486f87",
+           "id": "89db2fe",
            "elType": "widget",
            "widgetType": "button",
            "settings": {
@@ -10753,7 +10983,7 @@
            "elements": []
           },
           {
-           "id": "8ddf677",
+           "id": "e842691",
            "elType": "container",
            "isInner": true,
            "settings": {
@@ -10779,7 +11009,7 @@
            },
            "elements": [
             {
-             "id": "c9a29fa",
+             "id": "74a3478",
              "elType": "container",
              "isInner": true,
              "settings": {
@@ -10807,7 +11037,7 @@
              },
              "elements": [
               {
-               "id": "688bb12",
+               "id": "2cbbfea",
                "elType": "widget",
                "widgetType": "icon",
                "settings": {
@@ -10827,7 +11057,7 @@
                "elements": []
               },
               {
-               "id": "b6d16ad",
+               "id": "cdaa9d7",
                "elType": "widget",
                "widgetType": "text-editor",
                "settings": {
@@ -10864,7 +11094,7 @@
              ]
             },
             {
-             "id": "f9c52a7",
+             "id": "401e0a4",
              "elType": "container",
              "isInner": true,
              "settings": {
@@ -10892,7 +11122,7 @@
              },
              "elements": [
               {
-               "id": "01116d4",
+               "id": "8ddf677",
                "elType": "widget",
                "widgetType": "icon",
                "settings": {
@@ -10912,7 +11142,7 @@
                "elements": []
               },
               {
-               "id": "18e0603",
+               "id": "58d2742",
                "elType": "widget",
                "widgetType": "text-editor",
                "settings": {
@@ -10949,7 +11179,7 @@
              ]
             },
             {
-             "id": "74a3478",
+             "id": "41a2772",
              "elType": "container",
              "isInner": true,
              "settings": {
@@ -10977,7 +11207,7 @@
              },
              "elements": [
               {
-               "id": "2cbbfea",
+               "id": "1b115a4",
                "elType": "widget",
                "widgetType": "icon",
                "settings": {
@@ -10997,7 +11227,7 @@
                "elements": []
               },
               {
-               "id": "cdaa9d7",
+               "id": "6024498",
                "elType": "widget",
                "widgetType": "text-editor",
                "settings": {
@@ -11040,7 +11270,7 @@
        ]
       },
       {
-       "id": "25aec20",
+       "id": "dfd1032",
        "elType": "container",
        "isInner": true,
        "settings": {
@@ -11084,7 +11314,7 @@
        },
        "elements": [
         {
-         "id": "4eec060",
+         "id": "a4faaab",
          "elType": "widget",
          "widgetType": "image",
          "settings": {
@@ -11114,7 +11344,7 @@
          "elements": []
         },
         {
-         "id": "292ad72",
+         "id": "15848ee",
          "elType": "widget",
          "widgetType": "text-editor",
          "settings": {
@@ -11155,7 +11385,7 @@
    ]
   },
   {
-   "id": "88b8020",
+   "id": "a708171",
    "elType": "container",
    "isInner": false,
    "settings": {
@@ -11188,7 +11418,7 @@
    },
    "elements": [
     {
-     "id": "7123050",
+     "id": "375f916",
      "elType": "container",
      "isInner": true,
      "settings": {
@@ -11217,7 +11447,7 @@
      },
      "elements": [
       {
-       "id": "b0eb7dc",
+       "id": "e418015",
        "elType": "widget",
        "widgetType": "heading",
        "settings": {
@@ -11247,7 +11477,7 @@
        "elements": []
       },
       {
-       "id": "a1e8510",
+       "id": "414f029",
        "elType": "container",
        "isInner": true,
        "settings": {
@@ -11262,238 +11492,6 @@
         }
        },
        "elements": [
-        {
-         "id": "15848ee",
-         "elType": "container",
-         "isInner": true,
-         "settings": {
-          "content_width": "full",
-          "flex_direction": "column",
-          "background_background": "classic",
-          "background_color": "#FFFFFF",
-          "border_radius": {
-           "unit": "px",
-           "top": "20",
-           "right": "20",
-           "bottom": "20",
-           "left": "20",
-           "isLinked": true
-          },
-          "padding": {
-           "unit": "px",
-           "top": "18",
-           "right": "18",
-           "bottom": "18",
-           "left": "18",
-           "isLinked": true
-          },
-          "flex_gap": {
-           "column": "8",
-           "row": "8",
-           "isLinked": true,
-           "unit": "px",
-           "size": 8
-          },
-          "box_shadow_box_shadow_type": "yes",
-          "box_shadow_box_shadow": {
-           "horizontal": 0,
-           "vertical": 14,
-           "blur": 34,
-           "spread": 0,
-           "color": "rgba(94,8,92,0.14)"
-          },
-          "border_border": "solid",
-          "border_width": {
-           "unit": "px",
-           "top": "0",
-           "right": "0",
-           "bottom": "0",
-           "left": "5",
-           "isLinked": false
-          },
-          "border_color": "#9E047C"
-         },
-         "elements": [
-          {
-           "id": "ee81eb6",
-           "elType": "widget",
-           "widgetType": "heading",
-           "settings": {
-            "title": "<span style=\"color:#9E047C\">▾</span> Em quanto tempo vejo diferença?",
-            "header_size": "h3",
-            "align": "left",
-            "title_color": "#252525",
-            "typography_typography": "custom",
-            "typography_font_family": "Sora",
-            "typography_font_weight": "700",
-            "typography_font_size": {
-             "unit": "px",
-             "size": 16.5,
-             "sizes": []
-            },
-            "typography_font_size_mobile": {
-             "unit": "px",
-             "size": 16.5,
-             "sizes": []
-            },
-            "typography_line_height": {
-             "unit": "em",
-             "size": 1.3,
-             "sizes": []
-            }
-           },
-           "elements": []
-          },
-          {
-           "id": "a4faaab",
-           "elType": "widget",
-           "widgetType": "text-editor",
-           "settings": {
-            "editor": "O Desafio 7 em 7 foi feito para 7 dias. Você registra suas fotos e medidas no começo e acompanha sua evolução até o fim do desafio. Os resultados variam de pessoa para pessoa.",
-            "align": "left",
-            "text_color": "#4A4150",
-            "typography_typography": "custom",
-            "typography_font_family": "Raleway",
-            "typography_font_weight": "400",
-            "typography_font_size": {
-             "unit": "px",
-             "size": 15,
-             "sizes": []
-            },
-            "typography_line_height": {
-             "unit": "em",
-             "size": 1.55,
-             "sizes": []
-            },
-            "_margin": {
-             "unit": "px",
-             "top": "0",
-             "right": "0",
-             "bottom": "0",
-             "left": "0",
-             "isLinked": true
-            }
-           },
-           "elements": []
-          }
-         ]
-        },
-        {
-         "id": "12f3778",
-         "elType": "container",
-         "isInner": true,
-         "settings": {
-          "content_width": "full",
-          "flex_direction": "column",
-          "background_background": "classic",
-          "background_color": "#FFFFFF",
-          "border_radius": {
-           "unit": "px",
-           "top": "20",
-           "right": "20",
-           "bottom": "20",
-           "left": "20",
-           "isLinked": true
-          },
-          "padding": {
-           "unit": "px",
-           "top": "18",
-           "right": "18",
-           "bottom": "18",
-           "left": "18",
-           "isLinked": true
-          },
-          "flex_gap": {
-           "column": "8",
-           "row": "8",
-           "isLinked": true,
-           "unit": "px",
-           "size": 8
-          },
-          "box_shadow_box_shadow_type": "yes",
-          "box_shadow_box_shadow": {
-           "horizontal": 0,
-           "vertical": 14,
-           "blur": 34,
-           "spread": 0,
-           "color": "rgba(94,8,92,0.14)"
-          },
-          "border_border": "solid",
-          "border_width": {
-           "unit": "px",
-           "top": "0",
-           "right": "0",
-           "bottom": "0",
-           "left": "5",
-           "isLinked": false
-          },
-          "border_color": "#9E047C"
-         },
-         "elements": [
-          {
-           "id": "dfd1032",
-           "elType": "widget",
-           "widgetType": "heading",
-           "settings": {
-            "title": "<span style=\"color:#9E047C\">▾</span> E se eu não conseguir seguir o plano?",
-            "header_size": "h3",
-            "align": "left",
-            "title_color": "#252525",
-            "typography_typography": "custom",
-            "typography_font_family": "Sora",
-            "typography_font_weight": "700",
-            "typography_font_size": {
-             "unit": "px",
-             "size": 16.5,
-             "sizes": []
-            },
-            "typography_font_size_mobile": {
-             "unit": "px",
-             "size": 16.5,
-             "sizes": []
-            },
-            "typography_line_height": {
-             "unit": "em",
-             "size": 1.3,
-             "sizes": []
-            }
-           },
-           "elements": []
-          },
-          {
-           "id": "7546602",
-           "elType": "widget",
-           "widgetType": "text-editor",
-           "settings": {
-            "editor": "São só 15 minutos por dia, em casa. E o Planner Diva te mostra o que fazer em cada um dos 7 dias, para você não ficar perdida.",
-            "align": "left",
-            "text_color": "#4A4150",
-            "typography_typography": "custom",
-            "typography_font_family": "Raleway",
-            "typography_font_weight": "400",
-            "typography_font_size": {
-             "unit": "px",
-             "size": 15,
-             "sizes": []
-            },
-            "typography_line_height": {
-             "unit": "em",
-             "size": 1.55,
-             "sizes": []
-            },
-            "_margin": {
-             "unit": "px",
-             "top": "0",
-             "right": "0",
-             "bottom": "0",
-             "left": "0",
-             "isLinked": true
-            }
-           },
-           "elements": []
-          }
-         ]
-        },
         {
          "id": "cc3b490",
          "elType": "container",
@@ -11551,7 +11549,7 @@
            "elType": "widget",
            "widgetType": "heading",
            "settings": {
-            "title": "<span style=\"color:#9E047C\">▾</span> E se o meu corpo não responder?",
+            "title": "<span style=\"color:#9E047C\">▾</span> Em quanto tempo vejo diferença?",
             "header_size": "h3",
             "align": "left",
             "title_color": "#252525",
@@ -11581,7 +11579,7 @@
            "elType": "widget",
            "widgetType": "text-editor",
            "settings": {
-            "editor": "Você participa sem risco. Se dentro do prazo legal você perceber que o desafio não faz sentido para você, pode solicitar o reembolso conforme a política da plataforma.",
+            "editor": "O Desafio 7 em 7 foi feito para 7 dias. Você registra suas fotos e medidas no começo e acompanha sua evolução até o fim do desafio. Os resultados variam de pessoa para pessoa.",
             "align": "left",
             "text_color": "#4A4150",
             "typography_typography": "custom",
@@ -11667,7 +11665,7 @@
            "elType": "widget",
            "widgetType": "heading",
            "settings": {
-            "title": "<span style=\"color:#9E047C\">▾</span> Já tentei de tudo e nada funcionou. Serve para mim?",
+            "title": "<span style=\"color:#9E047C\">▾</span> E se eu não conseguir seguir o plano?",
             "header_size": "h3",
             "align": "left",
             "title_color": "#252525",
@@ -11697,7 +11695,7 @@
            "elType": "widget",
            "widgetType": "text-editor",
            "settings": {
-            "editor": "O Desafio 7 em 7 trabalha corpo e mente juntos: aulas práticas para a barriga e a cintura e o áudio Mente Magra e Diva para reforçar o compromisso com a sua rotina.",
+            "editor": "São só 15 minutos por dia, em casa. E o Planner Diva te mostra o que fazer em cada um dos 7 dias, para você não ficar perdida.",
             "align": "left",
             "text_color": "#4A4150",
             "typography_typography": "custom",
@@ -11783,7 +11781,7 @@
            "elType": "widget",
            "widgetType": "heading",
            "settings": {
-            "title": "<span style=\"color:#9E047C\">▾</span> Preciso de academia?",
+            "title": "<span style=\"color:#9E047C\">▾</span> E se o meu corpo não responder?",
             "header_size": "h3",
             "align": "left",
             "title_color": "#252525",
@@ -11813,7 +11811,7 @@
            "elType": "widget",
            "widgetType": "text-editor",
            "settings": {
-            "editor": "Não. As aulas são feitas em casa.",
+            "editor": "Você participa sem risco. Se dentro do prazo legal você perceber que o desafio não faz sentido para você, pode solicitar o reembolso conforme a política da plataforma.",
             "align": "left",
             "text_color": "#4A4150",
             "typography_typography": "custom",
@@ -11899,7 +11897,7 @@
            "elType": "widget",
            "widgetType": "heading",
            "settings": {
-            "title": "<span style=\"color:#9E047C\">▾</span> Tenho mais de 40 anos ou estou na menopausa. Posso fazer?",
+            "title": "<span style=\"color:#9E047C\">▾</span> Já tentei de tudo e nada funcionou. Serve para mim?",
             "header_size": "h3",
             "align": "left",
             "title_color": "#252525",
@@ -11929,7 +11927,7 @@
            "elType": "widget",
            "widgetType": "text-editor",
            "settings": {
-            "editor": "Sim. Respeite os limites do seu corpo e, se tiver qualquer dúvida sobre a sua saúde, converse com o seu médico antes de começar.",
+            "editor": "O Desafio 7 em 7 trabalha corpo e mente juntos: aulas práticas para a barriga e a cintura e o áudio Mente Magra e Diva para reforçar o compromisso com a sua rotina.",
             "align": "left",
             "text_color": "#4A4150",
             "typography_typography": "custom",
@@ -12015,7 +12013,7 @@
            "elType": "widget",
            "widgetType": "heading",
            "settings": {
-            "title": "<span style=\"color:#9E047C\">▾</span> Tenho diástase. Posso fazer?",
+            "title": "<span style=\"color:#9E047C\">▾</span> Preciso de academia?",
             "header_size": "h3",
             "align": "left",
             "title_color": "#252525",
@@ -12045,7 +12043,7 @@
            "elType": "widget",
            "widgetType": "text-editor",
            "settings": {
-            "editor": "Sim! Você pode fazer o desafio mesmo tendo diástase. O material traz técnicas e exercícios que ajudam a fortalecer o abdômen e auxiliam na recuperação da diástase com segurança.",
+            "editor": "Não. As aulas são feitas em casa.",
             "align": "left",
             "text_color": "#4A4150",
             "typography_typography": "custom",
@@ -12131,7 +12129,7 @@
            "elType": "widget",
            "widgetType": "heading",
            "settings": {
-            "title": "<span style=\"color:#9E047C\">▾</span> Tive bebê há pouco tempo ou tenho hérnia. Posso fazer?",
+            "title": "<span style=\"color:#9E047C\">▾</span> Tenho mais de 40 anos ou estou na menopausa. Posso fazer?",
             "header_size": "h3",
             "align": "left",
             "title_color": "#252525",
@@ -12161,7 +12159,7 @@
            "elType": "widget",
            "widgetType": "text-editor",
            "settings": {
-            "editor": "Nesses casos, você precisa de liberação médica antes de começar o desafio.",
+            "editor": "Sim. Respeite os limites do seu corpo e, se tiver qualquer dúvida sobre a sua saúde, converse com o seu médico antes de começar.",
             "align": "left",
             "text_color": "#4A4150",
             "typography_typography": "custom",
@@ -12247,7 +12245,7 @@
            "elType": "widget",
            "widgetType": "heading",
            "settings": {
-            "title": "<span style=\"color:#9E047C\">▾</span> Quando eu recebo?",
+            "title": "<span style=\"color:#9E047C\">▾</span> Tenho diástase. Posso fazer?",
             "header_size": "h3",
             "align": "left",
             "title_color": "#252525",
@@ -12277,7 +12275,7 @@
            "elType": "widget",
            "widgetType": "text-editor",
            "settings": {
-            "editor": "Logo após a confirmação do pagamento, você recebe o acesso no seu e-mail.",
+            "editor": "Sim! Você pode fazer o desafio mesmo tendo diástase. O material traz técnicas e exercícios que ajudam a fortalecer o abdômen e auxiliam na recuperação da diástase com segurança.",
             "align": "left",
             "text_color": "#4A4150",
             "typography_typography": "custom",
@@ -12363,7 +12361,7 @@
            "elType": "widget",
            "widgetType": "heading",
            "settings": {
-            "title": "<span style=\"color:#9E047C\">▾</span> É mensalidade?",
+            "title": "<span style=\"color:#9E047C\">▾</span> Tive bebê há pouco tempo ou tenho hérnia. Posso fazer?",
             "header_size": "h3",
             "align": "left",
             "title_color": "#252525",
@@ -12393,7 +12391,7 @@
            "elType": "widget",
            "widgetType": "text-editor",
            "settings": {
-            "editor": "Não. É um pagamento único de R$ 67.",
+            "editor": "Nesses casos, você precisa de liberação médica antes de começar o desafio.",
             "align": "left",
             "text_color": "#4A4150",
             "typography_typography": "custom",
@@ -12479,7 +12477,7 @@
            "elType": "widget",
            "widgetType": "heading",
            "settings": {
-            "title": "<span style=\"color:#9E047C\">▾</span> E depois dos 7 dias?",
+            "title": "<span style=\"color:#9E047C\">▾</span> Quando eu recebo?",
             "header_size": "h3",
             "align": "left",
             "title_color": "#252525",
@@ -12509,7 +12507,7 @@
            "elType": "widget",
            "widgetType": "text-editor",
            "settings": {
-            "editor": "O desafio foi feito para fazer em 7 dias, mas liberamos o seu acesso por 30 dias.",
+            "editor": "Logo após a confirmação do pagamento, você recebe o acesso no seu e-mail.",
             "align": "left",
             "text_color": "#4A4150",
             "typography_typography": "custom",
@@ -12595,7 +12593,7 @@
            "elType": "widget",
            "widgetType": "heading",
            "settings": {
-            "title": "<span style=\"color:#9E047C\">▾</span> Como funciona a garantia?",
+            "title": "<span style=\"color:#9E047C\">▾</span> É mensalidade?",
             "header_size": "h3",
             "align": "left",
             "title_color": "#252525",
@@ -12622,6 +12620,238 @@
           },
           {
            "id": "1e56538",
+           "elType": "widget",
+           "widgetType": "text-editor",
+           "settings": {
+            "editor": "Não. É um pagamento único de R$ 67.",
+            "align": "left",
+            "text_color": "#4A4150",
+            "typography_typography": "custom",
+            "typography_font_family": "Raleway",
+            "typography_font_weight": "400",
+            "typography_font_size": {
+             "unit": "px",
+             "size": 15,
+             "sizes": []
+            },
+            "typography_line_height": {
+             "unit": "em",
+             "size": 1.55,
+             "sizes": []
+            },
+            "_margin": {
+             "unit": "px",
+             "top": "0",
+             "right": "0",
+             "bottom": "0",
+             "left": "0",
+             "isLinked": true
+            }
+           },
+           "elements": []
+          }
+         ]
+        },
+        {
+         "id": "7123050",
+         "elType": "container",
+         "isInner": true,
+         "settings": {
+          "content_width": "full",
+          "flex_direction": "column",
+          "background_background": "classic",
+          "background_color": "#FFFFFF",
+          "border_radius": {
+           "unit": "px",
+           "top": "20",
+           "right": "20",
+           "bottom": "20",
+           "left": "20",
+           "isLinked": true
+          },
+          "padding": {
+           "unit": "px",
+           "top": "18",
+           "right": "18",
+           "bottom": "18",
+           "left": "18",
+           "isLinked": true
+          },
+          "flex_gap": {
+           "column": "8",
+           "row": "8",
+           "isLinked": true,
+           "unit": "px",
+           "size": 8
+          },
+          "box_shadow_box_shadow_type": "yes",
+          "box_shadow_box_shadow": {
+           "horizontal": 0,
+           "vertical": 14,
+           "blur": 34,
+           "spread": 0,
+           "color": "rgba(94,8,92,0.14)"
+          },
+          "border_border": "solid",
+          "border_width": {
+           "unit": "px",
+           "top": "0",
+           "right": "0",
+           "bottom": "0",
+           "left": "5",
+           "isLinked": false
+          },
+          "border_color": "#9E047C"
+         },
+         "elements": [
+          {
+           "id": "b0eb7dc",
+           "elType": "widget",
+           "widgetType": "heading",
+           "settings": {
+            "title": "<span style=\"color:#9E047C\">▾</span> E depois dos 7 dias?",
+            "header_size": "h3",
+            "align": "left",
+            "title_color": "#252525",
+            "typography_typography": "custom",
+            "typography_font_family": "Sora",
+            "typography_font_weight": "700",
+            "typography_font_size": {
+             "unit": "px",
+             "size": 16.5,
+             "sizes": []
+            },
+            "typography_font_size_mobile": {
+             "unit": "px",
+             "size": 16.5,
+             "sizes": []
+            },
+            "typography_line_height": {
+             "unit": "em",
+             "size": 1.3,
+             "sizes": []
+            }
+           },
+           "elements": []
+          },
+          {
+           "id": "a1e8510",
+           "elType": "widget",
+           "widgetType": "text-editor",
+           "settings": {
+            "editor": "O desafio foi feito para fazer em 7 dias, mas liberamos o seu acesso por 30 dias.",
+            "align": "left",
+            "text_color": "#4A4150",
+            "typography_typography": "custom",
+            "typography_font_family": "Raleway",
+            "typography_font_weight": "400",
+            "typography_font_size": {
+             "unit": "px",
+             "size": 15,
+             "sizes": []
+            },
+            "typography_line_height": {
+             "unit": "em",
+             "size": 1.55,
+             "sizes": []
+            },
+            "_margin": {
+             "unit": "px",
+             "top": "0",
+             "right": "0",
+             "bottom": "0",
+             "left": "0",
+             "isLinked": true
+            }
+           },
+           "elements": []
+          }
+         ]
+        },
+        {
+         "id": "62dfc58",
+         "elType": "container",
+         "isInner": true,
+         "settings": {
+          "content_width": "full",
+          "flex_direction": "column",
+          "background_background": "classic",
+          "background_color": "#FFFFFF",
+          "border_radius": {
+           "unit": "px",
+           "top": "20",
+           "right": "20",
+           "bottom": "20",
+           "left": "20",
+           "isLinked": true
+          },
+          "padding": {
+           "unit": "px",
+           "top": "18",
+           "right": "18",
+           "bottom": "18",
+           "left": "18",
+           "isLinked": true
+          },
+          "flex_gap": {
+           "column": "8",
+           "row": "8",
+           "isLinked": true,
+           "unit": "px",
+           "size": 8
+          },
+          "box_shadow_box_shadow_type": "yes",
+          "box_shadow_box_shadow": {
+           "horizontal": 0,
+           "vertical": 14,
+           "blur": 34,
+           "spread": 0,
+           "color": "rgba(94,8,92,0.14)"
+          },
+          "border_border": "solid",
+          "border_width": {
+           "unit": "px",
+           "top": "0",
+           "right": "0",
+           "bottom": "0",
+           "left": "5",
+           "isLinked": false
+          },
+          "border_color": "#9E047C"
+         },
+         "elements": [
+          {
+           "id": "88b8020",
+           "elType": "widget",
+           "widgetType": "heading",
+           "settings": {
+            "title": "<span style=\"color:#9E047C\">▾</span> Como funciona a garantia?",
+            "header_size": "h3",
+            "align": "left",
+            "title_color": "#252525",
+            "typography_typography": "custom",
+            "typography_font_family": "Sora",
+            "typography_font_weight": "700",
+            "typography_font_size": {
+             "unit": "px",
+             "size": 16.5,
+             "sizes": []
+            },
+            "typography_font_size_mobile": {
+             "unit": "px",
+             "size": 16.5,
+             "sizes": []
+            },
+            "typography_line_height": {
+             "unit": "em",
+             "size": 1.3,
+             "sizes": []
+            }
+           },
+           "elements": []
+          },
+          {
+           "id": "6278be9",
            "elType": "widget",
            "widgetType": "text-editor",
            "settings": {
@@ -12661,7 +12891,7 @@
    ]
   },
   {
-   "id": "bb40858",
+   "id": "9a60c50",
    "elType": "container",
    "isInner": false,
    "settings": {
@@ -12682,7 +12912,7 @@
    },
    "elements": [
     {
-     "id": "375f916",
+     "id": "fda1d99",
      "elType": "container",
      "isInner": true,
      "settings": {
@@ -12711,7 +12941,7 @@
      },
      "elements": [
       {
-       "id": "6278be9",
+       "id": "ac374e9",
        "elType": "widget",
        "widgetType": "image",
        "settings": {
@@ -12738,7 +12968,7 @@
        "elements": []
       },
       {
-       "id": "62dfc58",
+       "id": "32e4757",
        "elType": "widget",
        "widgetType": "image",
        "settings": {
@@ -12766,7 +12996,7 @@
        "elements": []
       },
       {
-       "id": "e418015",
+       "id": "bb40858",
        "elType": "widget",
        "widgetType": "text-editor",
        "settings": {
@@ -12790,7 +13020,7 @@
        "elements": []
       },
       {
-       "id": "414f029",
+       "id": "2f7e0e0",
        "elType": "widget",
        "widgetType": "text-editor",
        "settings": {
@@ -12816,7 +13046,7 @@
      ]
     },
     {
-     "id": "32e4757",
+     "id": "c82db40",
      "elType": "container",
      "isInner": true,
      "settings": {
@@ -12835,7 +13065,7 @@
      },
      "elements": [
       {
-       "id": "ac374e9",
+       "id": "7e51eb3",
        "elType": "widget",
        "widgetType": "text-editor",
        "settings": {
@@ -12867,7 +13097,7 @@
        "elements": []
       },
       {
-       "id": "a708171",
+       "id": "eb00407",
        "elType": "widget",
        "widgetType": "html",
        "settings": {
