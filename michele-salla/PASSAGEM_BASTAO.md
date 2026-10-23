@@ -48,7 +48,7 @@ Anúncio (UTM: utm_source=FB, utm_medium={{placement}}, utm_campaign={{campaign.
   → Página michelesalla.com.br/desafio7em7-a
       · PixelYourSite: PageView (navegador + API de conversões)
       · widget do rodapé: CliqueComprar (1x por visita, 67 BRL) — michele-salla/desafio-7em7/rastreio/initiate-checkout.js
-      · [FALTA INSTALAR] rastreio.js do painel: tempo por bloco, rolagem, cliques, tempo até comprar → pl_comportamento
+      · rastreio.js do painel (instalado 23/10, data-checkout="sim"): tempo por bloco, rolagem, cliques, tempo até comprar → pl_comportamento
   → Checkout Greenn (payfast.greenn.com.br)
       · pixel da Greenn: ViewContent, AddToCart, InitiateCheckout, AddPaymentInfo, **Purchase** (navegador + API de conversões)
       · webhook da Greenn → painel (/api/webhook/greenn) → pl_eventos → pl_compras
@@ -163,7 +163,9 @@ Os M da pasta "MICHELE LOW" são esses mesmos vídeos. Mapa conferido pelos quad
      nenhuma compartilhada); página ainda SEM rastreio.js (conferir: 8 OK, falta 1); webhook sem evento novo.
    - **18:27 de 23/10: META_ACCESS_TOKEN na Vercel + redeploy → pl_fontes "meta" OK** (conta 1619523595475963 lida;
      0 linhas porque a campanha está pausada). Item 4 FEITO.
-   - Ainda falta: gravar a página 10264 (modified segue 11:28) e um aviso novo da Greenn no webhook.
+   - **18:35 de 23/10: página 10264 regravada pelo Patrik (versão F com rastreio.js COM data-checkout).
+     `conferir` = 9 OK; 1 visita de teste (utm_source=teste-claude, logada como admin) chegou em pl_comportamento.** Item 3 FEITO.
+   - Ainda falta: um aviso novo da Greenn no webhook (teste pelo ícone de raio do evento de venda paga).
    - Michele cria o app "Painel de Lucro Michele" no portfólio.
    - O app entra no usuário do sistema "Paineldelucro" e gera um token ads_read sem validade.
    - O token vai para META_ACCESS_TOKEN na Vercel; também META_AD_ACCOUNT_ID=1619523595475963. Depois, redeploy.
