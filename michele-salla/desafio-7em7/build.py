@@ -1,6 +1,6 @@
 """Gera pagina-A, B, C e D a partir de _modelo.html.
 A e C: promessa "Perca até 7cm"; B e D: promessa "Chega de se sentir mal".
-A e B usam antes e depois real de aluna; C e D usam avatar (imagem ilustrativa).
+A e B usam antes e depois real de aluna; C e D usam avatar.
 Uso: python3 build.py
 """
 from pathlib import Path
@@ -49,8 +49,7 @@ def oferta(n: str) -> str:
 HERO_REAL = ('<img class="hero-img" src="assets/img/hero-antes-depois.webp" '
              'alt="Antes e depois de aluna do Desafio 7 em 7, com fita métrica na cintura" width="1080" height="1200">')
 HERO_AVATAR = ('<figure class="hero-img hero-fig"><img src="assets/img/hero-antes-depois-avatar.webp" '
-               'alt="Ilustração de antes e depois com fita métrica na cintura" width="1080" height="1200">'
-               '<span class="ilustrativa">Imagem ilustrativa</span></figure>')
+               'alt="Antes e depois com fita métrica na cintura" width="1080" height="1200"></figure>')
 
 # A e B: antes e depois real de aluna · C e D: mesmas promessas com avatar
 VERSOES = {"A": ("A", HERO_REAL), "B": ("B", HERO_REAL), "C": ("A", HERO_AVATAR), "D": ("B", HERO_AVATAR)}

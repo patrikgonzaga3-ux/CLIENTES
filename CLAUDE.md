@@ -7,7 +7,7 @@ Página de vendas do Desafio 7 em 7 (cliente Michele Salla, site `michelesalla.c
 
 - **Pasta:** `michele-salla/desafio-7em7/`
 - **Prévia (Vercel, só revisão, sem indexar):** https://clientes-phi-six.vercel.app
-- **Versões:** A e B usam foto real de aluna; C e D usam avatar (com "Imagem ilustrativa").
+- **Versões:** A e B usam foto real de aluna; C e D usam avatar (sem o texto "Imagem ilustrativa", a pedido do Patrik).
   A e C prometem "Perca até 7cm de barriga em 7 dias…"; B e D, "Chega de se sentir mal diante do espelho".
 - **HTML da prévia:** edite `_modelo.html` ou `styles.css` e rode `python3 build.py` (gera A–D).
 - **Elementor:** `elementor/gerar_elementor.py` gera `desafio-7em7-A.json` … `D.json` (um container por bloco).

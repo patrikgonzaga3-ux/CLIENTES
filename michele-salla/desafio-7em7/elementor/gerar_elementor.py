@@ -248,9 +248,6 @@ def b03(promessa, avatar):
     hero = [imagem("hero-antes-depois-avatar.webp" if avatar else "hero-antes-depois.webp",
                    "Antes e depois com fita métrica na cintura", _margin=caixa(10, -16, 0, -16),
                    width_mobile=px(100, "%"))]
-    if avatar:
-        hero.insert(0, texto("Imagem ilustrativa", tam=11, cor="rgba(255,255,255,0.75)", alinhar="right",
-                             _margin=caixa(10, 0, -24, 0)))
     filhos = [
         imagem("logo-desafio-7em7-branca.png", "Desafio 7 em 7", largura=62, width_mobile=px(62, "%")),
         etiqueta("Barriga que não cabe mais na calça?"),
