@@ -491,9 +491,6 @@ def b11(v="A"):
                      background_background="classic", background_color=BRANCO, border_border="solid",
                      border_width=caixa(2), border_color=ROXO, border_radius=caixa(22), padding=caixa(18))
     filhos = [titulo(f'O {destaque("Desafio 7 em 7", ROXO)} é pra você que', "h2", 31, 27),
-              imagem("mulher-espelho-quebrado.webp", "Mulher se olhando no espelho", raio=28,
-                     image_border_border="solid", image_border_width=caixa(5), image_border_color=BRANCO,
-                     **sombra("image_box_shadow", 22, 50, SOMBRA_FORTE)),
               grade_cartoes, preta, dois,
               texto("Toque no botão abaixo e receba agora o seu acesso ao desafio de 7 dias", tam=15.5, cor=PRETO, peso=600),
               seta("b12")]
