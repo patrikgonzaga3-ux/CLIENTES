@@ -161,6 +161,9 @@ Os M da pasta "MICHELE LOW" são esses mesmos vídeos. Mapa conferido pelos quad
      CRON_SECRET, mas **ainda não existe META_ACCESS_TOKEN** (pl_fontes "meta": falta META_ACCESS_TOKEN).
    - Conferido de novo às 18:10 de 23/10: Vault já tem `cron_secret`; Vercel segue SEM META_ACCESS_TOKEN (6 variáveis,
      nenhuma compartilhada); página ainda SEM rastreio.js (conferir: 8 OK, falta 1); webhook sem evento novo.
+   - **18:27 de 23/10: META_ACCESS_TOKEN na Vercel + redeploy → pl_fontes "meta" OK** (conta 1619523595475963 lida;
+     0 linhas porque a campanha está pausada). Item 4 FEITO.
+   - Ainda falta: gravar a página 10264 (modified segue 11:28) e um aviso novo da Greenn no webhook.
    - Michele cria o app "Painel de Lucro Michele" no portfólio.
    - O app entra no usuário do sistema "Paineldelucro" e gera um token ads_read sem validade.
    - O token vai para META_ACCESS_TOKEN na Vercel; também META_AD_ACCOUNT_ID=1619523595475963. Depois, redeploy.
