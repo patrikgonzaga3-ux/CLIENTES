@@ -32,7 +32,9 @@ Nada de senha, token ou dado de cliente aqui.
 | **Evento de conversão das campanhas** | **Compra (PURCHASE)** nesse pixel. Vem da Greenn (navegador + API de conversões) |
 | Página do Facebook | "Michele Salla PAB" · **262689970269678** (final 9678) |
 | Instagram | **@michelesalla** · **17841465706978287** (ligado à conta de anúncio em 23/10) |
-| Usuário do sistema (token do painel) | "Paineldelucro" · 61595833678500 · só "Ver desempenho" na conta |
+| Usuário do sistema (token do painel) | "Paineldelucro" · 61595833678500 · só "Ver desempenho" na conta · fica na BM **"MM Seca Barriga Mãe" (1343252016358384)** |
+| App do token | **PAINEL DE LUCRO MICHELE** · 1662092225703327 · BM "MM Seca Barriga Mãe" (criado pela Michele em 23/10) |
+| Outra BM da Michele | "BM 01 Matriz - Michele Seca Barriga" · 658778173061454 (sem apps) |
 | Painel de Lucro | https://painel.michelesalla.com.br/painel · código em `michele-salla/painel/` |
 | Banco do painel | Supabase "patrikgonzaga3-ux's Project" · ref **jratrlmlvguxtwevgzfc** (conector Supabase_Clientes) |
 | Hospedagem do painel | Vercel, time **"Ptk midias"** (o conector Vercel desta sessão ainda NÃO vê esse time) |
@@ -151,7 +153,10 @@ Os M da pasta "MICHELE LOW" são esses mesmos vídeos. Mapa conferido pelos quad
    - **Falta só gravar na página 10264:** `python tools/wp_michele.py atualizar-pagina --id 10264 --versao F`
      (a gravação pelo PC foi barrada pela permissão automática do Claude Code). Depois: `conferir` tem que dar 9 OK.
    - A última gravação manual da página (23/10 11:28) veio deste gerador; regravar a F não perde nada.
-4. **Token do Meta no painel:**
+4. **Token do Meta no painel:** (23/10: app JÁ CRIADO — PAINEL DE LUCRO MICHELE 1662092225703327, na BM 1343252016358384.
+   Falta: Configurações > Apps > o app > Atribuir pessoas > marcar "Paineldelucro (System user)" > Controle total >
+   Atribuir; depois Usuários do sistema > Paineldelucro > Gerar token (app PAINEL DE LUCRO MICHELE, ads_read, Nunca expira).
+   O Claude do PC foi barrado na atribuição pela permissão automática.)
    - Michele cria o app "Painel de Lucro Michele" no portfólio.
    - O app entra no usuário do sistema "Paineldelucro" e gera um token ads_read sem validade.
    - O token vai para META_ACCESS_TOKEN na Vercel; também META_AD_ACCOUNT_ID=1619523595475963. Depois, redeploy.
