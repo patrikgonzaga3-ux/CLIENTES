@@ -159,6 +159,8 @@ Os M da pasta "MICHELE LOW" são esses mesmos vídeos. Mapa conferido pelos quad
    O Claude do PC foi barrado na atribuição pela permissão automática.)
    - 23/10 noite: Patrik ligou o app ao Paineldelucro (Controle total). Na Vercel já existem META_AD_ACCOUNT_ID e
      CRON_SECRET, mas **ainda não existe META_ACCESS_TOKEN** (pl_fontes "meta": falta META_ACCESS_TOKEN).
+   - Conferido de novo às 18:10 de 23/10: Vault já tem `cron_secret`; Vercel segue SEM META_ACCESS_TOKEN (6 variáveis,
+     nenhuma compartilhada); página ainda SEM rastreio.js (conferir: 8 OK, falta 1); webhook sem evento novo.
    - Michele cria o app "Painel de Lucro Michele" no portfólio.
    - O app entra no usuário do sistema "Paineldelucro" e gera um token ads_read sem validade.
    - O token vai para META_ACCESS_TOKEN na Vercel; também META_AD_ACCOUNT_ID=1619523595475963. Depois, redeploy.
