@@ -36,6 +36,7 @@ import argparse
 import base64
 import json
 import mimetypes
+import os
 import sys
 import urllib.error
 import urllib.request
@@ -51,10 +52,13 @@ UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like 
 
 
 def ler_env():
-    env = {}
+    # 1º as variáveis do ambiente (sessão do Claude na nuvem); se faltar alguma, o arquivo .env (PC do Patrik)
+    env = {k: os.environ[k].strip() for k in ("WP_URL", "WP_USUARIO", "WP_SENHA_APP") if os.environ.get(k, "").strip()}
+    if len(env) == 3:
+        return env
     arq = RAIZ / ".env"
     if not arq.exists():
-        sys.exit("Falta o arquivo .env na pasta CLIENTES. Copie o .env.exemplo para .env e cole a senha de aplicação.")
+        sys.exit("Falta o acesso: crie as variáveis WP_URL, WP_USUARIO e WP_SENHA_APP no ambiente, ou o arquivo .env na pasta CLIENTES.")
     for linha in arq.read_text(encoding="utf-8").splitlines():
         linha = linha.strip()
         if linha and not linha.startswith("#") and "=" in linha:
@@ -262,6 +266,7 @@ def cmd_conferir(a):
         ("Rastreio do botão (CliqueComprar) no rodapé", "CliqueComprar" in html, ""),
         ("Página não manda InitiateCheckout (o oficial é o da Greenn)", "'InitiateCheckout'" not in html, ""),
         ("Pixel 991344998762063 no site", "991344998762063" in html, ""),
+        ("Rastreio do painel (tempo de bloco e cliques)", "painel.michelesalla.com.br/rastreio.js" in html, ""),
     ]
     print("Página:", url)
     for nome, ok, extra in checks:

@@ -62,4 +62,4 @@ O domínio da Michele está na TurboCloud. A página do Desafio fica dentro do s
 - Nada é criado ou ligado na conta de anúncio sem o OK do Patrik para a estrutura mostrada (nomes, verba, público, criativos).
 
 ## Passagem de bastão
-Para retomar o trabalho da Michele (campanha, painel, pendências), leia `michele-salla/PASSAGEM_BASTAO.md` primeiro.
+**Antes de qualquer resposta sobre a Michele, leia `michele-salla/PASSAGEM_BASTAO.md` (o cérebro do projeto):** contas e IDs, pixel 991344998762063 com evento de conversão **Compra**, receita de campanha, o que o painel mostra e pendências. Ao fim de cada conversa, atualize as seções 7 (pendências) e 8 (diário) e faça commit/push.

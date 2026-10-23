@@ -1,86 +1,187 @@
-# Passagem de bastão · Michele Salla (Desafio 7 em 7)
+# Michele Salla · cérebro do projeto (Desafio 7 em 7)
 
-Atualizado em 23/10/2026. Leia junto com o `CLAUDE.md` da raiz (regras, padrão de campanha) e o
-`michele-salla/painel/CLAUDE.md`. Nada de senha, token ou dado de cliente neste arquivo.
+**Leia isto inteiro antes de responder qualquer coisa sobre a Michele.** Junto com o `CLAUDE.md` da raiz
+(regras e padrão de campanha) e o `michele-salla/painel/CLAUDE.md`.
 
-## 1. O que está no ar
-- **Página de vendas:** https://michelesalla.com.br/desafio7em7-a/ (página 10264, versão F, publicada).
-  - Promessa "Descubra como perder até 7 cm…".
-  - Oferta R$ 67 ou 12x de R$ 6,89; link Greenn `https://payfast.greenn.com.br/199167/offer/1qsr9k`.
-  - Conferir com `python3 tools/wp_michele.py conferir` (8 itens, sem senha).
-- **Pixel 991344998762063:** PageView pelo PixelYourSite e CliqueComprar pelo widget do rodapé.
-  - Da Greenn chegam ViewContent, AddToCart, InitiateCheckout e AddPaymentInfo, com nota 8 a 8,7.
-  - **Purchase ainda não apareceu**, porque não teve venda real. Conferir na 1ª venda.
-  - Um produto da Hotmart da Michele também manda eventos para esse pixel.
-- **Painel de Lucro:** https://painel.michelesalla.com.br/painel
-  - Código em `michele-salla/painel/`. Vercel no time "Ptk midias" (o conector Vercel daqui não enxerga esse time).
-  - Supabase "patrikgonzaga3-ux's Project", ref `jratrlmlvguxtwevgzfc`.
-  - Login por e-mail e senha. Admin: patrikgonzaga2@gmail.com, já entrou. 1 convidada já criou acesso.
-  - Webhook da Greenn OK. A venda de teste (transação "100") está marcada como teste.
-  - Custos em `pl_gastos_painel` (10 linhas, editáveis na aba Ajustes).
+**Mantenha atualizado:**
+- ao fim de cada conversa, ou quando algo mudar, edite este arquivo e dê commit/push;
+- seção 7 (pendências) e seção 8 (diário).
 
-## 2. Campanha no Meta (tudo PAUSADO, nada ligado)
-Conta `[CA] Michele Salla Seca Barriga Mãe`, act_1619523595475963.
-- **Página:** "Michele Salla PAB", 262689970269678 (final 9678).
-- **Instagram:** @michelesalla, 17841465706978287. Já ligado à conta de anúncio pelo Claude do PC em 23/10.
-- **Campanha:** `PTK - 26/10 - ABO TESTE DE CRIATIVO`, id 120252298837110047.
-  - Vendas, ABO, sem orçamento na campanha.
-- **5 conjuntos:** R$ 30,15/dia cada (45% de R$ 67). Início 26/10 às 00:03 (horário de Brasília).
+Nada de senha, token ou dado de cliente aqui.
 
-  | Conjunto | ID |
-  |---|---|
-  | `CONJ - ADV+ - M 1` | 120252298841550047 |
-  | `CONJ - ADV+ - M 2` | 120252298848880047 |
-  | `CONJ - ADV+ - M 3` | 120252298849850047 |
-  | `CONJ - ADV+ - M 4` | 120252298850690047 |
-  | `CONJ - ADV+ - M 5` | 120252298852060047 |
+Última atualização: 23/10/2026.
 
-  Configuração igual nos 5:
-  - Público: Brasil, Advantage+, sugestão de mulheres 30–55 (o Meta grava idade mínima fixa 25).
-  - Otimização: compra (PURCHASE) no pixel 991344998762063.
-  - Atribuição: 7 dias clique / 1 dia visualização.
-- **Faltam os 5 anúncios.** Um por conjunto, com o nome igual ao do vídeo: M 1 … M 5.
-  - Vídeos: pasta "MICHELE LOW" da biblioteca do portfólio (M - (1).mp4 … M - (5).mp4, 1080x1920).
-    A ferramenta do Meta daqui só vê vídeos que já estão **na conta de anúncio**.
-    O Claude do PC está baixando os 5 e subindo na conta com os nomes M 1 … M 5. Ele devolve os IDs.
-  - Em cada anúncio:
-    - vídeo + miniatura;
-    - **sem texto** (sem texto principal e sem título), botão LEARN_MORE ("Saiba mais");
-    - link `https://michelesalla.com.br/desafio7em7-a/`;
-    - Instagram 17841465706978287;
-    - parâmetros `utm_source=FB&utm_medium={{placement}}&utm_campaign={{campaign.name}}&utm_content={{ad.name}}&utm_term={{adset.id}}`.
-  - Criar pausado. Mostrar a estrutura inteira ao Patrik e **só ativar com o OK dele**.
+---
 
-## 3. Pendências (em ordem)
-1. **Anúncios M 1–M 5:** esperar os IDs dos vídeos (Claude do PC), criar, mostrar, ativar só com OK.
-2. **Rastreio do painel na página (tempo de bloco, cliques, tempo até comprar):** ainda NÃO está na página.
-   - Testado de ponta a ponta em 23/10: a visita chegou em `pl_comportamento` com blocos, rolagem e clique.
-     O teste foi apagado. A página tem 16 blocos na ordem do `cliente.config.ts`.
-   - Linha proposta, num widget HTML no rodapé da página 10264:
+## 1. Quem é quem
+- **Patrik:** dono da agência; decide tudo. Desde 23/10 o Claude da nuvem cuida de tudo sozinho.
+  - O "Claude do PC" (Windows) faz só a última rodada de pendências (seção 7) e depois **não mexe mais**.
+- **Cliente:** Michele Salla (CNPJ 32.983.139/0001-99, Veranópolis/RS).
+  - Produto: **Desafio 7 em 7**, R$ 67 ou 12x de R$ 6,89.
+- **Repositório:** `patrikgonzaga3-ux/CLIENTES`, branch main. Commit com
+  `git -c user.name=Claude -c user.email=noreply@anthropic.com commit`, depois `git push origin main`.
+
+## 2. Mapa de contas e IDs
+| O quê | Valor |
+|---|---|
+| Página de vendas (no ar) | https://michelesalla.com.br/desafio7em7-a/ · WordPress página 10264 · Elementor, versão F |
+| Checkout (Greenn) | produto **199167**, oferta **1qsr9k** · `https://payfast.greenn.com.br/199167/offer/1qsr9k` |
+| Portfólio do Meta (Business) | "MM Seca Barriga Mãe" · business_id **658778173061454** |
+| Conta de anúncio | `[CA] Michele Salla Seca Barriga Mãe` · **act_1619523595475963** |
+| **Pixel / conjunto de dados** | **991344998762063** "Pixel - Michele Salla" (único da conta; cookie primário ligado) |
+| **Evento de conversão das campanhas** | **Compra (PURCHASE)** nesse pixel. Vem da Greenn (navegador + API de conversões) |
+| Página do Facebook | "Michele Salla PAB" · **262689970269678** (final 9678) |
+| Instagram | **@michelesalla** · **17841465706978287** (ligado à conta de anúncio em 23/10) |
+| Usuário do sistema (token do painel) | "Paineldelucro" · 61595833678500 · só "Ver desempenho" na conta |
+| Painel de Lucro | https://painel.michelesalla.com.br/painel · código em `michele-salla/painel/` |
+| Banco do painel | Supabase "patrikgonzaga3-ux's Project" · ref **jratrlmlvguxtwevgzfc** (conector Supabase_Clientes) |
+| Hospedagem do painel | Vercel, time **"Ptk midias"** (o conector Vercel desta sessão ainda NÃO vê esse time) |
+| Domínio | TurboCloud (cPanel pelo botão "Logar no cPanel"). DNS só com o Patrik |
+| Webhook da Greenn | `https://painel.michelesalla.com.br/api/webhook/greenn?token=<WEBHOOK_TOKEN da Vercel>` |
+
+## 3. Como o rastreio funciona (fluxo)
+```
+Anúncio (UTM: utm_source=FB, utm_medium={{placement}}, utm_campaign={{campaign.name}},
+         utm_content={{ad.name}}, utm_term={{adset.id}})
+  → Página michelesalla.com.br/desafio7em7-a
+      · PixelYourSite: PageView (navegador + API de conversões)
+      · widget do rodapé: CliqueComprar (1x por visita, 67 BRL) — michele-salla/desafio-7em7/rastreio/initiate-checkout.js
+      · [FALTA INSTALAR] rastreio.js do painel: tempo por bloco, rolagem, cliques, tempo até comprar → pl_comportamento
+  → Checkout Greenn (payfast.greenn.com.br)
+      · pixel da Greenn: ViewContent, AddToCart, InitiateCheckout, AddPaymentInfo, **Purchase** (navegador + API de conversões)
+      · webhook da Greenn → painel (/api/webhook/greenn) → pl_eventos → pl_compras
+```
+- A página **não** manda InitiateCheckout (decisão do Patrik em 23/10: o oficial é o da Greenn).
+- **GTM não resolve a compra:** a compra acontece no domínio da Greenn, então quem manda o Purchase é a Greenn.
+  GTM só mudaria como a página manda PageView/CliqueComprar, que já funcionam.
+- Um produto da **Hotmart** da Michele também manda eventos para esse pixel (pay.hotmart.com).
+
+## 4. O que o painel mostra e de onde vem
+| Aba / dado | Fonte | Situação em 23/10 |
+|---|---|---|
+| Lucro, meta do mês, dia a dia, por gateway, por produto, mês a mês | webhook Greenn (`pl_compras`) − custos (`pl_gastos_painel`) − gasto Meta | vendas OK; gasto Meta **vazio** (sem token) |
+| Anúncios · funil 3x | Meta (`pl_meta_conjuntos`, `pl_meta_anuncios`): gasto, cliques, IC, compras | **vazio até ter META_ACCESS_TOKEN** |
+| Página (tempo de bloco, rolagem, cliques, tempo até comprar) | `rastreio.js` → `pl_comportamento` | **vazio: linha não instalada na página** |
+| Recuperar vendas | PIX/boleto gerado, recusada e abandono do webhook (`pl_abandonos`) | depende do webhook mandar esses eventos |
+| Ajustes | `pl_ajustes` + `pl_gastos_painel` (tudo editável) | 10 custos lançados |
+| Acessos | `pl_usuarios`, `pl_convites` | admin + 1 convidada OK |
+| Fontes | `pl_fontes` | mostra a última leitura de cada fonte |
+
+- **Funil 3x** (ticket R$ 67): custo por clique ≤ 4% (R$ 2,68), por checkout ≤ 23% (R$ 15,41), por compra ≤ 45% (R$ 30,15).
+- **Atualização:**
+  - robô Supabase `painel-robos-hora` (pg_cron, minuto 7 de cada hora), criado em 23/10.
+    Lê a senha `cron_secret` do Vault. **Sem a senha ele recebe 401.**
+  - reserva: cron da Vercel 1x/dia às 09:00 UTC, mais o botão "Atualizar".
+- **Status da Greenn que o painel entende:**
+  - aprovada (paid);
+  - aguardando (waiting_payment, pix_created, billet…);
+  - recusada (refused);
+  - reembolsada (refunded);
+  - chargeback;
+  - abandono (lead/checkout abandonado).
+- **Compra de teste:** cadastrar o e-mail em `pl_emails_teste` antes, para não contar como venda.
+
+## 5. Receita: subir uma campanha (padrão do Patrik)
+Ferramentas Meta Ads (MCP), conta 1619523595475963.
+
+**Campanha:**
+- `ads_create_campaign`: objetivo OUTCOME_SALES; ABO (sem orçamento na campanha); nome `PTK - <dd/mm do início> - <NOME>`.
+
+**Conjunto, um por criativo** (`ads_create_ad_set`):
+- billing_event IMPRESSIONS; optimization_goal OFFSITE_CONVERSIONS; destination_type WEBSITE;
+- promoted_object `{"pixel_id":"991344998762063","custom_event_type":"PURCHASE"}`;
+- daily_budget = 45% da oferta em centavos (R$ 67 → 3015); bid_strategy LOWEST_COST_WITHOUT_CAP;
+- start_time com -03:00;
+- targeting `{"geo_locations":{"countries":["BR"]},"age_min":30,"age_max":55,"genders":[2]}`
+  (o Meta grava Advantage+ com idade 30–55 como sugestão);
+- nome `CONJ - ADV+ - <criativo>`.
+
+**Criativo** (`ads_create_creative`):
+- page_id 262689970269678; instagram_user_id 17841465706978287; video_id + miniatura (image_url = `picture` do vídeo);
+- **sem message e sem headline**; call_to_action LEARN_MORE;
+- link_url `https://michelesalla.com.br/desafio7em7-a/?utm_source=FB&utm_medium={{placement}}&utm_campaign={{campaign.name}}&utm_content={{ad.name}}&utm_term={{adset.id}}`.
+
+**Anúncio** (`ads_create_ad`): nome = nome do criativo.
+
+**Ligar:**
+- tudo criado PAUSADO;
+- mostrar a estrutura inteira ao Patrik (nomes, verba, público, criativos);
+- só ativar com o OK dele.
+
+Os vídeos precisam estar **na conta de anúncio** (`ads_get_ad_videos`). A biblioteca do portfólio
+("Business creatives") não aparece para a ferramenta. Para subir por URL, o link precisa ser público e direto.
+
+## 6. Campanha atual
+`PTK - 26/10 - ABO TESTE DE CRIATIVO` (120252298837110047), tudo **PAUSADO**. Início 26/10 às 00:03.
+
+| Conjunto | ID | Anúncio | Vídeo |
+|---|---|---|---|
+| CONJ - ADV+ - M 1 | 120252298841550047 | M 1 (falta) | M - (1).mp4 (falta subir na conta) |
+| CONJ - ADV+ - M 2 | 120252298848880047 | M 2 (falta) | M - (2).mp4 |
+| CONJ - ADV+ - M 3 | 120252298849850047 | M 3 (falta) | M - (3).mp4 |
+| CONJ - ADV+ - M 4 | 120252298850690047 | M 4 (falta) | M - (4).mp4 |
+| CONJ - ADV+ - M 5 | 120252298852060047 | M 5 (falta) | M - (5).mp4 |
+
+Os vídeos estão na pasta "MICHELE LOW" da biblioteca do portfólio, 1080x1920.
+
+## 7. Pendências (na ordem)
+1. **Compra não chegou nem no Meta nem no painel.**
+   - A compra de teste de 23/10 chegou até o AddPaymentInfo (~11h); depois disso não veio nada:
+     nem Purchase no pixel, nem aviso no webhook (nem "aguardando").
+   - Os dois mudos ao mesmo tempo indicam: compra não aprovada, OU webhook/pixel da Greenn sem o produto 199167
+     ou sem os eventos certos.
+   - Até 23/10 o webhook só recebeu o teste de exemplo da Greenn (transação "100", R$ 397, oferta "FiBR18"),
+     marcado como teste.
+   - **Para fechar:** uma compra aprovada (PIX pago) com e-mail em `pl_emails_teste`, e conferir as duas pontas.
+2. **Vídeos M 1–M 5 na conta + criar os 5 anúncios** (receita da seção 5).
+3. **Instalar o rastreio do painel na página** (widget HTML no rodapé da página 10264):
+   - com OK do Patrik para mudar o link do checkout:
      `<script async src="https://painel.michelesalla.com.br/rastreio.js" data-slug="desafio7em7-a" data-checkout="sim"></script>`
+   - sem mexer no checkout: a mesma linha sem `data-checkout="sim"`.
    - `data-checkout="sim"` acrescenta ao link da Greenn, no clique: utm_term, src, utm_content, utm_campaign,
-     utm_medium, fbclid e sck=desafio7em7-a. Isso muda o link de checkout, então **precisa do OK explícito do Patrik**.
-   - Pedido feito em 23/10, ainda sem resposta. A alternativa é colocar a linha sem `data-checkout`.
-3. **Token do Meta no painel** (gasto, cliques, IC, compras por anúncio e funil 3x):
-   - A Michele cria o app "Painel de Lucro Michele" no portfólio MM Seca Barriga Mãe.
-   - Depois o Claude do PC: adiciona o app ao usuário do sistema "Paineldelucro" (61595833678500),
-     gera um token ads_read sem validade, o Patrik cola em META_ACCESS_TOKEN na Vercel e faz redeploy.
-   - Conferir também META_AD_ACCOUNT_ID = 1619523595475963.
-   - Metas do funil 3x (ticket R$ 67): clique ≤ R$ 2,68 (4%), checkout ≤ R$ 15,41 (23%), compra ≤ R$ 30,15 (45%).
-4. **Atualização de hora em hora:** hoje é só o cron da Vercel, 1x/dia às 09:00 UTC, mais o botão "Atualizar".
-   - pg_cron e pg_net não estão ligados no Supabase.
-   - Precisa de CRON_SECRET: o Patrik gera e cola na Vercel e no Vault do Supabase (nunca no chat).
-5. **Confirmar com o Patrik:** a oferta 1qsr9k saiu de "Em análise" na Greenn? A Michele cadastrou a conta bancária?
-6. **Depois:** webhook da Hotmart, importar vendas antigas, aba Fontes mostrar que os gastos vêm de Ajustes,
-   verificação do domínio michelesalla.com.br no Meta.
+     utm_medium, fbclid e sck=desafio7em7-a. Isso deixa ver qual anúncio vendeu e melhora o casamento da compra
+     no Meta (fbc da Greenn em só 17%).
+   - Testado de ponta a ponta em 23/10 (a visita chegou em `pl_comportamento`). A página tem 16 blocos na ordem do config.
+   - Depois de instalar: `python3 tools/wp_michele.py conferir` tem que dar tudo OK (9 itens).
+4. **Token do Meta no painel:**
+   - Michele cria o app "Painel de Lucro Michele" no portfólio.
+   - O app entra no usuário do sistema "Paineldelucro" e gera um token ads_read sem validade.
+   - O token vai para META_ACCESS_TOKEN na Vercel; também META_AD_ACCOUNT_ID=1619523595475963. Depois, redeploy.
+5. **Senha do robô:** CRON_SECRET na Vercel e o mesmo valor no Vault do Supabase
+   (`select vault.create_secret('<senha>','cron_secret');` no SQL Editor).
+6. **Acesso do Claude da nuvem a tudo** (para não depender mais do PC):
+   - variáveis do ambiente `WP_URL`, `WP_USUARIO`, `WP_SENHA_APP` (o `tools/wp_michele.py` já lê do ambiente);
+   - conector Vercel com o time "Ptk midias";
+   - (opcional) token da Greenn da Michele.
+7. Confirmar na Greenn: oferta 1qsr9k aprovada (não "Em análise") e conta bancária da Michele cadastrada.
+8. Depois:
+   - webhook da Hotmart;
+   - importar vendas antigas;
+   - aba Fontes mostrar que os custos vêm de Ajustes;
+   - verificação do domínio michelesalla.com.br no Meta.
 
-## 4. Como trabalhar
-- Repositório `patrikgonzaga3-ux/CLIENTES`, branch main.
-  Commit com `git -c user.name=Claude -c user.email=noreply@anthropic.com commit`, depois `git push origin main`.
-- WordPress: skill `wordpress-michele` + `tools/wp_michele.py` (senha no `.env` do PC, nunca no chat).
-- Banco: conector Supabase_Clientes (projeto jratrlmlvguxtwevgzfc).
-  O `delete` às vezes estoura o tempo; use `with d as (delete … returning 1) select count(*) from d`.
-- Teste de navegador: o site da Michele derruba a conexão do Chromium daqui.
-  Sirva uma cópia salva da página com `ctx.route` e use `executablePath: '/opt/pw-browsers/chromium'`.
-- O Patrik usa um "Claude do PC" (Windows, com Chrome). Para tarefas de tela, mande um prompt pronto para ele colar.
-- Sempre em português, frases curtas. Nunca pedir senha ou token no chat.
+## 8. Diário
+- **23/10:**
+  - página F publicada e conferida;
+  - pixel e Greenn mandando eventos (exceto Purchase, nunca visto);
+  - painel no ar com login e convites;
+  - Instagram ligado à conta;
+  - campanha e 5 conjuntos criados pausados;
+  - robô pg_cron criado (espera a senha);
+  - rastreio do painel testado, mas não instalado.
+  - **Erros do Claude, assumidos com o Patrik:**
+    - deu o rastreio por "OK" sem uma compra aprovada de ponta a ponta;
+    - tratou o teste de exemplo do webhook da Greenn como prova de que o webhook estava certo;
+    - deixou o rastreio da página, o token do Meta e o robô como "pendências" sem dizer que o painel estava incompleto;
+    - não garantiu acesso próprio à Greenn, à WordPress e à Vercel da Michele.
+
+## 9. Como trabalhar
+- Sempre em português, frases curtas. Nunca pedir senha ou token no chat; dizer onde colar.
+- Checkout, preço, oferta, link de compra e configuração da Greenn: só com OK explícito do Patrik para a mudança mostrada.
+- Conferência rápida do estado:
+  - página: `python3 tools/wp_michele.py conferir`;
+  - pixel: `ads_get_dataset_stats` (991344998762063);
+  - banco: `pl_eventos`, `pl_compras`, `pl_comportamento`, `pl_fontes`, `cron.job`.
+- O `delete` no Supabase às vezes estoura o tempo. Use `with d as (delete … returning 1) select count(*) from d`.
+- Teste de navegador: o site da Michele derruba o Chromium daqui. Sirva a página salva com `ctx.route`
+  e use `executablePath: '/opt/pw-browsers/chromium'`.
