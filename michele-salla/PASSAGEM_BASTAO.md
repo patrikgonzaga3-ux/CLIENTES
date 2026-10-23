@@ -113,16 +113,28 @@ Os vídeos precisam estar **na conta de anúncio** (`ads_get_ad_videos`). A bibl
 
 ## 6. Campanha atual
 `PTK - 26/10 - ABO TESTE DE CRIATIVO` (120252298837110047), tudo **PAUSADO**. Início 26/10 às 00:03.
+Criada por completo em 23/10. **Ligar só com o OK do Patrik** (`ads_activate_entity` na campanha, nos conjuntos e nos anúncios).
 
-| Conjunto | ID | Anúncio | Vídeo |
-|---|---|---|---|
-| CONJ - ADV+ - M 1 | 120252298841550047 | M 1 (falta) | M - (1).mp4 (falta subir na conta) |
-| CONJ - ADV+ - M 2 | 120252298848880047 | M 2 (falta) | M - (2).mp4 |
-| CONJ - ADV+ - M 3 | 120252298849850047 | M 3 (falta) | M - (3).mp4 |
-| CONJ - ADV+ - M 4 | 120252298850690047 | M 4 (falta) | M - (4).mp4 |
-| CONJ - ADV+ - M 5 | 120252298852060047 | M 5 (falta) | M - (5).mp4 |
+| Conjunto | ID conjunto | Anúncio (ID) | Criativo | Vídeo (ID) | Original no Drive |
+|---|---|---|---|---|---|
+| CONJ - ADV+ - M 1 | 120252298841550047 | M 1 (120252299554780047) | 996185936071196 | 1004045772726853 | Katy (1:21) |
+| CONJ - ADV+ - M 2 | 120252298848880047 | M 2 (120252299555350047) | 1152046750598417 | 2631542297279859 | Óculos |
+| CONJ - ADV+ - M 3 | 120252298849850047 | M 3 (120252299558480047) | 1864492678303572 | 1636535638121939 | Vestido |
+| CONJ - ADV+ - M 4 | 120252298850690047 | M 4 (120252299560310047) | 4738161556508362 | 1584415789578266 | Conversa |
+| CONJ - ADV+ - M 5 | 120252298852060047 | M 5 (120252299561400047) | 1549012913914500 | 1639483727920671 | Piscina |
 
-Os vídeos estão na pasta "MICHELE LOW" da biblioteca do portfólio, 1080x1920.
+Em todos os anúncios:
+- página 262689970269678 e Instagram 17841465706978287;
+- sem texto, botão "Saiba mais";
+- link da página com os UTM do padrão.
+
+**Capas:** `https://painel.michelesalla.com.br/capas/mN.jpg` (pasta `michele-salla/painel/public/capas/`, 1º quadro de cada vídeo).
+
+**Como os vídeos foram subidos:** pela URL direta do Drive da Michele, pasta "Criativos" 1Q8X3HZl8SAP7EiSQLyussp2FCDXI4fmL,
+que já tem link público: `https://drive.usercontent.google.com/download?id=<ID>&export=download&confirm=t`.
+Os M da pasta "MICHELE LOW" são esses mesmos vídeos. Mapa conferido pelos quadros e pelas durações.
+
+**Painel publica sozinho:** todo push na main do CLIENTES gera deploy na Vercel ("Ptk midias") em ~1 min.
 
 ## 7. Pendências (na ordem)
 1. **Compra não chegou nem no Meta nem no painel.**
@@ -133,7 +145,7 @@ Os vídeos estão na pasta "MICHELE LOW" da biblioteca do portfólio, 1080x1920.
    - Até 23/10 o webhook só recebeu o teste de exemplo da Greenn (transação "100", R$ 397, oferta "FiBR18"),
      marcado como teste.
    - **Para fechar:** uma compra aprovada (PIX pago) com e-mail em `pl_emails_teste`, e conferir as duas pontas.
-2. **Vídeos M 1–M 5 na conta + criar os 5 anúncios** (receita da seção 5).
+2. ~~Vídeos e anúncios~~ FEITO em 23/10 (seção 6). Falta só o OK do Patrik para ligar.
 3. **Instalar o rastreio do painel na página** — Patrik escolheu **COM data-checkout** (23/10).
    - Já está no gerador (`gerar_elementor.py`, widget do rodapé junto do CliqueComprar) e nos JSONs A–F.
    - **Falta só gravar na página 10264:** `python tools/wp_michele.py atualizar-pagina --id 10264 --versao F`
@@ -143,10 +155,10 @@ Os vídeos estão na pasta "MICHELE LOW" da biblioteca do portfólio, 1080x1920.
    - Michele cria o app "Painel de Lucro Michele" no portfólio.
    - O app entra no usuário do sistema "Paineldelucro" e gera um token ads_read sem validade.
    - O token vai para META_ACCESS_TOKEN na Vercel; também META_AD_ACCOUNT_ID=1619523595475963. Depois, redeploy.
-5. **Senha do robô:** CRON_SECRET na Vercel e o mesmo valor no Vault do Supabase
-   (`select vault.create_secret('<senha>','cron_secret');` no SQL Editor).
-   - 23/10: senha gerada no PC do Patrik e entregue a ele fora do repositório; o Vault ainda **não** tem `cron_secret`
-     (gravação barrada pela permissão automática) e a Vercel "Ptk midias" não aparece no conector.
+5. ~~Senha do robô~~ FEITO em 23/10:
+   - a senha foi gerada dentro do Supabase e está só no Vault (`cron_secret`); o sha256 dela está em `pl_segredos` (chave 'cron');
+   - `/api/cron` aceita o CRON_SECRET da Vercel OU essa senha;
+   - teste: 200 (Meta "não configurado" até ter o token; planilha não é usada, os custos vêm de Ajustes).
 6. **Acesso do Claude da nuvem a tudo** (para não depender mais do PC):
    - variáveis do ambiente `WP_URL`, `WP_USUARIO`, `WP_SENHA_APP` (o `tools/wp_michele.py` já lê do ambiente);
    - conector Vercel com o time "Ptk midias";
@@ -177,6 +189,12 @@ Os vídeos estão na pasta "MICHELE LOW" da biblioteca do portfólio, 1080x1920.
     - webhook segue só com o teste de exemplo da Greenn (nenhuma compra real chegou);
     - extensão do Chrome desconectada: Greenn, wp-admin (senha "Claude nuvem"), vídeos M 1–M 5 e app do Meta não feitos;
     - vídeos M ainda não estão na conta de anúncio nem no PC.
+
+  - **Claude da nuvem (23/10, noite):**
+    - 5 vídeos subidos do Drive;
+    - capas em alta;
+    - 5 criativos e 5 anúncios criados (pausados);
+    - robô de hora em hora funcionando sem a Vercel.
 
 ## 9. Como trabalhar
 - Sempre em português, frases curtas. Nunca pedir senha ou token no chat; dizer onde colar.
