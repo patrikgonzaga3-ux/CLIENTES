@@ -213,6 +213,10 @@ Os M da pasta "MICHELE LOW" são esses mesmos vídeos. Mapa conferido pelos quad
     - 5 criativos e 5 anúncios criados (pausados);
     - robô de hora em hora funcionando sem a Vercel.
 
+  - **Decisão do Patrik (23/10):** otimizar as campanhas para **Compra**. O CliqueComprar é só métrica de apoio.
+    Plano B, se a compra ainda não chegar ao pixel até ligar: trocar os conjuntos para InitiateCheckout (da Greenn)
+    por poucos dias e voltar para Compra depois. Nunca otimizar para CliqueComprar.
+
 ## 9. Como trabalhar
 - Sempre em português, frases curtas. Nunca pedir senha ou token no chat; dizer onde colar.
 - Checkout, preço, oferta, link de compra e configuração da Greenn: só com OK explícito do Patrik para a mudança mostrada.
