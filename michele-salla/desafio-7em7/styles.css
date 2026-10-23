@@ -209,6 +209,7 @@ s{text-decoration-thickness:2px}
 
 /* ---------- 13 e 16 · Oferta ---------- */
 .oferta-bloco{padding-top:56px}
+.oferta-bloco .descubra{text-align:center;line-height:1.2;margin-bottom:24px}
 .oferta{position:relative;background:var(--gradiente);border-radius:32px;padding:0 0 26px;color:#fff;box-shadow:var(--sombra-forte);overflow:hidden;text-align:center}
 .oferta .fita{position:absolute;top:22px;left:-46px;transform:rotate(-45deg);background:var(--amarelo);color:#000;font:800 14px Sora;letter-spacing:1px;width:180px;padding:7px 0;z-index:3;box-shadow:0 6px 12px rgba(0,0,0,.25)}
 .oferta .kit{background:radial-gradient(circle at 50% 45%,rgba(255,157,244,.55),transparent 62%),linear-gradient(180deg,rgba(40,0,50,.35),transparent);padding:30px 10px 4px}

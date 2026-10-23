@@ -588,7 +588,10 @@ def oferta(n, ancora=False):
                              tam=14.5, alinhar="left", _margin=caixa(0), _flex_grow=1)],
                       raio=24, pad=(16, 18), flex_direction="row", flex_align_items="center", flex_gap=gap(16))
     nome = "13 · Oferta" if n == "13" else "16 · Oferta repetida"
-    return bloco(nome, [caixa_conteudo([cartao_oferta, garantia], pad=(56, 16, 72, 16), flex_gap=gap(20))],
+    # versão F: "Descubra como" no início da oferta (pedido do Patrik em 23/10)
+    descubra = [titulo(f'Descubra como {destaque("perder até -7cm de barriga em 7 dias", ROXO)} sem gastar R$500 por mês com canetinha',
+                       "h2", 31, 27, lh=1.2)] if ancora else []
+    return bloco(nome, [caixa_conteudo([*descubra, cartao_oferta, garantia], pad=(56, 16, 72, 16), flex_gap=gap(20))],
                  fundo=ROSA_FUNDO, onda=BRANCO, ancora="b" + n)
 
 

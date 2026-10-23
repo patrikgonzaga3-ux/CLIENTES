@@ -138,7 +138,9 @@ COPY_F = [
     ("Enfim, se você quer <em>reduzir até 7 cm de barriga</em> sem gastar R$3.000 com canetinhas, o Desafio 7 em 7 é para você",
      "Enfim, se você quer <em>reduzir até 7 cm de barriga</em> sem gastar R$500 por mês com canetinha, o Desafio 7 em 7 é para você", 1),
     ('<p class="parcelas">ou <strong>12x de R$ 6,89</strong></p>',
-     '<p class="parcelas">ou <strong>12x de R$ 6,89</strong></p>\n        <p class="ancora">Mais de 7x mais barato que 1 mês de canetinha</p>', 2),
+     '<p class="parcelas">ou <strong>12x de R$ 6,89</strong></p>\n        <p class="ancora">Mais de 7x mais barato que 1 mês de canetinha</p>', 2),    # "Descubra como" no início das duas ofertas (pedido do Patrik em 23/10)
+    ('  <div class="wrap">\n    <div class="oferta">',
+     '  <div class="wrap">\n    <h2 class="titulo descubra">Descubra como <span class="dest">perder até -7cm de barriga em 7 dias</span> sem gastar R$500 por mês com canetinha</h2>\n    <div class="oferta">', 2),
 ]
 
 modelo = (AQUI / "_modelo.html").read_text(encoding="utf-8")
