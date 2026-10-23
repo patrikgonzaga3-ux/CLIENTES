@@ -120,7 +120,7 @@ def imagens_usadas(versao="A"):
 def cmd_subir_imagens(_):
     mapa = json.loads(MAPA.read_text(encoding="utf-8")) if MAPA.exists() else {}
     todas = set()
-    for v in "ABCDE":
+    for v in "ABCDEF":
         todas |= imagens_usadas(v)[1]
     for nome in sorted(todas):
         if nome in mapa:
@@ -208,12 +208,12 @@ def main():
     sub.add_parser("paginas")
     sub.add_parser("subir-imagens")
     c = sub.add_parser("criar-pagina")
-    c.add_argument("--versao", choices="ABCDE", required=True)
+    c.add_argument("--versao", choices="ABCDEF", required=True)
     c.add_argument("--slug", required=True)
     c.add_argument("--titulo")
     u = sub.add_parser("atualizar-pagina")
     u.add_argument("--id", type=int, required=True)
-    u.add_argument("--versao", choices="ABCDE", required=True)
+    u.add_argument("--versao", choices="ABCDEF", required=True)
     u.add_argument("--titulo")
     u.add_argument("--slug")
     pb = sub.add_parser("publicar")

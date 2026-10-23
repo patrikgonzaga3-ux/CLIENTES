@@ -234,6 +234,8 @@ def marca(t, fundo=AMARELO, cor=PRETO):
 PROMESSAS = {
     "A": (f'Perca {destaque("até 7cm de barriga em 7 dias", AMARELO)} e volte a vestir as roupas que você ama',
           "no Desafio 7 em 7"),
+    "F": (f'Perca {destaque("até 7 cm de barriga em 7 dias", AMARELO)} sem gastar R$500 por mês com canetinha',
+          "no Desafio 7 em 7"),
     "E": (f'Reduza {destaque("até 7 cm de barriga", AMARELO)} sem gastar R$3.000 com canetinhas',
           "no Desafio 7 em 7"),
     "B": (f'Chega de se sentir mal {destaque("diante do espelho", AMARELO)}',
@@ -245,6 +247,8 @@ RUMINACOES = {
     "padrao": ["A calça que um dia serviu agora nem fecha", "Você abre o guarda-roupa e nada te veste bem",
                "Só compra roupa larga para esconder a barriga", "Evita foto, espelho e roupa colada por causa da barriga"],
     # Versão E: da página Desafio Efeito Mounjaro da Michele
+    # Versão F (página única): mistura C + E, ancorada em R$500/mês de canetinha
+    "final": ['A calça que um dia serviu agora nem fecha', 'Você emagrece, mas a barriga continua', 'Já pensou na canetinha, mas R$500 todo mês pesa no bolso', 'Depois dos 40 parece muito mais difícil', 'Só compra roupa larga para esconder a barriga', 'Já tentou dieta, treino e nada resolve'],
     "mounjaro": ["Sua barriga simplesmente não vai embora", "Você emagrece, mas a barriga continua",
                  "Depois dos 40 parece muito mais difícil", "Já tentou dieta, treino e nada resolve",
                  "Se sente frustrada com o próprio corpo", "Sente que a mente sabota seus resultados"],
@@ -265,7 +269,7 @@ def pilula_topo(txt, largura=300, largura_mob=280):
 
 
 def pilulas_topo(v):
-    if v in ("C", "E"):  # versões C e E: 3 pílulas
+    if v in ("C", "E", "F"):  # versões C, E e F: 3 pílulas
         return [pilula_topo(t, 400, 340) for t in PILULAS_3]
     p = pilula_topo("Só seguir o passo a passo")
     p["settings"]["flex_justify_content"] = "center"
@@ -338,7 +342,7 @@ def balao(frase):
 
 
 def b06(v="A"):
-    e = v == "E"
+    e = v in ("E", "F")
     pensamentos = ["Nenhuma calça fecha mais em mim", "Todo mundo vai notar minha barriga",
                    "Será que só com canetinha eu resolvo?" if e else "Já tentei de tudo e nada funciona",
                    "Não me reconheço mais no espelho"]
@@ -361,11 +365,24 @@ COPY_E = [
 ]
 
 
+# Ajustes da versão F por cima da E (aprovados pelo Patrik)
+COPY_F = [
+    ("Barriga que não cabe mais na calça?", "Pensando em gastar R$500 por mês com canetinha?"),
+    ("Sem agulha, sem remédio e sem gastar R$3.000", "Sem canetinha"),
+    ("Pensou em usar canetinha, mas não quer gastar R$3.000 com isso", "Pensou em usar canetinha, mas não quer gastar R$500 todo mês"),
+    (f'Enfim, se você quer {destaque("reduzir até 7 cm de barriga", AMARELO)} sem gastar R$3.000 com canetinhas, o Desafio 7 em 7 é para você',
+     f'Enfim, se você quer {destaque("reduzir até 7 cm de barriga", AMARELO)} sem gastar R$500 por mês com canetinha, o Desafio 7 em 7 é para você'),
+]
+
+
 def trocar_copy(conteudo, trocas):
     achou = {a: 0 for a, _ in trocas}
 
     def andar(e):
         for k, val in e["settings"].items():
+            if isinstance(val, dict) and isinstance(val.get("alt"), str):  # texto alternativo das imagens
+                for a, d in trocas:
+                    val["alt"] = val["alt"].replace(a, d)
             if isinstance(val, str):
                 for a, d in trocas:
                     if a in val:
@@ -494,7 +511,7 @@ def cartao_foto(txt, img):
 
 
 def b11(v="A"):
-    lista = [CARTOES_E.get(i, c) if v == "E" else c for i, c in enumerate(CARTOES)]
+    lista = [CARTOES_E.get(i, c) if v in ("E", "F") else c for i, c in enumerate(CARTOES)]
     grade_cartoes = grade([cartao_foto(t, i) for t, i in lista])
     grade_cartoes["settings"]["flex_justify_content"] = "center"
     preta = container([titulo(f'Enfim, se você quer {destaque("voltar a vestir as roupas que ama", AMARELO)} e se sentir bem com a sua barriga e a sua cintura, o Desafio 7 em 7 é para você',
@@ -533,7 +550,7 @@ def b12():
     return bloco("12 · Recapitulando", [caixa_conteudo(filhos, pad=(64, 16, 40, 16)), fx], fundo=ROSA_FUNDO, ancora="b12")
 
 
-def oferta(n):
+def oferta(n, ancora=False):
     fita = titulo("7 DIAS", "p", 14, 14, "#000000", 800, ls=1,
                   _background_background="classic", _background_color=AMARELO, _padding=caixa(7, 0),
                   _element_width="initial", _element_custom_width=px(180), _position="absolute",
@@ -558,6 +575,7 @@ def oferta(n):
             titulo(f'<span style="font-size:34px">R$</span>67', "p", 76, 76, AMARELO, 800, lh=1, ls=-2),
             texto("à vista, pagamento único", tam=15, cor=BRANCO, _margin=caixa(0)),
             titulo(f'ou {destaque("12x de R$ 5,58", AMARELO)}', "p", 18, 18, BRANCO, 600, _margin=caixa(0, 0, 12, 0)),
+            *([etiqueta("Mais de 7x mais barato que 1 mês de canetinha", "rgba(255,255,255,0.16)", BRANCO, 13.5)] if ancora else []),
             botao(), selos,
         ], padding=caixa(6, 20, 26, 20), flex_gap=gap(6)),
     ], background_background="gradient", background_color=ROXO, background_color_b=VIOLETA,
@@ -654,15 +672,17 @@ def b18():
 
 # versão: (promessa, avatar?, ruminações)
 VERSOES = {"A": ("A", False, "padrao"), "B": ("B", False, "padrao"), "C": ("A", True, "padrao"),
-           "D": ("B", True, "padrao"), "E": ("E", True, "mounjaro")}
+           "D": ("B", True, "padrao"), "E": ("E", True, "mounjaro"), "F": ("F", True, "final")}
 
 
 def montar(v):
     promessa, avatar, rum = VERSOES[v]
     conteudo = [b03(promessa, avatar, rum, v), b04(), b05(), b06(v), b07(), b08(), b09(), b10(), b11(v), b12(),
-                oferta("13"), b14(), b15(), oferta("16"), b17(), b18()]
-    if v == "E":
+                oferta("13", v == "F"), b14(), b15(), oferta("16", v == "F"), b17(), b18()]
+    if v in ("E", "F"):
         trocar_copy(conteudo, COPY_E)
+    if v == "F":
+        trocar_copy(conteudo, COPY_F)
     return {
         "version": "0.4",
         "title": f"Desafio 7 em 7 · Versão {v}",

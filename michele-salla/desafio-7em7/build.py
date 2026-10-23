@@ -11,6 +11,8 @@ AQUI = Path(__file__).parent
 PROMESSAS = {
     "A": '<h1 class="promessa">Perca <span class="marca">até 7cm de barriga em 7 dias</span> e volte a vestir as roupas que você ama'
          '<span class="depois">no Desafio 7 em 7</span></h1>',
+    "F": '<h1 class="promessa">Perca <span class="marca">até 7 cm de barriga em 7 dias</span> sem gastar R$500 por mês com canetinha'
+         '<span class="depois">no Desafio 7 em 7</span></h1>',
     "E": '<h1 class="promessa">Reduza <span class="marca">até 7 cm de barriga</span> sem gastar R$3.000 com canetinhas'
          '<span class="depois">no Desafio 7 em 7</span></h1>',
     "B": '<h1 class="promessa">Chega de se sentir mal <span class="marca">diante do espelho</span>'
@@ -56,6 +58,8 @@ RUMINACOES = {
     "padrao": ["A calça que um dia serviu agora nem fecha", "Você abre o guarda-roupa e nada te veste bem",
                "Só compra roupa larga para esconder a barriga", "Evita foto, espelho e roupa colada por causa da barriga"],
     # Versão E: promessa e ruminações da página Desafio Efeito Mounjaro da Michele (/desafio-efeito-mounjaro/)
+    # Versão F (página única, aprovada pelo Patrik): mistura C + E, ancorada em R$500/mês de canetinha
+    "final": ['A calça que um dia serviu agora nem fecha', 'Você emagrece, mas a barriga continua', 'Já pensou na canetinha, mas R$500 todo mês pesa no bolso', 'Depois dos 40 parece muito mais difícil', 'Só compra roupa larga para esconder a barriga', 'Já tentou dieta, treino e nada resolve'],
     "mounjaro": ["Sua barriga simplesmente não vai embora", "Você emagrece, mas a barriga continua",
                  "Depois dos 40 parece muito mais difícil", "Já tentou dieta, treino e nada resolve",
                  "Se sente frustrada com o próprio corpo", "Sente que a mente sabota seus resultados"],
@@ -76,7 +80,8 @@ HERO_AVATAR = ('<figure class="hero-img hero-fig"><img src="assets/img/hero-ante
 # versão: (promessa, imagem do topo, ruminações)
 VERSOES = {"A": ("A", HERO_REAL, "padrao"), "B": ("B", HERO_REAL, "padrao"),
            "C": ("A", HERO_AVATAR, "padrao"), "D": ("B", HERO_AVATAR, "padrao"),
-           "E": ("E", HERO_AVATAR, "mounjaro")}
+           "E": ("E", HERO_AVATAR, "mounjaro"),
+           "F": ("F", HERO_AVATAR, "final")}
 
 # Bloco 06: imagem do espelho com os pensamentos dentro da foto
 PENSAMENTOS = ["Nenhuma calça fecha mais em mim", "Todo mundo vai notar minha barriga",
@@ -106,7 +111,7 @@ CARTOES_E = {2: ("Pensou em usar canetinha, mas não quer gastar R$3.000 com iss
 
 
 def cartoes(v):
-    lista = [CARTOES_E.get(i, c) if v == "E" else c for i, c in enumerate(CARTOES)]
+    lista = [CARTOES_E.get(i, c) if v in ("E", "F") else c for i, c in enumerate(CARTOES)]
     itens = "\n".join(f'      <div class="cartao"><img src="assets/img/cartao-{img}.webp" alt="{txt}" width="900" height="673" loading="lazy"><p>{txt}</p></div>'
                       for txt, img in lista)
     return f'    <div class="cartoes">\n{itens}\n    </div>'
@@ -118,11 +123,23 @@ PILULAS_3 = ['Sem agulha, sem remédio e sem gastar R$3.000', 'Só 15 minutos po
 
 
 def pilulas(v):
-    if v not in ("C", "E"):
+    if v not in ("C", "E", "F"):
         return PILULA
     itens = "\n".join("  " + PILULA.replace("Só seguir o passo a passo", t) for t in PILULAS_3)
     return '    <div class="pilulas">\n' + itens + '\n    </div>'
 
+
+# Ajustes da versão F por cima da E (aprovados pelo Patrik): (antes, depois, quantas vezes aparece)
+COPY_F = [
+    ('<span class="etiqueta">Barriga que não cabe mais na calça?</span>',
+     '<span class="etiqueta">Pensando em gastar R$500 por mês com canetinha?</span>', 1),
+    ("Sem agulha, sem remédio e sem gastar R$3.000", "Sem canetinha", 1),
+    ("Pensou em usar canetinha, mas não quer gastar R$3.000 com isso", "Pensou em usar canetinha, mas não quer gastar R$500 todo mês", 2),
+    ("Enfim, se você quer <em>reduzir até 7 cm de barriga</em> sem gastar R$3.000 com canetinhas, o Desafio 7 em 7 é para você",
+     "Enfim, se você quer <em>reduzir até 7 cm de barriga</em> sem gastar R$500 por mês com canetinha, o Desafio 7 em 7 é para você", 1),
+    ('<p class="parcelas">ou <strong>12x de R$ 5,58</strong></p>',
+     '<p class="parcelas">ou <strong>12x de R$ 5,58</strong></p>\n        <p class="ancora">Mais de 7x mais barato que 1 mês de canetinha</p>', 2),
+]
 
 modelo = (AQUI / "_modelo.html").read_text(encoding="utf-8")
 for v, (prom, hero, rum) in VERSOES.items():
@@ -135,11 +152,15 @@ for v, (prom, hero, rum) in VERSOES.items():
                   .replace("{{OFERTA:16}}", oferta("16"))
                   .replace("{{CARTOES}}", cartoes(v))
                   .replace("{{PILULAS}}", pilulas(v))
-                  .replace("{{ESPELHO}}", "foto-espelho-pensamentos-e.webp" if v == "E" else "foto-espelho-pensamentos.webp")
-                  .replace("{{ESPELHO_ALT}}", " · ".join(PENSAMENTOS_E if v == "E" else PENSAMENTOS)))
-    if v == "E":
+                  .replace("{{ESPELHO}}", "foto-espelho-pensamentos-e.webp" if v in ("E", "F") else "foto-espelho-pensamentos.webp")
+                  .replace("{{ESPELHO_ALT}}", " · ".join(PENSAMENTOS_E if v in ("E", "F") else PENSAMENTOS)))
+    if v in ("E", "F"):
         for antes, depois in COPY_E:
             assert html.count(antes) == 1, antes
+            html = html.replace(antes, depois)
+    if v == "F":
+        for antes, depois, vezes in COPY_F:
+            assert html.count(antes) == vezes, (antes, html.count(antes))
             html = html.replace(antes, depois)
     (AQUI / f"pagina-{v}.html").write_text(html, encoding="utf-8")
     print(f"pagina-{v}.html")
