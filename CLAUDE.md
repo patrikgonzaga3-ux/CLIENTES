@@ -29,8 +29,10 @@ Página de vendas do Desafio 7 em 7 (cliente Michele Salla, site `michelesalla.c
 ## Rastreio (pixel do Meta)
 - O pixel **991344998762063** já está no site todo pelo plugin **PixelYourSite** (PageView, com API de conversões).
 - Os botões de compra têm a classe `botao-compra`. O código `michele-salla/desafio-7em7/rastreio/initiate-checkout.js`
-  (vai num widget HTML no rodapé da página) envia **InitiateCheckout** uma vez por visita, com valor 67 BRL.
-- **Purchase** é configurado pelo Patrik na plataforma de pagamento. Não mexer.
+  (vai num widget HTML no rodapé da página) envia o evento personalizado **CliqueComprar** uma vez por visita (67 BRL).
+- **InitiateCheckout, AddPaymentInfo e Purchase** saem da **Greenn** (produto 199167, navegador + API de conversões).
+  A página não manda InitiateCheckout, para não contar a mesma pessoa 2 vezes (decisão do Patrik em 23/10).
+- Configuração da Greenn (pixel, eventos, momento do Purchase) é do Patrik. Não mexer sem o OK dele.
 
 ## Regras
 1. **Nada vai ao ar sem o OK do Patrik.** Páginas novas são criadas como **rascunho**. Publicar,

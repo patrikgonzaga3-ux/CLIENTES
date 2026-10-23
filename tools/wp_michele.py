@@ -259,7 +259,8 @@ def cmd_conferir(a):
         ("Nenhum valor antigo (5,58 ou 3,80)", "5,58" not in texto and "3,80" not in texto, ""),
         ("Botões com o link da Greenn (3)", html.count(LINK_GREENN) >= 3, f"{html.count(LINK_GREENN)} link(s)"),
         ("Nenhum botão sem link (#LINK-DE-COMPRA)", "#LINK-DE-COMPRA" not in html, ""),
-        ("Rastreio InitiateCheckout no rodapé", "InitiateCheckout" in html, ""),
+        ("Rastreio do botão (CliqueComprar) no rodapé", "CliqueComprar" in html, ""),
+        ("Página não manda InitiateCheckout (o oficial é o da Greenn)", "'InitiateCheckout'" not in html, ""),
         ("Pixel 991344998762063 no site", "991344998762063" in html, ""),
     ]
     print("Página:", url)
