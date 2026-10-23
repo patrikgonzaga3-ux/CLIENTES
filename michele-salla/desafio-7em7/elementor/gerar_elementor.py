@@ -341,8 +341,6 @@ def b06(v="A"):
 # Ajustes de copy só da versão E (aprovados pelo Patrik): (antes, depois)
 COPY_E = [
     ("sem dietas radicais e sem promessas mirabolantes.", "sem dietas radicais e sem gastar com canetinhas."),
-    ("Já tentou de tudo e sente que a barriga não sai do lugar", "Pensou em usar canetinha, mas não quer gastar R$3.000 com isso"),
-    ("Sente que a mente sabota seus resultados e quer mudar isso", "Quer cuidar da mente e do corpo ao mesmo tempo"),
     (f'Enfim, se você quer {destaque("voltar a vestir as roupas que ama", AMARELO)} e se sentir bem com a sua barriga e a sua cintura, o Desafio 7 em 7 é para você',
      f'Enfim, se você quer {destaque("reduzir até 7 cm de barriga", AMARELO)} sem gastar R$3.000 com canetinhas, o Desafio 7 em 7 é para você'),
 ]
@@ -459,14 +457,31 @@ def b10():
                  fundo=ROSA_FUNDO, onda=BRANCO, ancora="b10")
 
 
-def b11():
-    itens = ["Sente a barriga marcando nas roupas e quer mudar isso",
-             "Tem uma calça que não fecha mais e quer voltar a vesti-la",
-             "Já tentou de tudo e sente que a barriga não sai do lugar",
-             "Tem pouco tempo e precisa de algo prático, para fazer em casa",
-             "Quer trabalhar barriga e cintura sem depender de dietas radicais",
-             "Sente que a mente sabota seus resultados e quer mudar isso",
-             "Quer um passo a passo claro para saber o que fazer a cada dia"]
+CARTOES = [
+    ("Sente a barriga marcando nas roupas e quer mudar isso", "c1-roupa-marcando"),
+    ("Tem uma calça que não fecha mais e quer voltar a vesti-la", "c2-calca-nao-fecha"),
+    ("Já tentou de tudo e sente que a barriga não sai do lugar", "c3-barriga-nao-sai"),
+    ("Tem pouco tempo e precisa de algo prático, para fazer em casa", "c4-pouco-tempo"),
+    ("Quer trabalhar barriga e cintura sem depender de dietas radicais", "c5-sem-dieta-radical"),
+    ("Sente que a mente sabota seus resultados e quer mudar isso", "c6-mente-sabota"),
+    ("Quer um passo a passo claro para saber o que fazer a cada dia", "c7-passo-a-passo"),
+]
+CARTOES_E = {2: ("Pensou em usar canetinha, mas não quer gastar R$3.000 com isso", "c3e-canetinha"),
+             5: ("Quer cuidar da mente e do corpo ao mesmo tempo", "c6e-mente-e-corpo")}
+
+
+def cartao_foto(txt, img):
+    return container([imagem(f"cartao-{img}.webp", txt),
+                      texto(txt, tam=13.5, cor=BRANCO, peso=600, alinhar="left", lh=1.35,
+                            _padding=caixa(12, 12, 14, 12), _margin=caixa(0))],
+                     background_background="classic", background_color=PRETO, border_radius=caixa(20),
+                     overflow="hidden", flex_gap=gap(0), **sombra("box_shadow"))
+
+
+def b11(v="A"):
+    lista = [CARTOES_E.get(i, c) if v == "E" else c for i, c in enumerate(CARTOES)]
+    grade_cartoes = grade([cartao_foto(t, i) for t, i in lista])
+    grade_cartoes["settings"]["flex_justify_content"] = "center"
     preta = container([titulo(f'Enfim, se você quer {destaque("voltar a vestir as roupas que ama", AMARELO)} e se sentir bem com a sua barriga e a sua cintura, o Desafio 7 em 7 é para você',
                               "p", 18, 18, BRANCO, 700, lh=1.4)],
                       background_background="classic", background_color=PRETO, border_radius=caixa(24),
@@ -479,7 +494,7 @@ def b11():
               imagem("mulher-espelho-quebrado.webp", "Mulher se olhando no espelho", raio=28,
                      image_border_border="solid", image_border_width=caixa(5), image_border_color=BRANCO,
                      **sombra("image_box_shadow", 22, 50, SOMBRA_FORTE)),
-              *[linha_check(t) for t in itens], preta, dois,
+              grade_cartoes, preta, dois,
               texto("Toque no botão abaixo e receba agora o seu acesso ao desafio de 7 dias", tam=15.5, cor=PRETO, peso=600),
               seta("b12")]
     return bloco("11 · O Desafio 7 em 7 é pra você que", [caixa_conteudo(filhos)], fundo=BRANCO, onda=ROSA_FUNDO, ancora="b11")
@@ -631,7 +646,7 @@ VERSOES = {"A": ("A", False, "padrao"), "B": ("B", False, "padrao"), "C": ("A", 
 
 def montar(v):
     promessa, avatar, rum = VERSOES[v]
-    conteudo = [b03(promessa, avatar, rum), b04(), b05(), b06(v), b07(), b08(), b09(), b10(), b11(), b12(),
+    conteudo = [b03(promessa, avatar, rum), b04(), b05(), b06(v), b07(), b08(), b09(), b10(), b11(v), b12(),
                 oferta("13"), b14(), b15(), oferta("16"), b17(), b18()]
     if v == "E":
         trocar_copy(conteudo, COPY_E)

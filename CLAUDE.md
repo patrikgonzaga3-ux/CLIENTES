@@ -16,6 +16,9 @@ Página de vendas do Desafio 7 em 7 (cliente Michele Salla, site `michelesalla.c
 - **WordPress da Michele:** use a skill `wordpress-michele` (`.claude/skills/wordpress-michele/SKILL.md`)
   e o script `tools/wp_michele.py`. O acesso fica no `.env` (nunca no GitHub).
 
+- **Bloco 06:** os 4 pensamentos ficam dentro da foto do espelho (`foto-espelho-pensamentos*.webp`; a E tem o balão da canetinha).
+- **Bloco 11:** 7 cartões com foto (`cartao-*.webp`, avatar gerado no Canva); a E troca os cartões 3 e 6.
+
 ## Rastreio (pixel do Meta)
 - O pixel **991344998762063** já está no site todo pelo plugin **PixelYourSite** (PageView, com API de conversões).
 - Os botões de compra têm a classe `botao-compra`. O código `michele-salla/desafio-7em7/rastreio/initiate-checkout.js`

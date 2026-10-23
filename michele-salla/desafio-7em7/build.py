@@ -86,11 +86,30 @@ PENSAMENTOS_E = ["Nenhuma calça fecha mais em mim", "Todo mundo vai notar minha
 # Ajustes de copy só da versão E (aprovados pelo Patrik): (antes, depois)
 COPY_E = [
     ("sem dietas radicais e sem promessas mirabolantes.", "sem dietas radicais e sem gastar com canetinhas."),
-    ("Já tentou de tudo e sente que a barriga não sai do lugar", "Pensou em usar canetinha, mas não quer gastar R$3.000 com isso"),
-    ("Sente que a mente sabota seus resultados e quer mudar isso", "Quer cuidar da mente e do corpo ao mesmo tempo"),
     ("Enfim, se você quer <em>voltar a vestir as roupas que ama</em> e se sentir bem com a sua barriga e a sua cintura, o Desafio 7 em 7 é para você",
      "Enfim, se você quer <em>reduzir até 7 cm de barriga</em> sem gastar R$3.000 com canetinhas, o Desafio 7 em 7 é para você"),
 ]
+
+# Bloco 11: cartões com foto (frase, foto). A versão E troca os cartões 3 e 6.
+CARTOES = [
+    ("Sente a barriga marcando nas roupas e quer mudar isso", "c1-roupa-marcando"),
+    ("Tem uma calça que não fecha mais e quer voltar a vesti-la", "c2-calca-nao-fecha"),
+    ("Já tentou de tudo e sente que a barriga não sai do lugar", "c3-barriga-nao-sai"),
+    ("Tem pouco tempo e precisa de algo prático, para fazer em casa", "c4-pouco-tempo"),
+    ("Quer trabalhar barriga e cintura sem depender de dietas radicais", "c5-sem-dieta-radical"),
+    ("Sente que a mente sabota seus resultados e quer mudar isso", "c6-mente-sabota"),
+    ("Quer um passo a passo claro para saber o que fazer a cada dia", "c7-passo-a-passo"),
+]
+CARTOES_E = {2: ("Pensou em usar canetinha, mas não quer gastar R$3.000 com isso", "c3e-canetinha"),
+             5: ("Quer cuidar da mente e do corpo ao mesmo tempo", "c6e-mente-e-corpo")}
+
+
+def cartoes(v):
+    lista = [CARTOES_E.get(i, c) if v == "E" else c for i, c in enumerate(CARTOES)]
+    itens = "\n".join(f'      <div class="cartao"><img src="assets/img/cartao-{img}.webp" alt="{txt}" width="900" height="673" loading="lazy"><p>{txt}</p></div>'
+                      for txt, img in lista)
+    return f'    <div class="cartoes">\n{itens}\n    </div>'
+
 
 modelo = (AQUI / "_modelo.html").read_text(encoding="utf-8")
 for v, (prom, hero, rum) in VERSOES.items():
@@ -101,6 +120,7 @@ for v, (prom, hero, rum) in VERSOES.items():
                   .replace("{{VERSAO}}", f"Versão {v} · gerada por build.py a partir de _modelo.html")
                   .replace("{{OFERTA:13}}", oferta("13"))
                   .replace("{{OFERTA:16}}", oferta("16"))
+                  .replace("{{CARTOES}}", cartoes(v))
                   .replace("{{ESPELHO}}", "foto-espelho-pensamentos-e.webp" if v == "E" else "foto-espelho-pensamentos.webp")
                   .replace("{{ESPELHO_ALT}}", " · ".join(PENSAMENTOS_E if v == "E" else PENSAMENTOS)))
     if v == "E":
