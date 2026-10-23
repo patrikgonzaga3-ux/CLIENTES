@@ -14,6 +14,12 @@ Página de vendas do Desafio 7 em 7 (cliente Michele Salla, site `michelesalla.c
 - **WordPress da Michele:** use a skill `wordpress-michele` (`.claude/skills/wordpress-michele/SKILL.md`)
   e o script `tools/wp_michele.py`. O acesso fica no `.env` (nunca no GitHub).
 
+## Rastreio (pixel do Meta)
+- O pixel **991344998762063** já está no site todo pelo plugin **PixelYourSite** (PageView, com API de conversões).
+- Os botões de compra têm a classe `botao-compra`. O código `michele-salla/desafio-7em7/rastreio/initiate-checkout.js`
+  (vai num widget HTML no rodapé da página) envia **InitiateCheckout** uma vez por visita, com valor 67 BRL.
+- **Purchase** é configurado pelo Patrik na plataforma de pagamento. Não mexer.
+
 ## Regras
 1. **Nada vai ao ar sem o OK do Patrik.** Páginas novas são criadas como **rascunho**. Publicar,
    trocar a página inicial, mexer em menus, plugins, tema ou domínio: só com o OK dele.

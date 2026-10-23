@@ -8765,6 +8765,7 @@
              "size": 100,
              "sizes": []
             },
+            "_css_classes": "botao-compra",
             "typography_typography": "custom",
             "typography_font_family": "Sora",
             "typography_font_weight": "800",
@@ -9758,6 +9759,7 @@
          "size": 100,
          "sizes": []
         },
+        "_css_classes": "botao-compra",
         "typography_typography": "custom",
         "typography_font_family": "Sora",
         "typography_font_weight": "800",
@@ -10983,6 +10985,7 @@
              "size": 100,
              "sizes": []
             },
+            "_css_classes": "botao-compra",
             "typography_typography": "custom",
             "typography_font_family": "Sora",
             "typography_font_weight": "800",
@@ -12922,7 +12925,7 @@
    ]
   },
   {
-   "id": "0d3e464",
+   "id": "10d5586",
    "elType": "container",
    "isInner": false,
    "settings": {
@@ -13077,7 +13080,7 @@
      ]
     },
     {
-     "id": "781a55a",
+     "id": "0d3e464",
      "elType": "container",
      "isInner": true,
      "settings": {
@@ -13096,7 +13099,7 @@
      },
      "elements": [
       {
-       "id": "115ed50",
+       "id": "781a55a",
        "elType": "widget",
        "widgetType": "text-editor",
        "settings": {
@@ -13124,6 +13127,16 @@
          "left": "0",
          "isLinked": true
         }
+       },
+       "elements": []
+      },
+      {
+       "id": "115ed50",
+       "elType": "widget",
+       "widgetType": "html",
+       "settings": {
+        "html": "<script>\n/* Desafio 7 em 7 · avisa o pixel do Meta (InitiateCheckout) quando alguém clica num botão de compra.\n   O pixel em si é carregado pelo PixelYourSite do site. Se ele não estiver na página, nada acontece. */\n(function () {\n  var enviado = false;\n  document.addEventListener('click', function (e) {\n    var link = e.target.closest && e.target.closest('.botao-compra a, a.botao-compra');\n    if (!link || typeof window.fbq !== 'function') return;\n    if (!enviado) {\n      enviado = true; // uma vez por visita, mesmo que clique em mais de um botão\n      window.fbq('track', 'InitiateCheckout', {\n        content_name: 'Desafio 7 em 7', content_category: 'Desafio', value: 67, currency: 'BRL', num_items: 1\n      }, { eventID: 'ic-' + Date.now() + '-' + Math.random().toString(36).slice(2, 8) });\n    }\n    // dá tempo do aviso sair antes de ir para o checkout (só quando abre na mesma aba)\n    var novaAba = link.target === '_blank' || e.ctrlKey || e.metaKey || e.shiftKey || e.button === 1;\n    var href = link.getAttribute('href') || '';\n    if (!novaAba && href && href.charAt(0) !== '#') {\n      e.preventDefault();\n      setTimeout(function () { window.location.href = link.href; }, 300);\n    }\n  });\n})();\n</script>",
+        "_title": "Rastreio · InitiateCheckout (pixel Meta)"
        },
        "elements": []
       }

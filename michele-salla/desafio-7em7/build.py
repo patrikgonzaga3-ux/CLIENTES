@@ -31,7 +31,7 @@ def oferta(n: str) -> str:
         <p class="por">Por apenas</p>
         <p class="preco"><small>R$</small>67</p>
         <p class="avista">à vista, pagamento único</p>
-        <a class="botao" href="#LINK-DE-COMPRA">Sim, quero aproveitar a oferta {SETA}</a>
+        <a class="botao botao-compra" href="#LINK-DE-COMPRA">Sim, quero aproveitar a oferta {SETA}</a>
         <div class="selos">
           <div class="selo"><svg viewBox="0 0 32 32" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 3l11 4v8c0 7-5 12-11 14C10 27 5 22 5 15V7z"/><path d="M11 16l3.5 3.5L21 13"/></svg><span>Compra<b>Segura</b></span></div>
           <div class="selo"><svg viewBox="0 0 32 32" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="16" cy="13" r="9"/><path d="M11 21l-3 8 5-2 3 3M21 21l3 8-5-2-3 3"/><path d="M13 13l2 2 4-4"/></svg><span>7 Dias de<b>Garantia</b></span></div>

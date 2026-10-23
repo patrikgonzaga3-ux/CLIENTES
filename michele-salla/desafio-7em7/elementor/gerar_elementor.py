@@ -155,7 +155,8 @@ def botao(rotulo="Sim, quero aproveitar a oferta"):
          "hover_color": "#000000", "button_background_hover_color": "#F2EF00",
          "border_radius": caixa(50), "text_padding": caixa(20, 26),
          "_element_width": "initial", "_element_custom_width": px(100, "%"),
-         "_element_custom_width_tablet": px(100, "%"), "_element_custom_width_mobile": px(100, "%")}
+         "_element_custom_width_tablet": px(100, "%"), "_element_custom_width_mobile": px(100, "%"),
+         "_css_classes": "botao-compra"}
     s.update(tipo("typography", "Sora", 800, 17, 1.2, ls=0.3, transform="uppercase"))
     s.update(sombra("button_box_shadow", 8, 0, "#C9C600"))
     return widget("button", s)
@@ -575,7 +576,9 @@ def b18():
         texto("O Desafio 7 em 7 não é tratamento médico. Este site não é afiliado ao Facebook ou a qualquer entidade do Facebook. Os resultados variam de pessoa para pessoa e a compra deste material não garante nenhum resultado específico. Usamos resultados reais de alunas.",
               tam=13.5, cor="#BBBBBB"),
     ], pad=(44, 16, 30, 16), flex_gap=gap(12))
-    final = container([texto("Veranópolis/RS · CNPJ 32.983.139/0001-99", tam=14, cor=BRANCO, _margin=caixa(0))],
+    rastreio = widget("html", {"html": "<script>\n" + (AQUI.parent / "rastreio" / "initiate-checkout.js").read_text(encoding="utf-8") + "</script>",
+                               "_title": "Rastreio · InitiateCheckout (pixel Meta)"})
+    final = container([texto("Veranópolis/RS · CNPJ 32.983.139/0001-99", tam=14, cor=BRANCO, _margin=caixa(0)), rastreio],
                       background_background="classic", background_color="#1A1A1A", padding=caixa(18, 16))
     return bloco("18 · Rodapé", [topo, final], fundo=PRETO, ancora="b18")
 
