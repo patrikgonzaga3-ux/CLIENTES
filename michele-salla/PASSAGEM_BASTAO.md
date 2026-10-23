@@ -157,6 +157,8 @@ Os M da pasta "MICHELE LOW" são esses mesmos vídeos. Mapa conferido pelos quad
    Falta: Configurações > Apps > o app > Atribuir pessoas > marcar "Paineldelucro (System user)" > Controle total >
    Atribuir; depois Usuários do sistema > Paineldelucro > Gerar token (app PAINEL DE LUCRO MICHELE, ads_read, Nunca expira).
    O Claude do PC foi barrado na atribuição pela permissão automática.)
+   - 23/10 noite: Patrik ligou o app ao Paineldelucro (Controle total). Na Vercel já existem META_AD_ACCOUNT_ID e
+     CRON_SECRET, mas **ainda não existe META_ACCESS_TOKEN** (pl_fontes "meta": falta META_ACCESS_TOKEN).
    - Michele cria o app "Painel de Lucro Michele" no portfólio.
    - O app entra no usuário do sistema "Paineldelucro" e gera um token ads_read sem validade.
    - O token vai para META_ACCESS_TOKEN na Vercel; também META_AD_ACCOUNT_ID=1619523595475963. Depois, redeploy.
