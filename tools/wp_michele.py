@@ -26,6 +26,9 @@ Comandos:
     python tools/wp_michele.py publicar --id 123
         publica a página (SÓ com o OK do Patrik)
 
+    python tools/wp_michele.py conferir [--url https://michelesalla.com.br/desafio7em7-a/]
+        abre a página no ar (sem senha) e confere promessa, parcelamento, link de compra e rastreio
+
 As páginas são criadas como rascunho. Publicar só com o OK do Patrik.
 Só usa a biblioteca padrão do Python (não precisa instalar nada).
 """
@@ -164,6 +167,9 @@ def gravar_layout(pid, versao):
             {"data": json.dumps(dados["content"], ensure_ascii=False), "page_settings": dados.get("page_settings", {})})
     print("Layout gravado. Editar no Elementor:", r.get("editar"))
     print("Ver prévia (logado):", r.get("previa"))
+    # Salva a página de novo para o WP Rocket limpar o cache (senão o site segue mostrando a versão antiga).
+    api("POST", f"/wp/v2/pages/{pid}", {})
+    print("Cache da página limpo.")
 
 
 def cmd_criar_pagina(a):
@@ -194,6 +200,49 @@ def cmd_publicar(a):
     print(f'Publicada: id {r["id"]} · {r["link"]}')
 
 
+LINK_GREENN = "payfast.greenn.com.br/199167/offer/1qsr9k"
+
+
+def cmd_conferir(a):
+    """Confere a página publicada como uma visitante vê (não usa a senha)."""
+    import re
+    import time
+    url = a.url
+    html = ""
+    for tentativa in range(3):
+        try:
+            req = urllib.request.Request(url + ("&" if "?" in url else "?") + f"conferir={int(time.time())}",
+                                         headers={"User-Agent": UA})
+            with urllib.request.urlopen(req, timeout=60) as r:
+                html = r.read().decode("utf-8", errors="replace")
+            break
+        except Exception as e:  # o site às vezes devolve 503 por um instante
+            print(f"tentativa {tentativa + 1} falhou: {e}")
+            time.sleep(5)
+    if not html:
+        sys.exit("Não consegui abrir a página. Tente de novo em 1 minuto.")
+    texto = re.sub(r"<[^>]+>", " ", html).replace("&nbsp;", " ")
+    texto = re.sub(r"\s+", " ", texto)
+    h1 = re.search(r"<h1[^>]*>(.*?)</h1>", html, re.S)
+    h1 = re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", h1.group(1)).replace("&nbsp;", " ")).strip() if h1 else ""
+    checks = [
+        ("Promessa começa com \"Descubra como\"", h1.startswith("Descubra como"), h1),
+        ("Parcelamento 12x de R$ 6,89 (2 ofertas)", texto.count("12x de R$ 6,89") >= 2, f'{texto.count("12x de R$ 6,89")} vez(es)'),
+        ("Nenhum valor antigo (5,58 ou 3,80)", "5,58" not in texto and "3,80" not in texto, ""),
+        ("Botões com o link da Greenn (3)", html.count(LINK_GREENN) >= 3, f"{html.count(LINK_GREENN)} link(s)"),
+        ("Nenhum botão sem link (#LINK-DE-COMPRA)", "#LINK-DE-COMPRA" not in html, ""),
+        ("Rastreio InitiateCheckout no rodapé", "InitiateCheckout" in html, ""),
+        ("Pixel 991344998762063 no site", "991344998762063" in html, ""),
+    ]
+    print("Página:", url)
+    for nome, ok, extra in checks:
+        print(("OK    " if ok else "FALTA ") + nome + (f"  ({extra})" if extra else ""))
+    if all(ok for _, ok, _ in checks):
+        print("Tudo certo na página publicada.")
+    else:
+        print("ATENÇÃO: algo não confere. Se acabou de atualizar, espere 1 minuto e rode de novo (cache do site).")
+
+
 def main():
     global ENV
     # O terminal do Windows nem sempre aceita acentos: força UTF-8 para não travar no meio.
@@ -218,7 +267,11 @@ def main():
     u.add_argument("--slug")
     pb = sub.add_parser("publicar")
     pb.add_argument("--id", type=int, required=True)
+    cf = sub.add_parser("conferir")
+    cf.add_argument("--url", default="https://michelesalla.com.br/desafio7em7-a/")
     a = ap.parse_args()
+    if a.cmd == "conferir":
+        return cmd_conferir(a)
     ENV = ler_env()
     {"teste": cmd_teste, "paginas": cmd_paginas, "subir-imagens": cmd_subir_imagens,
      "criar-pagina": cmd_criar_pagina, "atualizar-pagina": cmd_atualizar_pagina, "publicar": cmd_publicar}[a.cmd](a)

@@ -27,6 +27,12 @@ Acesso: senha de aplicação do usuário `michelesalla`, guardada no `.env` da r
 5. Mande ao Patrik o link "Editar no Elementor" e a prévia. Ele confere e decide se publica.
 
 Para regravar o layout numa página que já existe: `python tools/wp_michele.py atualizar-pagina --id ID --versao A`.
+Depois de gravar, o script salva a página de novo para limpar o cache do WP Rocket.
+
+## Conferir a página no ar
+`python tools/wp_michele.py conferir` abre https://michelesalla.com.br/desafio7em7-a/ como visitante e confere
+promessa, parcelamento (12x de R$ 6,89), os 3 botões com o link da Greenn, o rastreio e o pixel. Não precisa de senha.
+A página oficial é a 10264 (`desafio7em7-a`, versão F).
 
 ## Alternativa sem snippet (importar pela tela)
 No painel: **Templates → Templates salvos → Importar templates** → escolha `desafio-7em7-A.json` →
