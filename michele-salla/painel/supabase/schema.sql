@@ -183,8 +183,12 @@ create table if not exists public.pl_convites (
 );
 
 -- Segurança: só o servidor (service_role) acessa.
+
+-- Hash (sha256) de senhas de máquina. 'cron' = senha do robô de hora em hora (a senha mesmo fica no Vault, nome cron_secret).
+create table if not exists public.pl_segredos (chave text primary key, hash text not null, criado_em timestamptz not null default now());
+
 do $$ declare t text; begin
-  foreach t in array array['pl_eventos','pl_emails_teste','pl_abandonos','pl_meta_conjuntos','pl_meta_anuncios','pl_gastos','pl_config','pl_comportamento','pl_fontes','pl_ajustes','pl_gastos_painel','pl_usuarios','pl_convites'] loop
+  foreach t in array array['pl_eventos','pl_emails_teste','pl_abandonos','pl_meta_conjuntos','pl_meta_anuncios','pl_gastos','pl_config','pl_comportamento','pl_fontes','pl_ajustes','pl_gastos_painel','pl_usuarios','pl_convites','pl_segredos'] loop
     execute format('alter table public.%I enable row level security', t);
     execute format('revoke all on public.%I from anon, authenticated', t);
   end loop;
