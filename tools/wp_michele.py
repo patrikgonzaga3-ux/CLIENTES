@@ -105,13 +105,18 @@ def cmd_paginas(_):
         pagina += 1
 
 
+def eh_imagem(v):
+    """Só as imagens da prévia (pasta assets/img). Links como o do botão de compra (Greenn) ficam de fora."""
+    return isinstance(v, dict) and "/assets/img/" in str(v.get("url", ""))
+
+
 def imagens_usadas(versao="A"):
     dados = json.loads((PASTA_EL / f"desafio-7em7-{versao}.json").read_text(encoding="utf-8"))
     nomes = set()
 
     def andar(e):
         for v in e["settings"].values():
-            if isinstance(v, dict) and str(v.get("url", "")).startswith("http"):
+            if eh_imagem(v):
                 nomes.add(v["url"].rsplit("/", 1)[1])
         for f in e["elements"]:
             andar(f)
@@ -151,7 +156,7 @@ def layout_com_midia(versao):
 
     def andar(e):
         for v in e["settings"].values():
-            if isinstance(v, dict) and str(v.get("url", "")).startswith("http"):
+            if eh_imagem(v):
                 m = mapa[v["url"].rsplit("/", 1)[1]]
                 v["url"], v["id"], v["source"] = m["url"], m["id"], "library"
         for f in e["elements"]:
