@@ -12,7 +12,7 @@ Página de vendas do Desafio 7 em 7 (cliente Michele Salla, site `michelesalla.c
   E = C (avatar) com promessa e ruminações adaptadas da página Desafio Efeito Mounjaro da Michele
   ("Reduza até 7 cm de barriga sem gastar R$3.000 com canetinhas" + 6 ruminações).
 - **Versão F = página única que vai ao ar** (endereço `desafio7em7-a`, página 10264): base E + etiqueta
-  "Pensando em gastar R$500 por mês com canetinha?", promessa "Perca até 7 cm de barriga em 7 dias sem gastar
+  "Pensando em gastar R$500 por mês com canetinha?", promessa "Descubra como perder até 7 cm de barriga em 7 dias sem gastar
   R$500 por mês com canetinha", pílulas (Sem canetinha · 15 min · medidas), 6 ruminações mistas C+E, oferta com
   "ou 12x de R$ 6,89" (valor do checkout da Greenn) e "Mais de 7x mais barato que 1 mês de canetinha"; no início das 2 ofertas, o título "Descubra como perder até -7cm de barriga em 7 dias sem gastar R$500 por mês com canetinha". Ancoragem: canetinha ≈ R$500/mês (dado do Patrik).
 - **Link de compra (todas as versões):** https://payfast.greenn.com.br/199167/offer/1qsr9k (checkout Greenn, R$ 67 ou 12x R$ 6,89).

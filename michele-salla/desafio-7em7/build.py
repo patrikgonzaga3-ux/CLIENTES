@@ -11,7 +11,7 @@ AQUI = Path(__file__).parent
 PROMESSAS = {
     "A": '<h1 class="promessa">Perca <span class="marca">até 7cm de barriga em 7 dias</span> e volte a vestir as roupas que você ama'
          '<span class="depois">no Desafio 7 em 7</span></h1>',
-    "F": '<h1 class="promessa">Perca <span class="marca">até 7 cm de barriga em 7 dias</span> sem gastar R$500 por mês com canetinha'
+    "F": '<h1 class="promessa">Descubra como <span class="marca">perder até 7&nbsp;cm de barriga em 7 dias</span> sem gastar R$500 por mês com canetinha'
          '<span class="depois">no Desafio 7 em 7</span></h1>',
     "E": '<h1 class="promessa">Reduza <span class="marca">até 7 cm de barriga</span> sem gastar R$3.000 com canetinhas'
          '<span class="depois">no Desafio 7 em 7</span></h1>',

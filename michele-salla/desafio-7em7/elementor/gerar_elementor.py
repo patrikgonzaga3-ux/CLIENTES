@@ -234,7 +234,7 @@ def marca(t, fundo=AMARELO, cor=PRETO):
 PROMESSAS = {
     "A": (f'Perca {destaque("até 7cm de barriga em 7 dias", AMARELO)} e volte a vestir as roupas que você ama',
           "no Desafio 7 em 7"),
-    "F": (f'Perca {destaque("até 7 cm de barriga em 7 dias", AMARELO)} sem gastar R$500 por mês com canetinha',
+    "F": (f'Descubra como {destaque("perder até 7&nbsp;cm de barriga em 7 dias", AMARELO)} sem gastar R$500 por mês com canetinha',
           "no Desafio 7 em 7"),
     "E": (f'Reduza {destaque("até 7 cm de barriga", AMARELO)} sem gastar R$3.000 com canetinhas',
           "no Desafio 7 em 7"),
