@@ -176,6 +176,12 @@ def cmd_atualizar_pagina(a):
 
 def main():
     global ENV
+    # O terminal do Windows nem sempre aceita acentos: força UTF-8 para não travar no meio.
+    for fluxo in (sys.stdout, sys.stderr):
+        try:
+            fluxo.reconfigure(encoding="utf-8", errors="replace")
+        except Exception:
+            pass
     ap = argparse.ArgumentParser(description="WordPress da Michele Salla")
     sub = ap.add_subparsers(dest="cmd", required=True)
     sub.add_parser("teste")
