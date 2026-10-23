@@ -56,6 +56,11 @@ export default async function Lucro({ searchParams }: { searchParams: Promise<SP
   // por produto
   const prod = new Map<string, Compra[]>()
   for (const c of compras) { const k = c.produto_nome || c.produto_id || 'sem nome'; prod.set(k, [...(prod.get(k) ?? []), c]) }
+  // por gateway (Greenn, Hotmart… separados)
+  const NOME_GW: Record<string, string> = { greenn: 'Greenn', hotmart: 'Hotmart', kiwify: 'Kiwify' }
+  const gw = new Map<string, Compra[]>()
+  for (const c of compras) { const k = c.gateway || 'outro'; gw.set(k, [...(gw.get(k) ?? []), c]) }
+  const porGateway = [...gw.entries()].map(([k, l]) => ({ k: NOME_GW[k] ?? k, n: l.length, bruto: l.reduce((s, c) => s + c.valor, 0), liq: l.reduce((s, c) => s + (c.liquido ?? c.valor * (1 - cfg.taxaGatewayPct / 100)), 0), reemb: reemb.filter((r) => r.gateway === k).length })).sort((x, y) => y.bruto - x.bruto)
   const porProduto = [...prod.entries()].map(([k, l]) => ({ k, n: l.length, bruto: l.reduce((s, c) => s + c.valor, 0), liq: l.reduce((s, c) => s + (c.liquido ?? c.valor * (1 - cfg.taxaGatewayPct / 100)), 0) })).sort((x, y) => y.bruto - x.bruto)
 
   // mês a mês (6 meses)
@@ -78,7 +83,7 @@ export default async function Lucro({ searchParams }: { searchParams: Promise<SP
     else if (conta.roasEmpateComFixos != null && conta.roas < conta.roasEmpateComFixos) decisoes.push({ tipo: 'wait', txt: `O anúncio se paga (ROAS ${num2(conta.roas)} acima do empate de ${num2(conta.roasEmpate)}), mas ainda não cobre os custos fixos: para isso o ROAS precisa chegar a ${num2(conta.roasEmpateComFixos)} com esta verba.` })
   }
   if (proj != null && metaLucro > 0) decisoes.push({ tipo: proj >= metaLucro ? 'ok' : 'wait', txt: `No ritmo de hoje, o mês fecha com ${brl0(proj)} de lucro (meta ${brl0(metaLucro)}${proj < metaLucro ? `, faltam ${brl0(metaLucro - proj)}` : ''}).` })
-  if (!gastos.length) decisoes.push({ tipo: 'wait', txt: 'A planilha de gastos ainda não chegou: o lucro está sem custos fixos e impostos sobre o faturamento. Ver a aba Fontes de dados.' })
+  if (!gastos.length) decisoes.push({ tipo: 'wait', txt: 'Ainda não há gastos: o lucro está sem custos fixos e impostos sobre o faturamento. Inclua na aba Ajustes ou puxe da planilha.' })
   if (conta.liquidoEstimado) decisoes.push({ tipo: 'n', txt: `${int(conta.liquidoEstimado)} venda(s) sem o líquido do gateway: estimado com a taxa padrão de ${num2(cfg.taxaGatewayPct)}%.` })
 
   const linhaDRE = (nome: string, valor: number, opts: { forte?: boolean; sinal?: '−' | '=' | ''; sub?: string } = {}) => (
@@ -91,7 +96,7 @@ export default async function Lucro({ searchParams }: { searchParams: Promise<SP
 
   return (
     <Shell active="lucro">
-      <Titulo titulo="Lucro" sub="Quanto sobrou no bolso no período e por quê. Vendas pelo gateway, anúncios pelo Meta e custos pela planilha." />
+      <Titulo titulo="Lucro" sub="Quanto sobrou no bolso no período e por quê. Vendas pelo gateway, anúncios pelo Meta e custos pela aba Ajustes (ou pela planilha)." />
       <FiltroPeriodo per={per} presets={[['hoje', 'Hoje'], ['ontem', 'Ontem'], ['7d', '7 dias'], ['mes', 'Mês atual'], ['30d', '30 dias']]} />
       <ParaDecidir itens={decisoes.slice(0, 5)} />
 
@@ -106,7 +111,7 @@ export default async function Lucro({ searchParams }: { searchParams: Promise<SP
       </Grade>
 
       {mesAtual && (
-        <Secao titulo="Meta do mês" sub={metaLucro > 0 ? `Lucro até agora contra a meta de ${brl0(metaLucro)}; a projeção leva o ritmo de hoje até o fim do mês, já com os custos fixos do mês inteiro.` : 'Sem meta de lucro: preencha "Meta de lucro do mês" na aba Configuração da planilha.'}>
+        <Secao titulo="Meta do mês" sub={metaLucro > 0 ? `Lucro até agora contra a meta de ${brl0(metaLucro)}; a projeção leva o ritmo de hoje até o fim do mês, já com os custos fixos do mês inteiro.` : 'Sem meta de lucro: escreva a meta na aba Ajustes.'}>
           {metaLucro > 0 ? (
             <div className="rounded-2xl p-4" style={{ background: 'var(--pn-card)', border: '1px solid rgb(var(--pn-rgb) / .07)' }}>
               <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: 13.5, marginBottom: 8, flexWrap: 'wrap', gap: 8 }}>
@@ -145,6 +150,15 @@ export default async function Lucro({ searchParams }: { searchParams: Promise<SP
             <tbody>{porDia.map(({ d, ct }) => <tr key={d}><td style={tdL}>{d.split('-').reverse().slice(0, 2).join('/')}</td><td style={td}>{int(ct.vendas)}</td><td style={td}>{brl(ct.bruto)}</td><td style={td}>{brl(ct.anuncios)}</td><td style={td}>{x2(ct.roas)}</td><td style={td}>{ct.custoVenda == null ? '—' : brl(ct.custoVenda)}</td><td style={{ ...td, fontWeight: 700, color: corLucro(ct.contribuicao) }}>{brl(ct.contribuicao)}</td></tr>)}</tbody>
           </Tabela>
         ) : <Vazio>Sem dias no período.</Vazio>}
+      </Secao>
+
+      <Secao titulo="Por gateway" sub="Vendas de cada plataforma de pagamento, separadas.">
+        {porGateway.length ? (
+          <Tabela min={520}>
+            <thead><tr><th style={thL}>Gateway</th><th style={th}>Vendas</th><th style={th}>Faturamento</th><th style={th}>Líquido</th><th style={th}>% do faturamento</th><th style={th}>Devoluções</th></tr></thead>
+            <tbody>{porGateway.map((p) => <tr key={p.k}><td style={tdL}><strong>{p.k}</strong></td><td style={td}>{int(p.n)}</td><td style={td}>{brl(p.bruto)}</td><td style={td}>{brl(p.liq)}</td><td style={td}>{pct(p.bruto, conta.bruto, 1)}</td><td style={td}>{int(p.reemb)}</td></tr>)}</tbody>
+          </Tabela>
+        ) : <Vazio>Sem vendas no período.</Vazio>}
       </Secao>
 
       <Secao titulo="Por produto" sub="Principal, order bumps, upsell e assinatura, pelo nome do produto no gateway.">

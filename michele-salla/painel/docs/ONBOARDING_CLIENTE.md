@@ -142,3 +142,10 @@ Não mexa em checkout, preço ou campanha do cliente sem o meu OK.
 
 ## Histórico
 - 23/10/2026: modelo criado a partir do painel da Laura Rosa (Lucro, funil 3x, comportamento na página, recuperação).
+- 23/10/2026 (Michele Salla, pedido do Patrik): **aba Ajustes** para escrever e editar no painel meta de lucro, ticket,
+  funil 3x, imposto do Meta, taxa do gateway, WhatsApp e a lista de gastos (tabelas `pl_ajustes` e `pl_gastos_painel`
+  no schema). Ordem do que vale: Ajustes > planilha > `cliente.config.ts`. Com a lista do painel preenchida, o lucro usa
+  ela; a planilha vira só o ponto de partida (botão "Puxar da planilha"). Quadro **Por gateway** na aba Lucro (Greenn e
+  Hotmart separados). Arquivos: `lib/ajustes.ts`, `lib/planilha-ler.ts` (mesDeTexto, mesclarAjustes, validarAjuste,
+  validarGasto), `lib/config.ts`, `lib/dados.ts` (gastos), `app/painel/ajustes/page.tsx`, `app/painel/page.tsx`,
+  `tests/ajustes.test.mjs`. Levar ao modelo.

@@ -70,9 +70,12 @@ export async function metaAnuncios(diaIni: string, diaFim: string): Promise<Meta
   const r = await ler<Record<string, unknown>>('pl_meta_anuncios', `select=*&date=gte.${diaIni}&date=lte.${diaFim}&order=date.asc`)
   return r.map((x) => numM({ ...x, id: x.ad_id, nome: x.ad_name }))
 }
+/** Gastos do lucro: a lista editada no painel (aba Ajustes) quando existe; senão, a cópia da planilha. */
 export async function gastos(): Promise<Gasto[]> {
   if (emDemo()) return demo.gastos()
-  const r = await ler<Gasto>('pl_gastos', 'select=mes,grupo,descricao,tipo,valor,recorrente&order=mes.asc')
+  const cols = 'select=mes,grupo,descricao,tipo,valor,recorrente&order=mes.asc'
+  const doPainel = await ler<Gasto>('pl_gastos_painel', cols)
+  const r = doPainel.length ? doPainel : await ler<Gasto>('pl_gastos', cols)
   return r.map((g) => ({ ...g, valor: Number(g.valor) || 0 }))
 }
 export async function lerConfigPlanilha(): Promise<Record<string, string>> {

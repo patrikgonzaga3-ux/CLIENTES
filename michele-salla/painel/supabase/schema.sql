@@ -140,16 +140,37 @@ create table if not exists public.pl_fontes (
   nome text primary key, ultima_leitura timestamptz, ok boolean, detalhe text, linhas int
 );
 
+-- 8) Ajustes feitos no próprio painel (aba Ajustes). Valem mais que a planilha e que o cliente.config.ts.
+--    pl_ajustes: meta de lucro, ticket, impostos, funil 3x… (chave → valor).
+--    pl_gastos_painel: lista de gastos editável. Quando tem linhas, o lucro usa ela no lugar da cópia da planilha;
+--    a planilha serve para puxar os dados iniciais (botão "Puxar da planilha").
+create table if not exists public.pl_ajustes (
+  chave text primary key,
+  valor text,
+  editado_em timestamptz not null default now()
+);
+create table if not exists public.pl_gastos_painel (
+  id text primary key,
+  mes text not null,                       -- AAAA-MM
+  grupo text not null,
+  descricao text not null,
+  tipo text not null check (tipo in ('fixo', '%')),
+  valor numeric not null,
+  recorrente boolean not null default false,
+  origem text not null default 'painel',   -- painel | planilha
+  editado_em timestamptz not null default now()
+);
+
 -- Segurança: só o servidor (service_role) acessa.
 do $$ declare t text; begin
-  foreach t in array array['pl_eventos','pl_emails_teste','pl_abandonos','pl_meta_conjuntos','pl_meta_anuncios','pl_gastos','pl_config','pl_comportamento','pl_fontes'] loop
+  foreach t in array array['pl_eventos','pl_emails_teste','pl_abandonos','pl_meta_conjuntos','pl_meta_anuncios','pl_gastos','pl_config','pl_comportamento','pl_fontes','pl_ajustes','pl_gastos_painel'] loop
     execute format('alter table public.%I enable row level security', t);
     execute format('revoke all on public.%I from anon, authenticated', t);
   end loop;
 end $$;
 revoke all on public.pl_compras from anon, authenticated;
 
--- 8) Robô de hora em hora (Meta + planilha). Precisa das extensões pg_cron e pg_net (Supabase → Database →
+-- 9) Robô de hora em hora (Meta + planilha). Precisa das extensões pg_cron e pg_net (Supabase → Database →
 --    Extensions). Trocar <ENDERECO_DO_PAINEL> e <CRON_SECRET> e rodar à parte:
 -- select cron.schedule('painel-lucro-hora', '17 * * * *',
 --   $$ select net.http_get(url := 'https://<ENDERECO_DO_PAINEL>/api/cron?key=<CRON_SECRET>', timeout_milliseconds := 120000) $$);
