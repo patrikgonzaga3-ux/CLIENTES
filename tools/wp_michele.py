@@ -20,8 +20,8 @@ Comandos:
         cria a página como RASCUNHO, no modelo "Elementor Canvas", já com o layout do Elementor.
         Precisa do snippet "Claude · gravar Elementor por API" ativo no Code Snippets.
 
-    python tools/wp_michele.py atualizar-pagina --id 123 --versao A
-        regrava o layout do Elementor numa página que já existe
+    python tools/wp_michele.py atualizar-pagina --id 123 --versao C [--titulo "..."] [--slug desafio7em7-c]
+        regrava o layout do Elementor numa página que já existe (e, se pedir, troca título e endereço)
 
 Nada é publicado: as páginas são criadas como rascunho. Publicar é com o Patrik.
 Só usa a biblioteca padrão do Python (não precisa instalar nada).
@@ -171,6 +171,14 @@ def cmd_criar_pagina(a):
 
 
 def cmd_atualizar_pagina(a):
+    mudar = {}
+    if a.titulo:
+        mudar["title"] = a.titulo
+    if a.slug:
+        mudar["slug"] = a.slug
+    if mudar:
+        p = api("POST", f"/wp/v2/pages/{a.id}", mudar)
+        print(f'Título/endereço atualizados: {p["title"]["rendered"]} · {p.get("slug")} (status: {p["status"]})')
     gravar_layout(a.id, a.versao)
 
 
@@ -194,6 +202,8 @@ def main():
     u = sub.add_parser("atualizar-pagina")
     u.add_argument("--id", type=int, required=True)
     u.add_argument("--versao", choices="ABCD", required=True)
+    u.add_argument("--titulo")
+    u.add_argument("--slug")
     a = ap.parse_args()
     ENV = ler_env()
     {"teste": cmd_teste, "paginas": cmd_paginas, "subir-imagens": cmd_subir_imagens,
