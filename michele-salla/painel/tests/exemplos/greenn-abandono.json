@@ -1,0 +1,61 @@
+{
+ "lead": {
+  "id": 31498317,
+  "cpf": "ANONIMO",
+  "city": null,
+  "name": "ANONIMO",
+  "step": 5,
+  "email": "cliente.teste@exemplo.com",
+  "state": null,
+  "number": null,
+  "street": null,
+  "zip_code": null,
+  "cellphone": "5511999990000",
+  "created_at": "2026-10-22T10:38:57.000000Z",
+  "updated_at": "2026-10-22T10:45:00.000000Z",
+  "neighborhood": null
+ },
+ "type": "lead",
+ "event": "checkoutAbandoned",
+ "offer": {
+  "hash": "QN7gci",
+  "name": "ANONIMO",
+  "amount": 37,
+  "method": "CREDIT_CARD,TWO_CREDIT_CARDS,PIX,PAYPAL",
+  "created_at": "2026-07-03T11:35:09.000000Z"
+ },
+ "oferta": "PRODUTO EXEMPLO",
+ "seller": {
+  "id": 1,
+  "name": "ANONIMO"
+ },
+ "product": {
+  "id": 181143,
+  "name": "ANONIMO",
+  "type": "TRANSACTION",
+  "trial": null,
+  "amount": 37,
+  "method": "CREDIT_CARD,TWO_CREDIT_CARDS,PIX,PAYPAL",
+  "period": 30,
+  "is_active": 1,
+  "created_at": "2026-07-03T11:35:09.000000Z",
+  "deleted_at": null,
+  "updated_at": "2026-10-11T14:26:02.000000Z",
+  "description": "ANONIMO",
+  "url_callback": null,
+  "allow_proposal": 0,
+  "thank_you_page": "PRODUTO EXEMPLO",
+  "proposal_minimum": 0,
+  "affiliation_public": 1,
+  "affiliation_proposal": 1,
+  "affiliation_approbation": 1
+ },
+ "currency": null,
+ "affiliate": null,
+ "currency_id": null,
+ "productMetas": {
+  "opportunity_coupon": "{\"coupon_id\":71506}"
+ },
+ "link_checkout": "ANONIMO",
+ "proposalMetas": []
+}

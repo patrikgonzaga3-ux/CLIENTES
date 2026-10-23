@@ -1,0 +1,147 @@
+{
+ "sale": {
+  "id": 10273468,
+  "fee": 0,
+  "type": "TRANSACTION",
+  "total": 67,
+  "amount": 67,
+  "coupon": null,
+  "method": "GOOGLE_PAY",
+  "qrcode": null,
+  "status": "refunded",
+  "bump_id": null,
+  "paid_at": "2026-10-22T22:31:10.000000Z",
+  "client_id": 6566800,
+  "imgQrcode": null,
+  "seller_id": 423571,
+  "boleto_url": null,
+  "created_at": "2026-10-22T22:31:08.000000Z",
+  "updated_at": "2026-10-22T22:37:13.000000Z",
+  "proposal_id": null,
+  "installments": 1,
+  "is_smart_sale": 0,
+  "boleto_barcode": null,
+  "seller_balance": 0,
+  "shipping_amount": null,
+  "subscription_id": null,
+  "base_currency_id": 1,
+  "shipping_selected": null,
+  "boleto_expiration_date": null
+ },
+ "type": "sale",
+ "event": "saleUpdated",
+ "offer": {
+  "hash": "VMpf2q",
+  "name": "ANONIMO",
+  "amount": 67,
+  "method": "CREDIT_CARD,TWO_CREDIT_CARDS,PIX,PAYPAL,GOOGLE_PAY,APPLE_PAY",
+  "created_at": "2026-10-21T22:33:31.000000Z"
+ },
+ "client": {
+  "id": 6566800,
+  "uf": "",
+  "city": "ANONIMO",
+  "name": "ANONIMO",
+  "email": "cliente.teste@exemplo.com",
+  "number": "ANONIMO",
+  "street": "ANONIMO",
+  "zipcode": null,
+  "cpf_cnpj": "ANONIMO",
+  "document": "ANONIMO",
+  "cellphone": "5511999990000",
+  "complement": "ANONIMO",
+  "created_at": "2026-10-22T22:31:08.000000Z",
+  "updated_at": "2026-10-22T22:31:08.000000Z",
+  "neighborhood": "ANONIMO",
+  "document_type": "ANONIMO"
+ },
+ "oferta": "PRODUTO EXEMPLO",
+ "seller": {
+  "id": 1,
+  "name": "ANONIMO"
+ },
+ "sf_trk": null,
+ "product": {
+  "id": 199632,
+  "name": "ANONIMO",
+  "type": "TRANSACTION",
+  "trial": null,
+  "amount": 67,
+  "method": "CREDIT_CARD,TWO_CREDIT_CARDS,PIX,PAYPAL,GOOGLE_PAY,APPLE_PAY",
+  "period": 30,
+  "is_active": 1,
+  "created_at": "2026-10-21T22:33:31.000000Z",
+  "deleted_at": null,
+  "updated_at": "2026-10-21T22:39:40.000000Z",
+  "description": "ANONIMO",
+  "fiscal_code": null,
+  "url_callback": null,
+  "allow_proposal": 0,
+  "thank_you_page": "PRODUTO EXEMPLO",
+  "category_fiscal": "SERVICE",
+  "proposal_minimum": 0,
+  "affiliation_public": 1,
+  "affiliation_proposal": 1,
+  "affiliation_approbation": 1
+ },
+ "currency": "BRL",
+ "affiliate": null,
+ "oldStatus": "refunded",
+ "saleMetas": [
+  {
+   "id": 72319665,
+   "sale_id": 10273468,
+   "meta_key": "reuse_credit_card",
+   "created_at": "2026-10-22T22:31:08.000000Z",
+   "meta_value": "0",
+   "updated_at": "2026-10-22T22:31:08.000000Z"
+  },
+  {
+   "id": 72319666,
+   "sale_id": 10273468,
+   "meta_key": "assoc_ticket",
+   "created_at": "2026-10-22T22:31:08.000000Z",
+   "meta_value": "0",
+   "updated_at": "2026-10-22T22:31:08.000000Z"
+  },
+  {
+   "id": 72319667,
+   "sale_id": 10273468,
+   "meta_key": "fbp",
+   "created_at": "2026-10-22T22:31:08.000000Z",
+   "meta_value": "ANONIMO",
+   "updated_at": "2026-10-22T22:31:08.000000Z"
+  },
+  {
+   "id": 72319668,
+   "sale_id": 10273468,
+   "meta_key": "tid",
+   "created_at": "2026-10-22T22:31:10.000000Z",
+   "meta_value": "28983627215N7IGEMUNE",
+   "updated_at": "2026-10-22T22:31:10.000000Z"
+  },
+  {
+   "id": 72319669,
+   "sale_id": 10273468,
+   "meta_key": "authorization",
+   "created_at": "2026-10-22T22:31:10.000000Z",
+   "meta_value": "310964",
+   "updated_at": "2026-10-22T22:31:10.000000Z"
+  },
+  {
+   "id": 72319670,
+   "sale_id": 10273468,
+   "meta_key": "brand",
+   "created_at": "2026-10-22T22:31:10.000000Z",
+   "meta_value": "mastercard",
+   "updated_at": "2026-10-22T22:31:10.000000Z"
+  }
+ ],
+ "currency_id": 1,
+ "productMetas": {
+  "opportunity_coupon": "{\"coupon_id\":71506}"
+ },
+ "currentStatus": "refunded",
+ "proposalMetas": [],
+ "client_has_contract_id": null
+}

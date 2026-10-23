@@ -1,0 +1,8 @@
+Mês,Grupo,Descrição,Tipo,Valor,Recorrente
+2026-11,Equipe,Gestor de tráfego,fixo,"2.500,00",sim
+2026-11,Equipe,Editor de vídeo,fixo,"1.200,00",sim
+2026-11,Ferramentas,Hospedagem e domínio,fixo,"150,00",sim
+2026-11,Ferramentas,Ferramenta de e-mail,fixo,"99,00",sim
+2026-11,Impostos,Simples Nacional,%,6,sim
+2026-11,Comissões,Comissão da vendedora,%,10,sim
+2026-11,Marketing fora do Meta,Influenciadora (só este mês),fixo,"800,00",não

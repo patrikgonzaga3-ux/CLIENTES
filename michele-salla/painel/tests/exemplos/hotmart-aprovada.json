@@ -1,0 +1,110 @@
+{
+ "id": "2b813ad9-b9e5-4684-8c8f-a9b73fe62fb9",
+ "data": {
+  "buyer": {
+   "name": "ANONIMO",
+   "email": "cliente.teste@exemplo.com",
+   "ucode": "ANONIMO",
+   "address": {
+    "city": "ANONIMO",
+    "state": "SC",
+    "number": "ANONIMO",
+    "address": "ANONIMO",
+    "country": "Brasil",
+    "zipcode": "ANONIMO",
+    "complement": "ANONIMO",
+    "country_iso": "BR",
+    "neighborhood": "ANONIMO"
+   },
+   "document": "ANONIMO",
+   "last_name": "ANONIMO",
+   "first_name": "ANONIMO",
+   "document_type": "ANONIMO",
+   "checkout_phone": "5511999990000",
+   "checkout_phone_code": "5511999990000"
+  },
+  "product": {
+   "id": 5835796,
+   "name": "ANONIMO",
+   "ucode": "ANONIMO",
+   "support_email": "cliente.teste@exemplo.com",
+   "warranty_date": "2026-10-30T00:00:00Z",
+   "has_co_production": false,
+   "product_format_id": 8,
+   "is_physical_product": false
+  },
+  "producer": {
+   "name": "ANONIMO"
+  },
+  "purchase": {
+   "offer": {
+    "code": "s97oneau",
+    "description": "ANONIMO"
+   },
+   "price": {
+    "value": 385.99,
+    "currency_value": "BRL"
+   },
+   "status": "APPROVED",
+   "payment": {
+    "type": "CREDIT_CARD",
+    "installments_number": 12
+   },
+   "is_funnel": false,
+   "full_price": {
+    "value": 479.04,
+    "currency_value": "BRL"
+   },
+   "invoice_by": "SELLER",
+   "order_bump": {
+    "is_order_bump": false
+   },
+   "order_date": 1792759102000,
+   "transaction": "HP1341281981",
+   "approved_date": 1792759105000,
+   "business_model": "I",
+   "checkout_country": {
+    "iso": "BR",
+    "name": "ANONIMO"
+   },
+   "date_next_charge": 1824292800000,
+   "recurrence_number": 2,
+   "original_offer_price": {
+    "value": 385.99,
+    "currency_value": "BRL"
+   },
+   "subscription_anticipation_purchase": false
+  },
+  "affiliates": [
+   {
+    "name": "ANONIMO",
+    "affiliate_code": ""
+   }
+  ],
+  "commissions": [
+   {
+    "value": 36.84,
+    "source": "MARKETPLACE",
+    "currency_value": "BRL"
+   },
+   {
+    "value": 349.15,
+    "source": "PRODUCER",
+    "currency_value": "BRL"
+   }
+  ],
+  "subscription": {
+   "plan": {
+    "id": 1122759,
+    "name": "ANONIMO"
+   },
+   "status": "ACTIVE",
+   "subscriber": {
+    "code": "7Y6JIUGD"
+   }
+  }
+ },
+ "event": "PURCHASE_APPROVED",
+ "version": "2.0.0",
+ "creation_date": 1792759206432
+}

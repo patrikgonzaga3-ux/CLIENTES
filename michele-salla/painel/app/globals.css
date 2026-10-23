@@ -1,0 +1,33 @@
+@import 'tailwindcss';
+
+:root {
+  --o: #F57100;
+  --g: #1C873C;
+  --gd: #12301f;
+  --ink: #1A1A1A;
+  --sub: #555;
+  --mute: #888;
+  --pale: #F7F5F2;
+  --font-display: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-body: ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { overflow-x: hidden; }
+body { margin: 0; background: var(--pale); color: var(--ink); font-family: var(--font-body); -webkit-font-smoothing: antialiased; }
+.font-display { font-family: var(--font-display); letter-spacing: -0.01em; }
+
+/* Tema do painel: claro / escuro / auto (segue o aparelho), pelo cookie pl_tema. */
+.pn { --pn-card: #fff; --pn-rgb: 0 0 0; --pn-verm: #c0392b; --pn-amar: #b9770e; color-scheme: light; color: var(--ink); }
+.pn[data-tema="escuro"] { --pale: #121413; --pn-card: #1c1f1d; --ink: #ECEBE8; --sub: #B4B1AC; --mute: #8D8A85; --g: #2E9E50; --gd: #0b2614; --pn-rgb: 255 255 255; --pn-verm: #e5574a; --pn-amar: #c98a14; color-scheme: dark; }
+@media (prefers-color-scheme: dark) {
+  .pn[data-tema="auto"] { --pale: #121413; --pn-card: #1c1f1d; --ink: #ECEBE8; --sub: #B4B1AC; --mute: #8D8A85; --g: #2E9E50; --gd: #0b2614; --pn-rgb: 255 255 255; --pn-verm: #e5574a; --pn-amar: #c98a14; color-scheme: dark; }
+  body:has(.pn[data-tema="auto"]) { background: #121413; }
+}
+body:has(.pn[data-tema="escuro"]) { background: #121413; }
+
+/* Tabelas no celular: 1ª coluna fixa ao arrastar e aviso de arrastar. */
+.pn-arraste { display: none; }
+@media (max-width: 640px) {
+  .pn-tab table th:first-child, .pn-tab table td:first-child { position: sticky; left: 0; z-index: 1; min-width: 132px; max-width: 180px; background: var(--pn-card); box-shadow: 1px 0 0 rgb(var(--pn-rgb) / .1); }
+  .pn-arraste { display: block; margin-top: 4px; font-size: 12px; color: var(--mute); text-align: right; }
+}

@@ -1,0 +1,10 @@
+node_modules
+.next
+.env
+.env.local
+*.tsbuildinfo
+next-env.d.ts
+
+# exemplos sem dados reais (o .gitignore de fora bloqueia .env* e *.csv)
+!.env.example
+!modelo/*.csv

@@ -1,0 +1,227 @@
+{
+ "sale": {
+  "id": 10277230,
+  "fee": 2.48,
+  "type": "TRANSACTION",
+  "total": 38.89,
+  "amount": 37,
+  "coupon": null,
+  "method": "CREDIT_CARD",
+  "qrcode": null,
+  "status": "paid",
+  "bump_id": null,
+  "paid_at": "2026-10-23T12:14:37.000000Z",
+  "client_id": 6569660,
+  "imgQrcode": null,
+  "seller_id": 423571,
+  "boleto_url": null,
+  "created_at": "2026-10-23T12:14:34.000000Z",
+  "updated_at": "2026-10-23T12:14:37.000000Z",
+  "proposal_id": null,
+  "installments": 2,
+  "is_smart_sale": 0,
+  "boleto_barcode": null,
+  "seller_balance": 34.52,
+  "shipping_amount": null,
+  "subscription_id": null,
+  "base_currency_id": 1,
+  "shipping_selected": null,
+  "boleto_expiration_date": null
+ },
+ "type": "sale",
+ "event": "saleUpdated",
+ "offer": {
+  "hash": "QN7gci",
+  "name": "ANONIMO",
+  "amount": 37,
+  "method": "CREDIT_CARD,TWO_CREDIT_CARDS,PIX,PAYPAL",
+  "created_at": "2026-07-03T11:35:09.000000Z"
+ },
+ "client": {
+  "id": 6569660,
+  "uf": "",
+  "city": "ANONIMO",
+  "name": "ANONIMO",
+  "email": "cliente.teste@exemplo.com",
+  "number": "ANONIMO",
+  "street": "ANONIMO",
+  "zipcode": null,
+  "cpf_cnpj": "ANONIMO",
+  "document": "ANONIMO",
+  "cellphone": "5511999990000",
+  "complement": "ANONIMO",
+  "created_at": "2026-10-23T12:14:34.000000Z",
+  "updated_at": "2026-10-23T12:14:34.000000Z",
+  "neighborhood": "ANONIMO",
+  "document_type": "ANONIMO"
+ },
+ "oferta": "PRODUTO EXEMPLO",
+ "seller": {
+  "id": 1,
+  "name": "ANONIMO"
+ },
+ "sf_trk": null,
+ "product": {
+  "id": 181143,
+  "name": "ANONIMO",
+  "type": "TRANSACTION",
+  "trial": null,
+  "amount": 37,
+  "method": "CREDIT_CARD,TWO_CREDIT_CARDS,PIX,PAYPAL",
+  "period": 30,
+  "is_active": 1,
+  "created_at": "2026-07-03T11:35:09.000000Z",
+  "deleted_at": null,
+  "updated_at": "2026-10-11T14:26:02.000000Z",
+  "description": "ANONIMO",
+  "fiscal_code": null,
+  "url_callback": null,
+  "allow_proposal": 0,
+  "thank_you_page": "PRODUTO EXEMPLO",
+  "category_fiscal": "SERVICE",
+  "proposal_minimum": 0,
+  "affiliation_public": 1,
+  "affiliation_proposal": 1,
+  "affiliation_approbation": 1
+ },
+ "currency": "BRL",
+ "affiliate": null,
+ "oldStatus": "paid",
+ "saleMetas": [
+  {
+   "id": 72371901,
+   "sale_id": 10277230,
+   "meta_key": "reuse_credit_card",
+   "created_at": "2026-10-23T12:14:34.000000Z",
+   "meta_value": "1",
+   "updated_at": "2026-10-23T12:14:34.000000Z"
+  },
+  {
+   "id": 72371902,
+   "sale_id": 10277230,
+   "meta_key": "assoc_ticket",
+   "created_at": "2026-10-23T12:14:34.000000Z",
+   "meta_value": "0",
+   "updated_at": "2026-10-23T12:14:34.000000Z"
+  },
+  {
+   "id": 72371903,
+   "sale_id": 10277230,
+   "meta_key": "brand",
+   "created_at": "2026-10-23T12:14:34.000000Z",
+   "meta_value": "Mastercard",
+   "updated_at": "2026-10-23T12:14:34.000000Z"
+  },
+  {
+   "id": 72371904,
+   "sale_id": 10277230,
+   "meta_key": "ch_id",
+   "created_at": "2026-10-23T12:14:34.000000Z",
+   "meta_value": "ANONIMO",
+   "updated_at": "2026-10-23T12:14:34.000000Z"
+  },
+  {
+   "id": 72371905,
+   "sale_id": 10277230,
+   "meta_key": "b_id_1",
+   "created_at": "2026-10-23T12:14:34.000000Z",
+   "meta_value": "ANONIMO",
+   "updated_at": "2026-10-23T12:14:34.000000Z"
+  },
+  {
+   "id": 72371906,
+   "sale_id": 10277230,
+   "meta_key": "b_offer_1",
+   "created_at": "2026-10-23T12:14:34.000000Z",
+   "meta_value": "TkxWcG",
+   "updated_at": "2026-10-23T12:14:34.000000Z"
+  },
+  {
+   "id": 72371907,
+   "sale_id": 10277230,
+   "meta_key": "b_id_2",
+   "created_at": "2026-10-23T12:14:34.000000Z",
+   "meta_value": "ANONIMO",
+   "updated_at": "2026-10-23T12:14:34.000000Z"
+  },
+  {
+   "id": 72371908,
+   "sale_id": 10277230,
+   "meta_key": "b_offer_2",
+   "created_at": "2026-10-23T12:14:34.000000Z",
+   "meta_value": "riJmPB",
+   "updated_at": "2026-10-23T12:14:34.000000Z"
+  },
+  {
+   "id": 72371909,
+   "sale_id": 10277230,
+   "meta_key": "utm_source",
+   "created_at": "2026-10-23T12:14:34.000000Z",
+   "meta_value": "efeito-lipo-quiz",
+   "updated_at": "2026-10-23T12:14:34.000000Z"
+  },
+  {
+   "id": 72371910,
+   "sale_id": 10277230,
+   "meta_key": "utm_term",
+   "created_at": "2026-10-23T12:14:34.000000Z",
+   "meta_value": "120252085236480200",
+   "updated_at": "2026-10-23T12:14:34.000000Z"
+  },
+  {
+   "id": 72371911,
+   "sale_id": 10277230,
+   "meta_key": "utm_content",
+   "created_at": "2026-10-23T12:14:34.000000Z",
+   "meta_value": "1792757960113_179275773243712",
+   "updated_at": "2026-10-23T12:14:34.000000Z"
+  },
+  {
+   "id": 72371912,
+   "sale_id": 10277230,
+   "meta_key": "fbclid",
+   "created_at": "2026-10-23T12:14:34.000000Z",
+   "meta_value": "ANONIMO",
+   "updated_at": "2026-10-23T12:14:34.000000Z"
+  },
+  {
+   "id": 72371913,
+   "sale_id": 10277230,
+   "meta_key": "fbc",
+   "created_at": "2026-10-23T12:14:34.000000Z",
+   "meta_value": "fb.2.1787079601878.PAcGRvZgJmZGlkFlDLdVL7WyJ3UX5_nrFfSTKtwXHjAgJleHRuA2FlbQEwAGFkaWQBqzmY1qaIRnNydGMGYXBwX2lkDzEyNDAyNDU3NDI4NzQxNAABpzqFcipRA_pEcBwIxXxZFiTnl3nvc5d-Uu6Mr3udKo-1mm9rEMNskG3x-deu_aem_6pzX-2ml3wh8qqNYr2QBqg.AQYAAQMC",
+   "updated_at": "2026-10-23T12:14:34.000000Z"
+  },
+  {
+   "id": 72371914,
+   "sale_id": 10277230,
+   "meta_key": "fbp",
+   "created_at": "2026-10-23T12:14:34.000000Z",
+   "meta_value": "ANONIMO",
+   "updated_at": "2026-10-23T12:14:34.000000Z"
+  },
+  {
+   "id": 72371928,
+   "sale_id": 10277230,
+   "meta_key": "tid",
+   "created_at": "2026-10-23T12:14:37.000000Z",
+   "meta_value": "28983627215N8GAPFNJE",
+   "updated_at": "2026-10-23T12:14:37.000000Z"
+  },
+  {
+   "id": 72371929,
+   "sale_id": 10277230,
+   "meta_key": "authorization",
+   "created_at": "2026-10-23T12:14:37.000000Z",
+   "meta_value": "427069",
+   "updated_at": "2026-10-23T12:14:37.000000Z"
+  }
+ ],
+ "currency_id": 1,
+ "productMetas": {
+  "opportunity_coupon": "{\"coupon_id\":71506}"
+ },
+ "currentStatus": "paid",
+ "proposalMetas": [],
+ "client_has_contract_id": null
+}
