@@ -189,6 +189,16 @@ Os M da pasta "MICHELE LOW" são esses mesmos vídeos. Mapa conferido pelos quad
     - webhook segue só com o teste de exemplo da Greenn (nenhuma compra real chegou);
     - extensão do Chrome desconectada: Greenn, wp-admin (senha "Claude nuvem"), vídeos M 1–M 5 e app do Meta não feitos;
     - vídeos M ainda não estão na conta de anúncio nem no PC.
+  - **Refeito com o Chrome (23/10, noite):**
+    - Greenn: a compra de teste (fatura 10278251, 23/10 11:03) está **PAGA**, líquido R$ 62,66.
+      Mesmo paga, não chegou no webhook nem virou Purchase no pixel → o problema é a configuração da Greenn.
+    - Greenn: aviso "Ação pendente: cadastre sua conta bancária" → conta bancária da Michele **não** cadastrada.
+    - Greenn: não consegui abrir as configurações do produto (menu "Opções" barrado pela permissão automática;
+      endereço direto dá 404). Webhook e pixel do 199167 seguem **sem conferir**.
+    - WordPress: senha de aplicação "Claude nuvem" criada (o Patrik copiou da tela; vai para WP_SENHA_APP da nuvem).
+    - Meta: portfólio 658778173061454 hoje se chama "BM 01 Matriz - Michele Seca Barriga"; **nenhum app** adicionado
+      (o "Painel de Lucro Michele" não existe). A pasta "MICHELE LOW" não está na Biblioteca de mídia desse portfólio.
+    - Vercel "Ptk midias" abre no Chrome; CRON_SECRET e token não foram colados (o Claude não digita segredo em campo).
 
   - **Claude da nuvem (23/10, noite):**
     - 5 vídeos subidos do Drive;
