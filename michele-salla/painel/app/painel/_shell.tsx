@@ -2,11 +2,12 @@
 import type { ReactNode } from 'react'
 import { cookies } from 'next/headers'
 import { CLIENTE } from '@/cliente.config'
-import { logado, senhaConfigurada } from '@/lib/auth'
+import { instalacaoConfigurada, quem } from '@/lib/auth'
 import { bancoConfigurado, falhasDeLeitura } from '@/lib/db'
 import { emDemo } from '@/lib/dados'
 import Atualizar from './_ui/atualizar'
 import Login from './_ui/login'
+import Sair from './_ui/sair'
 import TemaBotao, { type Tema } from './_ui/tema'
 
 const ABAS: [key: string, label: string, href: string][] = [
@@ -15,11 +16,12 @@ const ABAS: [key: string, label: string, href: string][] = [
   ['pagina', 'Comportamento na página', '/painel/pagina'],
   ['recuperar', 'Recuperar vendas', '/painel/recuperar'],
   ['ajustes', 'Ajustes', '/painel/ajustes'],
+  ['acessos', 'Acessos', '/painel/acessos'],
   ['fontes', 'Fontes de dados', '/painel/fontes'],
 ]
 
 export async function porta() {
-  if (!(await logado())) return <Login nome={CLIENTE.nome} configurada={senhaConfigurada()} demo={emDemo()} />
+  if (!(await quem())) return <Login nome={CLIENTE.nome} configurada={instalacaoConfigurada()} demo={emDemo()} />
   return null
 }
 
@@ -27,6 +29,8 @@ export async function Shell({ active, children }: { active: string; children: Re
   const salvo = (await cookies()).get('pl_tema')?.value
   const tema: Tema = salvo === 'claro' || salvo === 'escuro' ? salvo : 'auto'
   const falhas = falhasDeLeitura()
+  const eu = await quem()
+  const abas = ABAS.filter(([k]) => k !== 'acessos' || eu?.papel === 'admin')
   return (
     <div className="pn min-h-[100dvh] md:flex" data-tema={tema} style={{ background: 'var(--pale)' }}>
       <aside className="md:w-56 md:shrink-0 md:h-[100dvh] md:sticky md:top-0 md:overflow-y-auto z-20" style={{ background: 'var(--gd)', color: '#fff' }}>
@@ -35,8 +39,9 @@ export async function Shell({ active, children }: { active: string; children: Re
           <div style={{ fontSize: 11.5, fontWeight: 600, color: 'rgba(255,255,255,.6)', marginTop: 2 }}>{CLIENTE.nome}</div>
         </a>
         <div className="px-5 pb-3"><TemaBotao inicial={tema} /></div>
+        {eu && <div className="px-5 pb-3" style={{ fontSize: 11.5, color: 'rgba(255,255,255,.65)', overflowWrap: 'anywhere' }}>{eu.email} · <Sair /></div>}
         <nav className="px-3 pb-3 flex md:block gap-1 overflow-x-auto">
-          {ABAS.map(([k, l, h]) => (
+          {abas.map(([k, l, h]) => (
             <a key={k} href={h} className="block rounded-lg px-3 py-2 whitespace-nowrap" style={{ fontSize: 13.5, fontWeight: 700, color: active === k ? '#000' : 'rgba(255,255,255,.85)', background: active === k ? 'var(--o)' : 'transparent', textDecoration: 'none' }}>{l}</a>
           ))}
         </nav>

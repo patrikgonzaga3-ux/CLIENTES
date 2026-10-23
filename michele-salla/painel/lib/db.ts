@@ -45,6 +45,15 @@ export async function gravar(tabela: string, linhas: object | object[], onConfli
   return { ok: true }
 }
 
+/** Muda colunas das linhas que passam no filtro PostgREST (ex.: "email=eq.x"). Devolve quantas mudou (-1 = erro). */
+export async function atualizar(tabela: string, filtro: string, dados: object): Promise<number> {
+  if (!bancoConfigurado()) return -1
+  const r = await fetch(`${URL_()}/rest/v1/${tabela}?${filtro}`, { method: 'PATCH', headers: h({ Prefer: 'return=representation' }), body: JSON.stringify(dados), cache: 'no-store' }).catch(() => null)
+  if (!r?.ok) return -1
+  const linhas = (await r.json().catch(() => [])) as unknown[]
+  return Array.isArray(linhas) ? linhas.length : 0
+}
+
 /** Apaga linhas por filtro PostgREST (ex.: "id=not.is.null"). */
 export async function apagar(tabela: string, filtro: string): Promise<boolean> {
   if (!bancoConfigurado()) return false

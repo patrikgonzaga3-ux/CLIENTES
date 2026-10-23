@@ -161,16 +161,37 @@ create table if not exists public.pl_gastos_painel (
   editado_em timestamptz not null default now()
 );
 
+-- 9) Quem entra no painel: e-mail + senha de cada pessoa (só o hash scrypt) e convites (só o hash do link).
+--    O administrador (ADMIN_EMAIL) cria a senha no 1º acesso com o código de instalação (PAINEL_SENHA) e convida os outros.
+create table if not exists public.pl_usuarios (
+  email text primary key,
+  nome text,
+  papel text not null default 'convidado' check (papel in ('admin', 'convidado')),
+  senha_hash text not null,
+  criado_em timestamptz not null default now(),
+  ultimo_acesso timestamptz
+);
+create table if not exists public.pl_convites (
+  token_hash text primary key,
+  criado_por text not null,
+  nota text,
+  email_destino text,                      -- preenchido = link de troca de senha daquela pessoa
+  criado_em timestamptz not null default now(),
+  expira_em timestamptz not null,
+  usado_em timestamptz,
+  usado_por text
+);
+
 -- Segurança: só o servidor (service_role) acessa.
 do $$ declare t text; begin
-  foreach t in array array['pl_eventos','pl_emails_teste','pl_abandonos','pl_meta_conjuntos','pl_meta_anuncios','pl_gastos','pl_config','pl_comportamento','pl_fontes','pl_ajustes','pl_gastos_painel'] loop
+  foreach t in array array['pl_eventos','pl_emails_teste','pl_abandonos','pl_meta_conjuntos','pl_meta_anuncios','pl_gastos','pl_config','pl_comportamento','pl_fontes','pl_ajustes','pl_gastos_painel','pl_usuarios','pl_convites'] loop
     execute format('alter table public.%I enable row level security', t);
     execute format('revoke all on public.%I from anon, authenticated', t);
   end loop;
 end $$;
 revoke all on public.pl_compras from anon, authenticated;
 
--- 9) Robô de hora em hora (Meta + planilha). Precisa das extensões pg_cron e pg_net (Supabase → Database →
+-- 10) Robô de hora em hora (Meta + planilha). Precisa das extensões pg_cron e pg_net (Supabase → Database →
 --    Extensions). Trocar <ENDERECO_DO_PAINEL> e <CRON_SECRET> e rodar à parte:
 -- select cron.schedule('painel-lucro-hora', '17 * * * *',
 --   $$ select net.http_get(url := 'https://<ENDERECO_DO_PAINEL>/api/cron?key=<CRON_SECRET>', timeout_milliseconds := 120000) $$);

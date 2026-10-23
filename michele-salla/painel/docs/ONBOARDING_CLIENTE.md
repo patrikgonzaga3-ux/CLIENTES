@@ -149,3 +149,10 @@ Não mexa em checkout, preço ou campanha do cliente sem o meu OK.
   Hotmart separados). Arquivos: `lib/ajustes.ts`, `lib/planilha-ler.ts` (mesDeTexto, mesclarAjustes, validarAjuste,
   validarGasto), `lib/config.ts`, `lib/dados.ts` (gastos), `app/painel/ajustes/page.tsx`, `app/painel/page.tsx`,
   `tests/ajustes.test.mjs`. Levar ao modelo.
+- 23/10/2026 (Michele Salla, pedido do Patrik): **login por pessoa**. Cada um entra com e-mail e senha própria
+  (`pl_usuarios`, senha só em hash scrypt). O administrador (`ADMIN_EMAIL`, padrão patrikgonzaga2@gmail.com) cria a senha
+  no 1º acesso com o código de instalação (`PAINEL_SENHA`) e, na aba **Acessos** (só ele vê), gera links de convite de uso
+  único (7 dias, `pl_convites` guarda só o hash), links de troca de senha (presos ao e-mail da pessoa) e remove acessos.
+  Sessão assinada de 60 dias; quem é removido sai na hora; 5 erros de senha travam o e-mail por 15 min. Arquivos:
+  `lib/senhas.ts`, `lib/usuarios.ts`, `lib/auth.ts`, `lib/db.ts` (atualizar), `app/api/entrar`, `app/api/convite`,
+  `app/painel/convite`, `app/painel/acessos`, `app/painel/_ui/login.tsx` e `sair.tsx`, `tests/senhas.test.mjs`. Levar ao modelo.
