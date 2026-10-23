@@ -60,3 +60,6 @@ O domínio da Michele está na TurboCloud. A página do Desafio fica dentro do s
   - Criativo: imagem ou vídeo; **sem texto** (o Patrik nunca usa texto principal/título); link = página de vendas.
 - **Parâmetros de URL** em todo anúncio: `utm_source=FB&utm_medium={{placement}}&utm_campaign={{campaign.name}}&utm_content={{ad.name}}&utm_term={{adset.id}}`
 - Nada é criado ou ligado na conta de anúncio sem o OK do Patrik para a estrutura mostrada (nomes, verba, público, criativos).
+
+## Passagem de bastão
+Para retomar o trabalho da Michele (campanha, painel, pendências), leia `michele-salla/PASSAGEM_BASTAO.md` primeiro.
