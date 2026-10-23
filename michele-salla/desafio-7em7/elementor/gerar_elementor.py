@@ -16,7 +16,7 @@ from pathlib import Path
 
 AQUI = Path(__file__).parent
 BASE = os.environ.get("IMG_BASE", "https://clientes-phi-six.vercel.app/michele-salla/desafio-7em7/assets/img/")
-LINK_COMPRA = "#LINK-DE-COMPRA"
+LINK_COMPRA = "https://payfast.greenn.com.br/199167/offer/1qsr9k"  # checkout Greenn (aprovado pelo Patrik em 23/10)
 
 ROXO, VIOLETA, ROSA, ROSA_CLARO = "#9E047C", "#8D29F2", "#D448C2", "#FF9DF4"
 ROSA_FUNDO, AMARELO, PRETO, BRANCO = "#FFF3FD", "#FFFC00", "#252525", "#FFFFFF"
@@ -113,7 +113,7 @@ def bloco(titulo, filhos, fundo=None, gradiente=None, onda=None, ancora=None, **
         st.update({"background_background": "classic", "background_color": fundo})
     if onda:
         st.update({"shape_divider_bottom": "waves", "shape_divider_bottom_color": onda,
-                   "shape_divider_bottom_height": px(60), "shape_divider_bottom_height_mobile": px(40)})
+                   "shape_divider_bottom_height": px(60), "shape_divider_bottom_height_mobile": px(30)})
     if ancora:
         st["_element_id"] = ancora
     st.update(s)
@@ -153,7 +153,7 @@ def botao(rotulo="Sim, quero aproveitar a oferta"):
          "align": "center", "size": "lg", "selected_icon": {"value": "fas fa-arrow-right", "library": "fa-solid"},
          "icon_align": "right", "icon_indent": px(10), "background_color": AMARELO, "button_text_color": "#000000",
          "hover_color": "#000000", "button_background_hover_color": "#F2EF00",
-         "border_radius": caixa(50), "text_padding": caixa(20, 26),
+         "border_radius": caixa(50), "text_padding": caixa(20, 26), "text_padding_mobile": caixa(16, 18),
          "_element_width": "initial", "_element_custom_width": px(100, "%"),
          "_element_custom_width_tablet": px(100, "%"), "_element_custom_width_mobile": px(100, "%"),
          "_css_classes": "botao-compra"}
@@ -286,7 +286,7 @@ def b03(promessa, avatar, rum="padrao", v="A"):
                    "Antes e depois com fita métrica na cintura", _margin=caixa(10, -16, 0, -16),
                    width_mobile=px(100, "%"))]
     filhos = [
-        imagem("logo-desafio-7em7-branca.png", "Desafio 7 em 7", largura=62, width_mobile=px(62, "%")),
+        imagem("logo-desafio-7em7-branca.png", "Desafio 7 em 7", largura=62, width_mobile=px(50, "%")),
         etiqueta("Barriga que não cabe mais na calça?"),
         titulo(titulo_p, "h1", 36, 29, BRANCO, 800, lh=1.16),
         titulo(depois, "p", 22, 21, ROSA_CLARO, 800, lh=1.25, _margin=caixa(-6, 0, 0, 0)),
@@ -420,7 +420,7 @@ def b08():
              ("icone-cintura.png", "Trabalhar sua cintura para conquistar uma silhueta mais definida."),
              ("icone-cabide.png", "Voltar a escolher as roupas que ama, e não apenas as que servem."),
              ("icone-plano-7-dias.png", "Seguir um plano prático de 7 dias, com exercícios e hábitos para fazer em casa.")]
-    cards = [cartao([imagem(ic, "", largura=40, width_mobile=px(52, "%"), **sombra("_box_shadow", 8, 18, "rgba(158,4,124,0.2)"),
+    cards = [cartao([imagem(ic, "", largura=40, width_mobile=px(44, "%"), **sombra("_box_shadow", 8, 18, "rgba(158,4,124,0.2)"),
                             _border_radius=caixa(200)),
                      texto(t, tam=14, cor=PRETO, peso=600, lh=1.4, _margin=caixa(0))],
                     raio=24, pad=(18, 12), border_border="solid", border_width=caixa(0, 0, 4, 0), border_color=ROSA_CLARO,
@@ -436,7 +436,7 @@ def item(mockup, alt, dest, resto, desc, forte=None, selo=None):
     if selo:
         vitrine_filhos.append(etiqueta(selo, AMARELO, "#000000", 12) | {})
         vitrine_filhos[-1]["settings"]["_flex_align_self"] = "flex-start"
-    vitrine_filhos.append(imagem(mockup, alt, largura=82, width_mobile=px(82, "%")))
+    vitrine_filhos.append(imagem(mockup, alt, largura=82, width_mobile=px(64, "%")))
     vitrine = container(vitrine_filhos, background_background="gradient", background_color=ROXO,
                         background_color_b=VIOLETA, background_gradient_angle=px(170, "deg"),
                         padding=caixa(20, 24, 10, 24), flex_gap=gap(6))
@@ -566,15 +566,16 @@ def oferta(n, ancora=False):
     cartao_oferta = container([
         fita,
         container([imagem("mockup-kit.webp", "Tudo o que vem no Desafio 7 em 7")], padding=caixa(30, 10, 4, 10),
+                  padding_mobile=caixa(26, 26, 2, 26),
                   background_background="gradient", background_color="rgba(40,0,50,0.35)", background_color_b="rgba(40,0,50,0)",
                   background_gradient_angle=px(180, "deg")),
         container([
             titulo("Desafio 7 em 7", "h3", 26, 26, BRANCO, 800),
             texto("Tudo isso valeria <s>R$ 497</s>", tam=16, cor=BRANCO, _margin=caixa(0)),
             titulo("Por apenas", "p", 18, 18, BRANCO, 700, _margin=caixa(8, 0, 0, 0)),
-            titulo(f'<span style="font-size:34px">R$</span>67', "p", 76, 76, AMARELO, 800, lh=1, ls=-2),
+            titulo(f'<span style="font-size:0.45em">R$</span>67', "p", 76, 76, AMARELO, 800, lh=1, ls=-2),
             texto("à vista, pagamento único", tam=15, cor=BRANCO, _margin=caixa(0)),
-            titulo(f'ou {destaque("12x de R$ 5,58", AMARELO)}', "p", 18, 18, BRANCO, 600, _margin=caixa(0, 0, 12, 0)),
+            titulo(f'ou {destaque("12x de R$ 6,89", AMARELO)}', "p", 18, 18, BRANCO, 600, _margin=caixa(0, 0, 12, 0)),
             *([etiqueta("Mais de 7x mais barato que 1 mês de canetinha", "rgba(255,255,255,0.16)", BRANCO, 13.5)] if ancora else []),
             botao(), selos,
         ], padding=caixa(6, 20, 26, 20), flex_gap=gap(6)),
@@ -582,7 +583,7 @@ def oferta(n, ancora=False):
         background_gradient_angle=px(170, "deg"), border_radius=caixa(32), overflow="hidden", flex_gap=gap(0),
         **sombra("box_shadow", 22, 50, SOMBRA_FORTE))
     garantia = cartao([imagem("selo-garantia-7-dias.webp", "Garantia de 7 dias", largura=100, width=px(92), _element_width="initial",
-                              _element_custom_width=px(92), _flex_shrink=0),
+                              _element_custom_width=px(92), _element_custom_width_mobile=px(72), _flex_shrink=0),
                        texto(f'<strong style="color:{ROXO};font-family:Sora;font-size:16px">Você participa sem risco.</strong><br>Se dentro do prazo legal você perceber que o desafio não faz sentido para você, pode solicitar o reembolso conforme a política da plataforma.',
                              tam=14.5, alinhar="left", _margin=caixa(0), _flex_grow=1)],
                       raio=24, pad=(16, 18), flex_direction="row", flex_align_items="center", flex_gap=gap(16))
@@ -618,7 +619,7 @@ def b15():
     retrato = container([imagem("michele-recorte.webp", "Michele Salla", _margin=caixa(-90, 0, 0, 0))],
                         background_background="gradient", background_color=ROXO, background_color_b=VIOLETA,
                         background_gradient_angle=px(170, "deg"), border_radius=caixa(220, 220, 40, 40),
-                        padding=caixa(0, 10), _margin=caixa(-20, 0, 0, 0), width=px(84, "%"), width_mobile=px(84, "%"),
+                        padding=caixa(0, 10), _margin=caixa(-20, 0, 0, 0), width=px(84, "%"), width_mobile=px(70, "%"),
                         _flex_align_self="center", **sombra("box_shadow", 0, 80, "rgba(212,72,194,0.45)"))
     vez = container([titulo("Agora chegou a sua vez de seguir esse desafio de 7 dias e voltar a se sentir bem com a sua barriga e as suas roupas",
                             "p", 17, 17, BRANCO, 700, lh=1.45)],
@@ -657,8 +658,8 @@ def b17():
 
 def b18():
     topo = caixa_conteudo([
-        imagem("logo-desafio-7em7-branca-vertical.png", "Desafio 7 em 7", largura=34, width_mobile=px(40, "%")),
-        imagem("logo-michele-salla-branca.png", "Michele Salla", largura=30, width_mobile=px(36, "%"), opacity=0.85),
+        imagem("logo-desafio-7em7-branca-vertical.png", "Desafio 7 em 7", largura=34, width_mobile=px(30, "%")),
+        imagem("logo-michele-salla-branca.png", "Michele Salla", largura=30, width_mobile=px(30, "%"), opacity=0.85),
         texto("Copyright © 2026 Michele Salla · Desafio 7 em 7. Todos os direitos reservados.", tam=15, cor=BRANCO),
         texto("O Desafio 7 em 7 não é tratamento médico. Este site não é afiliado ao Facebook ou a qualquer entidade do Facebook. Os resultados variam de pessoa para pessoa e a compra deste material não garante nenhum resultado específico. Usamos resultados reais de alunas.",
               tam=13.5, cor="#BBBBBB"),
@@ -668,6 +669,48 @@ def b18():
     final = container([texto("Veranópolis/RS · CNPJ 32.983.139/0001-99", tam=14, cor=BRANCO, _margin=caixa(0)), rastreio],
                       background_background="classic", background_color="#1A1A1A", padding=caixa(18, 16))
     return bloco("18 · Rodapé", [topo, final], fundo=PRETO, ancora="b18")
+
+
+# ---------- celular: página mais compacta (pedido do Patrik em 23/10) ----------
+# Só mexe nos valores "_mobile" (letra, espaço, ícone). Computador e ordem dos blocos ficam iguais.
+
+def letra_celular(t):
+    """Tamanho de letra no celular, a partir do tamanho que valia no celular antes."""
+    if t >= 60:
+        n = t * 0.8          # preço
+    elif t >= 24:
+        n = t * 0.86         # promessa e títulos
+    elif t >= 19:
+        n = t * 0.9
+    elif t >= 17:
+        n = t * 0.92
+    elif t >= 15:
+        n = t - 1
+    else:
+        n = max(11, t - 0.5)
+    return round(n * 2) / 2
+
+
+def compactar_celular(conteudo):
+    def andar(e):
+        s = e["settings"]
+        for k in [k for k in s if k.endswith("_font_size")]:
+            base = s.get(k + "_mobile") or s[k]
+            s[k + "_mobile"] = px(letra_celular(base["size"]))
+        if e["elType"] == "container":
+            pad = s.get("padding")
+            if pad and "padding_mobile" not in s and max(int(float(pad["top"])), int(float(pad["bottom"]))) >= 40:
+                t, b = (round(int(float(pad[x])) * 0.68) for x in ("top", "bottom"))
+                s["padding_mobile"] = caixa(t, pad["right"], b, pad["left"])
+            g = s.get("flex_gap")
+            if g and g["size"] >= 20:
+                s["flex_gap_mobile"] = gap(round(g["size"] * 0.7))
+        if e.get("widgetType") == "icon" and s.get("size", {}).get("size", 0) >= 40:
+            s["size_mobile"] = px(round(s["size"]["size"] * 0.75))
+        for f in e["elements"]:
+            andar(f)
+    for e in conteudo:
+        andar(e)
 
 
 # versão: (promessa, avatar?, ruminações)
@@ -683,6 +726,7 @@ def montar(v):
         trocar_copy(conteudo, COPY_E)
     if v == "F":
         trocar_copy(conteudo, COPY_F)
+    compactar_celular(conteudo)
     return {
         "version": "0.4",
         "title": f"Desafio 7 em 7 · Versão {v}",

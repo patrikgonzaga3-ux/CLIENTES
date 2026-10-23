@@ -290,3 +290,105 @@ s{text-decoration-thickness:2px}
   .b15 .retrato{margin-top:-110px}
   .b14{padding-bottom:170px}
 }
+
+/* ---------- celular: página mais compacta (pedido do Patrik em 23/10) ----------
+   Só tamanhos e espaços. A ordem e o conteúdo dos blocos não mudam. */
+@media (max-width:767px){
+  .bloco{padding:44px 16px 52px}
+  .dobra{padding:22px 16px 62px}
+  .logo{height:52px;margin-bottom:16px}
+  .etiqueta{font-size:13px;padding:8px 15px}
+  .dobra .etiqueta{margin-bottom:14px}
+  .promessa{font-size:25px}
+  .promessa .depois{font-size:18px;margin-top:8px}
+  .titulo{font-size:23px}
+  .sub{font-size:15.5px}
+  .pilula{font-size:13.5px}
+  .pilulas{margin-top:16px;gap:6px}
+  .pilulas .pilula{font-size:13px;padding:7px 16px 7px 8px;max-width:330px}
+  .pilula .check{width:22px;height:22px}
+  .hero-img{margin-top:16px}
+  .ruminacoes{gap:10px}
+  .rumina{padding:14px 12px;font-size:13px;gap:8px;border-radius:18px}
+  .rumina .x{width:24px;height:24px}
+  .rumina .x svg{width:11px;height:11px}
+  .b04 .sub{font-size:17px;margin-top:14px}
+  .feito{font-size:16.5px;margin:20px 0 10px}
+  .lista-pilulas li,.lista-check li{font-size:14px;padding:11px 14px}
+  .palco-calca{margin-top:24px;max-width:330px}
+  .moldura{margin-top:20px;padding:10px;gap:10px}
+  .nota{font-size:12px}
+  .b06 .abre{font-size:19px}
+  .b06 .abre2{font-size:15px}
+  .espelho-img{margin-top:18px}
+  .b07 .empatia{font-size:17.5px}
+  .alerta{margin-top:22px;padding:24px 18px 26px}
+  .alerta svg{width:54px;height:54px}
+  .alerta h3{font-size:20px}
+  .alerta p{font-size:15px}
+  .alerta .sim{font-size:17px;margin-top:12px}
+  .faixa{padding:20px 16px}
+  .faixa h2{font-size:19px}
+  .b08 .faixa{margin-bottom:22px}
+  .b08 .linha{font-size:16.5px;margin-bottom:14px}
+  .beneficio{padding:14px 10px;font-size:13px}
+  .beneficio .icone{width:56px;height:56px;margin-bottom:10px}
+  .beneficio .icone svg{width:30px;height:30px}
+  .itens{gap:18px;margin-top:22px}
+  .item .vitrine{padding:16px 20px 8px}
+  .item .vitrine img{width:64%}
+  .item .txt{padding:16px 16px 20px}
+  .item h3{font-size:18px}
+  .item p{font-size:14.5px;margin-top:8px}
+  .fecho{font-size:16.5px;margin-top:22px}
+  .cartao p{font-size:13px;padding:10px 10px 12px}
+  .caixa-preta{font-size:16.5px;padding:20px 18px;margin-top:18px}
+  .dois-itens{font-size:15.5px;padding:16px;margin-top:14px}
+  .toque{font-size:14.5px}
+  .recap li{font-size:13.5px;padding:11px 0}
+  .recap .total{font-size:18px}
+  .b12 .faixa{margin-top:30px;padding:24px 16px 40px}
+  .b12 .faixa h2{font-size:17px}
+  .oferta-bloco{padding-top:40px}
+  .oferta .kit{padding:26px 26px 2px}
+  .oferta h3{font-size:22px}
+  .oferta .valeria{font-size:15px}
+  .oferta .por{font-size:16px;margin-top:12px}
+  .oferta .preco{font-size:60px}
+  .oferta .preco small{font-size:26px}
+  .oferta .avista{font-size:14px}
+  .oferta .parcelas{font-size:16.5px;margin-bottom:18px}
+  .oferta .ancora{font-size:12.5px;margin-bottom:18px}
+  .botao{font-size:15px;padding:16px 18px}
+  .botao svg{width:20px;height:20px}
+  .selos{gap:12px;margin-top:18px}
+  .selo{font-size:11px}
+  .selo svg{width:24px;height:24px}
+  .garantia{padding:14px;gap:12px}
+  .garantia img{width:72px}
+  .garantia p{font-size:13.5px}
+  .garantia strong{font-size:15px}
+  .b14{padding-bottom:120px}
+  .opcao{padding:16px 16px 18px;margin-top:14px}
+  .opcao .circ{width:42px;height:42px}
+  .opcao .circ svg{width:20px;height:20px}
+  .opcao h3{font-size:19px}
+  .opcao p{font-size:14.5px}
+  .b14 .sabe{font-size:16.5px;margin-top:20px}
+  .b14 .entao{font-size:15px;margin:10px 0 18px}
+  .b15 .retrato{width:70%;margin-top:-70px}
+  .b15 .nome{font-size:27px}
+  .b15 .cargo{font-size:15.5px}
+  .b15 .bio{font-size:15px}
+  .b15 .creds li{font-size:14px;padding:10px 12px}
+  .b15 .vez{font-size:15.5px;padding:18px}
+  .faq{margin-top:18px;gap:10px}
+  .pergunta{padding:14px 16px}
+  .pergunta h3{font-size:15.5px}
+  .pergunta p{font-size:14px}
+  .rodape{padding:36px 16px 24px}
+  .rodape .logo-rodape{height:110px}
+  .onda{height:34px}
+  .seta{width:44px;height:44px;bottom:-22px}
+  .seta svg{width:20px;height:20px}
+}

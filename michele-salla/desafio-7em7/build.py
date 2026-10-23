@@ -36,8 +36,8 @@ def oferta(n: str) -> str:
         <p class="por">Por apenas</p>
         <p class="preco"><small>R$</small>67</p>
         <p class="avista">à vista, pagamento único</p>
-        <p class="parcelas">ou <strong>12x de R$ 5,58</strong></p>
-        <a class="botao botao-compra" href="#LINK-DE-COMPRA">Sim, quero aproveitar a oferta {SETA}</a>
+        <p class="parcelas">ou <strong>12x de R$ 6,89</strong></p>
+        <a class="botao botao-compra" href="https://payfast.greenn.com.br/199167/offer/1qsr9k">Sim, quero aproveitar a oferta {SETA}</a>
         <div class="selos">
           <div class="selo"><svg viewBox="0 0 32 32" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 3l11 4v8c0 7-5 12-11 14C10 27 5 22 5 15V7z"/><path d="M11 16l3.5 3.5L21 13"/></svg><span>Compra<b>Segura</b></span></div>
           <div class="selo"><svg viewBox="0 0 32 32" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="16" cy="13" r="9"/><path d="M11 21l-3 8 5-2 3 3M21 21l3 8-5-2-3 3"/><path d="M13 13l2 2 4-4"/></svg><span>7 Dias de<b>Garantia</b></span></div>
@@ -137,8 +137,8 @@ COPY_F = [
     ("Pensou em usar canetinha, mas não quer gastar R$3.000 com isso", "Pensou em usar canetinha, mas não quer gastar R$500 todo mês", 2),
     ("Enfim, se você quer <em>reduzir até 7 cm de barriga</em> sem gastar R$3.000 com canetinhas, o Desafio 7 em 7 é para você",
      "Enfim, se você quer <em>reduzir até 7 cm de barriga</em> sem gastar R$500 por mês com canetinha, o Desafio 7 em 7 é para você", 1),
-    ('<p class="parcelas">ou <strong>12x de R$ 5,58</strong></p>',
-     '<p class="parcelas">ou <strong>12x de R$ 5,58</strong></p>\n        <p class="ancora">Mais de 7x mais barato que 1 mês de canetinha</p>', 2),
+    ('<p class="parcelas">ou <strong>12x de R$ 6,89</strong></p>',
+     '<p class="parcelas">ou <strong>12x de R$ 6,89</strong></p>\n        <p class="ancora">Mais de 7x mais barato que 1 mês de canetinha</p>', 2),
 ]
 
 modelo = (AQUI / "_modelo.html").read_text(encoding="utf-8")
