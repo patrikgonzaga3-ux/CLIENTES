@@ -77,6 +77,21 @@ VERSOES = {"A": ("A", HERO_REAL, "padrao"), "B": ("B", HERO_REAL, "padrao"),
            "C": ("A", HERO_AVATAR, "padrao"), "D": ("B", HERO_AVATAR, "padrao"),
            "E": ("E", HERO_AVATAR, "mounjaro")}
 
+# Bloco 06: imagem do espelho com os pensamentos dentro da foto
+PENSAMENTOS = ["Nenhuma calça fecha mais em mim", "Todo mundo vai notar minha barriga",
+               "Já tentei de tudo e nada funciona", "Não me reconheço mais no espelho"]
+PENSAMENTOS_E = ["Nenhuma calça fecha mais em mim", "Todo mundo vai notar minha barriga",
+                 "Será que só com canetinha eu resolvo?", "Não me reconheço mais no espelho"]
+
+# Ajustes de copy só da versão E (aprovados pelo Patrik): (antes, depois)
+COPY_E = [
+    ("sem dietas radicais e sem promessas mirabolantes.", "sem dietas radicais e sem gastar com canetinhas."),
+    ("Já tentou de tudo e sente que a barriga não sai do lugar", "Pensou em usar canetinha, mas não quer gastar R$3.000 com isso"),
+    ("Sente que a mente sabota seus resultados e quer mudar isso", "Quer cuidar da mente e do corpo ao mesmo tempo"),
+    ("Enfim, se você quer <em>voltar a vestir as roupas que ama</em> e se sentir bem com a sua barriga e a sua cintura, o Desafio 7 em 7 é para você",
+     "Enfim, se você quer <em>reduzir até 7 cm de barriga</em> sem gastar R$3.000 com canetinhas, o Desafio 7 em 7 é para você"),
+]
+
 modelo = (AQUI / "_modelo.html").read_text(encoding="utf-8")
 for v, (prom, hero, rum) in VERSOES.items():
     promessa = PROMESSAS[prom]
@@ -85,6 +100,12 @@ for v, (prom, hero, rum) in VERSOES.items():
                   .replace("{{RUMINACOES}}", ruminacoes(rum))
                   .replace("{{VERSAO}}", f"Versão {v} · gerada por build.py a partir de _modelo.html")
                   .replace("{{OFERTA:13}}", oferta("13"))
-                  .replace("{{OFERTA:16}}", oferta("16")))
+                  .replace("{{OFERTA:16}}", oferta("16"))
+                  .replace("{{ESPELHO}}", "foto-espelho-pensamentos-e.webp" if v == "E" else "foto-espelho-pensamentos.webp")
+                  .replace("{{ESPELHO_ALT}}", " · ".join(PENSAMENTOS_E if v == "E" else PENSAMENTOS)))
+    if v == "E":
+        for antes, depois in COPY_E:
+            assert html.count(antes) == 1, antes
+            html = html.replace(antes, depois)
     (AQUI / f"pagina-{v}.html").write_text(html, encoding="utf-8")
     print(f"pagina-{v}.html")

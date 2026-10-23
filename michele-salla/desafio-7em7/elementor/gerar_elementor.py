@@ -322,19 +322,49 @@ def balao(frase):
                      flex_justify_content="center")
 
 
-def b06():
-    topo = container([balao("Nenhuma calça fecha mais em mim"), balao("Todo mundo vai notar minha barriga")],
-                     flex_direction="row", flex_justify_content="space-between", flex_wrap="nowrap", _margin=caixa(0, 0, -16, 0), z_index=2)
-    base = container([balao("Já tentei de tudo e nada funciona"), balao("Não me reconheço mais no espelho")],
-                     flex_direction="row", flex_justify_content="space-between", flex_wrap="nowrap", _margin=caixa(-10, 0, 0, 0), z_index=2)
-    foto = imagem("foto-espelho.webp", "Mulher na frente do espelho olhando a barriga", raio=28,
+def b06(v="A"):
+    e = v == "E"
+    pensamentos = ["Nenhuma calça fecha mais em mim", "Todo mundo vai notar minha barriga",
+                   "Será que só com canetinha eu resolvo?" if e else "Já tentei de tudo e nada funciona",
+                   "Não me reconheço mais no espelho"]
+    foto = imagem("foto-espelho-pensamentos-e.webp" if e else "foto-espelho-pensamentos.webp",
+                  "Mulher na frente do espelho com pensamentos sobre a barriga: " + " · ".join(pensamentos), raio=28,
                   image_border_border="solid", image_border_width=caixa(5), image_border_color=BRANCO,
-                  **sombra("image_box_shadow", 22, 50, SOMBRA_FORTE))
+                  _margin=caixa(10, 0, 0, 0), **sombra("image_box_shadow", 22, 50, SOMBRA_FORTE))
     filhos = [titulo(f'Eu sei… você já tentou de tudo e {destaque("a barriga continua aí,", ROXO)}', "p", 22, 22, PRETO, 700, lh=1.3),
               texto("se sente mal e sofre todo dia com pensamentos como:", tam=17),
-              topo, foto, base]
+              foto]
     return bloco("06 · Pensamentos", [caixa_conteudo(filhos)], gradiente=(ROSA_FUNDO, "#FBE1F6"), onda=BRANCO,
                  ancora="b06", background_gradient_angle=px(180, "deg"))
+
+
+# Ajustes de copy só da versão E (aprovados pelo Patrik): (antes, depois)
+COPY_E = [
+    ("sem dietas radicais e sem promessas mirabolantes.", "sem dietas radicais e sem gastar com canetinhas."),
+    ("Já tentou de tudo e sente que a barriga não sai do lugar", "Pensou em usar canetinha, mas não quer gastar R$3.000 com isso"),
+    ("Sente que a mente sabota seus resultados e quer mudar isso", "Quer cuidar da mente e do corpo ao mesmo tempo"),
+    (f'Enfim, se você quer {destaque("voltar a vestir as roupas que ama", AMARELO)} e se sentir bem com a sua barriga e a sua cintura, o Desafio 7 em 7 é para você',
+     f'Enfim, se você quer {destaque("reduzir até 7 cm de barriga", AMARELO)} sem gastar R$3.000 com canetinhas, o Desafio 7 em 7 é para você'),
+]
+
+
+def trocar_copy(conteudo, trocas):
+    achou = {a: 0 for a, _ in trocas}
+
+    def andar(e):
+        for k, val in e["settings"].items():
+            if isinstance(val, str):
+                for a, d in trocas:
+                    if a in val:
+                        achou[a] += val.count(a)
+                        val = val.replace(a, d)
+                e["settings"][k] = val
+        for f in e["elements"]:
+            andar(f)
+    for e in conteudo:
+        andar(e)
+    for a, n in achou.items():
+        assert n == 1, (a, n)
 
 
 def b07():
@@ -601,8 +631,10 @@ VERSOES = {"A": ("A", False, "padrao"), "B": ("B", False, "padrao"), "C": ("A", 
 
 def montar(v):
     promessa, avatar, rum = VERSOES[v]
-    conteudo = [b03(promessa, avatar, rum), b04(), b05(), b06(), b07(), b08(), b09(), b10(), b11(), b12(),
+    conteudo = [b03(promessa, avatar, rum), b04(), b05(), b06(v), b07(), b08(), b09(), b10(), b11(), b12(),
                 oferta("13"), b14(), b15(), oferta("16"), b17(), b18()]
+    if v == "E":
+        trocar_copy(conteudo, COPY_E)
     return {
         "version": "0.4",
         "title": f"Desafio 7 em 7 · Versão {v}",

@@ -129,6 +129,9 @@ s{text-decoration-thickness:2px}
 .balao.b4{bottom:10px;right:0}
 .balao.b4 i{top:-12px;left:42%}.balao.b4 b{top:-27px;left:46%}
 
+.espelho-img{margin-top:26px;border-radius:var(--raio);overflow:hidden;border:5px solid #fff;box-shadow:var(--sombra-forte)}
+.espelho-img img{width:100%}
+
 /* ---------- 07 · Alerta ---------- */
 .b07 .empatia{font:700 20px/1.35 Sora;color:var(--preto)}
 .b07 .empatia em{font-style:normal;color:var(--roxo)}
