@@ -224,6 +224,21 @@ Os M da pasta "MICHELE LOW" são esses mesmos vídeos. Mapa conferido pelos quad
     Plano B, se a compra ainda não chegar ao pixel até ligar: trocar os conjuntos para InitiateCheckout (da Greenn)
     por poucos dias e voltar para Compra depois. Nunca otimizar para CliqueComprar.
 
+- **26/10:**
+  - **Campanha que está no ar** (criada pelo Patrik no Gerenciador):
+    `PTK - 23/10 - ABO TESTE CRIATIVO - VENDAS - 5 CONJ (M1-M5)`, id **120252299198450047**.
+    - 5 conjuntos "ABO 1"…"ABO 5", R$ 30,15/dia cada, Compra no pixel 991344998762063, ativos;
+    - os UTM dela trazem IDs (utm_campaign = id da campanha, utm_content = id do anúncio, utm_source = ig/fb/th);
+    - ~R$ 82 gastos no 1º dia; nenhuma compra no pixel até 22h UTC.
+  - A campanha criada pelo Claude (120252298837110047, M 1–M 5) segue **pausada** e duplica essa: não ligar.
+    Apagar só com OK do Patrik.
+  - Rastreio do painel **instalado** na página (com data-checkout): 116 visitas em `pl_comportamento` no 1º dia.
+  - Webhook: chegou outro teste automático da Greenn (transação "303", R$ 67, sck "architecto"); marcado como teste.
+  - Foto do bloco 04 (calça aberta) saía do arco roxo:
+    - corrigido no gerador (container com overflow hidden e padding 0), commit d36d085;
+    - **falta gravar na página 10264**: o site bloqueou o acesso da nuvem (firewall da hospedagem, conexão recusada).
+  - O Patrik mandou a senha da WordPress pelo chat: recomendado trocar a senha e usar senha de aplicativo nas variáveis do ambiente.
+
 ## 9. Como trabalhar
 - Sempre em português, frases curtas. Nunca pedir senha ou token no chat; dizer onde colar.
 - Checkout, preço, oferta, link de compra e configuração da Greenn: só com OK explícito do Patrik para a mudança mostrada.
