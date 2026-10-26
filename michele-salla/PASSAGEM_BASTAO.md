@@ -236,7 +236,11 @@ Os M da pasta "MICHELE LOW" são esses mesmos vídeos. Mapa conferido pelos quad
   - Webhook: chegou outro teste automático da Greenn (transação "303", R$ 67, sck "architecto"); marcado como teste.
   - Foto do bloco 04 (calça aberta) saía do arco roxo:
     - corrigido no gerador (container com overflow hidden e padding 0), commit d36d085;
-    - **falta gravar na página 10264**: o site bloqueou o acesso da nuvem (firewall da hospedagem, conexão recusada).
+    - gravado na página 10264 pelo Patrik (PC novo) em 26/10 às 19h50; conferido no ar (overflow hidden, padding 0).
+  - O site tem proteção com captcha (recaptcha.cloud) no wp-login e às vezes recusa a conexão da nuvem:
+    gravar a página pelo PC (`python tools/wp_michele.py atualizar-pagina --id 10264 --versao F`, sem `!` no PowerShell).
+  - `midia-michele.json` (mapa das imagens na Multimídia) agora está no repositório. Nunca rodar `subir-imagens`
+    de novo para a página F: duplicaria as fotos.
   - O Patrik mandou a senha da WordPress pelo chat: recomendado trocar a senha e usar senha de aplicativo nas variáveis do ambiente.
 
 ## 9. Como trabalhar
