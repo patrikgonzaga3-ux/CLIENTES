@@ -1908,13 +1908,14 @@
          "left": "40",
          "isLinked": false
         },
+        "overflow": "hidden",
         "padding": {
          "unit": "px",
-         "top": "30",
-         "right": "10",
+         "top": "0",
+         "right": "0",
          "bottom": "0",
-         "left": "10",
-         "isLinked": false
+         "left": "0",
+         "isLinked": true
         },
         "_margin": {
          "unit": "px",

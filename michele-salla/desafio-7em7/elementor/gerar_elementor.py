@@ -310,7 +310,8 @@ def b04():
         container([imagem("barriga-calca-aberta.webp", "Barriga sobre a calça que não fecha")],
                   background_background="gradient", background_color=ROXO, background_color_b=VIOLETA,
                   background_gradient_angle=px(170, "deg"), border_radius=caixa(200, 200, 40, 40),
-                  padding=caixa(30, 10, 0, 10), _margin=caixa(20, 0, 0, 0), **sombra("box_shadow", 22, 50, SOMBRA_FORTE)),
+                  # corta a foto no formato do arco: os cantos retos do recorte não podem sair da curva (bug de 26/10)
+                  overflow="hidden", padding=caixa(0), _margin=caixa(20, 0, 0, 0), **sombra("box_shadow", 22, 50, SOMBRA_FORTE)),
     ]
     return bloco("04 · Feito para você que", [caixa_conteudo(filhos)], fundo=ROSA_FUNDO, onda=BRANCO, ancora="b04")
 
