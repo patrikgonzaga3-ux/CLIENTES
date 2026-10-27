@@ -10,7 +10,7 @@
     if (!enviado) {
       enviado = true; // uma vez por visita, mesmo que clique em mais de um botão
       window.fbq('trackCustom', 'CliqueComprar', {
-        content_name: 'Desafio 7 em 7', content_category: 'Desafio', value: 67, currency: 'BRL', num_items: 1
+        content_name: 'Desafio 7 em 7', content_category: 'Desafio', value: 47, currency: 'BRL', num_items: 1
       }, { eventID: 'clique-' + Date.now() + '-' + Math.random().toString(36).slice(2, 8) });
     }
     // dá tempo do aviso sair antes de ir para o checkout (só quando abre na mesma aba)

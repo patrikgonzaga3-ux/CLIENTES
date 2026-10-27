@@ -16,7 +16,7 @@ from pathlib import Path
 
 AQUI = Path(__file__).parent
 BASE = os.environ.get("IMG_BASE", "https://clientes-phi-six.vercel.app/michele-salla/desafio-7em7/assets/img/")
-LINK_COMPRA = "https://payfast.greenn.com.br/199167/offer/1qsr9k"  # checkout Greenn (aprovado pelo Patrik em 23/10)
+LINK_COMPRA = "https://payfast.greenn.com.br/199167/offer/E1YMM7"  # checkout Greenn R$ 47 (pedido do Patrik em 27/10; antes 1qsr9k, R$ 67)
 
 ROXO, VIOLETA, ROSA, ROSA_CLARO = "#9E047C", "#8D29F2", "#D448C2", "#FF9DF4"
 ROSA_FUNDO, AMARELO, PRETO, BRANCO = "#FFF3FD", "#FFFC00", "#252525", "#FFFFFF"
@@ -574,9 +574,9 @@ def oferta(n, ancora=False):
             titulo("Desafio 7 em 7", "h3", 26, 26, BRANCO, 800),
             texto("Tudo isso valeria <s>R$ 497</s>", tam=16, cor=BRANCO, _margin=caixa(0)),
             titulo("Por apenas", "p", 18, 18, BRANCO, 700, _margin=caixa(8, 0, 0, 0)),
-            titulo(f'<span style="font-size:0.45em">R$</span>67', "p", 76, 76, AMARELO, 800, lh=1, ls=-2),
+            titulo(f'<span style="font-size:0.45em">R$</span>47', "p", 76, 76, AMARELO, 800, lh=1, ls=-2),
             texto("à vista, pagamento único", tam=15, cor=BRANCO, _margin=caixa(0)),
-            titulo(f'ou {destaque("12x de R$ 6,89", AMARELO)}', "p", 18, 18, BRANCO, 600, _margin=caixa(0, 0, 12, 0)),
+            titulo(f'ou {destaque("12x de R$ 4,83", AMARELO)}', "p", 18, 18, BRANCO, 600, _margin=caixa(0, 0, 12, 0)),
             *([etiqueta("Mais de 7x mais barato que 1 mês de canetinha", "rgba(255,255,255,0.16)", BRANCO, 13.5)] if ancora else []),
             botao(), selos,
         ], padding=caixa(6, 20, 26, 20), flex_gap=gap(6)),
@@ -605,7 +605,7 @@ def b14():
         ], raio=26, pad=(20, 20), border_border="solid", border_width=caixa(0, 0, 6, 0), border_color=cor)
     filhos = [titulo(f'Agora você tem {destaque("duas opções:", ROXO)}', "h2", 31, 27),
               opcao(1, "fas fa-times", VERM, "Fechar esta página, continuar escondendo a barriga com roupas largas e seguir tentando de tudo, sem um plano. Daqui a alguns meses, a calça continua sem fechar e a frustração diante do espelho é a mesma."),
-              opcao(2, "fas fa-check", VERDE, "Começar hoje o Desafio 7 em 7, por apenas R$ 67, e seguir um passo a passo de 15 minutos por dia, em casa, para trabalhar sua barriga e sua cintura, com todos os bônus incluídos."),
+              opcao(2, "fas fa-check", VERDE, "Começar hoje o Desafio 7 em 7, por apenas R$ 47, e seguir um passo a passo de 15 minutos por dia, em casa, para trabalhar sua barriga e sua cintura, com todos os bônus incluídos."),
               titulo(f'Eu sei e você também sabe, {destaque("a opção 2 é a mais inteligente", ROXO)} e é a que você mais precisa', "p", 18, 18, PRETO, 700, lh=1.4),
               titulo("Então toque no botão abaixo e receba agora seu desafio de 7 dias", "p", 16, 16, ROXO, 700, lh=1.4),
               botao()]
@@ -649,7 +649,7 @@ def b17():
            ("Tenho diástase. Posso fazer?", "Sim! Você pode fazer o desafio mesmo tendo diástase. O material traz técnicas e exercícios que ajudam a fortalecer o abdômen e auxiliam na recuperação da diástase com segurança."),
            ("Tive bebê há pouco tempo ou tenho hérnia. Posso fazer?", "Nesses casos, você precisa de liberação médica antes de começar o desafio."),
            ("Quando eu recebo?", "Logo após a confirmação do pagamento, você recebe o acesso no seu e-mail."),
-           ("É mensalidade?", "Não. É um pagamento único de R$ 67."),
+           ("É mensalidade?", "Não. É um pagamento único de R$ 47."),
            ("E depois dos 7 dias?", "O desafio foi feito para fazer em 7 dias, mas liberamos o seu acesso por 30 dias."),
            ("Como funciona a garantia?", "Você participa sem risco. Se dentro do prazo legal você perceber que o desafio não faz sentido para você, pode solicitar o reembolso conforme a política da plataforma.")]
     cards = [cartao([titulo(f'<span style="color:{ROXO}">▾</span> {p}', "h3", 16.5, 16.5, PRETO, 700, alinhar="left", lh=1.3),
@@ -699,6 +699,36 @@ def letra_celular(t):
     return round(n * 2) / 2
 
 
+def compactar_geral(conteudo):
+    """Página mais enxuta no computador e no celular (pedido do Patrik em 27/10, comparando com efeitolipo.com.br/a):
+    menos espaço em cima/embaixo dos blocos, menos vão entre itens, ondas mais baixas, botão e preço menores."""
+    def andar(e):
+        s = e["settings"]
+        if e["elType"] == "container":
+            pad = s.get("padding")
+            if pad and max(int(float(pad["top"])), int(float(pad["bottom"]))) >= 30:
+                t, b = (round(int(float(pad[x])) * 0.62) for x in ("top", "bottom"))
+                s["padding"] = caixa(t, pad["right"], b, pad["left"])
+            g = s.get("flex_gap")
+            if g and g["size"] >= 14:
+                s["flex_gap"] = gap(round(g["size"] * 0.75))
+            if s.get("shape_divider_bottom_height"):
+                s["shape_divider_bottom_height"], s["shape_divider_bottom_height_mobile"] = px(40), px(20)
+        if e.get("widgetType") == "button":
+            for k in ("typography_font_size",):
+                if s.get(k) and s[k]["size"] > 15:
+                    s[k] = px(15)
+                    s.pop(k + "_mobile", None)
+        for k in [k for k in s if k.endswith("_font_size")]:
+            if s[k].get("size", 0) >= 70:  # preço grande da oferta
+                s[k] = px(round(s[k]["size"] * 0.8))
+                s.pop(k + "_mobile", None)
+        for f in e["elements"]:
+            andar(f)
+    for e in conteudo:
+        andar(e)
+
+
 def compactar_celular(conteudo):
     def andar(e):
         s = e["settings"]
@@ -707,14 +737,14 @@ def compactar_celular(conteudo):
             s[k + "_mobile"] = px(letra_celular(base["size"]))
         if e["elType"] == "container":
             pad = s.get("padding")
-            if pad and "padding_mobile" not in s and max(int(float(pad["top"])), int(float(pad["bottom"]))) >= 40:
-                t, b = (round(int(float(pad[x])) * 0.68) for x in ("top", "bottom"))
+            if pad and "padding_mobile" not in s and max(int(float(pad["top"])), int(float(pad["bottom"]))) >= 24:
+                t, b = (round(int(float(pad[x])) * 0.6) for x in ("top", "bottom"))
                 s["padding_mobile"] = caixa(t, pad["right"], b, pad["left"])
             g = s.get("flex_gap")
-            if g and g["size"] >= 20:
+            if g and g["size"] >= 12:
                 s["flex_gap_mobile"] = gap(round(g["size"] * 0.7))
         if e.get("widgetType") == "icon" and s.get("size", {}).get("size", 0) >= 40:
-            s["size_mobile"] = px(round(s["size"]["size"] * 0.75))
+            s["size_mobile"] = px(round(s["size"]["size"] * 0.65))
         for f in e["elements"]:
             andar(f)
     for e in conteudo:
@@ -734,6 +764,7 @@ def montar(v):
         trocar_copy(conteudo, COPY_E)
     if v == "F":
         trocar_copy(conteudo, COPY_F)
+    compactar_geral(conteudo)
     compactar_celular(conteudo)
     return {
         "version": "0.4",

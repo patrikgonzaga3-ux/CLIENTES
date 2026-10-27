@@ -232,7 +232,7 @@ def cmd_publicar(a):
     print(f'Publicada: id {r["id"]} · {r["link"]}')
 
 
-LINK_GREENN = "payfast.greenn.com.br/199167/offer/1qsr9k"
+LINK_GREENN = "payfast.greenn.com.br/199167/offer/E1YMM7"
 
 
 def cmd_conferir(a):
@@ -259,8 +259,8 @@ def cmd_conferir(a):
     h1 = re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", h1.group(1)).replace("&nbsp;", " ")).strip() if h1 else ""
     checks = [
         ("Promessa começa com \"Descubra como\"", h1.startswith("Descubra como"), h1),
-        ("Parcelamento 12x de R$ 6,89 (2 ofertas)", texto.count("12x de R$ 6,89") >= 2, f'{texto.count("12x de R$ 6,89")} vez(es)'),
-        ("Nenhum valor antigo (5,58 ou 3,80)", "5,58" not in texto and "3,80" not in texto, ""),
+        ("Parcelamento 12x de R$ 4,83 (2 ofertas)", texto.count("12x de R$ 4,83") >= 2, f'{texto.count("12x de R$ 4,83")} vez(es)'),
+        ("Nenhum valor antigo (67, 6,89, 5,58, 3,80 ou link 1qsr9k)", not any(v in texto for v in ("R$ 67", "R$67", "6,89", "5,58", "3,80")) and "1qsr9k" not in html, ""),
         ("Botões com o link da Greenn (3)", html.count(LINK_GREENN) >= 3, f"{html.count(LINK_GREENN)} link(s)"),
         ("Nenhum botão sem link (#LINK-DE-COMPRA)", "#LINK-DE-COMPRA" not in html, ""),
         ("Rastreio do botão (CliqueComprar) no rodapé", "CliqueComprar" in html, ""),

@@ -34,7 +34,7 @@ export const CLIENTE = {
   // Patrik (23/10): contam todos os produtos da Greenn e da Hotmart; o painel mostra os dois separados.
   produtos: [] as { id: string; nome: string; tipo: 'principal' | 'bump' | 'upsell' | 'assinatura' }[],
   /** preço do produto principal (base do funil 3x) */
-  ticket: 67, // Desafio 7 em 7 (Greenn, oferta 1qsr9k)
+  ticket: 47, // Desafio 7 em 7 (Greenn, oferta E1YMM7 desde 27/10; antes 1qsr9k, R$ 67)
   /** metas do funil 3x em fração do ticket: clique 4%, initiate checkout 23%, compra 45% */
   funil3x: { clique: 0.04, ic: 0.23, compra: 0.45 },
   /** meta de lucro do mês em R$ (0 = sem meta) */
