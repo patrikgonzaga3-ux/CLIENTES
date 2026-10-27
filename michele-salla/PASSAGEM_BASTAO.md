@@ -243,6 +243,18 @@ Os M da pasta "MICHELE LOW" são esses mesmos vídeos. Mapa conferido pelos quad
     de novo para a página F: duplicaria as fotos.
   - O Patrik mandou a senha da WordPress pelo chat: recomendado trocar a senha e usar senha de aplicativo nas variáveis do ambiente.
 
+- **27/10:**
+  - **Preço novo: R$ 47** (12x de R$ 4,83), checkout **E1YMM7** (antes 1qsr9k, R$ 67). Gravado e conferido no ar.
+    A parcela foi calculada pela taxa da oferta antiga; confirmar no checkout se a Greenn mostrar outro valor.
+  - CliqueComprar agora com valor 47; ticket do painel 47 (metas do funil 3x: clique R$ 1,88, checkout R$ 10,81, compra R$ 21,15).
+  - Página mais enxuta (`compactar_geral()` no gerador):
+    - espaço dos blocos −38%, vão entre itens −25%;
+    - ondas de 40/20 px;
+    - botão 15 px, preço −20%.
+  - A prévia da Vercel agora corta a foto da calça no arco, igual à WordPress.
+  - **Decisão do Patrik:** a verba dos anúncios continua como está (R$ 30,15/dia por conjunto), mesmo com o preço em R$ 47.
+  - O domínio "efeitolipo21.com.br" não existe; a referência de layout é efeitolipo.com.br/a.
+
 ## 9. Como trabalhar
 - Sempre em português, frases curtas. Nunca pedir senha ou token no chat; dizer onde colar.
 - Checkout, preço, oferta, link de compra e configuração da Greenn: só com OK explícito do Patrik para a mudança mostrada.
