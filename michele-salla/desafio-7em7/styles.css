@@ -98,9 +98,10 @@ s{text-decoration-thickness:2px}
 .lista-pilulas{display:grid;gap:10px;text-align:left}
 .lista-pilulas li{list-style:none;display:flex;align-items:center;gap:12px;background:#fff;border-radius:18px;padding:14px 16px;font:600 15px/1.35 Raleway;box-shadow:var(--sombra)}
 .lista-pilulas{margin:0;padding:0}
-.palco-calca{position:relative;margin:34px auto 0;max-width:460px}
-.palco-calca .disco{position:absolute;inset:8% 4% 0;border-radius:44% 56% 40% 60%/55% 45% 55% 45%;background:var(--gradiente);box-shadow:var(--sombra-forte)}
-.palco-calca img{position:relative;width:100%;filter:drop-shadow(0 20px 26px rgba(60,0,70,.35))}
+/* foto cortada no formato do arco, igual à página da WordPress (27/10) */
+.palco-calca{position:relative;margin:34px auto 0;max-width:460px;border-radius:200px 200px 40px 40px;overflow:hidden;background:var(--gradiente);box-shadow:var(--sombra-forte)}
+.palco-calca .disco{display:none}
+.palco-calca img{position:relative;display:block;width:100%}
 
 /* ---------- 05 · Antes e depois ---------- */
 .moldura{margin-top:26px;background:var(--preto);border-radius:var(--raio);padding:14px;display:grid;grid-template-columns:1fr 1fr;gap:12px;box-shadow:var(--sombra-forte)}
