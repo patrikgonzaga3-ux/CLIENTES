@@ -255,6 +255,38 @@ Os M da pasta "MICHELE LOW" são esses mesmos vídeos. Mapa conferido pelos quad
   - **Decisão do Patrik:** a verba dos anúncios continua como está (R$ 30,15/dia por conjunto), mesmo com o preço em R$ 47.
   - O domínio "efeitolipo21.com.br" não existe; a referência de layout é efeitolipo.com.br/a.
 
+- **30/10 · Diagnóstico da 1ª campanha** (relatório: https://claude.ai/artifact/Eyc2xFsCSqJarBDmZSr56k):
+  - Campanha 120252299198450047, de 26 a 29/10, **pausada** em 29/10.
+    - R$ 403,05 gastos; 24.656 impressões; 953 cliques no link; 391 visitas (Meta) ou 627 (painel).
+    - 3 aberturas de checkout, 1 checkout iniciado, 0 vendas. A Greenn não mandou nenhum aviso desde 23/10.
+  - **Causas, por peso:**
+    1. Público aberto: 18–65 anos, todos os gêneros, Advantage+ sem sugestão. 69% da verba foi para homens e 38% para 55+.
+    2. Posicionamentos automáticos: Audience Network = 300 cliques (31%), 0 na oferta. FB Reels e o sobreposto = 403 cliques, 0 checkout.
+       As 3 aberturas de checkout e o único checkout iniciado vieram do Instagram (Feed e Stories).
+    3. Quebra de mensagem. Os vídeos falam de festa/viagem/evento em 7 dias e vestido; a página abre com canetinha e avatar
+       ("festa/viagem/evento/vestido" = 0 vezes na página).
+       Só 8,6% passam da 1ª tela (Efeito Lipo /b 34%, 21D 41%); mediana de tempo ativo 0,6 s; 77% saem em menos de 5 s.
+    4. Oferta só no bloco 11 de 16: 6 visitas (1%) viram o preço. **O preço (67 → 47) não foi a causa.**
+    5. Vídeos de 51 a 81 s, média assistida de 4 a 8 s; 7,6% chegam a 25%.
+       Qualidade "abaixo da média" nos 5 anúncios.
+  - **Melhores sinais:**
+    - AD4: 2 aberturas de checkout + o único checkout iniciado; 16% das visitas ficaram 15 s ou mais.
+    - AD1: 1 abertura de checkout, conversão "acima da média".
+    - AD3: 3 visitas na oferta.
+    - AD2 (82% dos cliques de apps) e AD5 (88% homens) foram os piores.
+    - A ligação AD↔vídeo M não é visível pela API (são posts da página): confirmar no Gerenciador.
+  - **Plano sugerido (aguarda OK do Patrik):**
+    1. Mulheres 30–55, público original.
+    2. Posicionamentos manuais (IG Feed/Stories/Reels + FB Feed/Stories).
+    3. Versão G da página com a 1ª tela do evento/vestido + foto real da Michele + fotos reais de alunas + botão.
+    4. Botão de compra cedo.
+    5. Cortes de vídeo de 20–30 s.
+    6. Compra de teste PIX antes de religar e token do Meta no painel.
+    7. Religar só AD4, AD1 e AD3 com regra de corte (R$ 47 sem checkout ou R$ 94 sem venda).
+    8. Manter R$ 47.
+  - Metas do próximo teste: mulheres ≥ 90% da verba; visita/clique ≥ 70%; passam da 1ª tela ≥ 30%; chegam à oferta ≥ 10%;
+    clicam em comprar ≥ 3%; custo por checkout ≤ R$ 10,81; custo por compra ≤ R$ 21,15 (empate ≈ R$ 37).
+
 ## 9. Como trabalhar
 - Sempre em português, frases curtas. Nunca pedir senha ou token no chat; dizer onde colar.
 - Checkout, preço, oferta, link de compra e configuração da Greenn: só com OK explícito do Patrik para a mudança mostrada.
