@@ -288,6 +288,39 @@ Os M da pasta "MICHELE LOW" são esses mesmos vídeos. Mapa conferido pelos quad
     clicam em comprar ≥ 3%; custo por checkout ≤ R$ 10,81; custo por compra ≤ R$ 21,15 (empate ≈ R$ 37).
 - **03/11:** `wp_michele.py teste` OK (michelesalla, administrator). Nada mudou no site. Plano de 30/10 segue aguardando o OK do Patrik.
 
+- **03/11 · Black Diva 2026** (proposta da Michele revisada; relatório: https://claude.ai/artifact/1aP7s3GyRXUuzwHnNR1NbL):
+  - **Proposta da Michele:**
+    - combo de 3 etapas: Desafio 7 em 7 → Protocolo Mais Leve até o Natal (21 dias) → Universo Diva (12 meses, produto principal);
+    - R$ 197 à vista; mentoria individual fora;
+    - janela curta com data real; benefício para alunas atuais (extensão de acesso);
+    - gancho "Janeiro pode chegar com você já cuidando de si. Sua virada começa com cinco minutinhos."
+  - **Página em prévia** (não indexada, não está no WordPress): https://clientes-phi-six.vercel.app/michele-salla/black-diva/
+    - arquivo `michele-salla/black-diva/index.html`; pendências marcadas em amarelo (`.pendente` / `.nota-revisao`).
+  - **Histórico da conta** (todas as campanhas de venda desde 04/24):
+    - R$ 17.151 gastos, 101 compras no pixel, R$ 4.166 de venda registrada (retorno 0,24);
+    - DCBD jan/26: vídeos a R$ 92,50 por compra, imagens a R$ 205,28;
+    - melhor custo por compra entre R$ 45 e R$ 66 (produtos de R$ 29 a R$ 43);
+    - Black 2025 = [BDF] captação para WhatsApp + live (sem venda no pixel); Natal 2025 sem venda.
+    - **Correção:** o pixel já teve compras (o relatório de 30/10 dizia que não).
+  - **Sugestões:**
+    - ancoragem só com preço praticado (alternativa: R$ 16,42 por mês);
+    - vendas até 01/12 às 23h59 e Protocolo de 02/12 a 22/12;
+    - compra de teste antes de anunciar;
+    - alinhar "cinco minutinhos" com as aulas de 15 min;
+    - deixar claro o que acontece depois de 12 meses;
+    - captação para o grupo VIP de 10 a 25/11 (R$ 40/dia) e venda de 26/11 a 01/12 (R$ 150/dia) para públicos quentes;
+    - mulheres de 30 a 55 anos, sem Audience Network, vídeos da Michele.
+  - **Contas de R$ 197:** sobra de R$ 155,14 por venda; meta de custo por venda R$ 88,65; empate R$ 155,14.
+  - **Falta da Michele:**
+    - quanto vendeu a Black 2025;
+    - preços praticados do Universo e do Protocolo;
+    - plataforma e link do checkout;
+    - encontros do Universo;
+    - datas;
+    - o que acontece depois dos 12 meses;
+    - o benefício das alunas atuais;
+    - 4 a 6 vídeos.
+
 ## 9. Como trabalhar
 - Sempre em português, frases curtas. Nunca pedir senha ou token no chat; dizer onde colar.
 - Checkout, preço, oferta, link de compra e configuração da Greenn: só com OK explícito do Patrik para a mudança mostrada.
