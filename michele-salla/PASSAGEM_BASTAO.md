@@ -286,6 +286,7 @@ Os M da pasta "MICHELE LOW" são esses mesmos vídeos. Mapa conferido pelos quad
     8. Manter R$ 47.
   - Metas do próximo teste: mulheres ≥ 90% da verba; visita/clique ≥ 70%; passam da 1ª tela ≥ 30%; chegam à oferta ≥ 10%;
     clicam em comprar ≥ 3%; custo por checkout ≤ R$ 10,81; custo por compra ≤ R$ 21,15 (empate ≈ R$ 37).
+- **03/11:** `wp_michele.py teste` OK (michelesalla, administrator). Nada mudou no site. Plano de 30/10 segue aguardando o OK do Patrik.
 
 ## 9. Como trabalhar
 - Sempre em português, frases curtas. Nunca pedir senha ou token no chat; dizer onde colar.
