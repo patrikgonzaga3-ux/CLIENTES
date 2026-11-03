@@ -186,7 +186,7 @@ Os M da pasta "MICHELE LOW" são esses mesmos vídeos. Mapa conferido pelos quad
 
 9. **Quiz Diva (03/11):** Michele dizer a idade (capa 1 e gancho 2), aprovar promessas e perfis e gravar os ganchos;
    Patrik dar OK no quiz e na oferta, escolher onde o quiz fica (WordPress em rascunho ou endereço próprio) e na campanha.
-   Antes do 1º anúncio: ligar o rastreio do painel no quiz (visita, telas e clique para comprar) — ainda não tem.
+   Rastreio LIGADO (03/11): aba **Quiz Diva** em https://painel.michelesalla.com.br/painel/quiz (telas 01–22 = blocos; quiz-p1..p5 = páginas).
 
 ## 8. Diário
 - **23/10:**
@@ -343,6 +343,10 @@ Os M da pasta "MICHELE LOW" são esses mesmos vídeos. Mapa conferido pelos quad
     Desafio 7 em 7 (R$ 47, E1YMM7) com resposta ao medo da tela 16. Link leva utm/fbclid do anúncio e `sck=quiz-p1..p5`.
   - 20 ganchos (4 por promessa) com frases dos posts da Michele; 3 marcados com risco de reprovação no Meta.
   - Testado: caminho completo até os 5 perfis, 5 capas, voltar, várias respostas, toque duplo, imagens, largura 390 px.
+  - **Rastreio do quiz:** o quiz carrega `painel.michelesalla.com.br/rastreio.js` com `data-slug=quiz-pN` e põe a tela atual em
+    `window.plBloco` (chama `window.plTique()` antes e depois da troca). Site `quiz` no `cliente.config.ts` (domínios: michelesalla.com.br,
+    clientes-phi-six.vercel.app, painel.michelesalla.com.br). A API aceita vários sites no mesmo domínio pelo começo do slug.
+    Telas abertas com `?tela=` (painel de revisão) não rastreiam. Se o quiz mudar de endereço, pôr o domínio em `outrosDominios`.
   - Plano de teste sugerido: 1 ABO com 5 conjuntos (1 por promessa) a R$ 21,15, mulheres 30–55, sem Audience Network, evento Compra.
 
 ## 9. Como trabalhar

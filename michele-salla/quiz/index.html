@@ -98,6 +98,17 @@ const EXEMPLO = {
 if (q.get('perfil') && EXEMPLO[q.get('perfil')]) Object.assign(resp, EXEMPLO[q.get('perfil')])
 if (q.get('tela')) { const k = TELAS.findIndex(t => t.id === q.get('tela')); if (k >= 0) i = k }
 
+// Rastreio do painel da Michele (painel.michelesalla.com.br, aba Quiz Diva): cada tela conta como um bloco
+// (window.plBloco = número da tela) e cada capa é uma página (quiz-p1 … quiz-p5). Não roda nas telas abertas pelo painel de revisão.
+if (!q.get('tela')) {
+  const r = document.createElement('script')
+  r.async = true
+  r.src = 'https://painel.michelesalla.com.br/rastreio.js'
+  r.dataset.slug = 'quiz-p' + P
+  r.dataset.checkout = 'sim'
+  document.body.appendChild(r)
+}
+
 const contaveis = TELAS.filter(t => !['capa', 'oferta'].includes(t.tipo)).length
 function progresso() { const n = TELAS.slice(0, i + 1).filter(t => !['capa', 'oferta'].includes(t.tipo)).length; return Math.round(100 * n / contaveis) }
 function topo() { return i === 0 ? '' : `<div class="topo"><button class="voltar" aria-label="Voltar" onclick="volta()">‹</button><div class="barra" aria-hidden="true"><i style="width:${progresso()}%"></i></div></div>` }
@@ -106,6 +117,9 @@ function volta() { i = Math.max(i - 1, 0); desenha(); scrollTo(0, 0) }
 
 function desenha() {
   const t = TELAS[i]
+  if (window.plTique) window.plTique() // fecha o tempo da tela anterior
+  window.plBloco = i + 1
+  if (window.plTique) window.plTique() // marca a chegada nesta tela
   let h = topo()
   if (t.tipo === 'capa') {
     const p = PROMESSAS[P]
@@ -120,7 +134,7 @@ function desenha() {
   } else if (t.tipo === 'uma' || t.tipo === 'varias') {
     const marc = t.tipo === 'varias' ? (resp[t.id] || []) : [resp[t.id]]
     h += `<section class="pergunta"><h2>${esc(t.titulo)}</h2><p class="sub">${esc(t.sub || '')}</p></section>
-      <div class="ops ${t.cols === 2 ? 'c2' : ''}">${t.op.map(o => `<button class="op ${marc.includes(o[0]) ? 'on' : ''}" onclick="escolhe('${t.id}','${o[0]}')">${esc(o[1])}${o[2] ? `<small>${esc(o[2])}</small>` : ''}</button>`).join('')}</div>
+      <div class="ops ${t.cols === 2 ? 'c2' : ''}">${t.op.map(o => `<button class="op ${marc.includes(o[0]) ? 'on' : ''}" onclick="escolhe('${t.id}','${o[0]}')">${esc(o[1])}${o[2] ? ` <small>${esc(o[2])}</small>` : ''}</button>`).join('')}</div>
       ${t.tipo === 'varias' ? `<button class="botao" onclick="vai()" ${marc.length ? '' : 'disabled style="opacity:.45"'}>Continuar →</button>` : ''}`
   } else if (t.tipo === 'michele') {
     h += `<section class="michele cartao"><img src="${IMG}michele-recorte.webp" alt="Michele Salla" width="802" height="1292">

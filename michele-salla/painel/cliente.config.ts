@@ -11,6 +11,8 @@ export type SiteCfg = {
   nome: string
   /** domínio da página de vendas, sem https:// e sem www (o rastreio só aceita dados dele) */
   dominio: string
+  /** outros domínios onde a mesma página/quiz pode rodar (ex.: a prévia na Vercel) */
+  outrosDominios?: string[]
   /** começo do slug das páginas; cada página tem o slug `${prefixo}-<letra ou nome>` */
   prefixo: string
   paginas: Pagina[]
@@ -56,6 +58,23 @@ export const CLIENTE = {
         'Benefícios', 'O que vai receber', 'Bônus', 'É pra você que', 'Recapitulando', 'Oferta',
         'Duas opções', 'Autora', 'Oferta repetida', 'Perguntas', 'Rodapé'],
       blocosOferta: [11, 14],
+      botoes: {},
+    },
+    {
+      // Quiz Diva (03/11): cada tela do quiz conta como um bloco; a capa (promessa) é a página (quiz-p1 … quiz-p5).
+      // O quiz informa a tela atual em window.plBloco; o botão de compra leva sck=quiz-pN para a Greenn.
+      id: 'quiz',
+      nome: 'Quiz Diva',
+      dominio: 'michelesalla.com.br',
+      outrosDominios: ['clientes-phi-six.vercel.app', 'painel.michelesalla.com.br'],
+      prefixo: 'quiz',
+      paginas: [['quiz-p1', 'P1 · Rotina de 5 minutos'], ['quiz-p2', 'P2 · Barriga estufada à noite'], ['quiz-p3', 'P3 · Sem mil abdominais'],
+        ['quiz-p4', 'P4 · Depois dos 40'], ['quiz-p5', 'P5 · Se deixou pra depois']],
+      // telas 01 a 22 do quiz, na ordem (michele-salla/quiz/quiz.js)
+      blocos: ['Capa (promessa)', 'Idade', 'Michele', 'Objetivo', 'Barriga no dia', 'Recomeços', 'Abdominal', 'Hipopressivo',
+        'Prova (alunas)', 'Rotina', 'Sinais', 'Fase', 'Identificação', 'Analisando 1', 'Sabotador', 'Medo', 'Sonho',
+        'Tempo por dia', 'Motivo', 'Analisando 2', 'Resultado (perfil)', 'Oferta'],
+      blocosOferta: [22],
       botoes: {},
     },
   ] as SiteCfg[],

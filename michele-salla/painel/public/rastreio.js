@@ -6,6 +6,8 @@
  *   data-checkout="sim"                      leva para o checkout o rastreio do anúncio (utm_term, utm_content, fbclid) e sck=<slug>
  * Blocos da página: marque cada bloco com data-bloco="01", data-bloco="02"… (ou a classe elb-01, elb-02…).
  * Sem marcação, conta as seções de cima da página, na ordem.
+ * Quiz ou página que troca de tela sem rolar: a página põe o número da tela atual em window.plBloco (1, 2, 3…)
+ * e chama window.plTique() antes e depois da troca.
  * Mede por visita: tempo em cada bloco (o bloco no meio da tela, com a aba visível), até onde rolou, onde parou,
  * cada clique com o segundo, tempo até clicar em comprar e o carregamento. Não guarda dados pessoais nem o que a
  * pessoa digita. Ignora prévia/robôs do Meta e navegadores automatizados. */
@@ -77,7 +79,7 @@
     if (document.visibilityState !== 'visible') return
     s.ativo_ms += d
     if (!blocos.length) achaBlocos()
-    var n = blocoNoMeio()
+    var n = window.plBloco > 0 ? Math.min(99, Math.round(window.plBloco)) : blocoNoMeio()
     if (n) {
       var b = s.blocos[k2(n)]
       if (!b) { b = s.blocos[k2(n)] = { ms: 0, chegou_ms: agora(), vezes: 0 }; mudou = true }
@@ -90,6 +92,7 @@
     if (r > s.rolagem_max) { s.rolagem_max = r; mudou = true }
   }
   setInterval(tique, 500)
+  window.plTique = tique // quiz: chama antes e depois de trocar window.plBloco, para contar telas respondidas em menos de 0,5 s
 
   function curto(t) { return String(t || '').replace(/\s+/g, ' ').trim().slice(0, 60) }
   function ehCompra(a) { return a && a.tagName === 'A' && (a.hasAttribute('data-cta') || CHECKOUT.test(a.getAttribute('href') || '')) }
@@ -124,7 +127,7 @@
       if (!blocos.length) achaBlocos()
       var alvo = alvoDo(ev.target), ms = agora()
       if (alvo.indexOf('carrossel') >= 0) ultArraste = ms
-      if (s.cliques.length < 150) s.cliques.push({ ms: ms, b: blocoDe(ev.target), o: alvo })
+      if (s.cliques.length < 150) s.cliques.push({ ms: ms, b: window.plBloco > 0 ? Math.round(window.plBloco) : blocoDe(ev.target), o: alvo })
       if (alvo.indexOf('comprar: ') === 0) {
         if (s.comprar_ms === null) { s.comprar_ms = ms; s.comprar_local = alvo.slice(9) }
         decora(ev.target.closest('a'))

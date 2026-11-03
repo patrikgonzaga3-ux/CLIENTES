@@ -6,10 +6,13 @@ import { gravar } from '@/lib/db'
 export const runtime = 'nodejs'
 export const dynamic = 'force-dynamic'
 
-function siteDaOrigem(origin: string | null) {
+function sitesDaOrigem(origin: string | null) {
   const m = /^https?:\/\/(?:www\.)?([a-z0-9.-]+)(?::\d+)?$/i.exec(origin || '')
-  return m ? CLIENTE.sites.find((s) => s.dominio.toLowerCase() === m[1].toLowerCase()) ?? null : null
+  if (!m) return []
+  const d = m[1].toLowerCase()
+  return CLIENTE.sites.filter((s) => [s.dominio, ...(s.outrosDominios ?? [])].some((x) => x.toLowerCase() === d))
 }
+const siteDaOrigem = (origin: string | null) => sitesDaOrigem(origin)[0] ?? null
 function cors(req: Request): Record<string, string> {
   const o = req.headers.get('origin') || ''
   return siteDaOrigem(o) ? { 'Access-Control-Allow-Origin': o, 'Access-Control-Allow-Methods': 'POST, OPTIONS', 'Access-Control-Allow-Headers': 'Content-Type', 'Access-Control-Max-Age': '86400', Vary: 'Origin' } : {}
@@ -22,12 +25,13 @@ const H6 = 6 * 3600_000
 
 export async function POST(req: Request) {
   const h = cors(req)
-  const site = siteDaOrigem(req.headers.get('origin'))
-  if (!site) return Response.json({ ok: false }, { status: 403, headers: h })
+  const sites = sitesDaOrigem(req.headers.get('origin'))
+  if (!sites.length) return Response.json({ ok: false }, { status: 403, headers: h })
   let b: Record<string, unknown>
   try { const raw = await req.text(); if (raw.length > 60_000) return Response.json({ ok: false }, { status: 413, headers: h }); b = JSON.parse(raw) } catch { return Response.json({ ok: false }, { status: 400, headers: h }) }
   const id = txt(b.id, 64), slug = txt(b.slug, 60)
-  if (!id || !/^[A-Za-z0-9-]{8,64}$/.test(id) || !slug || !slug.startsWith(`${site.prefixo}-`) || !/^[a-z0-9-]{3,60}$/.test(slug)) return Response.json({ ok: false }, { status: 400, headers: h })
+  const site = slug ? sites.find((s) => slug.startsWith(`${s.prefixo}-`)) : null
+  if (!id || !/^[A-Za-z0-9-]{8,64}$/.test(id) || !slug || !site || !/^[a-z0-9-]{3,60}$/.test(slug)) return Response.json({ ok: false }, { status: 400, headers: h })
   const blocos: Record<string, { ms: number; chegou_ms: number; vezes: number }> = {}
   if (b.blocos && typeof b.blocos === 'object') for (const [k, v] of Object.entries(b.blocos as Record<string, Record<string, unknown>>).slice(0, 40)) {
     if (/^\d\d$/.test(k) && v && typeof v === 'object') blocos[k] = { ms: int(v.ms, H6), chegou_ms: int(v.chegou_ms, H6), vezes: int(v.vezes, 999) }

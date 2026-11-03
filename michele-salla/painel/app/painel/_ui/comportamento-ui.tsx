@@ -83,7 +83,7 @@ export async function PainelComportamento({ site, per, sp, checkout, visitasPadr
   const pedidosN = checkout.pedidos.filter((s) => !pag || s === `${site.prefixo}-${pag}`).length
   const vendasN = checkout.vendas.filter((s) => !pag || s === `${site.prefixo}-${pag}`).length
   const etapas = [
-    { k: 'topo', nome: 'Passam do topo', qtd: passouTopo, base: n, ref: REF.topo, onde: 'anúncio → topo',
+    { k: 'topo', nome: site.id === 'quiz' ? 'Passam da capa' : 'Passam do topo', qtd: passouTopo, base: n, ref: REF.topo, onde: site.id === 'quiz' ? 'anúncio → capa do quiz' : 'anúncio → topo',
       acao: 'Muita gente sai no topo: a promessa do anúncio não bate com o topo da página, o topo não prende nos primeiros segundos ou a página demora para abrir (ver carregamento). Comparar "Saem no topo" por anúncio.' },
     { k: 'oferta', nome: 'Chegam na oferta', qtd: chegouOferta, base: passouTopo, ref: REF.oferta, onde: 'meio da página',
       acao: 'Leem o começo mas não chegam no preço: ver em "Bloco a bloco" onde mais saem e encurtar ou trocar esse bloco; testar um botão de comprar mais cedo.' },
@@ -182,8 +182,10 @@ export async function PainelComportamento({ site, per, sp, checkout, visitasPadr
   const corEtapa = (t: number | null, ref: number) => (t == null ? undefined : t >= ref ? 'var(--g)' : t >= ref * 0.75 ? 'var(--pn-amar)' : 'var(--pn-verm)')
 
   return (
-    <PainelShell active="pagina">
-      <Titulo titulo="Comportamento na página" sub={`${site.nome}: onde a pessoa para, quanto tempo fica em cada bloco, onde clica e quanto tempo leva até comprar. Uma linha por abertura da página.`} />
+    <PainelShell active={site.id === 'quiz' ? 'quiz' : 'pagina'}>
+      <Titulo titulo={site.id === 'quiz' ? 'Quiz Diva · tela por tela' : 'Comportamento na página'} sub={site.id === 'quiz'
+        ? 'Cada tela do quiz é um bloco (01 capa … 22 oferta) e cada promessa é uma página: compare as 5 nas abas P1 a P5. Em "Todos os cliques" aparecem as respostas que as pessoas mais marcam.'
+        : `${site.nome}: onde a pessoa para, quanto tempo fica em cada bloco, onde clica e quanto tempo leva até comprar. Uma linha por abertura da página.`} />
       <FiltroPeriodo per={per} base={BASE} extra={extra} presets={[['hoje', 'Hoje'], ['ontem', 'Ontem'], ['7d', '7 dias'], ['30d', '30 dias'], ['mes', 'Mês atual']]} />
       <Abas ativo={orig} itens={[['anuncio', 'Só do anúncio', link({ orig: undefined })], ['todas', 'Todas as visitas', link({ orig: 'todas' })]]} />
       {site.paginas.length > 1 && <Abas ativo={pag || 'tudo'} itens={[['tudo', 'Todas as páginas', link({ pag: undefined })], ...site.paginas.map(([s, r]) => [s.slice(site.prefixo.length + 1), r.split(' · ')[0] === r ? r : `Só a ${r.split(' · ')[0]}`, link({ pag: s.slice(site.prefixo.length + 1) })] as [string, string, string])]} />}
