@@ -336,7 +336,8 @@ Os M da pasta "MICHELE LOW" são esses mesmos vídeos. Mapa conferido pelos quad
   - **Quiz:** `michele-salla/quiz/` (`quiz.js` = todos os textos, telas, perfis e regra; `index.html` = o quiz).
     Prévia: https://clientes-phi-six.vercel.app/michele-salla/quiz/?p=1 (capas `?p=1` a `5`).
     Painel com o print de cada tela: https://clientes-phi-six.vercel.app/michele-salla/quiz/revisao/ e https://claude.ai/artifact/UUtEikrpunkA3Ht7TSd8aN
-  - Modelado no quiz do Efeito Lipo da Laura (desde 01/10: 3.155 sessões, 28,6% passam da capa, 711 resultados, 481 cliques no checkout, ≈ 100 vendas).
+  - Modelado no quiz do Efeito Lipo da Laura (07/10 a 01/11: 3.155 sessões, 28,6% passam da capa, 711 resultados, 481 cliques no checkout,
+    75 vendas do produto principal + 25 itens extras; conferido no banco em 03/11).
   - **5 promessas = 5 capas** (resto igual): 1 rotina de 5 min da Michele (post com 26.303 cliques); 2 barriga estufada à noite;
     3 sem mil abdominais / técnica certa; 4 depois dos 40 não é falta de esforço; 5 você se deixou pra depois.
   - **22 telas**, 5 perfis por regra (Nova Fase → Estufada → Esforçada → Recomeça → Deixou pra Depois), oferta única do
@@ -347,6 +348,10 @@ Os M da pasta "MICHELE LOW" são esses mesmos vídeos. Mapa conferido pelos quad
     `window.plBloco` (chama `window.plTique()` antes e depois da troca). Site `quiz` no `cliente.config.ts` (domínios: michelesalla.com.br,
     clientes-phi-six.vercel.app, painel.michelesalla.com.br). A API aceita vários sites no mesmo domínio pelo começo do slug.
     Telas abertas com `?tela=` (painel de revisão) não rastreiam. Se o quiz mudar de endereço, pôr o domínio em `outrosDominios`.
+  - **Checagem dos 3 filtros do Patrik (03/11):** todos os números reconferidos na fonte. Corrigido "≈100 vendas" → 75 do produto
+    principal. Posts da Michele são impulsionamentos de CLIQUE (não venda). P5 tem o maior CTR da conta ("Deixa eu te lembrar", 13,53%);
+    P4 tem a prova mais fraca ("Atenção Mulher", 43 cliques, CTR 1,72%). Tirados textos sem fonte ("quiz de 1 minuto", "mil abdominais
+    estufam"). Michele precisa confirmar que faz a rotina de 5 min / hipopressivo todo dia e revisar o "trava" de cada perfil.
   - Plano de teste sugerido: 1 ABO com 5 conjuntos (1 por promessa) a R$ 21,15, mulheres 30–55, sem Audience Network, evento Compra.
 
 ## 9. Como trabalhar

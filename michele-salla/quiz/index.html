@@ -130,7 +130,7 @@ function desenha() {
       <p class="sub">${esc(p.sub)}</p>
       <button class="botao" onclick="vai()">${esc(p.botao)} →</button>
       <div class="foto-capa"><img src="${IMG}michele-recorte.webp" alt="Michele Salla" width="802" height="1292"></div>
-      <p class="miudo">Leva cerca de 1 minuto · por Michele Salla, educadora física</p></section>`
+      <p class="miudo">Por Michele Salla, educadora física</p></section>`
   } else if (t.tipo === 'uma' || t.tipo === 'varias') {
     const marc = t.tipo === 'varias' ? (resp[t.id] || []) : [resp[t.id]]
     h += `<section class="pergunta"><h2>${esc(t.titulo)}</h2><p class="sub">${esc(t.sub || '')}</p></section>
@@ -139,7 +139,7 @@ function desenha() {
   } else if (t.tipo === 'michele') {
     h += `<section class="michele cartao"><img src="${IMG}michele-recorte.webp" alt="Michele Salla" width="802" height="1292">
       <h2 style="font-size:22px">Prazer, eu sou a Michele Salla</h2>
-      <p>Educadora Física desde 2005, especialista em emagrecimento comportamental e licenciada na técnica da Barriga Negativa.</p>
+      <p>Educadora Física desde 2005, especialista em emagrecimento comportamental, licenciada na técnica da Barriga Negativa e autora do livro Vida Diva (2025).</p>
       <p>Referência em transformação feminina há mais de 20 anos, criei uma metodologia que já ajudou milhares de mulheres a perderem a barriga sem viver de dietas: primeiro a mente, depois o corpo.</p>
       <p>Nas próximas perguntas, vou entender a sua barriga e a sua rotina para te mostrar por onde começar.</p></section>
       <button class="botao" onclick="vai()">Continuar →</button>`

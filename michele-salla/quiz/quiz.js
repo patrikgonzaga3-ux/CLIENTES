@@ -9,21 +9,21 @@ const CHECKOUT = 'https://payfast.greenn.com.br/199167/offer/E1YMM7' // Desafio 
 const PROMESSAS = {
   1: {
     nome: 'A rotina da Michele',
-    etiqueta: 'Quiz de 1 minuto',
+    etiqueta: 'Quiz gratuito',
     titulo: 'Descubra a rotina de <mark>5 minutos por dia</mark> que eu faço para manter a barriga lisa aos [[IDADE]] anos',
     sub: 'Responda e veja qual é o seu perfil e por onde você começa.',
     botao: 'Quero descobrir meu perfil',
   },
   2: {
     nome: 'Barriga estufada à noite',
-    etiqueta: 'Quiz de 1 minuto',
+    etiqueta: 'Quiz gratuito',
     titulo: 'Você acorda com a barriga lisinha e <mark>à noite ela está estufada?</mark>',
     sub: 'Descubra o que a sua barriga está te dizendo e o que fazer em 5 minutos por dia.',
     botao: 'Quero entender a minha barriga',
   },
   3: {
     nome: 'Sem mil abdominais',
-    etiqueta: 'Quiz de 1 minuto',
+    etiqueta: 'Quiz gratuito',
     titulo: 'Você não precisa de mil abdominais. <mark>Precisa da técnica certa.</mark>',
     sub: 'Descubra o seu perfil e o exercício de 5 minutos que afina a cintura sem impacto.',
     botao: 'Quero descobrir a técnica certa para mim',
@@ -32,12 +32,12 @@ const PROMESSAS = {
     nome: 'Depois dos 40',
     etiqueta: 'Para mulheres a partir dos 35',
     titulo: 'Depois dos 40 a barriga parou de responder? <mark>Não é falta de esforço.</mark>',
-    sub: 'É falta da técnica certa. Descubra o seu perfil em 1 minuto.',
+    sub: 'É falta da técnica certa. Descubra o seu perfil e por onde começar.',
     botao: 'Quero saber o meu perfil',
   },
   5: {
     nome: 'Você se deixou pra depois',
-    etiqueta: 'Quiz de 1 minuto',
+    etiqueta: 'Quiz gratuito',
     titulo: 'Até quando você vai <mark>se deixar pra depois?</mark>',
     sub: 'Descubra o seu perfil e por onde recomeçar hoje, sem esperar segunda-feira.',
     botao: 'Quero recomeçar por mim',
@@ -102,13 +102,13 @@ const PERFIS = {
   'estufada': {
     nome: 'A Diva da Barriga Estufada',
     retrato: 'A sua barriga muda ao longo do dia: de manhã está melhor e à noite está estufada. Isso mexe com a roupa, com o humor e com a autoestima.',
-    trava: 'Abdominal tradicional e treino de impacto não resolvem esse tipo de barriga. O que ajuda é ativar o seu cinturão natural com respiração e postura.',
+    trava: 'Fazer mais abdominal não é o caminho para esse tipo de barriga. O caminho é ativar o seu cinturão natural com respiração e postura.',
     comeca: 'Você começa pelas aulas “15 Minutos por Dia: Barriga e Cintura em Ação”, com exercícios funcionais, respiração e hipopressivos.',
   },
   'esforcada': {
     nome: 'A Diva Esforçada sem Técnica',
     retrato: 'Você não fica parada: já fez abdominal, dieta, treino. Mesmo assim, a barriga não sai e a cintura não aparece.',
-    trava: 'Não é falta de esforço, é falta da técnica certa. Mil abdominais podem até deixar a barriga mais estufada.',
+    trava: 'Não é falta de esforço, é falta da técnica certa. Você não precisa de mil abdominais.',
     comeca: 'Você começa aprendendo a técnica do jeito certo, nas aulas “15 Minutos por Dia”, para o esforço finalmente virar resultado.',
   },
   'recomeco': {
