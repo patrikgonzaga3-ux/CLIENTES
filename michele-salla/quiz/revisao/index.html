@@ -1,0 +1,368 @@
+<!doctype html>
+<title>Quiz Diva · Revisão</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="robots" content="noindex, nofollow">
+<script>if(location.hostname.endsWith('vercel.app')&&!location.pathname.endsWith('/'))location.replace(location.pathname+'/'+location.search+location.hash)</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+/* Layout: caderno de revisão — uma coluna de leitura, com faixas de celulares que rolam de lado, tela por tela. Identidade do Desafio 7 em 7. */
+:root{
+  --fundo:#FBF4FA; --papel:#FFFFFF; --tinta:#241A29; --suave:#62556A; --linha:#EBD9E7;
+  --roxo:#9E047C; --violeta:#8D29F2; --amarelo:#FFFC00; --amarelo-tinta:#5E5A00; --marca-fundo:#FFF9B0;
+  --ok:#1B7A3A; --ok-fundo:#E3F4E8; --alerta:#9A5B00; --alerta-fundo:#FFF1D6;
+  --display:Sora,"Trebuchet MS",system-ui,sans-serif; --texto:Raleway,"Segoe UI",system-ui,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --fundo:#17111A; --papel:#211926; --tinta:#F4EAF2; --suave:#BFAFC5; --linha:#3A2C40;
+  --roxo:#E66CC8; --violeta:#B58CFF; --amarelo:#FFFC00; --amarelo-tinta:#FFF6A0; --marca-fundo:#3A3610;
+  --ok:#6FD48F; --ok-fundo:#16301F; --alerta:#F5B95A; --alerta-fundo:#33260F; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --fundo:#17111A; --papel:#211926; --tinta:#F4EAF2; --suave:#BFAFC5; --linha:#3A2C40;
+  --roxo:#E66CC8; --violeta:#B58CFF; --amarelo:#FFFC00; --amarelo-tinta:#FFF6A0; --marca-fundo:#3A3610;
+  --ok:#6FD48F; --ok-fundo:#16301F; --alerta:#F5B95A; --alerta-fundo:#33260F; color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--fundo);color:var(--tinta);font:400 16px/1.6 var(--texto)}
+.pagina{max-width:1080px;margin:0 auto;padding-block:28px 64px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:grid;gap:44px}
+h1,h2,h3{font-family:var(--display);line-height:1.15;margin:0;text-wrap:balance}
+h1{font-size:clamp(30px,5vw,46px);font-weight:800}
+h2{font-size:clamp(22px,3.4vw,30px);font-weight:800}
+h3{font-size:18px;font-weight:700}
+p{margin:0;max-width:68ch}
+a{color:var(--roxo)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--violeta);outline-offset:2px}
+.rot{font:700 12px/1 var(--display);letter-spacing:.14em;text-transform:uppercase;color:var(--roxo)}
+.sec{display:grid;gap:16px;min-width:0}
+.sec>header{display:grid;gap:6px}
+.sub{color:var(--suave)}
+.topo{display:grid;gap:14px}
+.botoes{display:flex;flex-wrap:wrap;gap:8px}
+.bt{display:inline-flex;align-items:center;gap:6px;padding:9px 14px;border-radius:99px;border:1.5px solid var(--linha);background:var(--papel);color:var(--tinta);text-decoration:none;font:700 14px/1 var(--display)}
+.bt.forte{background:var(--amarelo);border-color:var(--amarelo);color:#111}
+.resumo{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
+.resumo div{background:var(--papel);border:1px solid var(--linha);border-radius:14px;padding:14px 16px;display:grid;gap:2px;min-width:0}
+.resumo b{font:800 26px/1.1 var(--display);color:var(--roxo);font-variant-numeric:tabular-nums}
+.resumo span{font-size:14px;color:var(--suave)}
+/* faixa de celulares */
+.faixa{display:flex;gap:16px;overflow-x:auto;padding:4px 2px 14px;scroll-snap-type:x proximity}
+.cel{flex:0 0 232px;display:grid;gap:8px;align-content:start;scroll-snap-align:start;min-width:0}
+.cel .tela{display:block;border-radius:22px;overflow:hidden;border:6px solid var(--tinta);background:var(--papel);height:440px}
+.cel .tela.longa{overflow-y:auto}
+.cel img{display:block;width:100%;height:auto}
+.cel .n{font:800 13px/1 var(--display);color:var(--roxo);letter-spacing:.06em}
+.cel h3{font-size:15px}
+.cel p{font-size:13.5px;color:var(--suave);line-height:1.45}
+.cel .abrir{font-size:13px;font-weight:700}
+.dica{font-size:13px;color:var(--suave)}
+/* promessas */
+.prom{display:grid;grid-template-columns:232px minmax(0,1fr);gap:20px;background:var(--papel);border:1px solid var(--linha);border-radius:20px;padding:18px}
+.prom .tela{border-radius:22px;overflow:auto;border:6px solid var(--tinta);height:440px}
+.prom .tela img{display:block;width:100%;height:auto}
+.prom .txt{display:grid;gap:10px;align-content:start;min-width:0}
+.prom .titulo{font:800 20px/1.25 var(--display)}
+.fonte{background:var(--fundo);border-radius:12px;padding:12px 14px;font-size:14.5px;display:grid;gap:6px}
+.fonte q{font-style:italic}
+@media (max-width:640px){.prom{grid-template-columns:1fr}.prom .tela{max-width:260px}}
+mark.p{background:var(--marca-fundo);color:var(--amarelo-tinta);border:1px dashed currentColor;border-radius:5px;padding:0 4px;font-weight:700}
+/* tabelas */
+.rolar{overflow-x:auto;min-width:0;border:1px solid var(--linha);border-radius:14px;background:var(--papel)}
+table{border-collapse:collapse;width:100%;font-size:14.5px;min-width:560px}
+th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--linha);vertical-align:top}
+th{font:700 12px/1.2 var(--display);letter-spacing:.08em;text-transform:uppercase;color:var(--suave)}
+tr:last-child td{border-bottom:0}
+td.num{font-variant-numeric:tabular-nums;white-space:nowrap;text-align:right}
+/* regra dos perfis */
+.regra{display:grid;gap:8px;margin:0;padding:0;list-style:none;counter-reset:r}
+.regra li{display:grid;grid-template-columns:30px minmax(0,1fr);gap:10px;background:var(--papel);border:1px solid var(--linha);border-radius:12px;padding:12px 14px;counter-increment:r}
+.regra li::before{content:counter(r);font:800 18px/1.3 var(--display);color:var(--roxo)}
+/* ganchos */
+.ganchos{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:12px}
+.grupo{background:var(--papel);border:1px solid var(--linha);border-radius:16px;padding:16px;display:grid;gap:10px;align-content:start;min-width:0}
+.grupo ol{margin:0;padding-left:24px;display:grid;gap:8px}
+.grupo li{padding-left:2px}
+.grupo small{display:block;color:var(--suave);font-size:12.5px}
+.selo{display:inline-block;font:700 11px/1 var(--display);letter-spacing:.06em;text-transform:uppercase;padding:4px 7px;border-radius:6px;margin-left:4px;vertical-align:1px}
+.selo.risco{background:var(--alerta-fundo);color:var(--alerta)}
+/* listas de checagem */
+.checks{display:grid;gap:8px;margin:0;padding:0;list-style:none}
+.checks li{display:grid;grid-template-columns:26px minmax(0,1fr);gap:8px;align-items:start}
+.checks li::before{content:"✓";display:grid;place-items:center;width:22px;height:22px;border-radius:50%;background:var(--ok-fundo);color:var(--ok);font-weight:800;font-size:13px;margin-top:2px}
+.checks.pend li::before{content:"!";background:var(--alerta-fundo);color:var(--alerta)}
+.duas{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}
+.caixa{background:var(--papel);border:1px solid var(--linha);border-radius:16px;padding:18px;display:grid;gap:12px;align-content:start;min-width:0}
+.passos{margin:0;padding-left:22px;display:grid;gap:8px}
+footer{color:var(--suave);font-size:13px}
+@media (prefers-reduced-motion: reduce){.faixa{scroll-behavior:auto}}
+</style>
+
+<main class="pagina">
+
+<section class="topo">
+  <span class="rot">Michele Salla · Desafio 7 em 7 · revisão de 03/11/2026</span>
+  <h1>Quiz Diva: 5 promessas, 22 telas, 5 perfis e 1 oferta</h1>
+  <p class="sub">Modelado no quiz do Efeito Lipo da Laura, que vendeu cerca de 100 vezes desde 01/10. As 5 capas usam as promessas da reunião, escritas com as palavras dos posts da Michele que mais tiveram cliques. Tudo que falta a Michele confirmar aparece em <mark class="p">amarelo</mark>.</p>
+  <div class="botoes">
+    <a class="bt forte" href="https://clientes-phi-six.vercel.app/michele-salla/quiz/?p=1">Abrir o quiz →</a>
+    <a class="bt" href="https://clientes-phi-six.vercel.app/michele-salla/quiz/?p=1">Capa 1</a>
+    <a class="bt" href="https://clientes-phi-six.vercel.app/michele-salla/quiz/?p=2">Capa 2</a>
+    <a class="bt" href="https://clientes-phi-six.vercel.app/michele-salla/quiz/?p=3">Capa 3</a>
+    <a class="bt" href="https://clientes-phi-six.vercel.app/michele-salla/quiz/?p=4">Capa 4</a>
+    <a class="bt" href="https://clientes-phi-six.vercel.app/michele-salla/quiz/?p=5">Capa 5</a>
+  </div>
+  <div class="resumo">
+    <div><b>5</b><span>capas, uma por promessa, no mesmo quiz (?p=1 a 5)</span></div>
+    <div><b>22</b><span>telas, da capa até a oferta</span></div>
+    <div><b>5</b><span>perfis comportamentais, todos levam à mesma oferta</span></div>
+    <div><b>20</b><span>ganchos de criativo, 4 por promessa</span></div>
+  </div>
+</section>
+
+<section class="sec" id="promessas">
+  <header><span class="rot">1 · As 5 promessas (capas)</span><h2>Cada promessa vira uma capa e um conjunto no anúncio</h2>
+  <p class="sub">O resto do quiz é igual para as 5. Assim o teste mostra qual promessa faz mais gente começar e comprar, sem mudar mais nada.</p></header>
+  <div id="lista-promessas" style="display:grid;gap:16px"></div>
+</section>
+
+<section class="sec" id="telas">
+  <header><span class="rot">2 · O quiz tela a tela</span><h2>Da tela 2 à tela 20</h2>
+  <p class="sub">Role para o lado. Toque no nome de uma tela para abrir ela no quiz. A ordem segue a do quiz da Laura: idade logo no começo, apresentação da especialista, perguntas sobre o problema, prova, pausa de identificação, medo, sonho e a análise antes do resultado.</p></header>
+  <div class="faixa" id="faixa-telas"></div>
+  <p class="dica">Telas longas rolam dentro do celular.</p>
+</section>
+
+<section class="sec" id="perfis">
+  <header><span class="rot">3 · Os 5 perfis (tela 21)</span><h2>Cada pessoa recebe um perfil pela regra abaixo</h2>
+  <p class="sub">A regra confere de cima para baixo e para no primeiro item que bater, como no quiz da Laura. Testamos um caminho completo até cada um dos 5 perfis.</p></header>
+  <ol class="regra">
+    <li><span><b>A Diva da Nova Fase</b>: teve bebê nos últimos 2 anos, está na pré-menopausa ou menopausa, ou marcou escapes de xixi.</span></li>
+    <li><span><b>A Diva da Barriga Estufada</b>: acorda com a barriga lisa e à noite está estufada, ou marcou barriga estufada ou intestino preso.</span></li>
+    <li><span><b>A Diva Esforçada sem Técnica</b>: faz bastante abdominal e a barriga não muda.</span></li>
+    <li><span><b>A Diva que Recomeça Toda Segunda</b>: já recomeçou várias vezes ou perdeu a conta, ou o que tira do caminho é ansiedade, doce ou beliscar à noite.</span></li>
+    <li><span><b>A Diva que se Deixou pra Depois</b>: todas as outras.</span></li>
+  </ol>
+  <div class="faixa" id="faixa-perfis"></div>
+</section>
+
+<section class="sec" id="oferta">
+  <header><span class="rot">4 · A página final (tela 22)</span><h2>Uma oferta só: o Desafio 7 em 7 por R$ 47</h2>
+  <p class="sub">A oferta é a mesma para todo mundo. O que muda é o nome do perfil no topo e a resposta ao medo que a pessoa marcou na tela 16. Os módulos, os bônus, as fotos e a garantia são os da página do Desafio que está no ar.</p></header>
+  <div class="duas">
+    <div class="faixa" id="faixa-oferta" style="padding:0"></div>
+    <div class="caixa">
+      <h3>Resposta para cada medo (tela 16)</h3>
+      <div class="rolar" style="border:0"><table style="min-width:0">
+        <tr><th>Medo</th><th>O que a oferta responde</th></tr>
+        <tr><td>Não conseguir de novo</td><td>Passo a passo de 7 dias com o Planner Diva.</td></tr>
+        <tr><td>Não ter tempo</td><td>Aulas de 15 minutos em casa e a rotina express de 5 minutos.</td></tr>
+        <tr><td>Gastar e não ter resultado</td><td>Garantia de 7 dias, reembolso conforme a política da plataforma.</td></tr>
+        <tr><td>Sentir dor ou me machucar</td><td>Hipopressivo sem impacto. Bebê recente ou hérnia: liberação médica antes (texto do FAQ da página).</td></tr>
+        <tr><td>Voltar tudo depois</td><td>Áudio Mente Magra e Diva e o Planner para virar hábito.</td></tr>
+      </table></div>
+      <p class="dica">O botão leva para o checkout aprovado (oferta E1YMM7) com o rastreio do anúncio e <code>sck=quiz-p1</code> a <code>quiz-p5</code>, para o painel separar as vendas por promessa.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="ganchos">
+  <header><span class="rot">5 · 20 ganchos para a Michele gravar</span><h2>4 ganchos por promessa, com as palavras dela</h2>
+  <p class="sub">Cada gancho é a primeira frase do vídeo. Depois do gancho, a Michele fala 2 ou 3 frases sobre o problema e chama para o quiz (“responde esse quiz de 1 minuto”). Os marcados com <span class="selo risco">atenção</span> falam de condição do corpo da pessoa e podem ser barrados pelo Meta; prefira a versão em primeira pessoa ou como pergunta de aluna.</p></header>
+  <div class="ganchos" id="lista-ganchos"></div>
+</section>
+
+<section class="sec" id="trafego">
+  <header><span class="rot">6 · Como validar no tráfego</span><h2>Primeiro a promessa, depois o gancho</h2>
+  <p class="sub">Sugestão no padrão de campanha do Patrik. Nada é criado na conta sem o OK dele para a estrutura.</p></header>
+  <div class="duas">
+    <div class="caixa">
+      <h3>Fase 1 · qual promessa vende (3 a 4 dias)</h3>
+      <ol class="passos">
+        <li>Campanha <code>PTK - dd/mm - ABO TESTE DE PROMESSA</code>, objetivo Vendas, evento <b>Compra</b>.</li>
+        <li>5 conjuntos, um por promessa: <code>CONJ - ABERTO - P1 GANCHO 1</code> … <code>P5</code>. Cada um com o melhor gancho da promessa e o link do quiz com <code>?p=1</code> a <code>?p=5</code>.</li>
+        <li>R$ 21,15 por dia em cada conjunto (45% de R$ 47), R$ 105,75 por dia no total.</li>
+        <li>Público: mulheres, 30 a 55 anos. Na campanha de outubro, 69% da verba foi para homens e 38% para 55+, e não vendeu.</li>
+        <li>Tirar a Audience Network: trouxe 31% dos cliques da campanha de outubro.</li>
+        <li>Parâmetros de URL de sempre: <code>utm_source=FB&amp;utm_medium={{placement}}&amp;utm_campaign={{campaign.name}}&amp;utm_content={{ad.name}}&amp;utm_term={{adset.id}}</code>.</li>
+      </ol>
+    </div>
+    <div class="caixa">
+      <h3>Fase 2 · qual gancho vende</h3>
+      <ol class="passos">
+        <li>A promessa que vencer ganha os outros 3 ganchos, um conjunto cada.</li>
+        <li>Nas duas fases, desligue o conjunto que gastar R$ 47 (1 venda) sem nenhum clique no checkout, ou R$ 94 sem venda. Regra sugerida, ajuste com o Patrik.</li>
+        <li>Metas já combinadas para o Desafio: custo por compra até R$ 21,15 para escalar; acima de R$ 37 por compra dá prejuízo (é o que sobra de R$ 47 depois das taxas).</li>
+      </ol>
+      <h3>O que olhar no painel, por promessa</h3>
+      <div class="rolar" style="border:0"><table style="min-width:0">
+        <tr><th>Etapa</th><th>Referência (quiz da Laura)</th></tr>
+        <tr><td>Passa da capa</td><td class="num">28,6%</td></tr>
+        <tr><td>Chega ao resultado</td><td class="num">22,5% das visitas</td></tr>
+        <tr><td>Clica para comprar</td><td class="num">68% de quem viu o resultado</td></tr>
+      </table></div>
+      <p class="dica">Página do Desafio em outubro: só 8,6% passaram da primeira tela.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="dados">
+  <header><span class="rot">7 · De onde veio cada escolha</span><h2>Os dados usados</h2></header>
+  <div class="duas">
+    <div class="caixa">
+      <h3>Quiz do Efeito Lipo (Laura), desde 01/10</h3>
+      <div class="rolar" style="border:0"><table style="min-width:0">
+        <tr><th>Etapa</th><th style="text-align:right">Pessoas</th></tr>
+        <tr><td>Abriram o quiz (sessões reais)</td><td class="num">3.155</td></tr>
+        <tr><td>Passaram da capa</td><td class="num">901</td></tr>
+        <tr><td>Chegaram ao resultado</td><td class="num">711</td></tr>
+        <tr><td>Clicaram para comprar</td><td class="num">481</td></tr>
+        <tr><td>Compraram (Greenn + Hotmart)</td><td class="num">≈ 100</td></tr>
+      </table></div>
+      <p class="dica">Estrutura copiada: capa com promessa, idade, especialista, perguntas, prova, pausa de identificação, medo, sonho, análise, perfil e oferta única com resposta ao medo.</p>
+    </div>
+    <div class="caixa">
+      <h3>Posts da Michele que mais tiveram cliques</h3>
+      <div class="rolar" style="border:0"><table>
+        <tr><th>Post (começo do texto)</th><th style="text-align:right">Cliques</th><th style="text-align:right">CTR</th><th>Promessa</th></tr>
+        <tr><td>“Você tem 5 minutos no seu dia?… Hipopressivos…”</td><td class="num">26.303</td><td class="num">4,09%</td><td>1</td></tr>
+        <tr><td>“Você está fazendo o vácuo abdominal errado?”</td><td class="num">7.812</td><td class="num">4,56%</td><td>3</td></tr>
+        <tr><td>“Se você quer acelerar a queima… 5min de Hipopressivo”</td><td class="num">6.770</td><td class="num">5,65%</td><td>1</td></tr>
+        <tr><td>“Michele, eu acordo com a barriga lisinha… à noite ela tá estufada”</td><td class="num">3.248</td><td class="num">4,45%</td><td>2</td></tr>
+        <tr><td>“Você não precisa de mil abdominais…”</td><td class="num">2.992</td><td class="num">3,10%</td><td>3</td></tr>
+      </table></div>
+      <p class="dica">Também usados: “Chega de ficar pulando igual a uma maluca” (CTR 7%), “Atenção Mulher… depois dos 35/40… não é falta de esforço”, “Você se deixou pra depois” e o gancho da própria Michele para a Black.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="revisao">
+  <header><span class="rot">8 · Revisão</span><h2>O que foi conferido (2 rodadas)</h2></header>
+  <div class="duas">
+    <div class="caixa">
+      <h3>Bugs testados no navegador</h3>
+      <ul class="checks">
+        <li><span>Um caminho completo, clicando, até cada um dos 5 perfis: todos caem no perfil certo.</span></li>
+        <li><span>As 5 capas chegam até a oferta com o link certo (<code>sck=quiz-p1</code> a <code>p5</code>).</span></li>
+        <li><span>O rastreio do anúncio (utm e fbclid) segue até o checkout. Sem anúncio, o link sai limpo.</span></li>
+        <li><span>Botão voltar mantém a resposta marcada.</span></li>
+        <li><span>Perguntas de várias respostas só seguem com pelo menos 1 marcada. “Nenhum destes” desmarca os outros.</span></li>
+        <li><span>Toque duplo não pula tela (corrigido nesta revisão).</span></li>
+        <li><span>Nenhuma imagem quebrada, nenhum erro de código, nada passa da largura do celular (390 px).</span></li>
+        <li><span>Fotos de antes e depois só do Desafio 7 em 7 (resultado 1 a 6), com “os resultados variam”.</span></li>
+      </ul>
+    </div>
+    <div class="caixa">
+      <h3>Textos conferidos com a fonte</h3>
+      <ul class="checks">
+        <li><span>Bio da Michele: igual à página do Desafio (Educadora Física desde 2005, Barriga Negativa, mais de 20 anos).</span></li>
+        <li><span>Módulos, bônus, preço R$ 47, 12x de R$ 4,83 e garantia: iguais à página no ar.</span></li>
+        <li><span>Aviso de bebê recente e hérnia: texto do FAQ da página.</span></li>
+        <li><span>Nenhum número, depoimento ou promessa inventado. A idade da Michele ficou em amarelo.</span></li>
+        <li><span>Sem “canetinha”, sem festa ou viagem: a capa e o anúncio falam a mesma coisa, o erro da campanha de outubro.</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="pendencias">
+  <header><span class="rot">9 · Antes de ir ao ar</span><h2>Pendências</h2></header>
+  <div class="duas">
+    <div class="caixa">
+      <h3>Com a Michele</h3>
+      <ul class="checks pend">
+        <li><span>Dizer a idade dela para a capa 1 e o gancho 2.</span></li>
+        <li><span>Aprovar as 5 promessas e os nomes dos 5 perfis.</span></li>
+        <li><span>Gravar os 20 ganchos (ou ao menos 1 por promessa para a fase 1).</span></li>
+      </ul>
+    </div>
+    <div class="caixa">
+      <h3>Com o Patrik</h3>
+      <ul class="checks pend">
+        <li><span>OK no quiz e na oferta (R$ 47, oferta E1YMM7). Conferir no checkout se o 12x é mesmo R$ 4,83.</span></li>
+        <li><span>Onde o quiz fica: dentro do site da Michele (como rascunho no WordPress) ou num endereço próprio.</span></li>
+        <li><span>Ligar o rastreio do painel no quiz (visita, cada tela e clique para comprar) antes do primeiro anúncio.</span></li>
+        <li><span>OK na estrutura da campanha da fase 1.</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<footer>Prévia sem indexação. Quiz: michele-salla/quiz no repositório CLIENTES. Prints gerados do próprio quiz em 03/11/2026, tela de celular de 390 px.</footer>
+</main>
+
+<script>
+const QUIZ = 'https://clientes-phi-six.vercel.app/michele-salla/quiz/'
+const PROM = [
+  { p: 1, nome: 'A rotina da Michele', titulo: 'Descubra a rotina de 5 minutos por dia que eu faço para manter a barriga lisa aos <mark class="p">IDADE</mark> anos',
+    fonte: 'Reunião: mostrar a rotina dela (hipopressivo e mentalidade) e a persona resolvida, “eu tenho 40 anos, sou magra, sou resolvida”. Anúncio “Você tem 5 minutos no seu dia?”: o post com mais cliques da conta (26.303, CTR 4,09%).' },
+  { p: 2, nome: 'Barriga estufada à noite', titulo: 'Você acorda com a barriga lisinha e à noite ela está estufada?',
+    fonte: 'Anúncio com a frase de uma aluna: “Michele, eu acordo com a barriga lisinha… mas à noite ela tá estufada” (3.248 cliques, CTR 4,45%).' },
+  { p: 3, nome: 'Sem mil abdominais', titulo: 'Você não precisa de mil abdominais. Precisa da técnica certa.',
+    fonte: 'Anúncios “Você não precisa de mil abdominais” (2.992 cliques), “Você está fazendo o vácuo abdominal errado?” (7.812 cliques, CTR 4,56%) e “Chega de ficar pulando igual a uma maluca” (CTR 7%).' },
+  { p: 4, nome: 'Depois dos 40', titulo: 'Depois dos 40 a barriga parou de responder? Não é falta de esforço.',
+    fonte: 'Anúncio “Atenção Mulher… depois dos 35/40… não é falta de esforço. É falta da técnica certa” e a persona de 40 anos da reunião.' },
+  { p: 5, nome: 'Você se deixou pra depois', titulo: 'Até quando você vai se deixar pra depois?',
+    fonte: 'Post “Deixa eu te lembrar de algo… Você se deixou pra depois” e o gancho da Michele para a Black: “Janeiro pode chegar com você já cuidando de si. Sua virada começa com cinco minutinhos.”' },
+]
+const TELAS = [
+  ['idade', 'Qual a sua faixa de idade?', 'Pergunta fácil logo no começo, como na Laura. Separa quem é público (35+) para o anúncio.'],
+  ['michele', 'Prazer, eu sou a Michele Salla', 'Apresenta a especialista com a bio da página do Desafio.'],
+  ['objetivo', 'O que você mais quer agora?', 'A pessoa diz o desejo com as palavras dela.'],
+  ['barriga-dia', 'Como a sua barriga fica ao longo do dia?', 'Traz a dor da promessa 2 (estufada à noite). Define o perfil Estufada.'],
+  ['recomecos', 'Quantas vezes você já recomeçou?', 'Mostra o ciclo de recomeços. Define o perfil Recomeça Toda Segunda.'],
+  ['abdominal', 'E o abdominal tradicional?', 'Traz a promessa 3. Define o perfil Esforçada sem Técnica.'],
+  ['hipopressivo', 'Você já ouviu falar de hipopressivo?', 'Apresenta a técnica que a Michele usa todo dia.'],
+  ['prova', 'Alunas que já começaram', 'Prova no meio do quiz, com fotos do Desafio 7 em 7.'],
+  ['rotina', 'Como é a sua rotina hoje?', 'Traz a promessa 5 (todo mundo virou prioridade).'],
+  ['sinais', 'Você percebe algum destes sinais?', 'Várias respostas. Escapes, estufada e intestino mudam o perfil.'],
+  ['fase', 'Você está em alguma destas fases?', 'Pós-parto e menopausa definem o perfil Nova Fase (promessa 4).'],
+  ['insight', 'Talvez você se reconheça nisso', 'Pausa de identificação, com o texto do post “Você se deixou pra depois”.'],
+  ['carregando-1', 'Analisando suas respostas…', 'Respiro antes da parte emocional.'],
+  ['sabotador', 'O que mais te tira do caminho?', 'Ansiedade, doce e beliscar à noite levam ao perfil Recomeça.'],
+  ['medo', 'Qual é o seu maior medo agora?', 'A resposta volta na oferta, como na Laura.'],
+  ['sonho', 'Se você acordasse amanhã com a barriga lisa…', 'Faz a pessoa imaginar o resultado.'],
+  ['tempo-dia', 'Quanto tempo por dia você consegue?', 'Prepara o “15 minutos por dia, ou 5 nos dias corridos”.'],
+  ['motivo', 'O que te trouxe até aqui hoje?', 'Várias respostas. Reforça o motivo antes do resultado.'],
+  ['carregando-2', 'Montando o seu caminho de 7 dias…', 'Análise final antes do perfil.'],
+]
+const PERFIS = [['nova-fase', 'A Diva da Nova Fase'], ['estufada', 'A Diva da Barriga Estufada'], ['esforcada', 'A Diva Esforçada sem Técnica'], ['recomeco', 'A Diva que Recomeça Toda Segunda'], ['depois', 'A Diva que se Deixou pra Depois']]
+const GANCHOS = [
+  { p: 1, nome: 'A rotina da Michele', l: [
+    ['Você tem 5 minutos no seu dia? Então deixa eu te mostrar o que eu faço pela minha barriga.', 'Do post com mais cliques da conta.'],
+    ['Eu tenho <mark class="p">IDADE</mark> anos e essa é a rotina de 5 minutos que eu não largo.', 'Persona “resolvida” da reunião.'],
+    ['Não é dieta maluca nem treino de 2 horas. São 5 minutos de hipopressivo.', 'Posts de hipopressivo e “sem dieta”.'],
+    ['Me perguntam o que eu faço para manter a cintura. Eu te mostro em um quiz de 1 minuto.', 'Chamada para o quiz.']] },
+  { p: 2, nome: 'Barriga estufada à noite', l: [
+    ['“Michele, eu acordo com a barriga lisinha… mas à noite ela tá estufada.”', 'Frase da aluna no anúncio (CTR 4,45%).'],
+    ['A sua barriga muda do dia para a noite? Ela está te dizendo uma coisa.', 'Pergunta do quiz.', true],
+    ['A roupa serve de manhã e aperta à noite? Responde esse quiz de 1 minuto.', 'Dor do dia a dia.', true],
+    ['Barriga estufada não se resolve com mil abdominais.', 'Ponte com a promessa 3.']] },
+  { p: 3, nome: 'Sem mil abdominais', l: [
+    ['Você não precisa de mil abdominais. Precisa da técnica certa.', 'Post “mil abdominais”.'],
+    ['Você está fazendo o vácuo abdominal errado?', 'Post com 7.812 cliques.'],
+    ['Chega de ficar pulando igual a uma maluca para perder barriga.', 'Post com CTR de 7%.'],
+    ['Hipopressivo não é mágica. É ciência. Descubra se ele é para você.', 'Post “Hipopressivo não é mágica”.']] },
+  { p: 4, nome: 'Depois dos 40', l: [
+    ['Atenção, mulher acima dos 35: se a barriga parou de responder, não é falta de esforço.', 'Post “Atenção Mulher”.'],
+    ['Depois dos 40 o corpo muda. O cuidado com a barriga também precisa mudar.', 'Mesma linha do post.'],
+    ['Depois dos 40 começou a escapar xixi quando você tosse ou pula? Isso tem a ver com o abdômen.', 'Post “depois dos 40… escapes”.', true],
+    ['A técnica que eu uso tem nome: Barriga Negativa. E eu sou licenciada nela.', 'Credencial da página.']] },
+  { p: 5, nome: 'Você se deixou pra depois', l: [
+    ['Deixa eu te lembrar de algo: você se deixou pra depois.', 'Post da Michele.'],
+    ['Filhos, casa, trabalho… todo mundo virou prioridade, menos você.', 'Mesmo post.'],
+    ['Para de esperar a segunda-feira. Começa com 5 minutinhos hoje.', 'Promessa do quiz.'],
+    ['Janeiro pode chegar com você já cuidando de si. Sua virada começa com cinco minutinhos.', 'Gancho da Michele para a Black.']] },
+]
+const cel = (img, n, titulo, nota, link) => `<figure class="cel" style="margin:0"><a class="tela longa" href="${link}" aria-label="Abrir ${titulo} no quiz"><img src="img/${img}.webp" alt="Print: ${titulo}" loading="lazy" width="390" height="844"></a>
+  <span class="n">${n}</span><h3><a href="${link}">${titulo}</a></h3>${nota ? `<p>${nota}</p>` : ''}</figure>`
+document.getElementById('lista-promessas').innerHTML = PROM.map(x => `<article class="prom">
+  <a class="tela" href="${QUIZ}?p=${x.p}" aria-label="Abrir a capa ${x.p}"><img src="img/capa-p${x.p}.webp" alt="Print da capa ${x.p}" width="390" height="880"></a>
+  <div class="txt"><span class="rot">Promessa ${x.p} · tela 1</span><h3>${x.nome}</h3><p class="titulo">${x.titulo}</p>
+  <div class="fonte"><b>De onde veio</b><span>${x.fonte}</span></div>
+  <p class="dica">Link do anúncio: <code>${QUIZ}?p=${x.p}</code></p></div></article>`).join('')
+document.getElementById('faixa-telas').innerHTML = TELAS.map((t, k) => cel('tela-' + t[0], 'TELA ' + (k + 2), t[1], t[2], `${QUIZ}?tela=${t[0]}`)).join('')
+document.getElementById('faixa-perfis').innerHTML = PERFIS.map((x, k) => cel('resultado-' + x[0], 'PERFIL ' + (k + 1), x[1], '', `${QUIZ}?tela=resultado&perfil=${x[0]}`)).join('')
+document.getElementById('faixa-oferta').innerHTML = cel('oferta', 'TELA 22', 'Oferta do Desafio 7 em 7', 'Exemplo: perfil Estufada, medo “não ter tempo”.', `${QUIZ}?tela=oferta&perfil=estufada&p=2`)
+let g = 0
+document.getElementById('lista-ganchos').innerHTML = GANCHOS.map(x => `<div class="grupo"><span class="rot">Promessa ${x.p}</span><h3>${x.nome}</h3>
+  <ol start="${g + 1}">${x.l.map(h => (g++, `<li>${h[0]}${h[2] ? '<span class="selo risco">atenção</span>' : ''}<small>${h[1]}</small></li>`)).join('')}</ol></div>`).join('')
+</script>

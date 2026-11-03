@@ -184,6 +184,10 @@ Os M da pasta "MICHELE LOW" são esses mesmos vídeos. Mapa conferido pelos quad
    - aba Fontes mostrar que os custos vêm de Ajustes;
    - verificação do domínio michelesalla.com.br no Meta.
 
+9. **Quiz Diva (03/11):** Michele dizer a idade (capa 1 e gancho 2), aprovar promessas e perfis e gravar os ganchos;
+   Patrik dar OK no quiz e na oferta, escolher onde o quiz fica (WordPress em rascunho ou endereço próprio) e na campanha.
+   Antes do 1º anúncio: ligar o rastreio do painel no quiz (visita, telas e clique para comprar) — ainda não tem.
+
 ## 8. Diário
 - **23/10:**
   - página F publicada e conferida;
@@ -327,6 +331,19 @@ Os M da pasta "MICHELE LOW" são esses mesmos vídeos. Mapa conferido pelos quad
     `python tools/wp_michele.py criar-pagina-html --arquivo michele-salla/black-diva/index.html --slug black-diva --titulo "Black Diva"`.
     - Para atualizar depois: `atualizar-pagina-html --id <ID> --arquivo michele-salla/black-diva/index.html`.
     - A página inteira vai num widget HTML do Elementor (modelo Canvas), com as imagens já na Multimídia.
+
+- **03/11 · Quiz Diva** (pedido do Patrik depois da reunião de 2 h com a Michele):
+  - **Quiz:** `michele-salla/quiz/` (`quiz.js` = todos os textos, telas, perfis e regra; `index.html` = o quiz).
+    Prévia: https://clientes-phi-six.vercel.app/michele-salla/quiz/?p=1 (capas `?p=1` a `5`).
+    Painel com o print de cada tela: https://clientes-phi-six.vercel.app/michele-salla/quiz/revisao/ e https://claude.ai/artifact/UUtEikrpunkA3Ht7TSd8aN
+  - Modelado no quiz do Efeito Lipo da Laura (desde 01/10: 3.155 sessões, 28,6% passam da capa, 711 resultados, 481 cliques no checkout, ≈ 100 vendas).
+  - **5 promessas = 5 capas** (resto igual): 1 rotina de 5 min da Michele (post com 26.303 cliques); 2 barriga estufada à noite;
+    3 sem mil abdominais / técnica certa; 4 depois dos 40 não é falta de esforço; 5 você se deixou pra depois.
+  - **22 telas**, 5 perfis por regra (Nova Fase → Estufada → Esforçada → Recomeça → Deixou pra Depois), oferta única do
+    Desafio 7 em 7 (R$ 47, E1YMM7) com resposta ao medo da tela 16. Link leva utm/fbclid do anúncio e `sck=quiz-p1..p5`.
+  - 20 ganchos (4 por promessa) com frases dos posts da Michele; 3 marcados com risco de reprovação no Meta.
+  - Testado: caminho completo até os 5 perfis, 5 capas, voltar, várias respostas, toque duplo, imagens, largura 390 px.
+  - Plano de teste sugerido: 1 ABO com 5 conjuntos (1 por promessa) a R$ 21,15, mulheres 30–55, sem Audience Network, evento Compra.
 
 ## 9. Como trabalhar
 - Sempre em português, frases curtas. Nunca pedir senha ou token no chat; dizer onde colar.
