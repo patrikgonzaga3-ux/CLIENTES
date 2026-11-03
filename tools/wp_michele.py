@@ -232,6 +232,61 @@ def cmd_publicar(a):
     print(f'Publicada: id {r["id"]} · {r["link"]}')
 
 
+# ---------- páginas feitas em HTML puro (ex.: Black Diva) ----------
+# A página inteira vai num único widget HTML do Elementor, em tela cheia (modelo "Elementor Canvas").
+# As imagens que a página usa da pasta do Desafio são trocadas pelos endereços da Multimídia (midia-michele.json).
+
+def html_para_elementor(arquivo):
+    import re
+    caminho = (RAIZ / arquivo) if not Path(arquivo).is_absolute() else Path(arquivo)
+    html = caminho.read_text(encoding="utf-8")
+    mapa = json.loads(MAPA.read_text(encoding="utf-8")) if MAPA.exists() else {}
+    faltam = []
+
+    def troca(m):
+        nome = m.group(2)
+        if nome not in mapa:
+            faltam.append(nome)
+            return m.group(0)
+        return m.group(1) + mapa[nome]["url"]
+    html = re.sub(r'(src=")\.\./desafio-7em7/assets/img/([^"]+)', troca, html)
+    if faltam:
+        sys.exit("Imagens que não estão na Multimídia: " + ", ".join(sorted(set(faltam))))
+    fontes = "".join(re.findall(r'<link[^>]+fonts\.googleapis\.com/css2[^>]*>', html))
+    estilo = "".join(re.findall(r"<style>.*?</style>", html, re.S))
+    corpo = re.search(r"<body[^>]*>(.*)</body>", html, re.S).group(1)
+    titulo = re.search(r"<title>(.*?)</title>", html, re.S).group(1).strip()
+    bloco = fontes + "\n" + estilo + "\n" + corpo
+    conteudo = [{"id": "pg0001", "elType": "container", "isInner": False,
+                 "settings": {"content_width": "full", "flex_gap": {"unit": "px", "size": 0, "column": "0", "row": "0"},
+                              "padding": {"unit": "px", "top": "0", "right": "0", "bottom": "0", "left": "0", "isLinked": True}},
+                 "elements": [{"id": "pg0002", "elType": "widget", "widgetType": "html", "settings": {"html": bloco}, "elements": []}]}]
+    ajustes = {"hide_title": "yes", "background_background": "classic", "background_color": "#0F0A12"}
+    return titulo, conteudo, ajustes, corpo
+
+
+def gravar_html(pid, arquivo):
+    titulo, conteudo, ajustes, corpo = html_para_elementor(arquivo)
+    r = api("POST", f"/claude/v1/elementor/{pid}",
+            {"data": json.dumps(conteudo, ensure_ascii=False), "page_settings": ajustes})
+    print("Layout gravado. Editar no Elementor:", r.get("editar"))
+    print("Ver prévia (logado):", r.get("previa"))
+    api("POST", f"/wp/v2/pages/{pid}", {"content": corpo})
+    if "pendente" in corpo or "#LINK-DE-COMPRA" in corpo:
+        print("ATENÇÃO: a página ainda tem pendências marcadas em amarelo e/ou botão sem link de pagamento. Não publicar assim.")
+
+
+def cmd_criar_pagina_html(a):
+    titulo = a.titulo or html_para_elementor(a.arquivo)[0]
+    p = api("POST", "/wp/v2/pages", {"title": titulo, "slug": a.slug, "status": "draft", "template": "elementor_canvas"})
+    print(f'Página criada como RASCUNHO: id {p["id"]} · {p["link"]}')
+    gravar_html(p["id"], a.arquivo)
+
+
+def cmd_atualizar_pagina_html(a):
+    gravar_html(a.id, a.arquivo)
+
+
 LINK_GREENN = "payfast.greenn.com.br/199167/offer/E1YMM7"
 
 
@@ -299,6 +354,13 @@ def main():
     u.add_argument("--versao", choices="ABCDEF", required=True)
     u.add_argument("--titulo")
     u.add_argument("--slug")
+    ch = sub.add_parser("criar-pagina-html")
+    ch.add_argument("--arquivo", required=True)
+    ch.add_argument("--slug", required=True)
+    ch.add_argument("--titulo")
+    uh = sub.add_parser("atualizar-pagina-html")
+    uh.add_argument("--id", type=int, required=True)
+    uh.add_argument("--arquivo", required=True)
     pb = sub.add_parser("publicar")
     pb.add_argument("--id", type=int, required=True)
     cf = sub.add_parser("conferir")
@@ -308,7 +370,8 @@ def main():
         return cmd_conferir(a)
     ENV = ler_env()
     {"teste": cmd_teste, "paginas": cmd_paginas, "subir-imagens": cmd_subir_imagens,
-     "criar-pagina": cmd_criar_pagina, "atualizar-pagina": cmd_atualizar_pagina, "publicar": cmd_publicar}[a.cmd](a)
+     "criar-pagina": cmd_criar_pagina, "atualizar-pagina": cmd_atualizar_pagina, "publicar": cmd_publicar,
+     "criar-pagina-html": cmd_criar_pagina_html, "atualizar-pagina-html": cmd_atualizar_pagina_html}[a.cmd](a)
 
 
 if __name__ == "__main__":
