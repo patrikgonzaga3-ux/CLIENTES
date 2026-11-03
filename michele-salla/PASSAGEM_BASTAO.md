@@ -348,6 +348,7 @@ Os M da pasta "MICHELE LOW" são esses mesmos vídeos. Mapa conferido pelos quad
     `window.plBloco` (chama `window.plTique()` antes e depois da troca). Site `quiz` no `cliente.config.ts` (domínios: michelesalla.com.br,
     clientes-phi-six.vercel.app, painel.michelesalla.com.br). A API aceita vários sites no mesmo domínio pelo começo do slug.
     Telas abertas com `?tela=` (painel de revisão) não rastreiam. Se o quiz mudar de endereço, pôr o domínio em `outrosDominios`.
+  - **Capa (03/11, pedido do Patrik):** foto da Michele trocada pelo antes e depois do Desafio (`hero-antes-depois-avatar.webp`) nas 5 capas.
   - **Checagem dos 3 filtros do Patrik (03/11):** todos os números reconferidos na fonte. Corrigido "≈100 vendas" → 75 do produto
     principal. Posts da Michele são impulsionamentos de CLIQUE (não venda). P5 tem o maior CTR da conta ("Deixa eu te lembrar", 13,53%);
     P4 tem a prova mais fraca ("Atenção Mulher", 43 cliques, CTR 1,72%). Tirados textos sem fonte ("quiz de 1 minuto", "mil abdominais

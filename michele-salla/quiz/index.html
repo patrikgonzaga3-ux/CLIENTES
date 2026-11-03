@@ -28,9 +28,7 @@ p{margin:0}
 .capa h1{font-size:29px;font-weight:800;text-align:center}
 .capa h1 mark,.oferta h2 mark{background:none;color:var(--roxo)}
 .capa .sub{text-align:center;color:var(--texto);font-size:17px}
-.foto-capa{position:relative;max-width:220px;margin:0 auto}
-.foto-capa::before{content:"";position:absolute;inset:16% 4% 0;border-radius:200px 200px 28px 28px;background:var(--grad)}
-.foto-capa img{position:relative}
+.foto-capa{max-width:360px;margin:0 auto}
 .pend{background:#FFF7B8;border:1.5px dashed #B59B00;border-radius:6px;padding:0 4px;color:#6B5A00;font-weight:700}
 .botao{display:block;width:100%;border:0;cursor:pointer;background:var(--amarelo);color:#111;font:800 17px/1.25 Sora,sans-serif;padding:17px 18px;border-radius:99px;text-align:center;text-decoration:none;box-shadow:0 10px 24px rgba(158,4,124,.18)}
 .botao:focus-visible,.op:focus-visible{outline:3px solid var(--violeta);outline-offset:2px}
@@ -129,7 +127,7 @@ function desenha() {
       <h1>${pend(p.titulo)}</h1>
       <p class="sub">${esc(p.sub)}</p>
       <button class="botao" onclick="vai()">${esc(p.botao)} →</button>
-      <div class="foto-capa"><img src="${IMG}michele-recorte.webp" alt="Michele Salla" width="802" height="1292"></div>
+      <div class="foto-capa"><img src="${IMG}hero-antes-depois-avatar.webp" alt="Antes e depois do Desafio 7 em 7" width="1080" height="1200"></div>
       <p class="miudo">Por Michele Salla, educadora física</p></section>`
   } else if (t.tipo === 'uma' || t.tipo === 'varias') {
     const marc = t.tipo === 'varias' ? (resp[t.id] || []) : [resp[t.id]]
