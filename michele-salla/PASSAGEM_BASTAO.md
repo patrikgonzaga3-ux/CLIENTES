@@ -321,6 +321,13 @@ Os M da pasta "MICHELE LOW" são esses mesmos vídeos. Mapa conferido pelos quad
     - o benefício das alunas atuais;
     - 4 a 6 vídeos.
 
+  - **Slides para apresentar à Michele** (15 slides; baixa em PowerPoint ou PDF): https://claude.ai/artifact/GvCVkV5tTqmaYEdEnhq8Sn
+  - Topo da Black Diva trocado pelo antes e depois do Desafio (`hero-antes-depois-avatar.webp`, o mesmo da página do Desafio).
+  - **Para levar a página à WordPress** (como RASCUNHO, porque tem pendências), rodar no PC:
+    `python tools/wp_michele.py criar-pagina-html --arquivo michele-salla/black-diva/index.html --slug black-diva --titulo "Black Diva"`.
+    - Para atualizar depois: `atualizar-pagina-html --id <ID> --arquivo michele-salla/black-diva/index.html`.
+    - A página inteira vai num widget HTML do Elementor (modelo Canvas), com as imagens já na Multimídia.
+
 ## 9. Como trabalhar
 - Sempre em português, frases curtas. Nunca pedir senha ou token no chat; dizer onde colar.
 - Checkout, preço, oferta, link de compra e configuração da Greenn: só com OK explícito do Patrik para a mudança mostrada.
