@@ -52,7 +52,9 @@ p{margin:0}
 .roda{width:72px;height:72px;border-radius:50%;border:7px solid var(--rosa-2);border-top-color:var(--roxo);margin:24px auto;animation:gira 1s linear infinite}
 @keyframes gira{to{transform:rotate(360deg)}}
 .linhas{display:grid;gap:8px;text-align:left}
-.linhas p{background:var(--branco);border-radius:10px;padding:10px 12px}
+.linhas p{background:var(--branco);border-radius:10px;padding:10px 12px;animation:aparece .4s ease both}
+.linhas p:nth-child(2){animation-delay:1s}.linhas p:nth-child(3){animation-delay:2s}
+@keyframes aparece{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
 .linhas p::before{content:"✓ ";color:var(--verde);font-weight:800}
 .perfil{background:var(--grad);color:#fff;border-radius:22px;padding:22px 18px;display:grid;gap:10px}
 .perfil .rot{font:700 12px/1 Sora,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--amarelo)}
@@ -70,7 +72,7 @@ p{margin:0}
 .medo{background:#FBEAF6;border-radius:16px;padding:14px 16px;font-size:15px}
 .selos{display:flex;align-items:center;justify-content:center;gap:12px;font-size:13px}
 .selos img{width:58px}
-@media (prefers-reduced-motion: reduce){.roda{animation:none}.barra i{transition:none}}
+@media (prefers-reduced-motion: reduce){.roda{animation:none}.barra i{transition:none}.linhas p{animation:none}}
 </style>
 </head>
 <body>
@@ -111,7 +113,8 @@ const contaveis = TELAS.filter(t => !['capa', 'oferta'].includes(t.tipo)).length
 function progresso() { const n = TELAS.slice(0, i + 1).filter(t => !['capa', 'oferta'].includes(t.tipo)).length; return Math.round(100 * n / contaveis) }
 function topo() { return i === 0 ? '' : `<div class="topo"><button class="voltar" aria-label="Voltar" onclick="volta()">‹</button><div class="barra" aria-hidden="true"><i style="width:${progresso()}%"></i></div></div>` }
 function vai() { i = Math.min(i + 1, TELAS.length - 1); desenha(); scrollTo(0, 0) }
-function volta() { i = Math.max(i - 1, 0); desenha(); scrollTo(0, 0) }
+let voltando = false // quem volta para a tela de análise não é empurrada para frente de novo
+function volta() { i = Math.max(i - 1, 0); voltando = true; desenha(); voltando = false; scrollTo(0, 0) }
 
 function desenha() {
   const t = TELAS[i]
@@ -155,12 +158,13 @@ function desenha() {
     h += `<section class="carregando" style="display:flex;flex-direction:column;gap:10px"><div class="roda" aria-hidden="true"></div><h2 style="font-size:22px">${esc(t.titulo)}</h2>
       <div class="linhas">${t.linhas.map(l => `<p>${esc(l)}</p>`).join('')}</div></section>
       <button class="botao" onclick="vai()">Ver o próximo passo →</button>`
+    if (!q.get('tela') && !voltando) { const aqui = i; setTimeout(() => { if (i === aqui) vai() }, 3600) }
   } else if (t.tipo === 'resultado') {
     const k = q.get('perfil') && PERFIS[q.get('perfil')] ? q.get('perfil') : perfilDe(resp), pf = PERFIS[k]
     h += `<section class="perfil"><span class="rot">O seu perfil</span><h2>${esc(pf.nome)}</h2><p>${esc(pf.retrato)}</p></section>
-      <div class="bloco cartao"><h3>O que está te travando</h3><p>${esc(pf.trava)}</p></div>
-      <div class="bloco cartao"><h3>Por onde você começa</h3><p>${esc(pf.comeca)}</p></div>
-      <button class="botao" onclick="vai()">Ver o meu plano de 7 dias →</button>`
+      <div class="bloco cartao"><h3>O que está te travando</h3><p>${esc(pf.trava)}</p><p>${esc(MENTE)}</p></div>
+      <div class="bloco cartao"><h3>Por onde você começa</h3><p>${esc(pf.comeca)}</p>${pf.comeca.includes('Mente Magra') ? '' : '<p>E com o áudio “Ative Sua Mente Magra e Diva” e o Planner Diva, para cuidar da cabeça junto com o corpo.</p>'}<p><b>${esc(DIA_A_DIA)}</b></p></div>
+      <button class="botao" onclick="vai()">Quero começar meus 7 dias →</button>`
   } else if (t.tipo === 'oferta') {
     const k = q.get('perfil') && PERFIS[q.get('perfil')] ? q.get('perfil') : perfilDe(resp), pf = PERFIS[k]
     const m = MEDO[resp.medo]

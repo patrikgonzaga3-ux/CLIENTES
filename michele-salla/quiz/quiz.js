@@ -10,7 +10,7 @@ const PROMESSAS = {
   1: {
     nome: 'A rotina da Michele',
     etiqueta: 'Quiz gratuito',
-    titulo: 'Descubra a rotina de <mark>5 minutos por dia</mark> que eu faço para manter a barriga lisa aos [[IDADE]] anos',
+    titulo: 'Descubra a rotina de <mark>5 minutos por dia</mark> que eu faço para manter a barriga lisa aos 45 anos',
     sub: 'Responda e veja qual é o seu perfil e por onde você começa.',
     botao: 'Quero descobrir meu perfil',
   },
@@ -96,31 +96,31 @@ const PERFIS = {
   'nova-fase': {
     nome: 'A Diva da Nova Fase',
     retrato: 'O seu corpo mudou: gestação, os anos ou a menopausa. O que funcionava antes parou de funcionar, e a barriga não responde como antes.',
-    trava: 'Não é falta de esforço. É que agora o seu corpo pede outro cuidado: fortalecer o abdômen profundo, de dentro para fora.',
+    trava: 'Não é falta de esforço. O seu corpo pede outro cuidado: fortalecer o abdômen profundo, de dentro para fora, com postura e respiração, e cuidar dos pensamentos e hábitos que fazem você desistir de si mesma.',
     comeca: 'Você começa pela aula “Conheça Sua Barriga: Avaliação Inicial”: aprende a observar o seu abdômen, a reconhecer sinais como a diástase e a saber quando buscar avaliação profissional.',
   },
   'estufada': {
     nome: 'A Diva da Barriga Estufada',
     retrato: 'A sua barriga muda ao longo do dia: de manhã está melhor e à noite está estufada. Isso mexe com a roupa, com o humor e com a autoestima.',
-    trava: 'Fazer mais abdominal não é o caminho para esse tipo de barriga. O caminho é ativar o seu cinturão natural com respiração e postura.',
+    trava: 'Fazer cada vez mais abdominais não resolve tudo. É preciso trabalhar o seu cinturão natural com postura, respiração e cuidar dos pensamentos e hábitos que fazem você desistir de si mesma.',
     comeca: 'Você começa pelas aulas “15 Minutos por Dia: Barriga e Cintura em Ação”, com exercícios funcionais, respiração e hipopressivos.',
   },
   'esforcada': {
     nome: 'A Diva Esforçada sem Técnica',
     retrato: 'Você não fica parada: já fez abdominal, dieta, treino. Mesmo assim, a barriga não sai e a cintura não aparece.',
-    trava: 'Não é falta de esforço, é falta da técnica certa. Você não precisa de mil abdominais.',
+    trava: 'Não é falta de esforço, é falta da técnica certa. Você não precisa de mil abdominais: precisa trabalhar o seu cinturão natural com postura e respiração, e cuidar dos pensamentos e hábitos que fazem você desistir de si mesma.',
     comeca: 'Você começa aprendendo a técnica do jeito certo, nas aulas “15 Minutos por Dia”, para o esforço finalmente virar resultado.',
   },
   'recomeco': {
     nome: 'A Diva que Recomeça Toda Segunda',
     retrato: 'Você começa com tudo, a semana aperta, um deslize vira “já estraguei” e a segunda-feira vira a data do recomeço.',
-    trava: 'O que te tira do caminho não é preguiça, é a cabeça: ansiedade, cansaço e o “tudo ou nada”.',
+    trava: 'O que te tira do caminho não é preguiça, é a cabeça: ansiedade, cansaço e o “tudo ou nada”. O corpo responde quando a mente para de desistir de si mesma.',
     comeca: 'Você começa pelo áudio “Ative Sua Mente Magra e Diva” e pelo “Planner Diva”, para saber o que fazer em cada um dos 7 dias.',
   },
   'depois': {
     nome: 'A Diva que se Deixou pra Depois',
     retrato: 'Rotina corrida, casa, filhos, trabalho. Todo mundo virou prioridade, menos você. E um dia você se olhou e não se reconheceu.',
-    trava: 'Você não precisa de horas livres. Precisa de poucos minutos por dia que sejam só seus.',
+    trava: 'Você não precisa de horas livres. Precisa de poucos minutos por dia que sejam só seus, para o corpo e para a cabeça, e de largar os hábitos que fazem você desistir de si mesma.',
     comeca: 'Você começa pelo “Comece Aqui: Sua Jornada Começa Agora” e encaixa os primeiros minutos do dia em você, sem esperar segunda-feira.',
   },
 }
@@ -133,6 +133,10 @@ function perfilDe(r) {
   if (['varias', 'perdi-conta'].includes(r.recomecos) || ['ansiedade', 'noite', 'doce'].includes(r.sabotador)) return 'recomeco'
   return 'depois'
 }
+
+// Texto da Michele (04/11) para a parte da mente, igual em todos os perfis.
+const MENTE = 'É aí que entra a Mente Magra e Diva: aprender a sair do “tudo ou nada” e fazer escolhas que sustentem a sua transformação.'
+const DIA_A_DIA = 'Quinze minutinhos para cuidar do corpo. Uma tarefa por dia para transformar a forma como você se cuida. 💜'
 
 const MEDO = {
   fracasso: 'um passo a passo de 7 dias, com o Planner Diva, para você saber exatamente o que fazer em cada dia.',

@@ -348,6 +348,15 @@ Os M da pasta "MICHELE LOW" são esses mesmos vídeos. Mapa conferido pelos quad
     `window.plBloco` (chama `window.plTique()` antes e depois da troca). Site `quiz` no `cliente.config.ts` (domínios: michelesalla.com.br,
     clientes-phi-six.vercel.app, painel.michelesalla.com.br). A API aceita vários sites no mesmo domínio pelo começo do slug.
     Telas abertas com `?tela=` (painel de revisão) não rastreiam. Se o quiz mudar de endereço, pôr o domínio em `outrosDominios`.
+  - **Ajustes da Michele (04/11, WhatsApp):** idade 45 na capa 1 e no gancho 2; telas "Analisando…" seguem sozinhas em ~3,5 s
+    (o botão continua; quem volta não é empurrada); resultado com corpo e mente (texto dela: cinturão natural + "pensamentos e
+    hábitos que fazem você desistir de si mesma" + Mente Magra e Diva + "Quinze minutinhos… Uma tarefa por dia…"), botão
+    "Quero começar meus 7 dias". **Em aberto (decisão Patrik/Michele):** 7 × 21 dias, tirar os funcionais e deixar só
+    hipopressivo + áudio (muda texto de oferta: regra de pagamento), ajuste do ManyChat (não disse qual).
+  - **Pilates asiático (04/11):** página "Pilates Asiáticos 28 dias" (1147500708457430) com 8 anúncios ativos na Biblioteca desde
+    07–11/08, todos "Avaliação máxima ⭐ Descubra seu plano personalizado AGORA" (quiz), cobrança em USD; "Protocole Naturel" igual.
+    Reverse Health: "28-Day Asian Pilates Challenge", mulheres 40+, quiz de 1 minuto, 15–20 min, barriga, core e postura.
+    A Michele não tem campanha nem venda de pilates na conta/painel: falta saber o produto dela (conteúdo, preço, checkout).
   - **Capa (03/11, pedido do Patrik):** foto da Michele trocada pelo antes e depois do Desafio (`hero-antes-depois-avatar.webp`) nas 5 capas.
   - **Checagem dos 3 filtros do Patrik (03/11):** todos os números reconferidos na fonte. Corrigido "≈100 vendas" → 75 do produto
     principal. Posts da Michele são impulsionamentos de CLIQUE (não venda). P5 tem o maior CTR da conta ("Deixa eu te lembrar", 13,53%);
