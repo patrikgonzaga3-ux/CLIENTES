@@ -1,0 +1,273 @@
+<!doctype html>
+<title>Quiz Pilates · Revisão</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="robots" content="noindex, nofollow">
+<script>if(location.hostname.endsWith('vercel.app')&&!location.pathname.endsWith('/'))location.replace(location.pathname+'/'+location.search+location.hash)</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+/* Layout: caderno de revisão — uma coluna de leitura, com faixas de celulares que rolam de lado, tela por tela. Identidade do Desafio 7 em 7. */
+:root{
+  --fundo:#FBF4FA; --papel:#FFFFFF; --tinta:#241A29; --suave:#62556A; --linha:#EBD9E7;
+  --roxo:#9E047C; --violeta:#8D29F2; --amarelo:#FFFC00; --amarelo-tinta:#5E5A00; --marca-fundo:#FFF9B0;
+  --ok:#1B7A3A; --ok-fundo:#E3F4E8; --alerta:#9A5B00; --alerta-fundo:#FFF1D6;
+  --display:Sora,"Trebuchet MS",system-ui,sans-serif; --texto:Raleway,"Segoe UI",system-ui,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --fundo:#17111A; --papel:#211926; --tinta:#F4EAF2; --suave:#BFAFC5; --linha:#3A2C40;
+  --roxo:#E66CC8; --violeta:#B58CFF; --amarelo:#FFFC00; --amarelo-tinta:#FFF6A0; --marca-fundo:#3A3610;
+  --ok:#6FD48F; --ok-fundo:#16301F; --alerta:#F5B95A; --alerta-fundo:#33260F; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --fundo:#17111A; --papel:#211926; --tinta:#F4EAF2; --suave:#BFAFC5; --linha:#3A2C40;
+  --roxo:#E66CC8; --violeta:#B58CFF; --amarelo:#FFFC00; --amarelo-tinta:#FFF6A0; --marca-fundo:#3A3610;
+  --ok:#6FD48F; --ok-fundo:#16301F; --alerta:#F5B95A; --alerta-fundo:#33260F; color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--fundo);color:var(--tinta);font:400 16px/1.6 var(--texto)}
+.pagina{max-width:1080px;margin:0 auto;padding-block:28px 64px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:grid;gap:44px}
+h1,h2,h3{font-family:var(--display);line-height:1.15;margin:0;text-wrap:balance}
+h1{font-size:clamp(30px,5vw,46px);font-weight:800}
+h2{font-size:clamp(22px,3.4vw,30px);font-weight:800}
+h3{font-size:18px;font-weight:700}
+p{margin:0;max-width:68ch}
+a{color:var(--roxo)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--violeta);outline-offset:2px}
+.rot{font:700 12px/1 var(--display);letter-spacing:.14em;text-transform:uppercase;color:var(--roxo)}
+.sec{display:grid;gap:16px;min-width:0}
+.sec>header{display:grid;gap:6px}
+.sub{color:var(--suave)}
+.topo{display:grid;gap:14px}
+.botoes{display:flex;flex-wrap:wrap;gap:8px}
+.bt{display:inline-flex;align-items:center;gap:6px;padding:9px 14px;border-radius:99px;border:1.5px solid var(--linha);background:var(--papel);color:var(--tinta);text-decoration:none;font:700 14px/1 var(--display)}
+.bt.forte{background:var(--amarelo);border-color:var(--amarelo);color:#111}
+.resumo{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
+.resumo div{background:var(--papel);border:1px solid var(--linha);border-radius:14px;padding:14px 16px;display:grid;gap:2px;min-width:0}
+.resumo b{font:800 26px/1.1 var(--display);color:var(--roxo);font-variant-numeric:tabular-nums}
+.resumo span{font-size:14px;color:var(--suave)}
+/* faixa de celulares */
+.faixa{display:flex;gap:16px;overflow-x:auto;padding:4px 2px 14px;scroll-snap-type:x proximity}
+.cel{flex:0 0 232px;display:grid;gap:8px;align-content:start;scroll-snap-align:start;min-width:0}
+.cel .tela{display:block;border-radius:22px;overflow:hidden;border:6px solid var(--tinta);background:var(--papel);height:440px}
+.cel .tela.longa{overflow-y:auto}
+.cel img{display:block;width:100%;height:auto}
+.cel .n{font:800 13px/1 var(--display);color:var(--roxo);letter-spacing:.06em}
+.cel h3{font-size:15px}
+.cel p{font-size:13.5px;color:var(--suave);line-height:1.45}
+.cel .abrir{font-size:13px;font-weight:700}
+.dica{font-size:13px;color:var(--suave)}
+/* promessas */
+.prom{display:grid;grid-template-columns:232px minmax(0,1fr);gap:20px;background:var(--papel);border:1px solid var(--linha);border-radius:20px;padding:18px}
+.prom .tela{border-radius:22px;overflow:auto;border:6px solid var(--tinta);height:440px}
+.prom .tela img{display:block;width:100%;height:auto}
+.prom .txt{display:grid;gap:10px;align-content:start;min-width:0}
+.prom .titulo{font:800 20px/1.25 var(--display)}
+.fonte{background:var(--fundo);border-radius:12px;padding:12px 14px;font-size:14.5px;display:grid;gap:6px}
+.fonte q{font-style:italic}
+@media (max-width:640px){.prom{grid-template-columns:1fr}.prom .tela{max-width:260px}}
+mark.p{background:var(--marca-fundo);color:var(--amarelo-tinta);border:1px dashed currentColor;border-radius:5px;padding:0 4px;font-weight:700}
+/* tabelas */
+.rolar{overflow-x:auto;min-width:0;border:1px solid var(--linha);border-radius:14px;background:var(--papel)}
+table{border-collapse:collapse;width:100%;font-size:14.5px;min-width:560px}
+th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--linha);vertical-align:top}
+th{font:700 12px/1.2 var(--display);letter-spacing:.08em;text-transform:uppercase;color:var(--suave)}
+tr:last-child td{border-bottom:0}
+td.num{font-variant-numeric:tabular-nums;white-space:nowrap;text-align:right}
+/* regra dos perfis */
+.regra{display:grid;gap:8px;margin:0;padding:0;list-style:none;counter-reset:r}
+.regra li{display:grid;grid-template-columns:30px minmax(0,1fr);gap:10px;background:var(--papel);border:1px solid var(--linha);border-radius:12px;padding:12px 14px;counter-increment:r}
+.regra li::before{content:counter(r);font:800 18px/1.3 var(--display);color:var(--roxo)}
+/* ganchos */
+.ganchos{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:12px}
+.grupo{background:var(--papel);border:1px solid var(--linha);border-radius:16px;padding:16px;display:grid;gap:10px;align-content:start;min-width:0}
+.grupo ol{margin:0;padding-left:24px;display:grid;gap:8px}
+.grupo li{padding-left:2px}
+.grupo small{display:block;color:var(--suave);font-size:12.5px}
+.selo{display:inline-block;font:700 11px/1 var(--display);letter-spacing:.06em;text-transform:uppercase;padding:4px 7px;border-radius:6px;margin-left:4px;vertical-align:1px}
+.selo.risco{background:var(--alerta-fundo);color:var(--alerta)}
+/* listas de checagem */
+.checks{display:grid;gap:8px;margin:0;padding:0;list-style:none}
+.checks li{display:grid;grid-template-columns:26px minmax(0,1fr);gap:8px;align-items:start}
+.checks li::before{content:"✓";display:grid;place-items:center;width:22px;height:22px;border-radius:50%;background:var(--ok-fundo);color:var(--ok);font-weight:800;font-size:13px;margin-top:2px}
+.checks.pend li::before{content:"!";background:var(--alerta-fundo);color:var(--alerta)}
+.duas{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}
+.caixa{background:var(--papel);border:1px solid var(--linha);border-radius:16px;padding:18px;display:grid;gap:12px;align-content:start;min-width:0}
+.passos{margin:0;padding-left:22px;display:grid;gap:8px}
+footer{color:var(--suave);font-size:13px}
+@media (prefers-reduced-motion: reduce){.faixa{scroll-behavior:auto}}
+</style><style>
+.status{display:grid;gap:8px}
+.st{display:grid;grid-template-columns:auto minmax(0,1fr);gap:10px;align-items:start;background:var(--papel);border:1px solid var(--linha);border-radius:12px;padding:12px 14px}
+.pill{font:700 11px/1 var(--display);letter-spacing:.06em;text-transform:uppercase;padding:5px 8px;border-radius:6px;white-space:nowrap;margin-top:2px}
+.pill.ok{background:var(--ok-fundo);color:var(--ok)}.pill.pend{background:var(--alerta-fundo);color:var(--alerta)}
+</style>
+<main class="pagina">
+
+<section class="topo">
+  <span class="rot">Michele Salla · Quiz Pilates em Casa · fase 1 do teste · revisão de 05/11/2026</span>
+  <h1>Quiz Pilates: o que está no ar e o que falta para anunciar</h1>
+  <p class="sub">Por decisão do Patrik, o teste começa pelo pilates, a R$ 47. O quiz está pronto e testado. Tudo que depende do produto de pilates na Hotmart está em <mark class="p">amarelo</mark>: não escrevi nada do produto sem ver o que existe lá. Antes de gravar os criativos, revise as promessas e preencha o que está em amarelo.</p>
+  <div class="botoes">
+    <a class="bt forte" href="https://clientes-phi-six.vercel.app/michele-salla/quiz-pilates/?p=1">Abrir o quiz →</a>
+    <a class="bt" href="https://clientes-phi-six.vercel.app/michele-salla/quiz-pilates/?p=1">Capa 1</a>
+    <a class="bt" href="https://clientes-phi-six.vercel.app/michele-salla/quiz-pilates/?p=2">Capa 2</a>
+    <a class="bt" href="https://clientes-phi-six.vercel.app/michele-salla/quiz-pilates/?p=3">Capa 3</a>
+    <a class="bt" href="https://clientes-phi-six.vercel.app/michele-salla/quiz-pilates/?p=4">Capa 4</a>
+    <a class="bt" href="https://clientes-phi-six.vercel.app/michele-salla/quiz-pilates/?p=5">Capa 5</a>
+  </div>
+</section>
+
+<section class="sec" id="no-ar">
+  <header><span class="rot">1 · O que está no ar</span><h2>Situação de cada peça</h2></header>
+  <div class="status">
+    <div class="st"><span class="pill ok">pronto</span><span><b>Quiz Pilates (fase 1)</b>: 5 capas, 20 telas, 5 perfis e a página final a R$ 47. Testado: caminho completo até cada perfil, sem erro, cabe no celular. Prévia: <a href="https://clientes-phi-six.vercel.app/michele-salla/quiz-pilates/?p=1">clientes-phi-six.vercel.app/michele-salla/quiz-pilates</a>.</span></div>
+    <div class="st"><span class="pill pend">2 passos</span><span><b>Endereço quiz.michelesalla.com.br</b>: a configuração já está pronta. Faltam o domínio na Vercel e o apontamento no cPanel (Patrik). Depois disso, o pilates abre em <b>quiz.michelesalla.com.br/?p=1</b> e o Desafio em <b>quiz.michelesalla.com.br/desafio/?p=1</b>.</span></div>
+    <div class="st"><span class="pill pend">pendente</span><span><b>Link de compra do pilates a R$ 47</b> (Hotmart): o botão final mostra "Link de compra pendente" até chegar o link.</span></div>
+    <div class="st"><span class="pill ok">pronto</span><span><b>Medição no painel</b> (painel.michelesalla.com.br, aba <b>Quiz Pilates</b>): visitas, tempo e saída em cada tela, respostas, clique em comprar, tudo separado por promessa.</span></div>
+    <div class="st"><span class="pill ok">pronto</span><span><b>Pixel do Meta</b> (991344998762063): PageView e "CliqueComprar" no endereço oficial. A compra (Purchase) sai da Hotmart: o pixel precisa estar configurado no produto de pilates lá.</span></div>
+    <div class="st"><span class="pill pend">pendente</span><span><b>Vendas da Hotmart no painel</b>: o aviso de venda (webhook) da Hotmart ainda não está ligado no painel. Sem ele, a venda aparece no Meta e na Hotmart, mas não no painel.</span></div>
+    <div class="st"><span class="pill ok">pronto</span><span><b>Quiz Desafio 7 em 7 (fase 2)</b>, com os ajustes de 04 e 05/11: só hipopressivo + áudio, 7 dias, R$ 47 (oferta E1YMM7). Revisão própria: <a href="https://clientes-phi-six.vercel.app/michele-salla/quiz/revisao/">quiz/revisao</a>.</span></div>
+  </div>
+</section>
+
+<section class="sec" id="promessas">
+  <header><span class="rot">2 · As 5 promessas (capas)</span><h2>Uma capa por promessa, o resto do quiz igual</h2>
+  <p class="sub">Cada promessa vira um conjunto no anúncio. O teste mostra qual faz mais gente começar o quiz e comprar.</p></header>
+  <div id="lista-promessas" style="display:grid;gap:16px"></div>
+</section>
+
+<section class="sec" id="telas">
+  <header><span class="rot">3 · O quiz tela a tela</span><h2>Da tela 2 à tela 18</h2>
+  <p class="sub">Role para o lado. Toque no nome de uma tela para abrir no quiz. As telas "Analisando…" seguem sozinhas em cerca de 3,5 segundos.</p></header>
+  <div class="faixa" id="faixa-telas"></div>
+</section>
+
+<section class="sec" id="perfis">
+  <header><span class="rot">4 · Os 5 perfis (tela 19)</span><h2>Cada pessoa recebe um perfil por esta regra</h2>
+  <p class="sub">A regra confere de cima para baixo e para no primeiro item que bater.</p></header>
+  <ol class="regra">
+    <li><span><b>A Diva da Nova Fase</b>: teve bebê nos últimos 2 anos, está na pré-menopausa ou menopausa, ou tem escapes de xixi quando pula.</span></li>
+    <li><span><b>A Diva Sem Impacto</b>: sente dor no joelho ou nas costas com impacto, ou evita impacto.</span></li>
+    <li><span><b>A Diva da Postura</b>: marcou costas ou postura, ou quer melhorar a postura.</span></li>
+    <li><span><b>A Diva que Recomeça Toda Segunda</b>: já começou e parou várias vezes, ou tem medo de desistir de novo.</span></li>
+    <li><span><b>A Diva que Vai Começar Agora</b>: todas as outras.</span></li>
+  </ol>
+  <div class="faixa" id="faixa-perfis"></div>
+</section>
+
+<section class="sec" id="oferta">
+  <header><span class="rot">5 · A página final (tela 20)</span><h2>Uma oferta só: o pilates em casa por R$ 47</h2>
+  <p class="sub">O nome do perfil aparece no topo e o medo que ela marcou ganha uma resposta. O conteúdo do produto vem da Hotmart.</p></header>
+  <div class="duas">
+    <div class="faixa" id="faixa-oferta" style="padding:0"></div>
+    <div class="caixa">
+      <h3>O que a Michele precisa mandar (da Hotmart)</h3>
+      <ul class="checks pend">
+        <li><span>Nome do produto de pilates como está na Hotmart.</span></li>
+        <li><span>Lista dos módulos e aulas, com quantos minutos cada e em quantos dias é o plano.</span></li>
+        <li><span>Se precisa de algum acessório (bola, elástico) ou só o tapete.</span></li>
+        <li><span>Bônus, se tiver.</span></li>
+        <li><span>Garantia configurada (quantos dias).</span></li>
+        <li><span>Fotos ou prints de depoimentos de alunas do pilates. As fotos do Desafio 7 em 7 não podem ser usadas aqui.</span></li>
+        <li><span>Uma foto dela fazendo pilates (para a capa) e confirmar a capa 5: "Eu tenho 45 anos e faço pilates em casa".</span></li>
+        <li><span>Uma frase sobre o pilates para a apresentação: há quanto tempo dá aula.</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="mercado">
+  <header><span class="rot">6 · De onde veio o modelo</span><h2>O pilates asiático e o nosso quiz</h2></header>
+  <div class="duas">
+    <div class="caixa">
+      <h3>O que roda no Meta (05/11)</h3>
+      <ul class="checks">
+        <li><span><b>“Pilates Asiáticos 28 dias”</b>: 8 anúncios ativos na Biblioteca do Meta, no ar desde 7 a 11/08 (quase 3 meses). Todos com o título “Avaliação máxima ⭐⭐⭐⭐⭐ Descubra seu plano personalizado AGORA”, que leva a um quiz. Anúncios em dólar: operação de fora do Brasil.</span></li>
+        <li><span><b>“Protocole Naturel”</b>: o mesmo modelo, “Descobrir seu plano personalizado é grátis”.</span></li>
+        <li><span><b>Reverse Health · “28-Day Asian Pilates Challenge”</b>: mulheres 40+, quiz de 1 minuto, rotinas de 15 a 20 minutos em casa, “Flatten Your Tummy, Build Core Strength, Improve Your Posture”.</span></li>
+        <li><span>No Brasil, “pilates em casa” tem milhares de anúncios ativos (estúdios e desafios online).</span></li>
+      </ul>
+      <p class="dica">A Biblioteca não mostra gasto nem vendas: “escalado” aqui quer dizer muito tempo no ar e muitos anúncios, não lucro comprovado.</p>
+    </div>
+    <div class="caixa">
+      <h3>O que levamos para o quiz da Michele</h3>
+      <ul class="checks">
+        <li><span>Idade logo na 2ª tela e um plano “para o seu perfil” no final, como eles.</span></li>
+        <li><span>Barriga, postura e centro do corpo, sem impacto: é o mesmo que o hipopressivo da Michele já fala.</span></li>
+        <li><span>Capa 1 para 40+, capa 5 com a própria Michele (45 anos).</span></li>
+        <li><span>O que só a Michele tem: o “Chega de pular igual a uma maluca” (post dela), o vocabulário Diva, a parte da mente (“desistir de si mesma”) e o atendimento em português.</span></li>
+        <li><span>Não usamos “asiático” nem “28 dias”: só se o produto dela for assim.</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="trafego">
+  <header><span class="rot">7 · Teste no tráfego</span><h2>Fase 1: qual promessa vende o pilates</h2></header>
+  <div class="duas">
+    <div class="caixa">
+      <ol class="passos">
+        <li>Campanha <code>PTK - dd/mm - ABO TESTE PROMESSA PILATES</code>, objetivo Vendas, evento <b>Compra</b>.</li>
+        <li>5 conjuntos, um por promessa (<code>?p=1</code> a <code>?p=5</code>), R$ 21,15 por dia cada (45% de R$ 47).</li>
+        <li>Mulheres, 35 a 60 anos, sem Audience Network.</li>
+        <li>Parâmetros de URL de sempre (utm_source=FB … utm_term={{adset.id}}).</li>
+        <li>3 a 4 dias. Depois, a promessa que vencer ganha os outros ganchos. A fase 2 (Desafio 7 em 7) usa o mesmo quiz em <code>/desafio</code>.</li>
+      </ol>
+    </div>
+    <div class="caixa">
+      <h3>Depois da revisão</h3>
+      <ul class="checks pend">
+        <li><span>Ganchos e roteiros dos criativos: 4 por promessa, escritos depois que a Michele aprovar as promessas e mandar os dados do produto.</span></li>
+        <li><span>OK do Patrik na estrutura da campanha antes de criar.</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<footer>Prévia sem indexação. Quiz: michele-salla/quiz-pilates no repositório CLIENTES (motor compartilhado com o quiz do Desafio). Prints gerados do próprio quiz em 05/11/2026, tela de celular de 390 px.</footer>
+</main>
+
+<script>
+const QUIZ = 'https://clientes-phi-six.vercel.app/michele-salla/quiz-pilates/'
+const PROM = [
+  { p: 1, nome: 'Depois dos 40', titulo: 'Depois dos 40 o seu corpo pede outro treino. Descubra o seu plano de pilates em casa.',
+    fonte: 'Os quizzes de pilates que mais rodam miram mulheres 40+ (Reverse Health; “Pilates na Parede 40+”). Post da Michele “Atenção Mulher… depois dos 35/40… não é falta de esforço” e a idade dela (45).' },
+  { p: 2, nome: 'Sem impacto', titulo: 'Chega de pular igual a uma maluca. Pilates em casa, sem impacto, no seu ritmo.',
+    fonte: 'Post da Michele “Chega de ficar pulando igual a uma maluca” (CTR 7%, mas só 159 cliques). Sem impacto é o que o pilates entrega.' },
+  { p: 3, nome: 'Sem estúdio', titulo: 'Pilates sem estúdio e sem sair de casa. Descubra o plano certo para o seu corpo.',
+    fonte: 'O mercado brasileiro vende “pilates em casa, sem academia, sem equipamento”. <mark class="p">Confirmar se o produto precisa de acessório.</mark>' },
+  { p: 4, nome: 'Plano personalizado', titulo: 'Descubra o plano de pilates em casa para o seu perfil.',
+    fonte: 'É a chamada dos anúncios do pilates asiático que rodam há quase 3 meses: “Descubra seu plano personalizado”.' },
+  { p: 5, nome: 'A rotina da Michele', titulo: 'Eu tenho 45 anos e faço pilates em casa. Descubra por onde você começa.',
+    fonte: 'A persona “resolvida” da reunião de 03/11 e a idade dela. <mark class="p">Confirmar com a Michele que ela faz pilates em casa.</mark>' },
+]
+const TELAS = [
+  ['idade', 'Qual a sua faixa de idade?', 'Pergunta fácil no começo, como os concorrentes. Separa quem é público.'],
+  ['michele', 'Prazer, eu sou a Michele Salla', 'Bio da página do Desafio + frase do pilates (em amarelo).'],
+  ['objetivo', 'O que você mais quer com o pilates?', 'Barriga, postura, leveza, autoestima.'],
+  ['pilates-antes', 'Você já fez pilates?', 'Mostra se ela é iniciante.'],
+  ['incomoda', 'O que mais te incomoda no seu corpo?', 'Várias respostas. Costas e postura levam ao perfil Postura.'],
+  ['impacto', 'E os exercícios de impacto?', 'Dor e escapes levam aos perfis Sem Impacto e Nova Fase.'],
+  ['prova', 'Quem já pratica comigo', 'Fotos de alunas do pilates (em amarelo).'],
+  ['rotina', 'Como é a sua rotina hoje?', 'Traz o “todo mundo virou prioridade”.'],
+  ['tempo-dia', 'Quanto tempo por dia você consegue?', 'Prepara os minutos por aula.'],
+  ['espaco', 'Onde você vai praticar?', 'Depende do produto (em amarelo).'],
+  ['fase', 'Você está em alguma destas fases?', 'Pós-parto e menopausa levam ao perfil Nova Fase.'],
+  ['insight', 'Talvez você se reconheça nisso', 'Pausa de identificação.'],
+  ['carregando-1', 'Analisando suas respostas…', 'Segue sozinha em ~3,5 s.'],
+  ['recomecos', 'Quantas vezes você já começou e parou?', 'Leva ao perfil Recomeça.'],
+  ['medo', 'Qual é o seu maior medo agora?', 'A resposta volta na oferta.'],
+  ['sonho', 'O que você gostaria de sentir?', 'Faz ela imaginar o resultado.'],
+  ['carregando-2', 'Montando o seu plano de pilates…', 'Segue sozinha em ~3,5 s.'],
+]
+const PERFIS = [['nova-fase', 'A Diva da Nova Fase'], ['sem-impacto', 'A Diva Sem Impacto'], ['postura', 'A Diva da Postura'], ['recomeco', 'A Diva que Recomeça Toda Segunda'], ['iniciante', 'A Diva que Vai Começar Agora']]
+const cel = (img, n, titulo, nota, link) => `<figure class="cel" style="margin:0"><a class="tela longa" href="${link}" aria-label="Abrir ${titulo} no quiz"><img src="img/${img}.webp" alt="Print: ${titulo}" loading="lazy" width="390" height="844"></a>
+  <span class="n">${n}</span><h3><a href="${link}">${titulo}</a></h3>${nota ? `<p>${nota}</p>` : ''}</figure>`
+document.getElementById('lista-promessas').innerHTML = PROM.map(x => `<article class="prom">
+  <a class="tela" href="${QUIZ}?p=${x.p}" aria-label="Abrir a capa ${x.p}"><img src="img/capa-p${x.p}.webp" alt="Print da capa ${x.p}" width="390" height="880"></a>
+  <div class="txt"><span class="rot">Promessa ${x.p} · tela 1</span><h3>${x.nome}</h3><p class="titulo">${x.titulo}</p>
+  <div class="fonte"><b>De onde veio</b><span>${x.fonte}</span></div>
+  <p class="dica">Link do anúncio (depois do endereço novo): <code>quiz.michelesalla.com.br/?p=${x.p}</code></p></div></article>`).join('')
+document.getElementById('faixa-telas').innerHTML = TELAS.map((t, k) => cel('tela-' + t[0], 'TELA ' + (k + 2), t[1], t[2], `${QUIZ}?tela=${t[0]}`)).join('')
+document.getElementById('faixa-perfis').innerHTML = PERFIS.map((x, k) => cel('resultado-' + x[0], 'PERFIL ' + (k + 1), x[1], '', `${QUIZ}?tela=resultado&perfil=${x[0]}`)).join('')
+document.getElementById('faixa-oferta').innerHTML = cel('oferta', 'TELA 20', 'Oferta do pilates em casa', 'Exemplo: perfil Postura, medo “não ter tempo”.', `${QUIZ}?tela=oferta&perfil=postura&p=1`)
+</script>

@@ -1,10 +1,84 @@
 {
   "cleanUrls": true,
   "redirects": [
-    { "source": "/", "destination": "/michele-salla/desafio-7em7/", "permanent": false },
-    { "source": "/michele-salla/painel/:path*", "destination": "/", "permanent": false }
+    {
+      "source": "/",
+      "destination": "/michele-salla/desafio-7em7/",
+      "permanent": false,
+      "missing": [
+        {
+          "type": "host",
+          "value": "quiz.michelesalla.com.br"
+        }
+      ]
+    },
+    {
+      "source": "/michele-salla/painel/:path*",
+      "destination": "/",
+      "permanent": false
+    }
   ],
   "headers": [
-    { "source": "/(.*)", "headers": [ { "key": "X-Robots-Tag", "value": "noindex, nofollow" } ] }
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/desafio-7em7/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "quiz.michelesalla.com.br"
+        }
+      ],
+      "destination": "/michele-salla/desafio-7em7/:path*"
+    },
+    {
+      "source": "/quiz/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "quiz.michelesalla.com.br"
+        }
+      ],
+      "destination": "/michele-salla/quiz/:path*"
+    },
+    {
+      "source": "/desafio/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "quiz.michelesalla.com.br"
+        }
+      ],
+      "destination": "/michele-salla/quiz/:path*"
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "quiz.michelesalla.com.br"
+        }
+      ],
+      "destination": "/michele-salla/quiz-pilates/"
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "quiz.michelesalla.com.br"
+        }
+      ],
+      "destination": "/michele-salla/quiz-pilates/:path*"
+    }
   ]
 }

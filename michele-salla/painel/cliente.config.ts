@@ -66,7 +66,7 @@ export const CLIENTE = {
       id: 'quiz',
       nome: 'Quiz Diva',
       dominio: 'michelesalla.com.br',
-      outrosDominios: ['clientes-phi-six.vercel.app', 'painel.michelesalla.com.br'],
+      outrosDominios: ['quiz.michelesalla.com.br', 'clientes-phi-six.vercel.app', 'painel.michelesalla.com.br'],
       prefixo: 'quiz',
       paginas: [['quiz-p1', 'P1 · Rotina de 5 minutos'], ['quiz-p2', 'P2 · Barriga estufada à noite'], ['quiz-p3', 'P3 · Sem mil abdominais'],
         ['quiz-p4', 'P4 · Depois dos 40'], ['quiz-p5', 'P5 · Se deixou pra depois']],
@@ -75,6 +75,23 @@ export const CLIENTE = {
         'Prova (alunas)', 'Rotina', 'Sinais', 'Fase', 'Identificação', 'Analisando 1', 'Sabotador', 'Medo', 'Sonho',
         'Tempo por dia', 'Motivo', 'Analisando 2', 'Resultado (perfil)', 'Oferta'],
       blocosOferta: [22],
+      botoes: {},
+    },
+    {
+      // Quiz Pilates em Casa (05/11, fase 1 do teste): quiz.michelesalla.com.br/?p=1..5. Mesma lógica do Quiz Diva:
+      // cada tela é um bloco (01 capa … 20 oferta) e cada promessa é uma página (pilates-p1 … pilates-p5).
+      id: 'pilates',
+      nome: 'Quiz Pilates',
+      dominio: 'quiz.michelesalla.com.br',
+      outrosDominios: ['clientes-phi-six.vercel.app'],
+      prefixo: 'pilates',
+      paginas: [['pilates-p1', 'P1 · Depois dos 40'], ['pilates-p2', 'P2 · Sem impacto'], ['pilates-p3', 'P3 · Sem estúdio'],
+        ['pilates-p4', 'P4 · Plano personalizado'], ['pilates-p5', 'P5 · A rotina da Michele']],
+      // telas 01 a 21 do quiz (michele-salla/quiz-pilates/pilates.js)
+      blocos: ['Capa (promessa)', 'Idade', 'Michele', 'Objetivo', 'Já fez pilates', 'O que incomoda', 'Impacto', 'Prova (alunas)',
+        'Rotina', 'Tempo por dia', 'Onde pratica', 'Fase', 'Identificação', 'Analisando 1', 'Recomeços', 'Medo', 'Sonho',
+        'Analisando 2', 'Resultado (perfil)', 'Oferta'],
+      blocosOferta: [20],
       botoes: {},
     },
   ] as SiteCfg[],

@@ -348,6 +348,19 @@ Os M da pasta "MICHELE LOW" são esses mesmos vídeos. Mapa conferido pelos quad
     `window.plBloco` (chama `window.plTique()` antes e depois da troca). Site `quiz` no `cliente.config.ts` (domínios: michelesalla.com.br,
     clientes-phi-six.vercel.app, painel.michelesalla.com.br). A API aceita vários sites no mesmo domínio pelo começo do slug.
     Telas abertas com `?tela=` (painel de revisão) não rastreiam. Se o quiz mudar de endereço, pôr o domínio em `outrosDominios`.
+  - **05/11 · Decisões do Patrik:** manter 7 dias; Desafio só com hipopressivo + áudio (tirado "funcionais" do quiz; a página 10264
+    no WordPress ainda fala em funcionais: regravar pelo PC quando ele pedir); ManyChat já ajustado por ele; **fase 1 do teste =
+    PILATES a R$ 47**; endereço **quiz.michelesalla.com.br**.
+    - Quiz Pilates: `michele-salla/quiz-pilates/` (`pilates.js` = textos; motor e estilo compartilhados em `michele-salla/quiz/motor.js`
+      e `estilo.css`). 5 capas (`?p=1..5`), 20 telas, 5 perfis (Nova Fase, Sem Impacto, Postura, Recomeça, Vai Começar Agora).
+      Tudo do produto (nome, módulos, acessórios, garantia, fotos de alunas, link da Hotmart) está em `[[ ]]` amarelo: o produto
+      de pilates NÃO está público (nem site, nem Hotmart pública) e não há venda nem campanha de pilates na conta. A Michele manda.
+    - Revisão para a Michele: https://clientes-phi-six.vercel.app/michele-salla/quiz-pilates/revisao/
+    - Endereço: `vercel.json` já reescreve quiz.michelesalla.com.br (raiz = pilates, `/desafio/` = Desafio). Faltam: adicionar o
+      domínio no projeto da prévia na Vercel (time "Ptk midias", o conector não vê) e o CNAME `quiz` no cPanel da TurboCloud (DNS
+      ns1/ns2.luke9050.com.br; sem acesso daqui).
+    - Pixel 991344998762063 no quiz só em quiz.michelesalla.com.br (PageView + CliqueComprar). Purchase vem da Hotmart (pixel no produto).
+    - Painel: aba **Quiz Pilates** (`/painel/pilates`, site `pilates`, slugs pilates-p1..p5, sck igual). Falta o webhook da Hotmart.
   - **Ajustes da Michele (04/11, WhatsApp):** idade 45 na capa 1 e no gancho 2; telas "Analisando…" seguem sozinhas em ~3,5 s
     (o botão continua; quem volta não é empurrada); resultado com corpo e mente (texto dela: cinturão natural + "pensamentos e
     hábitos que fazem você desistir de si mesma" + Mente Magra e Diva + "Quinze minutinhos… Uma tarefa por dia…"), botão

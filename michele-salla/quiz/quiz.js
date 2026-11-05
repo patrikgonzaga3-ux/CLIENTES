@@ -1,4 +1,4 @@
-/* Quiz da Michele Salla — modelado no quiz "De Volta ao Eixo" da Laura (26 telas, perfil por regra, oferta única).
+/* Quiz da Michele Salla · DESAFIO 7 EM 7 (fase 2 do teste, depois do Pilates). Motor em motor.js. Modelado no quiz "De Volta ao Eixo" da Laura (26 telas, perfil por regra, oferta única).
    Tudo o que a pessoa lê está aqui. Fontes dos textos: posts e anúncios da Michele (Gerenciador de Anúncios),
    página do Desafio 7 em 7 no ar e a reunião de 03/11/2026. Itens entre [[ ]] são pendências para a Michele preencher.
    Endereço: ?p=1..5 escolhe a capa (promessa). Para o painel: ?tela=<id>&p=<n>&perfil=<id> abre uma tela direto. */
@@ -103,7 +103,7 @@ const PERFIS = {
     nome: 'A Diva da Barriga Estufada',
     retrato: 'A sua barriga muda ao longo do dia: de manhã está melhor e à noite está estufada. Isso mexe com a roupa, com o humor e com a autoestima.',
     trava: 'Fazer cada vez mais abdominais não resolve tudo. É preciso trabalhar o seu cinturão natural com postura, respiração e cuidar dos pensamentos e hábitos que fazem você desistir de si mesma.',
-    comeca: 'Você começa pelas aulas “15 Minutos por Dia: Barriga e Cintura em Ação”, com exercícios funcionais, respiração e hipopressivos.',
+    comeca: 'Você começa pelas aulas “15 Minutos por Dia: Barriga e Cintura em Ação”, com respiração e hipopressivos.',
   },
   'esforcada': {
     nome: 'A Diva Esforçada sem Técnica',
@@ -149,8 +149,51 @@ const MEDO = {
 const MODULOS = [
   ['Comece Aqui: Sua Jornada Começa Agora', 'Como funciona o Desafio, como acessar as aulas e o que fazer em cada dia.'],
   ['Conheça Sua Barriga: Avaliação Inicial', 'Observar o abdômen, sinais como a diástase, quando buscar avaliação profissional, fotos e medidas.'],
-  ['15 Minutos por Dia: Barriga e Cintura em Ação', 'Exercícios funcionais, respiração e hipopressivos para o abdômen, a musculatura e a postura.'],
+  ['15 Minutos por Dia: Barriga e Cintura em Ação', 'Respiração e hipopressivos para o abdômen, a musculatura e a postura.'],
   ['Ative Sua Mente Magra e Diva', 'Áudio de motivação e visualização para reforçar o compromisso com a rotina.'],
   ['Planner Diva: Seus 7 Dias de Transformação', 'Roteiro diário para acompanhar exercícios e progresso.'],
 ]
 const BONUS = ['Projeto Minha Calça Favorita', 'Cardápio de Emergência Diva', 'Cintura Ativa: Rotina Express (5 minutos)']
+
+// Painel de revisão: respostas de exemplo para abrir cada perfil direto (?tela=resultado&perfil=…).
+const EXEMPLO = {
+  'nova-fase': { fase: 'pos-parto', sinais: ['escapes'], medo: 'dor', 'tempo-dia': '10-15' },
+  'estufada': { 'barriga-dia': 'estufa-noite', sinais: ['estufada'], fase: 'nenhuma', medo: 'tempo', 'tempo-dia': '5' },
+  'esforcada': { 'barriga-dia': 'sempre', abdominal: 'muito', fase: 'nenhuma', sinais: ['costas'], medo: 'fracasso', 'tempo-dia': '15-30' },
+  'recomeco': { 'barriga-dia': 'sempre', abdominal: 'parei', recomecos: 'perdi-conta', sabotador: 'ansiedade', fase: 'nenhuma', sinais: ['ansiedade'], medo: 'rebote', 'tempo-dia': '10-15' },
+  'depois': { 'barriga-dia': 'sempre', abdominal: 'nunca', recomecos: '1-2', sabotador: 'tempo', fase: 'maes', sinais: ['cansaco'], medo: 'dinheiro', 'tempo-dia': '5' },
+}
+
+const resultadoFoto = n => ({ src: IMG + 'resultado-' + n + '.webp', alt: 'Antes e depois de aluna do Desafio 7 em 7', w: 800, h: 800 })
+const QUIZ = {
+  slug: 'quiz-p', // painel: quiz-p1 … quiz-p5 (aba Quiz Diva)
+  logo: { src: IMG + 'logo-desafio-7em7-escura.png', alt: 'Desafio 7 em 7' },
+  capa: { src: IMG + 'hero-antes-depois-avatar.webp', alt: 'Antes e depois do Desafio 7 em 7', w: 1080, h: 1200 },
+  bio: [
+    'Educadora Física desde 2005, especialista em emagrecimento comportamental, licenciada na técnica da Barriga Negativa e autora do livro Vida Diva (2025).',
+    'Referência em transformação feminina há mais de 20 anos, criei uma metodologia que já ajudou milhares de mulheres a perderem a barriga sem viver de dietas: primeiro a mente, depois o corpo.',
+    'Nas próximas perguntas, vou entender a sua barriga e a sua rotina para te mostrar por onde começar.',
+  ],
+  prova: { titulo: 'Alunas que já começaram pelo Desafio 7 em 7', fotos: [1, 2, 3, 4].map(resultadoFoto) },
+  insight: {
+    ciclo: ['Rotina corrida. Cansaço.', 'Filhos, casa, trabalho…', 'Todo mundo virou prioridade, menos você.', 'E quando você percebe, a barriga aumentou e a autoestima sumiu.'],
+    destaque: 'Isso não é “normal”, e não é falta de esforço.',
+    texto: 'Com a técnica certa, poucos minutos por dia já são um começo: respiração, postura e o seu cinturão natural trabalhando a seu favor.',
+  },
+  resultado: {
+    mente: MENTE,
+    extra: 'E com o áudio “Ative Sua Mente Magra e Diva” e o Planner Diva, para cuidar da cabeça junto com o corpo.', extraSeTem: 'Mente Magra',
+    diaADia: DIA_A_DIA,
+    botao: 'Quero começar meus 7 dias',
+  },
+  oferta: {
+    produto: 'Desafio 7 em 7', valor: '47', checkout: CHECKOUT,
+    titulo: 'O seu caminho começa no <mark>Desafio 7 em 7</mark>',
+    intro: '7 dias de aulas práticas de 15 minutos, em casa, com respiração e hipopressivos para trabalhar a barriga e a cintura, e o áudio Mente Magra e Diva para cuidar da cabeça.',
+    modulos: MODULOS, bonus: BONUS,
+    fotos: [1, 2, 5, 6].map(resultadoFoto),
+    parcela: 'à vista · ou 12x de R$ 4,83',
+    botao: 'Quero começar o Desafio 7 em 7',
+    selos: 'Compra segura · Garantia de 7 dias · Pagamento único',
+  },
+}
