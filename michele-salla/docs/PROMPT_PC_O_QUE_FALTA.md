@@ -61,6 +61,58 @@ NO FIM
 - Me entregue: o que funcionou, o que falhou (com a mensagem exata) e o que ficou para mim.
 ```
 
+## Rodada 2 (06/11, fim da tarde): tudo o que falta para o quiz do pilates rodar anúncio
+
+O domínio já está no ar (quiz.michelesalla.com.br, /desafio/, /revisao/) e o webhook da Hotmart foi cadastrado.
+
+```
+Responda sempre em português. Vamos deixar o quiz do pilates da Michele 100% pronto para anúncio, agora.
+Eu (Patrik) estou aqui para digitar o que for segredo. Regras de sempre: nunca escreva senha, chave, token ou hottok no
+chat nem no repositório (eu colo os segredos; você abre a tela certa e me diz onde colar); não mexa na Greenn; não crie
+nem ligue anúncio; se algo fugir do roteiro, pare e me pergunte.
+
+0. cd %USERPROFILE%\CLIENTES && git pull origin main
+
+1. HOTTOK DA HOTMART → PAINEL
+   a) Abra a Hotmart da Michele > Ferramentas > Webhook > aba Autenticação, na tela do Hottok. Me avise para eu copiar.
+   b) Abra a Vercel, time ptk-midias > projeto painel-michele-salla > Settings > Environment Variables > Add, nome
+      HOTMART_HOTTOK, ambiente Production. Me avise para eu colar o valor e salvar.
+   c) Faça o Redeploy do último deploy de produção do painel-michele-salla e espere ficar "Ready".
+   d) Me peça para clicar em "Enviar teste" no webhook "Painel Michele" da Hotmart. Confira em
+      https://painel.michelesalla.com.br/painel/fontes que chegou um aviso da Hotmart e me diga a hora exata.
+
+2. CLARITY (gravações e mapas do quiz)
+   a) Em https://clarity.microsoft.com (se pedir login, eu entro): Novo projeto, nome "Michele Salla - Quiz",
+      site https://quiz.michelesalla.com.br, categoria Saúde e bem-estar (ou a mais próxima).
+   b) Em Configurações > Configuração, copie o CÓDIGO DO PROJETO (10 letras e números, ex.: z7uwmaj6sh). Não é segredo.
+   c) Abra https://agenciaptk.com.br/ptk/michele-salla (se pedir senha do painel, eu digito) > editar a ficha > campo
+      Clarity: cole o código e salve. Se não achar o campo, só me passe o código no chat.
+   d) Em 5 a 10 minutos, abra https://quiz.michelesalla.com.br/?p=1&utm_source=teste-claude numa aba anônima e responda
+      até a oferta. No Clarity, confira em "Gravações" (pode levar ~30 min para aparecer) que a visita entrou.
+
+3. PIXEL DO META NO PRODUTO DA HOTMART (para a campanha otimizar por Compra)
+   a) Hotmart > Produtos > PILATES EM CASA - COM MICHELE SALLA > Configurações (ou Ferramentas > Pixel de rastreamento) >
+      Facebook/Meta: pixel 991344998762063.
+   b) Marque os eventos que a Hotmart oferecer: visualização/início do checkout (InitiateCheckout) e compra aprovada
+      (Purchase). Se pedir token da API de conversões, pule e me avise (é outro passo).
+   c) Salve e me mostre a tela final (print), sem nenhum token.
+
+4. TESTE DE PONTA A PONTA (sem comprar)
+   a) Aba anônima, celular no DevTools (iPhone): https://quiz.michelesalla.com.br/?p=2&utm_source=teste-claude&utm_content=teste
+   b) Responda o quiz até o fim. Confira: análise segue sozinha, perfil aparece, oferta mostra R$ 37, 24 aulas, módulos 0 a 4,
+      4 bônus, garantia de 7 dias e 365 dias de acesso.
+   c) Clique em "Quero começar o meu pilates em casa": abre a Hotmart "PILATES EM CASA - COM MICHELE SALLA" com R$ 37 e o
+      link com sck=pilates-p2. Feche sem pagar.
+   d) No Meta Pixel Helper (ou Gerenciador de Eventos do pixel 991344998762063 > Testar eventos), veja PageView no quiz,
+      CliqueComprar no botão e InitiateCheckout na Hotmart.
+   e) Em https://painel.michelesalla.com.br/painel/pilates (aba Quiz Pilates, filtro "Todas as visitas"), veja a sua visita
+      de teste com as telas e as respostas. Me diga a hora: o Claude da nuvem apaga essa visita de teste.
+
+5. NO FIM
+   Atualize michele-salla/PASSAGEM_BASTAO.md (seção 8): hottok ligado, Clarity (com o código, que não é segredo), pixel na
+   Hotmart e o resultado do teste. Commit e push. Me entregue uma lista curta: OK / falhou (com a mensagem exata) / ficou para mim.
+```
+
 ## Se a Vercel aberta não for a do time "Ptk midias" (prompt de investigação)
 
 ```
