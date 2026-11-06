@@ -59,6 +59,7 @@ export async function PainelComportamento({ site, per, sp, checkout, visitasPadr
   visitasPadrao: number
 }) {
   const BASE = site.base
+  const GW = site.gateway ?? 'Greenn'
   let NB = site.blocos.length // sem nomes no cliente.config.ts: conta pelo bloco mais fundo visto
   const nomeBloco = (n: number) => (n >= 1 && n <= NB ? `${k2(n)} · ${site.blocos[n - 1] ?? `Bloco ${n}`}` : '—')
   const nomePagina = (slug: string) => site.paginas.find(([s]) => s === slug)?.[1] ?? slug
@@ -89,8 +90,8 @@ export async function PainelComportamento({ site, per, sp, checkout, visitasPadr
       acao: 'Leem o começo mas não chegam no preço: ver em "Bloco a bloco" onde mais saem e encurtar ou trocar esse bloco; testar um botão de comprar mais cedo.' },
     { k: 'comprar', nome: 'Clicam em comprar', qtd: compradoras.length, base: chegouOferta, ref: REF.comprar, onde: 'oferta',
       acao: 'Chegam no preço e não clicam: oferta, preço, parcelamento, garantia ou prova. Ver as dúvidas que mais abrem no FAQ (são as objeções) e o tempo de quem clicou × quem não clicou na oferta.' },
-    { k: 'pedido', nome: 'Viram pedido na Greenn', qtd: pedidosN, base: compradoras.length, ref: REF.pedido, onde: 'checkout', greenn: true,
-      acao: 'Clicam em comprar e não geram pedido: o checkout da Greenn (campos, velocidade, forma de pagamento, preço diferente do da página). Testar o checkout no celular.' },
+    { k: 'pedido', nome: `Viram pedido na ${GW}`, qtd: pedidosN, base: compradoras.length, ref: REF.pedido, onde: 'checkout', greenn: true,
+      acao: `Clicam em comprar e não geram pedido: o checkout da ${GW} (campos, velocidade, forma de pagamento, preço diferente do da página). Testar o checkout no celular.` },
     { k: 'venda', nome: 'Viram venda', qtd: vendasN, base: pedidosN, ref: REF.venda, onde: 'pagamento', greenn: true,
       acao: 'Geram pedido e não pagam: Pix não pago e cartão recusado. Chamar no WhatsApp pela lista Recuperar da aba do site.' },
   ].map((e) => ({ ...e, taxa: e.base > 0 ? e.qtd / e.base : null }))
@@ -112,6 +113,11 @@ export async function PainelComportamento({ site, per, sp, checkout, visitasPadr
     }
   })
   const maisSaida = [...linhas].sort((a, b) => b.saiu - a.saiu)[0]
+  // passagem de um bloco para o seguinte (quantos de quem viu o bloco viram o próximo)
+  const passa = (nb: number) => { const a = linhas[nb - 1], b = linhas[nb]; return a && b && a.viram ? b.viram / a.viram : null }
+  // tela do meio com a maior queda relativa (a capa e a oferta ficam de fora: o funil acima já mostra as duas)
+  const quedaMeio = linhas.filter((l) => l.nb >= 2 && l.nb < NB - 1 && l.viram >= MIN_BASE_ETAPA)
+    .map((l) => ({ nb: l.nb, t: passa(l.nb) as number })).filter((x) => x.t != null).sort((a, b) => a.t - b.t)[0]
   const maisTempo = [...linhas].sort((a, b) => (b.med ?? 0) - (a.med ?? 0))[0]
 
   // ── 3. cliques
@@ -163,10 +169,15 @@ export async function PainelComportamento({ site, per, sp, checkout, visitasPadr
       k, n: l.length, topo: l.filter((v) => v.bloco_max <= 1).length, tempo: mediana(l.map((v) => v.ativo_ms)), rol: mediana(l.map((v) => v.rolagem_max)),
       oferta: l.filter(viuOferta).length, comprar: l.filter(clicou).length, ate: mediana(l.filter(clicou).map((v) => v.comprar_ms as number)),
       carga: mediana(l.map((v) => v.carregou_ms).filter((x): x is number => x != null && x > 0)),
+      ped: undefined as number | undefined, ven: undefined as number | undefined,
     }))
   }
   const porAnuncio = grupo((v) => (v.utm_content ? decUtm(v.utm_content) : doAnuncio(v) ? 'anúncio sem nome' : 'sem anúncio (link direto)')).slice(0, 25)
-  const porPagina = grupo((v) => nomePagina(v.slug))
+  // por página (promessa): pedidos e vendas do gateway pela página de origem (sck/utm_source = slug)
+  const porPagina = grupo((v) => nomePagina(v.slug)).map((x) => {
+    const slug = site.paginas.find(([, r]) => r === x.k)?.[0] ?? x.k
+    return { ...x, ped: checkout.pedidos.filter((p) => p === slug).length, ven: checkout.vendas.filter((p) => p === slug).length }
+  })
   const porAparelho = grupo((v) => v.aparelho || '?')
   const porPosicao = grupo((v) => v.utm_medium || 'sem posicionamento').slice(0, 12)
   const ultimas = vs.slice(0, 30)
@@ -178,6 +189,7 @@ export async function PainelComportamento({ site, per, sp, checkout, visitasPadr
   if (n > 0 && n < MIN_VISITAS) decisoes.push({ tipo: 'wait', txt: `Amostra pequena: ${int(n)} visitas. Com menos de ${MIN_VISITAS} visitas (e de 30 cliques em comprar) a diferença entre blocos, anúncios e páginas pode ser sorte; olhe a tendência, sem trocar nada ainda.` })
   if (temGargalo && gargalo) decisoes.push({ tipo: 'no', txt: `Gargalo agora: ${gargalo.onde} (${gargalo.nome.toLowerCase()}: ${pct(gargalo.qtd, gargalo.base, 0)}, referência ${Math.round(gargalo.ref * 100)}%). ${gargalo.acao}` })
   else if (gargalo) decisoes.push({ tipo: 'ok', txt: 'Todas as etapas com volume estão na referência ou acima. O próximo ganho vem de mais tráfego bom (criativo) ou de testar a oferta.' })
+  if (quedaMeio && quedaMeio.t < 0.9) decisoes.push({ tipo: 'wait', txt: `Maior queda no meio: de ${nomeBloco(quedaMeio.nb)} para ${nomeBloco(quedaMeio.nb + 1)} só ${Math.round(quedaMeio.t * 100)}% seguem. Rever essa tela (texto, pergunta ou foto).` })
   if (n >= 30 && maisSaida.saiu) decisoes.push({ tipo: 'wait', txt: `Bloco onde mais gente para: ${nomeBloco(maisSaida.nb)} (${pct(maisSaida.saiu, n, 0)} das visitas saem ali sem clicar em comprar).` })
   if (cargas.length >= 20 && lentas / cargas.length > 0.25) decisoes.push({ tipo: 'no', txt: `${pct(lentas, cargas.length, 0)} das visitas esperaram mais de 3 s para a página carregar (mediana ${seg(mediana(cargas))}). Página lenta derruba gente no topo: comprimir as fotos do topo e tirar o que não é usado.` })
   if (duvidas.length && comFaq.length >= 10) decisoes.push({ tipo: 'n', txt: `Dúvida que mais abrem: "${duvidas[0][0].slice(10)}" (${pct(duvidas[0][1].vis, n, 1)} das visitas). Responder isso antes do preço (no texto ou na oferta) costuma ajudar.` })
@@ -203,7 +215,7 @@ export async function PainelComportamento({ site, per, sp, checkout, visitasPadr
       <Abas ativo={ap || 'tudo'} itens={[['tudo', 'Celular e computador', link({ ap: undefined })], ['celular', 'Só celular', link({ ap: 'celular' })], ['computador', 'Só computador', link({ ap: 'computador' })]]} />
       <ParaDecidir itens={decisoes.slice(0, 6)} />
 
-      <Secao titulo="Onde está o gargalo" sub="Da visita até a venda, etapa por etapa: quantos passam da etapa anterior e a referência de cada uma. A etapa mais abaixo da referência é onde mexer primeiro. As 2 últimas vêm da Greenn (pedido e venda pelo utm_source da página) e não seguem os filtros de anúncio e aparelho.">
+      <Secao titulo="Onde está o gargalo" sub={`Da visita até a venda, etapa por etapa: quantos passam da etapa anterior e a referência de cada uma. A etapa mais abaixo da referência é onde mexer primeiro. As 2 últimas vêm da ${GW} (pedido e venda pela página de origem) e não seguem os filtros de anúncio e aparelho.`}>
         {n ? (
           <div className="rounded-2xl" style={{ background: 'var(--pn-card)', border: '1px solid rgb(var(--pn-rgb) / .07)' }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', padding: '12px 14px', fontSize: 13.5 }}><strong>Visitas</strong><strong>{int(n)}</strong></div>
@@ -242,13 +254,14 @@ export async function PainelComportamento({ site, per, sp, checkout, visitasPadr
       <Secao titulo="Bloco a bloco" sub="Viram = o bloco passou pelo meio da tela. Saíram aqui = o último bloco na tela de quem saiu sem clicar em comprar. Tempo = com o bloco no meio da tela e a aba aberta (mediana de quem viu). Se quem clica em comprar fica bem mais tempo num bloco do que quem não clica, esse bloco convence; se todos passam rápido, ele pode sair ou encurtar.">
         {n ? (
           <Tabela min={980}>
-            <thead><tr><th style={thL}>Bloco</th><th style={th}>Saíram aqui</th><th style={th}>Tempo no bloco</th><th style={thL}>Viram</th><th style={th}>Média</th><th style={th}>Quem clicou comprar</th><th style={th}>Quem não clicou</th><th style={th}>Chegam em</th><th style={th}>Cliques</th></tr></thead>
+            <thead><tr><th style={thL}>Bloco</th><th style={th}>Saíram aqui</th><th style={th}>Tempo no bloco</th><th style={thL}>Viram</th><th style={th}>Passam p/ a próxima</th><th style={th}>Média</th><th style={th}>Quem clicou comprar</th><th style={th}>Quem não clicou</th><th style={th}>Chegam em</th><th style={th}>Cliques</th></tr></thead>
             <tbody>{linhas.map((l) => (
               <tr key={l.nb} style={l.nb === maisSaida.nb && l.saiu ? { background: 'rgb(220 60 60 / .06)' } : undefined}>
                 <td style={tdL}><strong>{nomeBloco(l.nb)}</strong></td>
                 <td style={{ ...td, fontWeight: l.saiu ? 700 : 400, color: l.nb === maisSaida.nb && l.saiu ? 'var(--pn-verm)' : undefined }}>{l.saiu ? `${pct(l.saiu, n, 0)} · ${int(l.saiu)}` : '—'}</td>
                 <td style={{ ...td, fontWeight: 700 }}>{tempo(l.med)}</td>
                 <td style={{ ...tdL, minWidth: 150 }}><div style={{ display: 'flex', gap: 8, alignItems: 'center' }}><div style={{ flex: 1 }}><Barra valor={l.viram / n} /></div><span style={{ fontSize: 12.5, whiteSpace: 'nowrap' }}>{pct(l.viram, n, 0)}</span></div></td>
+                <td style={{ ...td, color: quedaMeio?.nb === l.nb ? 'var(--pn-verm)' : undefined, fontWeight: quedaMeio?.nb === l.nb ? 700 : 400 }}>{l.nb < NB && passa(l.nb) != null ? `${Math.round((passa(l.nb) as number) * 100)}%` : '—'}</td>
                 <td style={td}>{tempo(l.med_media)}</td>
                 <td style={td}>{tempo(l.medC)}</td>
                 <td style={td}>{tempo(l.medN)}</td>
@@ -320,14 +333,14 @@ export async function PainelComportamento({ site, per, sp, checkout, visitasPadr
       </Secao>
 
       {([['Por anúncio', 'O nome do anúncio vem do link do Meta (utm_content). "Saem no topo" alto = o anúncio promete algo que o topo não entrega; anúncio com mais cliques em comprar merece mais verba.', porAnuncio, 'Anúncio'],
-        ['Por página', 'Mesmas medidas por versão da página.', porPagina, 'Página'],
+        ['Por página', `Mesmas medidas por versão da página (no quiz, por promessa), com pedidos e vendas da ${GW} de cada uma. Pedidos e vendas não seguem os filtros de anúncio e aparelho.`, porPagina, 'Página'],
         ['Por posicionamento', 'Reels, Stories, Feed… (utm_medium).', porPosicao, 'Posicionamento'],
         ['Por aparelho', 'Celular × computador.', porAparelho, 'Aparelho']] as const).map(([t, s, g, col]) => (
         <Secao key={t} titulo={t} sub={s}>
           {g.length ? (
             <Tabela min={860}>
-              <thead><tr><th style={thL}>{col}</th><th style={th}>Visitas</th><th style={th}>Clicam comprar</th><th style={th}>Saem no topo</th><th style={th}>Chegam na oferta</th><th style={th}>Tempo</th><th style={th}>Até clicar</th><th style={th}>Rolagem</th><th style={th}>Carrega</th></tr></thead>
-              <tbody>{g.map((x) => <tr key={x.k}><td style={tdL}>{x.k}</td><td style={td}>{int(x.n)}</td><td style={{ ...td, fontWeight: 700 }}>{x.comprar ? `${pct(x.comprar, x.n, 0)} · ${int(x.comprar)}` : '—'}</td><td style={{ ...td, color: x.n >= 10 && x.topo / x.n > 1 - REF.topo ? 'var(--pn-verm)' : undefined }}>{pct(x.topo, x.n, 0)}</td><td style={td}>{pct(x.oferta, x.n, 0)}</td><td style={td}>{tempo(x.tempo)}</td><td style={td}>{tempo(x.ate)}</td><td style={td}>{x.rol == null ? '—' : `${int(x.rol)}%`}</td><td style={td}>{seg(x.carga)}</td></tr>)}</tbody>
+              <thead><tr><th style={thL}>{col}</th><th style={th}>Visitas</th><th style={th}>Clicam comprar</th><th style={th}>Saem no topo</th><th style={th}>Chegam na oferta</th><th style={th}>Tempo</th><th style={th}>Até clicar</th><th style={th}>Rolagem</th><th style={th}>Carrega</th>{t === 'Por página' && <><th style={th}>Pedidos</th><th style={th}>Vendas</th><th style={th}>Venda / visita</th></>}</tr></thead>
+              <tbody>{g.map((x) => <tr key={x.k}><td style={tdL}>{x.k}</td><td style={td}>{int(x.n)}</td><td style={{ ...td, fontWeight: 700 }}>{x.comprar ? `${pct(x.comprar, x.n, 0)} · ${int(x.comprar)}` : '—'}</td><td style={{ ...td, color: x.n >= 10 && x.topo / x.n > 1 - REF.topo ? 'var(--pn-verm)' : undefined }}>{pct(x.topo, x.n, 0)}</td><td style={td}>{pct(x.oferta, x.n, 0)}</td><td style={td}>{tempo(x.tempo)}</td><td style={td}>{tempo(x.ate)}</td><td style={td}>{x.rol == null ? '—' : `${int(x.rol)}%`}</td><td style={td}>{seg(x.carga)}</td>{t === 'Por página' && <><td style={td}>{int(x.ped ?? 0)}</td><td style={{ ...td, fontWeight: 700 }}>{int(x.ven ?? 0)}</td><td style={td}>{x.ven ? pct(x.ven, x.n, 1) : '—'}</td></>}</tr>)}</tbody>
             </Tabela>
           ) : <Vazio>Sem visitas.</Vazio>}
         </Secao>

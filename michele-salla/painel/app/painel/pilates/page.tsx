@@ -1,4 +1,4 @@
-// ABA QUIZ PILATES: o mesmo painel de comportamento, para o quiz. Cada tela é um bloco (01 capa … 20 oferta) e cada
+// ABA QUIZ PILATES: o mesmo painel de comportamento, para o quiz. Cada tela é um bloco (01 capa com a idade … 19 oferta, desde 06/11) e cada
 // capa/promessa é uma página (pilates-p1 … pilates-p5), com abas para comparar as promessas. Pedido e venda pelo sck=pilates-pN.
 import { CLIENTE } from '@/cliente.config'
 import { compras, pedidos } from '@/lib/dados'

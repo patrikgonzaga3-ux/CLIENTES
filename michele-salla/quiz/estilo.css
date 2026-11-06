@@ -21,7 +21,7 @@ p{margin:0}
 .pede-idade{text-align:center;font:800 18px/1.25 Sora,sans-serif;color:var(--preto);margin-top:2px}
 .idades{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .idade{display:flex;flex-direction:column;padding:0;border:0;border-radius:16px;overflow:hidden;cursor:pointer;background:var(--grad);box-shadow:0 8px 20px rgba(158,4,124,.16)}
-.idade img{width:100%;aspect-ratio:1/1;object-fit:cover;object-position:50% 55%}
+.idade img{width:100%;aspect-ratio:1/1;object-fit:cover;object-position:50% 55%;pointer-events:none} /* o toque conta no botão (rastreio da resposta) */
 /* Capa com a idade: topo mais baixo para os 4 cartões caberem na primeira tela do celular. */
 .capa.com-idade{gap:12px!important}
 .capa.com-idade .logo{width:96px!important}

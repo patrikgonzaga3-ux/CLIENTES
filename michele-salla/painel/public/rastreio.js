@@ -105,6 +105,8 @@
     if (!el.closest) return '?'
     var tab = el.closest('.elementor-tab-title,summary,[aria-expanded]')
     if (tab && !ehCompra(tab.closest('a')) && (tab.matches('.elementor-tab-title,summary') || (tab.textContent || '').indexOf('?') >= 0)) return 'pergunta: ' + curto(tab.textContent)
+    var resp = el.closest('[data-rotulo]') // resposta do quiz (a foto do cartão de idade fica dentro do botão)
+    if (resp && !ehCompra(resp)) return 'botão: ' + curto(resp.getAttribute('data-rotulo'))
     var a = el.closest('a,button,img,[role=button]')
     if (!a) { var t = el.closest('h1,h2,h3,h4,p,li,span,div'); return 'toque fora de botão: ' + curto(t && t.textContent) }
     if (ehCompra(a)) return 'comprar: ' + rotuloCompra(a)

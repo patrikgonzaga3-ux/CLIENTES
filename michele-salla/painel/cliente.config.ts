@@ -22,6 +22,8 @@ export type SiteCfg = {
   blocosOferta: number[]
   /** rótulo de cada botão de compra (data-cta do botão); opcional */
   botoes: Record<string, string>
+  /** onde a venda acontece (nome no funil do painel); padrão Greenn */
+  gateway?: string
 }
 
 export const CLIENTE = {
@@ -36,7 +38,7 @@ export const CLIENTE = {
   // Patrik (23/10): contam todos os produtos da Greenn e da Hotmart; o painel mostra os dois separados.
   produtos: [] as { id: string; nome: string; tipo: 'principal' | 'bump' | 'upsell' | 'assinatura' }[],
   /** preço do produto principal (base do funil 3x) */
-  ticket: 47, // Desafio 7 em 7 (Greenn, oferta E1YMM7 desde 27/10; antes 1qsr9k, R$ 67)
+  ticket: 37, // 06/11: Pilates em Casa (Hotmart, R$ 37), o produto em teste; o Desafio 7 em 7 (R$ 47) está parado. A aba Ajustes, se preenchida, manda.
   /** metas do funil 3x em fração do ticket: clique 4%, initiate checkout 23%, compra 45% */
   funil3x: { clique: 0.04, ic: 0.23, compra: 0.45 },
   /** meta de lucro do mês em R$ (0 = sem meta) */
@@ -93,6 +95,7 @@ export const CLIENTE = {
         'Analisando 2', 'Resultado (perfil)', 'Oferta'],
       blocosOferta: [19],
       botoes: {},
+      gateway: 'Hotmart',
     },
   ] as SiteCfg[],
 }
