@@ -362,6 +362,26 @@ Os M da pasta "MICHELE LOW" são esses mesmos vídeos. Mapa conferido pelos quad
     /desafio/ = Desafio, /revisao/ = relatório; corrigida a regra das rotas com barra no fim (vercel.json). Pixel carrega no
     endereço oficial. Hotmart: webhook "Painel Michele" ativo (produto PILATES EM CASA, 8 eventos); falta o Patrik colar o
     HOTMART_HOTTOK no projeto da Vercel **painel-michele-salla** (time ptk-midias) para o painel aceitar as vendas.
+  - **06/11 · Rodada 2 do Claude do PC (fim da tarde): quiz do pilates pronto para anúncio.**
+    - Login certo da Vercel "Ptk midias" = patrikgonzaga3@gmail.com (GitHub patrikgonzaga3-ux); projetos `clientes` (prévia e
+      quiz) e `painel-michele-salla`. Domínio: CNAME `quiz` → `9b9abb0e696b9794.vercel-dns-017.com.` no cPanel da TurboCloud.
+    - **Hottok ligado:** HOTMART_HOTTOK (Production) colado pelo Patrik + Redeploy (Ready 19:48 UTC). "Enviar teste" da
+      Hotmart chegou às **16:51:23 de Brasília** (19:51:23 UTC): 7 avisos da transação falsa **HP16015479281022**
+      ("Produto test postback2", valor 1500, pedido de 2017) → **marcar como teste no painel**. Fontes: gateway:hotmart OK.
+      O teste da Hotmart não manda abandono de carrinho (confirmar no primeiro abandono real).
+    - **Clarity:** projeto "Michele Salla - Quiz", código **z9ki12tcwt** (não é segredo), na ficha da Michele no Painel PTK
+      (campo Clarity; site michelesalla.com.br). A rota `agenciaptk.com.br/api/ptk/site` guarda 5 min: só passou a devolver o
+      código uns 5 min depois de salvar. No quiz: tag `clarity.ms/tag/z9ki12tcwt` carrega e envia (`t.clarity.ms/collect`).
+    - **Pixel na Hotmart:** produto PILATES EM CASA (id 7030912) já tinha o pixel 991344998762063 (web configurado + token da
+      API configurado), eventos Vendas realizadas, Visitas na página de pagamento e Visitas na página de produto; todos os
+      métodos; separa pagamento imediato e não imediato; valor da transação. Nada mudado.
+    - **Teste de ponta a ponta (sem comprar), 17:21 de Brasília:** `?p=2&utm_source=teste-claude&utm_content=teste` (computador;
+      a janela não encolheu para celular). Quiz até o fim, perfil Diva Sem Impacto, oferta v2 com R$ 37, 24 aulas, 4 passos
+      (Fundamentos, Mat Essencial, Acessórios, Funcional), 4 bônus, garantia de 7 dias e 365 dias. Pixel no quiz: PageView e
+      CliqueComprar (37 BRL). Botão abre a Hotmart "PILATES EM CASA - COM MICHELE SALLA", R$ 37,00, com `sck=pilates-p2` e os
+      utm; o pixel 991344998762063 carrega no checkout e mandou 2 eventos (nomes a conferir em Testar eventos). Painel: visita
+      **b051ca37-dd19-4efd-a020-fc88b1f572ca** (pilates-p2, 20:21:11 UTC, 19 blocos, clicou comprar no botão 1) → **apagar (teste)**.
+    - A página final v2 não mostra "Módulo 0 · Boas-vindas" nem a palavra "Módulo" (mostra os 4 passos e os itens do cartão).
   - **06/11 · Michele no Painel PTK** (agenciaptk.com.br/ptk, pedido do Patrik "do lado da Libia e da Laura"): ficha
     `clientes/michele-salla` no Supabase da Laura (painel_gestor), tipo ptk, conta 1619523595475963, domínio michelesalla.com.br,
     ticket 37, padrão de campanha do Patrik. Faltam na ficha: WhatsApp/grupo do relatório, **código do Clarity** e o produto
