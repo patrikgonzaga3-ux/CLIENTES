@@ -66,7 +66,7 @@ const TELAS = [
     op: [['corrida', 'Corrida, mal sobra tempo para mim', 'Trabalho, casa, filhos…'], ['todos', 'Cuido de todo mundo, menos de mim', 'Todo mundo virou prioridade'],
          ['equilibrada', 'Equilibrada, mas sem sobra', 'Consigo me organizar'], ['tempo', 'Tenho tempo para me dedicar', 'Posso investir em mim']] },
   { id: 'tempo-dia', tipo: 'uma', titulo: 'Quanto tempo por dia você consegue para você?', sub: 'Até o menor tempo serve para começar.',
-    op: [['5-10', '5 a 10 minutos'], ['10-15', '10 a 15 minutos'], ['15-30', '15 a 30 minutos'], ['30+', 'Mais de 30 minutos']] },
+    op: [['-20', 'Menos de 20 minutos'], ['20-30', '20 a 30 minutos'], ['30-40', '30 a 40 minutos'], ['40+', 'Mais de 40 minutos']] },
   { id: 'espaco', tipo: 'uma', titulo: 'Onde você vai praticar?', sub: 'Para começar, basta um tapete. Os acessórios são opcionais.',
     op: [['sala', 'Na sala ou no quarto, tenho um cantinho'], ['tapete', 'Já tenho um tapete'], ['pouco', 'Tenho pouco espaço'], ['nao-sei', 'Ainda não sei']] },
   { id: 'fase', tipo: 'uma', titulo: 'Você está em alguma destas fases?', sub: 'O corpo muda em cada fase, e o treino também.',
@@ -92,31 +92,31 @@ const PERFIS = {
     nome: 'A Diva da Nova Fase',
     retrato: 'O seu corpo mudou: gestação, os anos ou a menopausa. O que funcionava antes parou de funcionar.',
     trava: 'Não é falta de esforço. Agora o seu corpo pede outro cuidado: fortalecer o centro do corpo, de dentro para fora, com postura e respiração, sem impacto.',
-    comeca: 'Você começa pelos fundamentos do método (respiração, postura e controle do movimento) e segue para as aulas de fortalecimento e mobilidade. Se teve bebê, tem as aulas de pós-parto.',
+    comeca: 'Você começa pelos Fundamentos do Pilates Mat (respiração, postura e controle do movimento) e segue para o Pilates Funcional & Mobilidade. Se teve bebê, tem o bônus Pilates no Pós-Parto.',
   },
   'sem-impacto': {
     nome: 'A Diva Sem Impacto',
     retrato: 'Pular, correr e treino puxado não combinam com o seu corpo hoje: dói, incomoda ou você simplesmente não gosta.',
     trava: 'Você não precisa sofrer para cuidar do corpo. O pilates trabalha força, postura e o centro do corpo sem impacto.',
-    comeca: 'Você começa pelos fundamentos e pelas aulas com o peso do próprio corpo, sem impacto, para ganhar força, mobilidade e flexibilidade.',
+    comeca: 'Você começa pelos Fundamentos do Pilates Mat e pelo Mat Pilates Essencial, sem acessórios e sem impacto, para ganhar força, mobilidade e flexibilidade.',
   },
   'postura': {
     nome: 'A Diva da Postura',
     retrato: 'Costas cansadas, ombros caídos e a sensação de corpo pesado no fim do dia.',
     trava: 'Quando a postura sai do lugar, a barriga aparece mais e o corpo cansa mais. O primeiro passo é devolver o alinhamento.',
-    comeca: 'Você começa pelos fundamentos (respiração e postura) e pelas aulas para a coluna: dor lombar, cervical e mobilidade.',
+    comeca: 'Você começa pelos Fundamentos do Pilates Mat (respiração e postura) e pelos bônus para dor: dor lombar e ciático, hérnia de disco e escoliose.',
   },
   'recomeco': {
     nome: 'A Diva que Recomeça Toda Segunda',
     retrato: 'Você começa com tudo, a semana aperta, um dia sem treino vira “já estraguei” e a segunda-feira vira a data do recomeço.',
-    trava: 'O que te tira do caminho não é preguiça, é o “tudo ou nada”. Um treino curto que você faz vale mais que o treino perfeito que você não faz.',
-    comeca: 'Você começa pelos fundamentos e segue o passo a passo, do básico para frente, um dia de cada vez e sem se sentir perdida.',
+    trava: 'O que te tira do caminho não é preguiça, é o “tudo ou nada”. A aula que você faz vale mais que o treino perfeito que você não faz.',
+    comeca: 'Você começa pelas Boas-vindas e pelos Fundamentos do Pilates Mat e segue o passo a passo, módulo por módulo, sem se sentir perdida.',
   },
   'iniciante': {
     nome: 'A Diva que Vai Começar Agora',
     retrato: 'Você quer cuidar do corpo em casa, no seu ritmo, sem estúdio e sem pressão.',
     trava: 'Começar sem saber o que fazer é o que faz muita gente desistir. Você precisa de um caminho simples, do básico para frente.',
-    comeca: 'Você começa pelos fundamentos do método: respiração, postura, controle do movimento e consciência corporal, mesmo que nunca tenha praticado.',
+    comeca: 'Você começa pelas Boas-vindas e pelos Fundamentos do Pilates Mat: respiração, postura, controle do movimento e consciência corporal, mesmo que nunca tenha praticado.',
   },
 }
 
@@ -131,9 +131,9 @@ function perfilDe(r) {
 
 const MEDO = {
   movimentos: 'o curso começa pelos fundamentos e te guia passo a passo, mesmo que você nunca tenha praticado. Ninguém começa no nível avançado.',
-  dor: 'pilates é sem impacto e o curso tem aulas para dor lombar, cervical, ciático, hérnia de disco e escoliose. Se você tem dor, hérnia ou teve bebê há pouco tempo, converse com o seu médico antes de começar.',
-  tempo: 'você faz em casa, sem deslocamento e sem horário fixo, no seu ritmo.',
-  dinheiro: 'você tem garantia mínima de 7 dias pela Hotmart: se não fizer sentido para você, pede o reembolso pela própria plataforma.',
+  dor: 'pilates é sem impacto e você recebe de bônus aulas para dor lombar e ciático, hérnia de disco e escoliose. Se você tem dor, hérnia ou teve bebê há pouco tempo, converse com o seu médico antes de começar.',
+  tempo: 'aulas de 20 a 40 minutos, em casa, sem deslocamento e sem horário fixo, com 365 dias de acesso para fazer no seu ritmo.',
+  dinheiro: 'você tem 7 dias de garantia pela Hotmart: se não fizer sentido para você, pede o reembolso pela própria plataforma.',
   desistir: 'um caminho passo a passo, do básico para frente, para você não se sentir perdida e não precisar recomeçar do zero.',
 }
 
@@ -148,7 +148,8 @@ const EXEMPLO = {
 
 const QUIZ = {
   slug: 'pilates-p', // painel: pilates-p1 … pilates-p5 (aba Quiz Pilates)
-  logo: null,
+  assinatura: 'Por Michele Salla, educadora física e especialista em pilates desde 2005',
+  logo: { src: FOTO + 'logo-pilates-em-casa.webp', alt: 'Pilates em Casa', style: 'width:170px;border-radius:18px' },
   capa: { src: FOTO + 'michele-pilates-estudio.webp', alt: 'Michele Salla fazendo pilates no estúdio', w: 900, h: 1200 },
   bio: [
     'Formada em Educação Física e especialista em Pilates. Desde 2005 eu estudo, ensino e vivo esse método: clássico, contemporâneo, com acessórios, para hérnia de disco, gestantes, pós-parto, terceira idade e dores na coluna.',
@@ -159,7 +160,7 @@ const QUIZ = {
   insight: {
     ciclo: ['Rotina corrida. Cansaço.', 'Costas pesadas no fim do dia.', 'Treino com impacto que dói ou que você larga.', 'E o corpo vai ficando travado.'],
     destaque: 'Isso não é falta de esforço.',
-    texto: 'Com um treino sem impacto, feito em casa e no seu ritmo, poucos minutos por dia já são um começo: postura, respiração e o centro do corpo trabalhando a seu favor.',
+    texto: 'Com um treino sem impacto, feito em casa e no seu ritmo, você começa a cuidar do que importa: postura, respiração e o centro do corpo trabalhando a seu favor.',
   },
   resultado: {
     mente: 'E cuidar dos pensamentos e hábitos que fazem você desistir de si mesma.',
@@ -170,19 +171,19 @@ const QUIZ = {
     produto: 'Pilates em Casa', valor: '37',
     checkout: 'https://pay.hotmart.com/K103974189L?off=6lnthlfw', // Hotmart "PILATES EM CASA - COM MICHELE SALLA", R$ 37 (Patrik, 06/11; antes 1exyl0t5)
     titulo: 'O seu caminho começa no <mark>Pilates em Casa</mark>',
-    intro: 'Não é só uma sequência de aulas gravadas: é a minha jornada inteira no pilates, organizada para te guiar passo a passo, mesmo que você nunca tenha praticado.',
+    intro: '24 aulas de 20 a 40 minutos, para fazer em casa, com 365 dias de acesso. Não é só uma sequência de aulas gravadas: é a minha jornada inteira no pilates, organizada para te guiar passo a passo, mesmo que você nunca tenha praticado.',
     modulos: [
-      ['Fundamentos do método', 'Respiração, postura, controle do movimento e consciência corporal.'],
-      ['Aulas clássicas', 'Inspiradas na essência criada por Joseph Pilates.'],
-      ['Peso do próprio corpo', 'Força, mobilidade, flexibilidade, alongamento e condicionamento.'],
-      ['Aulas com acessórios (opcional)', 'Bola, flex ring, theraband e overball, no conforto da sua casa.'],
-      ['Fases e necessidades do corpo', 'Dor lombar, cervical, ciático, hérnia de disco, escoliose, pós-parto, mobilidade e fortalecimento.'],
+      ['Módulo 0 · Boas-vindas e Orientações Iniciais', 'Como o curso funciona e por onde começar.'],
+      ['Módulo 1 · Fundamentos do Pilates Mat', 'Respiração, postura, controle do movimento e consciência corporal.'],
+      ['Módulo 2 · Mat Pilates Essencial (sem acessórios)', 'Aulas clássicas, inspiradas na essência criada por Joseph Pilates, com o peso do próprio corpo.'],
+      ['Módulo 3 · Pilates com Acessórios', 'Bola, flex ring, theraband e overball, no conforto da sua casa.'],
+      ['Módulo 4 · Pilates Funcional & Mobilidade', 'Força, mobilidade, flexibilidade, alongamento e condicionamento.'],
     ],
-    bonus: [], // a Michele não informou bônus (06/11)
+    bonus: ['Pilates no Pós-Parto', 'Pilates para Dor Lombar e Ciático', 'Aula para quem tem Hérnia de Disco', 'Aula para quem tem Escoliose'], // módulos 5 e 6 (Patrik, 06/11)
     fotos: [['aula-em-grupo', 'Aula de pilates em grupo', 900, 675], ['estudio', 'Estúdio da Michele', 900, 1200]].map(([n, alt, w, h]) => ({ src: FOTO + n + '.webp', alt, w, h })),
     parcela: 'pagamento único, pela Hotmart',
     botao: 'Quero começar o meu pilates em casa',
-    selos: 'Compra segura pela Hotmart · Garantia mínima de 7 dias · Pagamento único',
+    selos: 'Compra segura pela Hotmart · Garantia de 7 dias · 365 dias de acesso',
     rodape: 'O Pilates em Casa não substitui avaliação médica ou fisioterapêutica. Se você tem dor, hérnia, teve bebê há pouco tempo ou tem outra condição de saúde, converse com o seu médico antes de começar. Os resultados variam de pessoa para pessoa. Este site não é afiliado ao Facebook.',
   },
 }

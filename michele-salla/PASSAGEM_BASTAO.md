@@ -348,6 +348,11 @@ Os M da pasta "MICHELE LOW" são esses mesmos vídeos. Mapa conferido pelos quad
     `window.plBloco` (chama `window.plTique()` antes e depois da troca). Site `quiz` no `cliente.config.ts` (domínios: michelesalla.com.br,
     clientes-phi-six.vercel.app, painel.michelesalla.com.br). A API aceita vários sites no mesmo domínio pelo começo do slug.
     Telas abertas com `?tela=` (painel de revisão) não rastreiam. Se o quiz mudar de endereço, pôr o domínio em `outrosDominios`.
+  - **06/11 · Dados do curso (Patrik):** 24 aulas de 20 a 40 min, 365 dias de acesso, garantia 7 dias, módulos 0–4 (Boas-vindas,
+    Fundamentos do Pilates Mat, Mat Pilates Essencial sem acessórios, Pilates com Acessórios, Funcional & Mobilidade) e bônus
+    (módulos 5 e 6: Pós-Parto; Dor Lombar e Ciático; Hérnia de Disco; Escoliose). Logo em `quiz-pilates/img/logo-pilates-em-casa.webp`.
+    Telas "Analisando/Montando" agora seguem sozinhas em ~2,6 s também pelo relatório (o print do Patrik estava parado porque o
+    relatório abre com `?tela=`) e o botão fica logo abaixo. Página leve: ~141 KB, abre em ~1,6 s (medido 06/11).
   - **06/11 · Revisão final do quiz do pilates:** 5 testes = 5 promessas (capas p1–p5), 1 conjunto cada. Entrou o aviso de
     saúde no rodapé da oferta (pilates e Desafio). Lista do que pedir à Michele no relatório (seção 5): aulas/minutos/acesso,
     como acessa e se é pagamento único, nomes dos módulos, bônus, garantia, depoimentos, autorização de imagem das alunas,

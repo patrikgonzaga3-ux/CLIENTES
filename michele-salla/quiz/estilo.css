@@ -37,12 +37,12 @@ p{margin:0}
 .aviso{font-size:12px;color:var(--texto);text-align:center}
 .ciclo{display:grid;gap:8px}
 .ciclo p{background:var(--branco);border-left:4px solid var(--roxo);border-radius:10px;padding:10px 12px;font-weight:600}
-.carregando{text-align:center;align-items:center;justify-content:center;flex:1}
+.carregando{text-align:center;align-items:center;justify-content:center;padding-top:6vh}
 .roda{width:72px;height:72px;border-radius:50%;border:7px solid var(--rosa-2);border-top-color:var(--roxo);margin:24px auto;animation:gira 1s linear infinite}
 @keyframes gira{to{transform:rotate(360deg)}}
 .linhas{display:grid;gap:8px;text-align:left}
 .linhas p{background:var(--branco);border-radius:10px;padding:10px 12px;animation:aparece .4s ease both}
-.linhas p:nth-child(2){animation-delay:1s}.linhas p:nth-child(3){animation-delay:2s}
+.linhas p:nth-child(2){animation-delay:.7s}.linhas p:nth-child(3){animation-delay:1.4s}
 @keyframes aparece{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
 .linhas p::before{content:"✓ ";color:var(--verde);font-weight:800}
 .perfil{background:var(--grad);color:#fff;border-radius:22px;padding:22px 18px;display:grid;gap:10px}

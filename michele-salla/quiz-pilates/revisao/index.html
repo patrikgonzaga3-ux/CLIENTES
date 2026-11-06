@@ -137,7 +137,7 @@ footer{color:var(--suave);font-size:13px}
 
 <section class="sec" id="telas">
   <header><span class="rot">3 · O quiz tela a tela</span><h2>Da tela 2 à tela 18</h2>
-  <p class="sub">Role para o lado. Toque no nome de uma tela para abrir no quiz. As telas "Analisando…" seguem sozinhas em cerca de 3,5 segundos.</p></header>
+  <p class="sub">Role para o lado. Toque no nome de uma tela para abrir no quiz. As telas "Analisando…" e "Montando…" seguem sozinhas em cerca de 2,5 segundos (o botão também funciona).</p></header>
   <div class="faixa" id="faixa-telas"></div>
 </section>
 
@@ -156,20 +156,17 @@ footer{color:var(--suave);font-size:13px}
 
 <section class="sec" id="oferta">
   <header><span class="rot">5 · A página final (tela 20)</span><h2>Uma oferta só: o Pilates em Casa por R$ 37</h2>
-  <p class="sub">O nome do perfil aparece no topo e o medo que ela marcou ganha uma resposta. Os módulos saíram do texto “Minha história” da Michele.</p></header>
+  <p class="sub">O nome do perfil aparece no topo e o medo que ela marcou ganha uma resposta. Módulos, bônus, aulas, acesso e garantia passados pela Michele em 06/11.</p></header>
   <div class="duas">
     <div class="faixa" id="faixa-oferta" style="padding:0"></div>
     <div class="caixa">
-      <h3>O que ainda falta (da Hotmart)</h3>
+      <h3>O que ainda falta</h3>
       <ul class="checks pend">
-        <li><span>Quantas aulas, quantos minutos cada e por quanto tempo fica o acesso (hoje o quiz não cita números, para não inventar).</span></li>
-        <li><span>Como a aluna acessa (área de membros da Hotmart? app?) e se é pagamento único, não assinatura.</span></li>
-        <li><span>Confirmar se os nomes dos 5 blocos da oferta batem com os módulos da Hotmart (montei pelo texto dela).</span></li>
-        <li><span>Bônus, se tiver. A garantia está como “mínima de 7 dias”: se na Hotmart for maior, me avise.</span></li>
+        <li><span>Como a aluna acessa (área de membros da Hotmart? app?).</span></li>
         <li><span>Prints de depoimentos de alunas do pilates (texto ou WhatsApp, com autorização).</span></li>
         <li><span>Confirmar que as alunas das fotos autorizaram o uso da imagem em anúncio e página.</span></li>
         <li><span>Revisar como especialista o “O que está te travando” de cada perfil (ex.: “quando a postura sai do lugar, a barriga aparece mais”).</span></li>
-        <li><span>Se existe logo ou marca do “Pilates em Casa” (hoje o quiz usa só o nome).</span></li>
+        <li><span>Já está no quiz (06/11): 24 aulas de 20 a 40 minutos, 365 dias de acesso, 7 dias de garantia, módulos 0 a 4, os 4 bônus e a logo.</span></li>
       </ul>
     </div>
   </div>
@@ -249,15 +246,15 @@ const TELAS = [
   ['impacto', 'E os exercícios de impacto?', 'Dor e escapes levam aos perfis Sem Impacto e Nova Fase.'],
   ['prova', 'Quem já pratica comigo', 'Fotos de alunas do pilates (em amarelo).'],
   ['rotina', 'Como é a sua rotina hoje?', 'Traz o “todo mundo virou prioridade”.'],
-  ['tempo-dia', 'Quanto tempo por dia você consegue?', 'Prepara os minutos por aula.'],
+  ['tempo-dia', 'Quanto tempo por dia você consegue?', 'As aulas têm de 20 a 40 minutos.'],
   ['espaco', 'Onde você vai praticar?', 'Depende do produto (em amarelo).'],
   ['fase', 'Você está em alguma destas fases?', 'Pós-parto e menopausa levam ao perfil Nova Fase.'],
   ['insight', 'Talvez você se reconheça nisso', 'Pausa de identificação.'],
-  ['carregando-1', 'Analisando suas respostas…', 'Segue sozinha em ~3,5 s.'],
+  ['carregando-1', 'Analisando suas respostas…', 'Segue sozinha em ~2,5 s.'],
   ['recomecos', 'Quantas vezes você já começou e parou?', 'Leva ao perfil Recomeça.'],
   ['medo', 'Qual é o seu maior medo agora?', 'A resposta volta na oferta.'],
   ['sonho', 'O que você gostaria de sentir?', 'Faz ela imaginar o resultado.'],
-  ['carregando-2', 'Montando o seu plano de pilates…', 'Segue sozinha em ~3,5 s.'],
+  ['carregando-2', 'Montando o seu plano de pilates…', 'Segue sozinha em ~2,5 s.'],
 ]
 const PERFIS = [['nova-fase', 'A Diva da Nova Fase'], ['sem-impacto', 'A Diva Sem Impacto'], ['postura', 'A Diva da Postura'], ['recomeco', 'A Diva que Recomeça Toda Segunda'], ['iniciante', 'A Diva que Vai Começar Agora']]
 const cel = (img, n, titulo, nota, link) => `<figure class="cel" style="margin:0"><a class="tela longa" href="${link}" aria-label="Abrir ${titulo} no quiz"><img src="img/${img}.webp" alt="Print: ${titulo}" loading="lazy" width="390" height="844"></a>

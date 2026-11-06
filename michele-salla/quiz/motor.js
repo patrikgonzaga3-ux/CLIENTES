@@ -64,14 +64,14 @@ function desenha() {
   if (t.tipo === 'capa') {
     const p = PROMESSAS[P]
     h += `<section class="capa" style="display:grid;gap:16px">
-      ${QUIZ.logo ? `<img class="logo" src="${QUIZ.logo.src}" alt="${esc(QUIZ.logo.alt)}">` : ''}
+      ${QUIZ.logo ? `<img class="logo" src="${QUIZ.logo.src}" alt="${esc(QUIZ.logo.alt)}"${QUIZ.logo.style ? ` style="${QUIZ.logo.style}"` : ''}>` : ''}
       <span class="etiqueta">${esc(p.etiqueta)}</span>
       <h1>${pend(p.titulo)}</h1>
       <p class="sub">${txt(p.sub)}</p>
       <button class="botao" onclick="vai()">${esc(p.botao)} →</button>
       <div class="foto-capa">${img(QUIZ.capa)}</div>
       ${QUIZ.capa.pendencia ? `<p class="miudo"><span class="pend">${esc(QUIZ.capa.pendencia)}</span></p>` : ''}
-      <p class="miudo">Por Michele Salla, educadora física</p></section>`
+      <p class="miudo">${esc(QUIZ.assinatura || "Por Michele Salla, educadora física")}</p></section>`
   } else if (t.tipo === 'uma' || t.tipo === 'varias') {
     const marc = t.tipo === 'varias' ? (resp[t.id] || []) : [resp[t.id]]
     h += `<section class="pergunta"><h2>${txt(t.titulo)}</h2><p class="sub">${txt(t.sub || '')}</p></section>
@@ -94,9 +94,10 @@ function desenha() {
       <button class="botao" onclick="vai()">Faz sentido, continuar →</button>`
   } else if (t.tipo === 'carregando') {
     h += `<section class="carregando" style="display:flex;flex-direction:column;gap:10px"><div class="roda" aria-hidden="true"></div><h2 style="font-size:22px">${txt(t.titulo)}</h2>
-      <div class="linhas">${t.linhas.map(l => `<p>${txt(l)}</p>`).join('')}</div></section>
-      <button class="botao" onclick="vai()">Ver o próximo passo →</button>`
-    if (!revisao && !voltando) { const aqui = i; setTimeout(() => { if (i === aqui) vai() }, 3600) }
+      <div class="linhas">${t.linhas.map(l => `<p>${txt(l)}</p>`).join('')}</div>
+      <button class="botao" onclick="vai()" style="margin-top:8px">Ver o próximo passo →</button></section>`
+    // Segue sozinha em ~2,6 s (também quando aberta pelo relatório). Quem volta para esta tela não é empurrada.
+    if (!voltando && !q.get('parado')) { const aqui = i; setTimeout(() => { if (i === aqui) vai() }, 2600) }
   } else if (t.tipo === 'resultado') {
     const pf = PERFIS[perfilAtual()], R = QUIZ.resultado
     h += `<section class="perfil"><span class="rot">O seu perfil</span><h2>${esc(pf.nome)}</h2><p>${txt(pf.retrato)}</p></section>
