@@ -48,8 +48,7 @@ const PROMESSAS = {
 
 const TELAS = [
   { id: 'capa', tipo: 'capa' },
-  { id: 'idade', tipo: 'uma', cols: 2, titulo: 'Qual a sua faixa de idade?', sub: 'Cada fase da vida pede um cuidado diferente com o corpo.',
-    op: [['-35', 'Menos de 35'], ['35-44', '35 a 44 anos'], ['45-54', '45 a 54 anos'], ['55+', '55 ou mais']] },
+  // A idade fica na própria capa (QUIZ.idadeNaCapa, 06/11): o primeiro clique já é a resposta.
   { id: 'michele', tipo: 'michele' },
   { id: 'objetivo', tipo: 'uma', titulo: 'O que você mais quer com o pilates?', sub: 'É a resposta que mais pesa no seu plano.',
     op: [['barriga', 'Trabalhar a barriga e a cintura'], ['postura', 'Melhorar a postura', 'E aliviar o incômodo nas costas'], ['leveza', 'Me sentir mais leve e flexível'],
@@ -150,7 +149,16 @@ const QUIZ = {
   slug: 'pilates-p', // painel: pilates-p1 … pilates-p5 (aba Quiz Pilates)
   assinatura: 'Por Michele Salla, educadora física e especialista em pilates desde 2005',
   logo: { src: FOTO + 'logo-pilates-em-casa.webp', alt: 'Pilates em Casa', style: 'width:170px;border-radius:18px' },
-  capa: { src: FOTO + 'michele-pilates-estudio.webp', alt: 'Michele Salla fazendo pilates no estúdio', w: 900, h: 1200 },
+  capa: { src: FOTO + 'michele-pilates-estudio.webp', alt: 'Michele Salla fazendo pilates no estúdio', w: 900, h: 1200 }, // não aparece com idadeNaCapa
+  // Capa no padrão dos quizzes de pilates 40+ (Patrik, 06/11): promessa + "escolha a sua idade" com 4 fotos.
+  // Fotos ilustrativas geradas no Gravyx (não são a Michele nem alunas): mulheres de corpo comum, em casa, alongamento fácil.
+  idadeNaCapa: {
+    pergunta: 'Escolha a sua idade para começar:',
+    op: [['35-44', '35 a 44', 'idade-35-44', 'Mulher de 35 a 44 anos fazendo pilates em casa'], ['45-54', '45 a 54', 'idade-45-54', 'Mulher de 45 a 54 anos fazendo pilates em casa'],
+         ['55-64', '55 a 64', 'idade-55-64', 'Mulher de 55 a 64 anos fazendo pilates em casa'], ['65+', '65 ou mais', 'idade-65', 'Mulher de 65 anos ou mais fazendo pilates em casa']]
+      .map(([id, rot, n, alt]) => [id, rot, { src: FOTO + n + '.webp', alt, w: 480, h: 643 }]),
+    outra: ['-35', 'Tenho menos de 35 anos'],
+  },
   bio: [
     'Formada em Educação Física e especialista em Pilates. Desde 2005 eu estudo, ensino e vivo esse método: clássico, contemporâneo, com acessórios, para hérnia de disco, gestantes, pós-parto, terceira idade e dores na coluna.',
     'Comecei com um estúdio pequeno, ao lado do meu marido. Na pandemia, meus alunos não podiam mais ir ao estúdio, e eu transformei tudo o que eu sabia em pilates possível e seguro dentro de casa. Assim nasceu o Pilates em Casa.',
@@ -184,6 +192,62 @@ const QUIZ = {
     parcela: 'pagamento único, pela Hotmart',
     botao: 'Quero começar o meu pilates em casa',
     selos: 'Compra segura pela Hotmart · Garantia de 7 dias · 365 dias de acesso',
+    // Página final no modelo do quiz da Laura (Patrik, 06/11: "olha a nossa que vendeu mais de 3 mil"). Só fatos do curso
+    // (texto da Michele e do Patrik); as contas por aula e por dia são 37 ÷ 24 e 37 ÷ 365.
+    v2: {
+      titulo: 'Seu plano de pilates em casa está pronto.',
+      marca: 'Comece hoje, no seu ritmo.',
+      botao: 'Quero começar hoje',
+      sub: 'Com base nas suas respostas, você recebe hoje 24 aulas de pilates de 20 a 40 minutos para fazer em casa, do básico para frente, mesmo que nunca tenha praticado.',
+      resumo: [['objetivo', 'Você quer'], ['incomoda', 'O que mais incomoda'], ['impacto', 'Exercício de impacto'], ['tempo-dia', 'Seu tempo por dia', 'As aulas têm de 20 a 40 minutos.']],
+      caminho: [['Passo 1', 'Fundamentos'], ['Passo 2', 'Mat Essencial'], ['Passo 3', 'Acessórios'], ['Passo 4', 'Funcional']],
+      antesDepois: { titulo: 'O que muda na sua rotina', itens: [
+        ['Treino de impacto que dói ou que você larga', 'Pilates sem impacto, no seu ritmo'],
+        ['Não sabe por onde começar nem se está fazendo certo', 'Um passo a passo do básico para frente, com a Michele'],
+        ['Estúdio longe, horário fixo, deslocamento', 'Em casa, na hora que der, só com um tapete'],
+        ['Treino longo que não cabe no dia', 'Aulas de 20 a 40 minutos'],
+        ['Costas pesadas e corpo travado no fim do dia', 'Aulas de postura e mobilidade, e bônus para dor lombar e ciático'],
+      ] },
+      porque: { titulo: 'Por que começar pelo pilates em casa', itens: [
+        'Pilates trabalha força, postura e o centro do corpo <b>sem impacto</b>.',
+        'Você faz <b>em casa</b>, sem deslocamento e sem horário fixo.',
+        'Começa pelos <b>fundamentos</b>: respiração, postura e controle do movimento. Ninguém começa no nível avançado.',
+      ] },
+      card: {
+        selo: 'Comece hoje · acesso pela Hotmart', nome: 'Pilates em Casa',
+        sub: '24 aulas de pilates para fazer em casa, do básico para frente, com a Michele Salla.',
+        vez: 'pagamento único',
+        ancora: ['Menos de R$ 1,55 por aula (são 24 aulas).', 'Cerca de R$ 0,10 por dia nos 365 dias de acesso.'],
+        itens: [
+          '<b>24 aulas</b> de 20 a 40 minutos, para fazer em casa',
+          '<b>Fundamentos do Pilates Mat</b>: respiração, postura e controle do movimento',
+          '<b>Mat Pilates Essencial</b>, sem acessórios',
+          '<b>Pilates com Acessórios</b>: bola, flex ring, theraband e overball (opcionais)',
+          '<b>Pilates Funcional & Mobilidade</b>',
+          'Bônus: <b>Pilates no Pós-Parto</b>, <b>Dor Lombar e Ciático</b>, <b>Hérnia de Disco</b> e <b>Escoliose</b>',
+          '<b>365 dias de acesso</b> pela área de membros da Hotmart',
+        ],
+        risco: 'você tem 7 dias de garantia pela Hotmart. Se não fizer sentido para você, pede o reembolso de R$ 37 pela própria plataforma.',
+      },
+      passos: { titulo: 'Por onde você caminha', itens: [
+        ['Fundamentos do Pilates Mat', 'Respiração, postura, controle do movimento e consciência corporal.'],
+        ['Mat Pilates Essencial', 'Aulas clássicas com o peso do próprio corpo, sem acessórios.'],
+        ['Pilates com Acessórios', 'Bola, flex ring, theraband e overball, no conforto da sua casa.'],
+        ['Pilates Funcional & Mobilidade', 'Força, mobilidade, flexibilidade, alongamento e condicionamento.'],
+      ] },
+      quem: { nome: 'Michele Salla', texto: 'Educadora física e especialista em pilates desde 2005. Na pandemia, transformou o que ensinava no estúdio em pilates possível e seguro dentro de casa. Assim nasceu o Pilates em Casa.' },
+      garantia: { titulo: 'Garantia de 7 dias', texto: 'Comece hoje. Se em 7 dias você sentir que não é para você, pede o reembolso pela própria Hotmart, sem precisar explicar.' },
+      faq: [
+        ['Nunca fiz pilates. Consigo acompanhar?', 'Sim. O curso começa pelos fundamentos e te guia passo a passo. Ninguém começa no nível avançado.'],
+        ['Preciso de aparelho ou equipamento?', 'Para começar, basta um tapete. Bola, flex ring, theraband e overball são opcionais.'],
+        ['Tenho mais de 50. Serve para mim?', 'Sim. O pilates é sem impacto e você faz no seu ritmo, do básico para frente.'],
+        ['Tenho dor nas costas ou hérnia. Posso fazer?', 'Você recebe de bônus aulas para dor lombar e ciático, hérnia de disco e escoliose. Se tem dor, hérnia ou teve bebê há pouco tempo, converse com o seu médico antes de começar.'],
+        ['Quanto tempo dura cada aula?', 'De 20 a 40 minutos.'],
+        ['Como eu acesso?', 'Pela área de membros da Hotmart, no celular ou no computador, com 365 dias de acesso.'],
+        ['É mensalidade?', 'Não. É pagamento único de R$ 37, pela Hotmart.'],
+        ['Como funciona a garantia?', 'Você tem 7 dias. Se não fizer sentido para você, pede o reembolso pela própria Hotmart.'],
+      ],
+    },
     rodape: 'O Pilates em Casa não substitui avaliação médica ou fisioterapêutica. Se você tem dor, hérnia, teve bebê há pouco tempo ou tem outra condição de saúde, converse com o seu médico antes de começar. Os resultados variam de pessoa para pessoa. Este site não é afiliado ao Facebook.',
   },
 }

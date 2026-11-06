@@ -71,7 +71,7 @@ export const CLIENTE = {
       paginas: [['quiz-p1', 'P1 · Rotina de 5 minutos'], ['quiz-p2', 'P2 · Barriga estufada à noite'], ['quiz-p3', 'P3 · Sem mil abdominais'],
         ['quiz-p4', 'P4 · Depois dos 40'], ['quiz-p5', 'P5 · Se deixou pra depois']],
       // telas 01 a 22 do quiz, na ordem (michele-salla/quiz/quiz.js)
-      blocos: ['Capa (promessa)', 'Idade', 'Michele', 'Objetivo', 'Barriga no dia', 'Recomeços', 'Abdominal', 'Hipopressivo',
+      blocos: ['Capa (promessa + idade)', 'Michele', 'Objetivo', 'Barriga no dia', 'Recomeços', 'Abdominal', 'Hipopressivo',
         'Prova (alunas)', 'Rotina', 'Sinais', 'Fase', 'Identificação', 'Analisando 1', 'Sabotador', 'Medo', 'Sonho',
         'Tempo por dia', 'Motivo', 'Analisando 2', 'Resultado (perfil)', 'Oferta'],
       blocosOferta: [22],
@@ -79,7 +79,7 @@ export const CLIENTE = {
     },
     {
       // Quiz Pilates em Casa (05/11, fase 1 do teste): quiz.michelesalla.com.br/?p=1..5. Mesma lógica do Quiz Diva:
-      // cada tela é um bloco (01 capa … 20 oferta) e cada promessa é uma página (pilates-p1 … pilates-p5).
+      // cada tela é um bloco (01 capa com a idade … 19 oferta; até 06/11 a idade era a tela 02) e cada promessa é uma página (pilates-p1 … pilates-p5).
       id: 'pilates',
       nome: 'Quiz Pilates',
       dominio: 'quiz.michelesalla.com.br',
@@ -87,11 +87,11 @@ export const CLIENTE = {
       prefixo: 'pilates',
       paginas: [['pilates-p1', 'P1 · Depois dos 40'], ['pilates-p2', 'P2 · Sem impacto'], ['pilates-p3', 'P3 · Sem estúdio'],
         ['pilates-p4', 'P4 · Plano personalizado'], ['pilates-p5', 'P5 · A rotina da Michele']],
-      // telas 01 a 21 do quiz (michele-salla/quiz-pilates/pilates.js)
-      blocos: ['Capa (promessa)', 'Idade', 'Michele', 'Objetivo', 'Já fez pilates', 'O que incomoda', 'Impacto', 'Prova (alunas)',
+      // telas 01 a 19 do quiz (michele-salla/quiz-pilates/pilates.js)
+      blocos: ['Capa (promessa + idade)', 'Michele', 'Objetivo', 'Já fez pilates', 'O que incomoda', 'Impacto', 'Prova (alunas)',
         'Rotina', 'Tempo por dia', 'Onde pratica', 'Fase', 'Identificação', 'Analisando 1', 'Recomeços', 'Medo', 'Sonho',
         'Analisando 2', 'Resultado (perfil)', 'Oferta'],
-      blocosOferta: [20],
+      blocosOferta: [19],
       botoes: {},
     },
   ] as SiteCfg[],

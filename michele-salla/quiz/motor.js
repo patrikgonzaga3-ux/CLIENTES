@@ -73,6 +73,59 @@ const fotos = (lista, pendencia) => lista && lista.length
   ? `<div class="grade">${lista.map(x => img(x, 'loading="lazy"')).join('')}</div>`
   : `<div class="cartao"><p><span class="pend">${esc(pendencia)}</span></p></div>`
 
+// Capa com a idade (padrão dos quizzes de pilates 40+): o primeiro clique já é a resposta da idade e abre o quiz.
+const capaIdade = c => `<p class="pede-idade">${esc(c.pergunta)}</p>
+  <div class="idades">${c.op.map(o => `<button class="idade" data-rotulo="${esc(o[1])}" onclick="escolhe('idade','${o[0]}')">${img(o[2], 'fetchpriority="high"')}<span>${esc(o[1])} <b aria-hidden="true">›</b></span></button>`).join('')}</div>
+  ${c.outra ? `<button class="idade-outra" data-rotulo="${esc(c.outra[1])}" onclick="escolhe('idade','${c.outra[0]}')">${esc(c.outra[1])}</button>` : ''}`
+
+// Página final no modelo do quiz da Laura (o que mais vendeu): resumo das respostas, botão cedo, antes × depois,
+// fotos, cartão de preço com tudo o que vem, passo a passo, garantia e perguntas rápidas. Só com QUIZ.oferta.v2.
+function ofertaV2(pf, O, m, botao) {
+  const V = O.v2
+  const rot = (id, v) => { const t = TELAS.find(x => x.id === id); const o = t && t.op.find(x => x[0] === v); return o ? o[1] : '' }
+  const minus = x => x.charAt(0).toLowerCase() + x.slice(1)
+  const resumo = V.resumo.map(([id, nome, depois]) => {
+    const r = resp[id]; if (!r || (Array.isArray(r) && (!r.length || r.includes('nenhum')))) return ''
+    const val = Array.isArray(r) ? r.map(v => minus(rot(id, v))).join(', ') : minus(rot(id, r))
+    return val ? `<li><b>${esc(nome)}:</b> ${esc(val)}.${depois ? ' ' + txt(depois) : ''}</li>` : ''
+  }).join('') + `<li><b>Seu perfil: ${esc(pf.nome)}.</b> ${txt(pf.comeca)}</li>`
+  const rico = x => txt(x).replace(/&lt;(\/?)b&gt;/g, '<$1b>') // só o negrito passa
+  const check = l => `<ul class="check">${l.map(x => `<li>${rico(x)}</li>`).join('')}</ul>`
+  const cartao = () => `<div class="card-preco">
+      <span class="selo-topo">${esc(V.card.selo)}</span>
+      <h3>${esc(V.card.nome)}</h3><p class="sub2">${txt(V.card.sub)}</p>
+      <p class="valor"><small>R$</small> ${esc(O.valor)} <span>${txt(V.card.vez)}</span></p>
+      <p class="ancora">${V.card.ancora.map(txt).join('<br>')}</p>
+      ${check(V.card.itens)}
+      ${botao}
+      <div class="risco"><span aria-hidden="true">🛡️</span><p><b>Risco zero:</b> ${txt(V.card.risco)}</p></div></div>`
+  return `<section class="of2">
+    <img class="logo" src="${QUIZ.logo.src}" alt="${esc(QUIZ.logo.alt)}" style="width:92px;border-radius:16px">
+    <h2 class="of2-titulo">${esc(V.titulo)} <mark>${esc(V.marca)}</mark></h2>
+    <p class="of2-sub">${txt(V.sub)}</p>
+    <div class="cartao resumo"><h3>Feito a partir do que você respondeu</h3><ul class="check">${resumo}</ul></div>
+    <div class="trilha">${V.caminho.map(([a, b]) => `<span><b>${esc(a)}</b>${esc(b)}</span>`).join('')}</div>
+    ${botao}
+    <h3 class="of2-h">${esc(V.antesDepois.titulo)}</h3>
+    <div class="ad">${V.antesDepois.itens.map(([a, d]) => `<p class="a"><span>✕ Antes</span>${txt(a)}</p><p class="d"><span>✓ Depois</span>${txt(d)}</p>`).join('')}</div>
+    <h3 class="of2-h">${esc(QUIZ.prova.titulo)}</h3>
+    ${fotos(QUIZ.prova.fotos)}
+    <p class="aviso">Os resultados variam de pessoa para pessoa.</p>
+    <h3 class="of2-h">${esc(V.porque.titulo)}</h3>
+    <div class="cartao">${check(V.porque.itens)}</div>
+    ${m ? `<div class="medo"><b>Você disse que tem medo de “${esc(minus(rot('medo', resp.medo)))}”.</b> Por isso: ${txt(m)}</div>` : ''}
+    ${cartao()}
+    <h3 class="of2-h">${esc(V.passos.titulo)}</h3>
+    <ol class="passos">${V.passos.itens.map(([a, b]) => `<li><b>${esc(a)}</b><span>${txt(b)}</span></li>`).join('')}</ol>
+    <div class="cartao quem"><img src="${IMG}michele-recorte.webp" alt="Michele Salla" width="802" height="1292" loading="lazy"><div><h3>${esc(V.quem.nome)}</h3><p>${txt(V.quem.texto)}</p></div></div>
+    ${cartao()}
+    <div class="garantia"><span aria-hidden="true">🛡️</span><h3>${esc(V.garantia.titulo)}</h3><p>${txt(V.garantia.texto)}</p></div>
+    <h3 class="of2-h">Perguntas rápidas</h3>
+    ${V.faq.map(([pq, r]) => `<div class="cartao faq"><h4>${esc(pq)}</h4><p>${txt(r)}</p></div>`).join('')}
+    <p class="miudo">Michele Salla · CNPJ 32.983.139/0001-99</p>
+    ${O.rodape ? `<p class="miudo" style="font-size:11.5px">${txt(O.rodape)}</p>` : ''}</section>`
+}
+
 let telaMarcada = -1 // o evento da tela sai uma vez por chegada (a tela redesenha ao marcar uma resposta)
 function desenha() {
   const t = TELAS[i]
@@ -83,14 +136,14 @@ function desenha() {
   let h = topo()
   if (t.tipo === 'capa') {
     const p = PROMESSAS[P]
-    h += `<section class="capa" style="display:grid;gap:16px">
+    h += `<section class="capa${QUIZ.idadeNaCapa ? ' com-idade' : ''}" style="display:grid;gap:16px">
       ${QUIZ.logo ? `<img class="logo" src="${QUIZ.logo.src}" alt="${esc(QUIZ.logo.alt)}"${QUIZ.logo.style ? ` style="${QUIZ.logo.style}"` : ''}>` : ''}
       <span class="etiqueta">${esc(p.etiqueta)}</span>
       <h1>${pend(p.titulo)}</h1>
-      <p class="sub">${txt(p.sub)}</p>
-      <button class="botao" onclick="vai()">${esc(p.botao)} →</button>
+      ${QUIZ.idadeNaCapa ? '' : `<p class="sub">${txt(p.sub)}</p>`}
+      ${QUIZ.idadeNaCapa ? capaIdade(QUIZ.idadeNaCapa) : `<button class="botao" onclick="vai()">${esc(p.botao)} →</button>
       <div class="foto-capa">${img(QUIZ.capa)}</div>
-      ${QUIZ.capa.pendencia ? `<p class="miudo"><span class="pend">${esc(QUIZ.capa.pendencia)}</span></p>` : ''}
+      ${QUIZ.capa.pendencia ? `<p class="miudo"><span class="pend">${esc(QUIZ.capa.pendencia)}</span></p>` : ''}`}
       <p class="miudo">${esc(QUIZ.assinatura || "Por Michele Salla, educadora física")}</p></section>`
   } else if (t.tipo === 'uma' || t.tipo === 'varias') {
     const marc = t.tipo === 'varias' ? (resp[t.id] || []) : [resp[t.id]]
@@ -135,11 +188,11 @@ function desenha() {
       ;['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'fbclid'].forEach(c => q.get(c) && u.searchParams.set(c, q.get(c)))
       if (q.get('utm_term')) u.searchParams.set('src', q.get('utm_term'))
       u.searchParams.set('sck', QUIZ.slug + P)
-      botao = `<a class="botao" href="${u.toString()}" onclick="cliqueComprar()">${esc(O.botao)} →</a>`
+      botao = `<a class="botao" href="${u.toString()}" onclick="cliqueComprar()">${esc((O.v2 && O.v2.botao) || O.botao)} →</a>`
     } else {
       botao = `<span class="botao" aria-disabled="true" style="opacity:.6;cursor:default">${esc(O.botao)} →</span><p class="miudo" style="color:#fff"><span class="pend">Link de compra pendente</span></p>`
     }
-    h += `<section class="oferta" style="display:grid;gap:14px">
+    if (O.v2) { h += ofertaV2(pf, O, m, botao) } else h += `<section class="oferta" style="display:grid;gap:14px">
       <span class="etiqueta">Plano para ${esc(pf.nome)}</span>
       <h2>${pend(O.titulo)}</h2>
       <p>${txt(O.intro)}</p>
@@ -158,7 +211,8 @@ function desenha() {
 }
 let trava = false // evita pular 2 telas com toque duplo
 function escolhe(id, v) {
-  const t = TELAS.find(x => x.id === id)
+  const c = QUIZ.idadeNaCapa // a idade pode vir da capa: vira uma pergunta de uma resposta só
+  const t = TELAS.find(x => x.id === id) || { tipo: 'uma', op: c ? [...c.op, ...(c.outra ? [c.outra] : [])] : [] }
   if (trava) return
   if (t.tipo === 'varias') {
     let l = resp[id] || []
