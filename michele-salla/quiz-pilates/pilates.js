@@ -183,5 +183,6 @@ const QUIZ = {
     parcela: 'pagamento único, pela Hotmart',
     botao: 'Quero começar o meu pilates em casa',
     selos: 'Compra segura pela Hotmart · Garantia mínima de 7 dias · Pagamento único',
+    rodape: 'O Pilates em Casa não substitui avaliação médica ou fisioterapêutica. Se você tem dor, hérnia, teve bebê há pouco tempo ou tem outra condição de saúde, converse com o seu médico antes de começar. Os resultados variam de pessoa para pessoa. Este site não é afiliado ao Facebook.',
   },
 }

@@ -129,7 +129,8 @@ function desenha() {
       <div class="preco"><span>Tudo isso por apenas</span><span class="v"><small>R$</small>${esc(O.valor)}</span><span>${txt(O.parcela)}</span>
         ${botao}</div>
       <div class="selos"><img src="${IMG}selo-garantia-7-dias.webp" alt="Garantia" width="400" height="400"><span>${txt(O.selos)}</span></div>
-      <p class="miudo">Michele Salla · CNPJ 32.983.139/0001-99</p></section>`
+      <p class="miudo">Michele Salla · CNPJ 32.983.139/0001-99</p>
+      ${O.rodape ? `<p class="miudo" style="font-size:11.5px">${txt(O.rodape)}</p>` : ''}</section>`
   }
   app.innerHTML = h
 }

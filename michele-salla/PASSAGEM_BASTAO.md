@@ -348,6 +348,10 @@ Os M da pasta "MICHELE LOW" são esses mesmos vídeos. Mapa conferido pelos quad
     `window.plBloco` (chama `window.plTique()` antes e depois da troca). Site `quiz` no `cliente.config.ts` (domínios: michelesalla.com.br,
     clientes-phi-six.vercel.app, painel.michelesalla.com.br). A API aceita vários sites no mesmo domínio pelo começo do slug.
     Telas abertas com `?tela=` (painel de revisão) não rastreiam. Se o quiz mudar de endereço, pôr o domínio em `outrosDominios`.
+  - **06/11 · Revisão final do quiz do pilates:** 5 testes = 5 promessas (capas p1–p5), 1 conjunto cada. Entrou o aviso de
+    saúde no rodapé da oferta (pilates e Desafio). Lista do que pedir à Michele no relatório (seção 5): aulas/minutos/acesso,
+    como acessa e se é pagamento único, nomes dos módulos, bônus, garantia, depoimentos, autorização de imagem das alunas,
+    revisão dos textos dos perfis, logo. Do Patrik: domínio, webhook Hotmart, pixel na Hotmart, preço R$ 37 no Brasil.
   - **06/11 · Sem migrar (Patrik: "vamos sem migrar"):** fica tudo nas nossas contas. Link do pilates: Hotmart
     https://pay.hotmart.com/K103974189L?off=6lnthlfw, **R$ 37** ("PILATES EM CASA - COM MICHELE SALLA"; a oferta 1exyl0t5 de
     R$ 47 foi trocada pelo Patrik). Verba sugerida por conjunto: R$ 16,65 (45% de R$ 37). Quiz sem nenhuma pendência visível

@@ -195,5 +195,6 @@ const QUIZ = {
     parcela: 'à vista · ou 12x de R$ 4,83',
     botao: 'Quero começar o Desafio 7 em 7',
     selos: 'Compra segura · Garantia de 7 dias · Pagamento único',
+    rodape: 'O Desafio 7 em 7 não é tratamento médico. Os resultados variam de pessoa para pessoa e a compra deste material não garante nenhum resultado específico. Este site não é afiliado ao Facebook.',
   },
 }
