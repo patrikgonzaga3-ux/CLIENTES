@@ -348,6 +348,12 @@ Os M da pasta "MICHELE LOW" são esses mesmos vídeos. Mapa conferido pelos quad
     `window.plBloco` (chama `window.plTique()` antes e depois da troca). Site `quiz` no `cliente.config.ts` (domínios: michelesalla.com.br,
     clientes-phi-six.vercel.app, painel.michelesalla.com.br). A API aceita vários sites no mesmo domínio pelo começo do slug.
     Telas abertas com `?tela=` (painel de revisão) não rastreiam. Se o quiz mudar de endereço, pôr o domínio em `outrosDominios`.
+  - **06/11 · Michele no Painel PTK** (agenciaptk.com.br/ptk, pedido do Patrik "do lado da Libia e da Laura"): ficha
+    `clientes/michele-salla` no Supabase da Laura (painel_gestor), tipo ptk, conta 1619523595475963, domínio michelesalla.com.br,
+    ticket 37, padrão de campanha do Patrik. Faltam na ficha: WhatsApp/grupo do relatório, **código do Clarity** e o produto
+    Hotmart de cada conta. **Clarity no quiz:** o motor lê o código da ficha (`/api/ptk/site`, igual à Libia) e marca promessa,
+    utm, cada tela (`tela_05_pilates-antes`), cada resposta (etiqueta por pergunta), o perfil e o clique em comprar. Só liga no
+    domínio da ficha (não na prévia da Vercel) e nunca no relatório. Falta o Patrik criar o projeto no clarity.microsoft.com.
   - **06/11 · Respostas do quiz no painel:** acesso pela Hotmart; não há depoimentos (prova = fotos das aulas). Os medos e dores
     serão lidos nas respostas: abas Quiz Pilates e Quiz Diva ganharam a seção **"Respostas do quiz"** (por pergunta: pessoas por
     resposta, % e quantas clicaram em comprar). O quiz marca cada resposta com `data-rotulo` e o rastreio.js usa esse rótulo.

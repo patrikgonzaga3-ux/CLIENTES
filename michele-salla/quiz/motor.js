@@ -37,8 +37,26 @@ if (PIXEL_ATIVO) {
   fbq('init', '991344998762063')
   fbq('track', 'PageView')
 }
+// Microsoft Clarity (gravações e mapas): o código do projeto fica na ficha da Michele no Painel PTK (agenciaptk.com.br/ptk,
+// campo Clarity), igual ao site da Libia. Só liga no domínio da ficha (michelesalla.com.br e subdomínios), nunca no relatório.
+// Cada tela vira um evento ("tela_05_objetivo") e cada resposta uma etiqueta (objetivo = "Melhorar a postura"), para filtrar
+// as gravações por etapa e por resposta. A fila guarda as marcações até o Clarity carregar.
+window.clarity = window.clarity || function () { (window.clarity.q = window.clarity.q || []).push(arguments) }
+const marca = (...a) => { try { window.clarity(...a) } catch (e) {} }
+if (!revisao) {
+  fetch('https://agenciaptk.com.br/api/ptk/site?d=' + encodeURIComponent(location.hostname)).then(r => r.ok ? r.json() : null).then(c => {
+    const id = c && c.clarity ? String(c.clarity).replace(/[^a-z0-9]/gi, '') : ''
+    if (!id || document.querySelector('script[src*="clarity.ms/tag/"]')) return
+    const t = document.createElement('script'); t.async = true; t.src = 'https://www.clarity.ms/tag/' + id
+    document.head.appendChild(t)
+  }).catch(() => {})
+  marca('set', 'quiz', QUIZ.slug.replace(/-p$/, ''))
+  marca('set', 'promessa', 'p' + P)
+  ;['utm_content', 'utm_campaign', 'utm_medium'].forEach(c => q.get(c) && marca('set', c, q.get(c).slice(0, 100)))
+}
 let cliqueContado = false
 function cliqueComprar() {
+  marca('event', 'clique_comprar'); marca('upgrade', 'clique_comprar')
   if (PIXEL_ATIVO && !cliqueContado && window.fbq) { cliqueContado = true; fbq('trackCustom', 'CliqueComprar', { value: QUIZ.oferta.valor, currency: 'BRL', content_name: QUIZ.oferta.produto }) }
 }
 
@@ -55,10 +73,12 @@ const fotos = (lista, pendencia) => lista && lista.length
   ? `<div class="grade">${lista.map(x => img(x, 'loading="lazy"')).join('')}</div>`
   : `<div class="cartao"><p><span class="pend">${esc(pendencia)}</span></p></div>`
 
+let telaMarcada = -1 // o evento da tela sai uma vez por chegada (a tela redesenha ao marcar uma resposta)
 function desenha() {
   const t = TELAS[i]
   if (window.plTique) window.plTique() // fecha o tempo da tela anterior
   window.plBloco = i + 1
+  if (!revisao && i !== telaMarcada) { telaMarcada = i; marca('event', 'tela_' + String(i + 1).padStart(2, '0') + '_' + t.id) }
   if (window.plTique) window.plTique() // marca a chegada nesta tela
   let h = topo()
   if (t.tipo === 'capa') {
@@ -100,6 +120,7 @@ function desenha() {
     if (!voltando && !q.get('parado')) { const aqui = i; setTimeout(() => { if (i === aqui) vai() }, 2600) }
   } else if (t.tipo === 'resultado') {
     const pf = PERFIS[perfilAtual()], R = QUIZ.resultado
+    if (!revisao) marca('set', 'perfil', pf.nome)
     h += `<section class="perfil"><span class="rot">O seu perfil</span><h2>${esc(pf.nome)}</h2><p>${txt(pf.retrato)}</p></section>
       <div class="bloco cartao"><h3>O que está te travando</h3><p>${txt(pf.trava)}</p>${R.mente ? `<p>${txt(R.mente)}</p>` : ''}</div>
       <div class="bloco cartao"><h3>Por onde você começa</h3><p>${txt(pf.comeca)}</p>${R.extra && !pf.comeca.includes(R.extraSeTem) ? `<p>${txt(R.extra)}</p>` : ''}${R.diaADia ? `<p><b>${txt(R.diaADia)}</b></p>` : ''}</div>
@@ -145,5 +166,8 @@ function escolhe(id, v) {
     else { l = l.filter(x => x !== 'nenhum'); l = l.includes(v) ? l.filter(x => x !== v) : [...l, v] }
     resp[id] = l; desenha()
   } else { resp[id] = v; desenha(); trava = true; setTimeout(() => { trava = false; vai() }, 220) }
+  // etiqueta da resposta no Clarity (várias respostas: juntas, separadas por " + ")
+  const rot = x => (t.op.find(o => o[0] === x) || [x, x])[1]
+  if (!revisao) marca('set', id, t.tipo === 'varias' ? (resp[id] || []).map(rot).join(' + ') || '-' : rot(v))
 }
 desenha()
