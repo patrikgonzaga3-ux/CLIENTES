@@ -61,6 +61,24 @@ NO FIM
 - Me entregue: o que funcionou, o que falhou (com a mensagem exata) e o que ficou para mim.
 ```
 
+## Se a Vercel aberta não for a do time "Ptk midias" (prompt de investigação)
+
+```
+O Patrik não sabe qual login da Vercel tem o time "Ptk midias". Descubra e entre nele, sem criar conta nem time novo.
+1. Na Vercel aberta no Chrome: abra o seletor de time (canto superior esquerdo) e veja vercel.com/account; anote
+   qual e-mail/conta está logada e quais times aparecem.
+2. Descubra qual time publica o repositório: abra https://github.com/patrikgonzaga3-ux/CLIENTES/deployments
+   (ou o último commit da main > o check/status "Vercel") e clique no link do deploy. O endereço mostra
+   vercel.com/<time>/<projeto>: esse <time> é o "Ptk midias". Anote o projeto do painel e o da prévia (clientes-phi-six).
+3. Veja se o Chrome tem outro perfil (ícone do perfil no canto superior direito) já logado na Vercel com esse time.
+4. Se não tiver: em vercel.com, saia (Log Out) e entre com "Continue with GitHub" usando a conta do GitHub
+   patrikgonzaga3-ux (a dona do repositório CLIENTES; o Chrome deste PC provavelmente já está logado nela no GitHub).
+   Se pedir senha, código ou 2FA, pare e peça para o Patrik digitar.
+5. Se ainda não aparecer o "Ptk midias", teste "Continue with Google" e "Continue with Email" com os e-mails que o
+   Patrik indicar. Não crie conta nova.
+6. Me diga: qual login tem o time "Ptk midias", e os nomes dos 2 projetos. Depois siga o PASSO 1.
+```
+
 ## Referência
 
 - Quiz do pilates: `michele-salla/quiz-pilates/` (textos em `pilates.js`; motor `michele-salla/quiz/motor.js`).
