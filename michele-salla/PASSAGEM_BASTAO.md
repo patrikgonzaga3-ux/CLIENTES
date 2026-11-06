@@ -348,6 +348,10 @@ Os M da pasta "MICHELE LOW" são esses mesmos vídeos. Mapa conferido pelos quad
     `window.plBloco` (chama `window.plTique()` antes e depois da troca). Site `quiz` no `cliente.config.ts` (domínios: michelesalla.com.br,
     clientes-phi-six.vercel.app, painel.michelesalla.com.br). A API aceita vários sites no mesmo domínio pelo começo do slug.
     Telas abertas com `?tela=` (painel de revisão) não rastreiam. Se o quiz mudar de endereço, pôr o domínio em `outrosDominios`.
+  - **06/11 · quiz.michelesalla.com.br NO AR** (domínio posto pelo Claude do PC no time "ptk-midias"): raiz = pilates,
+    /desafio/ = Desafio, /revisao/ = relatório; corrigida a regra das rotas com barra no fim (vercel.json). Pixel carrega no
+    endereço oficial. Hotmart: webhook "Painel Michele" ativo (produto PILATES EM CASA, 8 eventos); falta o Patrik colar o
+    HOTMART_HOTTOK no projeto da Vercel **painel-michele-salla** (time ptk-midias) para o painel aceitar as vendas.
   - **06/11 · Michele no Painel PTK** (agenciaptk.com.br/ptk, pedido do Patrik "do lado da Libia e da Laura"): ficha
     `clientes/michele-salla` no Supabase da Laura (painel_gestor), tipo ptk, conta 1619523595475963, domínio michelesalla.com.br,
     ticket 37, padrão de campanha do Patrik. Faltam na ficha: WhatsApp/grupo do relatório, **código do Clarity** e o produto
