@@ -5,7 +5,16 @@
    direto (sem rastreio e sem pixel). Itens entre [[ ]] são pendências e aparecem em amarelo. */
 
 const q = new URLSearchParams(location.search)
-const P = PROMESSAS[q.get('p')] ? Number(q.get('p')) : 1
+// Sem ?p= na URL: sorteia a promessa (partes iguais) e guarda no aparelho, para a mesma pessoa ver sempre a mesma capa.
+// Com ?p=1..5 a capa é fixa (um link por conjunto). No relatório (?tela=) fica a 1.
+function sorteiaPromessa() {
+  const ns = Object.keys(PROMESSAS), k = 'quiz_promessa_' + QUIZ.slug
+  try { const s = localStorage.getItem(k); if (PROMESSAS[s]) return Number(s) } catch (e) {}
+  const n = Number(ns[Math.floor(Math.random() * ns.length)])
+  try { localStorage.setItem(k, n) } catch (e) {}
+  return n
+}
+const P = PROMESSAS[q.get('p')] ? Number(q.get('p')) : (q.get('tela') ? 1 : sorteiaPromessa())
 const resp = {}
 let i = 0
 const app = document.getElementById('app')
