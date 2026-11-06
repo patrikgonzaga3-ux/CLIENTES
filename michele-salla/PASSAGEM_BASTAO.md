@@ -348,6 +348,13 @@ Os M da pasta "MICHELE LOW" são esses mesmos vídeos. Mapa conferido pelos quad
     `window.plBloco` (chama `window.plTique()` antes e depois da troca). Site `quiz` no `cliente.config.ts` (domínios: michelesalla.com.br,
     clientes-phi-six.vercel.app, painel.michelesalla.com.br). A API aceita vários sites no mesmo domínio pelo começo do slug.
     Telas abertas com `?tela=` (painel de revisão) não rastreiam. Se o quiz mudar de endereço, pôr o domínio em `outrosDominios`.
+  - **06/11 · Criativos e roteiros (pedido do Patrik: 10 criativos, 3 vídeos no Gravyx, 5 roteiros para a Michele):** página
+    https://clientes-phi-six.vercel.app/michele-salla/criativos/ (`michele-salla/criativos/`). 7 imagens 1080×1350 (texto escrito por cima
+    em HTML com a fonte da marca) e 3 vídeos 9:16 sem som, cada um com o anúncio da Biblioteca que serviu de modelo (pesquisa de 06/11:
+    critério = no ar há 30+ dias e com várias versões; pilates asiático sem anúncio ativo no BR hoje). O criativo 05 tem o preço (R$ 37):
+    precisa do OK do Patrik. Gravyx: Seedance bloqueia foto realista de pessoa (filtro), usar Omni ou Kling. Gasto: ~4.900 tokens.
+    Link único do quiz sem ?p= sorteia a promessa (20% cada, guardada no aparelho). Painel: idade gravada também no toque na foto,
+    gateway Hotmart no funil, coluna "Passam p/ a próxima", "Maior queda no meio" e vendas por promessa; ticket padrão 37.
   - **06/11 · Capa e página final novas NO AR (OK do Patrik: "agora tá bonito, pode"):** a foto do estúdio saiu ("péssima";
     no Drive não há antes e depois). Capa = promessa + "Escolha a sua idade" com 4 cartões (35–44, 45–54, 55–64, 65+) e o link
     "Tenho menos de 35", padrão dos quizzes de pilates 40+; o clique já responde a idade (tela de idade removida: 19 telas,
