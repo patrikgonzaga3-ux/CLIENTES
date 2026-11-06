@@ -31,6 +31,36 @@
   ],
   "rewrites": [
     {
+      "source": "/desafio/",
+      "has": [
+        {
+          "type": "host",
+          "value": "quiz.michelesalla.com.br"
+        }
+      ],
+      "destination": "/michele-salla/quiz/"
+    },
+    {
+      "source": "/revisao/",
+      "has": [
+        {
+          "type": "host",
+          "value": "quiz.michelesalla.com.br"
+        }
+      ],
+      "destination": "/michele-salla/quiz-pilates/revisao/"
+    },
+    {
+      "source": "/revisao/:path+",
+      "has": [
+        {
+          "type": "host",
+          "value": "quiz.michelesalla.com.br"
+        }
+      ],
+      "destination": "/michele-salla/quiz-pilates/revisao/:path+"
+    },
+    {
       "source": "/desafio-7em7/:path*",
       "has": [
         {

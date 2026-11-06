@@ -2,7 +2,7 @@
 <title>Quiz Pilates · Revisão</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <meta name="robots" content="noindex, nofollow">
-<script>if(location.hostname.endsWith('vercel.app')&&!location.pathname.endsWith('/'))location.replace(location.pathname+'/'+location.search+location.hash)</script>
+<script>if(!location.pathname.endsWith('/'))location.replace(location.pathname+'/'+location.search+location.hash)</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
@@ -222,7 +222,7 @@ footer{color:var(--suave);font-size:13px}
 </main>
 
 <script>
-const QUIZ = 'https://clientes-phi-six.vercel.app/michele-salla/quiz-pilates/'
+const QUIZ = location.hostname === 'quiz.michelesalla.com.br' ? '/' : 'https://clientes-phi-six.vercel.app/michele-salla/quiz-pilates/'
 const PROM = [
   { p: 1, nome: 'Depois dos 40', titulo: 'Depois dos 40 o seu corpo pede outro treino. Descubra o seu plano de pilates em casa.',
     fonte: 'Os quizzes de pilates que mais rodam miram mulheres 40+ (Reverse Health; “Pilates na Parede 40+”). Post da Michele “Atenção Mulher… depois dos 35/40… não é falta de esforço” e a idade dela (45).' },
