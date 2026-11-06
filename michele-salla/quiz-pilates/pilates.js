@@ -1,7 +1,7 @@
 /* Quiz da Michele Salla · PILATES EM CASA (fase 1 do teste, decisão do Patrik em 05/11/2026). Motor em ../quiz/motor.js.
    Modelo: o quiz do Desafio 7 em 7 e os quizzes de "pilates asiático" que rodam há meses no Meta (página "Pilates
    Asiáticos 28 dias" e Reverse Health: mulheres 40+, 15 a 20 minutos, barriga, core e postura, "descubra seu plano
-   personalizado"). Preço do teste: R$ 47 (Patrik, 05/11). Produto e história: texto "MINHA HISTÓRIA" da Michele (Drive, 06/11);
+   personalizado"). Preço do teste: R$ 37 (Patrik, 06/11; antes R$ 47). Produto e história: texto "MINHA HISTÓRIA" da Michele (Drive, 06/11);
    fotos reais das aulas dela (mesma pasta). Tudo entre [[ ]] ainda falta e aparece em amarelo. */
 
 const FOTO = 'img/'
@@ -132,8 +132,8 @@ function perfilDe(r) {
 const MEDO = {
   movimentos: 'o curso começa pelos fundamentos e te guia passo a passo, mesmo que você nunca tenha praticado. Ninguém começa no nível avançado.',
   dor: 'pilates é sem impacto e o curso tem aulas para dor lombar, cervical, ciático, hérnia de disco e escoliose. Se você tem dor, hérnia ou teve bebê há pouco tempo, converse com o seu médico antes de começar.',
-  tempo: 'você faz em casa, sem deslocamento e sem horário fixo, [[minutos de cada aula]].',
-  dinheiro: '[[garantia na Hotmart: confirmar quantos dias]]: se não fizer sentido para você, pede o reembolso pela plataforma.',
+  tempo: 'você faz em casa, sem deslocamento e sem horário fixo, no seu ritmo.',
+  dinheiro: 'você tem garantia mínima de 7 dias pela Hotmart: se não fizer sentido para você, pede o reembolso pela própria plataforma.',
   desistir: 'um caminho passo a passo, do básico para frente, para você não se sentir perdida e não precisar recomeçar do zero.',
 }
 
@@ -167,9 +167,10 @@ const QUIZ = {
     botao: 'Ver o meu plano de pilates',
   },
   oferta: {
-    produto: 'Pilates em Casa', valor: '47', checkout: null, // [[link da Hotmart a R$ 47: o Patrik manda]]
+    produto: 'Pilates em Casa', valor: '37',
+    checkout: 'https://pay.hotmart.com/K103974189L?off=6lnthlfw', // Hotmart "PILATES EM CASA - COM MICHELE SALLA", R$ 37 (Patrik, 06/11; antes 1exyl0t5)
     titulo: 'O seu caminho começa no <mark>Pilates em Casa</mark>',
-    intro: 'Não é só uma sequência de aulas gravadas: é a minha jornada inteira no pilates, organizada para te guiar passo a passo, mesmo que você nunca tenha praticado. [[Quantas aulas, quantos minutos cada e por quanto tempo fica o acesso]]',
+    intro: 'Não é só uma sequência de aulas gravadas: é a minha jornada inteira no pilates, organizada para te guiar passo a passo, mesmo que você nunca tenha praticado.',
     modulos: [
       ['Fundamentos do método', 'Respiração, postura, controle do movimento e consciência corporal.'],
       ['Aulas clássicas', 'Inspiradas na essência criada por Joseph Pilates.'],
@@ -177,10 +178,10 @@ const QUIZ = {
       ['Aulas com acessórios (opcional)', 'Bola, flex ring, theraband e overball, no conforto da sua casa.'],
       ['Fases e necessidades do corpo', 'Dor lombar, cervical, ciático, hérnia de disco, escoliose, pós-parto, mobilidade e fortalecimento.'],
     ],
-    bonus: ['[[bônus, se houver]]'],
+    bonus: [], // a Michele não informou bônus (06/11)
     fotos: [['aula-em-grupo', 'Aula de pilates em grupo', 900, 675], ['estudio', 'Estúdio da Michele', 900, 1200]].map(([n, alt, w, h]) => ({ src: FOTO + n + '.webp', alt, w, h })),
-    parcela: 'à vista · [[parcelamento que a Hotmart mostra]]',
+    parcela: 'pagamento único, pela Hotmart',
     botao: 'Quero começar o meu pilates em casa',
-    selos: 'Compra segura · [[Garantia de 7 dias]] · Pagamento único',
+    selos: 'Compra segura pela Hotmart · Garantia mínima de 7 dias · Pagamento único',
   },
 }

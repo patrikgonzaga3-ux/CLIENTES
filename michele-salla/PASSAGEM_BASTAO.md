@@ -348,6 +348,12 @@ Os M da pasta "MICHELE LOW" são esses mesmos vídeos. Mapa conferido pelos quad
     `window.plBloco` (chama `window.plTique()` antes e depois da troca). Site `quiz` no `cliente.config.ts` (domínios: michelesalla.com.br,
     clientes-phi-six.vercel.app, painel.michelesalla.com.br). A API aceita vários sites no mesmo domínio pelo começo do slug.
     Telas abertas com `?tela=` (painel de revisão) não rastreiam. Se o quiz mudar de endereço, pôr o domínio em `outrosDominios`.
+  - **06/11 · Sem migrar (Patrik: "vamos sem migrar"):** fica tudo nas nossas contas. Link do pilates: Hotmart
+    https://pay.hotmart.com/K103974189L?off=6lnthlfw, **R$ 37** ("PILATES EM CASA - COM MICHELE SALLA"; a oferta 1exyl0t5 de
+    R$ 47 foi trocada pelo Patrik). Verba sugerida por conjunto: R$ 16,65 (45% de R$ 37). Quiz sem nenhuma pendência visível
+    (números de aulas/minutos e bônus ficaram de fora até a Michele mandar). Desafio: "funcionais" tirado também do gerador
+    da página (falta regravar a 10264 pelo PC). Prompt do PC para o que falta (domínio, webhook Hotmart, página):
+    `michele-salla/docs/PROMPT_PC_O_QUE_FALTA.md`. Pixel na Hotmart: o Patrik confere.
   - **06/11 · Migração para as contas da Michele (pedido do Patrik):** roteiro e prompt para o Claude do PC em
     `michele-salla/docs/MIGRAR_PARA_CONTAS_DA_MICHELE.md` (Supabase novo na org dela + Vercel transferida + convites para o Patrik;
     o antigo fica de reserva). Atenção: Vercel Hobby não aceita membros; para compartilhar, a equipe dela precisa ser Pro.
@@ -359,7 +365,7 @@ Os M da pasta "MICHELE LOW" são esses mesmos vídeos. Mapa conferido pelos quad
     depoimentos, webhook Hotmart, domínio (Vercel + cPanel).
   - **05/11 · Decisões do Patrik:** manter 7 dias; Desafio só com hipopressivo + áudio (tirado "funcionais" do quiz; a página 10264
     no WordPress ainda fala em funcionais: regravar pelo PC quando ele pedir); ManyChat já ajustado por ele; **fase 1 do teste =
-    PILATES a R$ 47**; endereço **quiz.michelesalla.com.br**.
+    PILATES (R$ 37 desde 06/11)**; endereço **quiz.michelesalla.com.br**.
     - Quiz Pilates: `michele-salla/quiz-pilates/` (`pilates.js` = textos; motor e estilo compartilhados em `michele-salla/quiz/motor.js`
       e `estilo.css`). 5 capas (`?p=1..5`), 20 telas, 5 perfis (Nova Fase, Sem Impacto, Postura, Recomeça, Vai Começar Agora).
       Tudo do produto (nome, módulos, acessórios, garantia, fotos de alunas, link da Hotmart) está em `[[ ]]` amarelo: o produto

@@ -457,7 +457,7 @@ def b09():
              "Aprenda a observar seu abdômen, conhecer sinais que podem indicar alterações como a diástase e entender quando é importante buscar uma avaliação profissional. Você também vai aprender a registrar suas fotos e medidas para acompanhar sua evolução.",
              "Assim, você começa sua jornada com um ponto de partida claro e consegue acompanhar suas mudanças."),
         item("mockup-15-minutos-por-dia.webp", "Aulas 15 Minutos por Dia", "15 Minutos por Dia:", "Barriga e Cintura em Ação",
-             "Aulas práticas de 15 minutos combinando exercícios funcionais, respiração e hipopressivos para trabalhar o abdômen, fortalecer a musculatura e melhorar a postura.",
+             "Aulas práticas de 15 minutos combinando respiração e hipopressivos para trabalhar o abdômen, fortalecer a musculatura e melhorar a postura.",
              "Uma rotina para fazer em casa, mesmo com o dia corrido!"),
         item("mockup-mente-magra-diva.webp", "Áudio Mente Magra e Diva", "Ative Sua Mente", "Magra e Diva",
              "Um áudio exclusivo de motivação e visualização para reforçar o compromisso com sua rotina e incentivar atitudes alinhadas aos seus objetivos.",
