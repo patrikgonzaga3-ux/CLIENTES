@@ -2,7 +2,7 @@
 
 Pedido do Patrik: "passar toda base de dados da Michele pra Vercel dela e pro Supabase dela e depois pegar o acesso e
 compartilhar com a nossa pra gente tomar conta, antes de publicar tudo". Quem executa: o Claude do PC do Patrik
-(`C:\Users\Patri\CLIENTES`), com o Patrik logado nas contas da Michele no navegador.
+(`%USERPROFILE%\CLIENTES`; no PC novo `C:\Users\PATRICK\CLIENTES`), com o Patrik logado nas contas da Michele no navegador.
 
 ## Prompt (copiar e colar no Claude do PC)
 
@@ -11,7 +11,7 @@ Responda sempre em português. Você vai passar o painel e as páginas da Michel
 sem perder nada e sem deixar nada fora do ar. Eu (Patrik) já estou logado nas contas dela no navegador.
 
 ANTES DE TUDO
-1. cd C:\Users\Patri\CLIENTES && git pull origin main
+1. cd %USERPROFILE%\CLIENTES && git pull origin main   (neste PC: C:\Users\PATRICK\CLIENTES)
 2. Leia: CLAUDE.md, michele-salla/PASSAGEM_BASTAO.md e michele-salla/docs/MIGRAR_PARA_CONTAS_DA_MICHELE.md (este arquivo).
 3. Regras: nunca escreva senha, chave ou token no chat, em arquivo do repositório ou em commit (só no painel da Vercel,
    do Supabase ou em variável de ambiente local). Não apague nada do lado antigo (time "Ptk midias" na Vercel e projeto

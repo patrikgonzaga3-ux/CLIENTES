@@ -12,13 +12,15 @@ Responda sempre em português. Vamos terminar o que falta para o quiz do pilates
 Eu (Patrik) estou logado na Vercel (time "Ptk midias"), no cPanel da TurboCloud e na Hotmart da Michele.
 
 ANTES
-1. cd C:\Users\Patri\CLIENTES && git pull origin main
+1. cd %USERPROFILE%\CLIENTES && git pull origin main   (neste PC: C:\Users\PATRICK\CLIENTES)
 2. Leia CLAUDE.md, michele-salla/PASSAGEM_BASTAO.md e michele-salla/docs/PROMPT_PC_O_QUE_FALTA.md.
 3. Regras: nunca escreva senha, chave, token ou hottok no chat nem no repositório (só no painel da Vercel).
    Não mexa na Greenn, não crie nem ligue anúncio, não apague nada. No DNS, só o registro "quiz" deste roteiro.
    Se algo não estiver como aqui, pare e me pergunte.
 
 PASSO 1 · ENDEREÇO quiz.michelesalla.com.br
+0. Confira que a Vercel aberta é a do time "Ptk midias" (a conta patrikgonzaga2 NÃO tem esse time: é outro login,
+   provavelmente o ligado ao GitHub patrikgonzaga3-ux, dono do repositório CLIENTES). Se não for, pare e me peça para trocar.
 1. Vercel, time "Ptk midias": abra o projeto que serve clientes-phi-six.vercel.app (a prévia estática do repositório
    CLIENTES; NÃO é o projeto do painel). Settings > Domains > Add: quiz.michelesalla.com.br (produção, sem redirecionar).
 2. Anote o valor de CNAME que a Vercel mostra para esse domínio.
