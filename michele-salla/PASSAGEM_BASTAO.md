@@ -348,6 +348,12 @@ Os M da pasta "MICHELE LOW" são esses mesmos vídeos. Mapa conferido pelos quad
     `window.plBloco` (chama `window.plTique()` antes e depois da troca). Site `quiz` no `cliente.config.ts` (domínios: michelesalla.com.br,
     clientes-phi-six.vercel.app, painel.michelesalla.com.br). A API aceita vários sites no mesmo domínio pelo começo do slug.
     Telas abertas com `?tela=` (painel de revisão) não rastreiam. Se o quiz mudar de endereço, pôr o domínio em `outrosDominios`.
+  - **06/11 · Material da Michele** (Drive do Patrik, pasta 19ndLn2JpuMD1VM67vPtJIBaSb_ZVT5fw: FOTOS + HISTORIA/"MINHA HISTÓRIA.docx"):
+    produto **Pilates em Casa** (nasceu na pandemia; fundamentos, aulas clássicas, peso do corpo, acessórios opcionais bola/flex ring/
+    theraband/overball, aulas para lombar, cervical, ciático, hérnia, escoliose, pós-parto); Michele especialista em pilates desde 2005,
+    estúdio com o marido. Quiz preenchido com isso; fotos reais em `quiz-pilates/img/`. Capa 5 virou "Há quase 20 anos eu vivo o
+    pilates todos os dias…" (frase dela). **Falta:** nº de aulas/minutos/acesso, bônus, garantia, parcelamento, link Hotmart R$ 47,
+    depoimentos, webhook Hotmart, domínio (Vercel + cPanel).
   - **05/11 · Decisões do Patrik:** manter 7 dias; Desafio só com hipopressivo + áudio (tirado "funcionais" do quiz; a página 10264
     no WordPress ainda fala em funcionais: regravar pelo PC quando ele pedir); ManyChat já ajustado por ele; **fase 1 do teste =
     PILATES a R$ 47**; endereço **quiz.michelesalla.com.br**.
