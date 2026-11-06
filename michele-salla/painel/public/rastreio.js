@@ -110,7 +110,7 @@
     if (ehCompra(a)) return 'comprar: ' + rotuloCompra(a)
     if (a.tagName === 'IMG') return 'foto: ' + curto(a.getAttribute('alt') || (a.getAttribute('src') || '').split('/').pop())
     if (a.tagName === 'A') return 'link: ' + curto(a.textContent || a.getAttribute('href'))
-    return 'botão: ' + curto(a.textContent || a.getAttribute('aria-label'))
+    return 'botão: ' + curto(a.getAttribute('data-rotulo') || a.textContent || a.getAttribute('aria-label')) // data-rotulo: resposta do quiz sem o subtítulo
   }
   function decora(a) {
     if (String(D.checkout || '').toLowerCase() !== 'sim') return

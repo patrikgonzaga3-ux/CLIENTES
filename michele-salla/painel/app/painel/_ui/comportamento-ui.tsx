@@ -128,6 +128,17 @@ export async function PainelComportamento({ site, per, sp, checkout, visitasPadr
   }
   const blocoMais = (a: { blocos: Map<number, number> }) => [...a.blocos.entries()].sort((x, y) => y[1] - x[1])[0]?.[0] ?? 0
   const lista = [...alvos.entries()].sort((a, b) => b[1].vis - a[1].vis || b[1].total - a[1].total)
+  // Quiz: respostas por pergunta (bloco = tela). Conta pessoas que marcaram cada resposta e quantas delas clicaram em comprar.
+  // Botões com "→" (Continuar, Ver o próximo passo…) não são respostas.
+  const ehQuiz = site.id === 'quiz' || site.id === 'pilates'
+  const respostas = new Map<number, Map<string, { vis: Set<string>; compra: Set<string> }>>()
+  if (ehQuiz) for (const v of vs) for (const c of v.cliques) {
+    if (!c.b || !c.o.startsWith('botão: ') || c.o.includes('→')) continue
+    const r = c.o.slice(7), m = respostas.get(c.b) ?? new Map<string, { vis: Set<string>; compra: Set<string> }>()
+    respostas.set(c.b, m)
+    const x = m.get(r) ?? { vis: new Set<string>(), compra: new Set<string>() }
+    m.set(r, x); x.vis.add(v.id); if (clicou(v)) x.compra.add(v.id)
+  }
   const duvidas = lista.filter(([o]) => o.startsWith('pergunta: '))
   const toquesFora = lista.filter(([o]) => o.startsWith('toque fora de botão: '))
   const comFaq = vs.filter((v) => v.cliques.some((c) => c.o.startsWith('pergunta: ')))
@@ -268,6 +279,21 @@ export async function PainelComportamento({ site, per, sp, checkout, visitasPadr
           ) : <Vazio>Nenhum toque fora de botão no período.</Vazio>}
         </Secao>
       </Grade>
+
+      {ehQuiz && <Secao titulo="Respostas do quiz" sub="Pergunta por pergunta: quantas pessoas marcaram cada resposta e, delas, quantas clicaram em comprar. É aqui que aparecem os medos, as dores e o que mais vende. Em perguntas de várias respostas, a mesma pessoa conta em mais de uma linha.">
+        {respostas.size ? [...respostas.entries()].sort((a, b) => a[0] - b[0]).map(([b, m]) => {
+          const tot = new Set([...m.values()].flatMap((x) => [...x.vis])).size
+          return (
+            <div key={b} style={{ marginBottom: 16 }}>
+              <div style={{ fontWeight: 800, fontSize: 14, margin: '4px 0 6px' }}>{nomeBloco(b)} · {int(tot)} pessoas</div>
+              <Tabela min={420}>
+                <thead><tr><th style={thL}>Resposta</th><th style={th}>Pessoas</th><th style={th}>% da pergunta</th><th style={th}>Clicaram comprar</th></tr></thead>
+                <tbody>{[...m.entries()].sort((x, y) => y[1].vis.size - x[1].vis.size).map(([r, x]) => <tr key={r}><td style={tdL}>{r}</td><td style={td}>{int(x.vis.size)}</td><td style={td}>{pct(x.vis.size, tot, 0)}</td><td style={td}>{pct(x.compra.size, x.vis.size, 0)}</td></tr>)}</tbody>
+              </Tabela>
+            </div>
+          )
+        }) : <Vazio>Ainda sem respostas no período.</Vazio>}
+      </Secao>}
 
       <Secao titulo="Todos os cliques" sub="Cada botão, pergunta, foto ou toque. Visitas = quantas clicaram ali pelo menos 1 vez. 1º clique = segundos desde que abriu a página (mediana).">
         {lista.length ? (

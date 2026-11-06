@@ -75,7 +75,7 @@ function desenha() {
   } else if (t.tipo === 'uma' || t.tipo === 'varias') {
     const marc = t.tipo === 'varias' ? (resp[t.id] || []) : [resp[t.id]]
     h += `<section class="pergunta"><h2>${txt(t.titulo)}</h2><p class="sub">${txt(t.sub || '')}</p></section>
-      <div class="ops ${t.cols === 2 ? 'c2' : ''}">${t.op.map(o => `<button class="op ${marc.includes(o[0]) ? 'on' : ''}" onclick="escolhe('${t.id}','${o[0]}')">${txt(o[1])}${o[2] ? ` <small>${txt(o[2])}</small>` : ''}</button>`).join('')}</div>
+      <div class="ops ${t.cols === 2 ? 'c2' : ''}">${t.op.map(o => `<button class="op ${marc.includes(o[0]) ? 'on' : ''}" data-rotulo="${esc(o[1])}" onclick="escolhe('${t.id}','${o[0]}')">${txt(o[1])}${o[2] ? ` <small>${txt(o[2])}</small>` : ''}</button>`).join('')}</div>
       ${t.tipo === 'varias' ? `<button class="botao" onclick="vai()" ${marc.length ? '' : 'disabled style="opacity:.45"'}>Continuar →</button>` : ''}`
   } else if (t.tipo === 'michele') {
     h += `<section class="michele cartao"><img src="${IMG}michele-recorte.webp" alt="Michele Salla" width="802" height="1292">

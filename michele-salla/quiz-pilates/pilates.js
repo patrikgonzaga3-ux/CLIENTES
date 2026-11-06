@@ -171,7 +171,7 @@ const QUIZ = {
     produto: 'Pilates em Casa', valor: '37',
     checkout: 'https://pay.hotmart.com/K103974189L?off=6lnthlfw', // Hotmart "PILATES EM CASA - COM MICHELE SALLA", R$ 37 (Patrik, 06/11; antes 1exyl0t5)
     titulo: 'O seu caminho começa no <mark>Pilates em Casa</mark>',
-    intro: '24 aulas de 20 a 40 minutos, para fazer em casa, com 365 dias de acesso. Não é só uma sequência de aulas gravadas: é a minha jornada inteira no pilates, organizada para te guiar passo a passo, mesmo que você nunca tenha praticado.',
+    intro: '24 aulas de 20 a 40 minutos, para fazer em casa, com 365 dias de acesso pela área de membros da Hotmart. Não é só uma sequência de aulas gravadas: é a minha jornada inteira no pilates, organizada para te guiar passo a passo, mesmo que você nunca tenha praticado.',
     modulos: [
       ['Módulo 0 · Boas-vindas e Orientações Iniciais', 'Como o curso funciona e por onde começar.'],
       ['Módulo 1 · Fundamentos do Pilates Mat', 'Respiração, postura, controle do movimento e consciência corporal.'],

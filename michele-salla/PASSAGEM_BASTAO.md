@@ -348,6 +348,9 @@ Os M da pasta "MICHELE LOW" são esses mesmos vídeos. Mapa conferido pelos quad
     `window.plBloco` (chama `window.plTique()` antes e depois da troca). Site `quiz` no `cliente.config.ts` (domínios: michelesalla.com.br,
     clientes-phi-six.vercel.app, painel.michelesalla.com.br). A API aceita vários sites no mesmo domínio pelo começo do slug.
     Telas abertas com `?tela=` (painel de revisão) não rastreiam. Se o quiz mudar de endereço, pôr o domínio em `outrosDominios`.
+  - **06/11 · Respostas do quiz no painel:** acesso pela Hotmart; não há depoimentos (prova = fotos das aulas). Os medos e dores
+    serão lidos nas respostas: abas Quiz Pilates e Quiz Diva ganharam a seção **"Respostas do quiz"** (por pergunta: pessoas por
+    resposta, % e quantas clicaram em comprar). O quiz marca cada resposta com `data-rotulo` e o rastreio.js usa esse rótulo.
   - **06/11 · Dados do curso (Patrik):** 24 aulas de 20 a 40 min, 365 dias de acesso, garantia 7 dias, módulos 0–4 (Boas-vindas,
     Fundamentos do Pilates Mat, Mat Pilates Essencial sem acessórios, Pilates com Acessórios, Funcional & Mobilidade) e bônus
     (módulos 5 e 6: Pós-Parto; Dor Lombar e Ciático; Hérnia de Disco; Escoliose). Logo em `quiz-pilates/img/logo-pilates-em-casa.webp`.
