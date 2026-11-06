@@ -348,6 +348,16 @@ Os M da pasta "MICHELE LOW" são esses mesmos vídeos. Mapa conferido pelos quad
     `window.plBloco` (chama `window.plTique()` antes e depois da troca). Site `quiz` no `cliente.config.ts` (domínios: michelesalla.com.br,
     clientes-phi-six.vercel.app, painel.michelesalla.com.br). A API aceita vários sites no mesmo domínio pelo começo do slug.
     Telas abertas com `?tela=` (painel de revisão) não rastreiam. Se o quiz mudar de endereço, pôr o domínio em `outrosDominios`.
+  - **06/11 · Capa e página final novas NO AR (OK do Patrik: "agora tá bonito, pode"):** a foto do estúdio saiu ("péssima";
+    no Drive não há antes e depois). Capa = promessa + "Escolha a sua idade" com 4 cartões (35–44, 45–54, 55–64, 65+) e o link
+    "Tenho menos de 35", padrão dos quizzes de pilates 40+; o clique já responde a idade (tela de idade removida: 19 telas,
+    painel em 19 blocos, oferta = bloco 19; visitas antes de 06/11 têm a idade na tela 02). Fotos ilustrativas do Gravyx
+    (Nano Banana Pro, 4 × 175 tokens; mulheres de corpo comum em casa, alongamento sereia), `quiz-pilates/img/idade-*.webp`.
+    Página final no modelo do quiz da Laura (`QUIZ.oferta.v2`): resumo "Feito a partir do que você respondeu", 4 passos,
+    botão cedo, antes × depois da rotina, fotos das aulas, resposta ao medo, cartão de preço (R$ 37 pagamento único, "menos de
+    R$ 1,55 por aula", "cerca de R$ 0,10 por dia nos 365 dias"), passo a passo, Michele, garantia e 8 perguntas. Textos de oferta
+    aprovados pelo Patrik. O quiz do Desafio segue com a página antiga. Pedir à Michele: nº de alunas, 2–3 depoimentos com
+    nome e idade e uma foto dela em casa no tapete.
   - **06/11 · quiz.michelesalla.com.br NO AR** (domínio posto pelo Claude do PC no time "ptk-midias"): raiz = pilates,
     /desafio/ = Desafio, /revisao/ = relatório; corrigida a regra das rotas com barra no fim (vercel.json). Pixel carrega no
     endereço oficial. Hotmart: webhook "Painel Michele" ativo (produto PILATES EM CASA, 8 eventos); falta o Patrik colar o
