@@ -348,6 +348,9 @@ Os M da pasta "MICHELE LOW" são esses mesmos vídeos. Mapa conferido pelos quad
     `window.plBloco` (chama `window.plTique()` antes e depois da troca). Site `quiz` no `cliente.config.ts` (domínios: michelesalla.com.br,
     clientes-phi-six.vercel.app, painel.michelesalla.com.br). A API aceita vários sites no mesmo domínio pelo começo do slug.
     Telas abertas com `?tela=` (painel de revisão) não rastreiam. Se o quiz mudar de endereço, pôr o domínio em `outrosDominios`.
+  - **06/11 · Migração para as contas da Michele (pedido do Patrik):** roteiro e prompt para o Claude do PC em
+    `michele-salla/docs/MIGRAR_PARA_CONTAS_DA_MICHELE.md` (Supabase novo na org dela + Vercel transferida + convites para o Patrik;
+    o antigo fica de reserva). Atenção: Vercel Hobby não aceita membros; para compartilhar, a equipe dela precisa ser Pro.
   - **06/11 · Material da Michele** (Drive do Patrik, pasta 19ndLn2JpuMD1VM67vPtJIBaSb_ZVT5fw: FOTOS + HISTORIA/"MINHA HISTÓRIA.docx"):
     produto **Pilates em Casa** (nasceu na pandemia; fundamentos, aulas clássicas, peso do corpo, acessórios opcionais bola/flex ring/
     theraband/overball, aulas para lombar, cervical, ciático, hérnia, escoliose, pós-parto); Michele especialista em pilates desde 2005,
