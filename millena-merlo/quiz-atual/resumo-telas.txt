@@ -1,0 +1,364 @@
+
+=== PÁGINA "pg-inicial" slug=zzwo22mzjj id=a7a5cd72-ca68-4dc9-8006-57313a77e814 progresso=0 settings={}
+- [header] (header) backButton=false
+- [title] (main)
+    texto: "DESCUBRA COMO AFINAR A CINTURA ENQUANTO DEFINE O CORPO EM ATÉ 4 SEMANAS"
+    subtítulo: "Transforme seu corpo com um treino definitivo para perder gordura e ganhar massa muscular — com treinos rápidos e uma alimentação saborosa."
+    tema: {"fontSize":"small","textColor":"#ca4b00"}
+- [image] (main)
+    imagem: https://imagedelivery.net/709sUuPaO4NBreJR-qFQLA/9875dc7b-ab5c-4f0f-7774-5ddccf50cd00/default (1086x1448)
+    tema: {"width":100}
+- [image] (main)
+    imagem: https://imagedelivery.net/709sUuPaO4NBreJR-qFQLA/57caf1f9-1f59-4fb2-ab47-df1a9a296e00/default (1024x172)
+    tema: {"width":100}
+- [text] (main)
+    texto: "Se você treina e continua sem resultado, seu método está ultrapassado. Destrave seus resultados agora mesmo!"
+    tema: {"fontSize":"small","textAlign":"center"}
+- [button] (main)
+    texto: "EU QUERO"
+    destino: quiz1
+    settings: {"animation":"pulse"}
+- [text] (main)
+    texto: "Leva menos de 1 minuto"
+    tema: {"fontSize":"small","textAlign":"center"}
+
+=== PÁGINA "quiz1" slug=dqbc5tkddc id=81ea57d1-430e-4524-b675-0eac47dfa580 progresso=6 settings={}
+- [header] (header) backButton=true
+- [progress] (header) {"endValue":10}
+    tema: {"primaryColor":"#e6a079","secondaryColor":"#ca4b07"}
+- [title] (main)
+    texto: "Qual é a sua idade?"
+    tema: {"fontSize":"xsmall"}
+- [quizImage] (main)
+    multiple=false required=true format=grid showText=false
+    • "IDADE: 17 - 28" img=https://imagedelivery.net/709sUuPaO4NBreJR-qFQLA/3624bc4d-7675-43c2-7500-f544278eb800/default -> quiz2
+    • "IDADE: 29 - 39" img=https://imagedelivery.net/709sUuPaO4NBreJR-qFQLA/17f1f7fc-ceb8-4d71-be25-66e9dc71df00/default -> quiz2
+    • "IDADE: 40 - 49" img=https://imagedelivery.net/709sUuPaO4NBreJR-qFQLA/0e4b71b2-8994-476f-59da-88b5e0f91f00/default -> quiz2
+    • "IDADE: 50+" img=https://imagedelivery.net/709sUuPaO4NBreJR-qFQLA/8b8dce06-4254-48f5-2659-e6cb433f8300/default -> quiz2
+    outros-conteúdo: {"cover":false,"placement":"top"}
+    tema: {"variant":"soft","borderColor":"#000000","backgroundColor":"#000000"}
+
+=== PÁGINA "quiz2" slug=xx2bvwh2yd id=a6a36e57-fc37-493b-890f-9a6ebd507380 progresso=12 settings={}
+- [header] (header) backButton=true
+- [progress] (header) {"endValue":10}
+    tema: {"primaryColor":"#e6a079","secondaryColor":"#ca4b07"}
+- [title] (main)
+    texto: "Quando você se olha no espelho, você sente que:"
+    tema: {"fontSize":"xsmall"}
+- [quizImage] (main)
+    multiple=false required=true format=grid showText=undefined
+    • "Sou falsa magra" img=https://imagedelivery.net/709sUuPaO4NBreJR-qFQLA/bb0e572a-745b-440f-a33b-c1a64cce8f00/default -> quiz3
+    • "Estou acima do peso" img=https://imagedelivery.net/709sUuPaO4NBreJR-qFQLA/6f171543-53f5-42c3-e08d-00a15e191000/default -> quiz3
+    • "Já emagreci, mas estou flácida" img=https://imagedelivery.net/709sUuPaO4NBreJR-qFQLA/6988e592-a27d-4684-f344-060d4a6eb500/default -> quiz3
+    • "Evito até me olhar direito" img=https://imagedelivery.net/709sUuPaO4NBreJR-qFQLA/9479c1d6-7325-477d-0079-6be6ddeb7c00/default -> quiz3
+    outros-conteúdo: {"cover":false,"placement":"top"}
+    tema: {"variant":"soft","textColor":"#ffffff","borderColor":"#ca4b07","backgroundColor":"#e6a079"}
+
+=== PÁGINA "quiz3" slug=hjaxc7qifl id=598aaef1-09e0-476e-8540-9123e9968e97 progresso=18 settings={}
+- [header] (header) backButton=true
+- [progress] (header) {"endValue":18}
+    tema: {"primaryColor":"#e6a079","secondaryColor":"#ca4b07"}
+- [title] (main)
+    texto: "Onde você mais gostaria de ver definição primeiro?"
+    tema: {"fontSize":"xsmall"}
+- [quizImage] (main)
+    multiple=false required=true format=list showText=undefined
+    • "Barriga mais sequinha;" img=https://imagedelivery.net/709sUuPaO4NBreJR-qFQLA/130fe478-f33c-4af5-517a-f0e28407e800/default -> quiz5
+    • "Glúteos empinados;" img=https://imagedelivery.net/709sUuPaO4NBreJR-qFQLA/1a5e620e-393a-4bb5-43d1-e49476a73900/default -> quiz5
+    • "Pernas mais grossas e firmes;" img=https://imagedelivery.net/709sUuPaO4NBreJR-qFQLA/a5eef363-e5e2-4e33-730c-4f03c6b97900/default -> quiz5
+    • "Corpo todo mais desenhado." img=https://imagedelivery.net/709sUuPaO4NBreJR-qFQLA/b9465f6d-24a3-4b98-18fa-c7f499375900/default -> quiz5
+    outros-conteúdo: {"cover":false,"placement":"right"}
+    tema: {"variant":"soft","textColor":"#ffffff","borderColor":"#ca4b07","backgroundColor":"#e6a079"}
+
+=== PÁGINA "quiz5" slug=asctquf2a0 id=5c0a5dfa-f1c4-4256-a029-233d7c4e0e70 progresso=24 settings={}
+- [header] (header) backButton=true
+- [progress] (header) {"endValue":24}
+    tema: {"primaryColor":"#e6a079","secondaryColor":"#ca4b07"}
+- [title] (main)
+    texto: "Como seu peso costuma variar?"
+    tema: {"fontSize":"xsmall"}
+- [quizEmoji] (main)
+    multiple=false required=true format=list showText=undefined
+    • "Ganho peso rápido e perco lentamente;" emoji={"emoji":"😕"} -> pg-endomorfo
+    • "Ganho e perco peso com facilidade;" emoji={"emoji":"😭"} -> pg-mesomorfo
+    • "Tenho dificuldade em ganhar peso." emoji={"emoji":"🥲"} -> pg-ectomorfo
+    outros-conteúdo: {"checkbox":"right","placement":"left"}
+    tema: {"variant":"soft","borderColor":"#ca4b07","backgroundColor":"#e6a079"}
+
+=== PÁGINA "pg-endomorfo" slug=gcod6fkc9l id=45fe16dd-a819-47d6-93c6-73da1e03f5f7 progresso=29 settings={}
+- [header] (header) backButton=true
+- [progress] (header) {"endValue":26}
+- [title] (main)
+    texto: "Parece que você tem o biotipo endomorfo."
+    subtítulo: "Você pode ter tendência a perder peso lentamente, mas isso não significa que a mudança seja impossível.\nSeu plano foi desenvolvido para secar barriga enquanto define coxas e bumbum, na academia ou em casa"
+    tema: {"textColor":"#ca4b07"}
+- [image] (main)
+    imagem: https://imagedelivery.net/709sUuPaO4NBreJR-qFQLA/81473db9-2962-4ce5-7b98-7b06d3fb4100/default (1448x1086)
+    tema: {"width":100}
+- [button] (main)
+    texto: "CONTINUAR"
+    destino: PG-INFO1
+    settings: {"animation":"pulse"}
+
+=== PÁGINA "pg-mesomorfo" slug=c0k1hun1xh id=cebb9a32-31ef-43cb-a036-b10e8bafb6e4 progresso=29 settings={}
+- [header] (header) backButton=true
+- [progress] (header) {"endValue":26}
+- [title] (main)
+    texto: "Parece que você tem o biotipo mesomorfo."
+    subtítulo: "Seu corpo muda rapidamente, por isso você precisa da abordagem certa para alcançar e manter seu objetivo físico.\nSeu plano foi desenvolvido para secar barriga enquanto define coxas e bumbum, na academia ou em casa"
+    tema: {"textColor":"#ca4b07"}
+- [image] (main)
+    imagem: https://imagedelivery.net/709sUuPaO4NBreJR-qFQLA/427493b1-5ca0-4903-66ba-3dfedd3a4900/default (1448x1086)
+    tema: {"width":100}
+- [button] (main)
+    texto: "CONTINUAR"
+    destino: PG-INFO1
+    settings: {"animation":"pulse"}
+
+=== PÁGINA "pg-ectomorfo" slug=go7q3wjkx6 id=2c0ca7a1-91e3-4cf8-aec1-e40633292ae2 progresso=29 settings={}
+- [header] (header) backButton=true
+- [progress] (header) {"endValue":26}
+- [title] (main)
+    texto: "Parece que você tem o biotipo ectomorfo."
+    subtítulo: "Você pode ter dificuldades para ganhar peso ou massa muscular, mas isso não significa que você não consiga. Tudo o que você precisa é a abordagem correta.\nSeu plano foi desenvolvido para secar barriga enquanto define coxas e bumbum, na academia ou em casa."
+    tema: {"textColor":"#ca4b07"}
+- [image] (main)
+    imagem: https://imagedelivery.net/709sUuPaO4NBreJR-qFQLA/2c2ceba2-3159-417d-2ed5-dbc2077d5900/default (1448x1086)
+    tema: {"width":100}
+- [button] (main)
+    texto: "CONTINUAR"
+    destino: PG-INFO1
+    settings: {"animation":"pulse"}
+
+=== PÁGINA "PG-INFO1" slug=mqpk5bry1z id=54eefd22-c862-4775-a512-327ff1f942c4 progresso=35 settings={}
+- [header] (header) backButton=true
+- [progress] (header) {"endValue":28}
+- [title] (main)
+    texto: "Você não está sozinha!!!"
+    subtítulo: "Mulheres como você carregam no corpo a prova de batalhas invisíveis.\nOs métodos antigos (muito cardio e zero comida) estão destruindo sua massa magra e deixando seu metabolismo lento, preservando a gordura na barriga."
+    tema: {"textColor":"#ca4b07"}
+- [carousel] (main)
+    outros-conteúdo: {"loop":true,"slides":[{"id":"3f23078e-fc16-4ff6-ab25-e12f9647c3e8","image":{"image":{"name":"Legacy image 44b9de71-6b8f-40ea-bcb4-65c31588459f","width":1080,"height":1080,"providerId":"afabbf3f-9a31-4047-f93b-3c7ca398e600"}}},{"id":"e587ab81-f084-4d11-80c7-83ca03044efc","image":{"image":{"name":"Legacy image 20e5bf8d-247d-4143-92ff-f54426f345e6","width":1080,"height":1080,"providerId":"7988b2b4-d3da-485b-d63d-c06ed2231f00"}}},{"id":"6560a80d-6f29-433e-afa9-8ff1ce113121","image":{"image":{"name":"Legacy image 2c42b70d-fef9-4f26-9322-a50fe72eb2eb","width":1080,"height":1080,"providerId":"71f85bbc-8406-4a91-c78c-e23c73a5a400"}}},{"id":"efae64d1-efc4-410c-bf68-3a77550447d0","image":{"image":{"name":"Legacy image 6d487023-3058-4600-81d1-6d950a40aa8c","width":1080,"height":1080,"providerId":"1153a0c9-6e33-405a-2817-95363c023500"}}}],"showDots":true,"showControls":true}
+- [button] (main)
+    texto: "QUERO CONTINUAR"
+    destino: quiz6
+    settings: {"animation":"pulse"}
+
+=== PÁGINA "quiz6" slug=veaztckusn id=bce8d73b-761d-4555-afcb-9445a6cb383a progresso=41 settings={}
+- [header] (header) backButton=true
+- [progress] (header) {"endValue":30}
+    tema: {"primaryColor":"#e6a079","secondaryColor":"#ca4b07"}
+- [title] (main)
+    texto: "O Novo Estilo de Vida\n(O Encaixe Perfeito)"
+    subtítulo: "Se você pudesse trocar 1h de esteira por algo eficaz, o que seria?"
+    tema: {"textColor":"#ca4b07"}
+- [quizEmoji] (main)
+    multiple=false required=true format=list showText=undefined
+    • "30min de treino intenso;" emoji={"emoji":"🥰"} -> quiz7
+    • "Foco total em perna/bumbum;" emoji={"emoji":"😆"} -> quiz7
+    • "Exercício que desenha tudo;" emoji={"emoji":"😌"} -> quiz7
+    • "Algo rápido e potente." emoji={"emoji":"🤫"} -> quiz7
+    outros-conteúdo: {"checkbox":"right","placement":"left"}
+    tema: {"variant":"soft","borderColor":"#ca4b07","backgroundColor":"#e6a079"}
+
+=== PÁGINA "quiz7" slug=q3ctoszjyj id=256db916-35c8-4279-b996-fde77dfeba5b progresso=47 settings={}
+- [header] (header) backButton=true
+- [progress] (header) {"endValue":36}
+    tema: {"primaryColor":"#e6a079","secondaryColor":"#ca4b07"}
+- [title] (main)
+    texto: "Quanto tempo você tem para se dedicar a VOCÊ por dia?"
+    tema: {"fontSize":"xsmall"}
+- [quizText] (main)
+    multiple=false required=true format=list showText=undefined
+    • "10 a 20 minutos (Rápido e Intenso);" -> quiz8
+    • "30 a 40 minutos (Um bom tempo);" -> quiz8
+    • "Mais de 1 hora;" -> quiz8
+    • "O tempo que for necessário." -> quiz8
+    outros-conteúdo: {"checkbox":"right"}
+    tema: {"variant":"soft","borderColor":"#ca4b07","backgroundColor":"#e6a079"}
+
+=== PÁGINA "quiz8" slug=x1lbkhuzmu id=d9d110f3-c33d-455a-9e21-d206bc4e3803 progresso=53 settings={}
+- [header] (header) backButton=true
+- [progress] (header) {"endValue":42}
+    tema: {"primaryColor":"#e6a079","secondaryColor":"#ca4b07"}
+- [title] (main)
+    texto: "Como seria a sua alimentação ideal para definir?"
+    tema: {"fontSize":"xsmall"}
+- [quizEmoji] (main)
+    multiple=false required=true format=list showText=undefined
+    • "Comida de verdade e saborosa;" emoji={"emoji":"😋"} -> quiz9
+    • "Sem passar fome, jamais;" emoji={"emoji":"😁"} -> quiz9
+    • "Proteína e Carboidratos juntos;" emoji={"emoji":"😌"} -> quiz9
+    • "Receitas fáceis e gostosas." emoji={"emoji":"😍"} -> quiz9
+    outros-conteúdo: {"checkbox":"right","placement":"left"}
+    tema: {"variant":"soft","borderColor":"#ca4b07","backgroundColor":"#e6a079"}
+
+=== PÁGINA "quiz9" slug=dipd0ujt9n id=12429c65-96af-4b84-bf71-b1bdd6e4a798 progresso=59 settings={}
+- [header] (header) backButton=true
+- [progress] (header) {"endValue":48}
+    tema: {"primaryColor":"#e6a079","secondaryColor":"#ca4b07"}
+- [title] (main)
+    texto: "Você sabia que abdominais tradicionais podem \"estufar\" sua cintura?"
+    tema: {"fontSize":"xsmall"}
+- [quizEmoji] (main)
+    multiple=false required=true format=list showText=undefined
+    • "Sério? Faço 50 por dia!" emoji={"emoji":"😊"} -> quiz10
+    • "Desconfiava, sinto dores;" emoji={"emoji":"🧐"} -> quiz10
+    • "Não vejo definição neles;" emoji={"emoji":"😨"} -> quiz10
+    • "Odeio fazer abdominal." emoji={"emoji":"😝"} -> quiz10
+    outros-conteúdo: {"checkbox":"right","placement":"left"}
+    tema: {"variant":"soft","borderColor":"#ca4b07","backgroundColor":"#e6a079"}
+
+=== PÁGINA "quiz10" slug=f3ax51q0p6 id=c085a1e4-fcc4-4a43-9a30-381f8afa48dc progresso=65 settings={}
+- [header] (header) backButton=true
+- [progress] (header) {"endValue":54}
+    tema: {"primaryColor":"#e6a079","secondaryColor":"#ca4b07"}
+- [title] (main)
+    texto: "Que intensidade você deseja treinar?"
+    tema: {"fontSize":"xsmall"}
+- [quizEmoji] (main)
+    multiple=false required=true format=list showText=undefined
+    • "Ir aumentando aos poucos;" emoji={"emoji":"🙆‍♀️"} -> QUIZ11
+    • "Já quero suar e sentir o corpo;" emoji={"emoji":"💁‍♀️"} -> QUIZ11
+    • "Quero que você decida por mim." emoji={"emoji":"🙅‍♀️"} -> QUIZ11
+    outros-conteúdo: {"checkbox":"right","placement":"left"}
+    tema: {"variant":"soft","borderColor":"#ca4b07","backgroundColor":"#e6a079"}
+
+=== PÁGINA "QUIZ11" slug=qx2d6nkqcx id=11cb0873-e5c1-4b16-acde-e9daf687f6a3 progresso=71 settings={}
+- [header] (header) backButton=true
+- [progress] (header) {"endValue":60}
+    tema: {"primaryColor":"#e6a079","secondaryColor":"#ca4b07"}
+- [title] (main)
+    texto: "Imagine seu corpo daqui a 21 dias."
+    tema: {"fontSize":"xsmall"}
+- [quizEmoji] (main)
+    multiple=false required=true format=list showText=undefined
+    • "Cintura fina e desenhada;" emoji={"emoji":"😍"} -> quiz12
+    • "Bumbum durinho e na nuca;" emoji={"emoji":"🤩"} -> quiz12
+    • "Barriga negativa/chapada;" emoji={"emoji":"😬"} -> quiz12
+    • "Pernas torneadas e firmes." emoji={"emoji":"🫣"} -> quiz12
+    outros-conteúdo: {"checkbox":"right","placement":"left"}
+    tema: {"variant":"soft","borderColor":"#ca4b07","backgroundColor":"#e6a079"}
+
+=== PÁGINA "quiz12" slug=n6u46m1ufp id=d9a67095-bf7d-48b7-8594-2b7427b33b4e progresso=76 settings={}
+- [header] (header) backButton=true
+- [progress] (header) {"endValue":66}
+    tema: {"primaryColor":"#e6a079","secondaryColor":"#ca4b07"}
+- [title] (main)
+    texto: "Em quanto tempo você gostaria de ver resultado?"
+    tema: {"fontSize":"xsmall"}
+- [quizText] (main)
+    multiple=false required=true format=list showText=undefined
+    • "7 dias (pelo menos um sinal de mudança);" -> quiz13
+    • "10 dias (quero ver a diferença nas roupas);" -> quiz13
+    • "14 dias (quero mudar de verdade);" -> quiz13
+    • "Não importa, desde que eu emagreça." -> quiz13
+    outros-conteúdo: {"checkbox":"right"}
+    tema: {"variant":"soft","borderColor":"#ca4b07","backgroundColor":"#e6a079"}
+
+=== PÁGINA "quiz13" slug=j6uaw4yfoy id=bec1c911-eb0a-48e1-8266-9356a1c4e81c progresso=82 settings={}
+- [header] (header) backButton=true
+- [progress] (header) {"endValue":72}
+    tema: {"primaryColor":"#e6a079","secondaryColor":"#ca4b07"}
+- [title] (main)
+    texto: "Qual roupa você vai usar para estrear seu novo corpo?"
+    tema: {"fontSize":"xsmall"}
+- [quizEmoji] (main)
+    multiple=false required=true format=list showText=undefined
+    • "Aquele biquíni cavado;" emoji={"emoji":"😁"} -> quiz14
+    • "Um vestido justo e sexy;" emoji={"emoji":"🤩"} -> quiz14
+    • "Jeans e cropped (sem medo);" emoji={"emoji":"🤭"} -> quiz14
+    • "Lingerie poderosa." emoji={"emoji":"😻"} -> quiz14
+    outros-conteúdo: {"checkbox":"right","placement":"left"}
+    tema: {"variant":"soft","borderColor":"#ca4b07","backgroundColor":"#e6a079"}
+
+=== PÁGINA "quiz14" slug=a0em4tu9yh id=b2bb7794-8cfe-4a7e-bf98-36d9cda806d6 progresso=88 settings={}
+- [header] (header) backButton=true
+- [progress] (header) {"endValue":78}
+    tema: {"primaryColor":"#e6a079","secondaryColor":"#ca4b07"}
+- [title] (main)
+    texto: "O que significa ser uma \"Mulher Poderosa\" para você?"
+    tema: {"fontSize":"xsmall"}
+- [quizEmoji] (main)
+    multiple=false required=true format=list showText=undefined
+    • "Ter autoconfiança total;" emoji={"emoji":"😻"} -> quiz15
+    • "Amar meu reflexo no espelho;" emoji={"emoji":"😘"} -> quiz15
+    • "Ter energia e disposição;" emoji={"emoji":"🥳"} -> quiz15
+    • "Me sentir linda e forte." emoji={"emoji":"😎"} -> quiz15
+    outros-conteúdo: {"checkbox":"right","placement":"left"}
+    tema: {"variant":"soft","borderColor":"#ca4b07","backgroundColor":"#e6a079"}
+
+=== PÁGINA "quiz15" slug=q32s89md59 id=3de480d5-85cd-4bb4-8202-220e4b08cd89 progresso=94 settings={}
+- [header] (header) backButton=true
+- [progress] (header) {"endValue":84}
+    tema: {"primaryColor":"#e6a079","secondaryColor":"#ca4b07"}
+- [title] (main)
+    texto: "Você está pronta para seguir um plano que funciona de verdade?"
+    tema: {"fontSize":"xsmall"}
+- [quizEmoji] (main)
+    multiple=false required=true format=list showText=undefined
+    • "Sim, é a minha VEZ!" emoji={"emoji":"🤩"} -> PG-AQUECIMENTO
+    • "Quero começar HOJE!" emoji={"emoji":"😘"} -> PG-AQUECIMENTO
+    • "Adeus, falsa magra!" emoji={"emoji":"😻"} -> PG-AQUECIMENTO
+    • "100% comprometida." emoji={"emoji":"😝"} -> PG-AQUECIMENTO
+    outros-conteúdo: {"checkbox":"right","placement":"left"}
+    tema: {"variant":"soft","borderColor":"#ca4b07","backgroundColor":"#e6a079"}
+
+=== PÁGINA "PG-AQUECIMENTO" slug=zwxnvo01l0 id=01625896-83bc-4cff-be6e-2ea56f88d9b1 progresso=100 settings={}
+- [header] (header) backButton=true
+- [title] (main)
+    texto: "PARABÉNS O SEU DESAFIO ESTÁ PRONTO"
+    subtítulo: "Com base no seu perfil, você tem o DESAFIO MAGRA PRO MAX pela frente com todas as ferramentas para secar a barriga, afinar a cintura, definir coxas e glúteos, construir um corpo mais firme e feminino. E eu vou te ajudar."
+    tema: {"textColor":"#ff0000"}
+- [vturb] (main)
+    outros-conteúdo: {"source":"<vturb-smartplayer id=\"vid-6a1d7c05f819e44f4c81322b\" style=\"display: block; margin: 0 auto; width: 100%; \"></vturb-smartplayer> <script type=\"text/javascript\"> var s=document.createElement(\"script\"); s.src=\"https://scripts.converteai.net/9406f62d-bd68-44a6-971a-c0a91bdff3c8/players/6a1d7c05f819e44f4c81322b/v4/player.js\", s.async=!0,document.head.appendChild(s); </script>"}
+- [title] (main)
+    texto: "EU VOU TE DAR 75% DE DESCONTO APLICADO E 30 DIAS DE GARANTIA PORQUE EU SEI QUE VOCÊ ESTÁ PRONTA."
+    tema: {"fontSize":"xsmall","textColor":"#fe0606"}
+- [price] (main)
+    subtítulo: "(DE R$197,00)"
+    outros-conteúdo: {"icon":{"name":"circle-check-big","node":[["path",{"d":"M21.801 10A10 10 0 1 1 17 3.335","key":"yps3ct"}],["path",{"d":"m9 11 3 3L22 4","key":"1pflzl"}]]},"price":"<p>R$ 3,08</p>","title":"<p><strong>VALIDO HOJE</strong></p>","priceLabel":"Por apenas 12x de"}
+    tema: {"container":true,"textColor":"#000000","primaryColor":"#fe5858","secondaryColor":"#000000"}
+- [button] (main)
+    texto: "COMEÇAR A MINHA TRANSFORMAÇÃO"
+    destino: LINK https://payfast.greenn.com.br/redirect/286218
+    settings: {"animation":"pulse"}
+    tema: {"primaryColor":"#ca4b00"}
+- [title] (main)
+    texto: "NOSSAS ALUNAS SE PRIORIZARAM COM DESAFIO MAGRA PRO MAX"
+    subtítulo: "É sua vez de se priorizar. Você merece essa mudança!"
+    tema: {"fontSize":"xsmall"}
+- [carousel] (main)
+    outros-conteúdo: {"loop":true,"slides":[{"id":"7c37f584-780a-425b-8201-f2d8cc1efae5","image":{"image":{"name":"Legacy image 3c1c9925-71bb-4a93-a279-75703fb77753","width":1080,"height":1080,"providerId":"5e648370-8341-4af2-e6e9-eaaeee9fee00"}}},{"id":"37511a87-e0e5-4040-b2cc-d9a865d06562","image":{"image":{"name":"Legacy image a141eb79-06da-4413-8144-e209da07dd4f","width":1080,"height":1080,"providerId":"3b85e630-5720-4b11-3903-0a2fadd4e200"}}},{"id":"605304b3-f5dc-4a58-8ea8-6161c72eddbc","image":{"image":{"name":"Legacy image 0a8ca2a9-c954-4e21-be42-4be4f96d0285","width":1080,"height":1080,"providerId":"8f662caf-d7ba-473d-d41e-76cfecc50f00"}}},{"id":"ada1c6a1-9628-4113-a433-0f648d0bc9ae","image":{"image":{"name":"Legacy image 72eb7f0b-8279-4e24-b169-ac69170eca66","width":1080,"height":1080,"providerId":"9d614122-1ee8-47e5-b78e-b4235e7fff00"}}},{"id":"909d65da-5eff-42cc-ba7e-8f8e7b044a29","image":{"image":{"name":"Legacy image 9705eea9-0a8f-4d5f-a577-589d3334b2f9","width":1080,"height":1080,"providerId":"b7fa83d6-5f3d-44f0-b046-673fd0d96b00"}}}],"showDots":true,"showControls":true}
+- [title] (main)
+    texto: "⭐⭐⭐⭐⭐\nBASEADO EM MAIS DE 12.000 TRANSFORMAÇÕES REAIS Junte-se as milhares de mulheres que já transformaram o corpo com o meu DESAFIO MAGRA PRO MAX."
+    tema: {"fontSize":"xsmall","textColor":"#ffffff"}
+- [benefits] (main)
+    outros-conteúdo: {"icon":{"name":"check-circle","node":[["path",{"d":"M21.801 10A10 10 0 1 1 17 3.335","key":"yps3ct"}],["path",{"d":"m9 11 3 3L22 4","key":"1pflzl"}]]},"items":[{"id":"5a770dcb-9a0c-45d1-9447-7251ad91a62d","text":"<p><span style=\"color: rgb(202, 75, 7);\"><strong>Treinos pensando na estética do corpo feminino:</strong></span></p><p><span style=\"color: rgb(255, 255, 255);\">Nada de treinar aleatório. Aqui você treina com estratégia, progressão pra definir do jeito certo;</span></p>"},{"id":"c2cb6d46-1e23-4b3c-85f0-18ca20f12f04","text":"<p><span style=\"color: rgb(202, 75, 7);\"><strong>Os 10 minutos que mudam sua barriga de verdade:</strong></span></p><p><span style=\"color: rgb(255, 255, 255);\">A técnica de hipopressivos que substitui 1.000 abdominais e afina sua cintura real;</span></p>"},{"id":"0b0ddc0b-cb3c-4c8f-987f-63e219a68697","text":"<p><span style=\"color: rgb(202, 75, 7);\"><strong>Aqui a gente vai direto no que te incomoda:</strong></span></p><p><span style=\"color: rgb(255, 255, 255);\">Pochete, braço mole, coxa sem definição… Você não precisa fazer mais, precisa fazer do jeito certo;</span></p>"},{"id":"f1a690aa-53a0-4149-8117-5aa981ad9482","text":"<p><span style=\"color:rgb(202, 75, 7)\"><strong>Sem treinos longos. Sem dieta restritiva. Sem achismo.</strong></span></p>"}],"title":"<p><span style=\"color: rgb(255, 255, 255);\"><strong>🎁 SEU DESAFIO ESTÁ PRONTO E VOCÊ JÁ PODE COMEÇAR HOJE MESMO</strong></span></p>"}
+    tema: {"container":true,"backgroundColor":"#000000"}
+- [price] (main)
+    subtítulo: "(DE R$197,00)"
+    outros-conteúdo: {"icon":{"name":"circle-check-big","node":[["path",{"d":"M21.801 10A10 10 0 1 1 17 3.335","key":"yps3ct"}],["path",{"d":"m9 11 3 3L22 4","key":"1pflzl"}]]},"price":"<p>R$ 3,08</p>","title":"<p><strong>VALIDO HOJE</strong></p>","priceLabel":"Por apenas 12x de"}
+    tema: {"container":true,"textColor":"#000000","primaryColor":"#fe5858","secondaryColor":"#000000"}
+- [button] (main)
+    texto: "RECEBER MEU PLANO AGORA"
+    destino: LINK https://payfast.greenn.com.br/redirect/286218
+    settings: {"animation":"pulse"}
+- [warranty] (main)
+    texto: "Garantia de Devolução de 100% do Dinheiro\n\nAcreditamos que nosso plano pode funcionar para você e que obterá resultados visíveis em 21 dias! Estamos prontos para reembolsá-la completamente em até 21 dias após a compra se você não obtiver resultados visíveis e puder demonstrar que seguiu nosso plano."
+    outros-conteúdo: {"icon":{"name":"badge-check","node":[["path",{"d":"M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z","key":"3c2336"}],["path",{"d":"m9 12 2 2 4-4","key":"dzmm74"}]]},"title":"<p><span style=\"color:rgb(0, 0, 0)\">Seu risco é zero!</span></p>"}
+    tema: {"container":true,"textColor":"#000000","backgroundColor":"#ffffff"}
+- [title] (main)
+    texto: "ACESSO IMEDIATO!"
+    tema: {"fontSize":"xsmall"}
+- [title] (main)
+    texto: "🎁 Não Saia Desta Página para Não Perder Esta Oferta Especial!"
+    tema: {"fontSize":"xsmall"}
+- [button] (main)
+    texto: "QUERO FALAR COM A MI"
+    destino: LINK https://w.app/mzbclubfeed
+    settings: {"animation":"pulse"}
+
+=== NÓ FUNÇÃO 01a96502-4161-4511-98cf-8da545e8dcac: {"url":"https://payfast.greenn.com.br/redirect/286218","icon":"link","name":"Link","type":"link"}
+
+=== NÓ FUNÇÃO 9a6f7fc2-45bd-46f5-8a6a-188bbe464600: {"url":"https://w.app/mzbclubfeed","icon":"link","name":"Link","type":"link"}

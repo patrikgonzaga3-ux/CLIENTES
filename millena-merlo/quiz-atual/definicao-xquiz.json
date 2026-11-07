@@ -1,0 +1,2859 @@
+{
+  "funnel": {
+    "id": "cmupsir0900s5hmrk6s487e4a",
+    "name": "Desafio da Milena",
+    "nodes": [
+      {
+        "id": "9a6f7fc2-45bd-46f5-8a6a-188bbe464600",
+        "type": "function",
+        "data": {
+          "url": "https://w.app/mzbclubfeed",
+          "icon": "link",
+          "name": "Link",
+          "type": "link"
+        }
+      },
+      {
+        "id": "01625896-83bc-4cff-be6e-2ea56f88d9b1",
+        "type": "page",
+        "data": {
+          "name": "PG-AQUECIMENTO",
+          "slug": "zwxnvo01l0",
+          "elements": [
+            {
+              "id": "3d9862a6-df19-4be9-9c9b-313af6588b4c",
+              "icon": "images",
+              "name": "Cabeçalho",
+              "type": "header",
+              "content": {
+                "logoSize": 36,
+                "backButton": true
+              },
+              "version": 1,
+              "category": "heading",
+              "position": "header"
+            },
+            {
+              "id": "5d9d4e83-470d-4513-8c7f-f00904c93e97",
+              "icon": "heading",
+              "name": "Título",
+              "type": "title",
+              "theme": {
+                "textColor": "#ff0000"
+              },
+              "content": {
+                "text": "<p><span><strong>PARABÉNS O SEU DESAFIO ESTÁ PRONTO</strong></span></p>",
+                "subtitle": "<p><span style=\"color: rgb(255, 255, 255);\"><strong>Com base no seu perfil, você tem o DESAFIO MAGRA PRO MAX pela frente com todas as ferramentas para secar a barriga, afinar a cintura, definir coxas e glúteos, construir um corpo mais firme e feminino. E eu vou te ajudar.</strong></span></p>"
+              },
+              "version": 1,
+              "category": "heading",
+              "position": "main"
+            },
+            {
+              "id": "8beff06f-61ab-479b-b9ba-713d3ccb8fcc",
+              "icon": "clapperboard",
+              "name": "Vídeo",
+              "type": "vturb",
+              "content": {
+                "source": "<vturb-smartplayer id=\"vid-6a1d7c05f819e44f4c81322b\" style=\"display: block; margin: 0 auto; width: 100%; \"></vturb-smartplayer> <script type=\"text/javascript\"> var s=document.createElement(\"script\"); s.src=\"https://scripts.converteai.net/9406f62d-bd68-44a6-971a-c0a91bdff3c8/players/6a1d7c05f819e44f4c81322b/v4/player.js\", s.async=!0,document.head.appendChild(s); </script>"
+              },
+              "version": 1,
+              "category": "integration",
+              "position": "main"
+            },
+            {
+              "id": "c66e867b-8d71-4ea5-b273-197f0d8bdabe",
+              "icon": "heading",
+              "name": "Título",
+              "type": "title",
+              "theme": {
+                "fontSize": "xsmall",
+                "textColor": "#fe0606"
+              },
+              "content": {
+                "text": "<p><span><strong><em>EU VOU TE DAR 75% DE DESCONTO APLICADO E 30 DIAS DE GARANTIA PORQUE EU SEI QUE VOCÊ ESTÁ PRONTA.</em></strong></span></p>"
+              },
+              "version": 1,
+              "category": "heading",
+              "position": "main"
+            },
+            {
+              "id": "516eb57f-7dc0-4e66-bb20-2e33e3041fa3",
+              "icon": "tag",
+              "name": "Preço",
+              "type": "price",
+              "theme": {
+                "container": true,
+                "textColor": "#000000",
+                "primaryColor": "#fe5858",
+                "secondaryColor": "#000000"
+              },
+              "content": {
+                "icon": {
+                  "name": "circle-check-big",
+                  "node": [
+                    [
+                      "path",
+                      {
+                        "d": "M21.801 10A10 10 0 1 1 17 3.335",
+                        "key": "yps3ct"
+                      }
+                    ],
+                    [
+                      "path",
+                      {
+                        "d": "m9 11 3 3L22 4",
+                        "key": "1pflzl"
+                      }
+                    ]
+                  ]
+                },
+                "price": "<p>R$ 3,08</p>",
+                "title": "<p><strong>VALIDO HOJE</strong></p>",
+                "subtitle": "<p><s>(DE R$197,00)</s></p>",
+                "priceLabel": "Por apenas 12x de"
+              },
+              "version": 1,
+              "category": "sales",
+              "position": "main"
+            },
+            {
+              "id": "3420328f-3c72-4cd8-9855-b6241fbbb9e0",
+              "icon": "square-mouse-pointer",
+              "name": "Botão",
+              "type": "button",
+              "theme": {
+                "primaryColor": "#ca4b00"
+              },
+              "content": {
+                "text": "<p>COMEÇAR A MINHA TRANSFORMAÇÃO</p>"
+              },
+              "version": 1,
+              "category": "action",
+              "position": "main",
+              "settings": {
+                "animation": "pulse"
+              },
+              "targetNodeId": "01a96502-4161-4511-98cf-8da545e8dcac"
+            },
+            {
+              "id": "9b918cf2-162d-405e-b789-641a1b7bd55c",
+              "icon": "heading",
+              "name": "Título",
+              "type": "title",
+              "theme": {
+                "fontSize": "xsmall"
+              },
+              "content": {
+                "text": "<p><strong>NOSSAS ALUNAS SE PRIORIZARAM COM </strong><span style=\"color:rgb(255, 0, 0)\"><strong>DESAFIO MAGRA PRO MAX</strong></span></p>",
+                "subtitle": "<p><span><strong>É sua vez de se priorizar. Você merece essa mudança!</strong></span></p>"
+              },
+              "version": 1,
+              "category": "heading",
+              "position": "main"
+            },
+            {
+              "id": "00f02f32-9e75-45c5-939d-28c67bc42989",
+              "icon": "gallery-horizontal-end",
+              "name": "Carrossel",
+              "type": "carousel",
+              "content": {
+                "loop": true,
+                "slides": [
+                  {
+                    "id": "7c37f584-780a-425b-8201-f2d8cc1efae5",
+                    "image": {
+                      "image": {
+                        "name": "Legacy image 3c1c9925-71bb-4a93-a279-75703fb77753",
+                        "width": 1080,
+                        "height": 1080,
+                        "providerId": "5e648370-8341-4af2-e6e9-eaaeee9fee00"
+                      }
+                    }
+                  },
+                  {
+                    "id": "37511a87-e0e5-4040-b2cc-d9a865d06562",
+                    "image": {
+                      "image": {
+                        "name": "Legacy image a141eb79-06da-4413-8144-e209da07dd4f",
+                        "width": 1080,
+                        "height": 1080,
+                        "providerId": "3b85e630-5720-4b11-3903-0a2fadd4e200"
+                      }
+                    }
+                  },
+                  {
+                    "id": "605304b3-f5dc-4a58-8ea8-6161c72eddbc",
+                    "image": {
+                      "image": {
+                        "name": "Legacy image 0a8ca2a9-c954-4e21-be42-4be4f96d0285",
+                        "width": 1080,
+                        "height": 1080,
+                        "providerId": "8f662caf-d7ba-473d-d41e-76cfecc50f00"
+                      }
+                    }
+                  },
+                  {
+                    "id": "ada1c6a1-9628-4113-a433-0f648d0bc9ae",
+                    "image": {
+                      "image": {
+                        "name": "Legacy image 72eb7f0b-8279-4e24-b169-ac69170eca66",
+                        "width": 1080,
+                        "height": 1080,
+                        "providerId": "9d614122-1ee8-47e5-b78e-b4235e7fff00"
+                      }
+                    }
+                  },
+                  {
+                    "id": "909d65da-5eff-42cc-ba7e-8f8e7b044a29",
+                    "image": {
+                      "image": {
+                        "name": "Legacy image 9705eea9-0a8f-4d5f-a577-589d3334b2f9",
+                        "width": 1080,
+                        "height": 1080,
+                        "providerId": "b7fa83d6-5f3d-44f0-b046-673fd0d96b00"
+                      }
+                    }
+                  }
+                ],
+                "showDots": true,
+                "showControls": true
+              },
+              "version": 1,
+              "category": "media",
+              "position": "main"
+            },
+            {
+              "id": "aaf7057b-94b5-4b14-846a-5c679305d20f",
+              "icon": "heading",
+              "name": "Título",
+              "type": "title",
+              "theme": {
+                "fontSize": "xsmall",
+                "textColor": "#ffffff"
+              },
+              "content": {
+                "text": "<p><strong>⭐⭐⭐⭐⭐</strong></p><p><span style=\"font-size: 78%\"><strong>BASEADO EM MAIS DE 12.000 TRANSFORMAÇÕES REAIS Junte-se as milhares de mulheres que já transformaram o corpo com o meu </strong></span><span style=\"color:rgb(251, 9, 9); font-size: 78%\"><strong>DESAFIO MAGRA PRO MAX</strong></span><span style=\"font-size: 78%\"><strong>.</strong></span></p>"
+              },
+              "version": 1,
+              "category": "heading",
+              "position": "main"
+            },
+            {
+              "id": "3cfea1de-0dca-46b1-8ab9-c45f0b17296a",
+              "icon": "list-checks",
+              "name": "Benefícios",
+              "type": "benefits",
+              "theme": {
+                "container": true,
+                "backgroundColor": "#000000"
+              },
+              "content": {
+                "icon": {
+                  "name": "check-circle",
+                  "node": [
+                    [
+                      "path",
+                      {
+                        "d": "M21.801 10A10 10 0 1 1 17 3.335",
+                        "key": "yps3ct"
+                      }
+                    ],
+                    [
+                      "path",
+                      {
+                        "d": "m9 11 3 3L22 4",
+                        "key": "1pflzl"
+                      }
+                    ]
+                  ]
+                },
+                "items": [
+                  {
+                    "id": "5a770dcb-9a0c-45d1-9447-7251ad91a62d",
+                    "text": "<p><span style=\"color: rgb(202, 75, 7);\"><strong>Treinos pensando na estética do corpo feminino:</strong></span></p><p><span style=\"color: rgb(255, 255, 255);\">Nada de treinar aleatório. Aqui você treina com estratégia, progressão pra definir do jeito certo;</span></p>"
+                  },
+                  {
+                    "id": "c2cb6d46-1e23-4b3c-85f0-18ca20f12f04",
+                    "text": "<p><span style=\"color: rgb(202, 75, 7);\"><strong>Os 10 minutos que mudam sua barriga de verdade:</strong></span></p><p><span style=\"color: rgb(255, 255, 255);\">A técnica de hipopressivos que substitui 1.000 abdominais e afina sua cintura real;</span></p>"
+                  },
+                  {
+                    "id": "0b0ddc0b-cb3c-4c8f-987f-63e219a68697",
+                    "text": "<p><span style=\"color: rgb(202, 75, 7);\"><strong>Aqui a gente vai direto no que te incomoda:</strong></span></p><p><span style=\"color: rgb(255, 255, 255);\">Pochete, braço mole, coxa sem definição… Você não precisa fazer mais, precisa fazer do jeito certo;</span></p>"
+                  },
+                  {
+                    "id": "f1a690aa-53a0-4149-8117-5aa981ad9482",
+                    "text": "<p><span style=\"color:rgb(202, 75, 7)\"><strong>Sem treinos longos. Sem dieta restritiva. Sem achismo.</strong></span></p>"
+                  }
+                ],
+                "title": "<p><span style=\"color: rgb(255, 255, 255);\"><strong>🎁 SEU DESAFIO ESTÁ PRONTO E VOCÊ JÁ PODE COMEÇAR HOJE MESMO</strong></span></p>"
+              },
+              "version": 1,
+              "category": "sales",
+              "position": "main"
+            },
+            {
+              "id": "d7cb7028-1ee7-49f1-a169-83d71c257442",
+              "icon": "tag",
+              "name": "Preço",
+              "type": "price",
+              "theme": {
+                "container": true,
+                "textColor": "#000000",
+                "primaryColor": "#fe5858",
+                "secondaryColor": "#000000"
+              },
+              "content": {
+                "icon": {
+                  "name": "circle-check-big",
+                  "node": [
+                    [
+                      "path",
+                      {
+                        "d": "M21.801 10A10 10 0 1 1 17 3.335",
+                        "key": "yps3ct"
+                      }
+                    ],
+                    [
+                      "path",
+                      {
+                        "d": "m9 11 3 3L22 4",
+                        "key": "1pflzl"
+                      }
+                    ]
+                  ]
+                },
+                "price": "<p>R$ 3,08</p>",
+                "title": "<p><strong>VALIDO HOJE</strong></p>",
+                "subtitle": "<p><s>(DE R$197,00)</s></p>",
+                "priceLabel": "Por apenas 12x de"
+              },
+              "version": 1,
+              "category": "sales",
+              "position": "main"
+            },
+            {
+              "id": "7dc43822-b429-4f24-9225-9ea81eb94680",
+              "icon": "square-mouse-pointer",
+              "name": "Botão",
+              "type": "button",
+              "content": {
+                "text": "<p>RECEBER MEU PLANO AGORA</p>"
+              },
+              "version": 1,
+              "category": "action",
+              "position": "main",
+              "settings": {
+                "animation": "pulse"
+              },
+              "targetNodeId": "01a96502-4161-4511-98cf-8da545e8dcac"
+            },
+            {
+              "id": "23e3efb5-cec8-4e88-962c-a2de20892d55",
+              "icon": "badge-check",
+              "name": "Garantia",
+              "type": "warranty",
+              "theme": {
+                "container": true,
+                "textColor": "#000000",
+                "backgroundColor": "#ffffff"
+              },
+              "content": {
+                "icon": {
+                  "name": "badge-check",
+                  "node": [
+                    [
+                      "path",
+                      {
+                        "d": "M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z",
+                        "key": "3c2336"
+                      }
+                    ],
+                    [
+                      "path",
+                      {
+                        "d": "m9 12 2 2 4-4",
+                        "key": "dzmm74"
+                      }
+                    ]
+                  ]
+                },
+                "text": "<p><span style=\"color:rgb(0, 0, 0)\"><strong>Garantia de Devolução de 100% do Dinheiro</strong></span></p><p></p><p><span style=\"color:rgb(0, 0, 0)\"><strong>Acreditamos que nosso plano pode funcionar para você e que obterá resultados visíveis em 21 dias! Estamos prontos para reembolsá-la completamente em até 21 dias após a compra se você não obtiver resultados visíveis e puder demonstrar que seguiu nosso plano.</strong></span></p>",
+                "title": "<p><span style=\"color:rgb(0, 0, 0)\">Seu risco é zero!</span></p>"
+              },
+              "version": 1,
+              "category": "sales",
+              "position": "main"
+            },
+            {
+              "id": "14862177-1cd6-4f17-8b42-e60044d0122b",
+              "icon": "heading",
+              "name": "Título",
+              "type": "title",
+              "theme": {
+                "fontSize": "xsmall"
+              },
+              "content": {
+                "text": "<p><span style=\"color: rgb(255, 255, 255);\"><strong>ACESSO IMEDIATO!</strong></span></p>"
+              },
+              "version": 1,
+              "category": "heading",
+              "position": "main"
+            },
+            {
+              "id": "df8b92fb-7a6b-4ea1-830b-92897947c0c2",
+              "icon": "heading",
+              "name": "Título",
+              "type": "title",
+              "theme": {
+                "fontSize": "xsmall"
+              },
+              "content": {
+                "text": "<p><strong>🎁 </strong><span style=\"color: rgb(255, 255, 255);\"><strong>Não Saia Desta Página para Não Perder Esta Oferta Especial!</strong></span></p>"
+              },
+              "version": 1,
+              "category": "heading",
+              "position": "main"
+            },
+            {
+              "id": "ded27ee6-b3a2-4a0c-b48e-573ef27cfd7f",
+              "icon": "square-mouse-pointer",
+              "name": "Botão",
+              "type": "button",
+              "content": {
+                "text": "<p>QUERO FALAR COM A MI</p>"
+              },
+              "version": 1,
+              "category": "action",
+              "position": "main",
+              "settings": {
+                "animation": "pulse"
+              },
+              "targetNodeId": "9a6f7fc2-45bd-46f5-8a6a-188bbe464600"
+            }
+          ],
+          "settings": {}
+        }
+      },
+      {
+        "id": "01a96502-4161-4511-98cf-8da545e8dcac",
+        "type": "function",
+        "data": {
+          "url": "https://payfast.greenn.com.br/redirect/286218",
+          "icon": "link",
+          "name": "Link",
+          "type": "link"
+        }
+      },
+      {
+        "id": "3de480d5-85cd-4bb4-8202-220e4b08cd89",
+        "type": "page",
+        "data": {
+          "name": "quiz15",
+          "slug": "q32s89md59",
+          "elements": [
+            {
+              "id": "6daf56e0-cd52-4641-bd69-26b3abd5cba8",
+              "icon": "images",
+              "name": "Cabeçalho",
+              "type": "header",
+              "content": {
+                "logoSize": 36,
+                "backButton": true
+              },
+              "version": 1,
+              "category": "heading",
+              "position": "header"
+            },
+            {
+              "id": "9c940149-da5e-473e-8610-368d62b138bd",
+              "icon": "stretch-horizontal",
+              "name": "Progresso",
+              "type": "progress",
+              "theme": {
+                "primaryColor": "#e6a079",
+                "secondaryColor": "#ca4b07"
+              },
+              "content": {
+                "endValue": 84
+              },
+              "version": 1,
+              "category": "heading",
+              "position": "header"
+            },
+            {
+              "id": "c4d18572-ba90-480d-96b2-eb68a5732007",
+              "icon": "heading",
+              "name": "Título",
+              "type": "title",
+              "theme": {
+                "fontSize": "xsmall"
+              },
+              "content": {
+                "text": "<p><span style=\"color: rgb(255, 255, 255);\">Você está pronta para seguir um plano que funciona de verdade?</span></p>"
+              },
+              "version": 1,
+              "category": "heading",
+              "position": "main"
+            },
+            {
+              "id": "1a0590c4-8c5d-47fc-b23c-8a15660c1f3d",
+              "icon": "smile",
+              "name": "Quiz",
+              "type": "quizEmoji",
+              "theme": {
+                "variant": "soft",
+                "borderColor": "#ca4b07",
+                "backgroundColor": "#e6a079"
+              },
+              "content": {
+                "format": "list",
+                "options": [
+                  {
+                    "id": "0c1d30ae-9530-4b12-b868-34b94b1cab09",
+                    "text": "<p><span>Sim, é a minha VEZ!</span></p>",
+                    "emoji": {
+                      "emoji": "🤩"
+                    },
+                    "targetNodeId": "01625896-83bc-4cff-be6e-2ea56f88d9b1"
+                  },
+                  {
+                    "id": "4aaea827-26f6-44d1-887c-48e0cfe109e9",
+                    "text": "<p><span>Quero começar HOJE!</span></p>",
+                    "emoji": {
+                      "emoji": "😘"
+                    },
+                    "targetNodeId": "01625896-83bc-4cff-be6e-2ea56f88d9b1"
+                  },
+                  {
+                    "id": "a19b6748-12a1-4e8d-80bc-b8174a216205",
+                    "text": "<p><span>Adeus, falsa magra!</span></p>",
+                    "emoji": {
+                      "emoji": "😻"
+                    },
+                    "targetNodeId": "01625896-83bc-4cff-be6e-2ea56f88d9b1"
+                  },
+                  {
+                    "id": "7b4fb126-6aa1-4b64-91d1-64c9ad7bf26f",
+                    "text": "<p><span>100% comprometida.</span></p>",
+                    "emoji": {
+                      "emoji": "😝"
+                    },
+                    "targetNodeId": "01625896-83bc-4cff-be6e-2ea56f88d9b1"
+                  }
+                ],
+                "checkbox": "right",
+                "multiple": false,
+                "required": true,
+                "placement": "left"
+              },
+              "version": 1,
+              "category": "quiz",
+              "position": "main"
+            }
+          ],
+          "settings": {}
+        }
+      },
+      {
+        "id": "b2bb7794-8cfe-4a7e-bf98-36d9cda806d6",
+        "type": "page",
+        "data": {
+          "name": "quiz14",
+          "slug": "a0em4tu9yh",
+          "elements": [
+            {
+              "id": "bfadbfaf-586c-4d55-b825-81a685864678",
+              "icon": "images",
+              "name": "Cabeçalho",
+              "type": "header",
+              "content": {
+                "logoSize": 36,
+                "backButton": true
+              },
+              "version": 1,
+              "category": "heading",
+              "position": "header"
+            },
+            {
+              "id": "caca4189-e3af-4043-9e20-07436ab08b17",
+              "icon": "stretch-horizontal",
+              "name": "Progresso",
+              "type": "progress",
+              "theme": {
+                "primaryColor": "#e6a079",
+                "secondaryColor": "#ca4b07"
+              },
+              "content": {
+                "endValue": 78
+              },
+              "version": 1,
+              "category": "heading",
+              "position": "header"
+            },
+            {
+              "id": "f9996887-0f41-4415-ad0e-535a3f795ed8",
+              "icon": "heading",
+              "name": "Título",
+              "type": "title",
+              "theme": {
+                "fontSize": "xsmall"
+              },
+              "content": {
+                "text": "<p><span style=\"color: rgb(255, 255, 255);\">O que significa ser uma \"Mulher Poderosa\" para você?</span></p>"
+              },
+              "version": 1,
+              "category": "heading",
+              "position": "main"
+            },
+            {
+              "id": "4d9b555e-8e88-43f2-a3ac-e664267cacbb",
+              "icon": "smile",
+              "name": "Quiz",
+              "type": "quizEmoji",
+              "theme": {
+                "variant": "soft",
+                "borderColor": "#ca4b07",
+                "backgroundColor": "#e6a079"
+              },
+              "content": {
+                "format": "list",
+                "options": [
+                  {
+                    "id": "2897613e-b478-46eb-8257-d822291b6027",
+                    "text": "<p><span>Ter autoconfiança total;</span></p>",
+                    "emoji": {
+                      "emoji": "😻"
+                    },
+                    "targetNodeId": "3de480d5-85cd-4bb4-8202-220e4b08cd89"
+                  },
+                  {
+                    "id": "797e093c-461d-451d-94a6-ae6964beb4e5",
+                    "text": "<p><span>Amar meu reflexo no espelho;</span></p>",
+                    "emoji": {
+                      "emoji": "😘"
+                    },
+                    "targetNodeId": "3de480d5-85cd-4bb4-8202-220e4b08cd89"
+                  },
+                  {
+                    "id": "de722bdc-7acd-4661-b2b5-d4c33837d8fe",
+                    "text": "<p><span>Ter energia e disposição;</span></p>",
+                    "emoji": {
+                      "emoji": "🥳"
+                    },
+                    "targetNodeId": "3de480d5-85cd-4bb4-8202-220e4b08cd89"
+                  },
+                  {
+                    "id": "82f766e8-795e-460e-a2a8-4f7bac5477a4",
+                    "text": "<p><span>Me sentir linda e forte.</span></p>",
+                    "emoji": {
+                      "emoji": "😎"
+                    },
+                    "targetNodeId": "3de480d5-85cd-4bb4-8202-220e4b08cd89"
+                  }
+                ],
+                "checkbox": "right",
+                "multiple": false,
+                "required": true,
+                "placement": "left"
+              },
+              "version": 1,
+              "category": "quiz",
+              "position": "main"
+            }
+          ],
+          "settings": {}
+        }
+      },
+      {
+        "id": "bec1c911-eb0a-48e1-8266-9356a1c4e81c",
+        "type": "page",
+        "data": {
+          "name": "quiz13",
+          "slug": "j6uaw4yfoy",
+          "elements": [
+            {
+              "id": "3ea0fb57-5b26-453d-a647-e3208a7eeb5e",
+              "icon": "images",
+              "name": "Cabeçalho",
+              "type": "header",
+              "content": {
+                "logoSize": 36,
+                "backButton": true
+              },
+              "version": 1,
+              "category": "heading",
+              "position": "header"
+            },
+            {
+              "id": "6bdc8842-b224-498d-af02-bb34a557e849",
+              "icon": "stretch-horizontal",
+              "name": "Progresso",
+              "type": "progress",
+              "theme": {
+                "primaryColor": "#e6a079",
+                "secondaryColor": "#ca4b07"
+              },
+              "content": {
+                "endValue": 72
+              },
+              "version": 1,
+              "category": "heading",
+              "position": "header"
+            },
+            {
+              "id": "32c53127-a69c-4032-aff3-d37c23b56614",
+              "icon": "heading",
+              "name": "Título",
+              "type": "title",
+              "theme": {
+                "fontSize": "xsmall"
+              },
+              "content": {
+                "text": "<p><span style=\"color: rgb(255, 255, 255);\">Qual roupa você vai usar para estrear seu novo corpo?</span></p>"
+              },
+              "version": 1,
+              "category": "heading",
+              "position": "main"
+            },
+            {
+              "id": "0d2ae039-3f16-4058-a949-541a317a1617",
+              "icon": "smile",
+              "name": "Quiz",
+              "type": "quizEmoji",
+              "theme": {
+                "variant": "soft",
+                "borderColor": "#ca4b07",
+                "backgroundColor": "#e6a079"
+              },
+              "content": {
+                "format": "list",
+                "options": [
+                  {
+                    "id": "329e24a1-ccd0-43c9-867d-0462749422d5",
+                    "text": "<p><span>Aquele biquíni cavado;</span></p>",
+                    "emoji": {
+                      "emoji": "😁"
+                    },
+                    "targetNodeId": "b2bb7794-8cfe-4a7e-bf98-36d9cda806d6"
+                  },
+                  {
+                    "id": "63470216-a0db-42e8-8874-1ab0dbc0ba4f",
+                    "text": "<p><span>Um vestido justo e sexy;</span></p>",
+                    "emoji": {
+                      "emoji": "🤩"
+                    },
+                    "targetNodeId": "b2bb7794-8cfe-4a7e-bf98-36d9cda806d6"
+                  },
+                  {
+                    "id": "61a72acc-f022-4ce1-8f97-fe0089e677f8",
+                    "text": "<p><span>Jeans e cropped (sem medo);</span></p>",
+                    "emoji": {
+                      "emoji": "🤭"
+                    },
+                    "targetNodeId": "b2bb7794-8cfe-4a7e-bf98-36d9cda806d6"
+                  },
+                  {
+                    "id": "aa4c9911-2543-426b-9054-b488ffa9d118",
+                    "text": "<p><span>Lingerie poderosa.</span></p>",
+                    "emoji": {
+                      "emoji": "😻"
+                    },
+                    "targetNodeId": "b2bb7794-8cfe-4a7e-bf98-36d9cda806d6"
+                  }
+                ],
+                "checkbox": "right",
+                "multiple": false,
+                "required": true,
+                "placement": "left"
+              },
+              "version": 1,
+              "category": "quiz",
+              "position": "main"
+            }
+          ],
+          "settings": {}
+        }
+      },
+      {
+        "id": "d9a67095-bf7d-48b7-8594-2b7427b33b4e",
+        "type": "page",
+        "data": {
+          "name": "quiz12",
+          "slug": "n6u46m1ufp",
+          "elements": [
+            {
+              "id": "be21f606-4504-47eb-8105-4913a4c34476",
+              "icon": "images",
+              "name": "Cabeçalho",
+              "type": "header",
+              "content": {
+                "logoSize": 36,
+                "backButton": true
+              },
+              "version": 1,
+              "category": "heading",
+              "position": "header"
+            },
+            {
+              "id": "796440c1-89db-4112-956f-ab1f4cb8fd72",
+              "icon": "stretch-horizontal",
+              "name": "Progresso",
+              "type": "progress",
+              "theme": {
+                "primaryColor": "#e6a079",
+                "secondaryColor": "#ca4b07"
+              },
+              "content": {
+                "endValue": 66
+              },
+              "version": 1,
+              "category": "heading",
+              "position": "header"
+            },
+            {
+              "id": "265a3f92-2702-4098-9ade-45a62ee2b802",
+              "icon": "heading",
+              "name": "Título",
+              "type": "title",
+              "theme": {
+                "fontSize": "xsmall"
+              },
+              "content": {
+                "text": "<p><span style=\"color: rgb(255, 255, 255);\">Em quanto tempo você gostaria de ver resultado?</span></p>"
+              },
+              "version": 1,
+              "category": "heading",
+              "position": "main"
+            },
+            {
+              "id": "8b93ece7-dddd-4cbb-aae7-a013ceeaed77",
+              "icon": "layout-list",
+              "name": "Quiz",
+              "type": "quizText",
+              "theme": {
+                "variant": "soft",
+                "borderColor": "#ca4b07",
+                "backgroundColor": "#e6a079"
+              },
+              "content": {
+                "format": "list",
+                "options": [
+                  {
+                    "id": "a75d1202-f4db-4795-a9cf-c7e646e57991",
+                    "text": "<p><span>7 dias (pelo menos um sinal de mudança);</span></p>",
+                    "targetNodeId": "bec1c911-eb0a-48e1-8266-9356a1c4e81c"
+                  },
+                  {
+                    "id": "bee92e9d-fbc6-431d-8ac5-28eda6f8f680",
+                    "text": "<p><span>10 dias (quero ver a diferença nas roupas);</span></p>",
+                    "targetNodeId": "bec1c911-eb0a-48e1-8266-9356a1c4e81c"
+                  },
+                  {
+                    "id": "3d8c87b8-e1e3-4641-8d5e-62313f483ff1",
+                    "text": "<p><span>14 dias (quero mudar de verdade);</span></p>",
+                    "targetNodeId": "bec1c911-eb0a-48e1-8266-9356a1c4e81c"
+                  },
+                  {
+                    "id": "cdb53238-a908-4e44-adfd-96034c3acadb",
+                    "text": "<p><span>Não importa, desde que eu emagreça.</span></p>",
+                    "targetNodeId": "bec1c911-eb0a-48e1-8266-9356a1c4e81c"
+                  }
+                ],
+                "checkbox": "right",
+                "multiple": false,
+                "required": true
+              },
+              "version": 1,
+              "category": "quiz",
+              "position": "main"
+            }
+          ],
+          "settings": {}
+        }
+      },
+      {
+        "id": "11cb0873-e5c1-4b16-acde-e9daf687f6a3",
+        "type": "page",
+        "data": {
+          "name": "QUIZ11",
+          "slug": "qx2d6nkqcx",
+          "elements": [
+            {
+              "id": "0da8410a-08ba-4597-b6b6-e69415447bee",
+              "icon": "images",
+              "name": "Cabeçalho",
+              "type": "header",
+              "content": {
+                "logoSize": 36,
+                "backButton": true
+              },
+              "version": 1,
+              "category": "heading",
+              "position": "header"
+            },
+            {
+              "id": "4f431cfe-4729-4a12-93fd-433801672d3a",
+              "icon": "stretch-horizontal",
+              "name": "Progresso",
+              "type": "progress",
+              "theme": {
+                "primaryColor": "#e6a079",
+                "secondaryColor": "#ca4b07"
+              },
+              "content": {
+                "endValue": 60
+              },
+              "version": 1,
+              "category": "heading",
+              "position": "header"
+            },
+            {
+              "id": "da2a3807-d974-457d-919b-6f0b0148e404",
+              "icon": "heading",
+              "name": "Título",
+              "type": "title",
+              "theme": {
+                "fontSize": "xsmall"
+              },
+              "content": {
+                "text": "<p><span style=\"color: rgb(255, 255, 255);\">Imagine seu corpo daqui a 21 dias.</span></p>"
+              },
+              "version": 1,
+              "category": "heading",
+              "position": "main"
+            },
+            {
+              "id": "4ebb7cb4-393b-4f0f-ad77-6326ec41384b",
+              "icon": "smile",
+              "name": "Quiz",
+              "type": "quizEmoji",
+              "theme": {
+                "variant": "soft",
+                "borderColor": "#ca4b07",
+                "backgroundColor": "#e6a079"
+              },
+              "content": {
+                "format": "list",
+                "options": [
+                  {
+                    "id": "bf0e191b-2ebb-41e9-89dc-17f2699e4187",
+                    "text": "<p><span>Cintura fina e desenhada;</span></p>",
+                    "emoji": {
+                      "emoji": "😍"
+                    },
+                    "targetNodeId": "d9a67095-bf7d-48b7-8594-2b7427b33b4e"
+                  },
+                  {
+                    "id": "dfa0843e-bb9c-4e95-ae15-d5ce775e7edb",
+                    "text": "<p><span>Bumbum durinho e na nuca;</span></p>",
+                    "emoji": {
+                      "emoji": "🤩"
+                    },
+                    "targetNodeId": "d9a67095-bf7d-48b7-8594-2b7427b33b4e"
+                  },
+                  {
+                    "id": "d5227339-4261-4ba4-af4e-01d467a2976c",
+                    "text": "<p><span>Barriga negativa/chapada;</span></p>",
+                    "emoji": {
+                      "emoji": "😬"
+                    },
+                    "targetNodeId": "d9a67095-bf7d-48b7-8594-2b7427b33b4e"
+                  },
+                  {
+                    "id": "4de28be9-34f4-42a8-88bc-02a4b224d8b1",
+                    "text": "<p><span>Pernas torneadas e firmes.</span></p>",
+                    "emoji": {
+                      "emoji": "🫣"
+                    },
+                    "targetNodeId": "d9a67095-bf7d-48b7-8594-2b7427b33b4e"
+                  }
+                ],
+                "checkbox": "right",
+                "multiple": false,
+                "required": true,
+                "placement": "left"
+              },
+              "version": 1,
+              "category": "quiz",
+              "position": "main"
+            }
+          ],
+          "settings": {}
+        }
+      },
+      {
+        "id": "c085a1e4-fcc4-4a43-9a30-381f8afa48dc",
+        "type": "page",
+        "data": {
+          "name": "quiz10",
+          "slug": "f3ax51q0p6",
+          "elements": [
+            {
+              "id": "8307190e-6dbf-4800-a73c-0a5c33ba5f8b",
+              "icon": "images",
+              "name": "Cabeçalho",
+              "type": "header",
+              "content": {
+                "logoSize": 36,
+                "backButton": true
+              },
+              "version": 1,
+              "category": "heading",
+              "position": "header"
+            },
+            {
+              "id": "8793da5d-4ffd-469a-bcae-f9e1d3b5b7fb",
+              "icon": "stretch-horizontal",
+              "name": "Progresso",
+              "type": "progress",
+              "theme": {
+                "primaryColor": "#e6a079",
+                "secondaryColor": "#ca4b07"
+              },
+              "content": {
+                "endValue": 54
+              },
+              "version": 1,
+              "category": "heading",
+              "position": "header"
+            },
+            {
+              "id": "011639ef-1576-48e8-a30f-6b761b2f2e41",
+              "icon": "heading",
+              "name": "Título",
+              "type": "title",
+              "theme": {
+                "fontSize": "xsmall"
+              },
+              "content": {
+                "text": "<p><span style=\"color: rgb(255, 255, 255);\">Que intensidade você deseja treinar?</span></p>"
+              },
+              "version": 1,
+              "category": "heading",
+              "position": "main"
+            },
+            {
+              "id": "94604eec-0958-4ae9-ac04-23aeb180a01b",
+              "icon": "smile",
+              "name": "Quiz",
+              "type": "quizEmoji",
+              "theme": {
+                "variant": "soft",
+                "borderColor": "#ca4b07",
+                "backgroundColor": "#e6a079"
+              },
+              "content": {
+                "format": "list",
+                "options": [
+                  {
+                    "id": "f511350d-570b-4ec2-b322-c6e1864d77bd",
+                    "text": "<p><span>Ir aumentando aos poucos;</span></p>",
+                    "emoji": {
+                      "emoji": "🙆‍♀️"
+                    },
+                    "targetNodeId": "11cb0873-e5c1-4b16-acde-e9daf687f6a3"
+                  },
+                  {
+                    "id": "9702c955-3e5d-4929-beea-20a397feffc2",
+                    "text": "<p><span>Já quero suar e sentir o corpo;</span></p>",
+                    "emoji": {
+                      "emoji": "💁‍♀️"
+                    },
+                    "targetNodeId": "11cb0873-e5c1-4b16-acde-e9daf687f6a3"
+                  },
+                  {
+                    "id": "f0a5c4b7-cf23-415a-9095-4077702e9c04",
+                    "text": "<p><span>Quero que você decida por mim.</span></p>",
+                    "emoji": {
+                      "emoji": "🙅‍♀️"
+                    },
+                    "targetNodeId": "11cb0873-e5c1-4b16-acde-e9daf687f6a3"
+                  }
+                ],
+                "checkbox": "right",
+                "multiple": false,
+                "required": true,
+                "placement": "left"
+              },
+              "version": 1,
+              "category": "quiz",
+              "position": "main"
+            }
+          ],
+          "settings": {}
+        }
+      },
+      {
+        "id": "12429c65-96af-4b84-bf71-b1bdd6e4a798",
+        "type": "page",
+        "data": {
+          "name": "quiz9",
+          "slug": "dipd0ujt9n",
+          "elements": [
+            {
+              "id": "4d9975b3-b763-4b2f-81ab-fb0c0c8bc514",
+              "icon": "images",
+              "name": "Cabeçalho",
+              "type": "header",
+              "content": {
+                "logoSize": 36,
+                "backButton": true
+              },
+              "version": 1,
+              "category": "heading",
+              "position": "header"
+            },
+            {
+              "id": "445cdf4f-ff0d-4aee-8f3c-3ecf86ea3067",
+              "icon": "stretch-horizontal",
+              "name": "Progresso",
+              "type": "progress",
+              "theme": {
+                "primaryColor": "#e6a079",
+                "secondaryColor": "#ca4b07"
+              },
+              "content": {
+                "endValue": 48
+              },
+              "version": 1,
+              "category": "heading",
+              "position": "header"
+            },
+            {
+              "id": "d08db2cc-0de7-4693-8773-ce14f47a2e6c",
+              "icon": "heading",
+              "name": "Título",
+              "type": "title",
+              "theme": {
+                "fontSize": "xsmall"
+              },
+              "content": {
+                "text": "<p><span style=\"color: rgb(255, 255, 255);\">Você sabia que abdominais tradicionais podem \"estufar\" sua cintura?</span></p>"
+              },
+              "version": 1,
+              "category": "heading",
+              "position": "main"
+            },
+            {
+              "id": "4526fba5-0bca-4eb1-84f6-5a206b47a1e7",
+              "icon": "smile",
+              "name": "Quiz",
+              "type": "quizEmoji",
+              "theme": {
+                "variant": "soft",
+                "borderColor": "#ca4b07",
+                "backgroundColor": "#e6a079"
+              },
+              "content": {
+                "format": "list",
+                "options": [
+                  {
+                    "id": "dfb3a91f-c4a2-4ad6-a6fc-6ab27a06be19",
+                    "text": "<p><span>Sério? Faço 50 por dia!</span></p>",
+                    "emoji": {
+                      "emoji": "😊"
+                    },
+                    "targetNodeId": "c085a1e4-fcc4-4a43-9a30-381f8afa48dc"
+                  },
+                  {
+                    "id": "297b33a9-2aaa-417c-b420-1f8716012b13",
+                    "text": "<p><span>Desconfiava, sinto dores;</span></p>",
+                    "emoji": {
+                      "emoji": "🧐"
+                    },
+                    "targetNodeId": "c085a1e4-fcc4-4a43-9a30-381f8afa48dc"
+                  },
+                  {
+                    "id": "00e65a0d-be52-4f83-a18e-b531bb00aaed",
+                    "text": "<p><span>Não vejo definição neles;</span></p>",
+                    "emoji": {
+                      "emoji": "😨"
+                    },
+                    "targetNodeId": "c085a1e4-fcc4-4a43-9a30-381f8afa48dc"
+                  },
+                  {
+                    "id": "0b211cc2-1698-4090-908b-0743978a629f",
+                    "text": "<p><span>Odeio fazer abdominal.</span></p>",
+                    "emoji": {
+                      "emoji": "😝"
+                    },
+                    "targetNodeId": "c085a1e4-fcc4-4a43-9a30-381f8afa48dc"
+                  }
+                ],
+                "checkbox": "right",
+                "multiple": false,
+                "required": true,
+                "placement": "left"
+              },
+              "version": 1,
+              "category": "quiz",
+              "position": "main"
+            }
+          ],
+          "settings": {}
+        }
+      },
+      {
+        "id": "d9d110f3-c33d-455a-9e21-d206bc4e3803",
+        "type": "page",
+        "data": {
+          "name": "quiz8",
+          "slug": "x1lbkhuzmu",
+          "elements": [
+            {
+              "id": "785625f1-e0bf-4595-aa6a-2da8cf38b883",
+              "icon": "images",
+              "name": "Cabeçalho",
+              "type": "header",
+              "content": {
+                "logoSize": 36,
+                "backButton": true
+              },
+              "version": 1,
+              "category": "heading",
+              "position": "header"
+            },
+            {
+              "id": "cafccb77-be52-43ec-8e16-947f386558d9",
+              "icon": "stretch-horizontal",
+              "name": "Progresso",
+              "type": "progress",
+              "theme": {
+                "primaryColor": "#e6a079",
+                "secondaryColor": "#ca4b07"
+              },
+              "content": {
+                "endValue": 42
+              },
+              "version": 1,
+              "category": "heading",
+              "position": "header"
+            },
+            {
+              "id": "e0dab882-87fa-428a-a8e8-a9591c98690d",
+              "icon": "heading",
+              "name": "Título",
+              "type": "title",
+              "theme": {
+                "fontSize": "xsmall"
+              },
+              "content": {
+                "text": "<p><span style=\"color: rgb(255, 255, 255);\">Como seria a sua alimentação ideal para definir?</span></p>"
+              },
+              "version": 1,
+              "category": "heading",
+              "position": "main"
+            },
+            {
+              "id": "d1dbb9dc-35bc-4d9b-b443-d38e109c7eab",
+              "icon": "smile",
+              "name": "Quiz",
+              "type": "quizEmoji",
+              "theme": {
+                "variant": "soft",
+                "borderColor": "#ca4b07",
+                "backgroundColor": "#e6a079"
+              },
+              "content": {
+                "format": "list",
+                "options": [
+                  {
+                    "id": "2f525283-862f-48e5-99b0-a1d43cfee990",
+                    "text": "<p><span>Comida de verdade e saborosa;</span></p>",
+                    "emoji": {
+                      "emoji": "😋"
+                    },
+                    "targetNodeId": "12429c65-96af-4b84-bf71-b1bdd6e4a798"
+                  },
+                  {
+                    "id": "e25b1c4d-f970-4160-a506-5e8a8f86c66f",
+                    "text": "<p><span>Sem passar fome, jamais;</span></p>",
+                    "emoji": {
+                      "emoji": "😁"
+                    },
+                    "targetNodeId": "12429c65-96af-4b84-bf71-b1bdd6e4a798"
+                  },
+                  {
+                    "id": "aa673212-a16a-400a-b6d6-1b15e85191aa",
+                    "text": "<p><span>Proteína e Carboidratos juntos;</span></p>",
+                    "emoji": {
+                      "emoji": "😌"
+                    },
+                    "targetNodeId": "12429c65-96af-4b84-bf71-b1bdd6e4a798"
+                  },
+                  {
+                    "id": "4bc86e76-b812-4670-8ad5-7c5ec8c148da",
+                    "text": "<p><span>Receitas fáceis e gostosas.</span></p>",
+                    "emoji": {
+                      "emoji": "😍"
+                    },
+                    "targetNodeId": "12429c65-96af-4b84-bf71-b1bdd6e4a798"
+                  }
+                ],
+                "checkbox": "right",
+                "multiple": false,
+                "required": true,
+                "placement": "left"
+              },
+              "version": 1,
+              "category": "quiz",
+              "position": "main"
+            }
+          ],
+          "settings": {}
+        }
+      },
+      {
+        "id": "256db916-35c8-4279-b996-fde77dfeba5b",
+        "type": "page",
+        "data": {
+          "name": "quiz7",
+          "slug": "q3ctoszjyj",
+          "elements": [
+            {
+              "id": "a03fd9a5-d6a8-49b5-9aa2-0d2cd6005f9d",
+              "icon": "images",
+              "name": "Cabeçalho",
+              "type": "header",
+              "content": {
+                "logoSize": 36,
+                "backButton": true
+              },
+              "version": 1,
+              "category": "heading",
+              "position": "header"
+            },
+            {
+              "id": "9e23ca34-0f81-4883-b6c1-bbd3c3c84f65",
+              "icon": "stretch-horizontal",
+              "name": "Progresso",
+              "type": "progress",
+              "theme": {
+                "primaryColor": "#e6a079",
+                "secondaryColor": "#ca4b07"
+              },
+              "content": {
+                "endValue": 36
+              },
+              "version": 1,
+              "category": "heading",
+              "position": "header"
+            },
+            {
+              "id": "a75b3fc7-ceb9-428e-a78e-cd4772dcb82a",
+              "icon": "heading",
+              "name": "Título",
+              "type": "title",
+              "theme": {
+                "fontSize": "xsmall"
+              },
+              "content": {
+                "text": "<p><span style=\"color: rgb(255, 255, 255);\">Quanto tempo você tem para se dedicar a VOCÊ por dia?</span></p>"
+              },
+              "version": 1,
+              "category": "heading",
+              "position": "main"
+            },
+            {
+              "id": "14f448ea-de4c-4f7f-8c1c-dcf163ba763b",
+              "icon": "layout-list",
+              "name": "Quiz",
+              "type": "quizText",
+              "theme": {
+                "variant": "soft",
+                "borderColor": "#ca4b07",
+                "backgroundColor": "#e6a079"
+              },
+              "content": {
+                "format": "list",
+                "options": [
+                  {
+                    "id": "13d9bfb6-1d84-4991-afc8-95d0da122b6c",
+                    "text": "<p><span>10 a 20 minutos (Rápido e Intenso);</span></p>",
+                    "targetNodeId": "d9d110f3-c33d-455a-9e21-d206bc4e3803"
+                  },
+                  {
+                    "id": "a15ce191-b33d-47dc-b941-65985b785f02",
+                    "text": "<p><span>30 a 40 minutos (Um bom tempo);</span></p>",
+                    "targetNodeId": "d9d110f3-c33d-455a-9e21-d206bc4e3803"
+                  },
+                  {
+                    "id": "8999b862-4d37-4eee-92d9-95d9532fec23",
+                    "text": "<p><span>Mais de 1 hora;</span></p>",
+                    "targetNodeId": "d9d110f3-c33d-455a-9e21-d206bc4e3803"
+                  },
+                  {
+                    "id": "de6879c7-e3e0-48a9-8743-2058f43f2504",
+                    "text": "<p><span>O tempo que for necessário.</span></p>",
+                    "targetNodeId": "d9d110f3-c33d-455a-9e21-d206bc4e3803"
+                  }
+                ],
+                "checkbox": "right",
+                "multiple": false,
+                "required": true
+              },
+              "version": 1,
+              "category": "quiz",
+              "position": "main"
+            }
+          ],
+          "settings": {}
+        }
+      },
+      {
+        "id": "bce8d73b-761d-4555-afcb-9445a6cb383a",
+        "type": "page",
+        "data": {
+          "name": "quiz6",
+          "slug": "veaztckusn",
+          "elements": [
+            {
+              "id": "b51660af-14ea-42a9-9d75-47431777ce0b",
+              "icon": "images",
+              "name": "Cabeçalho",
+              "type": "header",
+              "content": {
+                "logoSize": 36,
+                "backButton": true
+              },
+              "version": 1,
+              "category": "heading",
+              "position": "header"
+            },
+            {
+              "id": "086c5311-5c26-4b77-93c3-9d3ebebecce7",
+              "icon": "stretch-horizontal",
+              "name": "Progresso",
+              "type": "progress",
+              "theme": {
+                "primaryColor": "#e6a079",
+                "secondaryColor": "#ca4b07"
+              },
+              "content": {
+                "endValue": 30
+              },
+              "version": 1,
+              "category": "heading",
+              "position": "header"
+            },
+            {
+              "id": "c331ae3b-116b-4dfb-9535-6ab2d986e6e2",
+              "icon": "heading",
+              "name": "Título",
+              "type": "title",
+              "theme": {
+                "textColor": "#ca4b07"
+              },
+              "content": {
+                "text": "<p><span><strong>O Novo Estilo de Vida</strong></span></p><p><span><strong>(O Encaixe Perfeito)</strong></span></p>",
+                "subtitle": "<p><span style=\"color: rgb(255, 255, 255);\">Se você pudesse trocar 1h de esteira por algo eficaz, o que seria?</span></p>"
+              },
+              "version": 1,
+              "category": "heading",
+              "position": "main"
+            },
+            {
+              "id": "3e8b9b1d-9077-40ce-b57b-0bc9854e3010",
+              "icon": "smile",
+              "name": "Quiz",
+              "type": "quizEmoji",
+              "theme": {
+                "variant": "soft",
+                "borderColor": "#ca4b07",
+                "backgroundColor": "#e6a079"
+              },
+              "content": {
+                "format": "list",
+                "options": [
+                  {
+                    "id": "2cf27c74-7821-4d5b-8d07-9935a8fb5c64",
+                    "text": "<p><span>30min de treino intenso;</span></p>",
+                    "emoji": {
+                      "emoji": "🥰"
+                    },
+                    "targetNodeId": "256db916-35c8-4279-b996-fde77dfeba5b"
+                  },
+                  {
+                    "id": "52bc0a39-eb03-41a6-8869-9e6eaeb4401b",
+                    "text": "<p><span>Foco total em perna/bumbum;</span></p>",
+                    "emoji": {
+                      "emoji": "😆"
+                    },
+                    "targetNodeId": "256db916-35c8-4279-b996-fde77dfeba5b"
+                  },
+                  {
+                    "id": "bbdfe7b1-f3b4-40d3-af0b-7cc6631671ca",
+                    "text": "<p><span>Exercício que desenha tudo;</span></p>",
+                    "emoji": {
+                      "emoji": "😌"
+                    },
+                    "targetNodeId": "256db916-35c8-4279-b996-fde77dfeba5b"
+                  },
+                  {
+                    "id": "41035bd7-3224-4d03-8201-a38d5989fcf3",
+                    "text": "<p><span>Algo rápido e potente.</span></p>",
+                    "emoji": {
+                      "emoji": "🤫"
+                    },
+                    "targetNodeId": "256db916-35c8-4279-b996-fde77dfeba5b"
+                  }
+                ],
+                "checkbox": "right",
+                "multiple": false,
+                "required": true,
+                "placement": "left"
+              },
+              "version": 1,
+              "category": "quiz",
+              "position": "main"
+            }
+          ],
+          "settings": {}
+        }
+      },
+      {
+        "id": "54eefd22-c862-4775-a512-327ff1f942c4",
+        "type": "page",
+        "data": {
+          "name": "PG-INFO1",
+          "slug": "mqpk5bry1z",
+          "elements": [
+            {
+              "id": "59583486-effa-4f90-92da-756d1d37f8da",
+              "icon": "images",
+              "name": "Cabeçalho",
+              "type": "header",
+              "content": {
+                "logoSize": 36,
+                "backButton": true
+              },
+              "version": 1,
+              "category": "heading",
+              "position": "header"
+            },
+            {
+              "id": "f79a3b50-0cdb-48e0-a301-153cdb4347e1",
+              "icon": "stretch-horizontal",
+              "name": "Progresso",
+              "type": "progress",
+              "content": {
+                "endValue": 28
+              },
+              "version": 1,
+              "category": "heading",
+              "position": "header"
+            },
+            {
+              "id": "19c8a219-1fd1-4591-8c6a-1adb4711d69c",
+              "icon": "heading",
+              "name": "Título",
+              "type": "title",
+              "theme": {
+                "textColor": "#ca4b07"
+              },
+              "content": {
+                "text": "<p><span><strong>Você não está sozinha!!!</strong></span></p>",
+                "subtitle": "<p><span style=\"color: rgb(255, 255, 255);\">Mulheres como você carregam no corpo a prova de batalhas invisíveis.</span></p><p><span style=\"color: rgb(255, 255, 255);\">Os métodos antigos (muito cardio e zero comida) estão destruindo sua massa magra e deixando seu metabolismo lento, preservando a gordura na barriga.</span></p>"
+              },
+              "version": 1,
+              "category": "heading",
+              "position": "main"
+            },
+            {
+              "id": "86a2acb2-ee01-4c69-ae85-2eea23e88906",
+              "icon": "gallery-horizontal-end",
+              "name": "Carrossel",
+              "type": "carousel",
+              "content": {
+                "loop": true,
+                "slides": [
+                  {
+                    "id": "3f23078e-fc16-4ff6-ab25-e12f9647c3e8",
+                    "image": {
+                      "image": {
+                        "name": "Legacy image 44b9de71-6b8f-40ea-bcb4-65c31588459f",
+                        "width": 1080,
+                        "height": 1080,
+                        "providerId": "afabbf3f-9a31-4047-f93b-3c7ca398e600"
+                      }
+                    }
+                  },
+                  {
+                    "id": "e587ab81-f084-4d11-80c7-83ca03044efc",
+                    "image": {
+                      "image": {
+                        "name": "Legacy image 20e5bf8d-247d-4143-92ff-f54426f345e6",
+                        "width": 1080,
+                        "height": 1080,
+                        "providerId": "7988b2b4-d3da-485b-d63d-c06ed2231f00"
+                      }
+                    }
+                  },
+                  {
+                    "id": "6560a80d-6f29-433e-afa9-8ff1ce113121",
+                    "image": {
+                      "image": {
+                        "name": "Legacy image 2c42b70d-fef9-4f26-9322-a50fe72eb2eb",
+                        "width": 1080,
+                        "height": 1080,
+                        "providerId": "71f85bbc-8406-4a91-c78c-e23c73a5a400"
+                      }
+                    }
+                  },
+                  {
+                    "id": "efae64d1-efc4-410c-bf68-3a77550447d0",
+                    "image": {
+                      "image": {
+                        "name": "Legacy image 6d487023-3058-4600-81d1-6d950a40aa8c",
+                        "width": 1080,
+                        "height": 1080,
+                        "providerId": "1153a0c9-6e33-405a-2817-95363c023500"
+                      }
+                    }
+                  }
+                ],
+                "showDots": true,
+                "showControls": true
+              },
+              "version": 1,
+              "category": "media",
+              "position": "main"
+            },
+            {
+              "id": "80740a53-4dbd-4b70-8a15-04329d5d0d96",
+              "icon": "square-mouse-pointer",
+              "name": "Botão",
+              "type": "button",
+              "content": {
+                "text": "<p>QUERO CONTINUAR</p>"
+              },
+              "version": 1,
+              "category": "action",
+              "position": "main",
+              "settings": {
+                "animation": "pulse"
+              },
+              "targetNodeId": "bce8d73b-761d-4555-afcb-9445a6cb383a"
+            }
+          ],
+          "settings": {}
+        }
+      },
+      {
+        "id": "2c0ca7a1-91e3-4cf8-aec1-e40633292ae2",
+        "type": "page",
+        "data": {
+          "name": "pg-ectomorfo",
+          "slug": "go7q3wjkx6",
+          "elements": [
+            {
+              "id": "9d2ff55c-ffde-41e7-9521-2a57c75dae03",
+              "icon": "images",
+              "name": "Cabeçalho",
+              "type": "header",
+              "content": {
+                "logoSize": 36,
+                "backButton": true
+              },
+              "version": 1,
+              "category": "heading",
+              "position": "header"
+            },
+            {
+              "id": "4818b72c-9fca-4bcc-b9e2-b0a685faa716",
+              "icon": "stretch-horizontal",
+              "name": "Progresso",
+              "type": "progress",
+              "content": {
+                "endValue": 26
+              },
+              "version": 1,
+              "category": "heading",
+              "position": "header"
+            },
+            {
+              "id": "4954fc3c-339e-4970-a9b4-f7f50d442afa",
+              "icon": "heading",
+              "name": "Título",
+              "type": "title",
+              "theme": {
+                "textColor": "#ca4b07"
+              },
+              "content": {
+                "text": "<p><span><strong>Parece que você tem o biotipo ectomorfo.</strong></span></p>",
+                "subtitle": "<p><span style=\"color: rgb(255, 255, 255);\">Você pode ter dificuldades para ganhar peso ou massa muscular, mas isso não significa que você não consiga. Tudo o que você precisa é a abordagem correta.</span></p><p><span style=\"color: rgb(255, 255, 255);\">Seu plano foi desenvolvido para secar barriga enquanto define coxas e bumbum, na academia ou em casa.</span></p>"
+              },
+              "version": 1,
+              "category": "heading",
+              "position": "main"
+            },
+            {
+              "id": "921af963-1b8d-4165-a438-5a7fbd0f81b9",
+              "icon": "image",
+              "name": "Imagem",
+              "type": "image",
+              "theme": {
+                "width": 100
+              },
+              "content": {
+                "image": {
+                  "name": "Legacy image e078a781-f532-4289-8ecb-9f0e90be56c6",
+                  "width": 1448,
+                  "height": 1086,
+                  "providerId": "2c2ceba2-3159-417d-2ed5-dbc2077d5900"
+                }
+              },
+              "version": 1,
+              "category": "media",
+              "position": "main"
+            },
+            {
+              "id": "954b6f91-8546-4972-95fb-783129dd8347",
+              "icon": "square-mouse-pointer",
+              "name": "Botão",
+              "type": "button",
+              "content": {
+                "text": "<p>CONTINUAR</p>"
+              },
+              "version": 1,
+              "category": "action",
+              "position": "main",
+              "settings": {
+                "animation": "pulse"
+              },
+              "targetNodeId": "54eefd22-c862-4775-a512-327ff1f942c4"
+            }
+          ],
+          "settings": {}
+        }
+      },
+      {
+        "id": "cebb9a32-31ef-43cb-a036-b10e8bafb6e4",
+        "type": "page",
+        "data": {
+          "name": "pg-mesomorfo",
+          "slug": "c0k1hun1xh",
+          "elements": [
+            {
+              "id": "030f8fb6-55f6-4728-b27b-e6b89251414b",
+              "icon": "images",
+              "name": "Cabeçalho",
+              "type": "header",
+              "content": {
+                "logoSize": 36,
+                "backButton": true
+              },
+              "version": 1,
+              "category": "heading",
+              "position": "header"
+            },
+            {
+              "id": "621d5403-7fc6-4ba1-97d7-857f9a9f8306",
+              "icon": "stretch-horizontal",
+              "name": "Progresso",
+              "type": "progress",
+              "content": {
+                "endValue": 26
+              },
+              "version": 1,
+              "category": "heading",
+              "position": "header"
+            },
+            {
+              "id": "35809c90-2ec0-4f00-9738-b85fb3fac585",
+              "icon": "heading",
+              "name": "Título",
+              "type": "title",
+              "theme": {
+                "textColor": "#ca4b07"
+              },
+              "content": {
+                "text": "<p><span><strong>Parece que você tem o biotipo mesomorfo.</strong></span></p>",
+                "subtitle": "<p><span style=\"color: rgb(255, 255, 255);\">Seu corpo muda rapidamente, por isso você precisa da abordagem certa para alcançar e manter seu objetivo físico.</span></p><p><span style=\"color: rgb(255, 255, 255);\">Seu plano foi desenvolvido para secar barriga enquanto define coxas e bumbum, na academia ou em casa</span></p>"
+              },
+              "version": 1,
+              "category": "heading",
+              "position": "main"
+            },
+            {
+              "id": "3395400e-ef34-49f8-9ee4-e2b4f0b1147c",
+              "icon": "image",
+              "name": "Imagem",
+              "type": "image",
+              "theme": {
+                "width": 100
+              },
+              "content": {
+                "image": {
+                  "name": "Legacy image bbdc8557-02fc-48c9-97e2-6096bd84c5be",
+                  "width": 1448,
+                  "height": 1086,
+                  "providerId": "427493b1-5ca0-4903-66ba-3dfedd3a4900"
+                }
+              },
+              "version": 1,
+              "category": "media",
+              "position": "main"
+            },
+            {
+              "id": "1df03741-ec28-4c7b-b0e4-6d2e7fa2d981",
+              "icon": "square-mouse-pointer",
+              "name": "Botão",
+              "type": "button",
+              "content": {
+                "text": "<p>CONTINUAR</p>"
+              },
+              "version": 1,
+              "category": "action",
+              "position": "main",
+              "settings": {
+                "animation": "pulse"
+              },
+              "targetNodeId": "54eefd22-c862-4775-a512-327ff1f942c4"
+            }
+          ],
+          "settings": {}
+        }
+      },
+      {
+        "id": "45fe16dd-a819-47d6-93c6-73da1e03f5f7",
+        "type": "page",
+        "data": {
+          "name": "pg-endomorfo",
+          "slug": "gcod6fkc9l",
+          "elements": [
+            {
+              "id": "25f9997c-9bef-4869-85c2-e7a6e204e8ea",
+              "icon": "images",
+              "name": "Cabeçalho",
+              "type": "header",
+              "content": {
+                "logoSize": 36,
+                "backButton": true
+              },
+              "version": 1,
+              "category": "heading",
+              "position": "header"
+            },
+            {
+              "id": "a60b49b0-5b83-4849-ba81-918cc9aa276a",
+              "icon": "stretch-horizontal",
+              "name": "Progresso",
+              "type": "progress",
+              "content": {
+                "endValue": 26
+              },
+              "version": 1,
+              "category": "heading",
+              "position": "header"
+            },
+            {
+              "id": "362644a8-3828-4c72-bff5-c9b2500b7f75",
+              "icon": "heading",
+              "name": "Título",
+              "type": "title",
+              "theme": {
+                "textColor": "#ca4b07"
+              },
+              "content": {
+                "text": "<p><span><strong>Parece que você tem o biotipo endomorfo.</strong></span></p>",
+                "subtitle": "<p><span style=\"color: rgb(255, 255, 255);\">Você pode ter tendência a perder peso lentamente, mas isso não significa que a mudança seja impossível.</span></p><p><span style=\"color: rgb(255, 255, 255);\">Seu plano foi desenvolvido para secar barriga enquanto define coxas e bumbum, na academia ou em casa</span></p>"
+              },
+              "version": 1,
+              "category": "heading",
+              "position": "main"
+            },
+            {
+              "id": "c29cd512-ceef-4d30-b98a-16129abf5483",
+              "icon": "image",
+              "name": "Imagem",
+              "type": "image",
+              "theme": {
+                "width": 100
+              },
+              "content": {
+                "image": {
+                  "name": "Legacy image 02a76cac-d153-460c-86d6-62e3ae287390",
+                  "width": 1448,
+                  "height": 1086,
+                  "providerId": "81473db9-2962-4ce5-7b98-7b06d3fb4100"
+                }
+              },
+              "version": 1,
+              "category": "media",
+              "position": "main"
+            },
+            {
+              "id": "e4d9884c-48a9-4972-a340-cba0753efbb3",
+              "icon": "square-mouse-pointer",
+              "name": "Botão",
+              "type": "button",
+              "content": {
+                "text": "<p>CONTINUAR</p>"
+              },
+              "version": 1,
+              "category": "action",
+              "position": "main",
+              "settings": {
+                "animation": "pulse"
+              },
+              "targetNodeId": "54eefd22-c862-4775-a512-327ff1f942c4"
+            }
+          ],
+          "settings": {}
+        }
+      },
+      {
+        "id": "5c0a5dfa-f1c4-4256-a029-233d7c4e0e70",
+        "type": "page",
+        "data": {
+          "name": "quiz5",
+          "slug": "asctquf2a0",
+          "elements": [
+            {
+              "id": "2aeefb85-19ee-4c05-b3fe-772a394aa855",
+              "icon": "images",
+              "name": "Cabeçalho",
+              "type": "header",
+              "content": {
+                "logoSize": 36,
+                "backButton": true
+              },
+              "version": 1,
+              "category": "heading",
+              "position": "header"
+            },
+            {
+              "id": "abc2bda4-c52e-4481-812f-9e099ec35b9d",
+              "icon": "stretch-horizontal",
+              "name": "Progresso",
+              "type": "progress",
+              "theme": {
+                "primaryColor": "#e6a079",
+                "secondaryColor": "#ca4b07"
+              },
+              "content": {
+                "endValue": 24
+              },
+              "version": 1,
+              "category": "heading",
+              "position": "header"
+            },
+            {
+              "id": "2eda20c4-2c51-4864-bb69-e4a0785092ff",
+              "icon": "heading",
+              "name": "Título",
+              "type": "title",
+              "theme": {
+                "fontSize": "xsmall"
+              },
+              "content": {
+                "text": "<p><span style=\"color: rgb(255, 255, 255);\">Como seu peso costuma variar?</span></p>"
+              },
+              "version": 1,
+              "category": "heading",
+              "position": "main"
+            },
+            {
+              "id": "0c9f5d1c-aaa6-43dc-bd85-6bd8309e0c00",
+              "icon": "smile",
+              "name": "Quiz",
+              "type": "quizEmoji",
+              "theme": {
+                "variant": "soft",
+                "borderColor": "#ca4b07",
+                "backgroundColor": "#e6a079"
+              },
+              "content": {
+                "format": "list",
+                "options": [
+                  {
+                    "id": "bd7b93e2-b09f-4cfa-9862-ea85d909686d",
+                    "text": "<p><span>Ganho peso rápido e perco lentamente;</span></p>",
+                    "emoji": {
+                      "emoji": "😕"
+                    },
+                    "targetNodeId": "45fe16dd-a819-47d6-93c6-73da1e03f5f7"
+                  },
+                  {
+                    "id": "5aaa8632-8b79-4114-9810-2d9ed25c5780",
+                    "text": "<p><span>Ganho e perco peso com facilidade;</span></p>",
+                    "emoji": {
+                      "emoji": "😭"
+                    },
+                    "targetNodeId": "cebb9a32-31ef-43cb-a036-b10e8bafb6e4"
+                  },
+                  {
+                    "id": "2dfc10db-26ab-403d-8385-6bf7640af413",
+                    "text": "<p><span>Tenho dificuldade em ganhar peso.</span></p>",
+                    "emoji": {
+                      "emoji": "🥲"
+                    },
+                    "targetNodeId": "2c0ca7a1-91e3-4cf8-aec1-e40633292ae2"
+                  }
+                ],
+                "checkbox": "right",
+                "multiple": false,
+                "required": true,
+                "placement": "left"
+              },
+              "version": 1,
+              "category": "quiz",
+              "position": "main"
+            }
+          ],
+          "settings": {}
+        }
+      },
+      {
+        "id": "598aaef1-09e0-476e-8540-9123e9968e97",
+        "type": "page",
+        "data": {
+          "name": "quiz3",
+          "slug": "hjaxc7qifl",
+          "elements": [
+            {
+              "id": "502a45cd-1ebf-4569-beaa-7bab79e63af3",
+              "icon": "images",
+              "name": "Cabeçalho",
+              "type": "header",
+              "content": {
+                "logoSize": 36,
+                "backButton": true
+              },
+              "version": 1,
+              "category": "heading",
+              "position": "header"
+            },
+            {
+              "id": "9f05655c-374e-42ba-92f7-613a8d34c638",
+              "icon": "stretch-horizontal",
+              "name": "Progresso",
+              "type": "progress",
+              "theme": {
+                "primaryColor": "#e6a079",
+                "secondaryColor": "#ca4b07"
+              },
+              "content": {
+                "endValue": 18
+              },
+              "version": 1,
+              "category": "heading",
+              "position": "header"
+            },
+            {
+              "id": "a8782dfa-e8e4-4939-92b7-e3bc480ca866",
+              "icon": "heading",
+              "name": "Título",
+              "type": "title",
+              "theme": {
+                "fontSize": "xsmall"
+              },
+              "content": {
+                "text": "<p><span style=\"color: rgb(255, 255, 255);\">Onde você mais gostaria de ver definição primeiro?</span></p>"
+              },
+              "version": 1,
+              "category": "heading",
+              "position": "main"
+            },
+            {
+              "id": "32025528-f8a5-4f21-91bb-03c65dad761b",
+              "icon": "image",
+              "name": "Quiz",
+              "type": "quizImage",
+              "theme": {
+                "variant": "soft",
+                "textColor": "#ffffff",
+                "borderColor": "#ca4b07",
+                "backgroundColor": "#e6a079"
+              },
+              "content": {
+                "cover": false,
+                "format": "list",
+                "options": [
+                  {
+                    "id": "390ebae6-60ea-44c2-bb38-012c52e9afc7",
+                    "text": "<p><span>Barriga mais sequinha;</span></p>",
+                    "image": {
+                      "image": {
+                        "name": "Legacy image 68f0bfa5-c6fd-4898-ab4c-de7fb7940d74",
+                        "width": 200,
+                        "height": 200,
+                        "providerId": "130fe478-f33c-4af5-517a-f0e28407e800"
+                      }
+                    },
+                    "targetNodeId": "5c0a5dfa-f1c4-4256-a029-233d7c4e0e70"
+                  },
+                  {
+                    "id": "438dc3e4-546a-42bf-a345-61655d559bd5",
+                    "text": "<p><span>Glúteos empinados;</span></p>",
+                    "image": {
+                      "image": {
+                        "name": "Legacy image f59e4dea-a04f-4330-8bf6-9d6387865ad1",
+                        "width": 200,
+                        "height": 200,
+                        "providerId": "1a5e620e-393a-4bb5-43d1-e49476a73900"
+                      }
+                    },
+                    "targetNodeId": "5c0a5dfa-f1c4-4256-a029-233d7c4e0e70"
+                  },
+                  {
+                    "id": "68f60926-f600-4f80-9f8f-03b547e1dd6f",
+                    "text": "<p><span>Pernas mais grossas e firmes;</span></p>",
+                    "image": {
+                      "image": {
+                        "name": "Legacy image 9efe243f-6b57-4507-ae5d-170ad552e9c6",
+                        "width": 200,
+                        "height": 200,
+                        "providerId": "a5eef363-e5e2-4e33-730c-4f03c6b97900"
+                      }
+                    },
+                    "targetNodeId": "5c0a5dfa-f1c4-4256-a029-233d7c4e0e70"
+                  },
+                  {
+                    "id": "e59b1a3b-8a87-40f5-80e8-2da1ec9ab243",
+                    "text": "<p><span>Corpo todo mais desenhado.</span></p>",
+                    "image": {
+                      "image": {
+                        "name": "Legacy image 29891883-aedc-45aa-8e3c-34a789166e03",
+                        "width": 200,
+                        "height": 200,
+                        "providerId": "b9465f6d-24a3-4b98-18fa-c7f499375900"
+                      }
+                    },
+                    "targetNodeId": "5c0a5dfa-f1c4-4256-a029-233d7c4e0e70"
+                  }
+                ],
+                "multiple": false,
+                "required": true,
+                "placement": "right"
+              },
+              "version": 1,
+              "category": "quiz",
+              "position": "main"
+            }
+          ],
+          "settings": {}
+        }
+      },
+      {
+        "id": "a6a36e57-fc37-493b-890f-9a6ebd507380",
+        "type": "page",
+        "data": {
+          "name": "quiz2",
+          "slug": "xx2bvwh2yd",
+          "elements": [
+            {
+              "id": "4eafd6dc-c559-4dbd-b8c5-c0eaa037bd3c",
+              "icon": "images",
+              "name": "Cabeçalho",
+              "type": "header",
+              "content": {
+                "logoSize": 36,
+                "backButton": true
+              },
+              "version": 1,
+              "category": "heading",
+              "position": "header"
+            },
+            {
+              "id": "632ed54e-ecdb-46ca-82c8-7902066e0203",
+              "icon": "stretch-horizontal",
+              "name": "Progresso",
+              "type": "progress",
+              "theme": {
+                "primaryColor": "#e6a079",
+                "secondaryColor": "#ca4b07"
+              },
+              "content": {
+                "endValue": 10
+              },
+              "version": 1,
+              "category": "heading",
+              "position": "header"
+            },
+            {
+              "id": "6a3c0e8b-9b23-41ff-bb9c-28a0e400d1db",
+              "icon": "heading",
+              "name": "Título",
+              "type": "title",
+              "theme": {
+                "fontSize": "xsmall"
+              },
+              "content": {
+                "text": "<p><span style=\"color: rgb(255, 255, 255);\">Quando você se olha no espelho, você sente que:</span></p>"
+              },
+              "version": 1,
+              "category": "heading",
+              "position": "main"
+            },
+            {
+              "id": "722ea621-285c-42cf-86a2-fcf9ded18585",
+              "icon": "image",
+              "name": "Quiz",
+              "type": "quizImage",
+              "theme": {
+                "variant": "soft",
+                "textColor": "#ffffff",
+                "borderColor": "#ca4b07",
+                "backgroundColor": "#e6a079"
+              },
+              "content": {
+                "cover": false,
+                "format": "grid",
+                "options": [
+                  {
+                    "id": "4eec8b80-485a-4e13-a9ea-2eb39350cce8",
+                    "text": "<p><span>Sou falsa magra</span></p>",
+                    "image": {
+                      "image": {
+                        "name": "Legacy image ab176bd8-aeee-45a9-bbca-68b8ecf307b2",
+                        "width": 511,
+                        "height": 457,
+                        "providerId": "bb0e572a-745b-440f-a33b-c1a64cce8f00"
+                      }
+                    },
+                    "targetNodeId": "598aaef1-09e0-476e-8540-9123e9968e97"
+                  },
+                  {
+                    "id": "757df344-9aee-415f-8778-fa2e7551bcfa",
+                    "text": "<p><span>Estou acima do peso</span></p>",
+                    "image": {
+                      "image": {
+                        "name": "Legacy image f9ebd1b2-09d2-480b-b62f-e4f1c62cc4e7",
+                        "width": 511,
+                        "height": 457,
+                        "providerId": "6f171543-53f5-42c3-e08d-00a15e191000"
+                      }
+                    },
+                    "targetNodeId": "598aaef1-09e0-476e-8540-9123e9968e97"
+                  },
+                  {
+                    "id": "aaa231a7-08db-4f91-bfa9-c5784dae0aba",
+                    "text": "<p><span>Já emagreci, mas estou flácida</span></p>",
+                    "image": {
+                      "image": {
+                        "name": "Legacy image 34eeb13b-8cc9-4291-99df-cfd2302ad552",
+                        "width": 511,
+                        "height": 457,
+                        "providerId": "6988e592-a27d-4684-f344-060d4a6eb500"
+                      }
+                    },
+                    "targetNodeId": "598aaef1-09e0-476e-8540-9123e9968e97"
+                  },
+                  {
+                    "id": "23cdf5a8-d10e-4b97-bf7a-91b864958161",
+                    "text": "<p><span>Evito até me olhar direito</span></p>",
+                    "image": {
+                      "image": {
+                        "name": "Legacy image f7ef84b7-52bb-4f06-900b-7925850a39c2",
+                        "width": 511,
+                        "height": 457,
+                        "providerId": "9479c1d6-7325-477d-0079-6be6ddeb7c00"
+                      }
+                    },
+                    "targetNodeId": "598aaef1-09e0-476e-8540-9123e9968e97"
+                  }
+                ],
+                "multiple": false,
+                "required": true,
+                "placement": "top"
+              },
+              "version": 1,
+              "category": "quiz",
+              "position": "main"
+            }
+          ],
+          "settings": {}
+        }
+      },
+      {
+        "id": "81ea57d1-430e-4524-b675-0eac47dfa580",
+        "type": "page",
+        "data": {
+          "name": "quiz1",
+          "slug": "dqbc5tkddc",
+          "elements": [
+            {
+              "id": "2a626ce8-90a3-49e2-b72b-092fa15bd910",
+              "icon": "images",
+              "name": "Cabeçalho",
+              "type": "header",
+              "content": {
+                "logoSize": 36,
+                "backButton": true
+              },
+              "version": 1,
+              "category": "heading",
+              "position": "header"
+            },
+            {
+              "id": "6d8ec785-6f4f-47f9-b8d8-1327fa03a117",
+              "icon": "stretch-horizontal",
+              "name": "Progresso",
+              "type": "progress",
+              "theme": {
+                "primaryColor": "#e6a079",
+                "secondaryColor": "#ca4b07"
+              },
+              "content": {
+                "endValue": 10
+              },
+              "version": 1,
+              "category": "heading",
+              "position": "header"
+            },
+            {
+              "id": "4f26c3ce-1c5e-4e84-8a60-9cea648d7462",
+              "icon": "heading",
+              "name": "Título",
+              "type": "title",
+              "theme": {
+                "fontSize": "xsmall"
+              },
+              "content": {
+                "text": "<p><span style=\"color: rgb(255, 255, 255);\">Qual é a sua idade?</span></p>"
+              },
+              "version": 1,
+              "category": "heading",
+              "position": "main"
+            },
+            {
+              "id": "24c0c3d7-11d7-439d-9996-e83d2b28a723",
+              "icon": "image",
+              "name": "Quiz",
+              "type": "quizImage",
+              "theme": {
+                "variant": "soft",
+                "borderColor": "#000000",
+                "backgroundColor": "#000000"
+              },
+              "content": {
+                "cover": false,
+                "format": "grid",
+                "options": [
+                  {
+                    "id": "b0abbaec-3679-4f3b-bf3d-8a7c1b5b3037",
+                    "text": "<p>IDADE: 17 - 28</p>",
+                    "image": {
+                      "image": {
+                        "name": "Legacy image e07163a9-75fa-404f-892c-c537bdaa574a",
+                        "width": 850,
+                        "height": 828,
+                        "providerId": "3624bc4d-7675-43c2-7500-f544278eb800"
+                      }
+                    },
+                    "targetNodeId": "a6a36e57-fc37-493b-890f-9a6ebd507380"
+                  },
+                  {
+                    "id": "997c62fa-f08a-4276-9dc4-5c961b6f66e2",
+                    "text": "<p>IDADE: 29 - 39</p>",
+                    "image": {
+                      "image": {
+                        "name": "Legacy image bfe9fc84-bd63-4af0-afac-066e8a1a4c0d",
+                        "width": 850,
+                        "height": 828,
+                        "providerId": "17f1f7fc-ceb8-4d71-be25-66e9dc71df00"
+                      }
+                    },
+                    "targetNodeId": "a6a36e57-fc37-493b-890f-9a6ebd507380"
+                  },
+                  {
+                    "id": "34cd8b3b-7cfb-4c0d-8afa-950209240820",
+                    "text": "<p>IDADE: 40 - 49</p>",
+                    "image": {
+                      "image": {
+                        "name": "Legacy image add391f6-d870-435c-9bbc-3d5390e30c7a",
+                        "width": 850,
+                        "height": 828,
+                        "providerId": "0e4b71b2-8994-476f-59da-88b5e0f91f00"
+                      }
+                    },
+                    "targetNodeId": "a6a36e57-fc37-493b-890f-9a6ebd507380"
+                  },
+                  {
+                    "id": "6ccfb885-b15f-4436-a668-9e29ee84ed6f",
+                    "text": "<p>IDADE: 50+</p>",
+                    "image": {
+                      "image": {
+                        "name": "Legacy image 28fb5ba1-d97e-40ce-900e-513694c6d0bf",
+                        "width": 850,
+                        "height": 828,
+                        "providerId": "8b8dce06-4254-48f5-2659-e6cb433f8300"
+                      }
+                    },
+                    "targetNodeId": "a6a36e57-fc37-493b-890f-9a6ebd507380"
+                  }
+                ],
+                "multiple": false,
+                "required": true,
+                "showText": false,
+                "placement": "top"
+              },
+              "version": 1,
+              "category": "quiz",
+              "position": "main"
+            }
+          ],
+          "settings": {}
+        }
+      },
+      {
+        "id": "a7a5cd72-ca68-4dc9-8006-57313a77e814",
+        "type": "page",
+        "data": {
+          "name": "pg-inicial",
+          "slug": "zzwo22mzjj",
+          "elements": [
+            {
+              "id": "9c9701dc-faf9-4112-b92a-8fab1f387fd8",
+              "icon": "images",
+              "name": "Cabeçalho",
+              "type": "header",
+              "content": {
+                "logoSize": 36,
+                "backButton": false
+              },
+              "version": 1,
+              "category": "heading",
+              "position": "header"
+            },
+            {
+              "id": "584af62a-19ff-4b95-8c2f-759b9650977b",
+              "icon": "heading",
+              "name": "Título",
+              "type": "title",
+              "theme": {
+                "fontSize": "small",
+                "textColor": "#ca4b00"
+              },
+              "content": {
+                "text": "<p><span><strong>DESCUBRA COMO AFINAR A CINTURA ENQUANTO DEFINE O CORPO EM ATÉ 4 SEMANAS</strong></span></p>",
+                "subtitle": "<p><span style=\"color:oklch(0.985 0 0)\"><strong>Transforme seu corpo com um treino definitivo para perder gordura e ganhar massa muscular — com treinos rápidos e uma alimentação saborosa.</strong></span></p>"
+              },
+              "version": 1,
+              "category": "heading",
+              "position": "main"
+            },
+            {
+              "id": "29252670-fc69-42e4-ad78-37258d5ba4a8",
+              "icon": "image",
+              "name": "Imagem",
+              "type": "image",
+              "theme": {
+                "width": 100
+              },
+              "content": {
+                "image": {
+                  "name": "Legacy image 632d3bf9-56a0-4d90-ab1e-ffb3acc430d3",
+                  "width": 1086,
+                  "height": 1448,
+                  "providerId": "9875dc7b-ab5c-4f0f-7774-5ddccf50cd00"
+                }
+              },
+              "version": 1,
+              "category": "media",
+              "position": "main"
+            },
+            {
+              "id": "1bde66dc-8338-4291-a416-07be6a967611",
+              "icon": "image",
+              "name": "Imagem",
+              "type": "image",
+              "theme": {
+                "width": 100
+              },
+              "content": {
+                "image": {
+                  "name": "Legacy image a4c0e8ef-0539-4a89-99f8-117c2107cb5a",
+                  "width": 1024,
+                  "height": 172,
+                  "providerId": "57caf1f9-1f59-4fb2-ab47-df1a9a296e00"
+                }
+              },
+              "version": 1,
+              "category": "media",
+              "position": "main"
+            },
+            {
+              "id": "62a824c8-cd7c-44cf-858b-62ef546032b7",
+              "icon": "text",
+              "name": "Texto",
+              "type": "text",
+              "theme": {
+                "fontSize": "small",
+                "textAlign": "center"
+              },
+              "content": {
+                "text": "<p><span style=\"color: rgb(255, 255, 255);\">Se você treina e continua sem resultado, seu método está ultrapassado. Destrave seus resultados agora mesmo!</span></p>"
+              },
+              "version": 1,
+              "category": "content",
+              "position": "main"
+            },
+            {
+              "id": "7c63a874-94b8-404f-8084-288dc99866e8",
+              "icon": "square-mouse-pointer",
+              "name": "Botão",
+              "type": "button",
+              "content": {
+                "text": "<p>EU QUERO</p>"
+              },
+              "version": 1,
+              "category": "action",
+              "position": "main",
+              "settings": {
+                "animation": "pulse"
+              },
+              "targetNodeId": "81ea57d1-430e-4524-b675-0eac47dfa580"
+            },
+            {
+              "id": "a77d0de9-5c99-425d-97f5-f6a600883a3f",
+              "icon": "text",
+              "name": "Texto",
+              "type": "text",
+              "theme": {
+                "fontSize": "small",
+                "textAlign": "center"
+              },
+              "content": {
+                "text": "<p><span>Leva menos de 1 minuto</span></p>"
+              },
+              "version": 1,
+              "category": "content",
+              "position": "main"
+            }
+          ],
+          "settings": {}
+        }
+      }
+    ],
+    "theme": {
+      "font": "poppins",
+      "logo": {
+        "name": "Legacy image 093f88dc-2feb-4bfe-b09f-b39987e7d9e5",
+        "width": 300,
+        "height": 108,
+        "providerId": "53902717-2b09-45ca-023c-af4b2cc8bd00"
+      },
+      "favicon": {
+        "name": "Legacy image 3562472d-8605-4f06-ba0c-4db56f08a848",
+        "width": 300,
+        "height": 108,
+        "providerId": "874ada78-1fc6-4b44-04ac-97b5563c4900"
+      },
+      "darkMode": false,
+      "primaryColor": "#ca4b07",
+      "secondaryColor": "#ac4006",
+      "backgroundColor": "#000000"
+    },
+    "version": 7,
+    "settings": {
+      "navigation": {
+        "showPageSlugs": false
+      },
+      "language": "pt-BR",
+      "siteTitle": "Desafio da Milena",
+      "metaPixel": {
+        "pixelId": "1332309708403614",
+        "pixelIds": [
+          "1332309708403614"
+        ]
+      }
+    },
+    "variables": [
+      {
+        "id": "sys_2g2s",
+        "name": "src"
+      },
+      {
+        "id": "sys_2fq3",
+        "name": "sck"
+      },
+      {
+        "id": "sys_ds7xb1",
+        "name": "utm_term"
+      },
+      {
+        "id": "sys_pgta8o",
+        "name": "utm_content"
+      },
+      {
+        "id": "sys_12ihkv",
+        "name": "utm_campaign"
+      },
+      {
+        "id": "sys_v91lba",
+        "name": "utm_medium"
+      },
+      {
+        "id": "sys_y94amk",
+        "name": "utm_source"
+      }
+    ],
+    "description": null,
+    "publishedAt": "2026-10-31T21:59:50.158Z",
+    "navigation": {
+      "startPageId": "a7a5cd72-ca68-4dc9-8006-57313a77e814",
+      "startPageSlug": "zzwo22mzjj",
+      "pages": {
+        "01625896-83bc-4cff-be6e-2ea56f88d9b1": {
+          "progress": 100
+        },
+        "3de480d5-85cd-4bb4-8202-220e4b08cd89": {
+          "progress": 94
+        },
+        "b2bb7794-8cfe-4a7e-bf98-36d9cda806d6": {
+          "progress": 88
+        },
+        "bec1c911-eb0a-48e1-8266-9356a1c4e81c": {
+          "progress": 82
+        },
+        "d9a67095-bf7d-48b7-8594-2b7427b33b4e": {
+          "progress": 76
+        },
+        "11cb0873-e5c1-4b16-acde-e9daf687f6a3": {
+          "progress": 71
+        },
+        "c085a1e4-fcc4-4a43-9a30-381f8afa48dc": {
+          "progress": 65
+        },
+        "12429c65-96af-4b84-bf71-b1bdd6e4a798": {
+          "progress": 59
+        },
+        "d9d110f3-c33d-455a-9e21-d206bc4e3803": {
+          "progress": 53
+        },
+        "256db916-35c8-4279-b996-fde77dfeba5b": {
+          "progress": 47
+        },
+        "bce8d73b-761d-4555-afcb-9445a6cb383a": {
+          "progress": 41
+        },
+        "54eefd22-c862-4775-a512-327ff1f942c4": {
+          "progress": 35
+        },
+        "2c0ca7a1-91e3-4cf8-aec1-e40633292ae2": {
+          "progress": 29
+        },
+        "cebb9a32-31ef-43cb-a036-b10e8bafb6e4": {
+          "progress": 29
+        },
+        "45fe16dd-a819-47d6-93c6-73da1e03f5f7": {
+          "progress": 29
+        },
+        "5c0a5dfa-f1c4-4256-a029-233d7c4e0e70": {
+          "progress": 24
+        },
+        "598aaef1-09e0-476e-8540-9123e9968e97": {
+          "progress": 18
+        },
+        "a6a36e57-fc37-493b-890f-9a6ebd507380": {
+          "progress": 12
+        },
+        "81ea57d1-430e-4524-b675-0eac47dfa580": {
+          "progress": 6
+        },
+        "a7a5cd72-ca68-4dc9-8006-57313a77e814": {
+          "progress": 0
+        }
+      }
+    },
+    "prefetch": {
+      "01625896-83bc-4cff-be6e-2ea56f88d9b1": [],
+      "3de480d5-85cd-4bb4-8202-220e4b08cd89": [
+        {
+          "providerId": "5e648370-8341-4af2-e6e9-eaaeee9fee00",
+          "kind": "image",
+          "variant": "default"
+        },
+        {
+          "providerId": "3b85e630-5720-4b11-3903-0a2fadd4e200",
+          "kind": "image",
+          "variant": "default"
+        },
+        {
+          "providerId": "8f662caf-d7ba-473d-d41e-76cfecc50f00",
+          "kind": "image",
+          "variant": "default"
+        },
+        {
+          "providerId": "9d614122-1ee8-47e5-b78e-b4235e7fff00",
+          "kind": "image",
+          "variant": "default"
+        },
+        {
+          "providerId": "b7fa83d6-5f3d-44f0-b046-673fd0d96b00",
+          "kind": "image",
+          "variant": "default"
+        }
+      ],
+      "b2bb7794-8cfe-4a7e-bf98-36d9cda806d6": [],
+      "bec1c911-eb0a-48e1-8266-9356a1c4e81c": [],
+      "d9a67095-bf7d-48b7-8594-2b7427b33b4e": [],
+      "11cb0873-e5c1-4b16-acde-e9daf687f6a3": [],
+      "c085a1e4-fcc4-4a43-9a30-381f8afa48dc": [],
+      "12429c65-96af-4b84-bf71-b1bdd6e4a798": [],
+      "d9d110f3-c33d-455a-9e21-d206bc4e3803": [],
+      "256db916-35c8-4279-b996-fde77dfeba5b": [],
+      "bce8d73b-761d-4555-afcb-9445a6cb383a": [],
+      "54eefd22-c862-4775-a512-327ff1f942c4": [],
+      "2c0ca7a1-91e3-4cf8-aec1-e40633292ae2": [
+        {
+          "providerId": "afabbf3f-9a31-4047-f93b-3c7ca398e600",
+          "kind": "image",
+          "variant": "default"
+        },
+        {
+          "providerId": "7988b2b4-d3da-485b-d63d-c06ed2231f00",
+          "kind": "image",
+          "variant": "default"
+        },
+        {
+          "providerId": "71f85bbc-8406-4a91-c78c-e23c73a5a400",
+          "kind": "image",
+          "variant": "default"
+        },
+        {
+          "providerId": "1153a0c9-6e33-405a-2817-95363c023500",
+          "kind": "image",
+          "variant": "default"
+        }
+      ],
+      "cebb9a32-31ef-43cb-a036-b10e8bafb6e4": [
+        {
+          "providerId": "afabbf3f-9a31-4047-f93b-3c7ca398e600",
+          "kind": "image",
+          "variant": "default"
+        },
+        {
+          "providerId": "7988b2b4-d3da-485b-d63d-c06ed2231f00",
+          "kind": "image",
+          "variant": "default"
+        },
+        {
+          "providerId": "71f85bbc-8406-4a91-c78c-e23c73a5a400",
+          "kind": "image",
+          "variant": "default"
+        },
+        {
+          "providerId": "1153a0c9-6e33-405a-2817-95363c023500",
+          "kind": "image",
+          "variant": "default"
+        }
+      ],
+      "45fe16dd-a819-47d6-93c6-73da1e03f5f7": [
+        {
+          "providerId": "afabbf3f-9a31-4047-f93b-3c7ca398e600",
+          "kind": "image",
+          "variant": "default"
+        },
+        {
+          "providerId": "7988b2b4-d3da-485b-d63d-c06ed2231f00",
+          "kind": "image",
+          "variant": "default"
+        },
+        {
+          "providerId": "71f85bbc-8406-4a91-c78c-e23c73a5a400",
+          "kind": "image",
+          "variant": "default"
+        },
+        {
+          "providerId": "1153a0c9-6e33-405a-2817-95363c023500",
+          "kind": "image",
+          "variant": "default"
+        }
+      ],
+      "5c0a5dfa-f1c4-4256-a029-233d7c4e0e70": [
+        {
+          "providerId": "81473db9-2962-4ce5-7b98-7b06d3fb4100",
+          "kind": "image",
+          "variant": "default"
+        },
+        {
+          "providerId": "427493b1-5ca0-4903-66ba-3dfedd3a4900",
+          "kind": "image",
+          "variant": "default"
+        },
+        {
+          "providerId": "2c2ceba2-3159-417d-2ed5-dbc2077d5900",
+          "kind": "image",
+          "variant": "default"
+        }
+      ],
+      "598aaef1-09e0-476e-8540-9123e9968e97": [],
+      "a6a36e57-fc37-493b-890f-9a6ebd507380": [
+        {
+          "providerId": "130fe478-f33c-4af5-517a-f0e28407e800",
+          "kind": "image",
+          "variant": "thumbnail"
+        },
+        {
+          "providerId": "1a5e620e-393a-4bb5-43d1-e49476a73900",
+          "kind": "image",
+          "variant": "thumbnail"
+        },
+        {
+          "providerId": "a5eef363-e5e2-4e33-730c-4f03c6b97900",
+          "kind": "image",
+          "variant": "thumbnail"
+        },
+        {
+          "providerId": "b9465f6d-24a3-4b98-18fa-c7f499375900",
+          "kind": "image",
+          "variant": "thumbnail"
+        }
+      ],
+      "81ea57d1-430e-4524-b675-0eac47dfa580": [
+        {
+          "providerId": "bb0e572a-745b-440f-a33b-c1a64cce8f00",
+          "kind": "image",
+          "variant": "default"
+        },
+        {
+          "providerId": "6f171543-53f5-42c3-e08d-00a15e191000",
+          "kind": "image",
+          "variant": "default"
+        },
+        {
+          "providerId": "6988e592-a27d-4684-f344-060d4a6eb500",
+          "kind": "image",
+          "variant": "default"
+        },
+        {
+          "providerId": "9479c1d6-7325-477d-0079-6be6ddeb7c00",
+          "kind": "image",
+          "variant": "default"
+        }
+      ],
+      "a7a5cd72-ca68-4dc9-8006-57313a77e814": [
+        {
+          "providerId": "3624bc4d-7675-43c2-7500-f544278eb800",
+          "kind": "image",
+          "variant": "default"
+        },
+        {
+          "providerId": "17f1f7fc-ceb8-4d71-be25-66e9dc71df00",
+          "kind": "image",
+          "variant": "default"
+        },
+        {
+          "providerId": "0e4b71b2-8994-476f-59da-88b5e0f91f00",
+          "kind": "image",
+          "variant": "default"
+        },
+        {
+          "providerId": "8b8dce06-4254-48f5-2659-e6cb433f8300",
+          "kind": "image",
+          "variant": "default"
+        }
+      ]
+    }
+  },
+  "currentPage": "$12:props:initialState:funnel:nodes:21",
+  "sessionVariables": {},
+  "anchorTargets": {},
+  "funnelProgress": 0,
+  "previewMode": false
+}
