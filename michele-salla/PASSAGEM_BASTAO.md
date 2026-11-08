@@ -139,8 +139,8 @@ Os M da pasta "MICHELE LOW" são esses mesmos vídeos. Mapa conferido pelos quad
 **Painel publica sozinho:** todo push na main do CLIENTES gera deploy na Vercel ("Ptk midias") em ~1 min.
 
 ## 7. Pendências (na ordem)
-0. **(08/11) Campanha do pilates PRONTA e PAUSADA:** pagamento resolvido pelo Patrik; 8 anúncios criados (diário de 08/11).
-   Falta só o OK do Patrik para ligar (`ads_activate_entity` na campanha, nos 8 conjuntos e nos 8 anúncios).
+0. **(08/11) Campanha do pilates LIGADA** pelo Patrik ("ativa"): campanha, 8 conjuntos e 8 anúncios ACTIVE, entrega a partir
+   de 09/11 00:03. Acompanhar no painel (aba Quiz Pilates e Anúncios) e conferir o CliqueComprar no pixel no 1º dia.
    Em aberto (decisão do Patrik): tela de contato no quiz (e-mail/WhatsApp de quem não compra) e 1–2 conjuntos com o link
    sem `?p=` para comparar só as capas (a capa 3 "Sem estúdio" não tem anúncio).
 1. **Compra não chegou nem no Meta nem no painel.**
