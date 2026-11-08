@@ -139,9 +139,10 @@ Os M da pasta "MICHELE LOW" são esses mesmos vídeos. Mapa conferido pelos quad
 **Painel publica sozinho:** todo push na main do CLIENTES gera deploy na Vercel ("Ptk midias") em ~1 min.
 
 ## 7. Pendências (na ordem)
-0. **(08/11) Campanha do pilates travada no pagamento:** a conta 1619523595475963 está **UNSETTLED** (saldo em aberto no
-   Meta). Campanha e 8 conjuntos já criados e pausados; os anúncios são barrados até pagar ("Ad account status is ineligible").
-   Depois de pagar (Faturamento da conta), criar os 8 criativos e anúncios do diário de 08/11 e mostrar ao Patrik para ligar.
+0. **(08/11) Campanha do pilates PRONTA e PAUSADA:** pagamento resolvido pelo Patrik; 8 anúncios criados (diário de 08/11).
+   Falta só o OK do Patrik para ligar (`ads_activate_entity` na campanha, nos 8 conjuntos e nos 8 anúncios).
+   Em aberto (decisão do Patrik): tela de contato no quiz (e-mail/WhatsApp de quem não compra) e 1–2 conjuntos com o link
+   sem `?p=` para comparar só as capas (a capa 3 "Sem estúdio" não tem anúncio).
 1. **Compra não chegou nem no Meta nem no painel.**
    - A compra de teste de 23/10 chegou até o AddPaymentInfo (~11h); depois disso não veio nada:
      nem Purchase no pixel, nem aviso no webhook (nem "aguardando").
@@ -373,10 +374,14 @@ Os M da pasta "MICHELE LOW" são esses mesmos vídeos. Mapa conferido pelos quad
       | CONJ - ADV+ - MS 07 - DEPOIS DOS 40 | 120252575981770047 | 1653353229587380 | capas/ms07.jpg | ?p=5 |
       | CONJ - ADV+ - MS 08 - NO SEU RITMO | 120252575982140047 | 998121960022169 | capas/ms08.jpg | ?p=5 |
 
-    - Anúncio (falta criar): nome = nome do vídeo (ex.: `MS 01 - COMECE DO ZERO`), página 262689970269678, Instagram
+    - Anúncios criados depois do pagamento (todos PAUSADOS): MS 01 120252576261180047 · MS 02 120252576261560047 ·
+      MS 03 120252576262280047 · MS 04 120252576263010047 · MS 05 120252576263400047 · MS 06 120252576263580047 ·
+      MS 07 120252576263670047 · MS 08 120252576263990047. Criativos 1599631404733473, 1764815462319161, 1440820007544350,
+      2518466185314975, 1160538499840592, 1137471232473253, 1680529413709455, 1520855493110164.
+    - Anúncio: nome = nome do vídeo (ex.: `MS 01 - COMECE DO ZERO`), página 262689970269678, Instagram
       17841465706978287, sem texto, LEARN_MORE, capa `https://painel.michelesalla.com.br/capas/msNN.jpg`, link
       `https://quiz.michelesalla.com.br/?p=N&utm_source=FB&utm_medium={{placement}}&utm_campaign={{campaign.name}}&utm_content={{ad.name}}&utm_term={{adset.id}}`.
-    - **Bloqueio:** conta UNSETTLED (pagamento pendente). O Meta deixou criar campanha e conjuntos, mas recusa criativo e anúncio.
+    - Bloqueio resolvido: a conta ficou UNSETTLED (pagamento pendente) e recusava criativos; o Patrik pagou e voltou a ACTIVE.
     - Aluna de 64 anos dos vídeos MS 01 e 02: autorização de imagem confirmada pelo Patrik.
     - Painel conferido: compra de teste do quiz (Hotmart HP4087285190, R$ 37, sck=pilates-p1) chegou ao painel e ao pixel
       (Purchase pela API da Hotmart). Ela e o teste falso da Hotmart (HP16015479281022) foram marcados como teste
