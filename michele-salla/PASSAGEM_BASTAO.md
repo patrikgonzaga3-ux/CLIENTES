@@ -9,7 +9,7 @@
 
 Nada de senha, token ou dado de cliente aqui.
 
-Última atualização: 23/10/2026.
+Última atualização: 08/11/2026.
 
 ---
 
@@ -139,6 +139,9 @@ Os M da pasta "MICHELE LOW" são esses mesmos vídeos. Mapa conferido pelos quad
 **Painel publica sozinho:** todo push na main do CLIENTES gera deploy na Vercel ("Ptk midias") em ~1 min.
 
 ## 7. Pendências (na ordem)
+0. **(08/11) Campanha do pilates travada no pagamento:** a conta 1619523595475963 está **UNSETTLED** (saldo em aberto no
+   Meta). Campanha e 8 conjuntos já criados e pausados; os anúncios são barrados até pagar ("Ad account status is ineligible").
+   Depois de pagar (Faturamento da conta), criar os 8 criativos e anúncios do diário de 08/11 e mostrar ao Patrik para ligar.
 1. **Compra não chegou nem no Meta nem no painel.**
    - A compra de teste de 23/10 chegou até o AddPaymentInfo (~11h); depois disso não veio nada:
      nem Purchase no pixel, nem aviso no webhook (nem "aguardando").
@@ -353,6 +356,32 @@ Os M da pasta "MICHELE LOW" são esses mesmos vídeos. Mapa conferido pelos quad
     anúncio. FALTA: (1) criar a campanha na conta 1619523595475963 (só existe a de 23/10, pausada) com os criativos de
     michele-salla/criativos/ (estrutura ABO 1-1-1 do Patrik, mostrar antes); (2) Patrik conferir o pixel 991344998762063 no produto
     da Hotmart; (3) 1 compra de teste pelo quiz (e-mail em pl_emails_teste). O criativo 05 tem preço: precisa do OK do Patrik.
+  - **08/11 · Campanha do pilates (pedido do Patrik: ABO 1-1-1, só os 8 vídeos da Michele, idade 25 a 60, início 00:03):**
+    - Criativos = vídeos que a Michele gravou em 08/11 na pasta do Drive "criativos-pilates-em-casa"
+      (1A0nx04UCLdxiVPmHuYBQHjsW5v5Nzpsx). 5 gravações; 3 delas em 2 versões de gancho. Os 10 de IA ficaram de fora.
+    - Campanha `PTK - 09/11 - ABO TESTE DE CRIATIVO PILATES` **120252575976530047** (Vendas, Compra no pixel 991344998762063), PAUSADA.
+    - Conjuntos (R$ 16,65/dia cada = R$ 133,20/dia; ADV+, BR, mulheres, idade mín. 25 e sugestão 25–60; início 09/11 00:03 -03:00):
+
+      | Conjunto | ID conjunto | Vídeo (ID) | Capa | Link do quiz |
+      |---|---|---|---|---|
+      | CONJ - ADV+ - MS 01 - COMECE DO ZERO | 120252575977200047 | 987026000671137 | capas/ms01.jpg | ?p=1 |
+      | CONJ - ADV+ - MS 02 - MEDO DEPOIS DOS 40 | 120252575979050047 | 1852753385964046 | capas/ms02.jpg | ?p=1 |
+      | CONJ - ADV+ - MS 03 - CORPO TRAVADO | 120252575979690047 | 2675340376257060 | capas/ms03.jpg | ?p=4 |
+      | CONJ - ADV+ - MS 04 - 3 EXERCICIOS | 120252575980050047 | 4613422628927434 | capas/ms04.jpg | ?p=4 |
+      | CONJ - ADV+ - MS 05 - IMPACTO JOELHO | 120252575980850047 | 1401061971804084 | capas/ms05.jpg | ?p=2 |
+      | CONJ - ADV+ - MS 06 - SEM PULAR | 120252575981110047 | 1428571139433963 | capas/ms06.jpg | ?p=2 |
+      | CONJ - ADV+ - MS 07 - DEPOIS DOS 40 | 120252575981770047 | 1653353229587380 | capas/ms07.jpg | ?p=5 |
+      | CONJ - ADV+ - MS 08 - NO SEU RITMO | 120252575982140047 | 998121960022169 | capas/ms08.jpg | ?p=5 |
+
+    - Anúncio (falta criar): nome = nome do vídeo (ex.: `MS 01 - COMECE DO ZERO`), página 262689970269678, Instagram
+      17841465706978287, sem texto, LEARN_MORE, capa `https://painel.michelesalla.com.br/capas/msNN.jpg`, link
+      `https://quiz.michelesalla.com.br/?p=N&utm_source=FB&utm_medium={{placement}}&utm_campaign={{campaign.name}}&utm_content={{ad.name}}&utm_term={{adset.id}}`.
+    - **Bloqueio:** conta UNSETTLED (pagamento pendente). O Meta deixou criar campanha e conjuntos, mas recusa criativo e anúncio.
+    - Aluna de 64 anos dos vídeos MS 01 e 02: autorização de imagem confirmada pelo Patrik.
+    - Painel conferido: compra de teste do quiz (Hotmart HP4087285190, R$ 37, sck=pilates-p1) chegou ao painel e ao pixel
+      (Purchase pela API da Hotmart). Ela e o teste falso da Hotmart (HP16015479281022) foram marcados como teste
+      (e-mails em pl_emails_teste). Venda real do Desafio pela Greenn em 07/11 (R$ 47, PIX) chegou ao painel e ao pixel.
+    - CliqueComprar do quiz não apareceu no pixel em 08/11 (o painel registrou o clique): conferir no 1º dia de anúncio.
   - **06/11 · Criativos e roteiros (pedido do Patrik: 10 criativos, 3 vídeos no Gravyx, 5 roteiros para a Michele):** página
     https://clientes-phi-six.vercel.app/michele-salla/criativos/ (`michele-salla/criativos/`). 7 imagens 1080×1350 (texto escrito por cima
     em HTML com a fonte da marca) e 3 vídeos 9:16 sem som, cada um com o anúncio da Biblioteca que serviu de modelo (pesquisa de 06/11:
