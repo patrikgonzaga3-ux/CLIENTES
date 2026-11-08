@@ -348,6 +348,11 @@ Os M da pasta "MICHELE LOW" são esses mesmos vídeos. Mapa conferido pelos quad
     `window.plBloco` (chama `window.plTique()` antes e depois da troca). Site `quiz` no `cliente.config.ts` (domínios: michelesalla.com.br,
     clientes-phi-six.vercel.app, painel.michelesalla.com.br). A API aceita vários sites no mesmo domínio pelo começo do slug.
     Telas abertas com `?tela=` (painel de revisão) não rastreiam. Se o quiz mudar de endereço, pôr o domínio em `outrosDominios`.
+  - **08/11 · Pronto para anunciar:** quiz no ar e testado de ponta a ponta (https://quiz.michelesalla.com.br/ sorteia as 5
+    promessas; ?p=1..5 fixa), botão leva à Hotmart R$ 37 com sck=pilates-pN, Clarity z9ki12tcwt ligado, painel com 0 visitas de
+    anúncio. FALTA: (1) criar a campanha na conta 1619523595475963 (só existe a de 23/10, pausada) com os criativos de
+    michele-salla/criativos/ (estrutura ABO 1-1-1 do Patrik, mostrar antes); (2) Patrik conferir o pixel 991344998762063 no produto
+    da Hotmart; (3) 1 compra de teste pelo quiz (e-mail em pl_emails_teste). O criativo 05 tem preço: precisa do OK do Patrik.
   - **06/11 · Criativos e roteiros (pedido do Patrik: 10 criativos, 3 vídeos no Gravyx, 5 roteiros para a Michele):** página
     https://clientes-phi-six.vercel.app/michele-salla/criativos/ (`michele-salla/criativos/`). 7 imagens 1080×1350 (texto escrito por cima
     em HTML com a fonte da marca) e 3 vídeos 9:16 sem som, cada um com o anúncio da Biblioteca que serviu de modelo (pesquisa de 06/11:
