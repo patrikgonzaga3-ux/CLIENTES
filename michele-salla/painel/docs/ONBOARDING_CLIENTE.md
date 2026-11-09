@@ -156,3 +156,7 @@ Não mexa em checkout, preço ou campanha do cliente sem o meu OK.
   Sessão assinada de 60 dias; quem é removido sai na hora; 5 erros de senha travam o e-mail por 15 min. Arquivos:
   `lib/senhas.ts`, `lib/usuarios.ts`, `lib/auth.ts`, `lib/db.ts` (atualizar), `app/api/entrar`, `app/api/convite`,
   `app/painel/convite`, `app/painel/acessos`, `app/painel/_ui/login.tsx` e `sair.tsx`, `tests/senhas.test.mjs`. Levar ao modelo.
+- 09/11/2026 (Michele Salla, pedido do Patrik: "ta dizendo que é pagina, mas é quiz, nao sei o resultado das telas"): nas abas
+  de quiz (`ehQuiz`) o painel de comportamento fala em quiz, tela e promessa (não página/bloco), mostra no topo o quadro
+  **Qual promessa vende mais (P1 a P5)** (visitas, cliques, pedidos, vendas, venda por visita e % das vendas) e sobe a
+  **Tela por tela** logo abaixo do gargalo; tira o tile Rolagem do quiz. Arquivo: `app/painel/_ui/comportamento-ui.tsx`. Levar ao modelo.
