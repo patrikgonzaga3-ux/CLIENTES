@@ -23,13 +23,14 @@ const PROMESSAS = {
     sub: 'Descubra o seu perfil e o plano de pilates para começar hoje.',
     botao: 'Quero treinar sem impacto',
   },
-  3: {
-    nome: 'Sem estúdio',
-    etiqueta: 'Quiz gratuito',
-    titulo: 'Pilates sem estúdio e sem sair de casa. <mark>Descubra o plano certo para o seu corpo.</mark>',
-    sub: 'Para começar, basta um tapete. Bola, flex ring, theraband e overball são opcionais.',
-    botao: 'Quero descobrir o meu plano',
-  },
+  // 3 DESATIVADA em 10/11 (Patrik): 10 visitas, 0 chegaram à oferta, 0 cliques e 0 vendas. Para reativar, tire os // das linhas abaixo.
+  // 3: {
+  //   nome: 'Sem estúdio',
+  //   etiqueta: 'Quiz gratuito',
+  //   titulo: 'Pilates sem estúdio e sem sair de casa. <mark>Descubra o plano certo para o seu corpo.</mark>',
+  //   sub: 'Para começar, basta um tapete. Bola, flex ring, theraband e overball são opcionais.',
+  //   botao: 'Quero descobrir o meu plano',
+  // },
   4: {
     nome: 'Plano personalizado',
     etiqueta: 'Quiz gratuito',

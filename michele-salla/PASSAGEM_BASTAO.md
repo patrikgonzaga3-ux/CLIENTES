@@ -196,6 +196,7 @@ Os M da pasta "MICHELE LOW" são esses mesmos vídeos. Mapa conferido pelos quad
    Rastreio LIGADO (03/11): aba **Quiz Diva** em https://painel.michelesalla.com.br/painel/quiz (telas 01–22 = blocos; quiz-p1..p5 = páginas).
 
 ## 8. Diário
+- **10/11:** quiz de pilates: capa 3 ("Sem estúdio") desativada a pedido do Patrik (10 visitas, 0 na oferta, 0 vendas). O sorteio agora usa as capas 1, 2, 4 e 5; link com ?p=3 cai numa capa sorteada. Reativar: tirar os // da promessa 3 em quiz-pilates/pilates.js.
 - **23/10:**
   - página F publicada e conferida;
   - pixel e Greenn mandando eventos (exceto Purchase, nunca visto);
