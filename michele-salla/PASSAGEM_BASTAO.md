@@ -362,6 +362,12 @@ Os M da pasta "MICHELE LOW" são esses mesmos vídeos. Mapa conferido pelos quad
     anúncio. FALTA: (1) criar a campanha na conta 1619523595475963 (só existe a de 23/10, pausada) com os criativos de
     michele-salla/criativos/ (estrutura ABO 1-1-1 do Patrik, mostrar antes); (2) Patrik conferir o pixel 991344998762063 no produto
     da Hotmart; (3) 1 compra de teste pelo quiz (e-mail em pl_emails_teste). O criativo 05 tem preço: precisa do OK do Patrik.
+  - **10/11 · 1º relatório da campanha do pilates (09/11 00:03 → 10/11 09h):** gasto R$ 228,92; 2 vendas Hotmart
+    (R$ 74; MS 02 e MS 05, pixel confirmou as 2); custo por venda R$ 114; 50 cliques no link (R$ 4,58 cada), 1.867 impressões.
+    Quiz (só visitas de anúncio): 64 visitas → 19 passam da capa (30%) → 11 chegam na oferta → 6 clicam comprar (CliqueComprar
+    chegou no pixel: 6). Gargalo = capa; depois dela 58% chegam na oferta. Capas: P5 52% passa (11/21), P2 23%, P4 20%,
+    P3 17%, P1 14%. Público: 45–54 anos, barriga/costas/flacidez, menopausa, "já tentei várias vezes", medo de gastar sem
+    resultado. No Meta: MS 06 e MS 07 pausados e anúncio novo MS 09 - TEMPO POR DIA (não criado pelo Claude). Amostra pequena.
   - **08/11 · Campanha do pilates (pedido do Patrik: ABO 1-1-1, só os 8 vídeos da Michele, idade 25 a 60, início 00:03):**
     - Criativos = vídeos que a Michele gravou em 08/11 na pasta do Drive "criativos-pilates-em-casa"
       (1A0nx04UCLdxiVPmHuYBQHjsW5v5Nzpsx). 5 gravações; 3 delas em 2 versões de gancho. Os 10 de IA ficaram de fora.
