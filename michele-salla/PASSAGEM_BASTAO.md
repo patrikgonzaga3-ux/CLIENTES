@@ -196,6 +196,7 @@ Os M da pasta "MICHELE LOW" são esses mesmos vídeos. Mapa conferido pelos quad
    Rastreio LIGADO (03/11): aba **Quiz Diva** em https://painel.michelesalla.com.br/painel/quiz (telas 01–22 = blocos; quiz-p1..p5 = páginas).
 
 ## 8. Diário
+- **10/11 (tarde):** quiz Diva do Desafio 7 em 7 posto no ar a pedido do Patrik em https://quiz.michelesalla.com.br/desafio7/ (rewrite no vercel.json; checkout E1YMM7, R$ 47, sem mudança; pixel liga sozinho nesse domínio). Também criado o anúncio MS 09 "Tempo por dia" (conjunto R$ 16,65/dia, em análise no Meta) e pausados MS 06 e MS 07.
 - **10/11:** quiz de pilates: capa 3 ("Sem estúdio") desativada a pedido do Patrik (10 visitas, 0 na oferta, 0 vendas). O sorteio agora usa as capas 1, 2, 4 e 5; link com ?p=3 cai numa capa sorteada. Reativar: tirar os // da promessa 3 em quiz-pilates/pilates.js.
 - **23/10:**
   - página F publicada e conferida;

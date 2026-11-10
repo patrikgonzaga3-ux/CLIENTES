@@ -31,6 +31,26 @@
   ],
   "rewrites": [
     {
+      "source": "/desafio7/",
+      "has": [
+        {
+          "type": "host",
+          "value": "quiz.michelesalla.com.br"
+        }
+      ],
+      "destination": "/michele-salla/quiz/"
+    },
+    {
+      "source": "/desafio7/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "quiz.michelesalla.com.br"
+        }
+      ],
+      "destination": "/michele-salla/quiz/:path*"
+    },
+    {
       "source": "/desafio/",
       "has": [
         {
