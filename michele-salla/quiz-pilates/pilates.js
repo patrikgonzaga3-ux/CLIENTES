@@ -133,7 +133,7 @@ const MEDO = {
   movimentos: 'o curso começa pelos fundamentos e te guia passo a passo, mesmo que você nunca tenha praticado. Ninguém começa no nível avançado.',
   dor: 'pilates é sem impacto e você recebe de bônus aulas para dor lombar e ciático, hérnia de disco e escoliose. Se você tem dor, hérnia ou teve bebê há pouco tempo, converse com o seu médico antes de começar.',
   tempo: 'aulas de 20 a 40 minutos, em casa, sem deslocamento e sem horário fixo, com 365 dias de acesso para fazer no seu ritmo.',
-  dinheiro: 'você tem 7 dias de garantia pela Hotmart: se não fizer sentido para você, pede o reembolso pela própria plataforma.',
+  dinheiro: 'o curso começa pelos fundamentos e segue passo a passo, do básico para frente, com a Michele, que é especialista em pilates desde 2005. E você tem 7 dias de garantia pela Hotmart: se não fizer sentido para você, pede o reembolso pela própria plataforma, sem precisar explicar.',
   desistir: 'um caminho passo a passo, do básico para frente, para você não se sentir perdida e não precisar recomeçar do zero.',
 }
 
