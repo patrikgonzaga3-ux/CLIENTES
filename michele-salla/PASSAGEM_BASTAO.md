@@ -196,6 +196,7 @@ Os M da pasta "MICHELE LOW" são esses mesmos vídeos. Mapa conferido pelos quad
    Rastreio LIGADO (03/11): aba **Quiz Diva** em https://painel.michelesalla.com.br/painel/quiz (telas 01–22 = blocos; quiz-p1..p5 = páginas).
 
 ## 8. Diário
+- **11/11 (noite) · Criativos por clique no link (09→11/11, CTR de link = cliques no link ÷ impressões):** MS 01 Comece do zero 4,68% (R$ 3,23/clique; vídeo vencedor: Nady, aluna de 64 anos, + Michele reagindo) · MS 02 Medo depois dos 40 4,02% (R$ 3,65; mesma aluna) · MS 05 Impacto joelho 3,44% (R$ 3,35) · MS 09 Tempo por dia (imagem) 2,95% (R$ 3,04) · MS 08 2,30% (CTR de todos os cliques 5,7% engana) · MS 06 1,84% · MS 04 1,64% · MS 03 1,17% · MS 07 1,01%. Padrão: aluna real fazendo o exercício + pergunta de medo/começo; os piores são Michele falando para a câmera. Prévias de 3 ganchos novos (sem publicar): `Nunca fez pilates? Comece do zero, em casa.` / `Já tentou várias vezes e parou?` / `Gastar e não ter resultado? Comece pelo básico.` (as duas últimas vêm das respostas do quiz). Amostra de 400–650 impressões por anúncio.
 - **10/11 (tarde):** quiz Diva do Desafio 7 em 7 posto no ar a pedido do Patrik em https://quiz.michelesalla.com.br/desafio7/ (rewrite no vercel.json; checkout E1YMM7, R$ 47, sem mudança; pixel liga sozinho nesse domínio). Também criado o anúncio MS 09 "Tempo por dia" (conjunto R$ 16,65/dia, em análise no Meta) e pausados MS 06 e MS 07.
 - **10/11:** quiz de pilates: capa 3 ("Sem estúdio") desativada a pedido do Patrik (10 visitas, 0 na oferta, 0 vendas). O sorteio agora usa as capas 1, 2, 4 e 5; link com ?p=3 cai numa capa sorteada. Reativar: tirar os // da promessa 3 em quiz-pilates/pilates.js.
 - **23/10:**
@@ -385,7 +386,7 @@ Os M da pasta "MICHELE LOW" são esses mesmos vídeos. Mapa conferido pelos quad
     Quiz (só visitas de anúncio): 64 visitas → 19 passam da capa (30%) → 11 chegam na oferta → 6 clicam comprar (CliqueComprar
     chegou no pixel: 6). Gargalo = capa; depois dela 58% chegam na oferta. Capas: P5 52% passa (11/21), P2 23%, P4 20%,
     P3 17%, P1 14%. Público: 45–54 anos, barriga/costas/flacidez, menopausa, "já tentei várias vezes", medo de gastar sem
-    resultado. No Meta: MS 06 e MS 07 pausados e anúncio novo MS 09 - TEMPO POR DIA (não criado pelo Claude). Amostra pequena.
+    resultado. No Meta: MS 06 e MS 07 pausados e anúncio novo MS 09 - TEMPO POR DIA (criado pelo Claude em 10/11, imagem `criativos/img/criativo-08-tempo-por-dia.png`, conjunto 120252601027660047, R$ 16,65/dia, OK do Patrik). Amostra pequena.
   - **08/11 · Campanha do pilates (pedido do Patrik: ABO 1-1-1, só os 8 vídeos da Michele, idade 25 a 60, início 00:03):**
     - Criativos = vídeos que a Michele gravou em 08/11 na pasta do Drive "criativos-pilates-em-casa"
       (1A0nx04UCLdxiVPmHuYBQHjsW5v5Nzpsx). 5 gravações; 3 delas em 2 versões de gancho. Os 10 de IA ficaram de fora.
