@@ -362,6 +362,10 @@ Os M da pasta "MICHELE LOW" são esses mesmos vídeos. Mapa conferido pelos quad
     anúncio. FALTA: (1) criar a campanha na conta 1619523595475963 (só existe a de 23/10, pausada) com os criativos de
     michele-salla/criativos/ (estrutura ABO 1-1-1 do Patrik, mostrar antes); (2) Patrik conferir o pixel 991344998762063 no produto
     da Hotmart; (3) 1 compra de teste pelo quiz (e-mail em pl_emails_teste). O criativo 05 tem preço: precisa do OK do Patrik.
+  - **11/11 09h · 2º relatório (09/11 → 11/11 09h):** gasto R$ 414,94; 2 vendas (nenhuma nas últimas 24 h); R$ 207/venda;
+    97 cliques, 76 views da página (connect 78%); CPM R$ 117 → 116 → 148 (hoje). Quiz: 121 visitas → 35 passam da capa (29%)
+    → 22 oferta → 13 clicam comprar. P5 segue 51% na capa (outras ~20%). Pixel: InitiateCheckout 14, PaymentGenerated 2,
+    Purchase 2 → checkout da Hotmart é onde mais se perde depois da capa. Medo "gastar": texto novo 2 pessoas, 1 clicou (amostra mínima).
   - **11/11 · Pausados os conjuntos do MS 03 (120252575979690047) e MS 04 (120252575980050047)** (OK do Patrik: "pode pausar
     as ruins"; clique a R$ 8–9 e 0 cliques em comprar). Patrik: "ainda não vamos testar nada" (sem capas novas por ora).
     Gargalos do quiz (09–11/11, 114 visitas de anúncio): capa 110→33 (70% saem); meio do quiz ok (33→21 na oferta);
