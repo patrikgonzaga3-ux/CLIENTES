@@ -362,6 +362,11 @@ Os M da pasta "MICHELE LOW" são esses mesmos vídeos. Mapa conferido pelos quad
     anúncio. FALTA: (1) criar a campanha na conta 1619523595475963 (só existe a de 23/10, pausada) com os criativos de
     michele-salla/criativos/ (estrutura ABO 1-1-1 do Patrik, mostrar antes); (2) Patrik conferir o pixel 991344998762063 no produto
     da Hotmart; (3) 1 compra de teste pelo quiz (e-mail em pl_emails_teste). O criativo 05 tem preço: precisa do OK do Patrik.
+  - **11/11 · Pausados os conjuntos do MS 03 (120252575979690047) e MS 04 (120252575980050047)** (OK do Patrik: "pode pausar
+    as ruins"; clique a R$ 8–9 e 0 cliques em comprar). Patrik: "ainda não vamos testar nada" (sem capas novas por ora).
+    Gargalos do quiz (09–11/11, 114 visitas de anúncio): capa 110→33 (70% saem); meio do quiz ok (33→21 na oferta);
+    oferta 21→12 clicam comprar (quem não clica rola 100% e fica ~71 s); checkout 12 cliques → 3 pedidos na Hotmart → 2 pagos.
+    Abandono de carrinho da Hotmart não chegou nenhum no painel (pl_abandonos vazio).
   - **10/11 · Resposta ao medo "gastar e não ter resultado" (OK do Patrik: "pode alterar, aprovado"):** em `quiz-pilates/pilates.js`
     (MEDO.dinheiro) entrou "o curso começa pelos fundamentos e segue passo a passo, do básico para frente, com a Michele, que é
     especialista em pilates desde 2005. E você tem 7 dias de garantia…, sem precisar explicar." Antes só falava do reembolso.
