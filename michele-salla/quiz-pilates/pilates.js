@@ -9,20 +9,21 @@ const FOTO = 'img/'
 const IMG = '../desafio-7em7/assets/img/'
 
 const PROMESSAS = {
-  1: {
-    nome: 'Depois dos 40',
-    etiqueta: 'Para mulheres a partir dos 35',
-    titulo: 'Depois dos 40 o seu corpo pede outro treino. <mark>Descubra o seu plano de pilates em casa.</mark>',
-    sub: 'Responda e veja qual é o seu perfil e por onde você começa.',
-    botao: 'Quero o meu plano de pilates',
-  },
-  2: {
-    nome: 'Sem impacto',
-    etiqueta: 'Quiz gratuito',
-    titulo: 'Chega de pular igual a uma maluca. <mark>Pilates em casa, sem impacto, no seu ritmo.</mark>',
-    sub: 'Descubra o seu perfil e o plano de pilates para começar hoje.',
-    botao: 'Quero treinar sem impacto',
-  },
+  // 1 e 2 DESATIVADAS em 11/11 (Patrik: "ajusta tudo"): a capa 5 passa da capa em 50% (19 de 38) contra 24% das outras (28 de 117). Para reativar, tire os //.
+  // 1: {
+  //   nome: 'Depois dos 40',
+  //   etiqueta: 'Para mulheres a partir dos 35',
+  //   titulo: 'Depois dos 40 o seu corpo pede outro treino. <mark>Descubra o seu plano de pilates em casa.</mark>',
+  //   sub: 'Responda e veja qual é o seu perfil e por onde você começa.',
+  //   botao: 'Quero o meu plano de pilates',
+  // },
+  // 2: {
+  //   nome: 'Sem impacto',
+  //   etiqueta: 'Quiz gratuito',
+  //   titulo: 'Chega de pular igual a uma maluca. <mark>Pilates em casa, sem impacto, no seu ritmo.</mark>',
+  //   sub: 'Descubra o seu perfil e o plano de pilates para começar hoje.',
+  //   botao: 'Quero treinar sem impacto',
+  // },
   // 3 DESATIVADA em 10/11 (Patrik): 10 visitas, 0 chegaram à oferta, 0 cliques e 0 vendas. Para reativar, tire os // das linhas abaixo.
   // 3: {
   //   nome: 'Sem estúdio',
@@ -31,13 +32,14 @@ const PROMESSAS = {
   //   sub: 'Para começar, basta um tapete. Bola, flex ring, theraband e overball são opcionais.',
   //   botao: 'Quero descobrir o meu plano',
   // },
-  4: {
-    nome: 'Plano personalizado',
-    etiqueta: 'Quiz gratuito',
-    titulo: 'Descubra o plano de pilates em casa <mark>para o seu perfil.</mark>',
-    sub: 'Algumas perguntas sobre o seu corpo e a sua rotina e você vê por onde começar.',
-    botao: 'Descobrir o meu plano',
-  },
+  // 4 DESATIVADA em 11/11: 20% passam da capa (5 de 25), a pior das ativas.
+  // 4: {
+  //   nome: 'Plano personalizado',
+  //   etiqueta: 'Quiz gratuito',
+  //   titulo: 'Descubra o plano de pilates em casa <mark>para o seu perfil.</mark>',
+  //   sub: 'Algumas perguntas sobre o seu corpo e a sua rotina e você vê por onde começar.',
+  //   botao: 'Descobrir o meu plano',
+  // },
   5: {
     nome: 'A rotina da Michele',
     etiqueta: 'Quiz gratuito',

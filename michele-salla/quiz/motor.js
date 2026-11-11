@@ -14,7 +14,7 @@ function sorteiaPromessa() {
   try { localStorage.setItem(k, n) } catch (e) {}
   return n
 }
-const P = PROMESSAS[q.get('p')] ? Number(q.get('p')) : (q.get('tela') ? 1 : sorteiaPromessa())
+const P = PROMESSAS[q.get('p')] ? Number(q.get('p')) : (q.get('tela') ? Number(Object.keys(PROMESSAS)[0]) : sorteiaPromessa())
 const resp = {}
 let i = 0
 const app = document.getElementById('app')
