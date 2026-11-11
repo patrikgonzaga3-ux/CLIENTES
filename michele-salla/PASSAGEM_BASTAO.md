@@ -362,6 +362,12 @@ Os M da pasta "MICHELE LOW" são esses mesmos vídeos. Mapa conferido pelos quad
     anúncio. FALTA: (1) criar a campanha na conta 1619523595475963 (só existe a de 23/10, pausada) com os criativos de
     michele-salla/criativos/ (estrutura ABO 1-1-1 do Patrik, mostrar antes); (2) Patrik conferir o pixel 991344998762063 no produto
     da Hotmart; (3) 1 compra de teste pelo quiz (e-mail em pl_emails_teste). O criativo 05 tem preço: precisa do OK do Patrik.
+  - **11/11 · Diagnóstico de vendas (pedido do Patrik "analisa tudo"):** o funil do quiz está no nível do quiz da Laura
+    (capa 29% × 28,6%; venda por visita 1,65% × 2,4%; clique→venda 15% × 15,6%). O checkout BR está ok (R$ 37 ou 10× R$ 3,70,
+    PIX primeiro, 5 campos com CPF) — fora do Brasil a Hotmart abre em dólar (US$ 7), normal. Problema principal = conta não
+    fecha: visita custa R$ 3,43 (CPM R$ 127, sobe com a idade: 45–54 R$ 137, 55–64 R$ 181, 65+ R$ 208; 25–34 R$ 62 mas fora da
+    persona), e para empatar a R$ 37 seria 1 venda a cada 11 visitas (hoje 1 a cada 60). Alavancas: CPM (verba em menos conjuntos),
+    capa P5 (51% × 20%) e ticket médio (sem order bump no checkout; Laura tinha 25 itens extras em 75 vendas). Nada mudado.
   - **11/11 09h · 2º relatório (09/11 → 11/11 09h):** gasto R$ 414,94; 2 vendas (nenhuma nas últimas 24 h); R$ 207/venda;
     97 cliques, 76 views da página (connect 78%); CPM R$ 117 → 116 → 148 (hoje). Quiz: 121 visitas → 35 passam da capa (29%)
     → 22 oferta → 13 clicam comprar. P5 segue 51% na capa (outras ~20%). Pixel: InitiateCheckout 14, PaymentGenerated 2,
