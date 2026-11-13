@@ -146,6 +146,11 @@ Os M da pasta "MICHELE LOW" são esses mesmos vídeos. Mapa conferido pelos quad
    esperando o Patrik escolher a proposta (regra de pagamento). A página de revisão (`quiz-pilates/revisao/`) ainda não tem as telas novas.
    09/11–12/11 da campanha PTK - 09/11: R$ 483,77, 2 vendas pelo anúncio (R$ 62,44 líquidos); a venda de 08/11 foi teste.
    12/11: conjunto MS 09 · Tempo por dia pausado a pedido do Patrik (R$ 50,31 sem clique em comprar).
+   13/11: capa 6 "Acabe com as dores e emagreça depois dos 45…" (modelada na Lays Trancoso, pilates 50+) na branch, fora do sorteio
+   (`QUIZ.sorteio = ['5']`, abre só com ?p=6). Falta: Michele confirmar a promessa e o Patrik decidir o conjunto de teste.
+   Lado a lado da oferta da Lays × a nossa: https://claude.ai/artifact/48La865xMwcnZkhEGZHKHW (preço antes do 1º botão,
+   depoimentos em texto, mockup das aulas, "feito para quem tem…", professora em destaque).
+   13/11 06h11: conjuntos MS 01 e MS 08 pausados (não pelo Claude). Ativos: MS 02 e MS 05.
 0. **(08/11) Campanha do pilates LIGADA** pelo Patrik ("ativa"): campanha, 8 conjuntos e 8 anúncios ACTIVE, entrega a partir
    de 09/11 00:03. Acompanhar no painel (aba Quiz Pilates e Anúncios) e conferir o CliqueComprar no pixel no 1º dia.
    09/11 05h: Patrik decidiu mandar os 8 anúncios para o link único com sorteio (20% por promessa, sem ?p=) e vai trocar
