@@ -54,6 +54,7 @@ const PROMESSAS = {
     nome: 'Dores e emagrecer 45+',
     etiqueta: 'Quiz gratuito',
     titulo: 'Acabe com as dores e emagreça depois dos 45. <mark>Pilates em casa, com exercícios seguros e sem impacto.</mark>',
+    faixa: '', // o título já diz "pilates em casa, sem impacto"
     sub: 'Responda e veja qual é o seu perfil.',
     botao: 'Quero descobrir o meu perfil',
   },
@@ -170,7 +171,7 @@ const EXEMPLO = {
 const QUIZ = {
   slug: 'pilates-p', // painel: pilates-p1 … pilates-p5 (aba Quiz Pilates)
   mostraPct: true,
-  sorteio: ['5'], // 13/11: link sem ?p= segue só na capa 5 (a que está rodando); a 6 abre só com ?p=6 // 13/11: "% concluído" ao lado da barra (modelo NovaMente)
+  sorteio: ['5', '6'], // 13/11 (Patrik: "é um link só dividindo as promessas"): link sem ?p= sorteia 50% capa 5 e 50% capa 6 // 13/11: "% concluído" ao lado da barra (modelo NovaMente)
   // 13/11 (Patrik: "faz o 4 e o 5"): capa com a foto real da Michele, selos e a idade em botões grandes de texto
   // (80% de quem responde tem 45+; as 4 fotos ilustrativas saíram). Desligar: apague capaV2 e tire `texto` de idadeNaCapa.
   capaV2: {
@@ -179,7 +180,7 @@ const QUIZ = {
     // 13/11 (análise da tela 1): a promessa da capa 5 não muda. Embaixo dela, o público em destaque (modelo Lays: "com exercícios
     // seguros de pilates em casa", em amarelo) e, embaixo da idade, o que ela ganha no final ("diagnóstico grátis" → plano grátis).
     // Os selos saíram para os botões de idade caberem na primeira tela de um celular pequeno (360 × 640).
-    faixa: 'Pilates em casa, sem impacto, para mulheres a partir dos 40',
+    faixa: 'Pilates em casa, sem impacto, para mulheres a partir dos 35', // 35: a idade começa em 35 a 44 (e "menos de 35")
     selos: [],
     final: 'No final, você recebe o seu plano grátis. Sem cadastro.',
   },
@@ -312,15 +313,29 @@ const QUIZ = {
       titulo: 'Pilates em casa, <b>sem impacto</b>, para cuidar das dores e fortalecer o corpo',
       sub: '24 aulas de 20 a 40 minutos, do básico para frente, com a Michele Salla, educadora física e especialista em pilates desde 2005.',
       foto: { src: FOTO + 'michele-pilates-estudio.webp', alt: 'Michele Salla fazendo pilates no estúdio', w: 900, h: 1200 },
+      // 13/11 (Patrik: "ajusta também os antes e depois", pasta "Antes e depois" da Michele no Drive): só fotos sem rosto, nome,
+      // telefone ou número de quilos. São de alunas do Desafio 7 em 7 da Michele (os prints falam do Desafio), e a legenda diz isso.
+      heroAD: { src: FOTO + 'ad-1.webp', alt: 'Antes e depois de aluna da Michele', w: 682, h: 900 },
+      adTitulo: 'Resultados de alunas da Michele',
+      adLegenda: 'Alunas do Desafio 7 em 7 da Michele. Os resultados variam de pessoa para pessoa.',
+      antesDepois: [
+        { src: FOTO + 'ad-2.webp', alt: 'Antes e depois de aluna da Michele', w: 715, h: 900 },
+        { src: FOTO + 'ad-3.webp', alt: 'Antes e depois de aluna da Michele', w: 720, h: 720 },
+        { src: FOTO + 'ad-4.webp', alt: 'Antes e depois de aluna da Michele', w: 900, h: 764 },
+      ],
       feitoTitulo: 'Feito a partir do que você respondeu',
       feito: {
         dor: 'Você sente <b>dor ou cansaço nas costas</b> ou com impacto: tem aulas de postura e mobilidade e bônus para <b>dor lombar e ciático</b>.',
         fase: 'Você marcou <b>menopausa ou pós-parto</b>: o pilates trabalha o centro do corpo sem impacto, e tem o bônus <b>Pilates no Pós-Parto</b>.',
         iniciante: 'Você <b>nunca fez</b> ou não sabe se fez certo: o curso começa pelos <b>Fundamentos</b>, passo a passo.',
+        perfil: '', // o texto do perfil já aparece inteiro na tela anterior (resultado): aqui fica só o nome do perfil
       },
       depoTitulo: 'O que as alunas dizem',
       depoimentos: [], // (ESCREVER AQUI: 3 a 5 depoimentos reais de alunas do pilates, com idade e a dor que melhorou; a Michele manda)
       recebeTitulo: 'Veja tudo que você vai receber',
+      // 13/11 (Patrik: "essas imagens tão ruins, crie uma melhor com gravyx"): notebook, tablet e celular gerados no Gravyx com as
+      // telas em verde e, dentro delas, fotos reais das aulas da Michele (montagem: scratchpad ad/scripts/mockup.py).
+      mockupImg: { src: FOTO + 'mockup-aulas.webp', alt: 'As aulas do Pilates em Casa no notebook, no tablet e no celular', w: 900, h: 361 },
       mockup: [{ src: FOTO + 'aula-em-grupo.webp', alt: 'Aula de pilates', w: 900, h: 675 }, { src: FOTO + 'aula-com-elastico.webp', alt: 'Aula de pilates com elástico', w: 900, h: 1200 }],
       recebe: [
         '<b>24 aulas</b> de 20 a 40 minutos para fazer em casa, só com um tapete',
@@ -329,7 +344,15 @@ const QUIZ = {
         '<b>365 dias de acesso</b> pelo celular, tablet ou computador, na área de membros da Hotmart',
       ],
       praQuem: {
-        titulo: 'É pra você que…',
+        titulo: 'O Pilates em Casa é pra quem…',
+        // 13/11 (Patrik: "uma imagem assim, batendo nas ruminações e nas dores", modelo Lays): mulher ilustrativa gerada no Gravyx
+        // (não é aluna) e balões com as dores e ruminações mais marcadas no quiz; o que ela marcou fica em destaque.
+        figura: {
+          img: { src: FOTO + 'mulher-baloes.webp', alt: 'Mulher de uns 55 anos, de frente, com balões de pensamento', w: 700, h: 938 },
+          baloes: [['costas', 'Minhas costas pesam no fim do dia'], ['recomeco', 'Começo e paro de novo'],
+            ['impactoDor', 'O joelho dói quando pulo ou corro'], ['todos', 'Cuido de todo mundo, menos de mim'],
+            ['barriga', 'Quero diminuir a barriga'], ['movimentos', 'Tenho medo de não conseguir fazer os movimentos']],
+        },
         itens: [['costas', 'Sente dor ou cansaço nas costas'], ['impactoDor', 'Sente dor no joelho ou nas costas quando pula ou corre'],
           ['rigidez', 'Sente o corpo travado, com pouca flexibilidade'], ['barriga', 'Quer trabalhar a barriga e a flacidez'],
           ['postura', 'Quer melhorar a postura e tirar o peso do fim do dia'], ['fase', 'Está na pré-menopausa, na menopausa ou no pós-parto'],

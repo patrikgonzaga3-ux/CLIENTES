@@ -213,6 +213,16 @@ Os M da pasta "MICHELE LOW" são esses mesmos vídeos. Mapa conferido pelos quad
    Rastreio LIGADO (03/11): aba **Quiz Diva** em https://painel.michelesalla.com.br/painel/quiz (telas 01–22 = blocos; quiz-p1..p5 = páginas).
 
 ## 8. Diário
+- **13/11 (noite) · NO AR (Patrik: "pode subir"):** capa ajustada, oferta v3, IMC, nome, dois caminhos e capa 6 (só ?p=6), commit
+  3e073a9 na main. Depois, a pedido dele, NA BRANCH (falta o OK para subir): antes e depois da pasta "Antes e depois" da Michele
+  (Drive 1K6Naw7ThwmREtrTUt9bNZhGZJbjYWVfm; 4 fotos sem rosto, nome, telefone ou kg: `img/ad-1..4.webp`; legenda "Alunas do Desafio
+  7 em 7 da Michele", porque os prints são do Desafio) no topo e na prova da oferta; e a imagem "O Pilates em Casa é pra quem…"
+  com 6 balões de dores e ruminações (mulher ilustrativa gerada no Gravyx, `img/mulher-baloes.webp`), destacando o que a pessoa
+  marcou. Fora: prints com nome e telefone de aluna e os com "-10cm/12kg", "-4kgs", "78kg/61kg".
+  Revisão (13/11, comparativo antes × agora): corrigidos "seu plano está pronto" repetido (oferta agora "Rosa, este é o seu plano"),
+  perfil repetido na oferta e faixa "a partir dos 40" → "35" (capa 6 sem faixa). Link sem ?p= passa a sortear capa 5 e capa 6 (50/50,
+  testado 988 × 1.012), pedido do Patrik ("é um link só dividindo as promessas"). Patrik deu "ok pra tudo" e foi ao ar junto com o
+  mockup novo do "Veja tudo que você vai receber" (Gravyx, telas verdes trocadas por fotos reais das aulas: `img/mockup-aulas.webp`).
 - **13/11 · Quiz pilates modelado no concorrente NovaMente (desafiopilates.produtodigitalspeed.site, 37 telas, R$ 37, 4 order bumps,
   upsell e oferta de saída de R$ 27):** feitos o 4 e o 5 do plano (capa nova; resultado com nome, IMC e dois caminhos) + altura/peso/peso
   desejado, compromisso e nome, na branch. Motor ganhou `capaV2`, `mostraPct`, `idadeNaCapa.texto`, telas `numero` e `nome`, `dica` e
