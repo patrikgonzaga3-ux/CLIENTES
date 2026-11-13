@@ -9,7 +9,7 @@
 
 Nada de senha, token ou dado de cliente aqui.
 
-Última atualização: 08/11/2026.
+Última atualização: 13/11/2026.
 
 ---
 
@@ -139,6 +139,23 @@ Os M da pasta "MICHELE LOW" são esses mesmos vídeos. Mapa conferido pelos quad
 **Painel publica sozinho:** todo push na main do CLIENTES gera deploy na Vercel ("Ptk midias") em ~1 min.
 
 ## 7. Pendências (na ordem)
+00. **(13/11) Quiz pilates modelado no NovaMente, na branch `claude/wizardly-mayer-043j6t` (NÃO está no ar):** capa com a foto real da
+   Michele, selos e idade em botões de texto (45 a 54 primeiro); "% concluído"; altura, peso e peso desejado (telas 12–14); compromisso
+   (18); nome (21); resultado com o nome, o IMC e os "dois caminhos". Painel: telas 01–24, oferta = 24. **Falta:** OK do Patrik para
+   mesclar na main (vai ao ar sozinho) e a Michele revisar os textos novos (IMC, dois caminhos, compromisso). Cupom/preço riscado:
+   esperando o Patrik escolher a proposta (regra de pagamento). A página de revisão (`quiz-pilates/revisao/`) ainda não tem as telas novas.
+   09/11–12/11 da campanha PTK - 09/11: R$ 483,77, 2 vendas pelo anúncio (R$ 62,44 líquidos); a venda de 08/11 foi teste.
+   12/11: conjunto MS 09 · Tempo por dia pausado a pedido do Patrik (R$ 50,31 sem clique em comprar).
+   13/11: capa 6 "Acabe com as dores e emagreça depois dos 45…" (modelada na Lays Trancoso, pilates 50+) na branch, fora do sorteio
+   (`QUIZ.sorteio = ['5']`, abre só com ?p=6). Falta: Michele confirmar a promessa e o Patrik decidir o conjunto de teste.
+   Lado a lado da oferta da Lays × a nossa: https://claude.ai/artifact/48La865xMwcnZkhEGZHKHW (preço antes do 1º botão,
+   depoimentos em texto, mockup das aulas, "feito para quem tem…", professora em destaque).
+   13/11 06h11: conjuntos MS 01 e MS 08 pausados (não pelo Claude). Ativos: MS 02 e MS 05.
+   13/11 (tarde): na branch, a oferta nova `oferta.v3` (modelo Lays: título de resultado, preço antes do 1º botão, caixa de preço
+   5x, "tudo que você recebe" com mockup, "é pra você que…" marcando as respostas, professora grande, garantia e 4 perguntas)
+   e a capa ajustada (foto 150 px, faixa amarela de público, "no final, você recebe o seu plano grátis", idade cabe em 360×640).
+   Mesmo preço e mesmo link da Hotmart. Desligar: `oferta.v3: null` volta para a v2. Depoimentos: vazio até a Michele mandar.
+   Tela 1 (capa 5, 11→13/11): 46 visitas, 39% passam; das 28 que saem, 12 saem em até 3 s e 18 sem rolar; feed 48%, stories 29%.
 0. **(08/11) Campanha do pilates LIGADA** pelo Patrik ("ativa"): campanha, 8 conjuntos e 8 anúncios ACTIVE, entrega a partir
    de 09/11 00:03. Acompanhar no painel (aba Quiz Pilates e Anúncios) e conferir o CliqueComprar no pixel no 1º dia.
    09/11 05h: Patrik decidiu mandar os 8 anúncios para o link único com sorteio (20% por promessa, sem ?p=) e vai trocar
@@ -196,6 +213,13 @@ Os M da pasta "MICHELE LOW" são esses mesmos vídeos. Mapa conferido pelos quad
    Rastreio LIGADO (03/11): aba **Quiz Diva** em https://painel.michelesalla.com.br/painel/quiz (telas 01–22 = blocos; quiz-p1..p5 = páginas).
 
 ## 8. Diário
+- **13/11 · Quiz pilates modelado no concorrente NovaMente (desafiopilates.produtodigitalspeed.site, 37 telas, R$ 37, 4 order bumps,
+  upsell e oferta de saída de R$ 27):** feitos o 4 e o 5 do plano (capa nova; resultado com nome, IMC e dois caminhos) + altura/peso/peso
+  desejado, compromisso e nome, na branch. Motor ganhou `capaV2`, `mostraPct`, `idadeNaCapa.texto`, telas `numero` e `nome`, `dica` e
+  `resultado.v2` (o quiz do Desafio não usa nada disso e segue igual). O nome nunca vai para o rastreio nem para o Clarity (máscara).
+  Testado no modo revisão: 24 telas, IMC certo (78 kg / 1,62 m = 29,7), oferta abre depois do resultado.
+- **12/11 · Relatório para a Michele:** https://claude.ai/artifact/9Po62mbvu8HhZVXBRqJLEC + PDF de 2 páginas. Gargalos: CPM R$ 121
+  (9 conjuntos de R$ 16,65 presos em aprendizado), capa (32% passam) e checkout (12 clicaram em comprar, 2 pagaram).
 - **11/11 (noite) · Ajuste do quiz de pilates (Patrik: "ajusta tudo"):** sorteio agora só com a capa 5 ("Há quase 20 anos eu vivo o pilates…": 19 de 38 passam da capa = 50%, contra 28 de 117 = 24% nas outras). Capas 1, 2 e 4 comentadas em `quiz-pilates/pilates.js` (a 3 já estava). Para reativar: tirar os `//`. `quiz/motor.js`: a página de revisão (?tela=) usa a primeira capa ativa em vez da 1. Não mexi em preço, oferta, checkout, anúncios nem verba.
 - **11/11 (noite) · Criativos por clique no link (09→11/11, CTR de link = cliques no link ÷ impressões):** MS 01 Comece do zero 4,68% (R$ 3,23/clique; vídeo vencedor: Nady, aluna de 64 anos, + Michele reagindo) · MS 02 Medo depois dos 40 4,02% (R$ 3,65; mesma aluna) · MS 05 Impacto joelho 3,44% (R$ 3,35) · MS 09 Tempo por dia (imagem) 2,95% (R$ 3,04) · MS 08 2,30% (CTR de todos os cliques 5,7% engana) · MS 06 1,84% · MS 04 1,64% · MS 03 1,17% · MS 07 1,01%. Padrão: aluna real fazendo o exercício + pergunta de medo/começo; os piores são Michele falando para a câmera. Prévias de 3 ganchos novos (sem publicar): `Nunca fez pilates? Comece do zero, em casa.` / `Já tentou várias vezes e parou?` / `Gastar e não ter resultado? Comece pelo básico.` (as duas últimas vêm das respostas do quiz). Amostra de 400–650 impressões por anúncio.
 - **10/11 (tarde):** quiz Diva do Desafio 7 em 7 posto no ar a pedido do Patrik em https://quiz.michelesalla.com.br/desafio7/ (rewrite no vercel.json; checkout E1YMM7, R$ 47, sem mudança; pixel liga sozinho nesse domínio). Também criado o anúncio MS 09 "Tempo por dia" (conjunto R$ 16,65/dia, em análise no Meta) e pausados MS 06 e MS 07.

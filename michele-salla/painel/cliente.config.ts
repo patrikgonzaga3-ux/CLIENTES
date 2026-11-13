@@ -88,12 +88,13 @@ export const CLIENTE = {
       outrosDominios: ['clientes-phi-six.vercel.app'],
       prefixo: 'pilates',
       paginas: [['pilates-p1', 'P1 · Depois dos 40'], ['pilates-p2', 'P2 · Sem impacto'], ['pilates-p3', 'P3 · Sem estúdio'],
-        ['pilates-p4', 'P4 · Plano personalizado'], ['pilates-p5', 'P5 · A rotina da Michele']],
-      // telas 01 a 19 do quiz (michele-salla/quiz-pilates/pilates.js)
+        ['pilates-p4', 'P4 · Plano personalizado'], ['pilates-p5', 'P5 · A rotina da Michele'], ['pilates-p6', 'P6 · Dores e emagrecer 45+']],
+      // telas 01 a 24 do quiz (michele-salla/quiz-pilates/pilates.js). Desde 13/11 entraram altura, peso e peso desejado (12–14),
+      // compromisso (18) e nome (21); a oferta passou de 19 para 24. Visitas antes de 13/11 seguem a numeração antiga (01–19).
       blocos: ['Capa (promessa + idade)', 'Michele', 'Objetivo', 'Já fez pilates', 'O que incomoda', 'Impacto', 'Prova (alunas)',
-        'Rotina', 'Tempo por dia', 'Onde pratica', 'Fase', 'Identificação', 'Analisando 1', 'Recomeços', 'Medo', 'Sonho',
-        'Analisando 2', 'Resultado (perfil)', 'Oferta'],
-      blocosOferta: [19],
+        'Rotina', 'Tempo por dia', 'Onde pratica', 'Fase', 'Altura', 'Peso', 'Peso desejado', 'Identificação', 'Analisando 1',
+        'Recomeços', 'Compromisso', 'Medo', 'Sonho', 'Nome', 'Analisando 2', 'Resultado (perfil + IMC)', 'Oferta'],
+      blocosOferta: [24],
       botoes: {},
       gateway: 'Hotmart',
     },
