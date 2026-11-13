@@ -54,6 +54,7 @@ const PROMESSAS = {
     nome: 'Dores e emagrecer 45+',
     etiqueta: 'Quiz gratuito',
     titulo: 'Acabe com as dores e emagreça depois dos 45. <mark>Pilates em casa, com exercícios seguros e sem impacto.</mark>',
+    faixa: '', // o título já diz "pilates em casa, sem impacto"
     sub: 'Responda e veja qual é o seu perfil.',
     botao: 'Quero descobrir o meu perfil',
   },
@@ -170,7 +171,7 @@ const EXEMPLO = {
 const QUIZ = {
   slug: 'pilates-p', // painel: pilates-p1 … pilates-p5 (aba Quiz Pilates)
   mostraPct: true,
-  sorteio: ['5'], // 13/11: link sem ?p= segue só na capa 5 (a que está rodando); a 6 abre só com ?p=6 // 13/11: "% concluído" ao lado da barra (modelo NovaMente)
+  sorteio: ['5', '6'], // 13/11 (Patrik: "é um link só dividindo as promessas"): link sem ?p= sorteia 50% capa 5 e 50% capa 6 // 13/11: "% concluído" ao lado da barra (modelo NovaMente)
   // 13/11 (Patrik: "faz o 4 e o 5"): capa com a foto real da Michele, selos e a idade em botões grandes de texto
   // (80% de quem responde tem 45+; as 4 fotos ilustrativas saíram). Desligar: apague capaV2 e tire `texto` de idadeNaCapa.
   capaV2: {
@@ -179,7 +180,7 @@ const QUIZ = {
     // 13/11 (análise da tela 1): a promessa da capa 5 não muda. Embaixo dela, o público em destaque (modelo Lays: "com exercícios
     // seguros de pilates em casa", em amarelo) e, embaixo da idade, o que ela ganha no final ("diagnóstico grátis" → plano grátis).
     // Os selos saíram para os botões de idade caberem na primeira tela de um celular pequeno (360 × 640).
-    faixa: 'Pilates em casa, sem impacto, para mulheres a partir dos 40',
+    faixa: 'Pilates em casa, sem impacto, para mulheres a partir dos 35', // 35: a idade começa em 35 a 44 (e "menos de 35")
     selos: [],
     final: 'No final, você recebe o seu plano grátis. Sem cadastro.',
   },
@@ -327,6 +328,7 @@ const QUIZ = {
         dor: 'Você sente <b>dor ou cansaço nas costas</b> ou com impacto: tem aulas de postura e mobilidade e bônus para <b>dor lombar e ciático</b>.',
         fase: 'Você marcou <b>menopausa ou pós-parto</b>: o pilates trabalha o centro do corpo sem impacto, e tem o bônus <b>Pilates no Pós-Parto</b>.',
         iniciante: 'Você <b>nunca fez</b> ou não sabe se fez certo: o curso começa pelos <b>Fundamentos</b>, passo a passo.',
+        perfil: '', // o texto do perfil já aparece inteiro na tela anterior (resultado): aqui fica só o nome do perfil
       },
       depoTitulo: 'O que as alunas dizem',
       depoimentos: [], // (ESCREVER AQUI: 3 a 5 depoimentos reais de alunas do pilates, com idade e a dor que melhorou; a Michele manda)

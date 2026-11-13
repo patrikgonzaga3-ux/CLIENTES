@@ -214,7 +214,7 @@ function ofertaV3(pf, O, m, botao) {
   const rico = x => txt(x).replace(/&lt;(\/?)b&gt;/g, '<$1b>')
   return `<section class="v3">
     <div class="v3-topo">
-      <span class="v3-ok" data-rotulo="Título da oferta" data-clarity-mask="true">✓ ${nome ? esc(nome) + ', o' : 'O'} seu plano está pronto · ${esc(pf.nome)}</span>
+      <span class="v3-ok" data-rotulo="Título da oferta" data-clarity-mask="true">✓ ${nome ? esc(nome) + ', este é o seu' : 'Este é o seu'} plano · ${esc(pf.nome)}</span>
       <h2 class="v3-titulo">${rico(V.titulo)}</h2>
       <p class="v3-sub">${txt(V.sub)}</p>
       ${V.heroAD ? `<figure class="v3-hero-ad" style="margin:0">${img(V.heroAD, 'loading="eager"')}<figcaption>${txt(V.adLegenda)}</figcaption></figure>` : `<div class="v3-foto">${img(V.foto, 'loading="eager"')}</div>`}
@@ -222,7 +222,7 @@ function ofertaV3(pf, O, m, botao) {
     ${caixa()}
     <div class="v3-bloco"><h3>${esc(V.feitoTitulo)}</h3><ul class="check">${[
       tem.costas || tem.impactoDor ? V.feito.dor : '', tem.fase ? V.feito.fase : '', tem.iniciante ? V.feito.iniciante : '',
-      `<b>Seu perfil: ${esc(pf.nome)}.</b> ${txt(pf.comeca)}`].filter(Boolean).map(x => `<li>${x.startsWith('<b>') ? x : rico(x)}</li>`).join('')}</ul></div>
+      `<b>Seu perfil: ${esc(pf.nome)}.</b> ${txt(V.feito.perfil !== undefined ? V.feito.perfil : pf.comeca)}`].filter(Boolean).map(x => `<li>${x.startsWith('<b>') ? x : rico(x)}</li>`).join('')}</ul></div>
     ${V.depoimentos && V.depoimentos.length ? `<h3 class="v3-h">${esc(V.depoTitulo)}</h3>${V.depoimentos.map(d => `<div class="v3-depo"><span class="estrelas" aria-label="5 estrelas">★★★★★</span><b>${esc(d.nome)}</b><p>${txt(d.texto)}</p></div>`).join('')}`
       : V.antesDepois && V.antesDepois.length ? `<h3 class="v3-h">${esc(V.adTitulo)}</h3><div class="grade v3-ad">${V.antesDepois.map(x => img(x, 'loading="lazy"')).join('')}</div><p class="aviso">${txt(V.adLegenda)}</p>`
       : `<h3 class="v3-h">${esc(QUIZ.prova.titulo)}</h3>${fotos(QUIZ.prova.fotos)}<p class="aviso">Os resultados variam de pessoa para pessoa.</p>`}
@@ -264,7 +264,7 @@ function desenha() {
     h += `<section class="capa capa2">
       <div class="capa2-foto">${img(C.foto, 'fetchpriority="high"')}${C.marca ? `<span class="capa2-marca">${esc(C.marca)}</span>` : ''}</div>
       <h1>${pend(p.titulo)}</h1>
-      ${C.faixa ? `<p class="capa2-faixa">${esc(C.faixa)}</p>` : ''}
+      ${(p.faixa !== undefined ? p.faixa : C.faixa) ? `<p class="capa2-faixa">${esc(p.faixa !== undefined ? p.faixa : C.faixa)}</p>` : ''}
       ${C.selos && C.selos.length ? `<div class="selos-capa">${C.selos.map(x => `<span>${esc(x)}</span>`).join('')}</div>` : ''}
       <div class="cartao capa2-idade">${capaIdade(QUIZ.idadeNaCapa)}${C.final ? `<p class="capa2-final">${esc(C.final)}</p>` : ''}</div>
       <p class="miudo">${esc(QUIZ.assinatura || 'Por Michele Salla, educadora física')}</p></section>`
