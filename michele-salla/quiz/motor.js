@@ -71,7 +71,7 @@ function cliqueComprar() {
 
 const contaveis = TELAS.filter(t => !['capa', 'oferta'].includes(t.tipo)).length
 function progresso() { const n = TELAS.slice(0, i + 1).filter(t => !['capa', 'oferta'].includes(t.tipo)).length; return Math.round(100 * n / contaveis) }
-function topo() { return i === 0 ? '' : `<div class="topo"><button class="voltar" aria-label="Voltar" onclick="volta()">‹</button><div class="barra" aria-hidden="true"><i style="width:${progresso()}%"></i></div></div>` }
+function topo() { return i === 0 ? '' : `<div class="topo"><button class="voltar" aria-label="Voltar" onclick="volta()">‹</button><div class="barra" aria-hidden="true"><i style="width:${progresso()}%"></i></div>${QUIZ.mostraPct ? `<span class="pct">${progresso()}% concluído</span>` : ''}</div>` }
 function vai() { i = Math.min(i + 1, TELAS.length - 1); desenha(); scrollTo(0, 0) }
 let voltando = false // quem volta para a tela de análise não é empurrada para frente de novo
 function volta() { i = Math.max(i - 1, 0); voltando = true; desenha(); voltando = false; scrollTo(0, 0) }
@@ -83,9 +83,68 @@ const fotos = (lista, pendencia) => lista && lista.length
   : `<div class="cartao"><p><span class="pend">${esc(pendencia)}</span></p></div>`
 
 // Capa com a idade (padrão dos quizzes de pilates 40+): o primeiro clique já é a resposta da idade e abre o quiz.
-const capaIdade = c => `<p class="pede-idade">${esc(c.pergunta)}</p>
+const capaIdade = c => c.texto ? `<p class="pede-idade">${esc(c.pergunta)}${c.tempo ? `<small>${esc(c.tempo)}</small>` : ''}</p>
+  <div class="idades-txt">${c.op.map(o => `<button class="idade-txt" data-rotulo="${esc(o[1])}" onclick="escolhe('idade','${o[0]}')">${esc(o[1])}</button>`).join('')}
+  ${c.outra ? `<button class="idade-txt larga" data-rotulo="${esc(c.outra[1])}" onclick="escolhe('idade','${c.outra[0]}')">${esc(c.outra[1])}</button>` : ''}</div>` : `<p class="pede-idade">${esc(c.pergunta)}</p>
   <div class="idades">${c.op.map(o => `<button class="idade" data-rotulo="${esc(o[1])}" onclick="escolhe('idade','${o[0]}')">${img(o[2], 'fetchpriority="high"')}<span>${esc(o[1])} <b aria-hidden="true">›</b></span></button>`).join('')}</div>
   ${c.outra ? `<button class="idade-outra" data-rotulo="${esc(c.outra[1])}" onclick="escolhe('idade','${c.outra[0]}')">${esc(c.outra[1])}</button>` : ''}`
+
+// Rótulo da resposta (texto do botão) a partir do id da tela e do valor.
+const rotulo = (id, v) => { const t = TELAS.find(x => x.id === id); const o = t && t.op && t.op.find(x => x[0] === v); return o ? o[1] : '' }
+const minusc = x => x ? x.charAt(0).toLowerCase() + x.slice(1) : ''
+// Nome: só o primeiro, só letras, com maiúscula. Nunca vai para o rastreio nem para o Clarity (fica só na tela).
+function primeiroNome() {
+  const n = String(resp.nome || '').trim().split(/\s+/)[0].replace(/[^A-Za-zÀ-ÿ'-]/g, '').slice(0, 20)
+  return n ? n.charAt(0).toUpperCase() + n.slice(1).toLowerCase() : ''
+}
+// IMC (OMS): peso ÷ altura². Faixas: abaixo do peso < 18,5 · normal < 25 · sobrepeso < 30 · obesidade 30+.
+function imcDe() {
+  const a = Number(resp.altura), p = Number(resp.peso)
+  if (!a || !p) return null
+  const v = p / ((a / 100) ** 2)
+  const f = v < 18.5 ? ['abaixo', 'Abaixo do peso'] : v < 25 ? ['normal', 'Peso normal'] : v < 30 ? ['sobrepeso', 'Sobrepeso'] : ['obesidade', 'Obesidade']
+  return { v, p, a, meta: Number(resp['peso-meta']) || null, chave: f[0], faixa: f[1] }
+}
+const virgula = (n, d = 1) => n.toFixed(d).replace('.', ',')
+function blocoImc(I, T) {
+  const pos = Math.max(2, Math.min(98, (I.v - 15) / 25 * 100)) // régua de 15 a 40
+  const dif = I.meta ? Math.round((I.p - I.meta) * 10) / 10 : 0
+  return `<div class="cartao imc"><span class="rot2">Seu índice de massa corporal</span>
+    <div class="imc-topo"><b class="imc-v">${virgula(I.v)}</b><span class="imc-f f-${I.chave}">${esc(I.faixa)}</span></div>
+    <div class="imc-barra" aria-hidden="true"><i style="left:${pos}%"></i></div>
+    <div class="imc-esc" aria-hidden="true"><span>Abaixo</span><span>Normal</span><span>Sobrepeso</span><span>Obesidade</span></div>
+    <p>${txt(T.textos[I.chave])}</p>
+    ${I.meta ? `<div class="imc-pesos"><div><b>${esc(String(I.p))} kg</b><span>Hoje</span></div><span class="seta" aria-hidden="true">→</span><div><b>${esc(String(I.meta))} kg</b><span>Seu objetivo</span></div>${dif > 0 ? `<div class="dif"><b>${virgula(dif, dif % 1 ? 1 : 0)} kg</b><span>de diferença</span></div>` : ''}</div>` : ''}
+    <p class="aviso" style="text-align:left">${txt(T.aviso)}</p></div>`
+}
+function doisCaminhos(nome, C) {
+  const obj = rotulo('objetivo', resp.objetivo)
+  const inc = (resp.incomoda || []).filter(x => x !== 'nenhum').map(x => minusc(rotulo('incomoda', x)))
+  const virada = obj ? `Você quer <b>${esc(minusc(obj))}</b>${inc.length ? `, e o que mais incomoda hoje é <b>${esc(inc.slice(0, 2).join(' e '))}</b>` : ''}.` : ''
+  return `<section class="caminhos cartao"><span class="rot2">Com base no seu perfil</span>
+    <h3 data-rotulo="Dois caminhos" data-clarity-mask="true">${nome ? esc(nome) + ', as' : 'As'} próximas semanas podem seguir dois caminhos</h3>
+    <div class="ad"><p class="a"><span>Se continuar adiando</span>${txt(C.adiar)}</p><p class="d"><span>Se começar agora</span>${txt(C.comecar)}</p></div>
+    <figure class="grafico" style="margin:0"><figcaption>${txt(C.eixo)}</figcaption>
+      <svg viewBox="0 0 320 150" role="img" aria-label="Gráfico ilustrativo: começando agora a linha sobe; adiando, ela cai">
+        <line x1="18" y1="122" x2="306" y2="122" class="g-eixo"/><line x1="18" y1="20" x2="18" y2="122" class="g-eixo"/>
+        <path d="M18 64 C 110 72, 200 98, 302 112" class="g-adiar"/><path d="M18 100 C 100 92, 190 52, 302 26" class="g-comecar"/>
+        <circle cx="302" cy="112" r="5" class="g-adiar-p"/><circle cx="302" cy="26" r="6" class="g-comecar-p"/>
+        <text x="18" y="140" class="g-t">Hoje</text><text x="160" y="140" class="g-t" text-anchor="middle">2 semanas</text><text x="306" y="140" class="g-t" text-anchor="end">4 semanas</text>
+      </svg>
+      <div class="legenda"><span class="l-adiar">Adiar</span><span class="l-comecar">Começar agora</span></div></figure>
+    ${virada ? `<p class="virada"><b>O seu ponto de virada:</b> ${virada}</p>` : ''}
+    <p class="aviso">${txt(C.aviso)}</p></section>`
+}
+// Telas de número (altura, peso): − e + mudam o valor sem redesenhar (o teclado não fecha ao digitar).
+const limite = (t, v) => Math.min(t.max, Math.max(t.min, v))
+function numero(id, d) { const t = TELAS.find(x => x.id === id); const v = limite(t, (Number(resp[id]) || t.min) + d); resp[id] = v; const e = document.getElementById('n-' + id); if (e) e.value = v }
+function numeroDigita(id, v) { resp[id] = v === '' ? '' : Number(v) }
+function numeroOk(id) {
+  const t = TELAS.find(x => x.id === id); let v = Number(resp[id])
+  if (!v || isNaN(v)) v = typeof t.padrao === 'function' ? t.padrao(resp) : t.padrao
+  resp[id] = Math.round(limite(t, v)); vai() // peso e altura não vão para o Clarity
+}
+function nomeOk() { const e = document.getElementById('campo-nome'); if (e) resp.nome = e.value; vai() }
 
 // Página final no modelo do quiz da Laura (o que mais vendeu): resumo das respostas, botão cedo, antes × depois,
 // fotos, cartão de preço com tudo o que vem, passo a passo, garantia e perguntas rápidas. Só com QUIZ.oferta.v2.
@@ -143,7 +202,15 @@ function desenha() {
   if (!revisao && i !== telaMarcada) { telaMarcada = i; marca('event', 'tela_' + String(i + 1).padStart(2, '0') + '_' + t.id) }
   if (window.plTique) window.plTique() // marca a chegada nesta tela
   let h = topo()
-  if (t.tipo === 'capa') {
+  if (t.tipo === 'capa' && QUIZ.capaV2) {
+    const p = PROMESSAS[P], C = QUIZ.capaV2
+    h += `<section class="capa capa2">
+      <div class="capa2-foto">${img(C.foto, 'fetchpriority="high"')}${C.marca ? `<span class="capa2-marca">${esc(C.marca)}</span>` : ''}</div>
+      <h1>${pend(p.titulo)}</h1>
+      <div class="selos-capa">${C.selos.map(x => `<span>${esc(x)}</span>`).join('')}</div>
+      <div class="cartao capa2-idade">${capaIdade(QUIZ.idadeNaCapa)}</div>
+      <p class="miudo">${esc(QUIZ.assinatura || 'Por Michele Salla, educadora física')}</p></section>`
+  } else if (t.tipo === 'capa') {
     const p = PROMESSAS[P]
     h += `<section class="capa${QUIZ.idadeNaCapa ? ' com-idade' : ''}" style="display:grid;gap:16px">
       ${QUIZ.logo ? `<img class="logo" src="${QUIZ.logo.src}" alt="${esc(QUIZ.logo.alt)}"${QUIZ.logo.style ? ` style="${QUIZ.logo.style}"` : ''}>` : ''}
@@ -158,7 +225,21 @@ function desenha() {
     const marc = t.tipo === 'varias' ? (resp[t.id] || []) : [resp[t.id]]
     h += `<section class="pergunta"><h2>${txt(t.titulo)}</h2><p class="sub">${txt(t.sub || '')}</p></section>
       <div class="ops ${t.cols === 2 ? 'c2' : ''}">${t.op.map(o => `<button class="op ${marc.includes(o[0]) ? 'on' : ''}" data-rotulo="${esc(o[1])}" onclick="escolhe('${t.id}','${o[0]}')">${txt(o[1])}${o[2] ? ` <small>${txt(o[2])}</small>` : ''}</button>`).join('')}</div>
+      ${t.dica ? `<p class="dica">${txt(t.dica)}</p>` : ''}
       ${t.tipo === 'varias' ? `<button class="botao" onclick="vai()" ${marc.length ? '' : 'disabled style="opacity:.45"'}>Continuar →</button>` : ''}`
+  } else if (t.tipo === 'numero') {
+    if (resp[t.id] == null || resp[t.id] === '') resp[t.id] = limite(t, Math.round(typeof t.padrao === 'function' ? t.padrao(resp) : t.padrao))
+    h += `<section class="pergunta"><h2>${txt(t.titulo)}</h2><p class="sub">${txt(t.sub || '')}</p></section>
+      <div class="numero cartao"><button class="mais-menos" aria-label="Diminuir" onclick="numero('${t.id}',-${t.passo || 1})">−</button>
+        <label class="num-campo"><input id="n-${t.id}" type="number" inputmode="numeric" min="${t.min}" max="${t.max}" step="${t.passo || 1}" value="${esc(String(resp[t.id]))}" oninput="numeroDigita('${t.id}',this.value)" aria-label="${esc(t.titulo)} (${esc(t.unidade)})"><span>${esc(t.unidade)}</span></label>
+        <button class="mais-menos" aria-label="Aumentar" onclick="numero('${t.id}',${t.passo || 1})">+</button></div>
+      ${t.dica ? `<p class="dica">${txt(t.dica)}</p>` : ''}
+      <button class="botao" onclick="numeroOk('${t.id}')">Continuar →</button>`
+  } else if (t.tipo === 'nome') {
+    h += `<section class="pergunta"><h2>${txt(t.titulo)}</h2><p class="sub">${txt(t.sub || '')}</p></section>
+      <input class="campo-nome" id="campo-nome" type="text" autocomplete="given-name" maxlength="30" placeholder="${esc(t.placeholder)}" value="${esc(resp.nome || '')}" data-clarity-mask="true" onkeydown="if(event.key==='Enter')nomeOk()">
+      ${t.privacidade ? `<p class="miudo">${txt(t.privacidade)}</p>` : ''}
+      <button class="botao" onclick="nomeOk()">${esc(t.botao)} →</button>`
   } else if (t.tipo === 'michele') {
     h += `<section class="michele cartao"><img src="${IMG}michele-recorte.webp" alt="Michele Salla" width="802" height="1292">
       <h2 style="font-size:22px">Prazer, eu sou a Michele Salla</h2>
@@ -180,6 +261,17 @@ function desenha() {
       <button class="botao" onclick="vai()" style="margin-top:8px">Ver o próximo passo →</button></section>`
     // Segue sozinha em ~2,6 s (também quando aberta pelo relatório). Quem volta para esta tela não é empurrada.
     if (!voltando && !q.get('parado')) { const aqui = i; setTimeout(() => { if (i === aqui) vai() }, 2600) }
+  } else if (t.tipo === 'resultado' && QUIZ.resultado.v2) {
+    const pf = PERFIS[perfilAtual()], R = QUIZ.resultado, nome = primeiroNome(), I = imcDe()
+    if (!revisao) { marca('set', 'perfil', pf.nome); if (I) marca('set', 'imc', I.faixa) }
+    h += `<section class="perfil"><span class="rot">✓ Análise concluída</span>
+        <h2 data-rotulo="Título do resultado" data-clarity-mask="true">${nome ? esc(nome) + ', o seu plano está pronto' : 'O seu plano está pronto'}</h2>
+        <p class="perfil-nome">Seu perfil: <b>${esc(pf.nome)}</b></p><p>${txt(pf.retrato)}</p></section>
+      ${I && R.imc ? blocoImc(I, R.imc) : ''}
+      <div class="bloco cartao"><h3>O que está te travando</h3><p>${txt(pf.trava)}</p>${R.mente ? `<p>${txt(R.mente)}</p>` : ''}</div>
+      <div class="bloco cartao"><h3>Por onde você começa</h3><p>${txt(pf.comeca)}</p>${R.diaADia ? `<p><b>${txt(R.diaADia)}</b></p>` : ''}</div>
+      ${R.caminhos ? doisCaminhos(nome, R.caminhos) : ''}
+      <button class="botao" onclick="vai()">${esc(R.botao)} →</button>`
   } else if (t.tipo === 'resultado') {
     const pf = PERFIS[perfilAtual()], R = QUIZ.resultado
     if (!revisao) marca('set', 'perfil', pf.nome)

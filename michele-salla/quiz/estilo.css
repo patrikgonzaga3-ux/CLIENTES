@@ -116,4 +116,64 @@ p{margin:0}
 .garantia span{font-size:34px}
 .garantia h3{font-size:20px}.garantia p{color:#2F4A38;font-size:15px}
 .faq h4{font:700 15px/1.3 Sora,sans-serif;margin:0}.faq p{font-size:14px;color:var(--texto)}
+/* 13/11 · Pilates: barra com %, capa com foto real e idade em botões grandes, telas de número e nome, IMC e dois caminhos */
+.pct{font:700 12px/1 Sora,sans-serif;color:var(--texto);white-space:nowrap}
+.capa2{display:grid;gap:12px}
+.capa2-foto{position:relative;border-radius:22px;overflow:hidden;background:var(--grad);box-shadow:0 12px 28px rgba(158,4,124,.18)}
+.capa2-foto img{width:100%;height:200px;object-fit:cover;object-position:50% 30%}
+.capa2-marca{position:absolute;left:12px;bottom:12px;background:rgba(35,26,39,.72);color:#fff;font:700 11px/1 Sora,sans-serif;letter-spacing:.12em;text-transform:uppercase;padding:8px 11px;border-radius:99px}
+.capa2 h1{font-size:23px;font-weight:800;text-align:center}
+.capa2 h1 mark{background:none;color:var(--roxo)}
+.selos-capa{display:flex;flex-wrap:wrap;justify-content:center;gap:6px}
+.selos-capa span{background:var(--branco);border:1px solid var(--linha);border-radius:99px;padding:6px 11px;font:700 12px/1.1 Sora,sans-serif;color:var(--roxo)}
+.capa2-idade{gap:10px;padding:16px}
+.capa2-idade .pede-idade{margin:0}
+.pede-idade small{display:block;font:600 13px/1.3 Raleway,sans-serif;color:var(--violeta);margin-top:4px}
+.idades-txt{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+.idade-txt{border:2px solid var(--linha);background:var(--branco);border-radius:16px;padding:16px 8px;font:800 18px/1.1 Sora,sans-serif;color:var(--preto);cursor:pointer}
+.idade-txt:hover,.idade-txt:focus-visible{border-color:var(--roxo);background:#FBEAF6;outline:none}
+.idade-txt.larga{grid-column:1/-1;font-size:15px;font-weight:700;padding:13px 8px;color:var(--texto)}
+.dica{background:#FFF8D6;border:1px solid #F1E39A;border-radius:14px;padding:11px 13px;font-size:14px;color:#4E4518}
+.numero{grid-template-columns:56px 1fr 56px;align-items:center;gap:10px;padding:16px}
+.mais-menos{width:56px;height:56px;border-radius:50%;border:2px solid var(--linha);background:var(--rosa);font:800 26px/1 Sora,sans-serif;color:var(--roxo);cursor:pointer}
+.mais-menos:focus-visible{outline:3px solid var(--violeta);outline-offset:2px}
+.num-campo{display:flex;align-items:baseline;justify-content:center;gap:6px}
+.num-campo input{width:120px;border:0;border-bottom:3px solid var(--roxo);background:none;text-align:center;font:800 44px/1.1 Sora,sans-serif;color:var(--preto);-moz-appearance:textfield;appearance:textfield}
+.num-campo input::-webkit-outer-spin-button,.num-campo input::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
+.num-campo input:focus{outline:none;border-bottom-color:var(--violeta)}
+.num-campo span{font:700 18px/1 Sora,sans-serif;color:var(--texto)}
+.campo-nome{width:100%;border:2px solid var(--linha);border-radius:16px;padding:16px;font:700 20px/1.2 Sora,sans-serif;color:var(--preto);background:var(--branco)}
+.campo-nome:focus{outline:none;border-color:var(--roxo)}
+.perfil-nome{color:#fff;opacity:.95}
+.perfil-nome b{color:var(--amarelo)}
+.rot2{font:700 12px/1 Sora,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--roxo)}
+.imc-topo{display:flex;align-items:center;gap:12px}
+.imc-v{font:800 44px/1 Sora,sans-serif;color:var(--preto)}
+.imc-f{font:700 13px/1 Sora,sans-serif;padding:7px 11px;border-radius:99px}
+.f-abaixo{background:#E6F0FB;color:#1F5C99}.f-normal{background:#EAF6EE;color:var(--verde)}
+.f-sobrepeso{background:#FFF3D6;color:#8A5A00}.f-obesidade{background:#FBEDEF;color:#B0302A}
+.imc-barra{position:relative;height:12px;border-radius:99px;background:linear-gradient(90deg,#7FB3E6 0 14%,#5CC07E 14% 40%,#F4C04E 40% 60%,#E56B5D 60% 100%)}
+.imc-barra i{position:absolute;top:50%;width:22px;height:22px;margin-left:-11px;transform:translateY(-50%);border-radius:50%;background:var(--branco);border:4px solid var(--preto)}
+.imc-esc{display:grid;grid-template-columns:14fr 26fr 20fr 40fr;font-size:11px;color:var(--texto)}
+.imc-esc span{text-align:center}
+.imc-pesos{display:flex;align-items:center;justify-content:space-between;gap:8px;background:var(--rosa);border-radius:14px;padding:12px 14px}
+.imc-pesos div{display:grid;text-align:center}
+.imc-pesos b{font:800 20px/1.1 Sora,sans-serif;color:var(--preto)}
+.imc-pesos span{font-size:12px;color:var(--texto)}
+.imc-pesos .seta{font:800 22px/1 Sora,sans-serif;color:var(--roxo)}
+.imc-pesos .dif b{color:var(--roxo)}
+.caminhos h3{font-size:20px}
+.grafico{display:grid;gap:6px;background:var(--rosa);border-radius:14px;padding:12px}
+.grafico figcaption{font:700 13px/1.2 Sora,sans-serif;color:var(--preto)}
+.grafico svg{width:100%;height:auto}
+.g-eixo{stroke:#E2CFDD;stroke-width:1.5}
+.g-adiar{fill:none;stroke:#E0566B;stroke-width:4;stroke-linecap:round}
+.g-comecar{fill:none;stroke:var(--violeta);stroke-width:4;stroke-linecap:round}
+.g-adiar-p{fill:#E0566B}.g-comecar-p{fill:var(--violeta)}
+.g-t{font:600 11px Raleway,sans-serif;fill:var(--texto)}
+.legenda{display:flex;justify-content:center;gap:16px;font:700 12px/1 Sora,sans-serif}
+.legenda span::before{content:"";display:inline-block;width:12px;height:4px;border-radius:2px;margin-right:6px;vertical-align:middle}
+.l-adiar{color:#C2384E}.l-adiar::before{background:#E0566B}
+.l-comecar{color:var(--violeta)}.l-comecar::before{background:var(--violeta)}
+.virada{background:#FBEAF6;border-radius:12px;padding:11px 13px;font-size:14px}
 @media (prefers-reduced-motion: reduce){.roda{animation:none}.barra i{transition:none}.linhas p{animation:none}}

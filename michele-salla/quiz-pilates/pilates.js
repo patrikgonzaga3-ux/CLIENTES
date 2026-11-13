@@ -62,7 +62,8 @@ const TELAS = [
     op: [['barriga', 'A barriga'], ['costas', 'Dor ou cansaço nas costas'], ['postura', 'A postura (ombros caídos, corpo "pesado")'], ['flacidez', 'Flacidez'],
          ['rigidez', 'Corpo travado, pouca flexibilidade'], ['nenhum', 'Nada disso']] },
   { id: 'impacto', tipo: 'uma', titulo: 'E os exercícios de impacto, como pular e correr?', sub: 'Pense em como o seu corpo responde.',
-    op: [['bem', 'Faço sem problema'], ['dor', 'Sinto dor no joelho ou nas costas'], ['escapes', 'Tenho escapes de xixi quando pulo'], ['evito', 'Não gosto, evito sempre']] },
+    op: [['bem', 'Faço sem problema'], ['dor', 'Sinto dor no joelho ou nas costas'], ['escapes', 'Tenho escapes de xixi quando pulo'], ['evito', 'Não gosto, evito sempre']],
+    dica: '💡 O pilates trabalha força, postura e o centro do corpo sem impacto, no seu ritmo.' },
   { id: 'prova', tipo: 'prova' },
   { id: 'rotina', tipo: 'uma', titulo: 'Como é a sua rotina hoje?', sub: 'O plano precisa caber na vida real.',
     op: [['corrida', 'Corrida, mal sobra tempo para mim', 'Trabalho, casa, filhos…'], ['todos', 'Cuido de todo mundo, menos de mim', 'Todo mundo virou prioridade'],
@@ -73,16 +74,24 @@ const TELAS = [
     op: [['sala', 'Na sala ou no quarto, tenho um cantinho'], ['tapete', 'Já tenho um tapete'], ['pouco', 'Tenho pouco espaço'], ['nao-sei', 'Ainda não sei']] },
   { id: 'fase', tipo: 'uma', titulo: 'Você está em alguma destas fases?', sub: 'O corpo muda em cada fase, e o treino também.',
     op: [['pos-parto', 'Tive bebê nos últimos 2 anos'], ['maes', 'Já sou mãe há mais tempo'], ['menopausa', 'Pré-menopausa ou menopausa'], ['nenhuma', 'Nenhuma delas']] },
+  { id: 'altura', tipo: 'numero', titulo: 'Qual é a sua altura?', sub: 'Em centímetros. Usamos só para calcular o seu IMC.', unidade: 'cm', min: 130, max: 200, padrao: 160 },
+  { id: 'peso', tipo: 'numero', titulo: 'Qual é o seu peso hoje?', sub: 'Em quilos. Usamos só para calcular o seu IMC.', unidade: 'kg', min: 35, max: 200, padrao: 70 },
+  { id: 'peso-meta', tipo: 'numero', titulo: 'E qual peso você gostaria de ter?', sub: 'Em quilos. Não existe resposta certa.', unidade: 'kg', min: 35, max: 200, padrao: r => (Number(r.peso) || 70) - 5 },
   { id: 'insight', tipo: 'insight' },
   { id: 'carregando-1', tipo: 'carregando', titulo: 'Analisando suas respostas…', linhas: ['Juntando suas respostas…', 'Vendo o que o seu corpo está pedindo…', 'Vendo o que mais te faz parar…'] },
   { id: 'recomecos', tipo: 'uma', cols: 2, titulo: 'Quantas vezes você já começou um treino e parou?', sub: 'Seja sincera. Isso mostra o que te faz parar.',
     op: [['1-2', 'Uma ou duas vezes'], ['varias', 'Várias vezes'], ['perdi-conta', 'Já perdi a conta'], ['comecando', 'Ainda vou começar']] },
+  { id: 'compromisso', tipo: 'uma', titulo: 'Você consegue reservar 20 minutos, alguns dias por semana, só para você?', sub: 'É o tempo da aula mais curta.',
+    op: [['sim', 'Sim, consigo!'], ['ajustes', 'Com alguns ajustes, sim']],
+    dica: '✅ As aulas têm de 20 a 40 minutos e ficam com você por 365 dias: dá para encaixar nos dias que der.' },
   { id: 'medo', tipo: 'uma', titulo: 'Qual é o seu maior medo agora?', sub: 'Seus medos são válidos. Vou responder cada um no final.',
     op: [['movimentos', 'Não conseguir fazer os movimentos', 'Nunca fiz ou não tenho flexibilidade'], ['dor', 'Sentir dor ou me machucar'], ['tempo', 'Não ter tempo', 'Minha rotina não deixa espaço'],
          ['dinheiro', 'Gastar e não ter resultado', 'Já investi em coisas que não funcionaram'], ['desistir', 'Desistir de novo', 'Começo e paro']] },
   { id: 'sonho', tipo: 'uma', titulo: 'Daqui a algumas semanas, o que você gostaria de sentir?', sub: 'Feche os olhos por 3 segundos e imagine.',
     op: [['leve', '“Acordo leve, sem o corpo travado”'], ['postura', '“Ando com a postura de quem se cuida”'], ['roupa', '“A roupa veste melhor”'],
          ['diva', '“Voltei a me sentir Diva”'], ['consegui', '“Consegui. Eu sabia que era capaz”']] },
+  { id: 'nome', tipo: 'nome', titulo: 'Falta pouco! Qual é o seu primeiro nome?', sub: 'Para o seu plano sair no seu nome.', placeholder: 'Seu primeiro nome',
+    privacidade: '🔒 Não pedimos e-mail nem telefone. O nome serve só para personalizar o seu plano.', botao: 'Ver o meu plano' },
   { id: 'carregando-2', tipo: 'carregando', titulo: 'Montando o seu plano de pilates…', linhas: ['Separando o seu primeiro passo…', 'Encaixando no tempo que você tem…', 'Escolhendo por onde você começa…'] },
   { id: 'resultado', tipo: 'resultado' },
   { id: 'oferta', tipo: 'oferta' },
@@ -150,6 +159,14 @@ const EXEMPLO = {
 
 const QUIZ = {
   slug: 'pilates-p', // painel: pilates-p1 … pilates-p5 (aba Quiz Pilates)
+  mostraPct: true, // 13/11: "% concluído" ao lado da barra (modelo NovaMente)
+  // 13/11 (Patrik: "faz o 4 e o 5"): capa com a foto real da Michele, selos e a idade em botões grandes de texto
+  // (80% de quem responde tem 45+; as 4 fotos ilustrativas saíram). Desligar: apague capaV2 e tire `texto` de idadeNaCapa.
+  capaV2: {
+    foto: { src: FOTO + 'michele-pilates-estudio.webp', alt: 'Michele Salla fazendo pilates no estúdio', w: 900, h: 1200 },
+    marca: 'Pilates em Casa · com Michele Salla',
+    selos: ['Em casa', 'Aulas de 20 a 40 min', 'Do básico para frente'],
+  },
   assinatura: 'Por Michele Salla, educadora física e especialista em pilates desde 2005',
   logo: { src: FOTO + 'logo-pilates-em-casa.webp', alt: 'Pilates em Casa', style: 'width:170px;border-radius:18px' },
   capa: { src: FOTO + 'michele-pilates-estudio.webp', alt: 'Michele Salla fazendo pilates no estúdio', w: 900, h: 1200 }, // não aparece com idadeNaCapa
@@ -157,8 +174,9 @@ const QUIZ = {
   // Fotos ilustrativas geradas no Gravyx (não são a Michele nem alunas): mulheres de corpo comum, em casa, alongamento fácil.
   idadeNaCapa: {
     pergunta: 'Escolha a sua idade para começar:',
-    op: [['35-44', '35 a 44', 'idade-35-44', 'Mulher de 35 a 44 anos fazendo pilates em casa'], ['45-54', '45 a 54', 'idade-45-54', 'Mulher de 45 a 54 anos fazendo pilates em casa'],
-         ['55-64', '55 a 64', 'idade-55-64', 'Mulher de 55 a 64 anos fazendo pilates em casa'], ['65+', '65 ou mais', 'idade-65', 'Mulher de 65 anos ou mais fazendo pilates em casa']]
+    texto: true, tempo: 'Leva cerca de 2 minutos', // botões de texto (13/11); a ordem abaixo põe 45 a 54 primeiro
+    op: [['45-54', '45 a 54', 'idade-45-54', 'Mulher de 45 a 54 anos fazendo pilates em casa'], ['55-64', '55 a 64', 'idade-55-64', 'Mulher de 55 a 64 anos fazendo pilates em casa'],
+         ['35-44', '35 a 44', 'idade-35-44', 'Mulher de 35 a 44 anos fazendo pilates em casa'], ['65+', '65 ou mais', 'idade-65', 'Mulher de 65 anos ou mais fazendo pilates em casa']]
       .map(([id, rot, n, alt]) => [id, rot, { src: FOTO + n + '.webp', alt, w: 480, h: 643 }]),
     outra: ['-35', 'Tenho menos de 35 anos'],
   },
@@ -177,6 +195,23 @@ const QUIZ = {
     mente: 'E cuidar dos pensamentos e hábitos que fazem você desistir de si mesma.',
     diaADia: 'Você não precisa esperar a dor piorar para cuidar do seu corpo. Pode começar hoje, dentro da sua casa, com orientação, método e segurança.',
     botao: 'Ver o meu plano de pilates',
+    // 13/11 (Patrik: "faz o 4 e o 5"): resultado com o nome, o IMC e os "dois caminhos" (modelo NovaMente). Desligar: v2: false.
+    v2: true,
+    imc: {
+      textos: {
+        abaixo: 'O foco do seu plano é ganhar força, postura e mobilidade, sem impacto e no seu ritmo.',
+        normal: 'Bom ponto de partida. O foco é força, postura e o centro do corpo, para você se sentir mais firme e leve.',
+        sobrepeso: 'Um treino sem impacto, em casa e no seu ritmo, ajuda você a começar sem sofrer: força, postura e o centro do corpo.',
+        obesidade: 'Um treino sem impacto, em casa e no seu ritmo, ajuda você a começar sem sofrer. Se você tem alguma condição de saúde, converse com o seu médico antes de começar.',
+      },
+      aviso: 'O IMC (peso ÷ altura²) é uma referência geral da OMS. Não é diagnóstico.',
+    },
+    caminhos: {
+      adiar: 'A rotina corrida continua, as costas pesam no fim do dia e o corpo vai ficando mais travado. E a segunda-feira vira, de novo, a data do recomeço.',
+      comecar: 'Aulas de 20 a 40 minutos em casa, do básico para frente: postura, respiração e o centro do corpo trabalhando a seu favor, no seu ritmo.',
+      eixo: 'Disposição e constância',
+      aviso: 'Gráfico ilustrativo de hábito. Não é previsão nem garantia de resultado; os resultados variam de pessoa para pessoa.',
+    },
   },
   oferta: {
     produto: 'Pilates em Casa', valor: '37',
