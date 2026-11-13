@@ -333,6 +333,9 @@ const QUIZ = {
       depoTitulo: 'O que as alunas dizem',
       depoimentos: [], // (ESCREVER AQUI: 3 a 5 depoimentos reais de alunas do pilates, com idade e a dor que melhorou; a Michele manda)
       recebeTitulo: 'Veja tudo que você vai receber',
+      // 13/11 (Patrik: "essas imagens tão ruins, crie uma melhor com gravyx"): notebook, tablet e celular gerados no Gravyx com as
+      // telas em verde e, dentro delas, fotos reais das aulas da Michele (montagem: scratchpad ad/scripts/mockup.py).
+      mockupImg: { src: FOTO + 'mockup-aulas.webp', alt: 'As aulas do Pilates em Casa no notebook, no tablet e no celular', w: 900, h: 361 },
       mockup: [{ src: FOTO + 'aula-em-grupo.webp', alt: 'Aula de pilates', w: 900, h: 675 }, { src: FOTO + 'aula-com-elastico.webp', alt: 'Aula de pilates com elástico', w: 900, h: 1200 }],
       recebe: [
         '<b>24 aulas</b> de 20 a 40 minutos para fazer em casa, só com um tapete',

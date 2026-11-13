@@ -228,7 +228,7 @@ function ofertaV3(pf, O, m, botao) {
       : `<h3 class="v3-h">${esc(QUIZ.prova.titulo)}</h3>${fotos(QUIZ.prova.fotos)}<p class="aviso">Os resultados variam de pessoa para pessoa.</p>`}
     ${caixa()}
     <h3 class="v3-h">${esc(V.recebeTitulo)}</h3>
-    <div class="v3-mockup" aria-hidden="true"><div class="tab">${img(V.mockup[0], 'loading="lazy"')}</div><div class="cel">${img(V.mockup[1], 'loading="lazy"')}</div></div>
+    ${V.mockupImg ? `<div class="v3-mock-img">${img(V.mockupImg, 'loading="lazy"')}</div>` : `<div class="v3-mockup" aria-hidden="true"><div class="tab">${img(V.mockup[0], 'loading="lazy"')}</div><div class="cel">${img(V.mockup[1], 'loading="lazy"')}</div></div>`}
     <ul class="v3-recebe">${V.recebe.map(x => `<li>${rico(x)}</li>`).join('')}</ul>
     ${caixa()}
     <h3 class="v3-h">${esc(V.praQuem.titulo)}</h3>
