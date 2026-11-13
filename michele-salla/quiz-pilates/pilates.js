@@ -312,6 +312,16 @@ const QUIZ = {
       titulo: 'Pilates em casa, <b>sem impacto</b>, para cuidar das dores e fortalecer o corpo',
       sub: '24 aulas de 20 a 40 minutos, do básico para frente, com a Michele Salla, educadora física e especialista em pilates desde 2005.',
       foto: { src: FOTO + 'michele-pilates-estudio.webp', alt: 'Michele Salla fazendo pilates no estúdio', w: 900, h: 1200 },
+      // 13/11 (Patrik: "ajusta também os antes e depois", pasta "Antes e depois" da Michele no Drive): só fotos sem rosto, nome,
+      // telefone ou número de quilos. São de alunas do Desafio 7 em 7 da Michele (os prints falam do Desafio), e a legenda diz isso.
+      heroAD: { src: FOTO + 'ad-1.webp', alt: 'Antes e depois de aluna da Michele', w: 682, h: 900 },
+      adTitulo: 'Resultados de alunas da Michele',
+      adLegenda: 'Alunas do Desafio 7 em 7 da Michele. Os resultados variam de pessoa para pessoa.',
+      antesDepois: [
+        { src: FOTO + 'ad-2.webp', alt: 'Antes e depois de aluna da Michele', w: 715, h: 900 },
+        { src: FOTO + 'ad-3.webp', alt: 'Antes e depois de aluna da Michele', w: 720, h: 720 },
+        { src: FOTO + 'ad-4.webp', alt: 'Antes e depois de aluna da Michele', w: 900, h: 764 },
+      ],
       feitoTitulo: 'Feito a partir do que você respondeu',
       feito: {
         dor: 'Você sente <b>dor ou cansaço nas costas</b> ou com impacto: tem aulas de postura e mobilidade e bônus para <b>dor lombar e ciático</b>.',
@@ -329,7 +339,15 @@ const QUIZ = {
         '<b>365 dias de acesso</b> pelo celular, tablet ou computador, na área de membros da Hotmart',
       ],
       praQuem: {
-        titulo: 'É pra você que…',
+        titulo: 'O Pilates em Casa é pra quem…',
+        // 13/11 (Patrik: "uma imagem assim, batendo nas ruminações e nas dores", modelo Lays): mulher ilustrativa gerada no Gravyx
+        // (não é aluna) e balões com as dores e ruminações mais marcadas no quiz; o que ela marcou fica em destaque.
+        figura: {
+          img: { src: FOTO + 'mulher-baloes.webp', alt: 'Mulher de uns 55 anos, de frente, com balões de pensamento', w: 700, h: 938 },
+          baloes: [['costas', 'Minhas costas pesam no fim do dia'], ['recomeco', 'Começo e paro de novo'],
+            ['impactoDor', 'O joelho dói quando pulo ou corro'], ['todos', 'Cuido de todo mundo, menos de mim'],
+            ['barriga', 'Quero diminuir a barriga'], ['movimentos', 'Tenho medo de não conseguir fazer os movimentos']],
+        },
         itens: [['costas', 'Sente dor ou cansaço nas costas'], ['impactoDor', 'Sente dor no joelho ou nas costas quando pula ou corre'],
           ['rigidez', 'Sente o corpo travado, com pouca flexibilidade'], ['barriga', 'Quer trabalhar a barriga e a flacidez'],
           ['postura', 'Quer melhorar a postura e tirar o peso do fim do dia'], ['fase', 'Está na pré-menopausa, na menopausa ou no pós-parto'],

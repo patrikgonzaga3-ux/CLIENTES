@@ -217,13 +217,14 @@ function ofertaV3(pf, O, m, botao) {
       <span class="v3-ok" data-rotulo="Título da oferta" data-clarity-mask="true">✓ ${nome ? esc(nome) + ', o' : 'O'} seu plano está pronto · ${esc(pf.nome)}</span>
       <h2 class="v3-titulo">${rico(V.titulo)}</h2>
       <p class="v3-sub">${txt(V.sub)}</p>
-      <div class="v3-foto">${img(V.foto, 'loading="eager"')}</div>
+      ${V.heroAD ? `<figure class="v3-hero-ad" style="margin:0">${img(V.heroAD, 'loading="eager"')}<figcaption>${txt(V.adLegenda)}</figcaption></figure>` : `<div class="v3-foto">${img(V.foto, 'loading="eager"')}</div>`}
     </div>
     ${caixa()}
     <div class="v3-bloco"><h3>${esc(V.feitoTitulo)}</h3><ul class="check">${[
       tem.costas || tem.impactoDor ? V.feito.dor : '', tem.fase ? V.feito.fase : '', tem.iniciante ? V.feito.iniciante : '',
       `<b>Seu perfil: ${esc(pf.nome)}.</b> ${txt(pf.comeca)}`].filter(Boolean).map(x => `<li>${x.startsWith('<b>') ? x : rico(x)}</li>`).join('')}</ul></div>
     ${V.depoimentos && V.depoimentos.length ? `<h3 class="v3-h">${esc(V.depoTitulo)}</h3>${V.depoimentos.map(d => `<div class="v3-depo"><span class="estrelas" aria-label="5 estrelas">★★★★★</span><b>${esc(d.nome)}</b><p>${txt(d.texto)}</p></div>`).join('')}`
+      : V.antesDepois && V.antesDepois.length ? `<h3 class="v3-h">${esc(V.adTitulo)}</h3><div class="grade v3-ad">${V.antesDepois.map(x => img(x, 'loading="lazy"')).join('')}</div><p class="aviso">${txt(V.adLegenda)}</p>`
       : `<h3 class="v3-h">${esc(QUIZ.prova.titulo)}</h3>${fotos(QUIZ.prova.fotos)}<p class="aviso">Os resultados variam de pessoa para pessoa.</p>`}
     ${caixa()}
     <h3 class="v3-h">${esc(V.recebeTitulo)}</h3>
@@ -231,7 +232,12 @@ function ofertaV3(pf, O, m, botao) {
     <ul class="v3-recebe">${V.recebe.map(x => `<li>${rico(x)}</li>`).join('')}</ul>
     ${caixa()}
     <h3 class="v3-h">${esc(V.praQuem.titulo)}</h3>
-    <ul class="v3-praquem">${dores.map(d => `<li class="${d.on ? 'on' : ''}">${esc(d.t)}${d.on ? '<span>você marcou</span>' : ''}</li>`).join('')}</ul>
+    ${V.praQuem.figura ? (() => {
+      const F = V.praQuem.figura
+      const marcou = { ...tem, recomeco: ['varias', 'perdi-conta'].includes(resp.recomecos), todos: resp.rotina === 'todos', movimentos: resp.medo === 'movimentos' }
+      return `<figure class="v3-fig" style="margin:0">${img(F.img, 'loading="lazy"')}
+        ${F.baloes.map(([k, t], n) => `<span class="balao b${n} ${n % 2 ? 'dir' : 'esq'}${marcou[k] ? ' on' : ''}">${esc(t)}${marcou[k] ? '<i>você marcou</i>' : ''}</span>`).join('')}</figure>`
+    })() : `<ul class="v3-praquem">${dores.map(d => `<li class="${d.on ? 'on' : ''}">${esc(d.t)}${d.on ? '<span>você marcou</span>' : ''}</li>`).join('')}</ul>`}
     <p class="v3-nota">${txt(V.praQuem.nota)}</p>
     ${m ? `<div class="medo"><b>Você disse que tem medo de “${esc(minusc(rotulo('medo', resp.medo)))}”.</b> Por isso: ${txt(m)}</div>` : ''}
     ${caixa()}
