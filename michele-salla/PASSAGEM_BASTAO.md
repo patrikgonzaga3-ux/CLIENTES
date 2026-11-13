@@ -151,6 +151,11 @@ Os M da pasta "MICHELE LOW" são esses mesmos vídeos. Mapa conferido pelos quad
    Lado a lado da oferta da Lays × a nossa: https://claude.ai/artifact/48La865xMwcnZkhEGZHKHW (preço antes do 1º botão,
    depoimentos em texto, mockup das aulas, "feito para quem tem…", professora em destaque).
    13/11 06h11: conjuntos MS 01 e MS 08 pausados (não pelo Claude). Ativos: MS 02 e MS 05.
+   13/11 (tarde): na branch, a oferta nova `oferta.v3` (modelo Lays: título de resultado, preço antes do 1º botão, caixa de preço
+   5x, "tudo que você recebe" com mockup, "é pra você que…" marcando as respostas, professora grande, garantia e 4 perguntas)
+   e a capa ajustada (foto 150 px, faixa amarela de público, "no final, você recebe o seu plano grátis", idade cabe em 360×640).
+   Mesmo preço e mesmo link da Hotmart. Desligar: `oferta.v3: null` volta para a v2. Depoimentos: vazio até a Michele mandar.
+   Tela 1 (capa 5, 11→13/11): 46 visitas, 39% passam; das 28 que saem, 12 saem em até 3 s e 18 sem rolar; feed 48%, stories 29%.
 0. **(08/11) Campanha do pilates LIGADA** pelo Patrik ("ativa"): campanha, 8 conjuntos e 8 anúncios ACTIVE, entrega a partir
    de 09/11 00:03. Acompanhar no painel (aba Quiz Pilates e Anúncios) e conferir o CliqueComprar no pixel no 1º dia.
    09/11 05h: Patrik decidiu mandar os 8 anúncios para o link único com sorteio (20% por promessa, sem ?p=) e vai trocar

@@ -195,6 +195,56 @@ function ofertaV2(pf, O, m, botao) {
     ${O.rodape ? `<p class="miudo" style="font-size:11.5px">${txt(O.rodape)}</p>` : ''}</section>`
 }
 
+// 13/11 · Página final no modelo da Lays Trancoso (pilates 50+): promessa e foto no topo, preço ANTES do 1º botão,
+// caixa de preço + botão depois de cada bloco (5 botões), "tudo que você recebe" com o produto no celular, "é pra você que…"
+// marcando o que ela respondeu, professora em destaque, garantia e perguntas curtas. Só com QUIZ.oferta.v3.
+function ofertaV3(pf, O, m, botao) {
+  const V = O.v3, nome = primeiroNome()
+  const inc = resp.incomoda || []
+  const tem = { costas: inc.includes('costas'), rigidez: inc.includes('rigidez'), postura: inc.includes('postura'),
+    barriga: inc.includes('barriga') || inc.includes('flacidez'), impactoDor: resp.impacto === 'dor', escapes: resp.impacto === 'escapes',
+    fase: ['menopausa', 'pos-parto'].includes(resp.fase), iniciante: ['nunca', 'video'].includes(resp['pilates-antes']) }
+  const caixa = () => `<div class="v3-preco">
+      ${V.selo ? `<span class="v3-selo">${esc(V.selo)}</span>` : ''}
+      <div class="v3-preco-linha"><div><b>${esc(O.produto)}</b><span>${txt(V.precoSub)}</span></div>
+        <div class="v3-valor"><small>R$</small>${esc(O.valor)}<span>${txt(V.precoVez)}</span></div></div>
+      ${botao}
+      <p class="v3-garantia">🛡️ ${txt(V.garantiaCurta)}</p></div>`
+  const dores = V.praQuem.itens.map(([k, t]) => ({ k, t, on: !!tem[k] })).sort((a, b) => b.on - a.on)
+  const rico = x => txt(x).replace(/&lt;(\/?)b&gt;/g, '<$1b>')
+  return `<section class="v3">
+    <div class="v3-topo">
+      <span class="v3-ok" data-rotulo="Título da oferta" data-clarity-mask="true">✓ ${nome ? esc(nome) + ', o' : 'O'} seu plano está pronto · ${esc(pf.nome)}</span>
+      <h2 class="v3-titulo">${rico(V.titulo)}</h2>
+      <p class="v3-sub">${txt(V.sub)}</p>
+      <div class="v3-foto">${img(V.foto, 'loading="eager"')}</div>
+    </div>
+    ${caixa()}
+    <div class="v3-bloco"><h3>${esc(V.feitoTitulo)}</h3><ul class="check">${[
+      tem.costas || tem.impactoDor ? V.feito.dor : '', tem.fase ? V.feito.fase : '', tem.iniciante ? V.feito.iniciante : '',
+      `<b>Seu perfil: ${esc(pf.nome)}.</b> ${txt(pf.comeca)}`].filter(Boolean).map(x => `<li>${x.startsWith('<b>') ? x : rico(x)}</li>`).join('')}</ul></div>
+    ${V.depoimentos && V.depoimentos.length ? `<h3 class="v3-h">${esc(V.depoTitulo)}</h3>${V.depoimentos.map(d => `<div class="v3-depo"><span class="estrelas" aria-label="5 estrelas">★★★★★</span><b>${esc(d.nome)}</b><p>${txt(d.texto)}</p></div>`).join('')}`
+      : `<h3 class="v3-h">${esc(QUIZ.prova.titulo)}</h3>${fotos(QUIZ.prova.fotos)}<p class="aviso">Os resultados variam de pessoa para pessoa.</p>`}
+    ${caixa()}
+    <h3 class="v3-h">${esc(V.recebeTitulo)}</h3>
+    <div class="v3-mockup" aria-hidden="true"><div class="tab">${img(V.mockup[0], 'loading="lazy"')}</div><div class="cel">${img(V.mockup[1], 'loading="lazy"')}</div></div>
+    <ul class="v3-recebe">${V.recebe.map(x => `<li>${rico(x)}</li>`).join('')}</ul>
+    ${caixa()}
+    <h3 class="v3-h">${esc(V.praQuem.titulo)}</h3>
+    <ul class="v3-praquem">${dores.map(d => `<li class="${d.on ? 'on' : ''}">${esc(d.t)}${d.on ? '<span>você marcou</span>' : ''}</li>`).join('')}</ul>
+    <p class="v3-nota">${txt(V.praQuem.nota)}</p>
+    ${m ? `<div class="medo"><b>Você disse que tem medo de “${esc(minusc(rotulo('medo', resp.medo)))}”.</b> Por isso: ${txt(m)}</div>` : ''}
+    ${caixa()}
+    <h3 class="v3-h">${esc(V.professora.titulo)}</h3>
+    <div class="v3-prof">${img(V.professora.foto, 'loading="lazy"')}<div>${V.professora.textos.map(x => `<p>${rico(x)}</p>`).join('')}</div></div>
+    <div class="garantia"><span aria-hidden="true">🛡️</span><h3>${esc(O.v2.garantia.titulo)}</h3><p>${txt(O.v2.garantia.texto)}</p></div>
+    <h3 class="v3-h">Perguntas rápidas</h3>
+    ${O.v2.faq.filter((_, k) => V.faq.includes(k)).map(([pq, r]) => `<div class="cartao faq"><h4>${esc(pq)}</h4><p>${txt(r)}</p></div>`).join('')}
+    ${caixa()}
+    <p class="miudo">Michele Salla · CNPJ 32.983.139/0001-99</p>
+    ${O.rodape ? `<p class="miudo" style="font-size:11.5px">${txt(O.rodape)}</p>` : ''}</section>`
+}
+
 let telaMarcada = -1 // o evento da tela sai uma vez por chegada (a tela redesenha ao marcar uma resposta)
 function desenha() {
   const t = TELAS[i]
@@ -208,8 +258,9 @@ function desenha() {
     h += `<section class="capa capa2">
       <div class="capa2-foto">${img(C.foto, 'fetchpriority="high"')}${C.marca ? `<span class="capa2-marca">${esc(C.marca)}</span>` : ''}</div>
       <h1>${pend(p.titulo)}</h1>
-      <div class="selos-capa">${C.selos.map(x => `<span>${esc(x)}</span>`).join('')}</div>
-      <div class="cartao capa2-idade">${capaIdade(QUIZ.idadeNaCapa)}</div>
+      ${C.faixa ? `<p class="capa2-faixa">${esc(C.faixa)}</p>` : ''}
+      ${C.selos && C.selos.length ? `<div class="selos-capa">${C.selos.map(x => `<span>${esc(x)}</span>`).join('')}</div>` : ''}
+      <div class="cartao capa2-idade">${capaIdade(QUIZ.idadeNaCapa)}${C.final ? `<p class="capa2-final">${esc(C.final)}</p>` : ''}</div>
       <p class="miudo">${esc(QUIZ.assinatura || 'Por Michele Salla, educadora física')}</p></section>`
   } else if (t.tipo === 'capa') {
     const p = PROMESSAS[P]
@@ -294,7 +345,7 @@ function desenha() {
     } else {
       botao = `<span class="botao" aria-disabled="true" style="opacity:.6;cursor:default">${esc(O.botao)} →</span><p class="miudo" style="color:#fff"><span class="pend">Link de compra pendente</span></p>`
     }
-    if (O.v2) { h += ofertaV2(pf, O, m, botao) } else h += `<section class="oferta" style="display:grid;gap:14px">
+    if (O.v3) { h += ofertaV3(pf, O, m, botao) } else if (O.v2) { h += ofertaV2(pf, O, m, botao) } else h += `<section class="oferta" style="display:grid;gap:14px">
       <span class="etiqueta">Plano para ${esc(pf.nome)}</span>
       <h2>${pend(O.titulo)}</h2>
       <p>${txt(O.intro)}</p>

@@ -176,7 +176,12 @@ const QUIZ = {
   capaV2: {
     foto: { src: FOTO + 'michele-pilates-estudio.webp', alt: 'Michele Salla fazendo pilates no estúdio', w: 900, h: 1200 },
     marca: 'Pilates em Casa · com Michele Salla',
-    selos: ['Em casa', 'Aulas de 20 a 40 min', 'Do básico para frente'],
+    // 13/11 (análise da tela 1): a promessa da capa 5 não muda. Embaixo dela, o público em destaque (modelo Lays: "com exercícios
+    // seguros de pilates em casa", em amarelo) e, embaixo da idade, o que ela ganha no final ("diagnóstico grátis" → plano grátis).
+    // Os selos saíram para os botões de idade caberem na primeira tela de um celular pequeno (360 × 640).
+    faixa: 'Pilates em casa, sem impacto, para mulheres a partir dos 40',
+    selos: [],
+    final: 'No final, você recebe o seu plano grátis. Sem cadastro.',
   },
   assinatura: 'Por Michele Salla, educadora física e especialista em pilates desde 2005',
   logo: { src: FOTO + 'logo-pilates-em-casa.webp', alt: 'Pilates em Casa', style: 'width:170px;border-radius:18px' },
@@ -184,8 +189,8 @@ const QUIZ = {
   // Capa no padrão dos quizzes de pilates 40+ (Patrik, 06/11): promessa + "escolha a sua idade" com 4 fotos.
   // Fotos ilustrativas geradas no Gravyx (não são a Michele nem alunas): mulheres de corpo comum, em casa, alongamento fácil.
   idadeNaCapa: {
-    pergunta: 'Escolha a sua idade para começar:',
-    texto: true, tempo: 'Leva cerca de 2 minutos', // botões de texto (13/11); a ordem abaixo põe 45 a 54 primeiro
+    pergunta: 'Escolha a sua idade:',
+    texto: true, tempo: 'Leva cerca de 3 minutos', // botões de texto (13/11); a ordem abaixo põe 45 a 54 primeiro
     op: [['45-54', '45 a 54', 'idade-45-54', 'Mulher de 45 a 54 anos fazendo pilates em casa'], ['55-64', '55 a 64', 'idade-55-64', 'Mulher de 55 a 64 anos fazendo pilates em casa'],
          ['35-44', '35 a 44', 'idade-35-44', 'Mulher de 35 a 44 anos fazendo pilates em casa'], ['65+', '65 ou mais', 'idade-65', 'Mulher de 65 anos ou mais fazendo pilates em casa']]
       .map(([id, rot, n, alt]) => [id, rot, { src: FOTO + n + '.webp', alt, w: 480, h: 643 }]),
@@ -296,6 +301,50 @@ const QUIZ = {
         ['É mensalidade?', 'Não. É pagamento único de R$ 37, pela Hotmart.'],
         ['Como funciona a garantia?', 'Você tem 7 dias. Se não fizer sentido para você, pede o reembolso pela própria Hotmart.'],
       ],
+    },
+    // 13/11 (Patrik: "quero a nossa tela final parecida com a dela, mas tem que fazer sentido no quiz"): página final no modelo da
+    // Lays Trancoso. Mesmo preço (R$ 37) e mesmo link da Hotmart; sem desconto nem âncora até o Patrik escolher. Desligar: v3: null.
+    v3: {
+      selo: 'Comece hoje · acesso imediato',
+      precoSub: '24 aulas · 365 dias',
+      precoVez: 'à vista · pagamento único',
+      garantiaCurta: 'Garantia de 7 dias: se não for pra você, pede o reembolso pela própria Hotmart.',
+      titulo: 'Pilates em casa, <b>sem impacto</b>, para cuidar das dores e fortalecer o corpo',
+      sub: '24 aulas de 20 a 40 minutos, do básico para frente, com a Michele Salla, educadora física e especialista em pilates desde 2005.',
+      foto: { src: FOTO + 'michele-pilates-estudio.webp', alt: 'Michele Salla fazendo pilates no estúdio', w: 900, h: 1200 },
+      feitoTitulo: 'Feito a partir do que você respondeu',
+      feito: {
+        dor: 'Você sente <b>dor ou cansaço nas costas</b> ou com impacto: tem aulas de postura e mobilidade e bônus para <b>dor lombar e ciático</b>.',
+        fase: 'Você marcou <b>menopausa ou pós-parto</b>: o pilates trabalha o centro do corpo sem impacto, e tem o bônus <b>Pilates no Pós-Parto</b>.',
+        iniciante: 'Você <b>nunca fez</b> ou não sabe se fez certo: o curso começa pelos <b>Fundamentos</b>, passo a passo.',
+      },
+      depoTitulo: 'O que as alunas dizem',
+      depoimentos: [], // (ESCREVER AQUI: 3 a 5 depoimentos reais de alunas do pilates, com idade e a dor que melhorou; a Michele manda)
+      recebeTitulo: 'Veja tudo que você vai receber',
+      mockup: [{ src: FOTO + 'aula-em-grupo.webp', alt: 'Aula de pilates', w: 900, h: 675 }, { src: FOTO + 'aula-com-elastico.webp', alt: 'Aula de pilates com elástico', w: 900, h: 1200 }],
+      recebe: [
+        '<b>24 aulas</b> de 20 a 40 minutos para fazer em casa, só com um tapete',
+        '<b>Do básico para frente</b>: Fundamentos, Mat Essencial, Acessórios e Funcional & Mobilidade',
+        '<b>Bônus</b> para dor lombar e ciático, hérnia de disco, escoliose e pós-parto',
+        '<b>365 dias de acesso</b> pelo celular, tablet ou computador, na área de membros da Hotmart',
+      ],
+      praQuem: {
+        titulo: 'É pra você que…',
+        itens: [['costas', 'Sente dor ou cansaço nas costas'], ['impactoDor', 'Sente dor no joelho ou nas costas quando pula ou corre'],
+          ['rigidez', 'Sente o corpo travado, com pouca flexibilidade'], ['barriga', 'Quer trabalhar a barriga e a flacidez'],
+          ['postura', 'Quer melhorar a postura e tirar o peso do fim do dia'], ['fase', 'Está na pré-menopausa, na menopausa ou no pós-parto'],
+          ['escapes', 'Tem escapes de xixi quando pula'], ['iniciante', 'Nunca fez pilates ou não sabe se faz certo']],
+        nota: 'Tem hérnia de disco ou escoliose? Há aulas específicas de bônus. Se tiver dor forte ou alguma condição de saúde, converse com o seu médico antes de começar.',
+      },
+      professora: {
+        titulo: 'Conheça a sua professora',
+        foto: { src: IMG + 'michele-recorte.webp', alt: 'Michele Salla', w: 802, h: 1292 },
+        textos: [
+          'Eu sou a <b>Michele Salla</b>, formada em Educação Física e especialista em pilates <b>desde 2005</b>: clássico, contemporâneo, com acessórios, para hérnia de disco, gestantes, pós-parto, terceira idade e dores na coluna.',
+          'Comecei com um estúdio pequeno, ao lado do meu marido. Na pandemia, transformei tudo o que eu sabia em <b>pilates possível e seguro dentro de casa</b>. Assim nasceu o Pilates em Casa.',
+        ],
+      },
+      faq: [0, 3, 5, 6], // índices de v2.faq: nunca fiz, dor/hérnia, como acesso, é mensalidade
     },
     rodape: 'O Pilates em Casa não substitui avaliação médica ou fisioterapêutica. Se você tem dor, hérnia, teve bebê há pouco tempo ou tem outra condição de saúde, converse com o seu médico antes de começar. Os resultados variam de pessoa para pessoa. Este site não é afiliado ao Facebook.',
   },
