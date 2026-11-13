@@ -47,6 +47,16 @@ const PROMESSAS = {
     sub: 'Responda e veja qual é o seu perfil.',
     botao: 'Quero descobrir o meu perfil',
   },
+  // 6 NOVA (13/11, Patrik: "a promessa dela, podemos testar"): modelada na capa do quiz da Lays Trancoso (pilates 50+:
+  // "Acabe com as dores e emagreça após os 50 anos com exercícios seguros de pilates em casa"), com a idade do nosso público
+  // (80% tem 45+). Fora do sorteio: abre só com ?p=6, para um conjunto próprio. Falta a Michele confirmar a promessa.
+  6: {
+    nome: 'Dores e emagrecer 45+',
+    etiqueta: 'Quiz gratuito',
+    titulo: 'Acabe com as dores e emagreça depois dos 45. <mark>Pilates em casa, com exercícios seguros e sem impacto.</mark>',
+    sub: 'Responda e veja qual é o seu perfil.',
+    botao: 'Quero descobrir o meu perfil',
+  },
 }
 
 const TELAS = [
@@ -159,7 +169,8 @@ const EXEMPLO = {
 
 const QUIZ = {
   slug: 'pilates-p', // painel: pilates-p1 … pilates-p5 (aba Quiz Pilates)
-  mostraPct: true, // 13/11: "% concluído" ao lado da barra (modelo NovaMente)
+  mostraPct: true,
+  sorteio: ['5'], // 13/11: link sem ?p= segue só na capa 5 (a que está rodando); a 6 abre só com ?p=6 // 13/11: "% concluído" ao lado da barra (modelo NovaMente)
   // 13/11 (Patrik: "faz o 4 e o 5"): capa com a foto real da Michele, selos e a idade em botões grandes de texto
   // (80% de quem responde tem 45+; as 4 fotos ilustrativas saíram). Desligar: apague capaV2 e tire `texto` de idadeNaCapa.
   capaV2: {

@@ -7,9 +7,10 @@
 const q = new URLSearchParams(location.search)
 // Sem ?p= na URL: sorteia a promessa (partes iguais) e guarda no aparelho, para a mesma pessoa ver sempre a mesma capa.
 // Com ?p=1..5 a capa é fixa (um link por conjunto). No relatório (?tela=) fica a 1.
+// QUIZ.sorteio (opcional): só estas capas entram no sorteio; as outras abrem apenas pelo link ?p=N (teste com conjunto próprio).
 function sorteiaPromessa() {
-  const ns = Object.keys(PROMESSAS), k = 'quiz_promessa_' + QUIZ.slug
-  try { const s = localStorage.getItem(k); if (PROMESSAS[s]) return Number(s) } catch (e) {}
+  const ns = (QUIZ.sorteio || Object.keys(PROMESSAS)).filter(n => PROMESSAS[n]), k = 'quiz_promessa_' + QUIZ.slug
+  try { const s = localStorage.getItem(k); if (PROMESSAS[s] && ns.includes(String(s))) return Number(s) } catch (e) {}
   const n = Number(ns[Math.floor(Math.random() * ns.length)])
   try { localStorage.setItem(k, n) } catch (e) {}
   return n
