@@ -17,7 +17,10 @@ e a página de referência https://efeitolipo.com.br/c (estrutura Maxxima).
 
 ## 2. Gargalos (do maior para o menor)
 1. **Capa do quiz:** 78% saem sem clicar "EU QUERO" (só 21,8% clicam). iPhone 18% × outros celulares 28%; à noite 16% × manhã 25%.
-2. **Do botão ao checkout:** 471 cliques no botão de compra, mas só 165 inícios de checkout no Meta (35%). Conferir o link redirect no iPhone/Instagram.
+2. **Dentro do checkout (corrigido em 16/11):** o link chega rápido (redirect em ~1,7 s) e o checkout da Greenn manda
+   PageView, ViewContent e **AddToCart ao abrir**; o InitiateCheckout só sai depois que ela preenche os dados.
+   AddToCart no Meta = 507 ≈ 471 cliques no botão → quase todas chegam ao checkout. A perda é lá dentro:
+   só ~1/3 preenche os dados (165) e metade dessas paga (87). Ver as 4 order bumps, o preço à vista e recuperar quem preencheu e não pagou.
 3. **Checkout → compra:** 18,5% dos cliques no botão viram venda (16,5% desde 07/11).
 4. **Página de oferta do quiz:** 39% chegam e saem sem clicar. Faltam: o que ela recebe, quem é a Millena, perguntas e respostas, preço à vista.
 5. **Textos que não batem:** "75% de desconto" (o real é ~85%); garantia 30 dias no título × 21 dias no bloco; capa "4 semanas" × quiz "21 dias".
@@ -71,6 +74,9 @@ Outros dados úteis: 54% têm de 17 a 28 anos e 40% de 29 a 39; 51% têm 30 a 40
 ## 7. Pendências
 - [ ] OK do Patrik para subir a página em desafiomagrapromax.com.br/oferta/ (Hostinger, u343853767).
 - [ ] Preencher os campos amarelos com as respostas da Millena e tirar a classe `.pendente`.
-- [ ] Testar o link `payfast.greenn.com.br/redirect/286218` no Instagram do iPhone (perda de 65% entre o clique e o início do checkout).
+- [x] Link do checkout testado (16/11): chega em ~1,7 s; a perda é dentro do checkout, não no link.
+- [ ] Revisão (16/11): a página nova NÃO deve substituir o quiz. O quiz leva 10,3% das visitas ao checkout e a oferta dele já tem 61% de clique.
+      Ordem combinada: 1) testar capas do quiz; 2) checkout (bumps, preço à vista, recuperar abandono); 3) levar o conteúdo da página
+      nova para a oferta do quiz (versão curta); 4) página nova só como teste A/B com parte pequena da verba.
 - [ ] Corrigir na oferta do quiz: "75%" e garantia 21 × 30 dias.
 - [ ] Liberar a conta CA 02 no conector do Meta para ver custo por anúncio.
