@@ -27,15 +27,46 @@ e a página de referência https://efeitolipo.com.br/c (estrutura Maxxima).
 6. **Dinheiro:** custo por venda R$ 30,50 com ticket ~R$ 29,60 (retorno 0,93). Desde 07/11: R$ 33,65 (retorno 0,83).
 - O quiz em si funciona bem: cerca de 1% de perda por pergunta.
 
+## 2b. Estudo cruzado das respostas (16/11, 818 que terminaram o quiz)
+Medida: % que clica no botão de compra depois de ver a oferta (média 57,6%). A planilha não tem e-mail, então não dá para ligar
+resposta a compra; o clique é o melhor sinal disponível. Com essa amostra, só diferenças de ~7 pontos são confiáveis (marcadas com *).
+
+**Dois públicos principais:**
+| | Falsa magra (55%) | Acima do peso (34%) |
+|---|---|---|
+| Idade | 59% de 17–28 | 49% de 17–28, 45% de 29–39 |
+| Peso | 44% "ganho e perco com facilidade" | **79% "ganho rápido e perco lentamente"** |
+| Onde quer definição | 48% barriga, 18% glúteos | 60% barriga |
+| Corpo em 21 dias | barriga 34%, cintura 32%, bumbum 22% | cintura 42%, barriga 41% |
+| Roupa | 46% biquíni cavado | 36% biquíni, 24% jeans e cropped |
+| Clique no checkout | 56,6% | **61,1%** (29–39 anos: **70%**) |
+
+**Respostas que mais clicam:** 29–39 anos (63%*), "Jeans e cropped" (65%), "100% comprometida" e "Adeus, falsa magra" (63%),
+"Corpo todo mais desenhado" (62%), "Me sentir linda e forte" (62%), "Ganho peso rápido e perco lentamente" (60%).
+**Que menos clicam:** "Aquele biquíni cavado" (52%*), "10 dias" (52%), "Já emagreci, mas estou flácida" (51%),
+"Proteína e carboidratos juntos" (53%), "Bumbum durinho" (53%), 17–28 anos (53,5%).
+Perfil que mais clica: acima do peso + corpo todo + ganha rápido/perde devagar (68%, 8% do público).
+Perfil que menos clica entre os grandes: falsa magra + barriga + ganha e perde fácil (50%, 12%).
+
+**Tempo:** 51% têm 30–40 min e 28% mais de 1 hora; só 9% querem 10–20 min → "treino rápido" não é a dor; virou "treino com estratégia".
+**Abdominal:** metade "não vejo definição" (39%), metade "odeio fazer" (38%) → os dois viram pensamento.
+
+**O que mudou na página por causa do estudo:** topo fala com os dois públicos ("Engorda rápido, demora pra perder e a barriga não sai?");
+"ganho rápido e perco devagar" virou o 1º pensamento; entrou "Queria usar um cropped sem medo" (resposta que mais clica e o print da
+aluna "voltei a usar cropped"); saíram "Como as outras conseguem e eu não?" e "Será que o problema sou eu?" (sem base nas respostas);
+"3 passos para sair do falsa magra" virou "para secar a barriga e definir o corpo" (o público acima do peso é o que mais clica).
+**Para os anúncios (sugestão, não testado):** testar idade 25–39 e criativo para "acima do peso, engorda rápido e demora pra perder".
+
 ## 3. Ruminações (pensamentos da cliente, tirados das respostas)
 | Pensamento usado na página | De onde veio |
 |---|---|
-| "De roupa eu até pareço magra… mas sem roupa, cadê o corpo?" | 55% marcaram "Sou falsa magra" |
-| "Faço abdominal todo dia e a barriga continua aqui." | 38% "Não vejo definição neles" + 51% querem "barriga mais sequinha" |
-| "Eu engordo rápido e demoro uma eternidade pra perder." | 55% "Ganho peso rápido e perco lentamente" |
-| "Treino e não vejo definição nenhuma. Será que o problema sou eu?" | capa "Se você treina e continua sem resultado" + PG-INFO1 "Você não está sozinha" |
-| "Biquíni? Esse verão de novo não." | 41% querem estrear "aquele biquíni cavado" |
-| "Como as outras conseguem e eu não?" | 48% querem "autoconfiança total" |
+| "Eu engordo rápido e demoro uma eternidade pra perder." | 55% no geral e 79% de quem está acima do peso; clica acima da média |
+| "De roupa eu até pareço magra… mas sem roupa, cadê o corpo?" | 55% "Sou falsa magra" |
+| "Faço abdominal e não vejo definição nenhuma." | 39% "Não vejo definição neles" |
+| "Odeio abdominal… e a barriga continua aqui." | 38% "Odeio fazer abdominal" + 51% querem "barriga mais sequinha" |
+| "Queria usar um cropped sem medo." | "Jeans e cropped" é a roupa que mais clica (65%) + print da aluna |
+| "Mais um verão com o biquíni na gaveta?" | 41% "Aquele biquíni cavado" (maior grupo, clica menos) |
+| "Eu só queria me olhar no espelho e me sentir linda e forte." | 47% autoconfiança, 24% amar o reflexo, 18% linda e forte (clica 62%) |
 
 Outros dados úteis: 54% têm de 17 a 28 anos e 40% de 29 a 39; 51% têm 30 a 40 min por dia; 43% querem "comida de verdade e saborosa";
 54% "já quero suar"; 37% sonham com "barriga chapada" e 34% com "cintura fina".
