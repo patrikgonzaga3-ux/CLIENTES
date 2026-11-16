@@ -8,299 +8,406 @@
 <meta name="description" content="Seque a barriga e afine a cintura enquanto define coxas e bumbum, com treinos rápidos e alimentação saborosa.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <!-- Pixel do Meta (o mesmo do quiz) -->
 <script>
 !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
 fbq('init','1332309708403614');fbq('track','PageView');
 </script>
 <style>
-:root{--laranja:#ca4b07;--laranja2:#ff6a1a;--escuro:#0d0d0d;--escuro2:#171717;--cinza:#bdbdbd;--branco:#fff;--verde:#1fbf5b}
+:root{
+  --marca:#ca4b07;--marca2:#e85d12;--marca-esc:#7a2c03;--claro-marca:#ffe6d6;
+  --preto:#111;--creme:#fbf3ec;--texto:#1f1a17;--cinza:#6b625c;--borda:#ecdcd0;
+  --botao:#ff7a1a;--botao-sombra:#b84e00;
+}
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:Poppins,system-ui,sans-serif;background:var(--escuro);color:var(--branco);line-height:1.5;font-size:17px}
+body{font-family:Poppins,system-ui,sans-serif;background:var(--creme);color:var(--texto);line-height:1.5;font-size:16px;-webkit-font-smoothing:antialiased}
 img{max-width:100%;display:block}
-.wrap{max-width:560px;margin:0 auto;padding:0 18px}
-section{padding:44px 0}
-h1{font-size:28px;line-height:1.2;font-weight:800;margin:12px 0}
-h2{font-size:25px;line-height:1.25;font-weight:800;margin-bottom:18px;text-align:center}
-h3{font-size:18px;line-height:1.3;font-weight:700}
-.dest{color:var(--laranja2)}
-.etiqueta{display:inline-block;background:var(--laranja);color:#fff;font-weight:700;font-size:13px;letter-spacing:.3px;padding:6px 12px;border-radius:6px;text-transform:uppercase}
-.topo{text-align:center;padding-top:22px;background:radial-gradient(circle at 50% 0,#3a1604 0,var(--escuro) 65%)}
-.logo{width:150px;margin:0 auto 14px}
-.sub{color:var(--cinza);font-size:16px}
-.pilulas{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:16px 0}
-.pilulas span{border:1px solid #333;background:var(--escuro2);border-radius:99px;padding:6px 12px;font-size:13px;font-weight:600}
-.estrelas{color:#ffc400;letter-spacing:2px;margin-top:6px}
-.prova{font-size:14px;color:var(--cinza)}
-.lista{list-style:none;text-align:left;margin:18px 0}
-.lista li{padding:9px 0 9px 32px;position:relative;border-bottom:1px solid #222}
-.lista li:before{content:"✓";position:absolute;left:4px;top:8px;color:var(--laranja2);font-weight:800}
-.lista.x li:before{content:"✗";color:#ff4d4d}
-.video{background:#000;border-radius:12px;overflow:hidden;margin:18px 0;border:2px solid var(--laranja)}
-.video-legenda{font-size:13px;color:var(--cinza);text-align:center}
-.carrossel{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:10px;-webkit-overflow-scrolling:touch}
-.carrossel img{flex:0 0 85%;scroll-snap-align:center;border-radius:12px}
-.dica{font-size:13px;color:var(--cinza);text-align:center;margin-top:6px}
-.claro{background:#f6f1ec;color:#1b1b1b}
-.claro .sub,.claro .dica{color:#555}
-.pensamentos{display:grid;gap:10px;margin-top:8px}
-.pensamento{background:#fff;border-left:5px solid var(--laranja);border-radius:10px;padding:14px 16px;font-weight:600;font-style:italic;box-shadow:0 2px 8px rgba(0,0,0,.06)}
-.virada p{margin-bottom:14px}
-.alerta{background:var(--escuro2);border:1px solid #333;border-radius:14px;padding:22px;text-align:center}
-.alerta strong{color:var(--laranja2)}
-.beneficios{display:grid;gap:10px}
-.beneficio{display:flex;gap:12px;align-items:flex-start;background:var(--escuro2);border-radius:12px;padding:14px}
-.beneficio b{flex:0 0 32px;height:32px;border-radius:50%;background:var(--laranja);display:flex;align-items:center;justify-content:center}
-.entregas{display:grid;gap:14px}
-.entrega{background:var(--escuro2);border:1px solid #2a2a2a;border-radius:14px;padding:18px}
-.entrega h3 span{color:var(--laranja2)}
-.entrega p{color:var(--cinza);font-size:15px;margin-top:6px}
-.oferta{background:linear-gradient(180deg,#1d0b02,var(--escuro));text-align:center}
-.cartao{background:#fff;color:#1b1b1b;border-radius:18px;padding:24px 18px;box-shadow:0 10px 40px rgba(202,75,7,.35);border:3px solid var(--laranja)}
-.cartao img{width:70%;margin:0 auto 10px;border-radius:10px}
-.de{color:#888;text-decoration:line-through}
-.parcela{font-size:15px;font-weight:600;margin-top:6px}
-.preco{font-size:52px;font-weight:800;color:var(--laranja);line-height:1}
-.preco small{font-size:22px}
-.avista{font-weight:600;margin:6px 0 16px}
-.botao{display:block;width:100%;background:var(--verde);color:#fff;text-decoration:none;font-weight:800;font-size:19px;padding:18px 12px;border-radius:12px;text-transform:uppercase;box-shadow:0 6px 0 #138a40;animation:pulsa 1.8s infinite}
+.w{max-width:480px;margin:0 auto;padding:0 18px}
+.bl{padding:34px 0 30px;position:relative}
+.bl.marca{background:var(--marca);color:#fff}
+.bl.preto{background:var(--preto);color:#fff}
+.bl.branco{background:#fff}
+h1{font-size:24px;line-height:1.22;font-weight:800;text-align:center}
+h2{font-size:21px;line-height:1.28;font-weight:800;text-align:center;margin-bottom:16px}
+h3{font-size:16px;line-height:1.3;font-weight:700}
+.c{text-align:center}
+.d{color:var(--marca)}
+.marca .d,.preto .d{color:#ffd2b3}
+.preto .d{color:var(--marca2)}
+.sob{background:var(--marca-esc);color:#fff;font-weight:700;font-size:13px;text-align:center;padding:10px 14px;text-transform:uppercase;letter-spacing:.2px}
+.logo{width:138px;margin:0 auto 12px}
+.sub{font-size:14.5px;opacity:.92;text-align:center;margin-top:10px}
+.estrelas{display:flex;gap:8px;align-items:center;justify-content:center;font-size:13px;margin:14px 0 6px}
+.estrelas b{color:#ffc400;letter-spacing:1px;font-size:15px}
+.feito{font-size:13px;text-align:center;margin:10px 0 8px;font-weight:600}
+.pil{display:grid;gap:7px}
+.pil span{display:flex;gap:8px;align-items:center;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.28);border-radius:99px;padding:7px 12px;font-size:13px;font-weight:500}
+.pil span:before{content:"✓";flex:0 0 18px;height:18px;border-radius:50%;background:#fff;color:var(--marca);font-weight:800;font-size:11px;display:flex;align-items:center;justify-content:center}
+.foto-topo{border-radius:14px;overflow:hidden;margin-top:16px;position:relative}
+.tag{position:absolute;bottom:10px;font-size:11px;font-weight:700;background:var(--marca);color:#fff;padding:3px 10px;border-radius:5px}
+.seta{position:absolute;left:50%;bottom:-15px;transform:translateX(-50%);width:30px;height:30px;border-radius:7px;background:var(--marca);color:#fff;display:flex;align-items:center;justify-content:center;font-size:14px;z-index:2;box-shadow:0 3px 8px rgba(0,0,0,.18)}
+.marca .seta{background:#fff;color:var(--marca)}
+.botao{display:block;width:100%;text-align:center;background:var(--botao);color:#fff;text-decoration:none;font-weight:800;font-size:16px;padding:16px 12px;border-radius:10px;text-transform:uppercase;box-shadow:0 5px 0 var(--botao-sombra);margin-top:18px}
+.botao.pulsa{animation:pulsa 1.8s infinite}
 @keyframes pulsa{50%{transform:scale(1.03)}}
-.seguro{font-size:13px;color:#555;margin-top:12px}
-.selos{display:flex;justify-content:center;gap:18px;margin-top:12px;font-size:12px;color:#555;font-weight:600}
-.opcoes{display:grid;gap:12px}
-.opcao{border-radius:14px;padding:18px}
-.opcao.ruim{background:#2a1111;border:1px solid #5c1f1f}
-.opcao.boa{background:#10291a;border:1px solid #1f5c35}
-.bio img{border-radius:16px;margin-bottom:16px}
-.bio p{margin-bottom:12px}
-.faq details{background:var(--escuro2);border-radius:12px;margin-bottom:10px;padding:14px 16px}
-.faq summary{font-weight:700;cursor:pointer;list-style:none}
-.faq summary:after{content:"+";float:right;color:var(--laranja2)}
-.faq details[open] summary:after{content:"–"}
-.faq p{color:var(--cinza);margin-top:10px;font-size:15px}
-.garantia{display:flex;gap:14px;align-items:center;background:#fff;color:#1b1b1b;border-radius:14px;padding:18px;margin-top:18px;text-align:left}
-.garantia .selo{flex:0 0 74px;height:74px;border-radius:50%;background:var(--laranja);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;font-weight:800;line-height:1}
-.garantia .selo small{font-size:11px}
-/* Texto que falta confirmar com a Millena/Patrik (some ao publicar) */
-.pendente{background:#fff3b0;color:#5a4300;border:1px dashed #c9a400;border-radius:6px;padding:1px 6px;font-weight:600;font-style:normal}
-footer{font-size:12px;color:#777;text-align:center;padding:30px 0 90px}
-.fixo{position:fixed;left:0;right:0;bottom:0;padding:10px 14px;background:rgba(13,13,13,.95);border-top:1px solid #222;transform:translateY(110%);transition:transform .3s;z-index:9}
+.carrossel{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;padding:2px 2px 10px;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+.carrossel::-webkit-scrollbar{display:none}
+.carrossel figure{flex:0 0 78%;scroll-snap-align:center;background:#fff;border-radius:12px;overflow:hidden;border:1px solid var(--borda)}
+.carrossel figcaption{font-size:12px;padding:8px 10px;color:var(--cinza)}
+.dica{font-size:12px;color:var(--cinza);text-align:center;margin-top:4px}
+.dor p{margin-bottom:12px;text-align:center}
+.balao{background:#fff;border-radius:16px;padding:12px 16px;font-size:14.5px;font-weight:600;font-style:italic;box-shadow:0 4px 14px rgba(122,44,3,.12);position:relative;margin-bottom:12px;max-width:88%}
+.balao:after{content:"";position:absolute;bottom:-8px;left:22px;border:8px solid transparent;border-top-color:#fff;border-bottom:0}
+.balao:nth-child(even){margin-left:auto}
+.balao:nth-child(even):after{left:auto;right:22px}
+.alerta{background:var(--marca);color:#fff;border-radius:16px;padding:22px 18px;text-align:center}
+.alerta .ic{font-size:34px;line-height:1}
+.alerta p{margin-top:10px}
+.alerta strong{color:#ffd2b3}
+.ben{display:grid;gap:9px}
+.ben div{display:flex;gap:12px;align-items:center;background:#fff;border:1px solid var(--borda);border-radius:12px;padding:12px 14px;font-size:14.5px;font-weight:500}
+.ben i{font-style:normal;flex:0 0 40px;height:40px;border-radius:10px;background:var(--claro-marca);display:flex;align-items:center;justify-content:center;font-size:20px}
+.passo{background:#fff;color:var(--texto);border-radius:14px;padding:16px;margin-bottom:12px;display:flex;gap:14px;align-items:flex-start}
+.passo .n{flex:0 0 40px;height:40px;border-radius:50%;background:var(--marca);color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center}
+.passo p{font-size:14px;color:var(--cinza);margin-top:4px}
+.ent{background:#fff;border:1px solid var(--borda);border-radius:16px;overflow:hidden;margin-bottom:14px}
+.ent .topo-ent{height:110px;background:linear-gradient(135deg,var(--preto),var(--marca-esc));display:flex;align-items:center;justify-content:center;font-size:44px}
+.ent .txt{padding:14px 16px}
+.ent .txt p{font-size:14px;color:var(--cinza);margin-top:6px}
+.ent .rot{display:inline-block;font-size:10.5px;font-weight:700;text-transform:uppercase;background:var(--claro-marca);color:var(--marca);padding:2px 8px;border-radius:5px;margin-bottom:6px}
+.lista{list-style:none;display:grid;gap:8px}
+.lista li{display:flex;gap:10px;align-items:flex-start;background:rgba(255,255,255,.12);border-radius:10px;padding:10px 12px;font-size:14.5px}
+.lista li:before{content:"✓";flex:0 0 20px;height:20px;border-radius:50%;background:#fff;color:var(--marca);font-weight:800;font-size:12px;display:flex;align-items:center;justify-content:center;margin-top:1px}
+.recap{background:#fff;border:1px solid var(--borda);border-radius:16px;padding:18px}
+.recap h2{color:var(--marca);margin-bottom:4px}
+.recap li{list-style:none;display:flex;gap:10px;padding:9px 0;border-bottom:1px solid var(--borda);font-size:14px}
+.recap li:before{content:"✓";color:#fff;background:var(--marca);flex:0 0 18px;height:18px;border-radius:50%;font-size:11px;font-weight:800;display:flex;align-items:center;justify-content:center;margin-top:2px}
+.recap .total{display:flex;justify-content:space-between;font-weight:800;padding-top:12px}
+.recap .total s{color:#c62828}
+.cartao{background:var(--preto);color:#fff;border-radius:18px;overflow:hidden;text-align:center;box-shadow:0 12px 30px rgba(0,0,0,.25);position:relative}
+.cartao .faixa{position:absolute;top:16px;left:-36px;transform:rotate(-45deg);background:var(--marca);font-size:11px;font-weight:800;padding:4px 40px}
+.cartao .capa{width:62%;margin:22px auto 0;border-radius:10px;box-shadow:0 8px 24px rgba(202,75,7,.4)}
+.cartao .corpo{padding:16px 18px 20px}
+.cartao h3{font-size:19px;margin-top:6px}
+.cartao .valia{font-size:13px;opacity:.8}
+.cartao .valia s{color:#ff8a65}
+.cartao .por{font-size:15px;margin-top:10px}
+.cartao .preco{font-size:56px;font-weight:800;color:var(--marca2);line-height:1}
+.cartao .preco small{font-size:22px;vertical-align:top;margin-right:2px}
+.cartao .avista{font-size:14px;margin-top:4px}
+.cartao .mini{font-size:12px;opacity:.85;margin-top:12px}
+.selos{display:flex;justify-content:center;gap:16px;margin-top:12px;font-size:11px;opacity:.85}
+.selos span{display:flex;flex-direction:column;align-items:center;gap:2px}
+.receber{display:grid;gap:10px}
+.receber div{background:#fff;border:1px solid var(--borda);border-radius:12px;padding:14px;display:flex;gap:12px;align-items:center}
+.receber b{flex:0 0 34px;height:34px;border-radius:50%;background:var(--preto);color:#fff;display:flex;align-items:center;justify-content:center}
+.receber p{font-size:13.5px;color:var(--cinza)}
+.verdade p{margin-bottom:12px;text-align:center}
+.op{border-radius:14px;padding:16px;margin-bottom:12px;background:#fff;border-top:4px solid}
+.op.ruim{border-color:#c62828}.op.boa{border-color:#2e7d32}
+.op h3{display:flex;gap:8px;align-items:center;margin-bottom:6px}
+.op p{font-size:14.5px;color:var(--cinza)}
+.gar{display:flex;gap:14px;align-items:center;background:#fff;border:2px dashed var(--marca);border-radius:16px;padding:16px}
+.gar .selo{flex:0 0 78px;height:78px;border-radius:50%;background:var(--marca);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;font-weight:800;line-height:1.05;text-align:center;font-size:12px}
+.gar p{font-size:14px}
+.bio .foto{border-radius:16px;overflow:hidden;margin-bottom:16px}
+.bio p{margin-bottom:12px;font-size:15px}
+.bio .frase{background:var(--marca);border-radius:12px;padding:14px;font-weight:600}
+.video{border-radius:14px;overflow:hidden;background:#000;margin:16px 0 4px;border:2px solid var(--marca)}
+.faq details{background:#fff;border:1px solid var(--borda);border-radius:10px;margin-bottom:8px}
+.faq summary{list-style:none;cursor:pointer;padding:13px 14px;font-weight:600;font-size:14.5px;display:flex;gap:10px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary:before{content:"+";color:var(--marca);font-weight:800}
+.faq details[open] summary:before{content:"–"}
+.faq details p{padding:0 14px 14px 34px;font-size:14px;color:var(--cinza)}
+.pendente{background:#fff3b0;color:#5a4300;border:1px dashed #c9a400;border-radius:5px;padding:0 5px;font-weight:600;font-style:normal}
+footer{background:var(--preto);color:#bbb;font-size:11.5px;text-align:center;padding:26px 0 96px}
+footer p{margin-top:8px}
+.fixo{position:fixed;left:0;right:0;bottom:0;padding:9px 14px calc(9px + env(safe-area-inset-bottom));background:rgba(17,17,17,.96);transform:translateY(120%);transition:transform .3s;z-index:9}
 .fixo.ver{transform:none}
-.fixo .botao{font-size:16px;padding:14px;animation:none}
-@media(min-width:768px){h1{font-size:34px}h2{font-size:29px}.carrossel img{flex-basis:60%}}
+.fixo .botao{margin:0 auto;max-width:450px;font-size:15px;padding:13px;box-shadow:0 4px 0 var(--botao-sombra)}
+@media(min-width:768px){.w{max-width:540px}h1{font-size:30px}h2{font-size:25px}}
 </style>
 </head>
 <body>
 
-<!-- 1. TOPO: dor + promessa + para quem é -->
-<section class="topo">
-  <div class="wrap">
-    <img class="logo" src="img/logo.webp" alt="Desafio Magra Pro Max" width="300" height="108">
-    <span class="etiqueta">Treina, faz abdominal e a barriga não sai?</span>
-    <h1>Descubra como <span class="dest">secar a barriga e afinar a cintura</span> enquanto define coxas e bumbum em até 4 semanas</h1>
+<!-- BLOCO 1 · TOPO -->
+<div class="sob">Treina, faz abdominal e a barriga não sai?</div>
+<section class="bl marca">
+  <div class="w">
+    <img class="logo" src="img/logo.webp" alt="Desafio da Millena" width="300" height="108">
+    <h1>Descubra como <span class="d">secar a barriga e afinar a cintura</span> enquanto define coxas e bumbum em até 4 semanas</h1>
     <p class="sub">Com treinos rápidos, na academia ou em casa, e uma alimentação saborosa. Sem dieta restritiva e sem 1.000 abdominais.</p>
-    <div class="pilulas"><span>⏱ Treinos rápidos</span><span>🏋️ Academia ou em casa</span><span>🍽 Sem dieta restritiva</span></div>
-    <div class="estrelas">★★★★★</div>
-    <p class="prova">Baseado em mais de <b>12.000 transformações reais</b> com o Desafio Magra Pro Max</p>
-
-    <div class="video">
-      <vturb-smartplayer id="vid-6a1d7c05f819e44f4c81322b" style="display:block;margin:0 auto;width:100%"></vturb-smartplayer>
+    <div class="estrelas"><b>★★★★★</b><span>Mais de <b style="color:#fff;letter-spacing:0;font-size:13px">12.000 transformações</b> com o Desafio</span></div>
+    <p class="feito">Feito para você que:</p>
+    <div class="pil">
+      <span>Se sente falsa magra e não vê definição</span>
+      <span>Faz abdominal e a barriga continua ali</span>
+      <span>Ganha peso rápido e demora pra perder</span>
+      <span>Já fez muito cardio e comeu pouco</span>
     </div>
-    <p class="video-legenda">Assista com som: a Millena explica o desafio</p>
-
-    <ul class="lista">
-      <li>É <b>falsa magra</b>: de roupa parece magra, sem roupa não vê o corpo que queria</li>
-      <li>Faz abdominal e <b>não vê definição</b> nenhuma na barriga</li>
-      <li><b>Ganha peso rápido</b> e demora uma eternidade para perder</li>
-      <li>Já fez muito cardio e comeu pouco, e <b>a barriga continuou ali</b></li>
-    </ul>
-    <a class="botao cta" href="#oferta">Quero meu desafio</a>
+    <div class="foto-topo"><img src="img/aluna-6.webp" alt="Antes e depois de aluna do Desafio Magra Pro Max" width="720" height="720"></div>
+    <a class="botao pulsa" href="#oferta">Quero secar a barriga</a>
   </div>
+  <span class="seta">▼</span>
 </section>
 
-<!-- 2. PROVA: antes e depois -->
-<section>
-  <div class="wrap">
-    <h2>Nossas alunas <span class="dest">se priorizaram</span> com o Desafio Magra Pro Max</h2>
+<!-- BLOCO 2 · ANTES E DEPOIS -->
+<section class="bl">
+  <div class="w">
+    <h2>Elas também <span class="d">não viam resultado</span>.<br>E agora se priorizaram com o Desafio.</h2>
     <div class="carrossel">
-      <img src="img/aluna-1.webp" alt="Antes e depois de aluna do Desafio Magra Pro Max" loading="lazy" width="720" height="720">
-      <img src="img/aluna-6.webp" alt="Antes e depois de aluna do Desafio Magra Pro Max" loading="lazy" width="720" height="720">
-      <img src="img/aluna-2.webp" alt="Antes e depois de aluna do Desafio Magra Pro Max" loading="lazy" width="720" height="720">
-      <img src="img/aluna-5.webp" alt="Antes e depois de aluna do Desafio Magra Pro Max" loading="lazy" width="720" height="720">
-      <img src="img/aluna-3.webp" alt="Antes e depois de aluna do Desafio Magra Pro Max" loading="lazy" width="720" height="720">
-      <img src="img/print-grupo.webp" alt="Print de aluna no grupo: saiu do 40 para o 36 e voltou a usar cropped" loading="lazy" width="720" height="720">
-      <img src="img/aluna-4.webp" alt="Antes e depois de aluna do Desafio Magra Pro Max" loading="lazy" width="720" height="720">
-      <img src="img/aluna-7.webp" alt="Antes e depois de aluna do Desafio Magra Pro Max" loading="lazy" width="720" height="720">
-      <img src="img/aluna-8.webp" alt="Antes e depois de aluna do Desafio Magra Pro Max" loading="lazy" width="720" height="720">
+      <figure><img src="img/aluna-1.webp" alt="Antes e depois de aluna" loading="lazy" width="720" height="720"><figcaption>Aluna do Desafio Magra Pro Max</figcaption></figure>
+      <figure><img src="img/aluna-5.webp" alt="Antes e depois de aluna" loading="lazy" width="720" height="720"><figcaption>Aluna do Desafio Magra Pro Max</figcaption></figure>
+      <figure><img src="img/print-grupo.webp" alt="Print no grupo: saiu do 40 para o 36 e voltou a usar cropped" loading="lazy" width="720" height="720"><figcaption>“Saí do 40 e voltei para o 36 e voltei a usar cropped”</figcaption></figure>
+      <figure><img src="img/aluna-2.webp" alt="Antes e depois de aluna" loading="lazy" width="720" height="720"><figcaption>Aluna do Desafio Magra Pro Max</figcaption></figure>
+      <figure><img src="img/aluna-3.webp" alt="Antes e depois de aluna" loading="lazy" width="720" height="720"><figcaption>Aluna do Desafio Magra Pro Max</figcaption></figure>
+      <figure><img src="img/aluna-4.webp" alt="Antes e depois de aluna" loading="lazy" width="720" height="720"><figcaption>Aluna do Desafio Magra Pro Max</figcaption></figure>
+      <figure><img src="img/aluna-7.webp" alt="Antes e depois de aluna" loading="lazy" width="720" height="720"><figcaption>Aluna do Desafio Magra Pro Max</figcaption></figure>
+      <figure><img src="img/aluna-8.webp" alt="Antes e depois de aluna" loading="lazy" width="720" height="720"><figcaption>Aluna do Desafio Magra Pro Max</figcaption></figure>
     </div>
     <p class="dica">Arraste para o lado →</p>
   </div>
+  <span class="seta">▼</span>
 </section>
 
-<!-- 3. RUMINAÇÕES (tiradas das respostas de 900+ mulheres no quiz) -->
-<section class="claro">
-  <div class="wrap">
-    <h2>Eu sei… você treina, se esforça e aí vêm os pensamentos:</h2>
-    <div class="pensamentos">
-      <div class="pensamento">“De roupa eu até pareço magra… mas sem roupa, cadê o corpo?”</div>
-      <div class="pensamento">“Faço abdominal todo dia e a barriga continua aqui.”</div>
-      <div class="pensamento">“Eu engordo rápido e demoro uma eternidade pra perder.”</div>
-      <div class="pensamento">“Treino e não vejo definição nenhuma. Será que o problema sou eu?”</div>
-      <div class="pensamento">“Biquíni? Esse verão de novo não.”</div>
-      <div class="pensamento">“Como as outras conseguem e eu não?”</div>
+<!-- BLOCO 3 · DOR + RUMINAÇÕES -->
+<section class="bl branco dor">
+  <div class="w">
+    <h2>Eu sei… você treina, se esforça, <span class="d">e a barriga não sai</span>. Aí vêm os pensamentos:</h2>
+    <div>
+      <div class="balao">“De roupa eu até pareço magra… mas sem roupa, cadê o corpo?”</div>
+      <div class="balao">“Faço abdominal todo dia e a barriga continua aqui.”</div>
+      <div class="balao">“Eu engordo rápido e demoro uma eternidade pra perder.”</div>
+      <div class="balao">“Treino e não vejo definição. Será que o problema sou eu?”</div>
+      <div class="balao">“Biquíni? Esse verão de novo não.”</div>
+      <div class="balao">“Como as outras conseguem e eu não?”</div>
     </div>
+    <p style="margin-top:8px"><b>É horrível se sentir assim, né?</b> Tenho certeza que você não quer mais viver isso.</p>
   </div>
+  <span class="seta">▼</span>
 </section>
 
-<!-- 4. VIRADA: a culpa não é sua, é o método -->
-<section>
-  <div class="wrap virada">
-    <h2>Você não está sozinha. <span class="dest">A culpa não é sua.</span> É o método.</h2>
-    <p>Os métodos antigos, <b>muito cardio e quase nada de comida</b>, destroem a sua massa magra e deixam o metabolismo lento. Resultado: o corpo segura a gordura justamente na barriga.</p>
-    <p>E os <b>abdominais tradicionais</b> podem até “estufar” a cintura, em vez de afinar.</p>
-    <p>Não é você que é fraca. Você só não precisa fazer mais. <b>Precisa fazer do jeito certo.</b></p>
+<!-- BLOCO 4 · CAUSA: A CULPA NÃO É SUA -->
+<section class="bl">
+  <div class="w">
+    <h2>Você não está sozinha. <span class="d">A culpa não é sua.</span> É o método.</h2>
+    <p class="c" style="margin-bottom:12px">Isso só acontece porque os métodos antigos, <b>muito cardio e quase nada de comida</b>, destroem a sua massa magra e deixam o metabolismo lento. Aí o corpo segura a gordura justamente na barriga.</p>
+    <p class="c" style="margin-bottom:18px">E os <b>abdominais tradicionais</b> podem até “estufar” a cintura, em vez de afinar.</p>
     <div class="alerta">
-      <p>Agora eu te pergunto…</p>
-      <p style="margin-top:8px">Se você pudesse <strong>secar a barriga e afinar a cintura</strong> enquanto define coxas e bumbum, com <strong>treinos rápidos</strong> e comendo comida de verdade, você seguiria o plano até o fim?</p>
-      <p style="margin-top:12px;font-weight:700">Se a resposta é sim, o Desafio Magra Pro Max foi feito para você.</p>
+      <div class="ic">⚠️</div>
+      <p><b>Agora eu te pergunto…</b></p>
+      <p>Se você pudesse <strong>secar a barriga e afinar a cintura</strong> enquanto define coxas e bumbum, com <strong>treinos rápidos</strong> e comendo comida de verdade, você seguiria o plano até o fim?</p>
+      <p style="font-weight:700">Se a resposta é sim, o Desafio Magra Pro Max foi feito para você.</p>
     </div>
   </div>
+  <span class="seta">▼</span>
 </section>
 
-<!-- 5. O QUE MUDA NA VIDA DELA -->
-<section style="padding-top:0">
-  <div class="wrap">
-    <h2>Com o <span class="dest">Desafio Magra Pro Max</span>, você vai:</h2>
-    <div class="beneficios">
-      <div class="beneficio"><b>✓</b><span>Secar a barriga e ver a cintura mais fina e desenhada</span></div>
-      <div class="beneficio"><b>✓</b><span>Definir coxas e glúteos, com o corpo mais firme e feminino</span></div>
-      <div class="beneficio"><b>✓</b><span>Trocar 1.000 abdominais por 10 minutos de hipopressivo</span></div>
-      <div class="beneficio"><b>✓</b><span>Comer comida de verdade e saborosa, sem dieta restritiva</span></div>
-      <div class="beneficio"><b>✓</b><span>Treinar rápido, na academia ou em casa</span></div>
-      <div class="beneficio"><b>✓</b><span>Parar de treinar no achismo e ver resultado</span></div>
+<!-- BLOCO 5 · O QUE MUDA -->
+<section class="bl branco">
+  <div class="w">
+    <h2>Com o <span class="d">Desafio Magra Pro Max</span>, você vai:</h2>
+    <div class="ben">
+      <div><i>⏳</i><span>Secar a barriga e ver a cintura mais fina e desenhada</span></div>
+      <div><i>🍑</i><span>Definir coxas e glúteos, com o corpo mais firme e feminino</span></div>
+      <div><i>🔟</i><span>Trocar 1.000 abdominais por 10 minutos de hipopressivo</span></div>
+      <div><i>🍽️</i><span>Comer comida de verdade e saborosa, sem dieta restritiva</span></div>
+      <div><i>🏠</i><span>Treinar rápido, na academia ou em casa</span></div>
+      <div><i>🎯</i><span>Parar de treinar no achismo e finalmente ver definição</span></div>
     </div>
+    <a class="botao" href="#oferta">Quero começar hoje</a>
   </div>
+  <span class="seta">▼</span>
 </section>
 
-<!-- 6. O QUE ELA RECEBE -->
-<section style="padding-top:0">
-  <div class="wrap">
-    <h2>Tudo o que você precisa para <span class="dest">sair do falsa magra</span>:</h2>
-    <div class="entregas">
-      <div class="entrega">
-        <h3><span>Treinos pensados</span> para a estética do corpo feminino</h3>
-        <p>Nada de treinar aleatório. Você treina com estratégia e progressão, para definir do jeito certo, na academia ou em casa.</p>
-      </div>
-      <div class="entrega">
-        <h3><span>Os 10 minutos</span> que mudam a sua barriga de verdade</h3>
-        <p>A técnica de hipopressivos que substitui 1.000 abdominais e afina a sua cintura real.</p>
-      </div>
-      <div class="entrega">
-        <h3><span>Direto no que te incomoda:</span> pochete, braço mole, coxa sem definição</h3>
-        <p>Você não precisa fazer mais. Precisa fazer do jeito certo.</p>
-      </div>
-      <div class="entrega">
-        <h3><span>Alimentação saborosa</span>, sem dieta restritiva</h3>
-        <p>Comida de verdade, para perder gordura e ganhar massa muscular sem passar fome.</p>
-      </div>
-      <div class="entrega">
-        <h3><span class="pendente">(ESCREVER AQUI: o que mais entra no desafio — app, grupo/Comunidade VIP MZB, bônus — e por quanto tempo fica o acesso)</span></h3>
-      </div>
-    </div>
+<!-- BLOCO 6 · 3 PASSOS (Maxxima) -->
+<section class="bl preto">
+  <div class="w">
+    <h2>Os <span class="d">3 passos</span> para sair do falsa magra</h2>
+    <div class="passo"><span class="n">1</span><div><h3>Treine com estratégia</h3><p>Treinos pensados para a estética do corpo feminino, com progressão para definir do jeito certo. Nada de treinar aleatório.</p></div></div>
+    <div class="passo"><span class="n">2</span><div><h3>10 minutos de hipopressivo</h3><p>A técnica que substitui 1.000 abdominais e afina a sua cintura real.</p></div></div>
+    <div class="passo"><span class="n">3</span><div><h3>Coma comida de verdade</h3><p>Alimentação saborosa, sem dieta restritiva, para perder gordura e ganhar massa muscular.</p></div></div>
   </div>
+  <span class="seta">▼</span>
 </section>
 
-<!-- 7. PARA QUEM É -->
-<section class="claro">
-  <div class="wrap">
-    <h2>Esse desafio foi feito para você que:</h2>
+<!-- BLOCO 7 · TUDO O QUE VOCÊ RECEBE -->
+<section class="bl">
+  <div class="w">
+    <h2>Tudo o que você precisa para <span class="d">secar a barriga do jeito certo</span>:</h2>
+    <div class="ent"><div class="topo-ent">🏋️‍♀️</div><div class="txt"><span class="rot">Treinos</span><h3>Treinos para a estética do corpo feminino</h3><p>Você treina com estratégia e progressão para definir, na academia ou em casa.</p></div></div>
+    <div class="ent"><div class="topo-ent">⏱️</div><div class="txt"><span class="rot">Barriga</span><h3>Os 10 minutos que mudam a sua barriga</h3><p>Hipopressivos: a técnica que substitui 1.000 abdominais e afina a cintura.</p></div></div>
+    <div class="ent"><div class="topo-ent">🎯</div><div class="txt"><span class="rot">Pontos que incomodam</span><h3>Direto no que te incomoda</h3><p>Pochete, braço mole, coxa sem definição. Você não precisa fazer mais, precisa fazer do jeito certo.</p></div></div>
+    <div class="ent"><div class="topo-ent">🥗</div><div class="txt"><span class="rot">Alimentação</span><h3>Alimentação saborosa, sem dieta restritiva</h3><p>Comida de verdade, sem passar fome.</p></div></div>
+    <div class="ent"><div class="topo-ent">🎁</div><div class="txt"><span class="rot">Bônus</span><h3><span class="pendente">(ESCREVER AQUI: o que mais entra — app, grupo/Comunidade VIP MZB, bônus)</span></h3></div></div>
+  </div>
+  <span class="seta">▼</span>
+</section>
+
+<!-- BLOCO 8 · PARA QUEM É -->
+<section class="bl marca">
+  <div class="w">
+    <h2>Esse desafio foi feito <span class="d">para você</span> que:</h2>
     <ul class="lista">
       <li>Se sente falsa magra e quer ver o corpo definido</li>
       <li>Está acima do peso e quer secar a barriga primeiro</li>
       <li>Já emagreceu, mas ficou flácida</li>
       <li>Faz abdominal e não vê definição (ou odeia fazer abdominal)</li>
-      <li>Quer treinar rápido, sem passar 1 hora na esteira</li>
+      <li>Não quer passar 1 hora na esteira</li>
       <li>Quer comer bem, sem passar fome</li>
       <li>Quer estrear aquele biquíni (ou o vestido justo) sem medo</li>
     </ul>
-    <p class="dica" style="font-size:15px">Se você se identificou com <b>pelo menos 2 itens</b>, o seu próximo passo está logo abaixo.</p>
+    <p class="c" style="margin-top:16px;font-size:14.5px">Se você se identificou com <b>pelo menos 2 itens</b>, o seu próximo passo está logo abaixo.</p>
   </div>
+  <span class="seta">▼</span>
 </section>
 
-<!-- 8. OFERTA -->
-<section class="oferta" id="oferta">
-  <div class="wrap">
-    <h2>Comece <span class="dest">hoje</span> o seu Desafio Magra Pro Max</h2>
+<!-- BLOCO 9 · RECAPITULANDO -->
+<section class="bl">
+  <div class="w">
+    <div class="recap">
+      <h2>Recapitulando:</h2>
+      <p class="c" style="font-size:14px;color:var(--cinza);margin-bottom:8px">tudo o que você recebe</p>
+      <ul>
+        <li>Treinos para a estética do corpo feminino</li>
+        <li>Hipopressivos: os 10 minutos que mudam a sua barriga</li>
+        <li>Treinos direto no que te incomoda</li>
+        <li>Alimentação saborosa, sem dieta restritiva</li>
+        <li><span class="pendente">(bônus a confirmar)</span></li>
+      </ul>
+      <div class="total"><span>Tudo isso valeria</span><s>R$ 197</s></div>
+    </div>
+    <p class="c" style="margin-top:14px">Hoje, por apenas:</p>
+  </div>
+  <span class="seta">▼</span>
+</section>
+
+<!-- BLOCO 10 · OFERTA -->
+<section class="bl branco" id="oferta">
+  <div class="w">
     <div class="cartao">
-      <img src="img/capa-desafio.webp" alt="Desafio Magra Pro Max" loading="lazy" width="720" height="960">
-      <p class="de">De R$ 197,00</p>
-      <p class="parcela">por apenas 12x de</p>
-      <p class="preco"><small>R$</small> 3,08</p>
-      <p class="avista">ou <span class="pendente">(CONFIRMAR: preço à vista)</span> à vista</p>
-      <a class="botao checkout" href="https://payfast.greenn.com.br/redirect/286218">Quero começar meu desafio</a>
-      <p class="seguro">Acesso imediato · Garantia de <span class="pendente">(CONFIRMAR: 21 ou 30)</span> dias</p>
-      <div class="selos"><span>🔒 Compra segura</span><span>✅ Satisfação garantida</span><span>🛡 Dados protegidos</span></div>
-    </div>
-    <div class="garantia">
-      <div class="selo"><span class="pendente" style="background:none;border:0;color:#fff;padding:0">??</span><small>DIAS</small></div>
-      <div><b>Seu risco é zero.</b> Se você seguir o plano e não tiver resultados visíveis, devolvemos 100% do seu dinheiro. <span class="pendente">(CONFIRMAR prazo e regra da garantia)</span></div>
+      <span class="faixa">HOJE</span>
+      <img class="capa" src="img/capa-desafio.webp" alt="Desafio Magra Pro Max" width="512" height="683" loading="lazy">
+      <div class="corpo">
+        <h3>Desafio Magra Pro Max</h3>
+        <p class="valia">Tudo isso valeria <s>R$ 197</s></p>
+        <p class="por">Por apenas 12x de</p>
+        <p class="preco"><small>R$</small>3,08</p>
+        <p class="avista">ou <span class="pendente">(CONFIRMAR: preço à vista)</span> à vista</p>
+        <a class="botao pulsa checkout" href="https://payfast.greenn.com.br/redirect/286218">Quero começar meu desafio</a>
+        <p class="mini">Acesso imediato · Garantia de <span class="pendente">(21 ou 30?)</span> dias</p>
+        <div class="selos"><span>🔒<b>Compra segura</b></span><span>✅<b>Satisfação garantida</b></span><span>🛡️<b>Dados protegidos</b></span></div>
+      </div>
     </div>
   </div>
+  <span class="seta">▼</span>
 </section>
 
-<!-- 9. DUAS OPÇÕES -->
-<section>
-  <div class="wrap">
-    <h2>Agora você tem <span class="dest">duas opções:</span></h2>
-    <div class="opcoes">
-      <div class="opcao ruim"><h3>Opção 1</h3><p>Continuar no cardio sem fim, nos abdominais e na comida cortada, olhando no espelho e vendo a mesma barriga.</p></div>
-      <div class="opcao boa"><h3>Opção 2</h3><p>Seguir o Desafio Magra Pro Max, secar a barriga, afinar a cintura e definir o corpo do jeito certo.</p></div>
+<!-- BLOCO 11 · COMO VOCÊ RECEBE (Maxxima) -->
+<section class="bl">
+  <div class="w">
+    <h2>Como você <span class="d">recebe</span></h2>
+    <div class="receber">
+      <div><b>1</b><span><h3>Finalize a compra</h3><p>Pix ou cartão, em ambiente seguro.</p></span></div>
+      <div><b>2</b><span><h3>Receba o acesso na hora</h3><p><span class="pendente">(CONFIRMAR: chega por e-mail? em qual app/área?)</span></p></span></div>
+      <div><b>3</b><span><h3>Comece hoje</h3><p>Siga o plano no seu ritmo, na academia ou em casa.</p></span></div>
     </div>
-    <p style="text-align:center;margin-top:18px">Você já sabe onde a opção 1 te leva.<br><b>Escolha a opção 2 hoje.</b></p>
-    <a class="botao checkout" style="margin-top:18px" href="https://payfast.greenn.com.br/redirect/286218">Escolho a opção 2</a>
   </div>
+  <span class="seta">▼</span>
 </section>
 
-<!-- 10. QUEM É A MILLENA -->
-<section class="claro bio">
-  <div class="wrap">
-    <img src="img/millena-academia.webp" alt="Millena Merlo" loading="lazy" width="720" height="540">
-    <h2 style="text-align:left">Millena Merlo<br><span style="font-size:17px;font-weight:600;color:#555">Criadora do Desafio Magra Pro Max</span></h2>
-    <p><span class="pendente">(ESCREVER AQUI: formação da Millena e a história dela em 4 a 6 frases: onde ela estava, o que tentou e não deu certo, o que descobriu, o resultado dela)</span></p>
+<!-- BLOCO 12 · ME RESPONDA A VERDADE + DUAS OPÇÕES -->
+<section class="bl branco verdade">
+  <div class="w">
+    <h2>Me responda <span class="d">só a verdade</span>:</h2>
+    <p>Quantos abdominais você já fez este mês?<br>E a barriga… mudou?</p>
+    <p>Quase nada, né? Você está num ciclo de esforço sem resultado, que só te frustra cada vez mais.</p>
+    <h2 style="margin-top:22px">Agora você tem <span class="d">duas opções:</span></h2>
+    <div class="op ruim"><h3>❌ Opção 1</h3><p>Continuar no cardio sem fim, nos abdominais e na comida cortada, olhando no espelho e vendo a mesma barriga.</p></div>
+    <div class="op boa"><h3>✅ Opção 2</h3><p>Seguir o Desafio Magra Pro Max, secar a barriga, afinar a cintura e definir o corpo do jeito certo.</p></div>
+    <p>Você já sabe onde a opção 1 te leva.<br><b class="d">Escolha a opção 2 hoje.</b></p>
+    <a class="botao checkout" href="https://payfast.greenn.com.br/redirect/286218">Escolho a opção 2</a>
+  </div>
+  <span class="seta">▼</span>
+</section>
+
+<!-- BLOCO 13 · GARANTIA -->
+<section class="bl">
+  <div class="w">
+    <div class="gar">
+      <div class="selo"><span class="pendente" style="background:none;border:0;color:#fff;padding:0;font-size:22px">??</span>DIAS DE<br>GARANTIA</div>
+      <p><b>Seu risco é zero.</b> Se você seguir o plano e não tiver resultados visíveis, devolvemos 100% do seu dinheiro. <span class="pendente">(CONFIRMAR prazo e regra)</span></p>
+    </div>
+  </div>
+  <span class="seta">▼</span>
+</section>
+
+<!-- BLOCO 14 · QUEM É A MILLENA -->
+<section class="bl preto bio">
+  <div class="w">
+    <div class="foto"><img src="img/millena-academia.webp" alt="Millena Merlo" loading="lazy" width="720" height="540"></div>
+    <h2 style="text-align:left;margin-bottom:6px">Millena Merlo</h2>
+    <p style="color:var(--marca2);font-weight:600;margin-top:-4px">Criadora do Desafio Magra Pro Max</p>
+    <p><span class="pendente">(ESCREVER AQUI: formação e história da Millena em 4 a 6 frases: onde estava, o que tentou, o que descobriu, o resultado)</span></p>
     <p>Hoje são <b>mais de 12.000 transformações</b> com o Desafio Magra Pro Max.</p>
-    <p><b>Você não precisa de mais uma tentativa. Precisa de um método para seguir até o fim.</b></p>
-    <a class="botao checkout" style="margin-top:10px" href="https://payfast.greenn.com.br/redirect/286218">Agora é a minha vez</a>
+    <p class="frase">Você não precisa fazer mais. Precisa fazer do jeito certo. Agora é a sua vez.</p>
+    <div class="video"><vturb-smartplayer id="vid-6a1d7c05f819e44f4c81322b" style="display:block;margin:0 auto;width:100%"></vturb-smartplayer></div>
+    <p style="font-size:12.5px;opacity:.75;text-align:center">Assista com som</p>
   </div>
+  <span class="seta">▼</span>
 </section>
 
-<!-- 11. PERGUNTAS -->
-<section class="faq">
-  <div class="wrap">
-    <h2>Ainda com dúvida? <span class="dest">Eu respondo.</span></h2>
+<!-- BLOCO 15 · OFERTA DE NOVO -->
+<section class="bl branco">
+  <div class="w">
+    <div class="cartao">
+      <span class="faixa">HOJE</span>
+      <img class="capa" src="img/capa-desafio.webp" alt="Desafio Magra Pro Max" width="512" height="683" loading="lazy">
+      <div class="corpo">
+        <h3>Desafio Magra Pro Max</h3>
+        <p class="valia">Tudo isso valeria <s>R$ 197</s></p>
+        <p class="por">Por apenas 12x de</p>
+        <p class="preco"><small>R$</small>3,08</p>
+        <p class="avista">ou <span class="pendente">(CONFIRMAR: preço à vista)</span> à vista</p>
+        <a class="botao pulsa checkout" href="https://payfast.greenn.com.br/redirect/286218">Quero começar meu desafio</a>
+        <p class="mini">Primeiro treino hoje · Garantia de <span class="pendente">(21 ou 30?)</span> dias</p>
+        <div class="selos"><span>🔒<b>Compra segura</b></span><span>✅<b>Satisfação garantida</b></span><span>🛡️<b>Dados protegidos</b></span></div>
+      </div>
+    </div>
+  </div>
+  <span class="seta">▼</span>
+</section>
+
+<!-- BLOCO 16 · PERGUNTAS -->
+<section class="bl faq">
+  <div class="w">
+    <h2>Ainda com dúvida? <span class="d">Eu respondo.</span></h2>
     <details><summary>Serve para quem treina em casa?</summary><p>Sim. O plano foi feito para secar a barriga enquanto define coxas e bumbum, na academia ou em casa.</p></details>
-    <details><summary>Sou falsa magra. Serve para mim?</summary><p>Sim. Seja ganhando peso rápido, seja tendo dificuldade para ganhar massa, o que você precisa é da abordagem certa para o seu corpo. É isso que o desafio entrega.</p></details>
+    <details><summary>Sou falsa magra. Serve para mim?</summary><p>Sim. Seja ganhando peso rápido, seja tendo dificuldade para ganhar massa, o que você precisa é da abordagem certa para o seu corpo.</p></details>
     <details><summary>Vou ter que fazer dieta?</summary><p>Não é dieta restritiva. É alimentação saborosa, com comida de verdade, sem passar fome.</p></details>
-    <details><summary>Quanto tempo por dia?</summary><p>Os treinos são rápidos e o hipopressivo leva 10 minutos. <span class="pendente">(CONFIRMAR: duração média dos treinos)</span></p></details>
     <details><summary>Preciso fazer abdominal?</summary><p>Não do jeito tradicional. Você usa a técnica de hipopressivos, que substitui 1.000 abdominais e afina a cintura.</p></details>
-    <details><summary>Quando eu recebo?</summary><p>O acesso é imediato depois da compra. <span class="pendente">(CONFIRMAR: chega por e-mail? em qual app/área?)</span></p></details>
+    <details><summary>Quanto tempo por dia?</summary><p>Os treinos são rápidos e o hipopressivo leva 10 minutos. <span class="pendente">(CONFIRMAR: duração média dos treinos)</span></p></details>
+    <details><summary>Quais as formas de pagamento?</summary><p>Pix ou cartão de crédito, em até 12x.</p></details>
+    <details><summary>Quando eu recebo?</summary><p>O acesso é imediato depois da compra. <span class="pendente">(CONFIRMAR: por e-mail? app?)</span></p></details>
     <details><summary>É mensalidade?</summary><p><span class="pendente">(CONFIRMAR: pagamento único? por quanto tempo fica o acesso?)</span></p></details>
-    <details><summary>Como funciona a garantia?</summary><p><span class="pendente">(CONFIRMAR: prazo de 21 ou 30 dias e a regra)</span></p></details>
+    <details><summary>Tem garantia?</summary><p><span class="pendente">(CONFIRMAR: prazo de 21 ou 30 dias e a regra)</span></p></details>
   </div>
 </section>
 
 <footer>
-  <div class="wrap">
+  <div class="w">
     <p>Desafio Magra Pro Max · Millena Merlo. Todos os direitos reservados.</p>
-    <p style="margin-top:8px">Este site não é afiliado ao Facebook ou a qualquer entidade do Facebook. Os resultados variam de pessoa para pessoa e a compra deste material não garante nenhum resultado específico.</p>
+    <p>Este site não é afiliado ao Facebook ou a qualquer entidade do Facebook. Os resultados variam de pessoa para pessoa e a compra deste material não garante nenhum resultado específico. Usamos resultados reais de alunas.</p>
   </div>
 </footer>
 
 <div class="fixo" id="fixo"><a class="botao checkout" href="https://payfast.greenn.com.br/redirect/286218">Quero meu desafio · 12x R$ 3,08</a></div>
 
 <script>
-// Leva os parâmetros do anúncio (utm, fbclid) até o checkout
+// Leva os parâmetros do anúncio (utm, fbclid) até o checkout e marca o clique (1x por visita)
 (function(){
   var q=location.search.replace(/^\?/,'');
   document.querySelectorAll('a.checkout').forEach(function(a){
@@ -309,11 +416,10 @@ footer{font-size:12px;color:#777;text-align:center;padding:30px 0 90px}
       try{if(!sessionStorage.getItem('clique')){fbq('trackCustom','CliqueComprar');sessionStorage.setItem('clique','1');}}catch(e){fbq('trackCustom','CliqueComprar');}
     });
   });
-  var f=document.getElementById('fixo'),o=document.getElementById('oferta');
-  window.addEventListener('scroll',function(){
-    var r=o.getBoundingClientRect();
-    f.classList.toggle('ver',window.scrollY>700&&!(r.top<innerHeight&&r.bottom>0));
-  },{passive:true});
+  // Botão fixo: aparece depois do topo e some quando o cartão de preço está na tela
+  var f=document.getElementById('fixo'),cs=document.querySelectorAll('.cartao');
+  function at(){var v=window.scrollY>650;cs.forEach(function(c){var r=c.getBoundingClientRect();if(r.top<innerHeight&&r.bottom>0)v=false;});f.classList.toggle('ver',v);}
+  window.addEventListener('scroll',at,{passive:true});
 })();
 </script>
 <script>
