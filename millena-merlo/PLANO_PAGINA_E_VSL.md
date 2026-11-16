@@ -103,7 +103,8 @@ Outros dados úteis: 54% têm de 17 a 28 anos e 40% de 29 a 39; 51% têm 30 a 40
 8. Respostas: preço à vista, garantia (21 ou 30 dias e regra), tempo de acesso, se é pagamento único, o que entra (app, grupo, bônus), duração dos treinos, como a aluna recebe.
 
 ## 7. Pendências
-- [ ] OK do Patrik para subir a página em desafiomagrapromax.com.br/oferta/ (Hostinger, u343853767).
+- [x] OK do Patrik para subir (16/11).
+- [ ] Subir: a API da Hostinger listou os arquivos, mas recusou gerar o link de envio para desafiomagrapromax.com.br ("[Hosting:9999] Not found", 16/11). Provável: a chave desta sessão só lê a conta da Millena (cliente Hostinger diferente da agência). Saída: extrair o zip da pasta `pagina-desafio` em public_html pelo Gerenciador de Arquivos do hPanel, ou dar à chave acesso de escrita.
 - [ ] Preencher os campos amarelos com as respostas da Millena e tirar a classe `.pendente`.
 - [x] Link do checkout testado (16/11): chega em ~1,7 s; a perda é dentro do checkout, não no link.
 - [ ] Revisão (16/11): a página nova NÃO deve substituir o quiz. O quiz leva 10,3% das visitas ao checkout e a oferta dele já tem 61% de clique.
