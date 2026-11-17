@@ -3,6 +3,7 @@
    Base: o quiz Diva do Desafio (michele-salla/quiz/quiz.js) + o quiz do Dr. Márcio Martins (inlead.digital/dr-marcio-teste-capa, 23 telas:
    VSL na capa, corpo hoje, corpo dos sonhos, como o peso afeta a vida, já tentou e voltou, canetinha, quilos a eliminar, "sua meta é
    possível", "se nada mudar", compromisso, antes e depois, VSL antes da oferta) + o quiz do pilates (IMC, nome, dois caminhos, oferta v3).
+   17/11: Patrik deu OK para subir e mandou manter os 18 kg; a página final virou a v4 (mais agressiva).
    Promessas (Patrik): capa 1 = "Perca de uma vez por todas a barriga indesejada até o verão" + "plano personalizado para perder até 18 kg
    nos próximos 30 dias" (quase a do Dr. Márcio, que usa 10 kg em 20 dias); capa 2 = "Emagreça e fique com o corpo durinho antes do verão chegar".
    Teste da VSL: ?v=i vídeo na capa (como o Dr. Márcio) · ?v=o vídeo no topo da oferta · sem ?v= sorteia 50/50 e guarda no aparelho.
@@ -140,7 +141,7 @@ const MEDO = {
 
 const EXEMPLO = {
   'nova-fase': { fase: 'menopausa', tentou: 'barriga', objetivo: ['barriga'], impacto: ['autoestima'], medo: 'dor', altura: 162, peso: 78, 'peso-meta': 68 },
-  'efeito-sanfona': { fase: 'nenhuma', tentou: 'canetinha', canetinha: 'usei', objetivo: ['perder', 'manter'], impacto: ['roupas'], medo: 'rebote', altura: 160, peso: 84, 'peso-meta': 70 },
+  'efeito-sanfona': { fase: 'nenhuma', tentou: 'canetinha', canetinha: 'usei', 'se-nada-mudar': 'esconder', rotina: 'todos', objetivo: ['perder', 'manter'], impacto: ['roupas'], medo: 'rebote', altura: 160, peso: 84, 'peso-meta': 70 },
   'estufada': { fase: 'nenhuma', tentou: 'abdominal', 'barriga-dia': 'estufa-noite', objetivo: ['desinchar'], impacto: ['roupas'], medo: 'tempo', altura: 165, peso: 70, 'peso-meta': 63 },
   'recomeco': { fase: 'maes', tentou: 'barriga', 'barriga-dia': 'sempre', recomecos: 'perdi-conta', sabotador: 'ansiedade', objetivo: ['perder'], medo: 'fracasso', altura: 158, peso: 80, 'peso-meta': 66 },
   'depois': { fase: 'maes', tentou: 'comecando', 'barriga-dia': 'sempre', recomecos: '1-2', sabotador: 'tempo', objetivo: ['barriga'], medo: 'dinheiro', altura: 163, peso: 74, 'peso-meta': 66 },
@@ -173,7 +174,7 @@ const QUIZ = {
   capa: { src: IMG + 'hero-antes-depois-avatar.webp', alt: 'Antes e depois', w: 1080, h: 1200 },
   idadeNaCapa: {
     pergunta: 'Escolha a sua idade para começar:',
-    texto: true, tempo: 'Leva cerca de 2 minutos',
+    texto: true, tempo: 'Leva cerca de 3 minutos',
     op: [['35-44', '35 a 44'], ['45-54', '45 a 54'], ['55-64', '55 a 64'], ['65+', '65 ou mais']],
     outra: ['-35', 'Tenho menos de 35 anos'],
   },
@@ -212,6 +213,7 @@ const QUIZ = {
     parcela: 'à vista · ou 12x de R$ 4,83',
     botao: 'Quero o meu Protocolo Corpo Diva',
     v2: {
+      botao: 'Quero perder a barriga até o verão',
       garantia: { titulo: 'Garantia de 7 dias', texto: 'Comece hoje. Se em 7 dias você sentir que não é para você, pede o reembolso pela própria plataforma, sem precisar explicar.' },
       faq: [
         ['Preciso de academia ou equipamento?', 'Não. As aulas são em casa, com o peso do próprio corpo, em 15 minutos por dia.'],
@@ -220,6 +222,78 @@ const QUIZ = {
         ['É mensalidade?', 'Não. É pagamento único de R$ 47 (ou 12x de R$ 4,83).'],
         ['Como funciona a garantia?', 'Você tem 7 dias. Se não fizer sentido para você, pede o reembolso pela própria plataforma.'],
       ],
+    },
+    // 17/11 (Patrik: "na última tela não gostei, tá ruim, pode ser mais agressivo"): página final v4. A v3 abaixo fica guardada
+    // (desligar a v4: v4: null volta para a v3). Mesmo preço e mesmo link. Só fatos do produto e a âncora da canetinha (dado do Patrik).
+    v4: {
+      titulo: 'Perca a <b>barriga indesejada</b> até o verão com 15 minutos por dia',
+      heroAD: adFoto(2, 715, 900),
+      adTitulo: 'Elas começaram. Agora é a sua vez.',
+      adLegenda: 'Alunas do Desafio 7 em 7 da Michele. Os resultados variam de pessoa para pessoa.',
+      antesDepois: [adFoto(1, 682, 900), adFoto(3, 720, 720), adFoto(4, 900, 764), resultadoFoto(5)],
+      ancora: 'Menos de 1/10 de <s>1 mês de canetinha (R$ 500+)</s>',
+      vez: 'à vista · ou 12x de R$ 4,83 · pagamento único, sem mensalidade',
+      vezCurta: 'pagamento único',
+      naoTitulo: 'Para perder a barriga até o verão, você NÃO precisa de:',
+      nao: ['<b>Academia</b> nem equipamento', '<b>Dieta radical</b> nem passar fome', '<b>Canetinha</b> de R$ 500 por mês', '<b>Mil abdominais</b> que não tiram a barriga', '<b>Horas</b> livres no dia'],
+      so: 'Só de 15 minutos por dia, em casa.',
+      dorTitulo: 'Seja sincera com você',
+      dorFecho: 'O verão vai chegar de qualquer jeito. A diferença é como você vai estar quando ele chegar.',
+      compTitulo: 'Faça as contas',
+      comp: [
+        { nome: 'Canetinha', preco: 'R$ 500+ por mês', itens: ['Paga <b>todo mês</b>', 'Precisa de receita', 'Não ensina o hábito'] },
+        { nome: 'Protocolo Corpo Diva', preco: 'R$ 47 uma vez', itens: ['Paga <b>uma vez só</b>', 'Em casa, 15 min por dia', 'Cuida do corpo <b>e da cabeça</b>'] },
+      ],
+      conta: 'Nos seus 30 dias, sai a <b>R$ 1,57 por dia</b>. Menos que um cafezinho.',
+      sabTitulo: 'Os 3 sabotadores da sua barriga, e o que ataca cada um',
+      sab: [
+        ['Cinturão fraco', 'O abdômen profundo enfraquece e a barriga vai pra frente. Abdominal tradicional não resolve.', '→ Aulas de 15 minutos com respiração e hipopressivos.'],
+        ['Dieta radical', 'Você corta tudo, perde uns quilinhos e volta tudo.', '→ Sem dieta radical, com o Cardápio de Emergência Diva de bônus.'],
+        ['A cabeça', 'Estresse, docinho, beliscar à noite, “já estraguei, começo segunda”.', '→ Áudio Mente Magra e Diva e o Planner Diva para cada dia.'],
+      ],
+      feitoTitulo: 'Montado a partir do que você respondeu',
+      tem: r => ({ canetinha: ['usei', 'uso', 'penso'].includes(r.canetinha), sanfona: ['voltou', 'canetinha'].includes(r.tentou),
+        abdominal: r.tentou === 'abdominal', estufada: r['barriga-dia'] === 'estufa-noite', fase: ['pos-parto', 'menopausa'].includes(r.fase),
+        pouco: ['5', '15'].includes(r['tempo-dia']) || ['corrida', 'todos'].includes(r.rotina), cabeca: ['ansiedade', 'doce', 'noite'].includes(r.sabotador) }),
+      feitoLista: [
+        ['canetinha', 'Você marcou a <b>canetinha</b>: aqui o trabalho é com <b>hábito, postura e respiração</b>, sem gastar R$ 500 por mês.'],
+        ['sanfona', 'O peso <b>já voltou</b> antes: o áudio <b>Mente Magra e Diva</b> e o <b>Planner</b> cuidam da cabeça para o resultado ficar.'],
+        ['abdominal', 'Você fez <b>muito abdominal</b> sem resultado: aqui é a <b>técnica certa</b>, com hipopressivos.'],
+        ['estufada', 'Sua barriga <b>estufa à noite</b>: as aulas trabalham o seu cinturão natural, e tem o <b>Cardápio de Emergência Diva</b>.'],
+        ['fase', 'Você marcou <b>menopausa ou pós-parto</b>: começa pela <b>Avaliação Inicial</b> da barriga.'],
+        ['pouco', 'Você tem <b>pouco tempo</b>: aulas de <b>15 minutos</b> e uma rotina express de <b>5 minutos</b>.'],
+        ['cabeca', 'O que te tira do caminho é a <b>cabeça</b>: a Mente Magra e Diva ajuda a sair do “tudo ou nada”.'],
+      ],
+      recebeTitulo: 'Tudo o que você recebe hoje',
+      mockupImg: { src: IMG + 'mockup-kit.webp', alt: 'Aulas, áudio, planner e bônus do Protocolo Corpo Diva', w: 1200, h: 851 },
+      recebe: [
+        '<b>15 Minutos por Dia</b>: barriga e cintura em ação, com respiração e hipopressivos',
+        '<b>Conheça Sua Barriga</b>: avaliação inicial, fotos e medidas',
+        '<b>Ative Sua Mente Magra e Diva</b>: áudio para a cabeça não sabotar o corpo',
+        '<b>Planner Diva</b>: o que fazer em cada dia',
+        '<b>Comece Aqui</b>: como funciona e por onde começar',
+        'Bônus: <b>Cardápio de Emergência Diva</b>',
+        'Bônus: <b>Projeto Minha Calça Favorita</b>',
+        'Bônus: <b>Cintura Ativa</b>, rotina express de 5 minutos para os dias corridos',
+      ],
+      professora: {
+        titulo: 'Michele Salla',
+        foto: { src: IMG + 'michele-recorte.webp', alt: 'Michele Salla', w: 802, h: 1292 },
+        textos: ['Educadora física <b>desde 2005</b>, especialista em emagrecimento comportamental, licenciada na técnica da <b>Barriga Negativa</b> e autora do livro <b>Vida Diva</b>.',
+          'Há mais de 20 anos ela ajuda mulheres a perderem a barriga sem viver de dietas: <b>primeiro a mente, depois o corpo</b>.'],
+      },
+      garantia: { titulo: 'Risco zero: 7 dias de garantia', texto: 'Entre hoje, faça as aulas e ouça o áudio. Se em 7 dias você achar que não é pra você, pede o reembolso e recebe <b>100% do valor de volta</b>, sem precisar explicar.' },
+      faq: [
+        ['Preciso de academia ou equipamento?', 'Não. As aulas são em casa, com o peso do próprio corpo, em 15 minutos por dia.'],
+        ['Tenho mais de 50. Serve para mim?', 'Sim. Os hipopressivos são feitos com respiração e postura, sem impacto, no seu ritmo.'],
+        ['Tive bebê ou tenho hérnia. Posso fazer?', 'Você precisa de liberação médica antes de começar. A aula “Conheça Sua Barriga” ensina a observar sinais como a diástase.'],
+        ['É mensalidade?', 'Não. É pagamento único de R$ 47 (ou 12x de R$ 4,83).'],
+        ['Com que nome chega o acesso?', 'O Protocolo Corpo Diva usa as aulas do Desafio 7 em 7 da Michele: o acesso chega por e-mail com o nome Desafio 7 em 7. É o mesmo material.'],
+        ['Como funciona a garantia?', 'Você tem 7 dias. Se não fizer sentido para você, pede o reembolso pela própria plataforma.'],
+      ],
+      duas: { titulo: 'Agora você tem duas opções',
+        a: ['Fechar esta página', 'E chegar no verão do mesmo jeito: a roupa larga, a barriga escondida na foto e a segunda-feira como data do recomeço.'],
+        d: ['Começar hoje, por R$ 47', 'Seguir o seu plano 15 minutos por dia, com a Michele, e chegar no verão <b>sem a barriga indesejada</b>.'] },
     },
     v3: {
       selo: 'Seu plano está pronto · acesso imediato',

@@ -139,14 +139,15 @@ Os M da pasta "MICHELE LOW" são esses mesmos vídeos. Mapa conferido pelos quad
 **Painel publica sozinho:** todo push na main do CLIENTES gera deploy na Vercel ("Ptk midias") em ~1 min.
 
 ## 7. Pendências (na ordem)
-000. **(17/11) Quiz Protocolo Corpo Diva, na branch `claude/beautiful-turing-gckpw3` (NÃO está no ar):** `michele-salla/quiz-corpo-diva/`
+000. **(17/11) Quiz Protocolo Corpo Diva NO AR (Patrik: "pode subir, mantém os 18 kg") em https://quiz.michelesalla.com.br/corpodiva/:** `michele-salla/quiz-corpo-diva/`
    (textos em `corpodiva.js`, motor compartilhado `quiz/motor.js`), endereço depois de subir `quiz.michelesalla.com.br/corpodiva/`.
    É o Desafio 7 em 7 com outro nome (Patrik: "mantém o checkout": E1YMM7, R$ 47). Capa 1 "Perca de uma vez por todas a barriga
    indesejada até o verão" + "até 18 kg nos próximos 30 dias"; capa 2 "Emagreça e fique com o corpo durinho antes do verão chegar".
    Teste da VSL: `?v=i` vídeo na capa (modelo Dr. Márcio), `?v=o` vídeo no topo da oferta, sem `?v=` sorteia 50/50; painel na aba
    **Quiz Corpo Diva** (corpodiva-p1i/-p1o/-p2i/-p2o). Roteiro da VSL (blocos 1–5 + final A capa / final B oferta):
    `quiz-corpo-diva/VSL_CORPO_DIVA.md`. **Falta:** Michele gravar os 2 finais e confirmar o bloco 4; links dos MP4 em `QUIZ.vsl.src`;
-   3 depoimentos; Patrik decidir a frase "18 kg em 30 dias" (risco de reprovação no Meta) e dar OK para mesclar.
+   3 depoimentos; Patrik montar o conjunto de teste (links ?p=1|2&v=i|o). Página final = `oferta.v4` (agressiva: faixa "faltam N dias
+   para o verão", meta em kg no topo, "você NÃO precisa de", canetinha × Protocolo, 3 sabotadores, duas opções, botão fixo); `v4: null` volta à v3.
 00. **(13/11) Quiz pilates modelado no NovaMente, na branch `claude/wizardly-mayer-043j6t` (NÃO está no ar):** capa com a foto real da
    Michele, selos e idade em botões de texto (45 a 54 primeiro); "% concluído"; altura, peso e peso desejado (telas 12–14); compromisso
    (18); nome (21); resultado com o nome, o IMC e os "dois caminhos". Painel: telas 01–24, oferta = 24. **Falta:** OK do Patrik para
@@ -221,6 +222,8 @@ Os M da pasta "MICHELE LOW" são esses mesmos vídeos. Mapa conferido pelos quad
    Rastreio LIGADO (03/11): aba **Quiz Diva** em https://painel.michelesalla.com.br/painel/quiz (telas 01–22 = blocos; quiz-p1..p5 = páginas).
 
 ## 8. Diário
+- **17/11 (tarde) · Corpo Diva no ar** (Patrik: "pode subir, mantém os 18 kg e na última tela… pode ser mais agressivo"): oferta v4,
+  "Leva cerca de 3 minutos" na capa, FAQ "Com que nome chega o acesso?" (chega como Desafio 7 em 7), 18 kg no final A da VSL.
 - **17/11 · Quiz Protocolo Corpo Diva** (Patrik mandou o quiz do Dr. Márcio Martins, inlead.digital/dr-marcio-teste-capa, a VSL do
   Acelerador de Metabolismo, saudediaria.app.br, e o vídeo do TrincaFit Pro): Dr. Márcio = VSL de 71 s na capa ("me dá 60 segundos",
   quiz como diagnóstico, até 10 kg em 20 dias), 23 telas (nome, idade, corpo hoje, corpo dos sonhos, peso afeta, já tentou, canetinha,

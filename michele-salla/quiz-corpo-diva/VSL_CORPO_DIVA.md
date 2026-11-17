@@ -58,11 +58,11 @@ Quem ataca só um deles não resolve a barriga."
 ---
 
 ## Final A · para a CAPA (68–78 s) · convida para o quiz
-**Fala:** "Mas cada mulher é de um jeito. Por isso eu preparei umas perguntas rápidas sobre o seu corpo, a sua rotina e a sua meta. Com as suas respostas, eu monto o seu plano pra você chegar no verão sem essa barriga. Leva 2 minutos. Escolhe a sua idade aqui embaixo e começa. Eu te espero no final."
-**Na tela:** "ESCOLHA SUA IDADE AQUI EMBAIXO ↓"
+**Fala:** "Mas cada mulher é de um jeito. Por isso eu preparei umas perguntas rápidas sobre o seu corpo, a sua rotina e a sua meta. Com as suas respostas, eu monto o seu plano personalizado pra você perder até 18 quilos nos próximos 30 dias e chegar no verão sem essa barriga. Leva 3 minutos. Escolhe a sua idade aqui embaixo e começa. Eu te espero no final."
+**Na tela:** "ATÉ 18 KG EM 30 DIAS" · "ESCOLHA SUA IDADE AQUI EMBAIXO ↓"
 **[mostrar]** Michele apontando para baixo.
 
-> **Linha opcional (decisão do Patrik):** trocar "pra você chegar no verão sem essa barriga" por "pra você perder até 18 quilos nos próximos 30 dias". Na tela da capa a promessa já aparece escrita; falada pela Michele (educadora física) é mais arriscada no Meta e na prática. Sugestão: gravar as duas e testar.
+> 17/11: o Patrik decidiu manter os 18 kg, então a frase entra na fala (igual à promessa escrita na capa 1).
 
 ## Final B · para a OFERTA (68–105 s) · apresenta e pede a compra
 **Fala:** "O seu plano está pronto, aqui embaixo. Dentro do Protocolo Corpo Diva você recebe: as aulas de 15 minutos, a avaliação inicial da sua barriga, o áudio Mente Magra e Diva, o Planner Diva pra você saber o que fazer em cada dia… e de bônus o Cardápio de Emergência Diva, o Projeto Minha Calça Favorita e a rotina express de 5 minutos pros dias corridos.

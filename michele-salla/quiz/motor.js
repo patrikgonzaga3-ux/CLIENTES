@@ -288,6 +288,77 @@ function blocoVsl() {
   return `<figure class="vsl" style="margin:0">${midia}${V.legenda ? `<figcaption>${txt(V.legenda)}</figcaption>` : ''}</figure>`
 }
 
+// 17/11 · Página final AGRESSIVA (Patrik: "na última tela não gostei, tá ruim, pode ser mais agressivo"), modelada no Acelerador de
+// Metabolismo (você não precisa de…, 3 vilões, "dá tempo de chegar no verão", garantia forte) e no Dr. Márcio (meta e antes/depois no topo).
+// Topo escuro com a meta dela e a contagem até o verão, preço logo depois, canetinha × Protocolo, os 3 sabotadores (os mesmos da VSL),
+// "duas opções" no fim e botão fixo no rodapé. Só fatos do produto; preço e link iguais. Só com QUIZ.oferta.v4.
+function diasAteVerao() {
+  const h = new Date(), ini = new Date(h.getFullYear(), 11, 21), fimAnt = new Date(h.getFullYear(), 2, 20)
+  if (h <= fimAnt) return 0 // ainda é verão (até 20/03)
+  return Math.max(0, Math.ceil((ini - h) / 864e5))
+}
+function ofertaV4(pf, O, m, botao) {
+  const V = O.v4, nome = primeiroNome(), I = imcDe(), dif = I && I.meta ? Math.round(I.p - I.meta) : 0
+  const tem = V.tem ? V.tem(resp) : {}
+  const rico = x => txt(x).replace(/&lt;(\/?)(b|s)&gt;/g, '<$1$2>') // só negrito e riscado passam
+  const dias = diasAteVerao(), fim = new Date(Date.now() + 30 * 864e5)
+  const dm = d => String(d.getDate()).padStart(2, '0') + '/' + String(d.getMonth() + 1).padStart(2, '0')
+  const caixa = (sel = '') => `<div class="v4-preco${sel}">
+      <p class="v4-de">${rico(V.ancora)}</p>
+      <div class="v4-valor"><small>R$</small>${esc(O.valor)}</div>
+      <p class="v4-vez">${txt(V.vez)}</p>
+      ${botao}
+      <p class="v4-selos">🔒 Compra segura · 🛡️ Garantia de 7 dias · ⚡ Acesso imediato</p></div>`
+  const se = rotulo('se-nada-mudar', resp['se-nada-mudar'])
+  const imp = (resp.impacto || []).filter(x => x !== 'nenhum').map(x => minusc(rotulo('impacto', x)))
+  return `<section class="v4">
+    <div class="v4-faixa">${dias > 0 ? `⏳ Faltam <b>${dias} dias</b> para o verão` : '☀️ O verão já começou. Comece hoje'}</div>
+    <div class="v4-topo">
+      <span class="v4-ok" data-clarity-mask="true">✓ ${nome ? esc(nome) + ', o seu' : 'O seu'} plano está pronto · ${esc(pf.nome)}</span>
+      <h2 class="v4-titulo">${rico(V.titulo)}</h2>
+      ${dif > 0 ? `<div class="v4-meta"><div><b>${esc(String(I.p))} kg</b><span>hoje</span></div><i aria-hidden="true">→</i><div class="alvo"><b>${esc(String(I.meta))} kg</b><span>a sua meta</span></div><div class="dif"><b>−${dif} kg</b><span>até o verão</span></div></div>` : ''}
+      <p class="v4-data">Começando hoje, os seus 30 dias terminam em <b>${dm(fim)}</b>${dias > 30 ? ', <b>antes do verão</b>' : ''}.</p>
+      ${VPOS === 'oferta' ? blocoVsl() : `<figure class="v4-hero" style="margin:0">${img(V.heroAD, 'loading="eager"')}<figcaption>${txt(V.adLegenda)}</figcaption></figure>`}
+    </div>
+    ${caixa(' v4-primeiro')}
+    <div class="v4-bloco v4-nao"><h3>${esc(V.naoTitulo)}</h3><ul>${V.nao.map(x => `<li>${rico(x)}</li>`).join('')}</ul><p class="v4-so">${rico(V.so)}</p></div>
+    ${se || imp.length ? `<div class="v4-bloco v4-dor"><h3>${esc(V.dorTitulo)}</h3>
+      ${se ? `<p>Você disse que, se nada mudar, o seu próximo verão vai ser <b>${esc(minusc(se))}</b>.</p>` : ''}
+      ${imp.length ? `<p>E que o peso já mexe com você: <b>${esc(imp.slice(0, 3).join(', '))}</b>.</p>` : ''}
+      <p class="v4-forte">${rico(V.dorFecho)}</p></div>` : ''}
+    <div class="v4-bloco"><h3>${esc(V.compTitulo)}</h3><div class="v4-comp">
+      <div class="ruim"><span>${esc(V.comp[0].nome)}</span><b>${esc(V.comp[0].preco)}</b><ul>${V.comp[0].itens.map(x => `<li>${rico(x)}</li>`).join('')}</ul></div>
+      <div class="bom"><span>${esc(V.comp[1].nome)}</span><b>${esc(V.comp[1].preco)}</b><ul>${V.comp[1].itens.map(x => `<li>${rico(x)}</li>`).join('')}</ul></div></div>
+      <p class="v4-conta">${rico(V.conta)}</p></div>
+    <h3 class="v4-h">${esc(V.adTitulo)}</h3>
+    <div class="grade v4-ad">${V.antesDepois.map(x => img(x, 'loading="lazy"')).join('')}</div><p class="aviso">${txt(V.adLegenda)}</p>
+    ${botao}
+    <div class="v4-bloco"><h3>${esc(V.sabTitulo)}</h3><ol class="v4-sab">${V.sab.map(([a, b, c]) => `<li><b>${esc(a)}</b><span>${rico(b)}</span><em>${rico(c)}</em></li>`).join('')}</ol></div>
+    <div class="v4-bloco"><h3>${esc(V.feitoTitulo)}</h3><ul class="check">${(V.feitoLista || []).filter(([k]) => tem[k]).slice(0, 3).map(([, x]) => `<li>${rico(x)}</li>`).join('')}
+      <li><b>Seu perfil: ${esc(pf.nome)}.</b> ${txt(pf.comeca)}</li></ul>
+      ${m ? `<p class="v4-medo"><b>Você disse que tem medo de “${esc(minusc(rotulo('medo', resp.medo)))}”.</b> ${txt(m)}</p>` : ''}</div>
+    <h3 class="v4-h">${esc(V.recebeTitulo)}</h3>
+    <div class="v3-mock-img">${img(V.mockupImg, 'loading="lazy"')}</div>
+    <ul class="v4-recebe">${V.recebe.map(x => `<li>${rico(x)}</li>`).join('')}</ul>
+    ${caixa()}
+    <div class="v4-prof">${img(V.professora.foto, 'loading="lazy"')}<div><h3>${esc(V.professora.titulo)}</h3>${V.professora.textos.map(x => `<p>${rico(x)}</p>`).join('')}</div></div>
+    <div class="v4-garantia"><span aria-hidden="true">🛡️</span><h3>${esc(V.garantia.titulo)}</h3><p>${rico(V.garantia.texto)}</p></div>
+    <h3 class="v4-h">Perguntas rápidas</h3>
+    ${V.faq.map(([pq, r]) => `<div class="cartao faq"><h4>${esc(pq)}</h4><p>${txt(r)}</p></div>`).join('')}
+    <div class="v4-bloco v4-duas"><h3>${esc(V.duas.titulo)}</h3>
+      <div class="a"><b>${esc(V.duas.a[0])}</b><p>${rico(V.duas.a[1])}</p></div>
+      <div class="d"><b>${esc(V.duas.d[0])}</b><p>${rico(V.duas.d[1])}</p></div></div>
+    ${caixa()}
+    <p class="miudo">Michele Salla · CNPJ 32.983.139/0001-99</p>
+    ${O.rodape ? `<p class="miudo" style="font-size:11.5px">${txt(O.rodape)}</p>` : ''}
+    <div class="v4-fixo" id="v4-fixo" hidden><div><b>R$ ${esc(O.valor)}</b><span>${txt(V.vezCurta)}</span></div>${botao}</div></section>`
+}
+// botão fixo: aparece depois que a pessoa passa do primeiro preço
+addEventListener('scroll', () => {
+  const f = document.getElementById('v4-fixo'), p = document.querySelector('.v4-primeiro')
+  if (f && p) f.hidden = p.getBoundingClientRect().bottom > 0
+}, { passive: true })
+
 let telaMarcada = -1 // o evento da tela sai uma vez por chegada (a tela redesenha ao marcar uma resposta)
 function desenha() {
   const t = TELAS[i]
@@ -406,7 +477,7 @@ function desenha() {
     } else {
       botao = `<span class="botao" aria-disabled="true" style="opacity:.6;cursor:default">${esc(O.botao)} →</span><p class="miudo" style="color:#fff"><span class="pend">Link de compra pendente</span></p>`
     }
-    if (O.v3) { h += ofertaV3(pf, O, m, botao) } else if (O.v2) { h += ofertaV2(pf, O, m, botao) } else h += `<section class="oferta" style="display:grid;gap:14px">
+    if (O.v4) { h += ofertaV4(pf, O, m, botao) } else if (O.v3) { h += ofertaV3(pf, O, m, botao) } else if (O.v2) { h += ofertaV2(pf, O, m, botao) } else h += `<section class="oferta" style="display:grid;gap:14px">
       <span class="etiqueta">Plano para ${esc(pf.nome)}</span>
       <h2>${pend(O.titulo)}</h2>
       <p>${txt(O.intro)}</p>
