@@ -19,7 +19,7 @@ const PROMESSAS = {
     nome: 'Barriga até o verão · 18 kg em 30 dias',
     etiqueta: 'Quiz gratuito',
     titulo: 'Perca de uma vez por todas a <mark>barriga indesejada</mark> até o verão',
-    sub: 'Receba um plano personalizado para perder até 18 kg nos próximos 30 dias.',
+    sub: 'Receba um plano personalizado para perder até 18 kg de gordura em até 30 dias.',
   },
   2: {
     nome: 'Corpo durinho antes do verão',
@@ -57,7 +57,7 @@ const TELAS = [
   { id: 'peso', tipo: 'numero', titulo: 'Qual é o seu peso hoje?', sub: 'Em quilos. Fica só no seu celular.', unidade: 'kg', min: 35, max: 200, padrao: 75 },
   { id: 'peso-meta', tipo: 'numero', titulo: 'E qual peso você quer ter no verão?', sub: 'Em quilos. Não existe resposta certa.', unidade: 'kg', min: 35, max: 200, padrao: r => (Number(r.peso) || 75) - 8 },
   { id: 'meta-possivel', tipo: 'texto', rot: '✓ Meta registrada', titulo: '{nome}a sua meta de {meta} é possível, e você não precisa fazer isso sozinha.',
-    textos: ['Muitas mulheres chegam até mim depois de tentar de tudo: dieta, abdominal, canetinha. O que faltava não era força de vontade. Era um passo a passo que coubesse na rotina e cuidasse da cabeça junto com o corpo.',
+    textos: ['Muitas mulheres chegam até mim depois de tentar de tudo: dieta, abdominal, canetinha. O que faltava não era força de vontade. Era o método certo. Foi para isso que eu criei o Método Cinturão Diva: 15 minutos por dia que atacam, ao mesmo tempo, os 3 sabotadores da barriga.',
       'Nas próximas perguntas, eu vejo a sua rotina e o que mais te tira do caminho, para montar o seu plano.'],
     img: { src: AD + 'ad-1.webp', alt: 'Antes e depois de aluna do Desafio 7 em 7 da Michele', w: 682, h: 900 },
     aviso: 'Aluna do Desafio 7 em 7 da Michele. Os resultados variam de pessoa para pessoa.', botao: 'Continuar o meu plano' },
@@ -78,13 +78,13 @@ const TELAS = [
     op: [['esconder', 'De novo escondendo a barriga com roupa larga'], ['fotos', 'Fugindo das fotos e da praia'], ['pior', 'Com mais peso e menos disposição que hoje']] },
   { id: 'compromisso', tipo: 'uma', titulo: 'Você está disposta a se dar 15 minutos por dia para mudar isso?', sub: 'É o tempo da aula do Protocolo.',
     op: [['sim', 'Sim, eu preciso mudar!'], ['tentar', 'Estou disposta a pelo menos tentar']],
-    dica: '✅ As aulas são de 15 minutos, em casa, e nos dias corridos tem uma rotina express de 5 minutos.' },
+    dica: '✅ As aulas do Método Cinturão Diva são de 15 minutos, em casa, e nos dias corridos tem uma rotina express de 5 minutos.' },
   { id: 'medo', tipo: 'uma', titulo: 'Qual é o seu maior medo agora?', sub: 'Seus medos são válidos. Vou responder no final.',
     op: [['fracasso', 'Não conseguir de novo', 'Já tentei tanto que perdi a confiança'], ['tempo', 'Não ter tempo', 'Minha rotina não deixa espaço'], ['dinheiro', 'Gastar e não ter resultado', 'Já investi em coisas que não funcionaram'],
          ['dor', 'Sentir dor ou me machucar', 'Tenho medo de exercício com impacto'], ['rebote', 'Voltar tudo depois', 'Melhoro e depois volto ao mesmo']] },
   { id: 'nome', tipo: 'nome', titulo: 'Falta pouco! Qual é o seu primeiro nome?', sub: 'Para o seu plano sair no seu nome.', placeholder: 'Seu primeiro nome',
     privacidade: '🔒 Não pedimos e-mail nem telefone. O nome serve só para personalizar o seu plano.', botao: 'Ver o meu plano' },
-  { id: 'carregando-2', tipo: 'carregando', titulo: 'Montando o seu Protocolo Corpo Diva…', linhas: ['Separando o seu primeiro passo…', 'Encaixando no tempo que você tem…', 'Escolhendo por onde você começa…'] },
+  { id: 'carregando-2', tipo: 'carregando', titulo: 'Montando o seu plano do Método Cinturão Diva…', linhas: ['Separando o seu primeiro passo…', 'Encaixando no tempo que você tem…', 'Escolhendo por onde você começa…'] },
   { id: 'resultado', tipo: 'resultado' },
   { id: 'oferta', tipo: 'oferta' },
 ]
@@ -95,31 +95,31 @@ const PERFIS = {
     nome: 'A Diva da Nova Fase',
     retrato: 'O seu corpo mudou: gestação, os anos ou a menopausa. O que funcionava antes parou de funcionar, e a barriga não responde como antes.',
     trava: 'Não é falta de esforço. O seu corpo pede outro cuidado: fortalecer o abdômen profundo, de dentro para fora, com postura e respiração, e cuidar dos pensamentos e hábitos que fazem você desistir de si mesma.',
-    comeca: 'Você começa pela aula “Conheça Sua Barriga: Avaliação Inicial” e segue para as aulas de 15 minutos com respiração e hipopressivos.',
+    comeca: 'Você começa pela aula “Conheça Sua Barriga: Avaliação Inicial” e segue para as aulas de 15 minutos do Método Cinturão Diva, com respiração e hipopressivos.',
   },
   'estufada': {
     nome: 'A Diva da Barriga Estufada',
     retrato: 'A sua barriga muda ao longo do dia: de manhã está melhor e à noite está estufada. Isso mexe com a roupa, com o humor e com a autoestima.',
     trava: 'Fazer cada vez mais abdominais não resolve. É preciso trabalhar o seu cinturão natural com postura e respiração e cuidar dos hábitos que fazem você desistir de si mesma.',
-    comeca: 'Você começa pelas aulas “15 Minutos por Dia: Barriga e Cintura em Ação”, com respiração e hipopressivos, e pelo Cardápio de Emergência Diva.',
+    comeca: 'Você começa pelas aulas do Método Cinturão Diva (“15 Minutos por Dia: Barriga e Cintura em Ação”), com respiração e hipopressivos, e pelo Cardápio de Emergência Diva.',
   },
   'efeito-sanfona': {
     nome: 'A Diva do Efeito Sanfona',
     retrato: 'Você já emagreceu antes, com dieta, academia ou canetinha. Mas o peso voltou, e a barriga voltou junto.',
     trava: 'O que faz o peso voltar não é falta de força: é parar tudo de uma vez e voltar aos velhos hábitos. O corpo segura o resultado quando a cabeça muda junto.',
-    comeca: 'Você começa pelo áudio “Ative Sua Mente Magra e Diva” e pelo Planner Diva, junto com as aulas de 15 minutos, para o resultado ficar.',
+    comeca: 'Você começa pelo áudio “Ative Sua Mente Magra e Diva” e pelo Planner Diva, junto com as aulas de 15 minutos do Método Cinturão Diva, para o resultado ficar.',
   },
   'recomeco': {
     nome: 'A Diva que Recomeça Toda Segunda',
     retrato: 'Você começa com tudo, a semana aperta, um deslize vira “já estraguei” e a segunda-feira vira a data do recomeço.',
     trava: 'O que te tira do caminho não é preguiça, é a cabeça: ansiedade, cansaço e o “tudo ou nada”. O corpo responde quando a mente para de desistir de si mesma.',
-    comeca: 'Você começa pelo áudio “Ative Sua Mente Magra e Diva” e pelo “Planner Diva”, para saber o que fazer em cada dia.',
+    comeca: 'Você começa pelo áudio “Ative Sua Mente Magra e Diva” e pelo “Planner Diva”, para saber o que fazer em cada dia, junto com as aulas do Método Cinturão Diva.',
   },
   'depois': {
     nome: 'A Diva que se Deixou pra Depois',
     retrato: 'Rotina corrida, casa, filhos, trabalho. Todo mundo virou prioridade, menos você. E um dia você se olhou e não se reconheceu.',
     trava: 'Você não precisa de horas livres. Precisa de 15 minutos por dia que sejam só seus, para o corpo e para a cabeça.',
-    comeca: 'Você começa pelo “Comece Aqui: Sua Jornada Começa Agora” e encaixa os primeiros 15 minutos do dia em você, sem esperar segunda-feira.',
+    comeca: 'Você começa pelo “Comece Aqui: Sua Jornada Começa Agora” e encaixa os primeiros 15 minutos do Método Cinturão Diva no seu dia, sem esperar segunda-feira.',
   },
 }
 
@@ -133,7 +133,7 @@ function perfilDe(r) {
 
 const MEDO = {
   fracasso: 'um passo a passo diário, com o Planner Diva, para você saber exatamente o que fazer em cada dia.',
-  tempo: 'aulas de 15 minutos por dia, em casa, e uma rotina express de 5 minutos para os dias corridos.',
+  tempo: 'as aulas do Método Cinturão Diva têm 15 minutos, em casa, e tem uma rotina express de 5 minutos para os dias corridos.',
   dinheiro: 'o Protocolo custa R$ 47, uma vez só (menos de 1/10 de um mês de canetinha), e tem garantia de 7 dias: se não fizer sentido para você, pede o reembolso.',
   dor: 'os hipopressivos são feitos com respiração e postura, sem impacto. Se você teve bebê há pouco tempo ou tem hérnia, precisa de liberação médica antes de começar.',
   rebote: 'o áudio Mente Magra e Diva e o Planner ajudam a transformar o Protocolo em hábito, para o resultado ficar.',
@@ -181,7 +181,7 @@ const QUIZ = {
   bio: [
     'Educadora Física desde 2005, especialista em emagrecimento comportamental, licenciada na técnica da Barriga Negativa e autora do livro Vida Diva (2025).',
     'Há mais de 20 anos eu ajudo mulheres a perderem a barriga sem viver de dietas: primeiro a mente, depois o corpo.',
-    'Nas próximas perguntas, vou entender o seu corpo, a sua rotina e a sua meta para montar o seu Protocolo Corpo Diva.',
+    'Nas próximas perguntas, vou entender o seu corpo, a sua rotina e a sua meta para montar o seu plano do Método Cinturão Diva.',
   ],
   prova: { titulo: 'Alunas que já começaram comigo', fotos: [1, 2, 3, 4].map(resultadoFoto) },
   insight: { ciclo: [], destaque: '', texto: '' },
@@ -201,7 +201,7 @@ const QUIZ = {
     },
     caminhos: {
       adiar: 'O verão chega, a barriga continua no mesmo lugar e a roupa larga volta para a mala. E a segunda-feira vira, de novo, a data do recomeço.',
-      comecar: '15 minutos por dia, em casa: respiração e hipopressivos para a barriga e a cintura, e a Mente Magra e Diva para não desistir no meio.',
+      comecar: 'O Método Cinturão Diva, 15 minutos por dia em casa: religa o seu cinturão natural, sem dieta radical, e a Mente Magra e Diva para não desistir no meio.',
       eixo: 'Constância até o verão',
       aviso: 'Gráfico ilustrativo de hábito. Não é previsão nem garantia de resultado; os resultados variam de pessoa para pessoa.',
     },
@@ -293,7 +293,7 @@ const QUIZ = {
       ],
       duas: { titulo: 'Agora você tem duas opções',
         a: ['Fechar esta página', 'E chegar no verão do mesmo jeito: a roupa larga, a barriga escondida na foto e a segunda-feira como data do recomeço.'],
-        d: ['Começar hoje, por R$ 47', 'Seguir o seu plano 15 minutos por dia, com a Michele, e chegar no verão <b>sem a barriga indesejada</b>.'] },
+        d: ['Começar hoje, por R$ 47', 'Seguir o Método Cinturão Diva 15 minutos por dia e, em até 30 dias, perder até <b>18 kg de gordura</b> e chegar no verão <b>sem a barriga indesejada</b>.'] },
     },
     v3: {
       selo: 'Seu plano está pronto · acesso imediato',
