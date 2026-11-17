@@ -112,3 +112,18 @@ Outros dados úteis: 54% têm de 17 a 28 anos e 40% de 29 a 39; 51% têm 30 a 40
       nova para a oferta do quiz (versão curta); 4) página nova só como teste A/B com parte pequena da verba.
 - [ ] Corrigir na oferta do quiz: "75%" e garantia 21 × 30 dias.
 - [ ] Liberar a conta CA 02 no conector do Meta para ver custo por anúncio.
+
+## 8. Página no WordPress da Millena (17/11, molde efeitolipo.com.br/c)
+- Acesso: senhas de aplicativo "Claude nuvem" (desafiomagrapromax.com.br) e "Claude nuvem leitura" (efeitolipo.com.br), salvas no
+  ambiente padrão da nuvem (o proxy injeta; ninguém vê o valor). Para cortar: apagar em Usuários → Perfil → Senhas de aplicativo.
+- Página **ID 260**, `desafiomagrapromax.com.br/desafio-pro-max/`, Elementor Canvas, **protegida por senha** até o OK do Patrik.
+  (O endereço /oferta/ está ocupado pela pasta estática que o Patrik subiu pelo zip; uma pasta real ganha da página do WordPress.)
+- Montada por `elementor/montar.py` a partir do `_elementor_data` da página 388 da efeitolipo: mesmos componentes e CSS,
+  verde → preto (#111111), laranjas → #F85A00, pixel 1332309708403614 (PageView, ViewContent e CliqueComprar 1x por visita),
+  utm/fbclid/xcod seguem para o checkout; sem GA/Clarity/painel da Laura.
+- Imagens: 10 antes e depois e 4 prints de alunas já estavam na biblioteca da Millena em 1080 px (usados direto, sem recompressão);
+  subidas 19 (IDs em `elementor/upload_ids.txt`): ilustração da mulher no espelho (gerada no Gravyx, recortada com rembg),
+  ícones prato e 10 minutos e foto do prato (Gravyx), recortes das fotos da Millena (IMG_6810, IMG_6652), ícones/selos genéricos.
+- Garantia: 21 dias (selo "21 Dias de Garantia" da biblioteca dela + texto da garantia do quiz). O título do quiz diz 30: confirmar.
+- Atualizar a página: editar `montar.py`, rodar e **apagar e recriar** a página (atualizar só o meta não renova o CSS do Elementor).
+- Pendentes em amarelo: preço à vista, bônus/acesso, como recebe, duração dos treinos, mensalidade, formação e história da Millena.
