@@ -158,7 +158,7 @@ const QUIZ = {
     // Um vídeo, dois finais (VSL_CORPO_DIVA.md): na capa vai o final A (convida para o quiz), na oferta o final B (preço e garantia).
     src: { inicio: '', oferta: '' }, // (ESCREVER AQUI: links dos 2 MP4 depois que a Michele gravar; vertical 9:16)
     poster: { inicio: '', oferta: '' },
-    vazio: { inicio: 'VSL da Michele · ~75 s · final A', oferta: 'VSL da Michele · ~105 s · final B' },
+    vazio: { inicio: 'VSL da Michele · ~75 s · versão capa', oferta: 'VSL da Michele · ~2 min 30 · versão oferta' },
     pendencia: 'Vídeo ainda não gravado (roteiro pronto em VSL_CORPO_DIVA.md)',
   },
   capaV2: {

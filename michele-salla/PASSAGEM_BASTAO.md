@@ -222,6 +222,10 @@ Os M da pasta "MICHELE LOW" são esses mesmos vídeos. Mapa conferido pelos quad
    Rastreio LIGADO (03/11): aba **Quiz Diva** em https://painel.michelesalla.com.br/painel/quiz (telas 01–22 = blocos; quiz-p1..p5 = páginas).
 
 ## 8. Diário
+- **17/11 (noite) · VSL v2** (Patrik: "tá sem emoção… sem promessa forte, sem método… ela grava e você edita com emoção, trilha e
+  imagens"): roteiro reescrito com 3 ganchos para testar, "não é normal", os 3 sabotadores em ciclo, **Método Cinturão Diva** (nome novo,
+  falta o OK), linha do tempo (até 7 cm em 7 dias · até 18 kg em 30 dias), futuro e garantia falada. Duas edições: capa ~75 s e oferta
+  ~2 min 30. PDF para a Michele: `quiz-corpo-diva/Roteiro_VSL_Protocolo_Corpo_Diva.pdf`. Edição (trilha, imagens, legenda) fica comigo.
 - **17/11 (tarde) · Corpo Diva no ar** (Patrik: "pode subir, mantém os 18 kg e na última tela… pode ser mais agressivo"): oferta v4,
   "Leva cerca de 3 minutos" na capa, FAQ "Com que nome chega o acesso?" (chega como Desafio 7 em 7), 18 kg no final A da VSL.
 - **17/11 · Quiz Protocolo Corpo Diva** (Patrik mandou o quiz do Dr. Márcio Martins, inlead.digital/dr-marcio-teste-capa, a VSL do
