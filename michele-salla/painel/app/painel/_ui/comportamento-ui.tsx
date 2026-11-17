@@ -84,7 +84,7 @@ export async function PainelComportamento({ site, per, sp, checkout, visitasPadr
   const pedidosN = checkout.pedidos.filter((s) => !pag || s === `${site.prefixo}-${pag}`).length
   const vendasN = checkout.vendas.filter((s) => !pag || s === `${site.prefixo}-${pag}`).length
   const etapas = [
-    { k: 'topo', nome: site.id === 'quiz' || site.id === 'pilates' ? 'Passam da capa' : 'Passam do topo', qtd: passouTopo, base: n, ref: REF.topo, onde: site.id === 'quiz' || site.id === 'pilates' ? 'anúncio → capa do quiz' : 'anúncio → topo',
+    { k: 'topo', nome: ['quiz', 'pilates', 'corpodiva'].includes(site.id) ? 'Passam da capa' : 'Passam do topo', qtd: passouTopo, base: n, ref: REF.topo, onde: ['quiz', 'pilates', 'corpodiva'].includes(site.id) ? 'anúncio → capa do quiz' : 'anúncio → topo',
       acao: 'Muita gente sai no topo: a promessa do anúncio não bate com o topo da página, o topo não prende nos primeiros segundos ou a página demora para abrir (ver carregamento). Comparar "Saem no topo" por anúncio.' },
     { k: 'oferta', nome: 'Chegam na oferta', qtd: chegouOferta, base: passouTopo, ref: REF.oferta, onde: 'meio da página',
       acao: 'Leem o começo mas não chegam no preço: ver em "Bloco a bloco" onde mais saem e encurtar ou trocar esse bloco; testar um botão de comprar mais cedo.' },
@@ -136,7 +136,7 @@ export async function PainelComportamento({ site, per, sp, checkout, visitasPadr
   const lista = [...alvos.entries()].sort((a, b) => b[1].vis - a[1].vis || b[1].total - a[1].total)
   // Quiz: respostas por pergunta (bloco = tela). Conta pessoas que marcaram cada resposta e quantas delas clicaram em comprar.
   // Botões com "→" (Continuar, Ver o próximo passo…) não são respostas.
-  const ehQuiz = site.id === 'quiz' || site.id === 'pilates'
+  const ehQuiz = ['quiz', 'pilates', 'corpodiva'].includes(site.id)
   const respostas = new Map<number, Map<string, { vis: Set<string>; compra: Set<string> }>>()
   if (ehQuiz) for (const v of vs) for (const c of v.cliques) {
     if (!c.b || !c.o.startsWith('botão: ') || c.o.includes('→')) continue
@@ -230,8 +230,8 @@ export async function PainelComportamento({ site, per, sp, checkout, visitasPadr
   )
 
   return (
-    <PainelShell active={site.id === 'quiz' || site.id === 'pilates' ? site.id : 'pagina'}>
-      <Titulo titulo={site.id === 'quiz' || site.id === 'pilates' ? `${site.nome} · tela por tela` : 'Comportamento na página'} sub={site.id === 'quiz' || site.id === 'pilates'
+    <PainelShell active={['quiz', 'pilates', 'corpodiva'].includes(site.id) ? site.id : 'pagina'}>
+      <Titulo titulo={['quiz', 'pilates', 'corpodiva'].includes(site.id) ? `${site.nome} · tela por tela` : 'Comportamento na página'} sub={['quiz', 'pilates', 'corpodiva'].includes(site.id)
         ? `Cada tela do quiz é um bloco (01 capa … ${site.blocos.length} oferta) e cada promessa (P1 a P5) é uma versão do quiz: compare as 5 nas abas P1 a P5. Em "Todos os cliques" aparecem as respostas que as pessoas mais marcam.`
         : `${site.nome}: onde a pessoa para, quanto tempo fica em cada bloco, onde clica e quanto tempo leva até comprar. Uma linha por abertura da página.`} />
       <FiltroPeriodo per={per} base={BASE} extra={extra} presets={[['hoje', 'Hoje'], ['ontem', 'Ontem'], ['7d', '7 dias'], ['30d', '30 dias'], ['mes', 'Mês atual']]} />

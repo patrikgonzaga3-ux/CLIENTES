@@ -279,9 +279,12 @@ function vslTempo(v) {
 }
 function blocoVsl() {
   const V = QUIZ.vsl
-  const midia = V.src
-    ? `<video class="vsl-video" src="${esc(V.src)}"${V.poster ? ` poster="${esc(V.poster)}"` : ''} playsinline controls preload="metadata" onplay="vslVisto.play||(vslVisto.play=1,marca('event','vsl_play'))" ontimeupdate="vslTempo(this)"></video>`
-    : `<div class="vsl-vazio" role="img" aria-label="Lugar do vídeo da Michele"><span class="vsl-play" aria-hidden="true">▶</span><b>${esc(V.vazio || 'Vídeo da Michele')}</b><span class="pend">${esc(V.pendencia || 'Vídeo ainda não gravado')}</span></div>`
+  // src/poster/vazio podem ser um texto só ou um por posição: { inicio: '…', oferta: '…' } (finais diferentes do mesmo vídeo)
+  const por = x => (x && typeof x === 'object' ? x[VPOS] : x) || ''
+  const src = por(V.src), poster = por(V.poster)
+  const midia = src
+    ? `<video class="vsl-video" src="${esc(src)}"${poster ? ` poster="${esc(poster)}"` : ''} playsinline controls preload="metadata" onplay="vslVisto.play||(vslVisto.play=1,marca('event','vsl_play'))" ontimeupdate="vslTempo(this)"></video>`
+    : `<div class="vsl-vazio" role="img" aria-label="Lugar do vídeo da Michele"><span class="vsl-play" aria-hidden="true">▶</span><b>${esc(por(V.vazio) || 'Vídeo da Michele')}</b><span class="pend">${esc(V.pendencia || 'Vídeo ainda não gravado')}</span></div>`
   return `<figure class="vsl" style="margin:0">${midia}${V.legenda ? `<figcaption>${txt(V.legenda)}</figcaption>` : ''}</figure>`
 }
 
@@ -296,11 +299,11 @@ function desenha() {
   if (t.tipo === 'capa' && QUIZ.capaV2) {
     const p = PROMESSAS[P], C = QUIZ.capaV2
     h += `<section class="capa capa2">
-      <div class="capa2-foto">${img(C.foto, 'fetchpriority="high"')}${C.marca ? `<span class="capa2-marca">${esc(C.marca)}</span>` : ''}</div>
+      ${VPOS === 'inicio' && C.semFotoComVsl ? (C.marca ? `<span class="capa2-marca solta">${esc(C.marca)}</span>` : '') : `<div class="capa2-foto">${img(C.foto, 'fetchpriority="high"')}${C.marca ? `<span class="capa2-marca">${esc(C.marca)}</span>` : ''}</div>`}
       <h1>${pend(p.titulo)}</h1>
       ${p.sub && QUIZ.subNaCapa ? `<p class="sub capa2-sub">${txt(p.sub)}</p>` : ''}
       ${VPOS === 'inicio' ? blocoVsl() : ''}
-      ${(p.faixa !== undefined ? p.faixa : C.faixa) ? `<p class="capa2-faixa">${esc(p.faixa !== undefined ? p.faixa : C.faixa)}</p>` : ''}
+      ${VPOS !== 'inicio' && (p.faixa !== undefined ? p.faixa : C.faixa) ? `<p class="capa2-faixa">${esc(p.faixa !== undefined ? p.faixa : C.faixa)}</p>` : ''}
       ${C.selos && C.selos.length ? `<div class="selos-capa">${C.selos.map(x => `<span>${esc(x)}</span>`).join('')}</div>` : ''}
       <div class="cartao capa2-idade">${capaIdade(QUIZ.idadeNaCapa)}${C.final ? `<p class="capa2-final">${esc(C.final)}</p>` : ''}</div>
       <p class="miudo">${esc(QUIZ.assinatura || 'Por Michele Salla, educadora física')}</p></section>`
@@ -335,6 +338,15 @@ function desenha() {
       <input class="campo-nome" id="campo-nome" type="text" autocomplete="given-name" maxlength="30" placeholder="${esc(t.placeholder)}" value="${esc(resp.nome || '')}" data-clarity-mask="true" onkeydown="if(event.key==='Enter')nomeOk()">
       ${t.privacidade ? `<p class="miudo">${txt(t.privacidade)}</p>` : ''}
       <button class="botao" onclick="nomeOk()">${esc(t.botao)} →</button>`
+  } else if (t.tipo === 'texto') {
+    // 17/11 · tela de afirmação (modelo Dr. Márcio: "Sua meta é totalmente possível…"). {nome} vira o primeiro nome; {meta} os kg da meta.
+    const I = imcDe(), dif = I && I.meta ? Math.round(I.p - I.meta) : 0, nome = primeiroNome()
+    const troca = x => { const r = txt(x).replace('{nome}', nome ? esc(nome) + ', ' : '').replace('{meta}', dif > 0 ? dif + ' kg' : 'peso'); return r.charAt(0).toUpperCase() + r.slice(1) }
+    h += `<section class="pergunta">${t.rot ? `<span class="rot">${esc(t.rot)}</span>` : ''}<h2 data-clarity-mask="true">${troca(t.titulo)}</h2></section>
+      ${t.img ? `<div class="cartao" style="padding:8px">${img(t.img, 'loading="lazy"')}</div>` : ''}
+      <div class="cartao">${t.textos.map(x => `<p>${troca(x)}</p>`).join('')}</div>
+      ${t.aviso ? `<p class="aviso">${txt(t.aviso)}</p>` : ''}
+      <button class="botao" onclick="vai()">${esc(t.botao || 'Continuar')} →</button>`
   } else if (t.tipo === 'vsl') {
     const V = QUIZ.vsl
     h += `<section class="pergunta"><h2>${pend(V.titulo)}</h2>${V.sub ? `<p class="sub">${txt(V.sub)}</p>` : ''}</section>

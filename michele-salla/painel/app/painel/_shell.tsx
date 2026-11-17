@@ -16,6 +16,7 @@ const ABAS: [key: string, label: string, href: string][] = [
   ['pagina', 'Comportamento na página', '/painel/pagina'],
   ['quiz', 'Quiz Diva', '/painel/quiz'],
   ['pilates', 'Quiz Pilates', '/painel/pilates'],
+  ['corpodiva', 'Quiz Corpo Diva', '/painel/corpodiva'],
   ['recuperar', 'Recuperar vendas', '/painel/recuperar'],
   ['ajustes', 'Ajustes', '/painel/ajustes'],
   ['acessos', 'Acessos', '/painel/acessos'],

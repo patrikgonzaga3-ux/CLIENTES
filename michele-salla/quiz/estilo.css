@@ -240,3 +240,7 @@ p{margin:0}
 .vsl-play{width:74px;height:74px;border-radius:50%;background:var(--amarelo);color:#111;display:grid;place-items:center;font-size:30px;padding-left:6px;box-shadow:0 10px 24px rgba(0,0,0,.25)}
 .vsl figcaption{font-size:13.5px;color:var(--texto);text-align:center}
 .capa2-sub{margin-top:-6px;text-align:center;font-size:16px}
+.capa2-marca.solta{position:static;display:inline-block;justify-self:center;margin:0 auto}
+.vsl-vazio{aspect-ratio:9/16}
+.vsl .vsl-video,.vsl .vsl-vazio{height:min(62dvh,560px);width:auto;max-width:100%;margin:0 auto}
+.capa .vsl .vsl-video,.capa .vsl .vsl-vazio{height:min(48dvh,420px)}
