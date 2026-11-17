@@ -16,6 +16,22 @@ function sorteiaPromessa() {
   return n
 }
 const P = PROMESSAS[q.get('p')] ? Number(q.get('p')) : (q.get('tela') ? Number(Object.keys(PROMESSAS)[0]) : sorteiaPromessa())
+// 17/11 · Teste da VSL (QUIZ.vsl.teste, ex.: ['inicio', 'oferta']): onde o vídeo da Michele aparece. ?v=i (tela de vídeo logo
+// depois da capa), ?v=o (vídeo no topo da oferta) ou ?v=n (sem vídeo). Sem ?v= sorteia em partes iguais e guarda no aparelho.
+// A tela de vídeo existe nas duas variantes (os números das telas no painel não mudam); na variante "oferta" ela é pulada.
+// O rastreio e o sck ganham a letra da variante (ex.: corpodiva-p1i, corpodiva-p1o) para o painel comparar as duas.
+const VPOS = (() => {
+  const V = QUIZ.vsl; if (!V || !V.teste) return ''
+  const fixa = { i: 'inicio', o: 'oferta', n: 'nao' }[q.get('v')]; if (fixa) return fixa
+  if (q.get('tela')) return q.get('tela') === 'vsl' ? 'inicio' : V.teste[0]
+  const k = 'quiz_vsl_' + QUIZ.slug
+  try { const s = localStorage.getItem(k); if (V.teste.includes(s)) return s } catch (e) {}
+  const n = V.teste[Math.floor(Math.random() * V.teste.length)]
+  try { localStorage.setItem(k, n) } catch (e) {}
+  return n
+})()
+const SLUG = QUIZ.slug + P + (VPOS ? VPOS[0] : '')
+const pula = t => !!(t && t.vsl && t.vsl !== VPOS) // tela que só existe numa variante do teste
 const resp = {}
 let i = 0
 const app = document.getElementById('app')
@@ -34,7 +50,7 @@ if (!revisao) {
   const r = document.createElement('script')
   r.async = true
   r.src = 'https://painel.michelesalla.com.br/rastreio.js'
-  r.dataset.slug = QUIZ.slug + P
+  r.dataset.slug = SLUG
   r.dataset.checkout = 'sim'
   document.body.appendChild(r)
 }
@@ -62,6 +78,7 @@ if (!revisao) {
   }).catch(() => {})
   marca('set', 'quiz', QUIZ.slug.replace(/-p$/, ''))
   marca('set', 'promessa', 'p' + P)
+  if (VPOS) marca('set', 'vsl', VPOS)
   ;['utm_content', 'utm_campaign', 'utm_medium'].forEach(c => q.get(c) && marca('set', c, q.get(c).slice(0, 100)))
 }
 let cliqueContado = false
@@ -70,12 +87,13 @@ function cliqueComprar() {
   if (PIXEL_ATIVO && !cliqueContado && window.fbq) { cliqueContado = true; fbq('trackCustom', 'CliqueComprar', { value: QUIZ.oferta.valor, currency: 'BRL', content_name: QUIZ.oferta.produto }) }
 }
 
-const contaveis = TELAS.filter(t => !['capa', 'oferta'].includes(t.tipo)).length
-function progresso() { const n = TELAS.slice(0, i + 1).filter(t => !['capa', 'oferta'].includes(t.tipo)).length; return Math.round(100 * n / contaveis) }
+const conta = t => !['capa', 'oferta'].includes(t.tipo) && !pula(t)
+const contaveis = TELAS.filter(conta).length
+function progresso() { const n = TELAS.slice(0, i + 1).filter(conta).length; return Math.round(100 * n / contaveis) }
 function topo() { return i === 0 ? '' : `<div class="topo"><button class="voltar" aria-label="Voltar" onclick="volta()">‹</button><div class="barra" aria-hidden="true"><i style="width:${progresso()}%"></i></div>${QUIZ.mostraPct ? `<span class="pct">${progresso()}% concluído</span>` : ''}</div>` }
-function vai() { i = Math.min(i + 1, TELAS.length - 1); desenha(); scrollTo(0, 0) }
+function vai() { i = Math.min(i + 1, TELAS.length - 1); while (pula(TELAS[i]) && i < TELAS.length - 1) i++; desenha(); scrollTo(0, 0) }
 let voltando = false // quem volta para a tela de análise não é empurrada para frente de novo
-function volta() { i = Math.max(i - 1, 0); voltando = true; desenha(); voltando = false; scrollTo(0, 0) }
+function volta() { i = Math.max(i - 1, 0); while (pula(TELAS[i]) && i > 0) i--; voltando = true; desenha(); voltando = false; scrollTo(0, 0) }
 const img = (x, extra = '') => `<img src="${x.src}" alt="${esc(x.alt)}" width="${x.w}" height="${x.h}" ${extra}>`
 const perfilAtual = () => (q.get('perfil') && PERFIS[q.get('perfil')] ? q.get('perfil') : perfilDe(resp))
 // Bloco de pendência (texto amarelo) ou fotos.
@@ -201,7 +219,7 @@ function ofertaV2(pf, O, m, botao) {
 function ofertaV3(pf, O, m, botao) {
   const V = O.v3, nome = primeiroNome()
   const inc = resp.incomoda || []
-  const tem = { costas: inc.includes('costas'), rigidez: inc.includes('rigidez'), postura: inc.includes('postura'),
+  const tem = V.tem ? V.tem(resp) : { costas: inc.includes('costas'), rigidez: inc.includes('rigidez'), postura: inc.includes('postura'),
     barriga: inc.includes('barriga') || inc.includes('flacidez'), impactoDor: resp.impacto === 'dor', escapes: resp.impacto === 'escapes',
     fase: ['menopausa', 'pos-parto'].includes(resp.fase), iniciante: ['nunca', 'video'].includes(resp['pilates-antes']) }
   const caixa = () => `<div class="v3-preco">
@@ -217,11 +235,12 @@ function ofertaV3(pf, O, m, botao) {
       <span class="v3-ok" data-rotulo="Título da oferta" data-clarity-mask="true">✓ ${nome ? esc(nome) + ', este é o seu' : 'Este é o seu'} plano · ${esc(pf.nome)}</span>
       <h2 class="v3-titulo">${rico(V.titulo)}</h2>
       <p class="v3-sub">${txt(V.sub)}</p>
-      ${V.heroAD ? `<figure class="v3-hero-ad" style="margin:0">${img(V.heroAD, 'loading="eager"')}<figcaption>${txt(V.adLegenda)}</figcaption></figure>` : `<div class="v3-foto">${img(V.foto, 'loading="eager"')}</div>`}
+      ${VPOS === 'oferta' ? blocoVsl() : V.heroAD ? `<figure class="v3-hero-ad" style="margin:0">${img(V.heroAD, 'loading="eager"')}<figcaption>${txt(V.adLegenda)}</figcaption></figure>` : `<div class="v3-foto">${img(V.foto, 'loading="eager"')}</div>`}
     </div>
     ${caixa()}
     <div class="v3-bloco"><h3>${esc(V.feitoTitulo)}</h3><ul class="check">${[
-      tem.costas || tem.impactoDor ? V.feito.dor : '', tem.fase ? V.feito.fase : '', tem.iniciante ? V.feito.iniciante : '',
+      ...(V.feitoLista ? V.feitoLista.filter(([k]) => tem[k]).map(([, x]) => x).slice(0, 3)
+        : [tem.costas || tem.impactoDor ? V.feito.dor : '', tem.fase ? V.feito.fase : '', tem.iniciante ? V.feito.iniciante : '']),
       `<b>Seu perfil: ${esc(pf.nome)}.</b> ${txt(V.feito.perfil !== undefined ? V.feito.perfil : pf.comeca)}`].filter(Boolean).map(x => `<li>${x.startsWith('<b>') ? x : rico(x)}</li>`).join('')}</ul></div>
     ${V.depoimentos && V.depoimentos.length ? `<h3 class="v3-h">${esc(V.depoTitulo)}</h3>${V.depoimentos.map(d => `<div class="v3-depo"><span class="estrelas" aria-label="5 estrelas">★★★★★</span><b>${esc(d.nome)}</b><p>${txt(d.texto)}</p></div>`).join('')}`
       : V.antesDepois && V.antesDepois.length ? `<h3 class="v3-h">${esc(V.adTitulo)}</h3><div class="grade v3-ad">${V.antesDepois.map(x => img(x, 'loading="lazy"')).join('')}</div><p class="aviso">${txt(V.adLegenda)}</p>`
@@ -234,7 +253,7 @@ function ofertaV3(pf, O, m, botao) {
     <h3 class="v3-h">${esc(V.praQuem.titulo)}</h3>
     ${V.praQuem.figura ? (() => {
       const F = V.praQuem.figura
-      const marcou = { ...tem, recomeco: ['varias', 'perdi-conta'].includes(resp.recomecos), todos: resp.rotina === 'todos', movimentos: resp.medo === 'movimentos' }
+      const marcou = V.marcou ? V.marcou(resp, tem) : { ...tem, recomeco: ['varias', 'perdi-conta'].includes(resp.recomecos), todos: resp.rotina === 'todos', movimentos: resp.medo === 'movimentos' }
       return `<figure class="v3-fig" style="margin:0">${img(F.img, 'loading="lazy"')}
         ${F.baloes.map(([k, t], n) => `<span class="balao b${n} ${n % 2 ? 'dir' : 'esq'}${marcou[k] ? ' on' : ''}">${esc(t)}${marcou[k] ? '<i>você marcou</i>' : ''}</span>`).join('')}</figure>`
     })() : `<ul class="v3-praquem">${dores.map(d => `<li class="${d.on ? 'on' : ''}">${esc(d.t)}${d.on ? '<span>você marcou</span>' : ''}</li>`).join('')}</ul>`}
@@ -249,6 +268,21 @@ function ofertaV3(pf, O, m, botao) {
     ${caixa()}
     <p class="miudo">Michele Salla · CNPJ 32.983.139/0001-99</p>
     ${O.rodape ? `<p class="miudo" style="font-size:11.5px">${txt(O.rodape)}</p>` : ''}</section>`
+}
+
+// 17/11 · VSL da Michele: vídeo (QUIZ.vsl.src) ou, enquanto não estiver gravado, um quadro amarelo de pendência.
+// Marca no Clarity quem dá play e quem chega a 25/50/75/100% (filtrar as gravações por "vsl_50" etc.).
+const vslVisto = {}
+function vslTempo(v) {
+  if (!v.duration) return
+  ;[25, 50, 75, 100].forEach(p => { if (!vslVisto[p] && v.currentTime / v.duration >= (p === 100 ? 0.97 : p / 100)) { vslVisto[p] = 1; marca('event', 'vsl_' + p) } })
+}
+function blocoVsl() {
+  const V = QUIZ.vsl
+  const midia = V.src
+    ? `<video class="vsl-video" src="${esc(V.src)}"${V.poster ? ` poster="${esc(V.poster)}"` : ''} playsinline controls preload="metadata" onplay="vslVisto.play||(vslVisto.play=1,marca('event','vsl_play'))" ontimeupdate="vslTempo(this)"></video>`
+    : `<div class="vsl-vazio" role="img" aria-label="Lugar do vídeo da Michele"><span class="vsl-play" aria-hidden="true">▶</span><b>${esc(V.vazio || 'Vídeo da Michele')}</b><span class="pend">${esc(V.pendencia || 'Vídeo ainda não gravado')}</span></div>`
+  return `<figure class="vsl" style="margin:0">${midia}${V.legenda ? `<figcaption>${txt(V.legenda)}</figcaption>` : ''}</figure>`
 }
 
 let telaMarcada = -1 // o evento da tela sai uma vez por chegada (a tela redesenha ao marcar uma resposta)
@@ -298,6 +332,12 @@ function desenha() {
       <input class="campo-nome" id="campo-nome" type="text" autocomplete="given-name" maxlength="30" placeholder="${esc(t.placeholder)}" value="${esc(resp.nome || '')}" data-clarity-mask="true" onkeydown="if(event.key==='Enter')nomeOk()">
       ${t.privacidade ? `<p class="miudo">${txt(t.privacidade)}</p>` : ''}
       <button class="botao" onclick="nomeOk()">${esc(t.botao)} →</button>`
+  } else if (t.tipo === 'vsl') {
+    const V = QUIZ.vsl
+    h += `<section class="pergunta"><h2>${pend(V.titulo)}</h2>${V.sub ? `<p class="sub">${txt(V.sub)}</p>` : ''}</section>
+      ${blocoVsl()}
+      <button class="botao" onclick="vai()">${esc(V.botao || 'Continuar')} →</button>
+      ${V.nota ? `<p class="miudo">${txt(V.nota)}</p>` : ''}`
   } else if (t.tipo === 'michele') {
     h += `<section class="michele cartao"><img src="${IMG}michele-recorte.webp" alt="Michele Salla" width="802" height="1292">
       <h2 style="font-size:22px">Prazer, eu sou a Michele Salla</h2>
@@ -346,7 +386,7 @@ function desenha() {
       const u = new URL(O.checkout)
       ;['utm_source', 'utm_medium', 'utm_campaign', 'utm_content', 'utm_term', 'fbclid'].forEach(c => q.get(c) && u.searchParams.set(c, q.get(c)))
       if (q.get('utm_term')) u.searchParams.set('src', q.get('utm_term'))
-      u.searchParams.set('sck', QUIZ.slug + P)
+      u.searchParams.set('sck', SLUG)
       botao = `<a class="botao" href="${u.toString()}" onclick="cliqueComprar()">${esc((O.v2 && O.v2.botao) || O.botao)} →</a>`
     } else {
       botao = `<span class="botao" aria-disabled="true" style="opacity:.6;cursor:default">${esc(O.botao)} →</span><p class="miudo" style="color:#fff"><span class="pend">Link de compra pendente</span></p>`
