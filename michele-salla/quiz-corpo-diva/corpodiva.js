@@ -226,7 +226,7 @@ const QUIZ = {
     // 17/11 (Patrik: "na última tela não gostei, tá ruim, pode ser mais agressivo"): página final v4. A v3 abaixo fica guardada
     // (desligar a v4: v4: null volta para a v3). Mesmo preço e mesmo link. Só fatos do produto e a âncora da canetinha (dado do Patrik).
     v4: {
-      titulo: 'Perca a <b>barriga indesejada</b> até o verão com 15 minutos por dia',
+      titulo: 'Perca a <b>barriga indesejada</b> e até <b>18 kg de gordura</b> em até 30 dias com o Método Cinturão Diva',
       heroAD: adFoto(2, 715, 900),
       adTitulo: 'Elas começaram. Agora é a sua vez.',
       adLegenda: 'Alunas do Desafio 7 em 7 da Michele. Os resultados variam de pessoa para pessoa.',
@@ -236,7 +236,7 @@ const QUIZ = {
       vezCurta: 'pagamento único',
       naoTitulo: 'Para perder a barriga até o verão, você NÃO precisa de:',
       nao: ['<b>Academia</b> nem equipamento', '<b>Dieta radical</b> nem passar fome', '<b>Canetinha</b> de R$ 500 por mês', '<b>Mil abdominais</b> que não tiram a barriga', '<b>Horas</b> livres no dia'],
-      so: 'Só de 15 minutos por dia, em casa.',
+      so: 'Só do Método Cinturão Diva: 15 minutos por dia, em casa.',
       dorTitulo: 'Seja sincera com você',
       dorFecho: 'O verão vai chegar de qualquer jeito. A diferença é como você vai estar quando ele chegar.',
       compTitulo: 'Faça as contas',
@@ -245,11 +245,11 @@ const QUIZ = {
         { nome: 'Protocolo Corpo Diva', preco: 'R$ 47 uma vez', itens: ['Paga <b>uma vez só</b>', 'Em casa, 15 min por dia', 'Cuida do corpo <b>e da cabeça</b>'] },
       ],
       conta: 'Nos seus 30 dias, sai a <b>R$ 1,57 por dia</b>. Menos que um cafezinho.',
-      sabTitulo: 'Os 3 sabotadores da sua barriga, e o que ataca cada um',
+      sabTitulo: 'Os 3 sabotadores da sua barriga, e como o Método Cinturão Diva ataca cada um',
       sab: [
-        ['Cinturão fraco', 'O abdômen profundo enfraquece e a barriga vai pra frente. Abdominal tradicional não resolve.', '→ Aulas de 15 minutos com respiração e hipopressivos.'],
-        ['Dieta radical', 'Você corta tudo, perde uns quilinhos e volta tudo.', '→ Sem dieta radical, com o Cardápio de Emergência Diva de bônus.'],
-        ['A cabeça', 'Estresse, docinho, beliscar à noite, “já estraguei, começo segunda”.', '→ Áudio Mente Magra e Diva e o Planner Diva para cada dia.'],
+        ['Cinturão desligado', 'O músculo que segura a barriga por dentro, como uma cinta, enfraquece e a barriga vai pra frente. Abdominal nenhum resolve.', '→ Religa o cinturão: 15 minutos de respiração e hipopressivos (o vácuo abdominal).'],
+        ['Dieta radical', 'Você corta tudo, perde uns quilinhos e volta tudo.', '→ Fim da dieta radical, com o Cardápio de Emergência Diva.'],
+        ['A cabeça', 'Estresse, docinho, beliscar à noite, “já estraguei, começo segunda”.', '→ Desliga a sabotagem: áudio Mente Magra e Diva e o Planner Diva.'],
       ],
       feitoTitulo: 'Montado a partir do que você respondeu',
       tem: r => ({ canetinha: ['usei', 'uso', 'penso'].includes(r.canetinha), sanfona: ['voltou', 'canetinha'].includes(r.tentou),
@@ -267,7 +267,7 @@ const QUIZ = {
       recebeTitulo: 'Tudo o que você recebe hoje',
       mockupImg: { src: IMG + 'mockup-kit.webp', alt: 'Aulas, áudio, planner e bônus do Protocolo Corpo Diva', w: 1200, h: 851 },
       recebe: [
-        '<b>15 Minutos por Dia</b>: barriga e cintura em ação, com respiração e hipopressivos',
+        '<b>Método Cinturão Diva</b>: aulas de 15 minutos por dia, com respiração e hipopressivos',
         '<b>Conheça Sua Barriga</b>: avaliação inicial, fotos e medidas',
         '<b>Ative Sua Mente Magra e Diva</b>: áudio para a cabeça não sabotar o corpo',
         '<b>Planner Diva</b>: o que fazer em cada dia',

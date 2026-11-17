@@ -222,6 +222,9 @@ Os M da pasta "MICHELE LOW" são esses mesmos vídeos. Mapa conferido pelos quad
    Rastreio LIGADO (03/11): aba **Quiz Diva** em https://painel.michelesalla.com.br/painel/quiz (telas 01–22 = blocos; quiz-p1..p5 = páginas).
 
 ## 8. Diário
+- **17/11 (noite) · VSL v3** (Patrik: "até o 5 tá bom… não vamos prometer centímetros… até 18 kg de gordura em até 30 dias com o
+  Cinturão Diva"): blocos 6, 7 e finais refeitos com essa promessa única; **Método Cinturão Diva aprovado**; oferta v4 com o nome do
+  método no título, nos 3 sabotadores e no que recebe.
 - **17/11 (noite) · VSL v2** (Patrik: "tá sem emoção… sem promessa forte, sem método… ela grava e você edita com emoção, trilha e
   imagens"): roteiro reescrito com 3 ganchos para testar, "não é normal", os 3 sabotadores em ciclo, **Método Cinturão Diva** (nome novo,
   falta o OK), linha do tempo (até 7 cm em 7 dias · até 18 kg em 30 dias), futuro e garantia falada. Duas edições: capa ~75 s e oferta
