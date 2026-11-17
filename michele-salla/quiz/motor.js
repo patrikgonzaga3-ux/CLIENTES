@@ -16,9 +16,9 @@ function sorteiaPromessa() {
   return n
 }
 const P = PROMESSAS[q.get('p')] ? Number(q.get('p')) : (q.get('tela') ? Number(Object.keys(PROMESSAS)[0]) : sorteiaPromessa())
-// 17/11 · Teste da VSL (QUIZ.vsl.teste, ex.: ['inicio', 'oferta']): onde o vídeo da Michele aparece. ?v=i (tela de vídeo logo
-// depois da capa), ?v=o (vídeo no topo da oferta) ou ?v=n (sem vídeo). Sem ?v= sorteia em partes iguais e guarda no aparelho.
-// A tela de vídeo existe nas duas variantes (os números das telas no painel não mudam); na variante "oferta" ela é pulada.
+// 17/11 · Teste da VSL (QUIZ.vsl.teste, ex.: ['inicio', 'oferta']): onde o vídeo da Michele aparece. ?v=i (vídeo na capa, embaixo
+// da promessa, como no quiz do Dr. Márcio), ?v=o (vídeo no topo da oferta) ou ?v=n (sem vídeo). Tela com `vsl: 'inicio'` só existe nessa variante. Sem ?v= sorteia em partes iguais e guarda no aparelho.
+// Telas marcadas com `vsl` ficam na lista nas duas variantes (os números das telas no painel não mudam) e são puladas na outra.
 // O rastreio e o sck ganham a letra da variante (ex.: corpodiva-p1i, corpodiva-p1o) para o painel comparar as duas.
 const VPOS = (() => {
   const V = QUIZ.vsl; if (!V || !V.teste) return ''
@@ -298,6 +298,8 @@ function desenha() {
     h += `<section class="capa capa2">
       <div class="capa2-foto">${img(C.foto, 'fetchpriority="high"')}${C.marca ? `<span class="capa2-marca">${esc(C.marca)}</span>` : ''}</div>
       <h1>${pend(p.titulo)}</h1>
+      ${p.sub && QUIZ.subNaCapa ? `<p class="sub capa2-sub">${txt(p.sub)}</p>` : ''}
+      ${VPOS === 'inicio' ? blocoVsl() : ''}
       ${(p.faixa !== undefined ? p.faixa : C.faixa) ? `<p class="capa2-faixa">${esc(p.faixa !== undefined ? p.faixa : C.faixa)}</p>` : ''}
       ${C.selos && C.selos.length ? `<div class="selos-capa">${C.selos.map(x => `<span>${esc(x)}</span>`).join('')}</div>` : ''}
       <div class="cartao capa2-idade">${capaIdade(QUIZ.idadeNaCapa)}${C.final ? `<p class="capa2-final">${esc(C.final)}</p>` : ''}</div>
@@ -309,6 +311,7 @@ function desenha() {
       <span class="etiqueta">${esc(p.etiqueta)}</span>
       <h1>${pend(p.titulo)}</h1>
       ${QUIZ.idadeNaCapa ? '' : `<p class="sub">${txt(p.sub)}</p>`}
+      ${VPOS === 'inicio' ? blocoVsl() : ''}
       ${QUIZ.idadeNaCapa ? capaIdade(QUIZ.idadeNaCapa) : `<button class="botao" onclick="vai()">${esc(p.botao)} →</button>
       <div class="foto-capa">${img(QUIZ.capa)}</div>
       ${QUIZ.capa.pendencia ? `<p class="miudo"><span class="pend">${esc(QUIZ.capa.pendencia)}</span></p>` : ''}`}

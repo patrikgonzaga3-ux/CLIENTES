@@ -239,3 +239,4 @@ p{margin:0}
 .vsl-vazio b{font:800 19px/1.2 Sora,sans-serif}
 .vsl-play{width:74px;height:74px;border-radius:50%;background:var(--amarelo);color:#111;display:grid;place-items:center;font-size:30px;padding-left:6px;box-shadow:0 10px 24px rgba(0,0,0,.25)}
 .vsl figcaption{font-size:13.5px;color:var(--texto);text-align:center}
+.capa2-sub{margin-top:-6px;text-align:center;font-size:16px}
