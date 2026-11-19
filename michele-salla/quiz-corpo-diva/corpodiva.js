@@ -149,6 +149,9 @@ const EXEMPLO = {
 
 const resultadoFoto = n => ({ src: IMG + 'resultado-' + n + '.webp', alt: 'Antes e depois de aluna do Desafio 7 em 7', w: 800, h: 800 })
 const adFoto = (n, w, h) => ({ src: AD + 'ad-' + n + '.webp', alt: 'Antes e depois de aluna da Michele', w, h })
+// 19/11 (Patrik mandou pela pasta do Drive): antes e depois novos de alunas da Michele, rosto e foto de perfil desfocados.
+// ad-n1 ("2020/2024", resultado de anos) fica fora até o Patrik decidir, para não ficar ao lado de "em até 30 dias".
+const adNovo = (n, w, h) => ({ src: AD + 'ad-n' + n + '.webp', alt: 'Antes e depois de aluna da Michele', w, h })
 const QUIZ = {
   slug: 'corpodiva-p', // painel: corpodiva-p1i, -p1o, -p2i, -p2o (aba Corpo Diva)
   mostraPct: true,
@@ -162,7 +165,7 @@ const QUIZ = {
     pendencia: 'Vídeo ainda não gravado (roteiro pronto em VSL_CORPO_DIVA.md)',
   },
   capaV2: {
-    foto: { src: IMG + 'hero-antes-depois-avatar.webp', alt: 'Antes e depois (ilustração) do Protocolo Corpo Diva', w: 1080, h: 1200 },
+    foto: adNovo(4, 800, 644), // 19/11: era a ilustração de IA (hero-antes-depois-avatar.webp); agora foto real de aluna
     semFotoComVsl: true, // na variante "VSL no início" o vídeo fica no lugar da foto
     marca: 'Protocolo Corpo Diva',
     faixa: 'Para mulheres a partir dos 35, em casa, 15 minutos por dia',
@@ -227,10 +230,10 @@ const QUIZ = {
     // (desligar a v4: v4: null volta para a v3). Mesmo preço e mesmo link. Só fatos do produto e a âncora da canetinha (dado do Patrik).
     v4: {
       titulo: 'Perca a <b>barriga indesejada</b> e até <b>18 kg de gordura</b> em até 30 dias com o Método Cinturão Diva',
-      heroAD: adFoto(2, 715, 900),
+      heroAD: adNovo(4, 800, 644),
       adTitulo: 'Elas começaram. Agora é a sua vez.',
-      adLegenda: 'Alunas do Desafio 7 em 7 da Michele. Os resultados variam de pessoa para pessoa.',
-      antesDepois: [adFoto(1, 682, 900), adFoto(3, 720, 720), adFoto(4, 900, 764), resultadoFoto(5)],
+      adLegenda: 'Alunas da Michele. Os resultados variam de pessoa para pessoa.',
+      antesDepois: [adNovo(2, 800, 809), adNovo(5, 800, 628), adNovo('3g', 800, 630), adFoto(4, 900, 764), adFoto(1, 682, 900), adFoto(3, 720, 720)],
       ancora: 'Menos de 1/10 de <s>1 mês de canetinha (R$ 500+)</s>',
       vez: 'à vista · ou 12x de R$ 4,83 · pagamento único, sem mensalidade',
       vezCurta: 'pagamento único',

@@ -9,7 +9,7 @@
 
 Nada de senha, token ou dado de cliente aqui.
 
-Última atualização: 17/11/2026.
+Última atualização: 19/11/2026.
 
 ---
 
@@ -146,7 +146,11 @@ Os M da pasta "MICHELE LOW" são esses mesmos vídeos. Mapa conferido pelos quad
    Teste da VSL: `?v=i` vídeo na capa (modelo Dr. Márcio), `?v=o` vídeo no topo da oferta, sem `?v=` sorteia 50/50; painel na aba
    **Quiz Corpo Diva** (corpodiva-p1i/-p1o/-p2i/-p2o). Roteiro da VSL (blocos 1–5 + final A capa / final B oferta):
    `quiz-corpo-diva/VSL_CORPO_DIVA.md`. **Falta:** Michele gravar os 2 finais e confirmar o bloco 4; links dos MP4 em `QUIZ.vsl.src`;
-   3 depoimentos; Patrik montar o conjunto de teste (links ?p=1|2&v=i|o). Página final = `oferta.v4` (agressiva: faixa "faltam N dias
+   3 depoimentos; Patrik montar o conjunto de teste
+   **19/11:** a Michele gravou os blocos (12 vídeos no Drive) e as 4 VSLs ficaram prontas (capa p1/p2 ~1 min 30, oferta p1/p2 ~3 min 40,
+   ordem do Ladeira/VVV, p2 sem os 18 kg). **Falta o OK do Patrik:** hospedar (VTurb?), `QUIZ.vsl.src` por promessa e as propostas de copy
+   (R$ 1,57/dia e "menos que um cafezinho", título da oferta p2, riscado da canetinha, "meta de 14 kg", ordem dos 3 sabotadores, capa ?p=3).
+   Antes e depois novos da Michele (pasta do Drive de 19/11) já no ar; ficaram de fora a foto "2020/2024" (resultado de anos) e a do espelho; (links ?p=1|2&v=i|o). Página final = `oferta.v4` (agressiva: faixa "faltam N dias
    para o verão", meta em kg no topo, "você NÃO precisa de", canetinha × Protocolo, 3 sabotadores, duas opções, botão fixo); `v4: null` volta à v3.
 00. **(13/11) Quiz pilates modelado no NovaMente, na branch `claude/wizardly-mayer-043j6t` (NÃO está no ar):** capa com a foto real da
    Michele, selos e idade em botões de texto (45 a 54 primeiro); "% concluído"; altura, peso e peso desejado (telas 12–14); compromisso
@@ -222,6 +226,11 @@ Os M da pasta "MICHELE LOW" são esses mesmos vídeos. Mapa conferido pelos quad
    Rastreio LIGADO (03/11): aba **Quiz Diva** em https://painel.michelesalla.com.br/painel/quiz (telas 01–22 = blocos; quiz-p1..p5 = páginas).
 
 ## 8. Diário
+- **19/11 · Antes e depois novos no Corpo Diva** (Patrik mandou a pasta do Drive e "pode subir"): fotos de alunas da Michele, com rosto e
+  foto de perfil desfocados e o tronco recortado onde aparecia um colar com nome (`quiz-corpo-diva/img/ad-n2`, `ad-n3g`, `ad-n4`, `ad-n5`).
+  Capa `v=o`: sai a ilustração de IA (`hero-antes-depois-avatar.webp`), entra `ad-n4`. Oferta v4: topo `ad-n4` e galeria ad-n2, ad-n5,
+  ad-n3g, ad-4, ad-1, ad-3. Legenda virou "Alunas da Michele. Os resultados variam…" (não se sabe se as novas são do Desafio 7 em 7).
+  Não subiram: a do print "2020/2024" (anos de resultado ao lado de "em até 30 dias") e a do espelho (cortaria na grade quadrada).
 - **17/11 (noite) · Revisão de nomes** (Patrik: "revisa se tá batendo método, nome"): Método Cinturão Diva entrou também na tela
   "meta possível", no compromisso, no "montando o plano", nos 5 perfis, no medo "tempo", nos dois caminhos e no "duas opções";
   capa 1 agora diz "até 18 kg de gordura em até 30 dias" (igual à VSL e à oferta). PDF para a Michele (resumo, links, telas e roteiro):
