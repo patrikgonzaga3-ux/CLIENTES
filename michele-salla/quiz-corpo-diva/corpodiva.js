@@ -165,10 +165,11 @@ const QUIZ = {
     // Um vídeo, dois finais (VSL_CORPO_DIVA.md): na capa vai o final A (convida para o quiz), na oferta o final B (preço e garantia).
     // 19/11 · VSLs editadas (gravação de 19/11, ordem do Ladeira) no VTurb do Patrik. Capa termina em "escolha a sua idade";
     // oferta termina em "toque no botão". Promessa 2 sem os 18 kg. Nomes no VTurb: VSL CAPA 1/2, VSL OFERTA 1/2.
+    // 19/11 (item I aprovado): ofertas trocadas pelas v2, sem "1,57 reais por dia" (M02-16). Nomes no VTurb: "VSL OFERTA 1/2 v2".
     vturbConta: '9406f62d-bd68-44a6-971a-c0a91bdff3c8',
     get src() { return P === 2
-      ? { inicio: 'vturb:6aff3a871750c92b3ebec505', oferta: 'vturb:6aff3a96d6afab099c30069a' }
-      : { inicio: 'vturb:6aff3a8e607bd33518f1f5a6', oferta: 'vturb:6aff3a9b4e411c851d8689bf' } },
+      ? { inicio: 'vturb:6aff3a871750c92b3ebec505', oferta: 'vturb:6aff43919dd4ab1ca5cc7b29' }
+      : { inicio: 'vturb:6aff3a8e607bd33518f1f5a6', oferta: 'vturb:6aff42eac60b8cda78ebcccc' } },
     poster: { inicio: '', oferta: '' },
     vazio: { inicio: 'VSL da Michele · ~75 s · versão capa', oferta: 'VSL da Michele · ~2 min 30 · versão oferta' },
     pendencia: 'Vídeo ainda não gravado (roteiro pronto em VSL_CORPO_DIVA.md)',
