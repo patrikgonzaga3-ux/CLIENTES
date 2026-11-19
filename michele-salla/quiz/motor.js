@@ -327,6 +327,8 @@ function ofertaV4(pf, O, m, botao) {
       ${VPOS === 'oferta' ? blocoVsl() : `<figure class="v4-hero" style="margin:0">${img(V.heroAD, 'loading="eager"')}<figcaption>${txt(V.adLegenda)}</figcaption></figure>`}
     </div>
     ${caixa(' v4-primeiro')}
+    <!-- 19/11 (Ladeira, M03-02, aprovado): os 3 sabotadores vêm antes do "não precisa de", da dor e da conta -->
+    <div class="v4-bloco"><h3>${esc(V.sabTitulo)}</h3><ol class="v4-sab">${V.sab.map(([a, b, c]) => `<li><b>${esc(a)}</b><span>${rico(b)}</span><em>${rico(c)}</em></li>`).join('')}</ol></div>
     <div class="v4-bloco v4-nao"><h3>${esc(V.naoTitulo)}</h3><ul>${V.nao.map(x => `<li>${rico(x)}</li>`).join('')}</ul><p class="v4-so">${rico(V.so)}</p></div>
     ${se || imp.length ? `<div class="v4-bloco v4-dor"><h3>${esc(V.dorTitulo)}</h3>
       ${se ? `<p>Você disse que, se nada mudar, o seu próximo verão vai ser <b>${esc(minusc(se))}</b>.</p>` : ''}
@@ -339,7 +341,6 @@ function ofertaV4(pf, O, m, botao) {
     <h3 class="v4-h">${esc(V.adTitulo)}</h3>
     <div class="grade v4-ad">${V.antesDepois.map(x => img(x, 'loading="lazy"')).join('')}</div><p class="aviso">${txt(V.adLegenda)}</p>
     ${botao}
-    <div class="v4-bloco"><h3>${esc(V.sabTitulo)}</h3><ol class="v4-sab">${V.sab.map(([a, b, c]) => `<li><b>${esc(a)}</b><span>${rico(b)}</span><em>${rico(c)}</em></li>`).join('')}</ol></div>
     <div class="v4-bloco"><h3>${esc(V.feitoTitulo)}</h3><ul class="check">${(V.feitoLista || []).filter(([k]) => tem[k]).slice(0, 3).map(([, x]) => `<li>${rico(x)}</li>`).join('')}
       <li><b>Seu perfil: ${esc(pf.nome)}.</b> ${txt(pf.comeca)}</li></ul>
       ${m ? `<p class="v4-medo"><b>Você disse que tem medo de “${esc(minusc(rotulo('medo', resp.medo)))}”.</b> ${txt(m)}</p>` : ''}</div>

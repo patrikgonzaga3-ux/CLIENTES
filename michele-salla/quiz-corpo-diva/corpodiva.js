@@ -18,14 +18,18 @@ const PROMESSAS = {
   1: {
     nome: 'Barriga até o verão · 18 kg em 30 dias',
     etiqueta: 'Quiz gratuito',
-    titulo: 'Perca de uma vez por todas a <mark>barriga indesejada</mark> até o verão',
-    sub: 'Receba um plano personalizado para perder até 18 kg de gordura em até 30 dias.',
+    // 19/11 (Ladeira, M03-02, aprovado pelo Patrik): a 1ª frase é premissa, não promessa nem imperativo. Antes: "Perca de uma vez por
+    // todas a barriga indesejada até o verão" + "Receba um plano personalizado para perder até 18 kg de gordura em até 30 dias."
+    titulo: 'Se você tem mais de 35 anos e a barriga não sai de jeito nenhum, <mark>o problema não é você</mark>',
+    sub: 'É um músculo que desligou aí dentro da sua barriga. Em 3 minutos você recebe o seu plano para perder até 18 kg de gordura em até 30 dias.',
   },
   2: {
     nome: 'Corpo durinho antes do verão',
     etiqueta: 'Quiz gratuito',
-    titulo: 'Emagreça e fique com o <mark>corpo durinho</mark> antes do verão chegar',
-    sub: 'Responda e receba o seu plano personalizado, montado a partir do seu corpo e da sua rotina.',
+    // 19/11 (Ladeira, M03-02/03, aprovado): premissa no lugar do imperativo. Antes: "Emagreça e fique com o corpo durinho antes do
+    // verão chegar" + "Responda e receba o seu plano personalizado, montado a partir do seu corpo e da sua rotina."
+    titulo: 'Depois dos 35, <mark>abdominal nenhum</mark> deixa a barriga durinha se o músculo que segura ela por dentro desligou',
+    sub: 'Em 3 minutos você recebe o seu plano para ficar com o corpo durinho antes do verão, montado a partir do seu corpo e da sua rotina.',
   },
 }
 
@@ -56,7 +60,7 @@ const TELAS = [
   { id: 'altura', tipo: 'numero', titulo: 'Qual é a sua altura?', sub: 'Em centímetros. Usamos só para montar o seu plano.', unidade: 'cm', min: 130, max: 200, padrao: 160 },
   { id: 'peso', tipo: 'numero', titulo: 'Qual é o seu peso hoje?', sub: 'Em quilos. Fica só no seu celular.', unidade: 'kg', min: 35, max: 200, padrao: 75 },
   { id: 'peso-meta', tipo: 'numero', titulo: 'E qual peso você quer ter no verão?', sub: 'Em quilos. Não existe resposta certa.', unidade: 'kg', min: 35, max: 200, padrao: r => (Number(r.peso) || 75) - 8 },
-  { id: 'meta-possivel', tipo: 'texto', rot: '✓ Meta registrada', titulo: '{nome}a sua meta de {meta} é possível, e você não precisa fazer isso sozinha.',
+  { id: 'meta-possivel', tipo: 'texto', rot: '✓ Meta registrada', titulo: '{nome}a sua meta é possível, e você não precisa fazer isso sozinha.', // 19/11 (Ladeira, M03-03, aprovado): sem o número
     textos: ['Muitas mulheres chegam até mim depois de tentar de tudo: dieta, abdominal, canetinha. O que faltava não era força de vontade. Era o método certo. Foi para isso que eu criei o Método Cinturão Diva: 15 minutos por dia que atacam, ao mesmo tempo, os 3 sabotadores da barriga.',
       'Nas próximas perguntas, eu vejo a sua rotina e o que mais te tira do caminho, para montar o seu plano.'],
     img: { src: AD + 'ad-1.webp', alt: 'Antes e depois de aluna do Desafio 7 em 7 da Michele', w: 682, h: 900 },
@@ -234,12 +238,16 @@ const QUIZ = {
     // 17/11 (Patrik: "na última tela não gostei, tá ruim, pode ser mais agressivo"): página final v4. A v3 abaixo fica guardada
     // (desligar a v4: v4: null volta para a v3). Mesmo preço e mesmo link. Só fatos do produto e a âncora da canetinha (dado do Patrik).
     v4: {
-      titulo: 'Perca a <b>barriga indesejada</b> e até <b>18 kg de gordura</b> em até 30 dias com o Método Cinturão Diva',
+      // 19/11 (Ladeira, aprovado): título segue a promessa da capa (coerência, M02-13) e mostra o "como" (QFD, M04-01).
+      // Antes, igual para as duas: "Perca a barriga indesejada e até 18 kg de gordura em até 30 dias com o Método Cinturão Diva".
+      get titulo() { return P === 2
+        ? 'O seu plano do <b>Método Cinturão Diva</b>: 15 minutos por dia, em casa, para ficar com o <b>corpo durinho</b> antes do verão'
+        : 'O seu plano do <b>Método Cinturão Diva</b>: 15 minutos por dia, em casa, para perder a <b>barriga indesejada</b> e até <b>18 kg de gordura</b> em até 30 dias' },
       heroAD: adNovo(4, 800, 644),
       adTitulo: 'Elas começaram. Agora é a sua vez.',
       adLegenda: 'Alunas da Michele. Os resultados variam de pessoa para pessoa.',
       antesDepois: [adNovo(2, 800, 809), adNovo(5, 800, 628), adNovo('3g', 800, 630), adFoto(4, 900, 764), adFoto(1, 682, 900), adFoto(3, 720, 720)],
-      ancora: 'Menos de 1/10 de <s>1 mês de canetinha (R$ 500+)</s>',
+      ancora: 'Menos de 1/10 de 1 mês de canetinha (R$ 500+)', // 19/11 (M02-16, aprovado): sem riscado
       vez: 'à vista · ou 12x de R$ 4,83 · pagamento único, sem mensalidade',
       vezCurta: 'pagamento único',
       naoTitulo: 'Para perder a barriga até o verão, você NÃO precisa de:',
@@ -252,7 +260,7 @@ const QUIZ = {
         { nome: 'Canetinha', preco: 'R$ 500+ por mês', itens: ['Paga <b>todo mês</b>', 'Precisa de receita', 'Não ensina o hábito'] },
         { nome: 'Protocolo Corpo Diva', preco: 'R$ 47 uma vez', itens: ['Paga <b>uma vez só</b>', 'Em casa, 15 min por dia', 'Cuida do corpo <b>e da cabeça</b>'] },
       ],
-      conta: 'Nos seus 30 dias, sai a <b>R$ 1,57 por dia</b>. Menos que um cafezinho.',
+      conta: 'A canetinha cobra <b>todo mês</b>. O Protocolo, <b>uma vez só</b>.', // 19/11 (M02-16, aprovado): sai "R$ 1,57 por dia. Menos que um cafezinho"
       sabTitulo: 'Os 3 sabotadores da sua barriga, e como o Método Cinturão Diva ataca cada um',
       sab: [
         ['Cinturão desligado', 'O músculo que segura a barriga por dentro, como uma cinta, enfraquece e a barriga vai pra frente. Abdominal nenhum resolve.', '→ Religa o cinturão: 15 minutos de respiração e hipopressivos (o vácuo abdominal).'],
@@ -301,7 +309,9 @@ const QUIZ = {
       ],
       duas: { titulo: 'Agora você tem duas opções',
         a: ['Fechar esta página', 'E chegar no verão do mesmo jeito: a roupa larga, a barriga escondida na foto e a segunda-feira como data do recomeço.'],
-        d: ['Começar hoje, por R$ 47', 'Seguir o Método Cinturão Diva 15 minutos por dia e, em até 30 dias, perder até <b>18 kg de gordura</b> e chegar no verão <b>sem a barriga indesejada</b>.'] },
+        get d() { return ['Começar hoje, por R$ 47', P === 2 // 19/11 (aprovado): coerente com a promessa da capa (M02-13)
+          ? 'Seguir o Método Cinturão Diva 15 minutos por dia e chegar no verão com o <b>corpo durinho</b>, <b>sem a barriga indesejada</b>.'
+          : 'Seguir o Método Cinturão Diva 15 minutos por dia e, em até 30 dias, perder até <b>18 kg de gordura</b> e chegar no verão <b>sem a barriga indesejada</b>.'] } },
     },
     v3: {
       selo: 'Seu plano está pronto · acesso imediato',
