@@ -9,7 +9,7 @@
 
 Nada de senha, token ou dado de cliente aqui.
 
-Última atualização: 17/11/2026.
+Última atualização: 19/11/2026.
 
 ---
 
@@ -139,6 +139,16 @@ Os M da pasta "MICHELE LOW" são esses mesmos vídeos. Mapa conferido pelos quad
 **Painel publica sozinho:** todo push na main do CLIENTES gera deploy na Vercel ("Ptk midias") em ~1 min.
 
 ## 7. Pendências (na ordem)
+0000. **(19/11) Universo Diva (página 8926, michelesalla.com.br/universo-diva/) · preço novo ESPERANDO OK do Patrik:** trocar os 5 botões
+   de `pay.hotmart.com/T104321502Q` para `pay.hotmart.com/E107866373U?off=w5xxm4uy` (produto "UNIVERSO DIVA 3.0", conferido no checkout
+   em reais: R$ 497 à vista ou 12x de R$ 41,42, total R$ 497,04) e a caixa de preço (widgets aac737d "12x de R$ 103,11" → "12x de R$ 41,42"
+   e cd8e483 "ou R$ 997,00 à vista" → "ou R$ 497,00 à vista"). Botões: 37785db, ae29b79, 6e32419, 06535bb, 581c767. Ancoragem "TOTAL =
+   3.482,00" fica; decidir se o bônus "Ritual Diário da Diva R$ 497,00" muda. Erros de digitação vistos: "Ao logo do ano teremos inumenros"
+   e "primeiros resultado"; carrossel de alunas apareceu vazio no celular. Cópia de segurança do Elementor da página feita antes de mexer
+   (scratchpad da sessão de 19/11, não versionada: fazer outra antes de gravar).
+   **Acesso ao WordPress na nuvem (19/11):** senha de aplicativo do usuário michelesalla (administrador) salva como segredo de rede do
+   ambiente "Fábrica de Conteúdo IA" para michelesalla.com.br; o proxy injeta. Rodar o script com valores de mentira:
+   `WP_URL=https://michelesalla.com.br WP_USUARIO=proxy-injected WP_SENHA_APP=proxy-injected python3 tools/wp_michele.py teste`.
 000. **(17/11) Quiz Protocolo Corpo Diva NO AR (Patrik: "pode subir, mantém os 18 kg") em https://quiz.michelesalla.com.br/corpodiva/:** `michele-salla/quiz-corpo-diva/`
    (textos em `corpodiva.js`, motor compartilhado `quiz/motor.js`), endereço depois de subir `quiz.michelesalla.com.br/corpodiva/`.
    É o Desafio 7 em 7 com outro nome (Patrik: "mantém o checkout": E1YMM7, R$ 47). Capa 1 "Perca de uma vez por todas a barriga
@@ -222,6 +232,10 @@ Os M da pasta "MICHELE LOW" são esses mesmos vídeos. Mapa conferido pelos quad
    Rastreio LIGADO (03/11): aba **Quiz Diva** em https://painel.michelesalla.com.br/painel/quiz (telas 01–22 = blocos; quiz-p1..p5 = páginas).
 
 ## 8. Diário
+- **19/11 · VSL v4 (estilo Ladeira) em RASCUNHO:** `quiz-corpo-diva/VSL_CORPO_DIVA_v4_ladeira_RASCUNHO.md` (mesma estrutura e promessas
+  da v3, com "Ah, Michele, mas…" quebrando objeções, a cinta como comparação, a conta do cafezinho e garantia sem letra miúda). O Patrik
+  pediu para parar ("esquece") antes de ver; a v3 continua sendo a oficial (PDFs enviados). Quiz e oferta NÃO foram revisados no estilo Ladeira.
+  Universo Diva: acesso ao WordPress ok, preço novo mapeado e esperando OK (pendência 0000).
 - **17/11 (noite) · Revisão de nomes** (Patrik: "revisa se tá batendo método, nome"): Método Cinturão Diva entrou também na tela
   "meta possível", no compromisso, no "montando o plano", nos 5 perfis, no medo "tempo", nos dois caminhos e no "duas opções";
   capa 1 agora diz "até 18 kg de gordura em até 30 dias" (igual à VSL e à oferta). PDF para a Michele (resumo, links, telas e roteiro):
