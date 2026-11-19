@@ -236,6 +236,17 @@ Os M da pasta "MICHELE LOW" são esses mesmos vídeos. Mapa conferido pelos quad
    Rastreio LIGADO (03/11): aba **Quiz Diva** em https://painel.michelesalla.com.br/painel/quiz (telas 01–22 = blocos; quiz-p1..p5 = páginas).
 
 ## 8. Diário
+- **19/11 (noite) · Corpo Diva pronto para o teste** (Patrik: "pode executar todos os 3"):
+  - VSLs no ar pelo VTurb (conta 9406f62d…): capa p1 6aff3a8e607bd33518f1f5a6, capa p2 6aff3a871750c92b3ebec505, oferta p1 v2
+    6aff42eac60b8cda78ebcccc, oferta p2 v2 6aff43919dd4ab1ca5cc7b29 (ofertas sem "1,57 por dia"). `motor.js` monta o player quando
+    `src = 'vturb:<id>'`; `QUIZ.vsl.src` é por promessa. Retenção da VSL agora fica no VTurb (o Clarity só via o `<video>` antigo).
+  - Copy pelo Ladeira (itens A a H): capas com premissa na 1ª frase, meta sem número, título da oferta e "duas opções" por promessa,
+    âncora sem riscado, conta sem "cafezinho", 3 sabotadores antes da conta.
+  - Pitch (só no painel do VTurb): oferta p1 2:25 ("O seu plano já está pronto"), preço 2:58; oferta p2 2:22 e 2:54.
+  - Link do teste: `https://quiz.michelesalla.com.br/corpodiva/` sem ?p e ?v (25% por variante, conferido em 400 aparelhos).
+  - Pixel conferido no Meta: PageView do quiz todo dia, CliqueComprar, ViewContent/AddToCart/InitiateCheckout da Greenn. Falta
+    ver um Purchase (compra de teste com e-mail em `pl_emails_teste`).
+  - PDF para a Michele gravar 15 criativos (5 ganchos, 5 corpos, 5 CTAs, pelo Ladeira): fora do repositório (sessão de 19/11).
 - **19/11 · Antes e depois novos no Corpo Diva** (Patrik mandou a pasta do Drive e "pode subir"): fotos de alunas da Michele, com rosto e
   foto de perfil desfocados e o tronco recortado onde aparecia um colar com nome (`quiz-corpo-diva/img/ad-n2`, `ad-n3g`, `ad-n4`, `ad-n5`).
   Capa `v=o`: sai a ilustração de IA (`hero-antes-depois-avatar.webp`), entra `ad-n4`. Oferta v4: topo `ad-n4` e galeria ad-n2, ad-n5,
