@@ -282,6 +282,12 @@ function blocoVsl() {
   // src/poster/vazio podem ser um texto só ou um por posição: { inicio: '…', oferta: '…' } (finais diferentes do mesmo vídeo)
   const por = x => (x && typeof x === 'object' ? x[VPOS] : x) || ''
   const src = por(V.src), poster = por(V.poster)
+  // 19/11 · VSL hospedada no VTurb: src = 'vturb:<id do player>' monta o player oficial (mesmo código do painel do VTurb)
+  if (/^vturb:/.test(src)) {
+    const id = src.slice(6).replace(/[^a-z0-9]/gi, '')
+    setTimeout(() => { const t = document.createElement('script'); t.async = true; t.src = `https://scripts.converteai.net/${QUIZ.vsl.vturbConta}/players/${id}/v4/player.js`; document.head.appendChild(t) }, 0)
+    return `<figure class="vsl" style="margin:0"><vturb-smartplayer id="vid-${id}" style="display:block;margin:0 auto;width:100%;max-width:400px"><div class="vturb-player-placeholder" style="position:relative;width:100%;padding:177.77777777777777% 0 0;z-index:0;background-color:black"></div></vturb-smartplayer>${V.legenda ? `<figcaption>${txt(V.legenda)}</figcaption>` : ''}</figure>`
+  }
   const midia = src
     ? `<video class="vsl-video" src="${esc(src)}"${poster ? ` poster="${esc(poster)}"` : ''} playsinline controls preload="metadata" onplay="vslVisto.play||(vslVisto.play=1,marca('event','vsl_play'))" ontimeupdate="vslTempo(this)"></video>`
     : `<div class="vsl-vazio" role="img" aria-label="Lugar do vídeo da Michele"><span class="vsl-play" aria-hidden="true">▶</span><b>${esc(por(V.vazio) || 'Vídeo da Michele')}</b><span class="pend">${esc(V.pendencia || 'Vídeo ainda não gravado')}</span></div>`
