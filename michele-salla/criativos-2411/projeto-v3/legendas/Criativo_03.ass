@@ -1,0 +1,64 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: L,Inter Display Black,84,&H00FFFFFF,&H00FFFFFF,&H00111111,&H96000000,1,0,0,0,100,100,0,0,1,7,4,2,80,80,680,1
+Style: pink,Inter Display Black,72,&H00FFFFFF,&H00FFFFFF,&H007818E9,&H00000000,1,0,0,0,100,100,0,0,3,24,0,8,80,80,285,1
+Style: red,Inter Display Black,72,&H00FFFFFF,&H00FFFFFF,&H003539E5,&H00000000,1,0,0,0,100,100,0,0,3,24,0,8,80,80,285,1
+Style: dark,Inter Display Black,72,&H00FFFFFF,&H00FFFFFF,&H00201A1A,&H00000000,1,0,0,0,100,100,0,0,3,24,0,8,80,80,285,1
+Style: num,Inter Display Black,300,&H00FFFFFF,&H00FFFFFF,&H007818E9,&H64000000,1,0,0,0,100,100,0,0,1,14,6,8,0,0,270,1
+Style: cta,Inter Display Black,74,&H00201A1A,&H00FFFFFF,&H004DE1FF,&H00000000,1,0,0,0,100,100,0,0,3,26,0,2,80,80,810,1
+Style: nome,Inter Display Black,64,&H00FFFFFF,&H00FFFFFF,&H007818E9,&H00000000,1,0,0,0,100,100,0,0,3,20,0,7,80,80,285,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+
+Dialogue: 1,0:00:00.00,0:00:01.07,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}DEPOIS DOS {\c&H004DE1FF&}35,{\c&H00FFFFFF&}
+Dialogue: 1,0:00:01.53,0:00:02.33,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}{\c&H004DE1FF&}ABDOMINAL{\c&H00FFFFFF&} NENHUM
+Dialogue: 1,0:00:02.33,0:00:03.59,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}RESOLVE A {\c&H004DE1FF&}BARRIGA{\c&H00FFFFFF&}
+Dialogue: 1,0:00:03.59,0:00:04.02,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}E TEM UM
+Dialogue: 1,0:00:04.02,0:00:04.51,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}{\c&H004DE1FF&}MOTIVO.{\c&H00FFFFFF&}
+Dialogue: 1,0:00:04.51,0:00:05.03,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}A {\c&H004DE1FF&}BARRIGA{\c&H00FFFFFF&} TEM
+Dialogue: 1,0:00:05.03,0:00:06.39,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}UMA {\c&H004DE1FF&}CINTA{\c&H00FFFFFF&} NATURAL
+Dialogue: 1,0:00:06.39,0:00:07.20,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}LÁ POR DENTRO,
+Dialogue: 1,0:00:07.20,0:00:07.40,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}QUE É UM
+Dialogue: 1,0:00:07.40,0:00:08.45,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}{\c&H004DE1FF&}MÚSCULO{\c&H00FFFFFF&} {\c&H004DE1FF&}TRANSVERSO{\c&H00FFFFFF&}
+Dialogue: 1,0:00:08.45,0:00:09.09,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}DO ABDÔMEN.
+Dialogue: 1,0:00:09.09,0:00:09.38,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}QUANDO ELE
+Dialogue: 1,0:00:09.38,0:00:10.17,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}ENFRAQUECE,
+Dialogue: 1,0:00:10.17,0:00:11.01,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}A {\c&H004DE1FF&}BARRIGA{\c&H00FFFFFF&} VAI
+Dialogue: 1,0:00:11.01,0:00:11.61,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}PARA FRENTE E
+Dialogue: 1,0:00:11.61,0:00:12.39,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}{\c&H004DE1FF&}ABDOMINAL{\c&H00FFFFFF&} NENHUM
+Dialogue: 1,0:00:12.39,0:00:13.08,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}RESOLVE O
+Dialogue: 1,0:00:13.08,0:00:13.47,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}PROBLEMA.
+Dialogue: 1,0:00:13.47,0:00:13.80,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}É POR ISSO
+Dialogue: 1,0:00:13.80,0:00:14.42,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}QUE EU CRIEI
+Dialogue: 1,0:00:14.42,0:00:15.30,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}UM MÉTODO
+Dialogue: 1,0:00:15.30,0:00:16.57,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}{\c&H004DE1FF&}CINTURÃO{\c&H00FFFFFF&} DIVA:
+Dialogue: 1,0:00:16.57,0:00:17.59,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}RESPIRAÇÃO
+Dialogue: 1,0:00:17.59,0:00:18.68,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}E {\c&H004DE1FF&}HIPOPRESSIVO,{\c&H00FFFFFF&}
+Dialogue: 1,0:00:18.68,0:00:19.58,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}{\c&H004DE1FF&}15{\c&H00FFFFFF&} {\c&H004DE1FF&}MINUTINHOS{\c&H00FFFFFF&} POR
+Dialogue: 1,0:00:19.58,0:00:20.16,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}DIA E
+Dialogue: 1,0:00:20.16,0:00:20.65,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}EM CASA.
+Dialogue: 1,0:00:20.65,0:00:21.28,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}CADA MULHER É
+Dialogue: 1,0:00:21.28,0:00:21.97,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}{\c&H004DE1FF&}ÚNICA,{\c&H00FFFFFF&}
+Dialogue: 1,0:00:21.97,0:00:22.42,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}O CORPO,
+Dialogue: 1,0:00:22.42,0:00:23.24,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}A ROTINA,
+Dialogue: 1,0:00:23.24,0:00:24.16,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}A {\c&H004DE1FF&}IDADE,{\c&H00FFFFFF&}
+Dialogue: 1,0:00:24.16,0:00:24.45,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}POR ISSO EU
+Dialogue: 1,0:00:24.45,0:00:25.23,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}PREPAREI UM {\c&H004DE1FF&}TESTE{\c&H00FFFFFF&}
+Dialogue: 1,0:00:25.23,0:00:26.48,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}MUITO RÁPIDO,
+Dialogue: 1,0:00:26.48,0:00:27.62,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}TOCA EM {\c&H004DE1FF&}SAIBA{\c&H00FFFFFF&} {\c&H004DE1FF&}MAIS{\c&H00FFFFFF&}
+Dialogue: 1,0:00:27.62,0:00:28.75,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}E VEM COMIGO.
+Dialogue: 2,0:00:01.56,0:00:03.36,red,,0,0,0,,{\fad(70,140)\fscx60\fscy60\t(0,120,\fscx106\fscy106)\t(120,200,\fscx100\fscy100)}ABDOMINAL\NNÃO RESOLVE
+Dialogue: 2,0:00:04.05,0:00:05.85,pink,,0,0,0,,{\fad(70,140)\fscx60\fscy60\t(0,120,\fscx106\fscy106)\t(120,200,\fscx100\fscy100)}TEM UM MOTIVO
+Dialogue: 2,0:00:07.75,0:00:09.55,pink,,0,0,0,,{\fad(70,140)\fscx60\fscy60\t(0,120,\fscx106\fscy106)\t(120,200,\fscx100\fscy100)}TRANSVERSO\NDO ABDÔMEN
+Dialogue: 2,0:00:11.64,0:00:13.44,red,,0,0,0,,{\fad(70,140)\fscx60\fscy60\t(0,120,\fscx106\fscy106)\t(120,200,\fscx100\fscy100)}ABDOMINAL\NNÃO RESOLVE
+Dialogue: 2,0:00:14.94,0:00:16.74,pink,,0,0,0,,{\fad(70,140)\fscx60\fscy60\t(0,120,\fscx106\fscy106)\t(120,200,\fscx100\fscy100)}MÉTODO CINTURÃO DIVA
+Dialogue: 2,0:00:18.62,0:00:20.42,pink,,0,0,0,,{\fad(70,140)\fscx60\fscy60\t(0,120,\fscx106\fscy106)\t(120,200,\fscx100\fscy100)}15 MIN POR DIA\NEM CASA
+Dialogue: 2,0:00:21.31,0:00:23.11,pink,,0,0,0,,{\fad(70,140)\fscx60\fscy60\t(0,120,\fscx106\fscy106)\t(120,200,\fscx100\fscy100)}CADA MULHER É ÚNICA
+Dialogue: 4,0:00:26.51,0:00:29.00,cta,,0,0,0,,{\fad(120,0)\fscx70\fscy70\t(0,160,\fscx104\fscy104)\t(160,260,\fscx100\fscy100)\t(900,1100,\fscx106\fscy106)\t(1100,1300,\fscx100\fscy100)}TOQUE EM SAIBA MAIS  ↓

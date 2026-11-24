@@ -1,0 +1,58 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: L,Inter Display Black,84,&H00FFFFFF,&H00FFFFFF,&H00111111,&H96000000,1,0,0,0,100,100,0,0,1,7,4,2,80,80,680,1
+Style: pink,Inter Display Black,72,&H00FFFFFF,&H00FFFFFF,&H007818E9,&H00000000,1,0,0,0,100,100,0,0,3,24,0,8,80,80,285,1
+Style: red,Inter Display Black,72,&H00FFFFFF,&H00FFFFFF,&H003539E5,&H00000000,1,0,0,0,100,100,0,0,3,24,0,8,80,80,285,1
+Style: dark,Inter Display Black,72,&H00FFFFFF,&H00FFFFFF,&H00201A1A,&H00000000,1,0,0,0,100,100,0,0,3,24,0,8,80,80,285,1
+Style: num,Inter Display Black,300,&H00FFFFFF,&H00FFFFFF,&H007818E9,&H64000000,1,0,0,0,100,100,0,0,1,14,6,8,0,0,270,1
+Style: cta,Inter Display Black,74,&H00201A1A,&H00FFFFFF,&H004DE1FF,&H00000000,1,0,0,0,100,100,0,0,3,26,0,2,80,80,810,1
+Style: nome,Inter Display Black,64,&H00FFFFFF,&H00FFFFFF,&H007818E9,&H00000000,1,0,0,0,100,100,0,0,3,20,0,7,80,80,285,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+
+Dialogue: 1,0:00:00.00,0:00:00.96,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}EXISTE UM {\c&H004DE1FF&}MÚSCULO{\c&H00FFFFFF&}
+Dialogue: 1,0:00:00.96,0:00:02.01,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}QUE SEGURA SUA
+Dialogue: 1,0:00:02.01,0:00:03.11,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}{\c&H004DE1FF&}BARRIGA{\c&H00FFFFFF&} POR DENTRO
+Dialogue: 1,0:00:03.11,0:00:03.71,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}COMO SE FOSSE
+Dialogue: 1,0:00:03.71,0:00:04.77,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}UMA {\c&H004DE1FF&}CINTA{\c&H00FFFFFF&} E
+Dialogue: 1,0:00:04.77,0:00:05.71,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}DEPOIS DOS 35
+Dialogue: 1,0:00:05.71,0:00:06.63,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}ELE PODE
+Dialogue: 1,0:00:06.63,0:00:07.16,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}SIMPLESMENTE
+Dialogue: 1,0:00:07.16,0:00:08.11,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}{\c&H004DE1FF&}DESLIGAR.{\c&H00FFFFFF&}
+Dialogue: 1,0:00:08.11,0:00:08.40,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}QUANDO ELE
+Dialogue: 1,0:00:08.40,0:00:09.18,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}ENFRAQUECE,
+Dialogue: 1,0:00:09.18,0:00:10.02,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}A {\c&H004DE1FF&}BARRIGA{\c&H00FFFFFF&} VAI
+Dialogue: 1,0:00:10.02,0:00:10.62,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}PARA FRENTE E
+Dialogue: 1,0:00:10.62,0:00:11.41,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}{\c&H004DE1FF&}ABDOMINAL{\c&H00FFFFFF&} NENHUM
+Dialogue: 1,0:00:11.41,0:00:12.10,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}RESOLVE O
+Dialogue: 1,0:00:12.10,0:00:12.49,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}PROBLEMA.
+Dialogue: 1,0:00:12.49,0:00:12.82,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}É POR ISSO
+Dialogue: 1,0:00:12.82,0:00:13.44,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}QUE EU CRIEI
+Dialogue: 1,0:00:13.44,0:00:14.32,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}UM MÉTODO
+Dialogue: 1,0:00:14.32,0:00:15.59,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}{\c&H004DE1FF&}CINTURÃO{\c&H00FFFFFF&} DIVA:
+Dialogue: 1,0:00:15.59,0:00:16.61,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}RESPIRAÇÃO
+Dialogue: 1,0:00:16.61,0:00:17.70,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}E {\c&H004DE1FF&}HIPOPRESSIVO,{\c&H00FFFFFF&}
+Dialogue: 1,0:00:17.70,0:00:18.59,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}{\c&H004DE1FF&}15{\c&H00FFFFFF&} {\c&H004DE1FF&}MINUTINHOS{\c&H00FFFFFF&} POR
+Dialogue: 1,0:00:18.59,0:00:19.18,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}DIA E
+Dialogue: 1,0:00:19.18,0:00:19.67,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}EM CASA.
+Dialogue: 1,0:00:19.67,0:00:20.17,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}O {\c&H004DE1FF&}TESTE{\c&H00FFFFFF&} É
+Dialogue: 1,0:00:20.17,0:00:21.16,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}{\c&H004DE1FF&}GRÁTIS{\c&H00FFFFFF&} E SEM
+Dialogue: 1,0:00:21.16,0:00:21.85,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}CADASTRO,
+Dialogue: 1,0:00:21.85,0:00:22.84,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}NO FINAL VOCÊ
+Dialogue: 1,0:00:22.84,0:00:23.62,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}VÊ O
+Dialogue: 1,0:00:23.62,0:00:24.43,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}SEU {\c&H004DE1FF&}PLANO,{\c&H00FFFFFF&}
+Dialogue: 1,0:00:24.43,0:00:25.38,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}TOCA EM {\c&H004DE1FF&}SAIBA{\c&H00FFFFFF&}
+Dialogue: 1,0:00:25.38,0:00:26.05,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}{\c&H004DE1FF&}MAIS.{\c&H00FFFFFF&}
+Dialogue: 2,0:00:07.19,0:00:08.99,red,,0,0,0,,{\fad(70,140)\fscx60\fscy60\t(0,120,\fscx106\fscy106)\t(120,200,\fscx100\fscy100)}ELE PODE DESLIGAR
+Dialogue: 2,0:00:10.65,0:00:12.45,red,,0,0,0,,{\fad(70,140)\fscx60\fscy60\t(0,120,\fscx106\fscy106)\t(120,200,\fscx100\fscy100)}ABDOMINAL\NNÃO RESOLVE
+Dialogue: 2,0:00:13.96,0:00:15.76,pink,,0,0,0,,{\fad(70,140)\fscx60\fscy60\t(0,120,\fscx106\fscy106)\t(120,200,\fscx100\fscy100)}MÉTODO CINTURÃO DIVA
+Dialogue: 2,0:00:17.63,0:00:19.43,pink,,0,0,0,,{\fad(70,140)\fscx60\fscy60\t(0,120,\fscx106\fscy106)\t(120,200,\fscx100\fscy100)}15 MIN POR DIA\NEM CASA
+Dialogue: 2,0:00:20.20,0:00:22.00,pink,,0,0,0,,{\fad(70,140)\fscx60\fscy60\t(0,120,\fscx106\fscy106)\t(120,200,\fscx100\fscy100)}TESTE GRÁTIS\NSEM CADASTRO
+Dialogue: 4,0:00:24.36,0:00:26.20,cta,,0,0,0,,{\fad(120,0)\fscx70\fscy70\t(0,160,\fscx104\fscy104)\t(160,260,\fscx100\fscy100)\t(900,1100,\fscx106\fscy106)\t(1100,1300,\fscx100\fscy100)}TOQUE EM SAIBA MAIS  ↓

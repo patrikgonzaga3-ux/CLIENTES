@@ -1,0 +1,57 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: L,Inter Display Black,84,&H00FFFFFF,&H00FFFFFF,&H00111111,&H96000000,1,0,0,0,100,100,0,0,1,7,4,2,80,80,680,1
+Style: pink,Inter Display Black,72,&H00FFFFFF,&H00FFFFFF,&H007818E9,&H00000000,1,0,0,0,100,100,0,0,3,24,0,8,80,80,285,1
+Style: red,Inter Display Black,72,&H00FFFFFF,&H00FFFFFF,&H003539E5,&H00000000,1,0,0,0,100,100,0,0,3,24,0,8,80,80,285,1
+Style: dark,Inter Display Black,72,&H00FFFFFF,&H00FFFFFF,&H00201A1A,&H00000000,1,0,0,0,100,100,0,0,3,24,0,8,80,80,285,1
+Style: num,Inter Display Black,300,&H00FFFFFF,&H00FFFFFF,&H007818E9,&H64000000,1,0,0,0,100,100,0,0,1,14,6,8,0,0,270,1
+Style: cta,Inter Display Black,74,&H00201A1A,&H00FFFFFF,&H004DE1FF,&H00000000,1,0,0,0,100,100,0,0,3,26,0,2,80,80,810,1
+Style: nome,Inter Display Black,64,&H00FFFFFF,&H00FFFFFF,&H007818E9,&H00000000,1,0,0,0,100,100,0,0,3,20,0,7,80,80,285,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+
+Dialogue: 1,0:00:00.00,0:00:00.94,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}UMA CAIXA DE
+Dialogue: 1,0:00:00.94,0:00:02.38,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}{\c&H004DE1FF&}CANETINHA{\c&H00FFFFFF&} PASSA DE
+Dialogue: 1,0:00:02.38,0:00:04.05,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}{\c&H004DE1FF&}R$ 500{\c&H00FFFFFF&} POR MÊS.
+Dialogue: 1,0:00:04.05,0:00:04.73,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}TODO MÊS.
+Dialogue: 1,0:00:04.73,0:00:05.29,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}A {\c&H004DE1FF&}CANETINHA{\c&H00FFFFFF&}
+Dialogue: 1,0:00:05.29,0:00:05.91,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}PRECISA DE
+Dialogue: 1,0:00:05.91,0:00:06.51,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}{\c&H004DE1FF&}RECEITA,{\c&H00FFFFFF&}
+Dialogue: 1,0:00:06.51,0:00:07.42,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}COBRA TODO MÊS
+Dialogue: 1,0:00:07.42,0:00:08.51,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}E NÃO ENSINA
+Dialogue: 1,0:00:08.51,0:00:09.16,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}O {\c&H004DE1FF&}HÁBITO.{\c&H00FFFFFF&}
+Dialogue: 1,0:00:09.16,0:00:09.42,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}O QUE EU
+Dialogue: 1,0:00:09.42,0:00:09.93,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}ENSINO É
+Dialogue: 1,0:00:09.93,0:00:10.68,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}DIFERENTE,
+Dialogue: 1,0:00:10.68,0:00:11.81,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}{\c&H004DE1FF&}15{\c&H00FFFFFF&} MINUTOS POR
+Dialogue: 1,0:00:11.81,0:00:12.30,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}DIA,
+Dialogue: 1,0:00:12.30,0:00:12.99,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}EM CASA,
+Dialogue: 1,0:00:12.99,0:00:14.05,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}SEM ACADEMIA E
+Dialogue: 1,0:00:14.05,0:00:15.20,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}SEM {\c&H004DE1FF&}DIETA{\c&H00FFFFFF&} {\c&H004DE1FF&}RADICAL.{\c&H00FFFFFF&}
+Dialogue: 1,0:00:15.20,0:00:15.72,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}VOCÊ CUIDA DO
+Dialogue: 1,0:00:15.72,0:00:16.37,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}{\c&H004DE1FF&}MÚSCULO,{\c&H00FFFFFF&}
+Dialogue: 1,0:00:16.37,0:00:17.59,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}DA SUA {\c&H004DE1FF&}BARRIGA{\c&H00FFFFFF&}
+Dialogue: 1,0:00:17.59,0:00:17.96,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}E DA
+Dialogue: 1,0:00:17.96,0:00:18.51,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}SUA CABEÇA,
+Dialogue: 1,0:00:18.51,0:00:18.85,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}JUNTO.
+Dialogue: 1,0:00:18.85,0:00:19.35,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}O {\c&H004DE1FF&}TESTE{\c&H00FFFFFF&} É
+Dialogue: 1,0:00:19.35,0:00:20.34,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}{\c&H004DE1FF&}GRÁTIS{\c&H00FFFFFF&} E SEM
+Dialogue: 1,0:00:20.34,0:00:21.03,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}CADASTRO,
+Dialogue: 1,0:00:21.03,0:00:22.02,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}NO FINAL VOCÊ
+Dialogue: 1,0:00:22.02,0:00:22.80,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}VÊ O
+Dialogue: 1,0:00:22.80,0:00:23.61,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}SEU {\c&H004DE1FF&}PLANO,{\c&H00FFFFFF&}
+Dialogue: 1,0:00:23.61,0:00:24.56,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}TOCA EM {\c&H004DE1FF&}SAIBA{\c&H00FFFFFF&}
+Dialogue: 1,0:00:24.56,0:00:25.23,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}{\c&H004DE1FF&}MAIS.{\c&H00FFFFFF&}
+Dialogue: 2,0:00:02.41,0:00:04.21,red,,0,0,0,,{\fad(70,140)\fscx60\fscy60\t(0,120,\fscx106\fscy106)\t(120,200,\fscx100\fscy100)}R$ 500 POR MÊS
+Dialogue: 2,0:00:08.68,0:00:10.48,red,,0,0,0,,{\fad(70,140)\fscx60\fscy60\t(0,120,\fscx106\fscy106)\t(120,200,\fscx100\fscy100)}NÃO ENSINA O HÁBITO
+Dialogue: 2,0:00:13.15,0:00:14.95,pink,,0,0,0,,{\fad(70,140)\fscx60\fscy60\t(0,120,\fscx106\fscy106)\t(120,200,\fscx100\fscy100)}SEM ACADEMIA\NSEM DIETA RADICAL
+Dialogue: 2,0:00:15.75,0:00:17.55,pink,,0,0,0,,{\fad(70,140)\fscx60\fscy60\t(0,120,\fscx106\fscy106)\t(120,200,\fscx100\fscy100)}MÚSCULO +\NBARRIGA + CABEÇA
+Dialogue: 2,0:00:19.38,0:00:21.18,pink,,0,0,0,,{\fad(70,140)\fscx60\fscy60\t(0,120,\fscx106\fscy106)\t(120,200,\fscx100\fscy100)}TESTE GRÁTIS\NSEM CADASTRO
+Dialogue: 4,0:00:23.54,0:00:25.38,cta,,0,0,0,,{\fad(120,0)\fscx70\fscy70\t(0,160,\fscx104\fscy104)\t(160,260,\fscx100\fscy100)\t(900,1100,\fscx106\fscy106)\t(1100,1300,\fscx100\fscy100)}TOQUE EM SAIBA MAIS  ↓

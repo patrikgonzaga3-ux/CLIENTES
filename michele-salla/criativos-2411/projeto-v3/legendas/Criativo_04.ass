@@ -1,0 +1,52 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: L,Inter Display Black,84,&H00FFFFFF,&H00FFFFFF,&H00111111,&H96000000,1,0,0,0,100,100,0,0,1,7,4,2,80,80,680,1
+Style: pink,Inter Display Black,72,&H00FFFFFF,&H00FFFFFF,&H007818E9,&H00000000,1,0,0,0,100,100,0,0,3,24,0,8,80,80,285,1
+Style: red,Inter Display Black,72,&H00FFFFFF,&H00FFFFFF,&H003539E5,&H00000000,1,0,0,0,100,100,0,0,3,24,0,8,80,80,285,1
+Style: dark,Inter Display Black,72,&H00FFFFFF,&H00FFFFFF,&H00201A1A,&H00000000,1,0,0,0,100,100,0,0,3,24,0,8,80,80,285,1
+Style: num,Inter Display Black,300,&H00FFFFFF,&H00FFFFFF,&H007818E9,&H64000000,1,0,0,0,100,100,0,0,1,14,6,8,0,0,270,1
+Style: cta,Inter Display Black,74,&H00201A1A,&H00FFFFFF,&H004DE1FF,&H00000000,1,0,0,0,100,100,0,0,3,26,0,2,80,80,810,1
+Style: nome,Inter Display Black,64,&H00FFFFFF,&H00FFFFFF,&H007818E9,&H00000000,1,0,0,0,100,100,0,0,3,20,0,7,80,80,285,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+
+Dialogue: 1,0:00:00.00,0:00:00.55,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}A CALÇA QUE
+Dialogue: 1,0:00:00.55,0:00:01.35,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}NÃO FECHA,
+Dialogue: 1,0:00:01.35,0:00:02.21,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}A ROUPA ESCOLHIDA
+Dialogue: 1,0:00:02.21,0:00:02.79,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}PARA ESCONDER A
+Dialogue: 1,0:00:02.79,0:00:03.58,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}{\c&H004DE1FF&}BARRIGA,{\c&H00FFFFFF&}
+Dialogue: 1,0:00:03.58,0:00:04.28,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}A FOTO EM
+Dialogue: 1,0:00:04.28,0:00:04.82,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}QUE A GENTE
+Dialogue: 1,0:00:04.82,0:00:05.85,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}SE ESCONDE ATRÁS
+Dialogue: 1,0:00:05.85,0:00:06.69,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}DE ALGUÉM,
+Dialogue: 1,0:00:06.69,0:00:07.39,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}MUITA GENTE DIZ
+Dialogue: 1,0:00:07.39,0:00:08.49,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}QUE É {\c&H004DE1FF&}IDADE,{\c&H00FFFFFF&}
+Dialogue: 1,0:00:08.49,0:00:09.13,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}QUE DEPOIS DOS
+Dialogue: 1,0:00:09.13,0:00:09.69,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}FILHOS É ASSIM
+Dialogue: 1,0:00:09.69,0:00:10.09,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}MESMO.
+Dialogue: 1,0:00:10.09,0:00:11.24,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}MAS NÃO É
+Dialogue: 1,0:00:11.24,0:00:11.89,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}{\c&H004DE1FF&}NORMAL,{\c&H00FFFFFF&}
+Dialogue: 1,0:00:11.89,0:00:12.77,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}NÃO É FALTA
+Dialogue: 1,0:00:12.77,0:00:13.47,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}DE FORÇA DE
+Dialogue: 1,0:00:13.47,0:00:14.02,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}{\c&H004DE1FF&}VONTADE.{\c&H00FFFFFF&}
+Dialogue: 1,0:00:14.02,0:00:14.64,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}CADA MULHER É
+Dialogue: 1,0:00:14.64,0:00:15.34,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}{\c&H004DE1FF&}ÚNICA,{\c&H00FFFFFF&}
+Dialogue: 1,0:00:15.34,0:00:15.78,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}O CORPO,
+Dialogue: 1,0:00:15.78,0:00:16.61,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}A ROTINA,
+Dialogue: 1,0:00:16.61,0:00:17.53,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}A {\c&H004DE1FF&}IDADE,{\c&H00FFFFFF&}
+Dialogue: 1,0:00:17.53,0:00:17.81,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}POR ISSO EU
+Dialogue: 1,0:00:17.81,0:00:18.60,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}PREPAREI UM {\c&H004DE1FF&}TESTE{\c&H00FFFFFF&}
+Dialogue: 1,0:00:18.60,0:00:19.85,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}MUITO RÁPIDO,
+Dialogue: 1,0:00:19.85,0:00:20.99,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}TOCA EM {\c&H004DE1FF&}SAIBA{\c&H00FFFFFF&} {\c&H004DE1FF&}MAIS{\c&H00FFFFFF&}
+Dialogue: 1,0:00:20.99,0:00:22.12,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}E VEM COMIGO.
+Dialogue: 2,0:00:07.85,0:00:09.65,dark,,0,0,0,,{\fad(70,140)\fscx60\fscy60\t(0,120,\fscx106\fscy106)\t(120,200,\fscx100\fscy100)}"É A IDADE"
+Dialogue: 2,0:00:11.27,0:00:13.07,red,,0,0,0,,{\fad(70,140)\fscx60\fscy60\t(0,120,\fscx106\fscy106)\t(120,200,\fscx100\fscy100)}NÃO É NORMAL
+Dialogue: 2,0:00:14.67,0:00:16.47,pink,,0,0,0,,{\fad(70,140)\fscx60\fscy60\t(0,120,\fscx106\fscy106)\t(120,200,\fscx100\fscy100)}CADA MULHER É ÚNICA
+Dialogue: 4,0:00:19.88,0:00:22.37,cta,,0,0,0,,{\fad(120,0)\fscx70\fscy70\t(0,160,\fscx104\fscy104)\t(160,260,\fscx100\fscy100)\t(900,1100,\fscx106\fscy106)\t(1100,1300,\fscx100\fscy100)}TOQUE EM SAIBA MAIS  ↓

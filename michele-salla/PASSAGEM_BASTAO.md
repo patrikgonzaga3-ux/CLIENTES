@@ -139,6 +139,10 @@ Os M da pasta "MICHELE LOW" são esses mesmos vídeos. Mapa conferido pelos quad
 **Painel publica sozinho:** todo push na main do CLIENTES gera deploy na Vercel ("Ptk midias") em ~1 min.
 
 ## 7. Pendências (na ordem)
+000. **(24/11) 10 criativos finais da Michele editados** (15 trechos do Drive 1gsAxGHkGS-i_tmc_y7tzw3o2fZT1IGZz): lista com gancho/corpo/CTA
+   e trechos em `criativos-2411/projeto-v3/LISTA_CRIATIVOS.md`. Pasta no Drive "Criativos finais – Michelle" (1hy7sq5BIB34Qh_2lECjk61hBsDHCR5aa)
+   tem a LISTA e o LEIA-ME; **os MP4 não subiram** (o conector do Drive aceita ~3 MB por envio). **Falta:** Patrik subir os 10 MP4,
+   aprovar (destino = quiz Corpo Diva; riscos Meta: canetinha em 01/09, "depois dos 35" em 02/03/07, foto da calça no 04) e só então campanha.
 00. **(24/11) 5 criativos editados dos 15 vídeos da Michele** (Drive 1gsAxGHkGS-i_tmc_y7tzw3o2fZT1IGZz, AD (1) a (15)):
    C1 canetinha (AD11+6+3), C2 calça (AD12+8+4), C3 abdominal (AD15+9+1), C4 cinta (AD13+10+5), C5 verão (AD14+7+2).
    **Falta:** OK do Patrik; depois subir no Meta (ABO 1-1-1, CTA dos vídeos fala em "teste", então destino = quiz Corpo Diva).
@@ -248,6 +252,10 @@ Os M da pasta "MICHELE LOW" são esses mesmos vídeos. Mapa conferido pelos quad
    Rastreio LIGADO (03/11): aba **Quiz Diva** em https://painel.michelesalla.com.br/painel/quiz (telas 01–22 = blocos; quiz-p1..p5 = páginas).
 
 ## 8. Diário
+- **24/11 (tarde) · 10 criativos finais (v3):** montagem frase por frase (32 frases, melhor tomada), corte pelo som real (não pelo tempo do
+  Whisper, que errava até 0,6 s), 1,07x, cor, zoom alternado, imagens de apoio (acervo do Desafio + 3 do Canva), títulos e legenda dentro da
+  área segura do Reels (fora de 14% em cima e 35% embaixo), trilhas originais compostas por código, -14 LUFS / -2 dBTP. Revisão: retranscrição
+  de cada vídeo, telas pretas, congelamento, picos e quadros. Scripts em `criativos-2411/projeto-v3/`.
 - **24/11 · Edição dos 15 criativos gravados (gancho, corpo, CTA):** transcrição grátis com Whisper (Hugging Face liberado no ambiente
   "Estúdio Vídeo Laura"), melhor tomada de cada vídeo, pausas cortadas com zoom alternado, legenda queimada (Inter Black, nomes corrigidos),
   volume -14 LUFS, sem trilha (não há música licenciada no acervo). Estrutura Ladeira M04-13 (gancho → desenvolvimento → Saiba mais).

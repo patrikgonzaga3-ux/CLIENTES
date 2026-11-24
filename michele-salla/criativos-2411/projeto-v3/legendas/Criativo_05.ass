@@ -1,0 +1,46 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: L,Inter Display Black,84,&H00FFFFFF,&H00FFFFFF,&H00111111,&H96000000,1,0,0,0,100,100,0,0,1,7,4,2,80,80,680,1
+Style: pink,Inter Display Black,72,&H00FFFFFF,&H00FFFFFF,&H007818E9,&H00000000,1,0,0,0,100,100,0,0,3,24,0,8,80,80,285,1
+Style: red,Inter Display Black,72,&H00FFFFFF,&H00FFFFFF,&H003539E5,&H00000000,1,0,0,0,100,100,0,0,3,24,0,8,80,80,285,1
+Style: dark,Inter Display Black,72,&H00FFFFFF,&H00FFFFFF,&H00201A1A,&H00000000,1,0,0,0,100,100,0,0,3,24,0,8,80,80,285,1
+Style: num,Inter Display Black,300,&H00FFFFFF,&H00FFFFFF,&H007818E9,&H64000000,1,0,0,0,100,100,0,0,1,14,6,8,0,0,270,1
+Style: cta,Inter Display Black,74,&H00201A1A,&H00FFFFFF,&H004DE1FF,&H00000000,1,0,0,0,100,100,0,0,3,26,0,2,80,80,810,1
+Style: nome,Inter Display Black,64,&H00FFFFFF,&H00FFFFFF,&H007818E9,&H00000000,1,0,0,0,100,100,0,0,3,20,0,7,80,80,285,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+
+Dialogue: 1,0:00:00.00,0:00:00.65,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}O {\c&H004DE1FF&}VERÃO{\c&H00FFFFFF&} ESTÁ
+Dialogue: 1,0:00:00.65,0:00:01.66,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}CHEGANDO E {\c&H004DE1FF&}DIETA{\c&H00FFFFFF&}
+Dialogue: 1,0:00:01.66,0:00:03.12,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}RADICAL DE ÚLTIMA
+Dialogue: 1,0:00:03.12,0:00:03.89,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}HORA É O
+Dialogue: 1,0:00:03.89,0:00:04.52,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}QUE VAI FAZER
+Dialogue: 1,0:00:04.52,0:00:05.59,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}A SUA {\c&H004DE1FF&}BARRIGA{\c&H00FFFFFF&}
+Dialogue: 1,0:00:05.59,0:00:06.20,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}{\c&H004DE1FF&}VOLTAR.{\c&H00FFFFFF&}
+Dialogue: 1,0:00:06.20,0:00:07.00,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}A {\c&H004DE1FF&}DIETA{\c&H00FFFFFF&} RADICAL
+Dialogue: 1,0:00:07.00,0:00:08.40,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}CORTA TUDO E
+Dialogue: 1,0:00:08.40,0:00:09.22,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}VOLTA TUDO.
+Dialogue: 1,0:00:09.22,0:00:09.50,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}O QUE EU
+Dialogue: 1,0:00:09.50,0:00:09.98,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}ENSINO É
+Dialogue: 1,0:00:09.98,0:00:10.64,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}DIFERENTE,
+Dialogue: 1,0:00:10.64,0:00:11.40,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}{\c&H004DE1FF&}15{\c&H00FFFFFF&} MINUTOS POR
+Dialogue: 1,0:00:11.40,0:00:11.82,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}DIA,
+Dialogue: 1,0:00:11.82,0:00:12.41,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}EM CASA,
+Dialogue: 1,0:00:12.41,0:00:13.30,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}SEM ACADEMIA,
+Dialogue: 1,0:00:13.30,0:00:14.46,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}SEM {\c&H004DE1FF&}DIETA{\c&H00FFFFFF&} {\c&H004DE1FF&}RADICAL.{\c&H00FFFFFF&}
+Dialogue: 1,0:00:14.46,0:00:15.09,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}O {\c&H004DE1FF&}VERÃO{\c&H00FFFFFF&} NÃO
+Dialogue: 1,0:00:15.09,0:00:16.19,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}VAI ESPERAR,
+Dialogue: 1,0:00:16.19,0:00:17.37,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}TOCA EM {\c&H004DE1FF&}SAIBA{\c&H00FFFFFF&} {\c&H004DE1FF&}MAIS{\c&H00FFFFFF&}
+Dialogue: 1,0:00:17.37,0:00:18.02,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}E FAZ O
+Dialogue: 1,0:00:18.02,0:00:19.13,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}{\c&H004DE1FF&}TESTE{\c&H00FFFFFF&} HOJE.
+Dialogue: 2,0:00:01.37,0:00:03.17,red,,0,0,0,,{\fad(70,140)\fscx60\fscy60\t(0,120,\fscx106\fscy106)\t(120,200,\fscx100\fscy100)}DIETA RADICAL
+Dialogue: 2,0:00:12.61,0:00:14.41,pink,,0,0,0,,{\fad(70,140)\fscx60\fscy60\t(0,120,\fscx106\fscy106)\t(120,200,\fscx100\fscy100)}SEM ACADEMIA\NSEM DIETA RADICAL
+Dialogue: 2,0:00:14.63,0:00:16.43,red,,0,0,0,,{\fad(70,140)\fscx60\fscy60\t(0,120,\fscx106\fscy106)\t(120,200,\fscx100\fscy100)}O VERÃO\NNÃO VAI ESPERAR
+Dialogue: 4,0:00:16.22,0:00:19.34,cta,,0,0,0,,{\fad(120,0)\fscx70\fscy70\t(0,160,\fscx104\fscy104)\t(160,260,\fscx100\fscy100)\t(900,1100,\fscx106\fscy106)\t(1100,1300,\fscx100\fscy100)}TOQUE EM SAIBA MAIS  ↓

@@ -1,0 +1,52 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: L,Inter Display Black,84,&H00FFFFFF,&H00FFFFFF,&H00111111,&H96000000,1,0,0,0,100,100,0,0,1,7,4,2,80,80,680,1
+Style: pink,Inter Display Black,72,&H00FFFFFF,&H00FFFFFF,&H007818E9,&H00000000,1,0,0,0,100,100,0,0,3,24,0,8,80,80,285,1
+Style: red,Inter Display Black,72,&H00FFFFFF,&H00FFFFFF,&H003539E5,&H00000000,1,0,0,0,100,100,0,0,3,24,0,8,80,80,285,1
+Style: dark,Inter Display Black,72,&H00FFFFFF,&H00FFFFFF,&H00201A1A,&H00000000,1,0,0,0,100,100,0,0,3,24,0,8,80,80,285,1
+Style: num,Inter Display Black,300,&H00FFFFFF,&H00FFFFFF,&H007818E9,&H64000000,1,0,0,0,100,100,0,0,1,14,6,8,0,0,270,1
+Style: cta,Inter Display Black,74,&H00201A1A,&H00FFFFFF,&H004DE1FF,&H00000000,1,0,0,0,100,100,0,0,3,26,0,2,80,80,810,1
+Style: nome,Inter Display Black,64,&H00FFFFFF,&H00FFFFFF,&H007818E9,&H00000000,1,0,0,0,100,100,0,0,3,20,0,7,80,80,285,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+
+Dialogue: 1,0:00:00.02,0:00:00.24,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}EU SOU A
+Dialogue: 1,0:00:00.24,0:00:01.08,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}{\c&H004DE1FF&}MICHELE{\c&H00FFFFFF&} {\c&H004DE1FF&}SALLA,{\c&H00FFFFFF&}
+Dialogue: 1,0:00:01.08,0:00:02.33,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}EDUCADORA FÍSICA E
+Dialogue: 1,0:00:02.33,0:00:02.78,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}MENTORA DE
+Dialogue: 1,0:00:02.78,0:00:03.25,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}EMAGRECIMENTO
+Dialogue: 1,0:00:03.25,0:00:04.31,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}COMPORTAMENTAL.
+Dialogue: 1,0:00:04.31,0:00:05.07,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}ESCREVI O LIVRO
+Dialogue: 1,0:00:05.07,0:00:06.36,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}VIDA DIVA E
+Dialogue: 1,0:00:06.36,0:00:06.64,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}HÁ {\c&H004DE1FF&}MAIS{\c&H00FFFFFF&} DE
+Dialogue: 1,0:00:06.64,0:00:07.32,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}20 ANOS EU
+Dialogue: 1,0:00:07.32,0:00:08.31,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}AJUDO MULHERES A
+Dialogue: 1,0:00:08.31,0:00:09.32,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}PERDER A {\c&H004DE1FF&}BARRIGA{\c&H00FFFFFF&}
+Dialogue: 1,0:00:09.32,0:00:10.11,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}SEM VIVER DE
+Dialogue: 1,0:00:10.11,0:00:10.54,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}{\c&H004DE1FF&}DIETA.{\c&H00FFFFFF&}
+Dialogue: 1,0:00:10.54,0:00:10.81,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}O QUE EU
+Dialogue: 1,0:00:10.81,0:00:11.31,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}ENSINO É
+Dialogue: 1,0:00:11.31,0:00:12.07,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}DIFERENTE,
+Dialogue: 1,0:00:12.07,0:00:13.20,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}{\c&H004DE1FF&}15{\c&H00FFFFFF&} MINUTOS POR
+Dialogue: 1,0:00:13.20,0:00:13.68,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}DIA,
+Dialogue: 1,0:00:13.68,0:00:14.37,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}EM CASA,
+Dialogue: 1,0:00:14.37,0:00:15.43,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}SEM ACADEMIA E
+Dialogue: 1,0:00:15.43,0:00:16.58,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}SEM {\c&H004DE1FF&}DIETA{\c&H00FFFFFF&} {\c&H004DE1FF&}RADICAL.{\c&H00FFFFFF&}
+Dialogue: 1,0:00:16.58,0:00:17.23,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}TOCA EM
+Dialogue: 1,0:00:17.23,0:00:18.17,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}{\c&H004DE1FF&}SAIBA MAIS,{\c&H00FFFFFF&}
+Dialogue: 1,0:00:18.17,0:00:18.86,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}FAZ O {\c&H004DE1FF&}TESTE{\c&H00FFFFFF&}
+Dialogue: 1,0:00:18.86,0:00:19.94,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}EM {\c&H004DE1FF&}3{\c&H00FFFFFF&} {\c&H004DE1FF&}MINUTINHOS{\c&H00FFFFFF&}
+Dialogue: 1,0:00:19.94,0:00:20.84,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}VOCÊ DESCOBRE POR
+Dialogue: 1,0:00:20.84,0:00:22.10,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}ONDE COMEÇAR.
+Dialogue: 2,0:00:00.27,0:00:03.07,nome,,0,0,0,,{\fad(120,160)\move(-450,285,100,285,0,240)\an7}MICHELE SALLA\N{\fs42}Educadora física e mentora
+Dialogue: 2,0:00:04.80,0:00:06.60,pink,,0,0,0,,{\fad(70,140)\fscx60\fscy60\t(0,120,\fscx106\fscy106)\t(120,200,\fscx100\fscy100)}AUTORA DO\NLIVRO VIDA DIVA
+Dialogue: 2,0:00:06.70,0:00:08.50,pink,,0,0,0,,{\fad(70,140)\fscx60\fscy60\t(0,120,\fscx106\fscy106)\t(120,200,\fscx100\fscy100)}+20 ANOS
+Dialogue: 2,0:00:14.53,0:00:16.33,pink,,0,0,0,,{\fad(70,140)\fscx60\fscy60\t(0,120,\fscx106\fscy106)\t(120,200,\fscx100\fscy100)}SEM ACADEMIA\NSEM DIETA RADICAL
+Dialogue: 4,0:00:16.27,0:00:22.49,cta,,0,0,0,,{\fad(120,0)\fscx70\fscy70\t(0,160,\fscx104\fscy104)\t(160,260,\fscx100\fscy100)\t(900,1100,\fscx106\fscy106)\t(1100,1300,\fscx100\fscy100)}TOQUE EM SAIBA MAIS  ↓

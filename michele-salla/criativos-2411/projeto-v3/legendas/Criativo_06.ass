@@ -1,0 +1,40 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1080
+PlayResY: 1920
+WrapStyle: 0
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: L,Inter Display Black,84,&H00FFFFFF,&H00FFFFFF,&H00111111,&H96000000,1,0,0,0,100,100,0,0,1,7,4,2,80,80,680,1
+Style: pink,Inter Display Black,72,&H00FFFFFF,&H00FFFFFF,&H007818E9,&H00000000,1,0,0,0,100,100,0,0,3,24,0,8,80,80,285,1
+Style: red,Inter Display Black,72,&H00FFFFFF,&H00FFFFFF,&H003539E5,&H00000000,1,0,0,0,100,100,0,0,3,24,0,8,80,80,285,1
+Style: dark,Inter Display Black,72,&H00FFFFFF,&H00FFFFFF,&H00201A1A,&H00000000,1,0,0,0,100,100,0,0,3,24,0,8,80,80,285,1
+Style: num,Inter Display Black,300,&H00FFFFFF,&H00FFFFFF,&H007818E9,&H64000000,1,0,0,0,100,100,0,0,1,14,6,8,0,0,270,1
+Style: cta,Inter Display Black,74,&H00201A1A,&H00FFFFFF,&H004DE1FF,&H00000000,1,0,0,0,100,100,0,0,3,26,0,2,80,80,810,1
+Style: nome,Inter Display Black,64,&H00FFFFFF,&H00FFFFFF,&H007818E9,&H00000000,1,0,0,0,100,100,0,0,3,20,0,7,80,80,285,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+
+Dialogue: 1,0:00:00.08,0:00:00.97,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}O {\c&H004DE1FF&}ESTRESSE,{\c&H00FFFFFF&}
+Dialogue: 1,0:00:00.97,0:00:01.81,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}O {\c&H004DE1FF&}DOCINHO{\c&H00FFFFFF&} À
+Dialogue: 1,0:00:01.81,0:00:02.20,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}{\c&H004DE1FF&}NOITE.{\c&H00FFFFFF&}
+Dialogue: 1,0:00:02.20,0:00:03.25,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}UM ALIMENTA O
+Dialogue: 1,0:00:03.25,0:00:03.49,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}OUTRO.
+Dialogue: 1,0:00:03.49,0:00:04.12,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}PRIMEIRO,
+Dialogue: 1,0:00:04.12,0:00:04.84,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}A GENTE TRABALHA
+Dialogue: 1,0:00:04.84,0:00:05.98,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}A {\c&H004DE1FF&}MENTALIDADE{\c&H00FFFFFF&}
+Dialogue: 1,0:00:05.98,0:00:06.68,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}PARA DEPOIS O
+Dialogue: 1,0:00:06.68,0:00:07.52,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}SEU RESULTADO
+Dialogue: 1,0:00:07.52,0:00:08.40,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}APARECER NO {\c&H004DE1FF&}CORPO.{\c&H00FFFFFF&}
+Dialogue: 1,0:00:08.40,0:00:09.06,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}SÃO {\c&H004DE1FF&}15{\c&H00FFFFFF&} MINUTOS
+Dialogue: 1,0:00:09.06,0:00:10.22,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}POR DIA EM
+Dialogue: 1,0:00:10.22,0:00:10.83,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}CASA.
+Dialogue: 1,0:00:10.83,0:00:11.43,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}TOCA NO BOTÃO
+Dialogue: 1,0:00:11.43,0:00:12.55,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}{\c&H004DE1FF&}SAIBA{\c&H00FFFFFF&} {\c&H004DE1FF&}MAIS{\c&H00FFFFFF&} E
+Dialogue: 1,0:00:12.55,0:00:13.41,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}VÊ O {\c&H004DE1FF&}PLANO{\c&H00FFFFFF&}
+Dialogue: 1,0:00:13.41,0:00:13.84,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}PARA A SUA
+Dialogue: 1,0:00:13.84,0:00:14.76,L,,0,0,0,,{\fscx88\fscy88\t(0,70,\fscx100\fscy100)}ROTINA.
+Dialogue: 2,0:00:08.14,0:00:09.94,pink,,0,0,0,,{\fad(70,140)\fscx60\fscy60\t(0,120,\fscx106\fscy106)\t(120,200,\fscx100\fscy100)}MENTE → CORPO
+Dialogue: 4,0:00:10.86,0:00:14.92,cta,,0,0,0,,{\fad(120,0)\fscx70\fscy70\t(0,160,\fscx104\fscy104)\t(160,260,\fscx100\fscy100)\t(900,1100,\fscx106\fscy106)\t(1100,1300,\fscx100\fscy100)}TOQUE EM SAIBA MAIS  ↓
