@@ -139,16 +139,14 @@ Os M da pasta "MICHELE LOW" são esses mesmos vídeos. Mapa conferido pelos quad
 **Painel publica sozinho:** todo push na main do CLIENTES gera deploy na Vercel ("Ptk midias") em ~1 min.
 
 ## 7. Pendências (na ordem)
-00000. **(24/11) Checkout novo CORPO DE DIVA (206594/offer/Zq5HyF, R$ 47, 12x R$ 4,83) em tudo** (Patrik: "coloca em todos"):
-   quizzes Corpo Diva e /desafio7/, páginas A–F e JSONs do Elementor, `wp_michele.py conferir`. Commit 6af463f no branch
-   `claude/amazing-fermat-m4f8jd`: **falta mesclar na main** (a trava do ambiente barrou o push na main). **Falta o Patrik:**
-   (a) pixel 991344998762063 + API de conversões e webhook do painel no produto 206594 na Greenn (o checkout novo veio SEM pixel);
-   (b) trocar o link nos 3 botões da página 10264 no WordPress (daqui não deu: o acesso fica no ambiente "Fábrica de Conteúdo IA",
-   cujo acento impede a troca de ambiente). Copy do Corpo Diva pelo Hard Copy (HC-05) aplicada no branch (itens 1 a 6: prova "mais de
-   5 mil alunas", objeção, "Parece a mesma pessoa?", ponte, bônus especial Cintura Ativa, filtro). Capa 3 nova (promessa direta:
-   "Mais de 5 mil alunas… perder até 18 kg de gordura em até 30 dias", usa VSL e oferta da P1) e P2 = "barriga durinha e a calça de
-   antes fechando de novo". O sorteio passa a 6 variantes (P1/P2/P3 × VSL capa/oferta); painel com corpodiva-p3i/-p3o. Michele confirmar os 5 mil.
-   A VSL da P2 ainda fala "corpo durinho" (vídeo não muda).
+00000. **(24/11) Checkout CORPO DE DIVA (206594/offer/Zq5HyF, R$ 47, 12x R$ 4,83) NO AR** nos quizzes Corpo Diva e /desafio7/
+   (PR #2 mesclado, commit 740a69d). Junto foram: copy do Corpo Diva pelo Hard Copy (HC-05: prova "mais de 5 mil alunas",
+   CONFIRMADO pelo Patrik; objeção; "Parece a mesma pessoa?"; ponte; bônus especial Cintura Ativa; filtro), capa 3 com promessa direta
+   (sorteio de 6 variantes, painel corpodiva-p3i/-p3o) e P2 "barriga durinha e a calça de antes fechando de novo".
+   **Falta:** (a) Patrik configurar no produto 206594 da Greenn o pixel 991344998762063 + API de conversões e o webhook do painel
+   (o checkout veio sem pixel; ele vai ajustar); depois, conferir um Purchase no pixel. (b) Página 10264 do Desafio (WordPress)
+   ficou com o link antigo E1YMM7 de propósito: não vai ser usada agora (Patrik, 24/11). Se voltar, trocar os 3 botões
+   (os arquivos A–F já têm o link novo). A VSL da P2 ainda fala "corpo durinho".
 0000. **(19/11) Universo Diva (página 8926, michelesalla.com.br/universo-diva/) · preço novo ESPERANDO OK do Patrik:** trocar os 5 botões
    de `pay.hotmart.com/T104321502Q` para `pay.hotmart.com/E107866373U?off=w5xxm4uy` (produto "UNIVERSO DIVA 3.0", conferido no checkout
    em reais: R$ 497 à vista ou 12x de R$ 41,42, total R$ 497,04) e a caixa de preço (widgets aac737d "12x de R$ 103,11" → "12x de R$ 41,42"
@@ -249,6 +247,8 @@ Os M da pasta "MICHELE LOW" são esses mesmos vídeos. Mapa conferido pelos quad
 - **24/11 · Checkout CORPO DE DIVA em tudo:** mesmo preço e garantia de 7 dias do E1YMM7, outro produto (206594, "CORPO DE DIVA — 30 DIAS").
   Nenhuma campanha ativa na conta 1619523595475963 no dia da troca. FAQ do Corpo Diva: "O acesso chega por e-mail com o nome CORPO DE DIVA";
   rodapé sem "conteúdo do Desafio 7 em 7". Patrik confirmou que a área de membros tem o mesmo material do Desafio.
+  Depois: Hard Copy (itens 1 a 6), capa 3 e P2 nova aprovados e no ar. Daqui, o push direto na main é barrado pela trava do modo
+  automático: o caminho é mesclar o PR pelo GitHub depois do OK do Patrik.
 - **19/11 (noite) · Corpo Diva pronto para o teste** (Patrik: "pode executar todos os 3"):
   - VSLs no ar pelo VTurb (conta 9406f62d…): capa p1 6aff3a8e607bd33518f1f5a6, capa p2 6aff3a871750c92b3ebec505, oferta p1 v2
     6aff42eac60b8cda78ebcccc, oferta p2 v2 6aff43919dd4ab1ca5cc7b29 (ofertas sem "1,57 por dia"). `motor.js` monta o player quando
