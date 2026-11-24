@@ -1,5 +1,5 @@
 /* Quiz da Michele Salla · PROTOCOLO CORPO DIVA (17/11/2026, pedido do Patrik). Motor em ../quiz/motor.js (o mesmo dos outros quizzes).
-   É o Desafio 7 em 7 com outro nome (Patrik, 17/11: "é o Desafio com outro nome, mantém o checkout"): mesmas aulas, bônus, preço e link.
+   É o Desafio 7 em 7 com outro nome (Patrik, 17/11: "é o Desafio com outro nome, mantém o checkout"): mesmas aulas, bônus e preço. Checkout próprio desde 24/11: produto CORPO DE DIVA (206594/Zq5HyF).
    Base: o quiz Diva do Desafio (michele-salla/quiz/quiz.js) + o quiz do Dr. Márcio Martins (inlead.digital/dr-marcio-teste-capa, 23 telas:
    VSL na capa, corpo hoje, corpo dos sonhos, como o peso afeta a vida, já tentou e voltou, canetinha, quilos a eliminar, "sua meta é
    possível", "se nada mudar", compromisso, antes e depois, VSL antes da oferta) + o quiz do pilates (IMC, nome, dois caminhos, oferta v3).
@@ -12,7 +12,7 @@
 
 const IMG = '../desafio-7em7/assets/img/'
 const AD = 'img/' // antes e depois de alunas do Desafio 7 em 7 (pasta "Antes e depois" da Michele, sem rosto, nome nem kg)
-const CHECKOUT = 'https://payfast.greenn.com.br/199167/offer/E1YMM7' // Desafio 7 em 7, R$ 47 (aprovado em 27/10). Mantido pelo Patrik em 17/11.
+const CHECKOUT = 'https://payfast.greenn.com.br/206594/offer/Zq5HyF' // produto CORPO DE DIVA (206594), R$ 47, mesmo material do Desafio (Patrik, 24/11). Antes: 199167/E1YMM7.
 
 const PROMESSAS = {
   1: {
@@ -24,12 +24,22 @@ const PROMESSAS = {
     sub: 'É um músculo que desligou aí dentro da sua barriga. Em 3 minutos você recebe o seu plano para perder até 18 kg de gordura em até 30 dias.',
   },
   2: {
-    nome: 'Corpo durinho antes do verão',
+    nome: 'Barriga durinha · calça de antes',
     etiqueta: 'Quiz gratuito',
     // 19/11 (Ladeira, M03-02/03, aprovado): premissa no lugar do imperativo. Antes: "Emagreça e fique com o corpo durinho antes do
     // verão chegar" + "Responda e receba o seu plano personalizado, montado a partir do seu corpo e da sua rotina."
     titulo: 'Depois dos 35, <mark>abdominal nenhum</mark> deixa a barriga durinha se o músculo que segura ela por dentro desligou',
-    sub: 'Em 3 minutos você recebe o seu plano para ficar com o corpo durinho antes do verão, montado a partir do seu corpo e da sua rotina.',
+    // 24/11 (B1, aprovado): resultado que ela enxerga, a dor escondida dos comentários (HC-01). Antes: "…para ficar com o corpo
+    // durinho antes do verão, montado a partir do seu corpo e da sua rotina."
+    sub: 'Em 3 minutos você recebe o seu plano para ficar com a barriga durinha e a calça de antes fechando de novo antes do verão, com 15 minutos por dia.',
+  },
+  3: {
+    // 24/11 (A, aprovado): promessa direta no título, modelo da página do Hard Copy (HC-05: prova em escala + número + prazo),
+    // contra a premissa da capa 1 (Ladeira, M03-02). Mesma VSL, oferta e "duas opções" da promessa 1 (18 kg). 5 mil = número do Patrik.
+    nome: 'Promessa direta · 5 mil alunas · 18 kg',
+    etiqueta: 'Quiz gratuito',
+    titulo: 'Mais de 5 mil alunas já treinaram com a Michele. Agora é a sua vez de <mark>perder até 18 kg de gordura em até 30 dias</mark>, com 15 minutos por dia',
+    sub: 'É um músculo que desligou aí dentro da sua barriga. Em 3 minutos você recebe o seu plano.',
   },
 }
 
@@ -242,10 +252,16 @@ const QUIZ = {
       // 19/11 (Ladeira, aprovado): título segue a promessa da capa (coerência, M02-13) e mostra o "como" (QFD, M04-01).
       // Antes, igual para as duas: "Perca a barriga indesejada e até 18 kg de gordura em até 30 dias com o Método Cinturão Diva".
       get titulo() { return P === 2
-        ? 'O seu plano do <b>Método Cinturão Diva</b>: 15 minutos por dia, em casa, para ficar com o <b>corpo durinho</b> antes do verão'
+        ? 'O seu plano do <b>Método Cinturão Diva</b>: 15 minutos por dia, em casa, para ficar com a <b>barriga durinha</b> e a <b>calça de antes fechando de novo</b> antes do verão' // 24/11 (B1)
         : 'O seu plano do <b>Método Cinturão Diva</b>: 15 minutos por dia, em casa, para perder a <b>barriga indesejada</b> e até <b>18 kg de gordura</b> em até 30 dias' },
       heroAD: adNovo(4, 800, 644),
-      adTitulo: 'Elas começaram. Agora é a sua vez.',
+      // 24/11 · Hard Copy (HC-05), aprovado pelo Patrik ("aplica 1, 2, 3, 4, 5 e 6, mais de 5 mil alunas"):
+      prova: 'Mais de 5 mil alunas já treinaram com a Michele', // 6 · prova social em escala no topo (número do Patrik)
+      objecao: 'Se eu estivesse no seu lugar, ia pensar: <b>“mais uma promessa da internet”</b>. Por isso, antes de decidir, veja o que as alunas da Michele mostraram.', // 1 · objeção antecipada (HC-05 item 4, M02-07)
+      ponte: '<b>Mas atenção:</b> não basta prender a respiração e encolher a barriga. O hipopressivo tem o jeito certo de fazer, e é isso que as aulas mostram, passo a passo, em 15 minutos por dia.', // 3 · "não basta só X" (HC-05 item 8)
+      bonusDestaque: ['⭐ Bônus especial', 'Cintura Ativa', 'A rotina express de <b>5 minutos</b> para os dias corridos. Nos dias em que não sobra tempo, você não pula o dia.'], // 5 · bônus incrível (HC-03)
+      filtro: ['Não é para qualquer uma', 'É para quem topa se dar <b>15 minutos por dia</b>. Se você procura um resultado sem fazer nada, não é para você.'], // 4 · filtro (HC-05 item 9)
+      adTitulo: 'Parece a mesma pessoa?', // 2 · HC-05 item 7. Antes: "Elas começaram. Agora é a sua vez." 
       adLegenda: 'Alunas da Michele. Os resultados variam de pessoa para pessoa.',
       antesDepois: [adNovo(2, 800, 809), adNovo(5, 800, 628), adNovo('3g', 800, 630), adFoto(4, 900, 764), adFoto(1, 682, 900), adFoto(3, 720, 720)],
       ancora: 'Menos de 1/10 de 1 mês de canetinha (R$ 500+)', // 19/11 (M02-16, aprovado): sem riscado
@@ -291,8 +307,7 @@ const QUIZ = {
         '<b>Comece Aqui</b>: como funciona e por onde começar',
         'Bônus: <b>Cardápio de Emergência Diva</b>',
         'Bônus: <b>Projeto Minha Calça Favorita</b>',
-        'Bônus: <b>Cintura Ativa</b>, rotina express de 5 minutos para os dias corridos',
-      ],
+      ], // o Cintura Ativa saiu da lista e virou o bônus especial (bonusDestaque), logo abaixo
       professora: {
         titulo: 'Michele Salla',
         foto: { src: IMG + 'michele-recorte.webp', alt: 'Michele Salla', w: 802, h: 1292 },
@@ -305,13 +320,13 @@ const QUIZ = {
         ['Tenho mais de 50. Serve para mim?', 'Sim. Os hipopressivos são feitos com respiração e postura, sem impacto, no seu ritmo.'],
         ['Tive bebê ou tenho hérnia. Posso fazer?', 'Você precisa de liberação médica antes de começar. A aula “Conheça Sua Barriga” ensina a observar sinais como a diástase.'],
         ['É mensalidade?', 'Não. É pagamento único de R$ 47 (ou 12x de R$ 4,83).'],
-        ['Com que nome chega o acesso?', 'O Protocolo Corpo Diva usa as aulas do Desafio 7 em 7 da Michele: o acesso chega por e-mail com o nome Desafio 7 em 7. É o mesmo material.'],
+        ['Com que nome chega o acesso?', 'O acesso chega por e-mail com o nome CORPO DE DIVA.'],
         ['Como funciona a garantia?', 'Você tem 7 dias. Se não fizer sentido para você, pede o reembolso pela própria plataforma.'],
       ],
       duas: { titulo: 'Agora você tem duas opções',
         a: ['Fechar esta página', 'E chegar no verão do mesmo jeito: a roupa larga, a barriga escondida na foto e a segunda-feira como data do recomeço.'],
         get d() { return ['Começar hoje, por R$ 47', P === 2 // 19/11 (aprovado): coerente com a promessa da capa (M02-13)
-          ? 'Seguir o Método Cinturão Diva 15 minutos por dia e chegar no verão com o <b>corpo durinho</b>, <b>sem a barriga indesejada</b>.'
+          ? 'Seguir o Método Cinturão Diva 15 minutos por dia e chegar no verão com a <b>barriga durinha</b> e a <b>calça de antes fechando de novo</b>.' // 24/11 (B1)
           : 'Seguir o Método Cinturão Diva 15 minutos por dia e, em até 30 dias, perder até <b>18 kg de gordura</b> e chegar no verão <b>sem a barriga indesejada</b>.'] } },
     },
     v3: {
@@ -369,6 +384,6 @@ const QUIZ = {
       },
       faq: [0, 1, 3, 4],
     },
-    rodape: 'O Protocolo Corpo Diva é o conteúdo do Desafio 7 em 7 da Michele Salla e não é tratamento médico. Os resultados variam de pessoa para pessoa e a compra deste material não garante nenhum resultado específico. Este site não é afiliado ao Facebook.',
+    rodape: 'O Protocolo Corpo Diva é um conteúdo da Michele Salla e não é tratamento médico. Os resultados variam de pessoa para pessoa e a compra deste material não garante nenhum resultado específico. Este site não é afiliado ao Facebook.',
   },
 }

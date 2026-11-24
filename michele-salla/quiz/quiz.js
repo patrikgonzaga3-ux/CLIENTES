@@ -4,7 +4,7 @@
    Endereço: ?p=1..5 escolhe a capa (promessa). Para o painel: ?tela=<id>&p=<n>&perfil=<id> abre uma tela direto. */
 
 const IMG = '../desafio-7em7/assets/img/'
-const CHECKOUT = 'https://payfast.greenn.com.br/199167/offer/E1YMM7' // Desafio 7 em 7, R$ 47 (oferta aprovada em 27/10)
+const CHECKOUT = 'https://payfast.greenn.com.br/206594/offer/Zq5HyF' // produto CORPO DE DIVA (206594), R$ 47 (Patrik, 24/11; antes 199167/E1YMM7, aprovada em 27/10)
 
 const PROMESSAS = {
   1: {

@@ -100,14 +100,15 @@ export const CLIENTE = {
     },
     {
       // Quiz Protocolo Corpo Diva (17/11): quiz.michelesalla.com.br/corpodiva/. Cada página = promessa + onde está a VSL:
-      // corpodiva-p1i (capa 1, vídeo na capa), -p1o (capa 1, vídeo na oferta), -p2i, -p2o. Checkout do Desafio (E1YMM7) com sck igual.
+      // corpodiva-p1i (capa 1, vídeo na capa), -p1o (capa 1, vídeo na oferta), -p2i, -p2o, -p3i, -p3o (capa 3 desde 24/11). Checkout CORPO DE DIVA (206594/Zq5HyF, desde 24/11) com sck igual.
       id: 'corpodiva',
       nome: 'Quiz Corpo Diva',
       dominio: 'quiz.michelesalla.com.br',
       outrosDominios: ['clientes-phi-six.vercel.app'],
       prefixo: 'corpodiva',
       paginas: [['corpodiva-p1i', 'P1 18 kg · VSL na capa'], ['corpodiva-p1o', 'P1 18 kg · VSL na oferta'],
-        ['corpodiva-p2i', 'P2 Corpo durinho · VSL na capa'], ['corpodiva-p2o', 'P2 Corpo durinho · VSL na oferta']],
+        ['corpodiva-p2i', 'P2 Barriga durinha · VSL na capa'], ['corpodiva-p2o', 'P2 Barriga durinha · VSL na oferta'],
+        ['corpodiva-p3i', 'P3 5 mil alunas · 18 kg · VSL na capa'], ['corpodiva-p3o', 'P3 5 mil alunas · 18 kg · VSL na oferta']],
       // telas 01 a 27 (michele-salla/quiz-corpo-diva/corpodiva.js)
       blocos: ['Capa (promessa + VSL + idade)', 'Michele', 'Corpo hoje', 'Objetivo', 'Corpo dos sonhos', 'Como o peso afeta', 'Já tentou',
         'Canetinha', 'Prova (alunas)', 'Barriga no dia', 'Altura', 'Peso', 'Peso desejado', 'Meta é possível', 'Rotina', 'Tempo por dia',
