@@ -321,14 +321,16 @@ function ofertaV4(pf, O, m, botao) {
     <div class="v4-faixa">${dias > 0 ? `⏳ Faltam <b>${dias} dias</b> para o verão` : '☀️ O verão já começou. Comece hoje'}</div>
     <div class="v4-topo">
       <span class="v4-ok" data-clarity-mask="true">✓ ${nome ? esc(nome) + ', o seu' : 'O seu'} plano está pronto · ${esc(pf.nome)}</span>
+      ${V.prova ? `<p class="v4-prova">${rico(V.prova)}</p>` : ''}
       <h2 class="v4-titulo">${rico(V.titulo)}</h2>
+      ${V.objecao ? `<p class="v4-objecao">${rico(V.objecao)}</p>` : ''}
       ${dif > 0 ? `<div class="v4-meta"><div><b>${esc(String(I.p))} kg</b><span>hoje</span></div><i aria-hidden="true">→</i><div class="alvo"><b>${esc(String(I.meta))} kg</b><span>a sua meta</span></div><div class="dif"><b>−${dif} kg</b><span>até o verão</span></div></div>` : ''}
       <p class="v4-data">Começando hoje, os seus 30 dias terminam em <b>${dm(fim)}</b>${dias > 30 ? ', <b>antes do verão</b>' : ''}.</p>
       ${VPOS === 'oferta' ? blocoVsl() : `<figure class="v4-hero" style="margin:0">${img(V.heroAD, 'loading="eager"')}<figcaption>${txt(V.adLegenda)}</figcaption></figure>`}
     </div>
     ${caixa(' v4-primeiro')}
     <!-- 19/11 (Ladeira, M03-02, aprovado): os 3 sabotadores vêm antes do "não precisa de", da dor e da conta -->
-    <div class="v4-bloco"><h3>${esc(V.sabTitulo)}</h3><ol class="v4-sab">${V.sab.map(([a, b, c]) => `<li><b>${esc(a)}</b><span>${rico(b)}</span><em>${rico(c)}</em></li>`).join('')}</ol></div>
+    <div class="v4-bloco"><h3>${esc(V.sabTitulo)}</h3><ol class="v4-sab">${V.sab.map(([a, b, c]) => `<li><b>${esc(a)}</b><span>${rico(b)}</span><em>${rico(c)}</em></li>`).join('')}</ol>${V.ponte ? `<p class="v4-ponte">${rico(V.ponte)}</p>` : ''}</div>
     <div class="v4-bloco v4-nao"><h3>${esc(V.naoTitulo)}</h3><ul>${V.nao.map(x => `<li>${rico(x)}</li>`).join('')}</ul><p class="v4-so">${rico(V.so)}</p></div>
     ${se || imp.length ? `<div class="v4-bloco v4-dor"><h3>${esc(V.dorTitulo)}</h3>
       ${se ? `<p>Você disse que, se nada mudar, o seu próximo verão vai ser <b>${esc(minusc(se))}</b>.</p>` : ''}
@@ -347,6 +349,8 @@ function ofertaV4(pf, O, m, botao) {
     <h3 class="v4-h">${esc(V.recebeTitulo)}</h3>
     <div class="v3-mock-img">${img(V.mockupImg, 'loading="lazy"')}</div>
     <ul class="v4-recebe">${V.recebe.map(x => `<li>${rico(x)}</li>`).join('')}</ul>
+    ${V.bonusDestaque ? `<div class="v4-bonus"><span>${esc(V.bonusDestaque[0])}</span><h3>${rico(V.bonusDestaque[1])}</h3><p>${rico(V.bonusDestaque[2])}</p></div>` : ''}
+    ${V.filtro ? `<div class="v4-bloco v4-filtro"><h3>${esc(V.filtro[0])}</h3><p>${rico(V.filtro[1])}</p></div>` : ''}
     ${caixa()}
     <div class="v4-prof">${img(V.professora.foto, 'loading="lazy"')}<div><h3>${esc(V.professora.titulo)}</h3>${V.professora.textos.map(x => `<p>${rico(x)}</p>`).join('')}</div></div>
     <div class="v4-garantia"><span aria-hidden="true">🛡️</span><h3>${esc(V.garantia.titulo)}</h3><p>${rico(V.garantia.texto)}</p></div>

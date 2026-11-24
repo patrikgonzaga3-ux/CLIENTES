@@ -245,7 +245,13 @@ const QUIZ = {
         ? 'O seu plano do <b>Método Cinturão Diva</b>: 15 minutos por dia, em casa, para ficar com o <b>corpo durinho</b> antes do verão'
         : 'O seu plano do <b>Método Cinturão Diva</b>: 15 minutos por dia, em casa, para perder a <b>barriga indesejada</b> e até <b>18 kg de gordura</b> em até 30 dias' },
       heroAD: adNovo(4, 800, 644),
-      adTitulo: 'Elas começaram. Agora é a sua vez.',
+      // 24/11 · Hard Copy (HC-05), aprovado pelo Patrik ("aplica 1, 2, 3, 4, 5 e 6, mais de 5 mil alunas"):
+      prova: 'Mais de 5 mil alunas já treinaram com a Michele', // 6 · prova social em escala no topo (número do Patrik)
+      objecao: 'Se eu estivesse no seu lugar, ia pensar: <b>“mais uma promessa da internet”</b>. Por isso, antes de decidir, veja o que as alunas da Michele mostraram.', // 1 · objeção antecipada (HC-05 item 4, M02-07)
+      ponte: '<b>Mas atenção:</b> não basta prender a respiração e encolher a barriga. O hipopressivo tem o jeito certo de fazer, e é isso que as aulas mostram, passo a passo, em 15 minutos por dia.', // 3 · "não basta só X" (HC-05 item 8)
+      bonusDestaque: ['⭐ Bônus especial', 'Cintura Ativa', 'A rotina express de <b>5 minutos</b> para os dias corridos. Nos dias em que não sobra tempo, você não pula o dia.'], // 5 · bônus incrível (HC-03)
+      filtro: ['Não é para qualquer uma', 'É para quem topa se dar <b>15 minutos por dia</b>. Se você procura um resultado sem fazer nada, não é para você.'], // 4 · filtro (HC-05 item 9)
+      adTitulo: 'Parece a mesma pessoa?', // 2 · HC-05 item 7. Antes: "Elas começaram. Agora é a sua vez." 
       adLegenda: 'Alunas da Michele. Os resultados variam de pessoa para pessoa.',
       antesDepois: [adNovo(2, 800, 809), adNovo(5, 800, 628), adNovo('3g', 800, 630), adFoto(4, 900, 764), adFoto(1, 682, 900), adFoto(3, 720, 720)],
       ancora: 'Menos de 1/10 de 1 mês de canetinha (R$ 500+)', // 19/11 (M02-16, aprovado): sem riscado
@@ -291,8 +297,7 @@ const QUIZ = {
         '<b>Comece Aqui</b>: como funciona e por onde começar',
         'Bônus: <b>Cardápio de Emergência Diva</b>',
         'Bônus: <b>Projeto Minha Calça Favorita</b>',
-        'Bônus: <b>Cintura Ativa</b>, rotina express de 5 minutos para os dias corridos',
-      ],
+      ], // o Cintura Ativa saiu da lista e virou o bônus especial (bonusDestaque), logo abaixo
       professora: {
         titulo: 'Michele Salla',
         foto: { src: IMG + 'michele-recorte.webp', alt: 'Michele Salla', w: 802, h: 1292 },
