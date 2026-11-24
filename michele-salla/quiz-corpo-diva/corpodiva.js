@@ -1,5 +1,5 @@
 /* Quiz da Michele Salla · PROTOCOLO CORPO DIVA (17/11/2026, pedido do Patrik). Motor em ../quiz/motor.js (o mesmo dos outros quizzes).
-   É o Desafio 7 em 7 com outro nome (Patrik, 17/11: "é o Desafio com outro nome, mantém o checkout"): mesmas aulas, bônus, preço e link.
+   É o Desafio 7 em 7 com outro nome (Patrik, 17/11: "é o Desafio com outro nome, mantém o checkout"): mesmas aulas, bônus e preço. Checkout próprio desde 24/11: produto CORPO DE DIVA (206594/Zq5HyF).
    Base: o quiz Diva do Desafio (michele-salla/quiz/quiz.js) + o quiz do Dr. Márcio Martins (inlead.digital/dr-marcio-teste-capa, 23 telas:
    VSL na capa, corpo hoje, corpo dos sonhos, como o peso afeta a vida, já tentou e voltou, canetinha, quilos a eliminar, "sua meta é
    possível", "se nada mudar", compromisso, antes e depois, VSL antes da oferta) + o quiz do pilates (IMC, nome, dois caminhos, oferta v3).
@@ -12,7 +12,7 @@
 
 const IMG = '../desafio-7em7/assets/img/'
 const AD = 'img/' // antes e depois de alunas do Desafio 7 em 7 (pasta "Antes e depois" da Michele, sem rosto, nome nem kg)
-const CHECKOUT = 'https://payfast.greenn.com.br/199167/offer/E1YMM7' // Desafio 7 em 7, R$ 47 (aprovado em 27/10). Mantido pelo Patrik em 17/11.
+const CHECKOUT = 'https://payfast.greenn.com.br/206594/offer/Zq5HyF' // produto CORPO DE DIVA (206594), R$ 47, mesmo material do Desafio (Patrik, 24/11). Antes: 199167/E1YMM7.
 
 const PROMESSAS = {
   1: {
@@ -305,7 +305,7 @@ const QUIZ = {
         ['Tenho mais de 50. Serve para mim?', 'Sim. Os hipopressivos são feitos com respiração e postura, sem impacto, no seu ritmo.'],
         ['Tive bebê ou tenho hérnia. Posso fazer?', 'Você precisa de liberação médica antes de começar. A aula “Conheça Sua Barriga” ensina a observar sinais como a diástase.'],
         ['É mensalidade?', 'Não. É pagamento único de R$ 47 (ou 12x de R$ 4,83).'],
-        ['Com que nome chega o acesso?', 'O Protocolo Corpo Diva usa as aulas do Desafio 7 em 7 da Michele: o acesso chega por e-mail com o nome Desafio 7 em 7. É o mesmo material.'],
+        ['Com que nome chega o acesso?', 'O acesso chega por e-mail com o nome CORPO DE DIVA.'],
         ['Como funciona a garantia?', 'Você tem 7 dias. Se não fizer sentido para você, pede o reembolso pela própria plataforma.'],
       ],
       duas: { titulo: 'Agora você tem duas opções',
@@ -369,6 +369,6 @@ const QUIZ = {
       },
       faq: [0, 1, 3, 4],
     },
-    rodape: 'O Protocolo Corpo Diva é o conteúdo do Desafio 7 em 7 da Michele Salla e não é tratamento médico. Os resultados variam de pessoa para pessoa e a compra deste material não garante nenhum resultado específico. Este site não é afiliado ao Facebook.',
+    rodape: 'O Protocolo Corpo Diva é um conteúdo da Michele Salla e não é tratamento médico. Os resultados variam de pessoa para pessoa e a compra deste material não garante nenhum resultado específico. Este site não é afiliado ao Facebook.',
   },
 }

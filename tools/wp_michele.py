@@ -287,7 +287,7 @@ def cmd_atualizar_pagina_html(a):
     gravar_html(a.id, a.arquivo)
 
 
-LINK_GREENN = "payfast.greenn.com.br/199167/offer/E1YMM7"
+LINK_GREENN = "payfast.greenn.com.br/206594/offer/Zq5HyF"
 
 
 def cmd_conferir(a):

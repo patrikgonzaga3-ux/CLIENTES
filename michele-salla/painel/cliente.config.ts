@@ -100,7 +100,7 @@ export const CLIENTE = {
     },
     {
       // Quiz Protocolo Corpo Diva (17/11): quiz.michelesalla.com.br/corpodiva/. Cada página = promessa + onde está a VSL:
-      // corpodiva-p1i (capa 1, vídeo na capa), -p1o (capa 1, vídeo na oferta), -p2i, -p2o. Checkout do Desafio (E1YMM7) com sck igual.
+      // corpodiva-p1i (capa 1, vídeo na capa), -p1o (capa 1, vídeo na oferta), -p2i, -p2o. Checkout CORPO DE DIVA (206594/Zq5HyF, desde 24/11) com sck igual.
       id: 'corpodiva',
       nome: 'Quiz Corpo Diva',
       dominio: 'quiz.michelesalla.com.br',

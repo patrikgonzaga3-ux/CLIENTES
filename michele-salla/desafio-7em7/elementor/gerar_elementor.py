@@ -16,7 +16,7 @@ from pathlib import Path
 
 AQUI = Path(__file__).parent
 BASE = os.environ.get("IMG_BASE", "https://clientes-phi-six.vercel.app/michele-salla/desafio-7em7/assets/img/")
-LINK_COMPRA = "https://payfast.greenn.com.br/199167/offer/E1YMM7"  # checkout Greenn R$ 47 (pedido do Patrik em 27/10; antes 1qsr9k, R$ 67)
+LINK_COMPRA = "https://payfast.greenn.com.br/206594/offer/Zq5HyF"  # checkout Greenn CORPO DE DIVA, R$ 47 (Patrik, 24/11; antes E1YMM7 desde 27/10 e 1qsr9k, R$ 67)
 
 ROXO, VIOLETA, ROSA, ROSA_CLARO = "#9E047C", "#8D29F2", "#D448C2", "#FF9DF4"
 ROSA_FUNDO, AMARELO, PRETO, BRANCO = "#FFF3FD", "#FFFC00", "#252525", "#FFFFFF"
