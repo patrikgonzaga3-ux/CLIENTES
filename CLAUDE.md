@@ -15,7 +15,7 @@ Página de vendas do Desafio 7 em 7 (cliente Michele Salla, site `michelesalla.c
   "Pensando em gastar R$500 por mês com canetinha?", promessa "Descubra como perder até 7 cm de barriga em 7 dias sem gastar
   R$500 por mês com canetinha", pílulas (Sem canetinha · 15 min · medidas), 6 ruminações mistas C+E, oferta com
   "ou 12x de R$ 4,83" (R$ 47 desde 27/10; parcela calculada pela taxa da oferta anterior, confirmar no checkout) e "Mais de 7x mais barato que 1 mês de canetinha"; no início das 2 ofertas, o título "Descubra como perder até -7cm de barriga em 7 dias sem gastar R$500 por mês com canetinha". Ancoragem: canetinha ≈ R$500/mês (dado do Patrik).
-- **Link de compra (todas as versões):** https://payfast.greenn.com.br/199167/offer/E1YMM7 (checkout Greenn, R$ 47 ou 12x R$ 4,83, desde 27/10). Antes: oferta 1qsr9k, R$ 67.
+- **Link de compra (todas as versões, quizzes Desafio e Corpo Diva):** https://payfast.greenn.com.br/206594/offer/Zq5HyF (produto CORPO DE DIVA, R$ 47 ou 12x R$ 4,83, desde 24/11; o 12x confere com os juros de 3,39% ao mês da Greenn). Antes: 199167/E1YMM7 (27/10 a 24/11) e 1qsr9k, R$ 67.
 - **Celular:** letras, espaços e ícones menores só no celular (bloco `@media (max-width:767px)` no fim do `styles.css` e
   `compactar_celular()` no gerador do Elementor). O computador não muda.
 - **HTML da prévia:** edite `_modelo.html` ou `styles.css` e rode `python3 build.py` (gera A–D).
@@ -30,7 +30,7 @@ Página de vendas do Desafio 7 em 7 (cliente Michele Salla, site `michelesalla.c
 - O pixel **991344998762063** já está no site todo pelo plugin **PixelYourSite** (PageView, com API de conversões).
 - Os botões de compra têm a classe `botao-compra`. O código `michele-salla/desafio-7em7/rastreio/initiate-checkout.js`
   (vai num widget HTML no rodapé da página) envia o evento personalizado **CliqueComprar** uma vez por visita (47 BRL).
-- **InitiateCheckout, AddPaymentInfo e Purchase** saem da **Greenn** (produto 199167, navegador + API de conversões).
+- **InitiateCheckout, AddPaymentInfo e Purchase** saem da **Greenn** (produto 206594 desde 24/11; antes 199167, navegador + API de conversões).
   A página não manda InitiateCheckout, para não contar a mesma pessoa 2 vezes (decisão do Patrik em 23/10).
 - Configuração da Greenn (pixel, eventos, momento do Purchase) é do Patrik. Não mexer sem o OK dele.
 

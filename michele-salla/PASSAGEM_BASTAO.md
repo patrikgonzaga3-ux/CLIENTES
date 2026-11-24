@@ -9,7 +9,7 @@
 
 Nada de senha, token ou dado de cliente aqui.
 
-Última atualização: 19/11/2026.
+Última atualização: 24/11/2026.
 
 ---
 
@@ -139,6 +139,12 @@ Os M da pasta "MICHELE LOW" são esses mesmos vídeos. Mapa conferido pelos quad
 **Painel publica sozinho:** todo push na main do CLIENTES gera deploy na Vercel ("Ptk midias") em ~1 min.
 
 ## 7. Pendências (na ordem)
+00000. **(24/11) Checkout novo CORPO DE DIVA (206594/offer/Zq5HyF, R$ 47, 12x R$ 4,83) em tudo** (Patrik: "coloca em todos"):
+   quizzes Corpo Diva e /desafio7/, páginas A–F e JSONs do Elementor, `wp_michele.py conferir`. Commit 6af463f no branch
+   `claude/amazing-fermat-m4f8jd`: **falta mesclar na main** (a trava do ambiente barrou o push na main). **Falta o Patrik:**
+   (a) pixel 991344998762063 + API de conversões e webhook do painel no produto 206594 na Greenn (o checkout novo veio SEM pixel);
+   (b) trocar o link nos 3 botões da página 10264 no WordPress (daqui não deu: o acesso fica no ambiente "Fábrica de Conteúdo IA",
+   cujo acento impede a troca de ambiente). Copy do Corpo Diva revisada pelo Hard Copy (HC-05): 6 propostas esperando OK.
 0000. **(19/11) Universo Diva (página 8926, michelesalla.com.br/universo-diva/) · preço novo ESPERANDO OK do Patrik:** trocar os 5 botões
    de `pay.hotmart.com/T104321502Q` para `pay.hotmart.com/E107866373U?off=w5xxm4uy` (produto "UNIVERSO DIVA 3.0", conferido no checkout
    em reais: R$ 497 à vista ou 12x de R$ 41,42, total R$ 497,04) e a caixa de preço (widgets aac737d "12x de R$ 103,11" → "12x de R$ 41,42"
@@ -236,6 +242,9 @@ Os M da pasta "MICHELE LOW" são esses mesmos vídeos. Mapa conferido pelos quad
    Rastreio LIGADO (03/11): aba **Quiz Diva** em https://painel.michelesalla.com.br/painel/quiz (telas 01–22 = blocos; quiz-p1..p5 = páginas).
 
 ## 8. Diário
+- **24/11 · Checkout CORPO DE DIVA em tudo:** mesmo preço e garantia de 7 dias do E1YMM7, outro produto (206594, "CORPO DE DIVA — 30 DIAS").
+  Nenhuma campanha ativa na conta 1619523595475963 no dia da troca. FAQ do Corpo Diva: "O acesso chega por e-mail com o nome CORPO DE DIVA";
+  rodapé sem "conteúdo do Desafio 7 em 7". Patrik confirmou que a área de membros tem o mesmo material do Desafio.
 - **19/11 (noite) · Corpo Diva pronto para o teste** (Patrik: "pode executar todos os 3"):
   - VSLs no ar pelo VTurb (conta 9406f62d…): capa p1 6aff3a8e607bd33518f1f5a6, capa p2 6aff3a871750c92b3ebec505, oferta p1 v2
     6aff42eac60b8cda78ebcccc, oferta p2 v2 6aff43919dd4ab1ca5cc7b29 (ofertas sem "1,57 por dia"). `motor.js` monta o player quando
