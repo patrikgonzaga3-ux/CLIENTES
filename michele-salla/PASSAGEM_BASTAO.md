@@ -139,6 +139,10 @@ Os M da pasta "MICHELE LOW" são esses mesmos vídeos. Mapa conferido pelos quad
 **Painel publica sozinho:** todo push na main do CLIENTES gera deploy na Vercel ("Ptk midias") em ~1 min.
 
 ## 7. Pendências (na ordem)
+00. **(24/11) 5 criativos editados dos 15 vídeos da Michele** (Drive 1gsAxGHkGS-i_tmc_y7tzw3o2fZT1IGZz, AD (1) a (15)):
+   C1 canetinha (AD11+6+3), C2 calça (AD12+8+4), C3 abdominal (AD15+9+1), C4 cinta (AD13+10+5), C5 verão (AD14+7+2).
+   **Falta:** OK do Patrik; depois subir no Meta (ABO 1-1-1, CTA dos vídeos fala em "teste", então destino = quiz Corpo Diva).
+   Montador em `criativos-2411/montar_michele.py` (MP4 fora do Git; baixar os brutos do Drive de novo se o container sumir).
 00000. **(24/11) Checkout CORPO DE DIVA (206594/offer/Zq5HyF, R$ 47, 12x R$ 4,83) NO AR** nos quizzes Corpo Diva e /desafio7/
    (PR #2 mesclado, commit 740a69d). Junto foram: copy do Corpo Diva pelo Hard Copy (HC-05: prova "mais de 5 mil alunas",
    CONFIRMADO pelo Patrik; objeção; "Parece a mesma pessoa?"; ponte; bônus especial Cintura Ativa; filtro), capa 3 com promessa direta
@@ -244,6 +248,9 @@ Os M da pasta "MICHELE LOW" são esses mesmos vídeos. Mapa conferido pelos quad
    Rastreio LIGADO (03/11): aba **Quiz Diva** em https://painel.michelesalla.com.br/painel/quiz (telas 01–22 = blocos; quiz-p1..p5 = páginas).
 
 ## 8. Diário
+- **24/11 · Edição dos 15 criativos gravados (gancho, corpo, CTA):** transcrição grátis com Whisper (Hugging Face liberado no ambiente
+  "Estúdio Vídeo Laura"), melhor tomada de cada vídeo, pausas cortadas com zoom alternado, legenda queimada (Inter Black, nomes corrigidos),
+  volume -14 LUFS, sem trilha (não há música licenciada no acervo). Estrutura Ladeira M04-13 (gancho → desenvolvimento → Saiba mais).
 - **24/11 · Checkout CORPO DE DIVA em tudo:** mesmo preço e garantia de 7 dias do E1YMM7, outro produto (206594, "CORPO DE DIVA — 30 DIAS").
   Nenhuma campanha ativa na conta 1619523595475963 no dia da troca. FAQ do Corpo Diva: "O acesso chega por e-mail com o nome CORPO DE DIVA";
   rodapé sem "conteúdo do Desafio 7 em 7". Patrik confirmou que a área de membros tem o mesmo material do Desafio.
