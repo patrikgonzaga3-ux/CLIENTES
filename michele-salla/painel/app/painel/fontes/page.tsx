@@ -1,9 +1,11 @@
 // ABA FONTES DE DADOS: se cada conexão está funcionando (gateway, Meta, planilha, rastreio da página), o que falta
-// configurar e as linhas prontas para colar (webhook, rastreio, parâmetros de URL). Nunca mostra senha nem chave.
+// configurar e as linhas prontas para colar (webhook, rastreio, parâmetros de URL). Não mostra senha nem chave; a exceção é o
+// token do webhook (do banco), que precisa ir inteiro no endereço que se cola no gateway.
 import { headers } from 'next/headers'
 import { CLIENTE } from '@/cliente.config'
 import { cfgEfetiva } from '@/lib/config'
 import { emDemo, fontes as lerFontes, ultimos } from '@/lib/dados'
+import { rpc } from '@/lib/db'
 import { porta, Shell } from '../_shell'
 import { horaBR, int } from '../_ui/fmt'
 import { Caixa, Secao, Tabela, Titulo, td, tdL, th, thL } from '../_ui/ui'
@@ -20,7 +22,7 @@ export default async function Fontes() {
   const b = await porta(); if (b) return b
   const h = await headers()
   const origem = `${h.get('x-forwarded-proto') || 'https'}://${h.get('x-forwarded-host') || h.get('host')}`
-  const [fs, ult, cfg] = await Promise.all([lerFontes(), ultimos(), cfgEfetiva()])
+  const [fs, ult, cfg, tokenBanco] = await Promise.all([lerFontes(), ultimos(), cfgEfetiva(), emDemo() ? Promise.resolve(null) : rpc<string>('pl_token_webhook')])
   const f = (n: string) => fs.find((x) => x.nome === n)
   const velho = (iso?: string | null, horas = 3) => !iso || Date.now() - Date.parse(iso) > horas * 3600_000
   const meta = f('meta'), plan = f('planilha')
@@ -64,7 +66,8 @@ export default async function Fontes() {
         {CLIENTE.gateways.map((g) => (
           <div key={g} style={{ marginBottom: 14 }}>
             <strong>Webhook · {g}</strong>{' '}(no painel do gateway, evento de venda, todos os status{g === 'greenn' ? ' + lead/checkout abandonado' : ''}):
-            <Codigo>{`${origem}/api/webhook/${g}?token=<WEBHOOK_TOKEN>`}</Codigo>
+            {/* 24/11: com o token do banco, o endereço vem pronto para copiar (página protegida pela senha do painel) */}
+            <Codigo>{`${origem}/api/webhook/${g}?token=${typeof tokenBanco === 'string' && tokenBanco ? tokenBanco : '<WEBHOOK_TOKEN>'}`}</Codigo>
           </div>
         ))}
         {CLIENTE.sites.map((s) => (

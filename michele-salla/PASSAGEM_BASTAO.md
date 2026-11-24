@@ -147,6 +147,8 @@ Os M da pasta "MICHELE LOW" são esses mesmos vídeos. Mapa conferido pelos quad
    (o checkout veio sem pixel; ele vai ajustar); depois, conferir um Purchase no pixel. (b) Página 10264 do Desafio (WordPress)
    ficou com o link antigo E1YMM7 de propósito: não vai ser usada agora (Patrik, 24/11). Se voltar, trocar os 3 botões
    (os arquivos A–F já têm o link novo). A VSL da P2 ainda fala "corpo durinho".
+   **Webhook (24/11):** token novo gerado no banco (Vault `webhook_token`, sha256 em `pl_segredos` chave 'webhook'); o webhook aceita
+   ele OU o WEBHOOK_TOKEN da Vercel. A aba **Fontes** do painel mostra o endereço pronto para colar na Greenn (produto 206594).
 0000. **(19/11) Universo Diva (página 8926, michelesalla.com.br/universo-diva/) · preço novo ESPERANDO OK do Patrik:** trocar os 5 botões
    de `pay.hotmart.com/T104321502Q` para `pay.hotmart.com/E107866373U?off=w5xxm4uy` (produto "UNIVERSO DIVA 3.0", conferido no checkout
    em reais: R$ 497 à vista ou 12x de R$ 41,42, total R$ 497,04) e a caixa de preço (widgets aac737d "12x de R$ 103,11" → "12x de R$ 41,42"
