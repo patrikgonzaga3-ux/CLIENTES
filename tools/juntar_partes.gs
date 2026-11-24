@@ -24,11 +24,23 @@ function juntarPartes() {
       const k = m[1] + '~~' + m[2];
       (grupos[k] = grupos[k] || {pasta: m[1], nome: m[2], total: +m[4], partes: {}}).partes[+m[3]] = f;
     }
-    for (const g of Object.values(grupos)) {
+    const lista = Object.values(grupos);
+    if (lista.length) registrar('Rodou: ' + lista.length + ' arquivo(s) em pedaços na fila.');
+    for (const g of lista) {
       if (Date.now() - inicio > 4 * 60 * 1000) break;                 // o resto fica para a próxima rodada
-      if (Object.keys(g.partes).length === g.total) enviar(g);
+      const n = Object.keys(g.partes).length;
+      if (n < g.total) { registrar(g.nome + ': esperando pedaços (' + n + ' de ' + g.total + ').'); continue; }
+      try { enviar(g); registrar(g.nome + ': PRONTO na pasta ' + g.pasta + '.'); }
+      catch (e) { registrar(g.nome + ': ERRO ' + e.message); }
     }
   } finally { trava.releaseLock(); }
+}
+
+function registrar(msg) {                                             // o Claude lê este arquivo pelo Drive
+  const pasta = DriveApp.getFolderById(ENTRADA), linha = new Date().toISOString() + '  ' + msg + '\n';
+  const it = pasta.getFilesByName('_robo_log.txt');
+  if (it.hasNext()) { const f = it.next(); f.setContent((linha + f.getBlob().getDataAsString()).slice(0, 20000)); }
+  else pasta.createFile('_robo_log.txt', linha, MimeType.PLAIN_TEXT);
 }
 
 function enviar(g) {
@@ -45,7 +57,7 @@ function enviar(g) {
   }
   const token = ScriptApp.getOAuthToken();
   const ini = UrlFetchApp.fetch('https://www.googleapis.com/upload/drive/v3/files?uploadType=resumable', {
-    method: 'post', contentType: 'application/json; charset=UTF-8', muteHttpExceptions: true,
+    method: 'post', contentType: 'application/json; charset=UTF-8', muteHttpExceptions: true, followRedirects: false,
     headers: {Authorization: 'Bearer ' + token, 'X-Upload-Content-Type': tipo, 'X-Upload-Content-Length': String(tamanho)},
     payload: JSON.stringify({name: g.nome, parents: [g.pasta]})});
   if (ini.getResponseCode() !== 200) throw new Error('Início do envio falhou: ' + ini.getContentText());
@@ -53,7 +65,7 @@ function enviar(g) {
   let pos = 0;
   for (const p of partes) {
     const bytes = p.getBlob().getBytes(), fim = pos + bytes.length - 1;
-    const r = UrlFetchApp.fetch(url, {method: 'put', contentType: tipo, payload: bytes, muteHttpExceptions: true,
+    const r = UrlFetchApp.fetch(url, {method: 'put', contentType: tipo, payload: bytes, muteHttpExceptions: true, followRedirects: false,
       headers: {Authorization: 'Bearer ' + token, 'Content-Range': 'bytes ' + pos + '-' + fim + '/' + tamanho}});
     const c = r.getResponseCode();
     if (c !== 308 && c !== 200 && c !== 201) throw new Error('Pedaço ' + (partes.indexOf(p) + 1) + ' falhou: ' + c + ' ' + r.getContentText());
