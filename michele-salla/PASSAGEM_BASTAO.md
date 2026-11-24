@@ -144,7 +144,11 @@ Os M da pasta "MICHELE LOW" são esses mesmos vídeos. Mapa conferido pelos quad
    `claude/amazing-fermat-m4f8jd`: **falta mesclar na main** (a trava do ambiente barrou o push na main). **Falta o Patrik:**
    (a) pixel 991344998762063 + API de conversões e webhook do painel no produto 206594 na Greenn (o checkout novo veio SEM pixel);
    (b) trocar o link nos 3 botões da página 10264 no WordPress (daqui não deu: o acesso fica no ambiente "Fábrica de Conteúdo IA",
-   cujo acento impede a troca de ambiente). Copy do Corpo Diva revisada pelo Hard Copy (HC-05): 6 propostas esperando OK.
+   cujo acento impede a troca de ambiente). Copy do Corpo Diva pelo Hard Copy (HC-05) aplicada no branch (itens 1 a 6: prova "mais de
+   5 mil alunas", objeção, "Parece a mesma pessoa?", ponte, bônus especial Cintura Ativa, filtro). Capa 3 nova (promessa direta:
+   "Mais de 5 mil alunas… perder até 18 kg de gordura em até 30 dias", usa VSL e oferta da P1) e P2 = "barriga durinha e a calça de
+   antes fechando de novo". O sorteio passa a 6 variantes (P1/P2/P3 × VSL capa/oferta); painel com corpodiva-p3i/-p3o. Michele confirmar os 5 mil.
+   A VSL da P2 ainda fala "corpo durinho" (vídeo não muda).
 0000. **(19/11) Universo Diva (página 8926, michelesalla.com.br/universo-diva/) · preço novo ESPERANDO OK do Patrik:** trocar os 5 botões
    de `pay.hotmart.com/T104321502Q` para `pay.hotmart.com/E107866373U?off=w5xxm4uy` (produto "UNIVERSO DIVA 3.0", conferido no checkout
    em reais: R$ 497 à vista ou 12x de R$ 41,42, total R$ 497,04) e a caixa de preço (widgets aac737d "12x de R$ 103,11" → "12x de R$ 41,42"

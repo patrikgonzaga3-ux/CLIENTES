@@ -24,12 +24,22 @@ const PROMESSAS = {
     sub: 'É um músculo que desligou aí dentro da sua barriga. Em 3 minutos você recebe o seu plano para perder até 18 kg de gordura em até 30 dias.',
   },
   2: {
-    nome: 'Corpo durinho antes do verão',
+    nome: 'Barriga durinha · calça de antes',
     etiqueta: 'Quiz gratuito',
     // 19/11 (Ladeira, M03-02/03, aprovado): premissa no lugar do imperativo. Antes: "Emagreça e fique com o corpo durinho antes do
     // verão chegar" + "Responda e receba o seu plano personalizado, montado a partir do seu corpo e da sua rotina."
     titulo: 'Depois dos 35, <mark>abdominal nenhum</mark> deixa a barriga durinha se o músculo que segura ela por dentro desligou',
-    sub: 'Em 3 minutos você recebe o seu plano para ficar com o corpo durinho antes do verão, montado a partir do seu corpo e da sua rotina.',
+    // 24/11 (B1, aprovado): resultado que ela enxerga, a dor escondida dos comentários (HC-01). Antes: "…para ficar com o corpo
+    // durinho antes do verão, montado a partir do seu corpo e da sua rotina."
+    sub: 'Em 3 minutos você recebe o seu plano para ficar com a barriga durinha e a calça de antes fechando de novo antes do verão, com 15 minutos por dia.',
+  },
+  3: {
+    // 24/11 (A, aprovado): promessa direta no título, modelo da página do Hard Copy (HC-05: prova em escala + número + prazo),
+    // contra a premissa da capa 1 (Ladeira, M03-02). Mesma VSL, oferta e "duas opções" da promessa 1 (18 kg). 5 mil = número do Patrik.
+    nome: 'Promessa direta · 5 mil alunas · 18 kg',
+    etiqueta: 'Quiz gratuito',
+    titulo: 'Mais de 5 mil alunas já treinaram com a Michele. Agora é a sua vez de <mark>perder até 18 kg de gordura em até 30 dias</mark>, com 15 minutos por dia',
+    sub: 'É um músculo que desligou aí dentro da sua barriga. Em 3 minutos você recebe o seu plano.',
   },
 }
 
@@ -242,7 +252,7 @@ const QUIZ = {
       // 19/11 (Ladeira, aprovado): título segue a promessa da capa (coerência, M02-13) e mostra o "como" (QFD, M04-01).
       // Antes, igual para as duas: "Perca a barriga indesejada e até 18 kg de gordura em até 30 dias com o Método Cinturão Diva".
       get titulo() { return P === 2
-        ? 'O seu plano do <b>Método Cinturão Diva</b>: 15 minutos por dia, em casa, para ficar com o <b>corpo durinho</b> antes do verão'
+        ? 'O seu plano do <b>Método Cinturão Diva</b>: 15 minutos por dia, em casa, para ficar com a <b>barriga durinha</b> e a <b>calça de antes fechando de novo</b> antes do verão' // 24/11 (B1)
         : 'O seu plano do <b>Método Cinturão Diva</b>: 15 minutos por dia, em casa, para perder a <b>barriga indesejada</b> e até <b>18 kg de gordura</b> em até 30 dias' },
       heroAD: adNovo(4, 800, 644),
       // 24/11 · Hard Copy (HC-05), aprovado pelo Patrik ("aplica 1, 2, 3, 4, 5 e 6, mais de 5 mil alunas"):
@@ -316,7 +326,7 @@ const QUIZ = {
       duas: { titulo: 'Agora você tem duas opções',
         a: ['Fechar esta página', 'E chegar no verão do mesmo jeito: a roupa larga, a barriga escondida na foto e a segunda-feira como data do recomeço.'],
         get d() { return ['Começar hoje, por R$ 47', P === 2 // 19/11 (aprovado): coerente com a promessa da capa (M02-13)
-          ? 'Seguir o Método Cinturão Diva 15 minutos por dia e chegar no verão com o <b>corpo durinho</b>, <b>sem a barriga indesejada</b>.'
+          ? 'Seguir o Método Cinturão Diva 15 minutos por dia e chegar no verão com a <b>barriga durinha</b> e a <b>calça de antes fechando de novo</b>.' // 24/11 (B1)
           : 'Seguir o Método Cinturão Diva 15 minutos por dia e, em até 30 dias, perder até <b>18 kg de gordura</b> e chegar no verão <b>sem a barriga indesejada</b>.'] } },
     },
     v3: {
