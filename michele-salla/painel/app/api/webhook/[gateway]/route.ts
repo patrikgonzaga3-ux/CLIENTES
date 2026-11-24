@@ -2,11 +2,13 @@
 //   greenn  → cadastrar a URL com ?token= na Greenn (Ferramentas → Webhooks)
 //   hotmart → cadastrar a URL; a Hotmart manda o hottok no cabeçalho (HOTMART_HOTTOK), ou use ?token=
 //   kiwify  → cadastrar a URL com ?token=; se a Kiwify mandar ?signature=, confere com KIWIFY_TOKEN
+// Token: o WEBHOOK_TOKEN da Vercel OU o token do banco (sha256 em pl_segredos, chave 'webhook'; o texto fica no Vault e a
+// aba Fontes mostra o endereço pronto). 24/11: criado para a Michele, porque o Claude não acessa a Vercel dela.
 // Sem o token certo: 401 (ninguém inventa venda). Com token: sempre 200, mesmo com erro de gravação (os
 // gateways desligam webhooks que erram muito); o erro fica no log e na aba Fontes.
-import { createHmac, timingSafeEqual } from 'node:crypto'
+import { createHash, createHmac, timingSafeEqual } from 'node:crypto'
 import { CLIENTE } from '@/cliente.config'
-import { gravar, marcarFonte } from '@/lib/db'
+import { gravar, ler, marcarFonte } from '@/lib/db'
 import { NORMALIZA, type Gateway } from '@/lib/gateways'
 
 export const runtime = 'nodejs'
@@ -25,6 +27,11 @@ export async function POST(req: Request, ctx: { params: Promise<{ gateway: strin
   if (!ok && gw === 'hotmart' && process.env.HOTMART_HOTTOK) ok = igual(enviado, process.env.HOTMART_HOTTOK.trim())
   const assinatura = url.searchParams.get('signature')
   if (!ok && gw === 'kiwify' && assinatura && process.env.KIWIFY_TOKEN) ok = igual(assinatura, createHmac('sha1', process.env.KIWIFY_TOKEN.trim()).update(texto).digest('hex'))
+  if (!ok && enviado) {
+    const hash = createHash('sha256').update(enviado).digest('hex')
+    const linhas = await ler<{ hash: string }>('pl_segredos', 'select=hash&chave=eq.webhook')
+    ok = linhas.some((l) => typeof l.hash === 'string' && igual(l.hash, hash))
+  }
   if (!ok) return new Response('Unauthorized', { status: 401 })
 
   let body: unknown

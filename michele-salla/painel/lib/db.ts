@@ -29,6 +29,16 @@ export async function ler<T = Record<string, unknown>>(tabela: string, query = '
   return out
 }
 
+/** Chama uma função do banco (rpc). Devolve null em erro. */
+export async function rpc<T = unknown>(nome: string, args: object = {}): Promise<T | null> {
+  if (!bancoConfigurado()) return null
+  try {
+    const r = await fetch(`${URL_()}/rest/v1/rpc/${nome}`, { method: 'POST', headers: h(), body: JSON.stringify(args), cache: 'no-store' })
+    if (!r.ok) { console.error(`[db] rpc ${nome} HTTP ${r.status}`); return null }
+    return (await r.json()) as T
+  } catch (e) { console.error(`[db] rpc ${nome}`, e); return null }
+}
+
 /** Grava (upsert) linhas. ignorar=true não sobrescreve linha que já existe. Devolve se deu certo. */
 export async function gravar(tabela: string, linhas: object | object[], onConflict: string, ignorar = false): Promise<{ ok: boolean; erro?: string }> {
   if (!bancoConfigurado()) return { ok: false, erro: 'banco não configurado' }
