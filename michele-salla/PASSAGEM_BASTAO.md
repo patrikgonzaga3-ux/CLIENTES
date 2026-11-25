@@ -114,8 +114,29 @@ Os vídeos precisam estar **na conta de anúncio** (`ads_get_ad_videos`). A bibl
 ("Business creatives") não aparece para a ferramenta. Para subir por URL, o link precisa ser público e direto.
 
 ## 6. Campanha atual
+`PTK - 25/11 - ABO TESTE DE CRIATIVO` (120252843348870047), **NO AR desde 25/11** (OK do Patrik: "ativa somente os 5 primeiros e deixa os outros 5 pausados").
+Vendas (OUTCOME_SALES), ABO 1-1-1, R$ 21,15/dia por conjunto (5 ativos = R$ 105,75/dia). Público Advantage+ (BR, mulheres, sugestão 30–55),
+pixel 991344998762063 otimizando Compra. Criativos = `Criativo_XX_Final.mp4` da pasta do Drive 1hy7sq5BIB34Qh_2lECjk61hBsDHCR5aa.
+
+| Conjunto | ID conjunto | Anúncio (ID) | Criativo | Vídeo (ID) | Estado |
+|---|---|---|---|---|---|
+| CONJ - ADV+ - CRIATIVO 01 | 120252843351080047 | CRIATIVO 01 (120252843364730047) | 1458407003066378 | 1839158443899082 | **ATIVO** |
+| CONJ - ADV+ - CRIATIVO 02 | 120252843356190047 | CRIATIVO 02 (120252843912230047) | 1102167639450703 | 1610205877076378 | **ATIVO** |
+| CONJ - ADV+ - CRIATIVO 03 | 120252843357380047 | CRIATIVO 03 (120252843912800047) | 919171081282751 | 1706036157850310 | **ATIVO** |
+| CONJ - ADV+ - CRIATIVO 04 | 120252843357440047 | CRIATIVO 04 (120252843913100047) | 1725297595873845 | 1160511222998969 | **ATIVO** |
+| CONJ - ADV+ - CRIATIVO 05 | 120252843357520047 | CRIATIVO 05 (120252843913800047) | 1122149337285385 | 1834508697749480 | **ATIVO** |
+| CONJ - ADV+ - CRIATIVO 06 | 120252843357880047 | CRIATIVO 06 (120252843914680047) | 1222148593672349 | 1930571444984757 | PAUSADO |
+| CONJ - ADV+ - CRIATIVO 07 | 120252843358340047 | CRIATIVO 07 (120252843915810047) | 29157443603924420 | 1770509597358181 | PAUSADO |
+| CONJ - ADV+ - CRIATIVO 08 | 120252843359790047 | CRIATIVO 08 (120252843916120047) | 1443048061340390 | 1004385426053401 | PAUSADO |
+| CONJ - ADV+ - CRIATIVO 09 | 120252843361000047 | CRIATIVO 09 (120252843916330047) | 1712530487126660 | 1176093648534799 | PAUSADO |
+| CONJ - ADV+ - CRIATIVO 10 | 120252843361050047 | CRIATIVO 10 (120252843916960047) | 2188015528457474 | 1905803330776369 | PAUSADO |
+
+Em todos: página 262689970269678, Instagram 17841465706978287, sem texto, botão "Saiba mais", destino **quiz Corpo Diva**
+`https://quiz.michelesalla.com.br/corpodiva/` + UTM do padrão. Para ligar 06–10: `ads_activate_entity` no conjunto e no anúncio (com o OK do Patrik).
+Os 10 MP4 no Drive ficaram com link público (o Meta baixou por URL); dá para fechar o compartilhamento se o Patrik quiser.
+
+### Campanha anterior (pausada)
 `PTK - 26/10 - ABO TESTE DE CRIATIVO` (120252298837110047), tudo **PAUSADO**. Início 26/10 às 00:03.
-Criada por completo em 23/10. **Ligar só com o OK do Patrik** (`ads_activate_entity` na campanha, nos conjuntos e nos anúncios).
 
 | Conjunto | ID conjunto | Anúncio (ID) | Criativo | Vídeo (ID) | Original no Drive |
 |---|---|---|---|---|---|
@@ -139,10 +160,9 @@ Os M da pasta "MICHELE LOW" são esses mesmos vídeos. Mapa conferido pelos quad
 **Painel publica sozinho:** todo push na main do CLIENTES gera deploy na Vercel ("Ptk midias") em ~1 min.
 
 ## 7. Pendências (na ordem)
-000. **(24/11) 10 criativos finais da Michele editados** (15 trechos do Drive 1gsAxGHkGS-i_tmc_y7tzw3o2fZT1IGZz): lista com gancho/corpo/CTA
-   e trechos em `criativos-2411/projeto-v3/LISTA_CRIATIVOS.md`. Pasta no Drive "Criativos finais – Michelle" (1hy7sq5BIB34Qh_2lECjk61hBsDHCR5aa)
-   tem os 10 MP4 (tamanho conferido byte a byte), a LISTA e o zip do projeto, enviados pela skill `subir-drive` (pedaços + robô Apps Script).
-   **Falta:** Patrik aprovar (destino = quiz Corpo Diva; riscos Meta: canetinha em 01/09, "depois dos 35" em 02/03/07, foto da calça no 04) e só então campanha.
+000. **(25/11) Campanha dos 10 criativos NO AR** (seção 6): 01–05 ativos, 06–10 pausados. **Acompanhar:** análise do Meta (anúncios
+   "em processamento" na publicação), gasto e CPA por criativo nos primeiros dias; decidir com o Patrik quando trocar os piores pelos 06–10.
+   Riscos de reprovação já avisados: canetinha (01/09), "depois dos 35" (02/03/07), foto da calça (04).
 00. **(24/11) 5 criativos editados dos 15 vídeos da Michele** (Drive 1gsAxGHkGS-i_tmc_y7tzw3o2fZT1IGZz, AD (1) a (15)):
    C1 canetinha (AD11+6+3), C2 calça (AD12+8+4), C3 abdominal (AD15+9+1), C4 cinta (AD13+10+5), C5 verão (AD14+7+2).
    **Falta:** OK do Patrik; depois subir no Meta (ABO 1-1-1, CTA dos vídeos fala em "teste", então destino = quiz Corpo Diva).
@@ -252,6 +272,9 @@ Os M da pasta "MICHELE LOW" são esses mesmos vídeos. Mapa conferido pelos quad
    Rastreio LIGADO (03/11): aba **Quiz Diva** em https://painel.michelesalla.com.br/painel/quiz (telas 01–22 = blocos; quiz-p1..p5 = páginas).
 
 ## 8. Diário
+- **25/11 · Campanha `PTK - 25/11 - ABO TESTE DE CRIATIVO` publicada:** vídeos subidos ao Meta pela URL pública do Drive; criativos com
+  página + Instagram (o erro de permissão da página foi resolvido pelo Patrik no Business). Rascunho conferido sem erros (21 objetos) e
+  publicado de uma vez; status confirmado no ar: campanha ativa, conjuntos/anúncios 01–05 ativos e 06–10 pausados.
 - **24/11 (tarde) · 10 criativos finais (v3):** montagem frase por frase (32 frases, melhor tomada), corte pelo som real (não pelo tempo do
   Whisper, que errava até 0,6 s), 1,07x, cor, zoom alternado, imagens de apoio (acervo do Desafio + 3 do Canva), títulos e legenda dentro da
   área segura do Reels (fora de 14% em cima e 35% embaixo), trilhas originais compostas por código, -14 LUFS / -2 dBTP. Revisão: retranscrição
